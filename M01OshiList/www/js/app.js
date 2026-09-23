@@ -4,19 +4,19 @@
 
 let oshiItems = [
   {
-    name: "放課後のプレイリスト",
-    genre: "音楽",
-    comment: "帰り道に聴きたい曲を集めています。\nお気に入りの一曲があると、いつもの道も楽しみになります。"
+    name: "NotebookLM",
+    genre: "学習ツール",
+    comment: "授業のノートをもとに、自分の言葉で説明できるまで質問しています。\n分からなかったことがつながる瞬間が好きです。"
   },
   {
-    name: "駅前のカフェ",
-    genre: "お店",
-    comment: "窓際でゆっくり過ごせるところがお気に入りです。\n週末に本を一冊持って行きたい場所です。"
+    name: "Android Studio / Xcode",
+    genre: "開発ツール",
+    comment: "Android StudioやXcodeで、思いついた画面を形にするのが好きです。\n次は自分が毎日使えるアプリを作ってみたいです。"
   },
   {
-    name: "いつものノート",
-    genre: "道具",
-    comment: "思いついたことをすぐ書けます。\n予定もアイデアも、一冊に集めています。"
+    name: "AIエージェント開発",
+    genre: "気になる技術",
+    comment: "AIエージェントと相談しながら、アプリを作る方法に興味があります。\n提案されたコードの理由を確かめ、自分でも直せるようになりたいです。"
   }
 ];
 
@@ -41,7 +41,7 @@ document.addEventListener("init", function(event) {
 
 function createOshiRowHtml(index) {
   return '<ons-list-item id="item_oshi_' + index +
-    '" tappable modifier="chevron">' +
+    '" class="oshi-card" tappable modifier="chevron">' +
     '<div class="center">' +
     '<span class="list-item__title oshi-name" id="txt_name_' +
     index + '"></span>' +
