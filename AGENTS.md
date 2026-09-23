@@ -48,9 +48,11 @@ Freeプランの利用規約は「法人による商用でのアプリ開発」�
 
 **iOS実機でのデバッグは、通常版のストア版Monacaデバッガーが2023-01-06にApp Storeでの配信停止になっている。** 代替はクイックビューア（モバイルからMonacaにアクセスする。**iPhoneのみ対応**）とシミュレータービルド（生成ZIPをMacのiOSシミュレータへドラッグ＆ドロップ）。Android版デバッガーはGoogle Playから引き続き入る。**「App Storeから Monaca for Study を入れる」とは書かない**（`Monaca for Study` は教育版のアプリで、通常版では使わない。しかも2023-12-26からメンテナンスモードに入っている）。
 
-**Onsen UI を使うかどうかは単元ごとに決める。** 2026-09時点で Onsen UI は生きている（最新安定版 2.12.9、2026-06-16 公開、Apache-2.0）が、その前の安定版は2022-12-27で、約3年半空いたあとのパッチ1本である。**前年度資料の「AngularJSをベースに」という説明は Onsen UI 1 の話で、v2以降はフレームワーク非依存。そのまま写さない。** 導入はCDN（`unpkg.com`）でよい。
+**承認済み15コマ計画のM01・M02ではOnsen UI 2.12.9を採用する（2026-09-23 オーナー決定）。** 素のJavaScriptから使うUIライブラリとして扱い、Vue・React・AngularJSやビルドツールは足さない。 2026-09時点で Onsen UI は生きている（最新安定版 2.12.9、2026-06-16 公開、Apache-2.0）が、その前の安定版は2022-12-27で、約3年半空いたあとのパッチ1本である。**前年度資料の「AngularJSをベースに」という説明は Onsen UI 1 の話で、v2以降はフレームワーク非依存。そのまま写さない。** 導入はCDN（`unpkg.com`）でよい。
 
 ## §0-B Flutterの前提（2026-09-23 時点で実測・確認した事実）
+
+- **学生のMacは全員Apple Silicon（arm64）で、Intel（x64）の学生はいない（2026-09-23 オーナー確認）。** Flutter SDKのダウンロード手順はmacOS arm64に統一する。
 
 - **基準のFlutter SDKは 3.47.5 / Dart 3.13.4（2026-09-18リリース）に固定する。** 学生のAndroid StudioとXcodeの組み合わせ（READMEの「開発環境：学生」）の全部を満たす版として選んだ。選んだ根拠と比較表は README の「Flutter SDKの基準バージョン」にある。**その版で実際に動くかは、授業の中で確かめる（オーナー方針）。**
   - **3.41系では、Android Studio 2026.1 の学生がAndroidのビルドをできない。** Flutterは既定で Android Studio に同梱のJDKを使う。同梱JDKは Panda 2（2025.3）が 21.0.9、2026.1 が 25.0.3（教員Macの実物で確認）。Flutter自身の互換表（`flutter_tools/lib/src/android/gradle_utils.dart`）は「Java 25 には Gradle 9.1.0 以上」としていて、3.41 のテンプレートは Gradle 8.14。**実測でも、3.41 で作ったプロジェクトの `./gradlew help` は JDK 21 で成功し、JDK 25 で `What went wrong: 25.0.3` と失敗した**（ログは `~/Documents/jec-25cm-hybrid-app-verification-deliverables/flutter-sdk-compat-2026-09-23/`）。3.44 のテンプレートは Gradle 9.1.0、3.47 は 9.3.1。
@@ -77,8 +79,8 @@ Freeプランの利用規約は「法人による商用でのアプリ開発」�
   - 配布後もAndroid SDK・NDK・AGP等の取得が残り得る。初回Android実行はコマ14に置き、回線・キャッシュのない環境での所要時間は別途確認する。
 - **学生のダウンロードもすべて授業時間内に行う（2026-09-23 オーナー決定）。** コマ7の冒頭にFlutter SDK・iOSランタイムのダウンロードを開始し、Monacaの仕上げと並行する。コマ8にも準備確認の時間を設ける。授業前の自宅作業を完了条件にしない。
 - **初回の実行はiOSシミュレータのほうが軽い。** Swift Package Manager が Flutter 3.44 からデフォルトで有効になり、3.47のiOSテンプレートには Podfile が含まれていない。**プラグインを使わないアプリならCocoaPodsは要らず、Gradleを一切踏まない。** 前年度は初回の回でAndroidとiOSの両方を実行させてAndroidで詰まったので、**「初回はiOSシミュレータ、AndroidはAPKを作る単元で初めて触る」**という順序にする。ただし `xcodebuild -downloadPlatform iOS` のランタイム取得が数GB級なので、コマ7で案内して授業中に開始する。
-- **Flutter系の課題提出物はAPKファイルとする（2026-09-23 オーナー決定）。** ABI構成とファイル名は、教員の確認端末に合わせて提出手順で決める。
-- **releaseのAPKは、署名設定なしで作れる。** テンプレートの `android/app/build.gradle.kts` に `signingConfig = signingConfigs.getByName("debug")` が入っているため。**`flutter build apk` は既定でreleaseビルド**（デバッグAPKが欲しいときだけ `--debug`）。実測サイズは fat（全ABI）42.6MB、`--split-per-abi` なら arm64-v8a 15.0MB、debug は138MB。提出にサイズ上限があるなら `--split-per-abi` を教える。
+- **Flutter系の課題提出物はAPKファイルとする（2026-09-23 オーナー決定）。** 提出先の上限は100MB以上または上限なしのため、`flutter build apk` の通常APK `app-release.apk` を採用する。生成したAPK自体をAndroidの検証先へインストールして確認する。
+- **releaseのAPKは、署名設定なしで作れる。** テンプレートの `android/app/build.gradle.kts` に `signingConfig = signingConfigs.getByName("debug")` が入っているため。**`flutter build apk` は既定でreleaseビルド**（デバッグAPKが欲しいときだけ `--debug`）。旧Flutter 3.41.0での実測サイズは通常APK（全ABI）42.6MB、arm64-v8aのみ15.0MB、debugは138MBだった。今回の完成アプリは3.47.5で通常APKを生成し、容量を確かめる。
 - **`INTERNET` パーミッションは `android/app/src/debug/AndroidManifest.xml` と `src/profile/…` にしか入っていない。** `src/main/AndroidManifest.xml` には無い。つまり **`flutter run` では通信できるのに、releaseのAPKでは通信が失敗する**。「授業では動いたのに提出物が動かない」の典型。通信を扱う単元では、その単元の本文の中に `main/AndroidManifest.xml` への追記STEPを置く（他の単元へ送らない）。
 - **学生のXcodeは 26.4 / 26.5 / 27 が混在している。** シミュレータの起動方法が Xcode 27以降は `open -a DeviceHub`、26以前は `open -a Simulator` と分かれるので、**教材では Xcode のアプリ名に触れず、Flutterプロジェクトを開いてからVisual Studio Codeの `Flutter: Launch Emulator` で起動し、デバイスを選択する。** `flutter devices` は接続済み端末の一覧表示であり、起動コマンドではない。 本文でOSバージョン分岐を作らない。
 - **CocoaPodsのレジストリは2026年12月2日に恒久的にread-onlyになる**と公式が告知している。授業期間中に到来する。プラグインを使う単元を置くなら、この日付の前後で手順が変わらないかを確かめる。
@@ -190,7 +192,7 @@ Freeプランの利用規約は「法人による商用でのアプリ開発」�
 - **配布ZIPはバイナリなので、並行する2本のPRが両方作り直すと必ず衝突する。** 片方がマージされたあと、§3の手順6でもう一度 `python3 scripts/package-project.py --project <単元名> --output docs/<スラッグ>/downloads/<単元名>.zip` を実行し直して、自分のPRのZIPを作り直す。ZIPは決め打ちタイムスタンプで作るので、中身が同じなら同じバイト列になる。
 - **`MonacaTemplate/` は単元ではなく、しかも2026年の通常版の「最小限のテンプレート」でもない。** 中身は前年度まで使っていた Monaca Education の「クラシック」テンプレートで、`www/classic.js` の冒頭に `Monaca Education Classic Library`、`.monaca/project_info.json` に `cordova_version: 11.0` とある（`classic.js` は `index.html` から読み込まれていない）。オーナーが2026-09-23に通常版で「最小限のテンプレート」から作ったプロジェクトには `.gitignore`・`.monacaignore`・`LICENSE` があって `classic.js` は無く、フレームワークは Cordova 12.0.0 だった。
   - `config/teaching-materials.json` には登録せず、学生用ZIPにも入れない。**中身に手を入れない**（オーナーがcommitしたものなので、比較の基準として残す）。
-  - **単元の完成プロジェクトの出発点にしない。** 出発点は、通常版の「最小限のテンプレート」の実物にする。公開リポジトリ [monaca-templates/blank](https://github.com/monaca-templates/blank)（MIT、最新リリース「Support Cordova 12」）は、ファイル構成（`.monaca`・`res`・`www`・`.gitignore`・`.monacaignore`・`.nvmrc`・`LICENSE`・`config.xml`・`package.json`）がオーナーのスクリーンショットと一致するが、**クラウド IDEが作るものと同一かは未確認**。取り込むときは、オーナーが新規作成したプロジェクトのファイルと突き合わせてから別フォルダとして足す。
+  - **単元の完成プロジェクトの出発点にしない。** 2026-09-23のオーナー許可により、公式 [monaca-templates/blank 4.0.0](https://github.com/monaca-templates/blank/tree/63b1dd8483612f23b2be35a3e77d7401a6e5b16f)（MIT、Cordova12）を `MonacaMinimumTemplate/` に原本として取り込んだ。以後の単元はこれを複製する。提供画面とCordovaの版・ファイル構成を比較済みで、masterのCordova13ではなく4.0.0を固定した。**クラウドで生成される各ファイルとの完全一致・ZIPインポートは未確認**で、比較結果と出所は `MonacaMinimumTemplate/README.md` に残す。取り込んだ原本は直接編集しない。
   - `www/index.html` と `www/components/loader.js` は **CRLF** になっている。単元へ複製するときは LF にそろえる。`snippets` のバイト一致検査が、教科書のHTML側にも CR を要求してしまうため。
 - 新しい単元の登録（§9）は必ず共有ファイルに当たる。2つの単元を同時に登録しない。登録のPRは、既存の全単元の教科書のサイドバーも触る（§9）。`<div class="resources">` は全体で1行なので、ほかの単元のPRが同じ行を触っていると、先にマージされた側と衝突する。相手のPRが開いているあいだは、手順6では分からない（比べる相手が `origin/main` だけのため）。相手がマージされたあとの§3の手順6で確かめ、両方の変更を残す。
 - 教科書 `docs/<スラッグ>/index.html` から他単元へのリンクは、topbarとサイドバーの2か所にある。どちらも本文ではなく導線で、手順やコードを他単元へ送るものではない。サイドバーに先の単元へのリンクがあっても、方針違反ではない。
@@ -314,7 +316,7 @@ Freeプランの利用規約は「法人による商用でのアプリ開発」�
 `docs/<スラッグ>/` を作るだけでは足りない。次のすべてに登録する。手順は `skills/add-teaching-unit/SKILL.md` にもある。
 
 1. 完成プロジェクト。
-   - **Monaca系**：`M0NXxx/` に `config.xml`・`package.json`・`www/`・`res/` を置く。出発点は通常版の「最小限のテンプレート」の実物にする（§4。`MonacaTemplate/` は旧テンプレートなので複製しない）。改行はLFにそろえる。`config.xml` の `<widget id>` と `<name>` を単元に合わせる。**Monacaのクラウドで作ってエクスポートする経路はFreeプランでは使えないので、リポジトリで書いてインポートで確かめる**（§0-A・§7）。
+   - **Monaca系**：`M0NXxx/` に `config.xml`・`package.json`・`www/`・`res/` を置く。出発点は `MonacaMinimumTemplate/` の固定原本にする（§4。`MonacaTemplate/` は複製しない）。`.monaca/project_info.json`・`.gitignore`・`.monacaignore`・`LICENSE` も保持し、原本のREADMEは複製せず単元用に書く。改行はLFにそろえる。`config.xml` の `<widget id>` と `<name>` を単元に合わせる。**Monacaのクラウドで作ってエクスポートする経路はFreeプランでは使えないので、リポジトリで書いてインポートで確かめる**（§0-A・§7）。
    - **Flutter系**：`F0NXxx/` を `flutter create --empty --platforms=ios,android --org jp.ac.jec --project-name <パッケージ名> F0NXxx` で作る（§0-B）。`pubspec.yaml` の `name` をconfigの `package_name` に、`android/app/build.gradle.kts` の `applicationId` を `application_id` にそろえる。`test/` はカウンターアプリ用のひな形なので消す（Unit Testは書かない。§10）。
 2. `docs/<スラッグ>/index.html`、`images/`（画像を使う単元だけ）、`downloads/<Project>.zip`。ZIPは次で作る。
 

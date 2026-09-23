@@ -11,7 +11,7 @@ JEC（25CM）の「ハイブリッドアプリ開発技法」で使う教材で�
 <!-- 単元ができたら、ここに教科書・完成プロジェクト・教員用ガイドのリンクを単元番号順で並べます。
      scripts/check-teaching-materials.py が config/teaching-materials.json の projects と照合します。 -->
 
-**まだ単元の教科書も共通資料もありません。** 最初に作る共通資料は `docs/common/setup.html`（授業を始めるまでの準備：教材の受け取り、Monacaのアカウント作成、Flutterの開発環境）です。配布スクリプトの `はじめに.txt` がこのパスを名指ししているので、このパスは変えません。
+[共通資料：授業を始めるまでの準備](docs/common/setup.html)を用意しました。教材の受け取り、Monacaのアカウント作成、Flutter 3.47.5の準備を授業内で進めます。単元の教科書は順次追加します。
 
 15コマの割り当ては下の「15コマ計画」にあります。教科書・教員用ガイド・`config/teaching-materials.json` への登録は、単元ごとのissueで行います（[AGENTS.md](AGENTS.md) §9、[単元追加用skill](skills/add-teaching-unit/SKILL.md)）。
 
@@ -27,13 +27,13 @@ JEC（25CM）の「ハイブリッドアプリ開発技法」で使う教材で�
 
 **同じ日に2回公開すると、ファイル名も展開先のフォルダ名も同じになります。** 版タグ（`materials-日付-コミットID`）は別でも、学生が見る名前は日付までしか入らないためです。同じ日に出し直すときは、Google Classroomの投稿に「古いほうのフォルダを消してから展開してください」と添えてください。
 
-展開後、はじめて授業を受ける学生は [共通資料：授業を始めるまでの準備](docs/common/setup.html) をブラウザで開き、上から順に準備します（同梱の `はじめに.txt` でも、単元一覧より前に案内しています）。準備が済んだら、その日の単元の教科書をブラウザで開きます。
+展開後、はじめて授業を受ける学生は [共通資料：授業を始めるまでの準備](docs/common/setup.html) をブラウザで開き、第1コマにSTEP 1〜3、第7コマにSTEP 4〜7を進めます（同梱の `はじめに.txt` でも、単元一覧より前に案内しています）。準備が済んだら、その日の単元の教科書をブラウザで開きます。
 
-学生用ZIPには `docs` 一式と、展開済みの完成プロジェクト（`samples`）、開き方・版情報を収録します。**いまは日本語だけの構成で配布します。** 展開してできたフォルダの中身は `docs` / `samples` / `はじめに.txt` / `VERSION.json` の4つで、言語を選ぶ入口はありません。`config/i18n.json` の5言語がすべて `distribute: false` のためです（「多言語展開」）。翻訳を終えた言語を `distribute: true` にすると、言語を選ぶ入口の `index.html` がZIPに入り、`はじめに.txt` にも各言語の案内が付きます。`teacher` フォルダと `MonacaTemplate` は収録しません。GitHubが自動で表示する **Source code (zip)** はリポジトリ全体のため、学生用ZIPには使いません。なお、このリポジトリ自体はPublicなので、教員用ファイルもGitHub上では閲覧できます。
+学生用ZIPには `docs` 一式と、開き方・版情報を収録します。**いまは日本語だけの構成で配布します。** 展開してできたフォルダには `docs` / `はじめに.txt` / `VERSION.json` があり、完成見本を同梱する版には、展開済みの完成プロジェクトを入れた `samples` も加わります。現在は `config/teaching-materials.json` の `projects` が空なので、`samples` はありません。言語を選ぶ入口がないのは、`config/i18n.json` の5言語がすべて `distribute: false` のためです（「多言語展開」）。翻訳を終えた言語を `distribute: true` にすると、言語を選ぶ入口の `index.html` がZIPに入り、`はじめに.txt` にも各言語の案内が付きます。`teacher` フォルダとテンプレート原本（`MonacaTemplate`・`MonacaMinimumTemplate`）は収録しません。GitHubが自動で表示する **Source code (zip)** はリポジトリ全体のため、学生用ZIPには使いません。なお、このリポジトリ自体はPublicなので、教員用ファイルもGitHub上では閲覧できます。
 
 授業中は教員が指定した版を使います。授業ごとの案内には、内容が固定された個別リリースのURLを使ってください。更新版は別フォルダに展開し、学生自身のプロジェクトは上書きしません。
 
-**完成プロジェクト（先生が作った見本）の渡し方は、系統で違います。**
+**完成プロジェクト（先生が作った見本）を配るときは、系統ごとに次の形で渡します。** 共通資料だけの版には、完成見本や `samples` は含まれません。
 
 | 系統 | 学生が受け取る形 |
 | --- | --- |
@@ -56,7 +56,7 @@ Freeプランの制限が、そのまま教材の設計を縛ります。詳細�
 
 **Monaca系の課題は、学生が自分のプロジェクトを「公開」して、発行されたURLを先生に共有する形で提出します。** クラウド IDEの **プロジェクト → 公開…** で `https://monaca.mobi/ja/directimport?pid=…` が発行されます。このURLは、アプリを動かすURLではなく、**プロジェクトを相手のMonacaへ取り込ませるURL**です。教員はURLからインポートして、実際に動かして採点します。
 
-**Flutter系の課題は、学生自身がアレンジしたアプリのAPKファイルを提出します**（2026-09-23 オーナー決定）。署名鍵の作成は行わず、Flutterのテンプレートにあるデバッグ鍵による署名設定で作成します。APKのABI構成とファイル名は、提出手順を作るときに教員の確認端末に合わせて決めます。
+**Flutter系の課題は、学生自身がアレンジしたアプリのAPKファイルを提出します**（2026-09-23 オーナー決定）。署名鍵の作成は行わず、Flutterのテンプレートにあるデバッグ鍵による署名設定で作成します。`flutter build apk` で生成する通常の `app-release.apk` を使います（提出先の上限は100MB以上、または上限なし）。生成したAPKファイルの容量と、そのAPK自体の動作を提出前に確かめます。
 
 - **アプリに入力して保存したデータは、公開URLやAPKには含まれません。** 提出先でも見えるアレンジは、ソース中の初期データ・文字・色などを変更して作ります。公開URLの新規取り込み、またはAPKの新規インストール後に確認します。
 - **配布している完成プロジェクト（見本）をそのまま出しても、提出にはなりません。** 提出するのは、学生自身が授業で作ったプロジェクトに、学生自身がアレンジを加えたものです。
@@ -65,11 +65,40 @@ Freeプランの制限が、そのまま教材の設計を縛ります。詳細�
 
 ### 15コマ計画
 
-**この割り当ては仮です。実際のコマ数は授業の進み具合に合わせて見直します。** 1コマ90分、合計で全15コマです。Monacaが7コマ、Flutterが8コマです。
+**2026-09-23にオーナー承認済みの計画です。** 1コマ90分、Monaca7コマ＋Flutter8コマ、計4単元です。各回10分の予備時間を確保し、実測した待ち時間や授業の進み具合に応じて配分を調整します。単元の登録は教材が完成した時点で行います。
 
-<!-- 確定したら、ここに「コマ / 単元 / 内容 / プロジェクト」の表を入れます。
-     config/teaching-materials.json の projects[].sessions の合計が 15 を超えると
-     scripts/check-teaching-materials.py が落ちます。 -->
+| コマ | 単元 | 内容・画面で確かめること | プロジェクト |
+| --- | --- | --- | --- |
+| 1 | M01OshiList | 通常版Monacaのアカウント・枠を確認し、静的な推しカードを表示する | 推しログ |
+| 2 | M01OshiList | Onsen UIのツールバーと一覧を作り、auto-stylingでOSによる見た目の差を確かめる | 推しログ |
+| 3 | M01OshiList | 配列から一覧を描き、押した行の名前を表示する | 推しログ |
+| 4 | M01OshiList | 一覧から詳細へ進み、戻る。文字・色・表示項目をアレンジする | 推しログ |
+| 5 | M02OshiSave | この単元だけで開始状態を用意し、入力した推しを追加する | 推しログ |
+| 6 | M02OshiSave | localStorageを既知の保存APIと比較し、JSONで一覧を保存・復元する | 推しログ |
+| 7 | M02OshiSave | 冒頭でFlutter関連のダウンロードを開始。待ち時間にアレンジ・公開URLの確認・提出を行う | 推しログ |
+| 8 | F01StampBoard | 準備確認を続け、空のFlutterプロジェクトをiOSで実行し、ホットリロードする | スタンプ帳 |
+| 9 | F01StampBoard | 習慣カードの余白と並びを整える | スタンプ帳 |
+| 10 | F01StampBoard | StatefulWidget・setStateでスタンプと回数を更新する | スタンプ帳 |
+| 11 | F01StampBoard | 習慣の一覧から表示専用の詳細へ進み、アレンジ箇所を確かめる | スタンプ帳 |
+| 12 | F02StampRelease | 単元内の開始コードと説明で再開し、入力した習慣を追加する | スタンプ帳 |
+| 13 | F02StampRelease | SharedPreferencesAsyncとasync / awaitで保存・読込・待機中表示を作る | スタンプ帳 |
+| 14 | F02StampRelease | Androidで実行し、iOSとの見た目を比較。配色変更と通常APKの試作を行う | スタンプ帳 |
+| 15 | F02StampRelease | アレンジした通常APKを生成し、そのAPKのインストール・動作確認後に提出する | スタンプ帳 |
+
+新概念は、M01のauto-styling、M02のJSON、F01の宣言的UI、F02のasync / awaitの4つです。M02・F02には、開始時の全コード、配置・実行手順、既知技術との比較説明を再掲し、前の教科書を読まなくても始められるようにします。FlutterはMonacaの成果物を前提にしません。
+
+**学生のダウンロードもすべて授業時間内に行います。** コマ7の冒頭10分でFlutter SDKとiOSランタイムの取得を始め、Monacaの仕上げと並行します。コマ7終盤にも5分を準備状況の確認に使い、コマ8の冒頭25分でも準備を続けます。回線が遅い場合は配分を調整し、家庭での作業が済んでいることを前提にしません。Gradleキャッシュの受け取り・配置も授業内で行います。
+
+### フォルダの役割
+
+| フォルダ | 内容 |
+| --- | --- |
+| `docs/common/` | 学生向けの共通準備資料 |
+| `docs/assets/` | 教科書の共通CSS・操作機能 |
+| `MonacaMinimumTemplate/` | [通常版の最小限テンプレート4.0.0と出所・比較記録](MonacaMinimumTemplate/README.md) |
+| `MonacaTemplate/` | 既存のCordova11テンプレート。比較用に保持 |
+| `scripts/` / `config/` | 教材検査と配布設定 |
+| `skills/` / `i18n/` | 制作手順と翻訳カタログ |
 
 ### 前年度の教材との関係
 
@@ -169,7 +198,7 @@ python3 scripts/localize-student-materials.py check
 python3 scripts/package-student-materials.py
 ```
 
-`dist/hybrid-app-student-materials-2026-09-23.zip` のように、版の日付（HEADのコミット日時をJSTにした日付。版タグと同じ日付）が入った名前で生成されます。対象はGit管理された `docs` のファイルで、完成版ZIPはソースから再生成します。再生成したZIPの中身は、展開済みの見本として `samples/` にも収録します（`samples/` はリポジトリにはなく、配布ZIPの中だけにできます）。新しい教材は `git add` 後に実行してください。ローカルの編集内容も含むため、正式な配布版はGitHub Actionsから公開します。
+`dist/hybrid-app-student-materials-2026-09-23.zip` のように、版の日付（HEADのコミット日時をJSTにした日付。版タグと同じ日付）が入った名前で生成されます。対象はGit管理された `docs` のファイルです。完成プロジェクトが登録されている場合は、その完成版ZIPをソースから再生成し、中身を展開済みの見本として `samples/` にも収録します（`samples/` はリポジトリにはなく、完成見本を同梱する配布ZIPの中だけにできます）。完成プロジェクトが未登録の版には `samples/` はありません。新しい教材は `git add` 後に実行してください。ローカルの編集内容も含むため、正式な配布版はGitHub Actionsから公開します。
 
 **単元を追加するときに、配布スクリプトを直す必要はありません。** `scripts/package-student-materials.py` と `scripts/release-student-materials.py` は、完成プロジェクトのZIP生成・`はじめに.txt` の単元一覧・リリースノートの単元一覧を、すべて `config/teaching-materials.json` の `projects` から組み立てます。手順は [AGENTS.md](AGENTS.md) と [単元追加用skill](skills/add-teaching-unit/SKILL.md) にあります。
 
@@ -231,8 +260,7 @@ CocoaPods 1.16.2 / Android SDK 37.0.0 / JDK 21（Android Studio Panda 2 同梱�
 
 **Flutter 3.47.5 / Dart 3.13.4（2026-09-18リリース）に固定します。** 学生のAndroid StudioとXcodeの組み合わせを全部満たす版として選びました。**この版で実際に動くかは、授業の中で確かめます。**
 
-- ダウンロード（Apple シリコン）：`https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos_arm64_3.47.5-stable.zip`
-- ダウンロード（Intel）：`https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos_3.47.5-stable.zip`
+- ダウンロード（Apple Silicon / arm64）：`https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos_arm64_3.47.5-stable.zip`。学生のMacは全員Apple Siliconです（2026-09-23 オーナー確認）。
 - **授業期間中は `flutter upgrade` しません。** 次の安定版（予定は11月）で SDK 内の Material / Cupertino が正式に非推奨になり、教材のコードに警告が出始めるためです。
 
 | 回答 | Android Studio | 同梱のJDK | Xcode | 3.41系 | 3.44系 | **3.47.5** |
@@ -274,7 +302,7 @@ CocoaPods 1.16.2 / Android SDK 37.0.0 / JDK 21（Android Studio Panda 2 同梱�
 
 1. **1コマで新しく覚えることは1つだけにする。** 1単元で導入する新概念は1つまでです。覚えることが増えるほど、コードを追えなくなる学生が出ます。ここでいう「新概念」は、**Web基礎にもJava/Androidにも Swift/iOS にもないもの**を指します（下の「単元の範囲の決め方」）。書き方だけが違うものは、比較で見せれば足ります。
 2. **やったことの結果が、必ず目に見える形にする。** Monaca系ならプレビュー画面、Flutter系ならシミュレータ／エミュレータの画面で確かめられるところまでを1単元にします。
-3. **Monaca系は素のHTML / CSS / JavaScript で書く。** フレームワークもビルドツールも入れません。要素の取得は `document.getElementById`、イベントは `addEventListener`、クラスの付け外しは `classList` と、Web基礎で習った書き方にそろえます。
+3. **Monaca系は素のHTML / CSS / JavaScript で書く。** Vue・React・AngularJSなどのフレームワークやビルドツールは入れません。M01・M02ではOnsen UI 2.12.9を素のJavaScriptから使うUIライブラリとして採用します。要素の取得は `document.getElementById`、イベントは `addEventListener`、クラスの付け外しは `classList` と、Web基礎で習った書き方にそろえます。
 4. **Monaca系はCordovaプラグインに依存しません。** 使うのはブラウザだけで動く範囲です。Freeプランでコアプラグインしか使えないうえ、プレビューでもローカルでも確かめられない機能が増えると、学生が自分のコードの結果を見られなくなります。
 5. **伝えたいことは画面に出します。** `console.log` や `print` だけで済ませません。学生はアプリを触っているとき開発者ツールを見ていないからです。
 6. **完成プロジェクトにUnit Testは書きません。** テストしやすくするためのリファクタリングもしません。授業で扱わないコードが増えると、読む量だけが増えるためです（教材を検査する `scripts/test_*.py` はCIで動くので、通る状態を保ちます）。

@@ -56,9 +56,8 @@ description: Add a new teaching unit to this hybrid app course repository - a Mo
 
 **リポジトリで書き、ローカルのChromeで確かめ、最後にオーナーがMonacaへインポートして確かめる。** Freeプランはエクスポートできないので、Monacaで書いて書き出す経路はない（AGENTS.md §0-A）。
 
-1. **出発点は、通常版の「最小限のテンプレート」の実物にする。`MonacaTemplate/` は複製しない。** `MonacaTemplate/` は前年度の Monaca Education の「クラシック」テンプレート（Cordova 11、`www/classic.js` あり）で、2026年の通常版が作るものとは中身が違う（AGENTS.md §4）。
-   - リポジトリに「最小限のテンプレート」の実物のフォルダがまだ無いときは、単元を作り始めない。AGENTS.md §4 の手順（公開リポジトリ monaca-templates/blank を、オーナーが通常版で新規作成したプロジェクトと突き合わせてから、別フォルダとして足す）を、別のissueにして先に済ませる。
-   - 単元のフォルダ `M0NXxx/` に置くのは `config.xml`・`package.json`・`www/`・`res/`（AGENTS.md §9）。テンプレートにあるそれ以外のファイル（`.monaca/`・`.gitignore`・`.monacaignore`・`.nvmrc`・`LICENSE` など）の扱いは、AGENTS.md §9 に書いてあればそれに従い、書いてなければオーナーに確認する。推測で足したり消したりしない。
+1. **出発点は `MonacaMinimumTemplate/` の固定原本にする。`MonacaTemplate/` は複製しない。** オーナー許可で取り込んだ公式 `monaca-templates/blank` 4.0.0（Cordova12）の出所と比較結果は `MonacaMinimumTemplate/README.md` にある。クラウド生成物との完全一致・インポートは未確認なので、原本をクラウドから書き出したものとは説明しない（AGENTS.md §4）。
+   - 単元のフォルダ `M0NXxx/` に `config.xml`・`package.json`・`www/`・`res/` と、`.monaca/project_info.json`・`.gitignore`・`.monacaignore`・`LICENSE` を複製する（AGENTS.md §9）。原本のREADMEは複製せず、単元のREADMEを作る。MITの著作権表示と許諾文を消さない。
 2. **改行はLFにそろえる。** `snippets` はバイト単位で照合するので、CRLFのファイルを複製すると、教科書のHTML側にもCRが要ることになる。
 
    ```sh

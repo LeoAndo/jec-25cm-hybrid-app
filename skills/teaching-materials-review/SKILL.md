@@ -148,7 +148,7 @@ PY
 - プラットフォームのディレクトリが `ios/` と `android/` だけで、`web/`・`macos/`・`linux/`・`windows/` が無いこと。`test/` が無いこと。
 - `lib/` と `pubspec.yaml` の外を変えていないこと。例外は、通信を扱う単元の `android/app/src/main/AndroidManifest.xml` への `INTERNET` 追記と、`gradle-wrapper.properties` の `-bin.zip` 書き換えの2つだけ（AGENTS.md §11）。通信を扱う単元で `INTERNET` の追記STEPが教科書に無ければ、releaseのAPKで通信が失敗するので「対応が必要」とする。
 - 画面の確認は、iOSシミュレータかAndroidエミュレータで行う。READMEの「開発環境」に書いた基準のFlutter SDKと違う版で撮ったスクリーンショットは指摘する。レビュワーが動かせない場合は「未確認項目」として残す。
-- 教科書にXcodeのアプリ名（`Simulator`・`DeviceHub`）での起動手順が書かれていたら指摘する。シミュレータは Visual Studio Code のデバイス選択（または `flutter devices`）から起動させる（AGENTS.md §0-B）。Visual Studio Code は英語UIを使い、操作名が `Open Folder…` など実際の表示に合っていることを確認する。
+- 教科書にXcodeのアプリ名（`Simulator`・`DeviceHub`）での起動手順が書かれていたら指摘する。シミュレータの選択・起動は、FlutterプロジェクトをVisual Studio Codeで開いてから、デバイス選択または `Flutter: Launch Emulator` で行う（AGENTS.md §0-B）。`flutter devices` は起動済み・接続済みの端末を一覧表示するコマンドで、シミュレータを起動しない。共通の準備資料はSDK・拡張・iOS実行環境の取得と `flutter doctor` までにし、プロジェクトを開く前に起動用の項目を探させない。Visual Studio Code は英語UIを使い、操作名が `Open Folder…` など実際の表示に合っていることを確認する。
 - 完成プロジェクトの `README.md` が、画面の構成の表 → 使用しているAPI（または画像・素材）→ ソースコードの構成の表 → 処理の流れ → 実装のポイント → 主なパッケージ → ビルドと実行、の順になっていること。
 
 ## 完成コードの判断基準
