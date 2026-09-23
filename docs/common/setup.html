@@ -83,15 +83,24 @@
     <p class="step-meta">STEP 4</p><h2>Flutter 3.47.5を用意する</h2>
     <p>ここからは第7コマの授業内で始めるFlutterの準備です。Finderの <code>アプリケーション</code> に、<strong>Visual Studio Code・Xcode・Android Studio</strong> があることを確かめます。XcodeとAndroid Studioは、iOS・Androidの授業で使っているものを使います。見つからない場合は、先生へ知らせてください。</p>
     <p>この授業のFlutter SDKは <strong>3.47.5</strong>、同梱されるDartは <strong>3.13.4</strong> にそろえます。学生のMacは全員Apple Siliconなので、<a href="https://docs.flutter.dev/install/archive">公式のFlutter SDK archive</a> で、macOS用の <code>Stable</code>、<code>3.47.5</code>、Architectureは <code>arm64</code> を選びます。</p>
-    <h3>SDKとiOSの実行環境を、続けてダウンロードする</h3>
-    <p>自分のMacに合うSDKのダウンロードを開始したら、完了を待たずに、iOSの実行環境も取得します。iOSの授業で使っているXcodeを一度開き、初回の追加処理が残っていれば、画面の案内を確認します。利用規約や管理者権限の入力で判断できない場合は、先生へ相談します。</p>
-    <p>Terminalで新しいウィンドウを開き、次を実行します。これはXcodeのコマンドなので、Flutter SDKの展開前でも実行できます。iOSの実行環境の取得では、数GBの通信が発生することがあります。</p>
-    <div class="code-head">Terminal · iOSの実行環境のダウンロードを開始</div>
-    <pre tabindex="0"><code>xcodebuild -downloadPlatform iOS</code></pre>
-    <p>SDKとiOSのダウンロードを開始したら、待っている間は先生の案内でMonacaの仕上げを進めます。取得中のTerminalは閉じずに残します。SDKのダウンロードが終わったら、次の展開へ進みます。iOS側の完了はSTEP 7で確認します。</p>
+    <h3>SDKの取得を始め、既存のiOS環境を確認する</h3>
+    <p>SDKのダウンロードを開始したら、完了を待たずに、iOSの授業で使っているシミュレータを確認します。<strong>既存の環境が使えれば、新しいiOSランタイムのダウンロードは不要です。</strong>全員で最新のランタイムを取得する必要はありません。</p>
+    <p>Terminalで新しいウィンドウを開き、次を実行します。利用可能なシミュレータを一覧表示する、Xcodeの確認用コマンドです。Flutter SDKの展開前でも実行できます。</p>
+    <div class="code-head">Terminal · 利用可能なシミュレータを確認</div>
+    <pre tabindex="0"><code>xcrun simctl list devices available</code></pre>
+    <p><code>iOS</code> の見出しの下に、授業で使っているiPhoneの名前があるかを確かめます。<code>Shutdown</code> は停止中という意味で、ダウンロード不足を示すものではありません。名前があれば、その環境を使う準備を進めます。一覧が空、またはエラーになる場合は、出力を先生に見せてください。ランタイムが不足しているのか、Xcodeの設定やシミュレータの作成が必要なのかを一緒に確認します。コマンドの説明は <a href="https://developer.apple.com/documentation/xcode/xcode-command-line-tool-reference">AppleのXcodeコマンドラインツール資料</a>と、Terminalの <code>xcrun simctl help list</code> で確認できます。</p>
+    <details>
+      <summary>補足：iOS環境が見つからない・実行できないとき</summary>
+      <p>まずiOSの授業で使っているXcodeを開き、初回の追加処理が残っていないか先生と確認します。利用規約や管理者権限の入力で判断できない場合も、先生へ相談します。</p>
+      <p><strong>先生と確認して、ランタイムの追加が必要になった場合だけ</strong>、次のコマンドを使います。数GBの通信が発生することがあるため、授業内で開始します。既存の環境が使える人は実行しません。追加方法は <a href="https://developer.apple.com/documentation/xcode/downloading-and-installing-additional-xcode-components">AppleのXcode追加コンポーネントの資料</a>にあります。</p>
+      <div class="code-head">Terminal · 必要な場合だけiOSランタイムを取得</div>
+      <pre tabindex="0"><code>xcodebuild -downloadPlatform iOS</code></pre>
+      <p>取得中のTerminalは閉じずに残し、完了をSTEP 7で確認します。</p>
+    </details>
+    <p>SDKなどのダウンロードを待っている間は、先生の案内でMonacaの仕上げを進めます。SDKのダウンロードが終わったら、次の展開へ進みます。</p>
     <p>SDKを置く場所は、版を区別できる新しいフォルダにします。以下は、これから作る保存先の例です。既存のSDKを移動したり上書きしたりしません。</p>
     <ol>
-      <li>iOSの取得用とは別のTerminalウィンドウを開き、次のコマンドで、保存先 <code>~/develop/flutter-3.47.5</code> を作ります。</li>
+      <li>Terminalで次のコマンドを実行し、保存先 <code>~/develop/flutter-3.47.5</code> を作ります。追加のダウンロードが動いている場合は、別のTerminalウィンドウを使います。</li>
     </ol>
     <div class="code-head">Terminal · SDKを置くフォルダを作る</div>
     <pre tabindex="0"><code>mkdir -p "$HOME/develop/flutter-3.47.5"</code></pre>
@@ -114,7 +123,7 @@ open -a "Visual Studio Code" "$HOME/.zprofile"</code></pre>
     <p>開いた <code>.zprofile</code> の末尾へ、次の1行を追加して保存します。既に同じ行があれば、重ねて追加しません。他の設定は残します。SDKを別の場所へ置いた場合は、<code>/bin</code> より前の部分を実際の場所へ合わせます。</p>
     <div class="code-head">.zprofile · ファイルに追加する1行</div>
     <pre tabindex="0"><code>export PATH="$HOME/develop/flutter-3.47.5/flutter/bin:$PATH"</code></pre>
-    <p>iOSのダウンロードが動いているTerminalは、そのまま開いておきます。Visual Studio Codeだけを終了して開き直し、Terminalは新しいウィンドウを開きます。新しいウィンドウで、次の2行を実行します。</p>
+    <p>Visual Studio Codeを終了して開き直し、Terminalは新しいウィンドウを開きます。iOSランタイムの追加ダウンロードが動いている場合は、そのTerminalを開いたまま残します。新しいウィンドウで、次の2行を実行します。</p>
     <div class="code-head">Terminal · 使われるSDKと版を確認</div>
     <pre tabindex="0"><code>which flutter
 flutter --version</code></pre>
@@ -143,15 +152,15 @@ flutter --version</code></pre>
 
   <section id="step-7">
     <p class="step-meta">STEP 7</p><h2>iOSの実行環境とダウンロードを確認する</h2>
-    <p>Flutterの初回実行には、iOSシミュレータを使います。STEP 4でダウンロードを始めたTerminalを確認し、エラーで止まっておらず、取得が完了していることを確かめます。第7コマで終わらなかった場合は、第8コマの授業内でも確認を続けます。</p>
-    <p>Flutter SDKの展開とPATHの設定が済んだTerminalで、Flutter側のiOS用ファイルも取得します。必要なものが既に入っていれば、追加取得が省略されます。</p>
+    <p>Flutterの初回実行には、STEP 4で確認した既存のiOSシミュレータを使います。ランタイムの追加が必要だった人は、ダウンロード用のTerminalを確認し、エラーで止まっておらず、取得が完了していることを確かめます。第7コマで終わらなかった場合は、第8コマの授業内でも確認を続けます。</p>
+    <p>Flutter SDKの展開とPATHの設定が済んだTerminalで、Flutter側のiOS用ファイルを取得します。これはiOSの授業で使ったランタイムとは別の、Flutter専用の資材です。必要なものが既に入っていれば、追加取得が省略されます。</p>
     <div class="code-head">Terminal · FlutterのiOS用ファイルを取得</div>
     <pre tabindex="0"><code>flutter precache --ios</code></pre>
     <p>取得が終わったら、環境の確認結果を表示します。</p>
     <div class="code-head">Terminal · 開発環境の診断</div>
     <pre tabindex="0"><code>flutter doctor -v</code></pre>
-    <p><code>Flutter</code> と <code>Xcode</code> の項目を確認します。エラーや追加の設定が表示されたら、出力を先生に見せてください。Android側の準備は、Androidを使う授業の案内に合わせます。STEP 4のiOS実行環境の取得は、<a href="https://docs.flutter.dev/platform-integration/ios/setup">Flutter公式のiOS環境設定</a>に基づいています。</p>
-    <div class="note"><p class="box-title">Swiftの実行環境を使う</p><p>Flutterでも、iOS向けのビルドとシミュレータにはXcodeの環境を使います。MacにXcode本体があることと、必要なiOSの実行環境が取得済みであることは別なので、ダウンロードの完了まで確かめます。</p></div>
+    <p><code>Flutter</code> と <code>Xcode</code> の項目を確認します。エラーや追加の設定が表示されたら、出力を先生に見せてください。Android側の準備は、Androidを使う授業の案内に合わせます。設定項目は <a href="https://docs.flutter.dev/platform-integration/ios/setup">Flutter公式のiOS環境設定</a>でも確認できます。</p>
+    <div class="note"><p class="box-title">Swiftの実行環境を使う</p><p>Flutterでも、iOS向けのビルドとシミュレータにはXcodeの環境を使います。iOSの授業で使っている環境を生かし、Flutter専用の資材を追加します。実際の起動とアプリの実行は、Flutterプロジェクトを作る授業で確認します。そのとき動かない場合も、すぐにランタイムを取得し直さず、先生と原因を確認します。</p></div>
     <h3>Android側で時間のかかる取得を分けて考える</h3>
     <p>Androidでの実行とAPK作成は、後の授業で扱います。必要なものの取得や配布キャッシュの展開も、先生の案内に合わせて授業内で行います。</p>
     <table><thead><tr><th>取得するもの</th><th>この授業での準備</th></tr></thead><tbody>
@@ -161,7 +170,7 @@ flutter --version</code></pre>
     </tbody></table>
     <p>Flutter側のファイル、Gradle本体、Android SDKやビルド用の依存ファイルは、それぞれ必要になります。1種類のキャッシュをコピーしても、すべての取得が終わるわけではありません。</p>
     <p>Gradleのキャッシュは、プロジェクトが使う配布URLと一致している必要があります。<code>-bin.zip</code> と <code>-all.zip</code> は別です。授業でプロジェクトを作ったときに、<code>android/gradle/wrapper/gradle-wrapper.properties</code> の <code>distributionUrl</code> を、配布キャッシュと同じURLにそろえます。ここではまだプロジェクトを作らないため、ファイルの編集は行いません。仕組みは <a href="https://docs.gradle.org/current/userguide/gradle_wrapper.html#sec:using_wrapper">Gradle Wrapperの公式資料</a>で確認できます。</p>
-    <div class="check"><label><input type="checkbox" data-check="flutter-platform"><span>iOSの実行環境を取得し、doctorの結果を確認した。追加設定が必要な項目は先生に相談した。</span></label></div>
+    <div class="check"><label><input type="checkbox" data-check="flutter-platform"><span>使うiOS環境とdoctorの結果を確認した。追加設定が必要な項目は先生に相談した。</span></label></div>
   </section>
 
   <section id="ready">
