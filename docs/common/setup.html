@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>授業を始めるまでの準備 | ハイブリッドアプリ開発技法</title>
+  <link rel="stylesheet" href="../assets/textbook.css">
+  <script src="../assets/textbook.js" defer></script>
+</head>
+<body class="plain" data-progress-key="jec-hybrid-setup-v1">
+<a class="skip" href="#main">本文へ移動</a>
+<header class="topbar"><span class="brand">JEC / ハイブリッドアプリ開発技法</span><a href="#main" data-back>もとの教科書へ戻る</a></header>
+<main id="main">
+  <div class="hero">
+    <p class="eyebrow">共通資料 · 授業内で行う準備</p>
+    <h1>授業を始めるまでの準備</h1>
+    <p class="lede">教材を受け取り、Monacaにログインできる状態と、Flutterの開発環境を使える状態にします。使うのはmacOSです。アプリの作成と実行は、その日の教科書で行います。</p>
+    <div class="tags"><span>Monaca クラウド IDE / Google Chrome</span><span>Flutter / Visual Studio Code</span><span>macOS</span></div>
+    <div class="goal"><p class="box-title">準備とダウンロードも授業内で行う</p><p>前半はMonaca、後半はFlutterを使います。STEP 1〜3はMonacaの準備です。Flutterの準備は、第7コマの冒頭にSTEP 4〜7を順に始め、ダウンロード待ちの間に先生の案内でMonacaの仕上げを進めます。第8コマでも準備の確認を続けます。家庭でのダウンロードを宿題にはしません。</p></div>
+    <nav aria-label="この資料の目次"><ol>
+      <li><a href="#step-1">教材を受け取る</a></li>
+      <li><a href="#step-2">通常版Monacaに登録する</a></li>
+      <li><a href="#step-3">プロジェクトの空きを確かめる</a></li>
+      <li><a href="#step-4">Flutter 3.47.5を用意する</a></li>
+      <li><a href="#step-5">使うFlutterの場所と版をそろえる</a></li>
+      <li><a href="#step-6">Visual Studio Codeを準備する</a></li>
+      <li><a href="#step-7">iOSの実行環境とダウンロードを確認する</a></li>
+    </ol></nav>
+    <div class="progress"><span data-progress-label>0 / 7 ステップ確認済み</span><progress max="7" value="0" aria-label="準備の進み具合"></progress></div>
+  </div>
+
+  <section id="step-1">
+    <p class="step-meta">STEP 1</p><h2>教材を受け取る</h2>
+    <p>Google Classroomなどで先生が案内した<strong>その回のリリース</strong>を開き、<code>Assets</code> から学生用ZIPをダウンロードします。名前は <code>hybrid-app-student-materials-日付.zip</code> の形です。GitHubの <code>Source code (zip)</code> は授業用の配布ZIPではありません。</p>
+    <ol>
+      <li>FinderでダウンロードしたZIPをダブルクリックして展開します。既に同じ名前のフォルダになっていれば、そのフォルダを使います。</li>
+      <li>展開したフォルダを、見つけやすい場所に置きます。例えば <code>書類</code> の中です。</li>
+      <li>中に <code>docs</code>、<code>はじめに.txt</code>、<code>VERSION.json</code> があることを確かめます。完成見本が同梱されている版には <code>samples</code> もあります。言語を選ぶ <code>index.html</code> がある版では、そこから教科書を開けます。</li>
+      <li><code>docs/common/setup.html</code> をGoogle Chromeで開きます。今読んでいるページが、この共通資料です。</li>
+    </ol>
+    <p>完成見本が配られたら、次の方法で開きます。共通資料だけの版には <code>samples</code> がなくても問題ありません。</p>
+    <table><thead><tr><th>配布された見本</th><th>開き方</th></tr></thead><tbody>
+      <tr><td>Monacaの完成プロジェクト</td><td>教科書や先生が案内する取り込み用URLを開きます。<code>samples</code> の中身は、コードを読み比べるための写しです。</td></tr>
+      <tr><td>Flutterの完成プロジェクト</td><td>Visual Studio Code の <code>File → Open Folder…</code> で、<code>samples</code> 内の指定されたプロジェクトフォルダを開きます。<code>pubspec.yaml</code> が入っている階層を選びます。</td></tr>
+    </tbody></table>
+    <div class="note"><p class="box-title">Web基礎・Android・iOSの見本と同じく、自分の作品を分ける</p><p>先生の完成見本と、自分で作るプロジェクトは別のものです。自分の作品を配布フォルダの中へ保存すると、教材を入れ替えたときに混ざります。自作の保存先は、その日の教科書で決めます。</p></div>
+    <p>更新版は別フォルダに展開します。同じ日に配り直された版は名前が同じになるため、先生の案内を確かめてから入れ替えてください。自分の作品を上書きしません。質問するときは、フォルダ名の日付と <code>VERSION.json</code> の <code>version</code> を伝えます。</p>
+    <div class="check"><label><input type="checkbox" data-check="materials"><span>先生が指定した版の教科書を開き、自分の作品と分けて置けた。</span></label></div>
+  </section>
+
+  <section id="step-2">
+    <p class="step-meta">STEP 2</p><h2>通常版Monacaに登録する</h2>
+    <p>Google Chromeで <a href="https://ja.monaca.io/">Monacaの公式サイト</a>を開き、<code>ログイン</code> から進みます。この授業は<strong>通常版MonacaのFreeプラン</strong>を使います。ログイン後の開発画面は <code>console.monaca.mobi</code> です。</p>
+    <figure><img src="images/monaca-login.png" width="2990" height="234" alt="Monaca公式サイト右上のログインへの入口"><figcaption>公式サイト右上の <code>ログイン</code> から、通常版Monacaへ進みます。</figcaption></figure>
+    <p>通常版のアカウントを既に持っていれば、そのアカウントでログインします。初めて使う人は、ログイン画面からアカウント作成へ進み、次の順に登録します。</p>
+    <ol>
+      <li>受信できる自分のメールアドレスと、登録するパスワードを入力します。</li>
+      <li>利用規約など画面の説明を確認し、必要な項目を入力して、<code>アカウント新規作成</code> を選びます。</li>
+      <li>入力したメールアドレスの受信箱を開き、Monacaからの確認メールにあるリンクを開きます。</li>
+      <li>登録を完了し、通常版Monacaへログインします。プロジェクトの一覧が見えれば、このSTEPは完了です。</li>
+    </ol>
+    <figure><img src="images/monaca-signup.png" width="1592" height="1044" alt="メールアドレスとパスワードを入力し、アカウント新規作成を選ぶ画面"><figcaption>入力するのは自分のメールアドレスです。画像のメールアドレスは伏せてあります。</figcaption></figure>
+    <div class="note"><p class="box-title">Web基礎の編集環境との違い</p><p>Web基礎ではMacに置いたHTMLやCSSを編集しました。Monacaでは、ログインしたアカウントのプロジェクトを、Monaca クラウド IDEで編集します。アカウントを取り違えると、自分のプロジェクトが見つからなくなります。</p></div>
+    <p>Monaca Educationのアカウントや <code>Monaca for Study</code> は、この授業では使いません。確認メールが届かなければ、迷惑メールのフォルダと入力したアドレスを確認し、解決しないときは先生へ知らせてください。確認メールについては <a href="https://ja.docs.monaca.io/faq/general">Monacaの公式FAQ</a>でも案内されています。</p>
+    <div class="check"><label><input type="checkbox" data-check="monaca-account"><span>通常版Monacaへログインし、自分のプロジェクト一覧を開けた。</span></label></div>
+  </section>
+
+  <section id="step-3">
+    <p class="step-meta">STEP 3</p><h2>プロジェクトの空きを確かめる</h2>
+    <p>Freeプランでは、同時に持てるプロジェクトは<strong>3個まで</strong>です。登録直後は <code>はじめてのMonacaアプリ</code> が自動で1個作られるため、そのままなら空きは2個です。</p>
+    <ol>
+      <li>プロジェクト一覧で、今あるプロジェクトの名前と個数を確かめます。</li>
+      <li><code>はじめてのMonacaアプリ</code> があり、まだ自分で編集していなければ、授業で先生と確認してから削除し、空きを確保します。</li>
+      <li>自分で編集した作品がある場合は削除せず、一覧を先生に見せます。自動作成のものか分からない場合も、そのまま相談してください。</li>
+    </ol>
+    <div class="note"><p class="box-title">Android Studio・Xcodeのプロジェクトとの違い</p><p>Macのフォルダを増やすときとは違い、Monacaはアカウントの3枠を使います。完成見本を取り込んだときにも1枠を使うので、URLを何度も開く前に、今あるプロジェクトと空きを確かめます。</p></div>
+    <p>この授業では、1つのプロジェクトを何回かの授業で育てます。見本をすべて取り込んで3枠を埋める必要はありません。Freeプランでは作品をZIPへ書き出せないため、<strong>自分の作品を削除して空きを作ろうとしないでください。</strong></p>
+    <p>提出には、通常版Monacaで発行する取り込み用の公開URLを使います。このURLは、見る人のMonacaへプロジェクトを取り込むためのもので、完成アプリをWebで動かすURLではありません。公開と提出の操作は、提出を扱う授業で行います。</p>
+    <div class="check"><label><input type="checkbox" data-check="monaca-space"><span>プロジェクトの個数と空きを確認し、自分の作品を消さずに授業を始められる状態にした。</span></label></div>
+  </section>
+
+  <section id="step-4">
+    <p class="step-meta">STEP 4</p><h2>Flutter 3.47.5を用意する</h2>
+    <p>ここからは第7コマの授業内で始めるFlutterの準備です。Finderの <code>アプリケーション</code> に、<strong>Visual Studio Code・Xcode・Android Studio</strong> があることを確かめます。XcodeとAndroid Studioは、iOS・Androidの授業で使っているものを使います。見つからない場合は、先生へ知らせてください。</p>
+    <p>この授業のFlutter SDKは <strong>3.47.5</strong>、同梱されるDartは <strong>3.13.4</strong> にそろえます。学生のMacは全員Apple Siliconなので、<a href="https://docs.flutter.dev/install/archive">公式のFlutter SDK archive</a> で、macOS用の <code>Stable</code>、<code>3.47.5</code>、Architectureは <code>arm64</code> を選びます。</p>
+    <h3>SDKの取得を始め、既存のiOS環境を確認する</h3>
+    <p>SDKのダウンロードを開始したら、完了を待たずに、iOSの授業で使っているシミュレータを確認します。<strong>既存の環境が使えれば、新しいiOSランタイムのダウンロードは不要です。</strong>全員で最新のランタイムを取得する必要はありません。</p>
+    <p>Terminalで新しいウィンドウを開き、次を実行します。利用可能なシミュレータを一覧表示する、Xcodeの確認用コマンドです。Flutter SDKの展開前でも実行できます。</p>
+    <div class="code-head">Terminal · 利用可能なシミュレータを確認</div>
+    <pre tabindex="0"><code>xcrun simctl list devices available</code></pre>
+    <p><code>iOS</code> の見出しの下に、授業で使っているiPhoneの名前があるかを確かめます。<code>Shutdown</code> は停止中という意味で、ダウンロード不足を示すものではありません。名前があれば、その環境を使う準備を進めます。一覧が空、またはエラーになる場合は、出力を先生に見せてください。ランタイムが不足しているのか、Xcodeの設定やシミュレータの作成が必要なのかを一緒に確認します。コマンドの説明は <a href="https://developer.apple.com/documentation/xcode/xcode-command-line-tool-reference">AppleのXcodeコマンドラインツール資料</a>と、Terminalの <code>xcrun simctl help list</code> で確認できます。</p>
+    <details>
+      <summary>補足：iOS環境が見つからない・実行できないとき</summary>
+      <p>まずiOSの授業で使っているXcodeを開き、初回の追加処理が残っていないか先生と確認します。利用規約や管理者権限の入力で判断できない場合も、先生へ相談します。</p>
+      <p><strong>先生と確認して、ランタイムの追加が必要になった場合だけ</strong>、次のコマンドを使います。数GBの通信が発生することがあるため、授業内で開始します。既存の環境が使える人は実行しません。追加方法は <a href="https://developer.apple.com/documentation/xcode/downloading-and-installing-additional-xcode-components">AppleのXcode追加コンポーネントの資料</a>にあります。</p>
+      <div class="code-head">Terminal · 必要な場合だけiOSランタイムを取得</div>
+      <pre tabindex="0"><code>xcodebuild -downloadPlatform iOS</code></pre>
+      <p>取得中のTerminalは閉じずに残し、完了をSTEP 7で確認します。</p>
+    </details>
+    <p>SDKなどのダウンロードを待っている間は、先生の案内でMonacaの仕上げを進めます。SDKのダウンロードが終わったら、次の展開へ進みます。</p>
+    <p>SDKを置く場所は、版を区別できる新しいフォルダにします。以下は、これから作る保存先の例です。既存のSDKを移動したり上書きしたりしません。</p>
+    <ol>
+      <li>Terminalで次のコマンドを実行し、保存先 <code>~/develop/flutter-3.47.5</code> を作ります。追加のダウンロードが動いている場合は、別のTerminalウィンドウを使います。</li>
+    </ol>
+    <div class="code-head">Terminal · SDKを置くフォルダを作る</div>
+    <pre tabindex="0"><code>mkdir -p "$HOME/develop/flutter-3.47.5"</code></pre>
+    <ol start="2">
+      <li>Finderの <code>移動 → フォルダへ移動…</code> に <code>~/develop/flutter-3.47.5</code> を入力し、開きます。</li>
+      <li>この中に、ダウンロードしたFlutter 3.47.5のZIPを置いてからダブルクリックし、展開します。既に <code>flutter</code> フォルダがある場合は上書きせず、先生と中身の版を確認します。</li>
+      <li><code>flutter</code> の中に <code>bin</code> があることを確かめます。この例のSDKの場所は <code>~/develop/flutter-3.47.5/flutter</code> です。</li>
+    </ol>
+    <div class="note"><p class="box-title">Android SDKとの比較</p><p>Androidの開発でAndroid SDKを使うのと同じく、Flutterの開発にはFlutter SDKが必要です。Visual Studio Codeを入れただけではSDKは入りません。DartはこのFlutter SDKに同梱されるため、別のDartを探して入れる必要はありません。</p></div>
+    <p><code>~/Downloads/flutter</code> などに別のFlutterがある人は、そのまま残します。ダウンロード先でZIPをそのまま展開せず、新しい保存先を先に分けるのは、既存のSDKと混ぜないためです。</p>
+    <div class="check"><label><input type="checkbox" data-check="flutter-sdk"><span>自分のMacに合うFlutter 3.47.5を、既存SDKと別の場所へ展開した。</span></label></div>
+  </section>
+
+  <section id="step-5">
+    <p class="step-meta">STEP 5</p><h2>使うFlutterの場所と版をそろえる</h2>
+    <p>Terminalで <code>flutter</code> と入力したとき、今用意したSDKが選ばれるようにします。ここではmacOS標準のzshを使います。まず、Terminalで次の2行を実行し、設定ファイルをVisual Studio Codeで開きます。</p>
+    <div class="code-head">Terminal · 設定ファイルを開く</div>
+    <pre tabindex="0"><code>touch "$HOME/.zprofile"
+open -a "Visual Studio Code" "$HOME/.zprofile"</code></pre>
+    <p>開いた <code>.zprofile</code> の末尾へ、次の1行を追加して保存します。既に同じ行があれば、重ねて追加しません。他の設定は残します。SDKを別の場所へ置いた場合は、<code>/bin</code> より前の部分を実際の場所へ合わせます。</p>
+    <div class="code-head">.zprofile · ファイルに追加する1行</div>
+    <pre tabindex="0"><code>export PATH="$HOME/develop/flutter-3.47.5/flutter/bin:$PATH"</code></pre>
+    <p>Visual Studio Codeを終了して開き直し、Terminalは新しいウィンドウを開きます。iOSランタイムの追加ダウンロードが動いている場合は、そのTerminalを開いたまま残します。新しいウィンドウで、次の2行を実行します。</p>
+    <div class="code-head">Terminal · 使われるSDKと版を確認</div>
+    <pre tabindex="0"><code>which flutter
+flutter --version</code></pre>
+    <table><thead><tr><th>確かめる出力</th><th>この手順で期待する内容</th></tr></thead><tbody>
+      <tr><td><code>which flutter</code></td><td>末尾が <code>/develop/flutter-3.47.5/flutter/bin/flutter</code> のパス。先頭のユーザ名は自分のものになります。</td></tr>
+      <tr><td><code>flutter --version</code></td><td><code>Flutter 3.47.5</code> と <code>Dart 3.13.4</code> が表示される。</td></tr>
+    </tbody></table>
+    <div class="note"><p class="box-title">Android・iOSのSDK選択との比較</p><p>Android StudioやXcodeで使うSDKを選ぶのと同じく、Flutterも使う場所をそろえます。<code>PATH</code> はコマンドを探す場所と順番です。古いFlutterが表示されるときは、SDKを削除せず、まず <code>which flutter</code> の結果を確認します。</p></div>
+    <p><strong>授業期間中は <code>flutter upgrade</code> を実行しません。</strong>教材と同じ版で進めます。版やパスが合わなければ、その出力を先生に見せてください。PATH設定と再起動の手順は <a href="https://docs.flutter.dev/install/manual#add-flutter-to-your-path">Flutterの公式インストール手順</a>に基づいています。</p>
+    <div class="check"><label><input type="checkbox" data-check="flutter-path"><span>新しいTerminalで、Flutter 3.47.5とDart 3.13.4を確認できた。</span></label></div>
+  </section>
+
+  <section id="step-6">
+    <p class="step-meta">STEP 6</p><h2>Visual Studio Codeを準備する</h2>
+    <p>Visual Studio Codeは<strong>英語UI</strong>で使います。英語表示でなければ、<kbd>⌘</kbd>＋<kbd>Shift</kbd>＋<kbd>P</kbd> でコマンドの一覧を開き、<code>Configure Display Language</code> を探します。<code>English</code> を選び、案内に従って再起動します。詳しくは <a href="https://code.visualstudio.com/docs/configure/locales">公式の表示言語の変更手順</a>で確認できます。</p>
+    <ol>
+      <li><a href="https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter">公式のFlutter拡張</a>を開き、<code>Install</code> からVisual Studio Codeに入れます。Flutter拡張を入れると、Dart拡張も入ります。</li>
+      <li>Visual Studio Code の <code>Extensions</code> で、<code>Flutter</code> と <code>Dart</code> が入っていることを確かめます。</li>
+      <li><code>View → Command Palette…</code> を開き、<code>Flutter: Run Flutter Doctor</code> を実行します。<code>Output</code> に表示された結果で、Flutterが <code>3.47.5</code> になっていることを確かめます。</li>
+    </ol>
+    <div class="note"><p class="box-title">Android Studio・Xcodeとの比較</p><p>Android StudioやXcodeでは、その言語の補完や実行機能がIDEに入っています。Visual Studio Codeでは、Flutter拡張がDartの補完やFlutterの操作を担当します。Terminalで選ばれるSDKと、拡張が使うSDKの版が同じかも確かめます。</p></div>
+    <p>Terminalでは3.47.5なのにVisual Studio Codeでは違う版になる場合は、Visual Studio Codeを完全に終了して開き直します。それでも違う場合は、以前のSDK設定が残っていることがあるので、両方の結果を先生に見せます。</p>
+    <p>デバイス選択は、Flutterプロジェクトを開くと表示されます。ここではまだ新しいプロジェクトを作らず、デバイス選択の項目も探しません。実際の選択と起動は、その日の教科書でプロジェクトを開いてから行います。</p>
+    <div class="check"><label><input type="checkbox" data-check="flutter-editor"><span>英語UIでFlutter・Dart拡張を使え、Visual Studio Code側もFlutter 3.47.5になった。</span></label></div>
+  </section>
+
+  <section id="step-7">
+    <p class="step-meta">STEP 7</p><h2>iOSの実行環境とダウンロードを確認する</h2>
+    <p>Flutterの初回実行には、STEP 4で確認した既存のiOSシミュレータを使います。ランタイムの追加が必要だった人は、ダウンロード用のTerminalを確認し、エラーで止まっておらず、取得が完了していることを確かめます。第7コマで終わらなかった場合は、第8コマの授業内でも確認を続けます。</p>
+    <p>Flutter SDKの展開とPATHの設定が済んだTerminalで、Flutter側のiOS用ファイルを取得します。これはiOSの授業で使ったランタイムとは別の、Flutter専用の資材です。必要なものが既に入っていれば、追加取得が省略されます。</p>
+    <div class="code-head">Terminal · FlutterのiOS用ファイルを取得</div>
+    <pre tabindex="0"><code>flutter precache --ios</code></pre>
+    <p>取得が終わったら、環境の確認結果を表示します。</p>
+    <div class="code-head">Terminal · 開発環境の診断</div>
+    <pre tabindex="0"><code>flutter doctor -v</code></pre>
+    <p><code>Flutter</code> と <code>Xcode</code> の項目を確認します。エラーや追加の設定が表示されたら、出力を先生に見せてください。Android側の準備は、Androidを使う授業の案内に合わせます。設定項目は <a href="https://docs.flutter.dev/platform-integration/ios/setup">Flutter公式のiOS環境設定</a>でも確認できます。</p>
+    <div class="note"><p class="box-title">Swiftの実行環境を使う</p><p>Flutterでも、iOS向けのビルドとシミュレータにはXcodeの環境を使います。iOSの授業で使っている環境を生かし、Flutter専用の資材を追加します。実際の起動とアプリの実行は、Flutterプロジェクトを作る授業で確認します。そのとき動かない場合も、すぐにランタイムを取得し直さず、先生と原因を確認します。</p></div>
+    <h3>Android側で時間のかかる取得を分けて考える</h3>
+    <p>Androidでの実行とAPK作成は、後の授業で扱います。必要なものの取得や配布キャッシュの展開も、先生の案内に合わせて授業内で行います。</p>
+    <table><thead><tr><th>取得するもの</th><th>この授業での準備</th></tr></thead><tbody>
+      <tr><td>FlutterのAndroid用ファイル</td><td>iOS用とは別に必要になります。Androidを扱う授業で、先生の案内に合わせて用意します。</td></tr>
+      <tr><td>Gradle本体</td><td>先生が用意する <code>gradle-9.3.1-bin</code> のキャッシュを授業内で受け取り、指示された場所へ展開・コピーします。保存先は通常 <code>~/.gradle/wrapper/dists/</code> の下です。フォルダ階層を変えず、既存の別の版は残します。</td></tr>
+      <tr><td>Android SDK・ビルド用の依存ファイル</td><td>Gradle本体をコピーしてあっても、Android SDKやAndroid Gradle Pluginなどの追加取得が発生します。必要な版は、Androidを扱う授業で先生の案内に合わせます。</td></tr>
+    </tbody></table>
+    <p>Flutter側のファイル、Gradle本体、Android SDKやビルド用の依存ファイルは、それぞれ必要になります。1種類のキャッシュをコピーしても、すべての取得が終わるわけではありません。</p>
+    <p>Gradleのキャッシュは、プロジェクトが使う配布URLと一致している必要があります。<code>-bin.zip</code> と <code>-all.zip</code> は別です。授業でプロジェクトを作ったときに、<code>android/gradle/wrapper/gradle-wrapper.properties</code> の <code>distributionUrl</code> を、配布キャッシュと同じURLにそろえます。ここではまだプロジェクトを作らないため、ファイルの編集は行いません。仕組みは <a href="https://docs.gradle.org/current/userguide/gradle_wrapper.html#sec:using_wrapper">Gradle Wrapperの公式資料</a>で確認できます。</p>
+    <div class="check"><label><input type="checkbox" data-check="flutter-platform"><span>使うiOS環境とdoctorの結果を確認した。追加設定が必要な項目は先生に相談した。</span></label></div>
+  </section>
+
+  <section id="ready">
+    <h2>ここまでできたら、準備完了</h2>
+    <table><thead><tr><th>始める授業</th><th>準備完了の目印</th></tr></thead><tbody>
+      <tr><td>Monaca</td><td>先生が指定した教科書を開ける。通常版Monacaにログインでき、自分の作品を残したまま、必要なプロジェクトの空きを確保できている。</td></tr>
+      <tr><td>Flutter</td><td>TerminalとVisual Studio Codeが同じFlutter 3.47.5を使っている。Flutter拡張とiOSの実行環境を用意し、doctorの結果を確認できている。</td></tr>
+    </tbody></table>
+    <p>アプリの作成、コードの編集、Visual Studio Codeでのデバイス選択、実行は、その日の教科書で行います。準備中に実行用の項目が見つからなくても、別のプロジェクトを作る必要はありません。</p>
+    <h3>当日、うまく進まないとき</h3>
+    <p>ダウンロードが終わらない、確認メールが届かない、版が合わないときは、止まったSTEPと画面・出力を先生に見せてください。回線が遅い場合は先生が授業の進め方を調整します。家庭で終わらせる前提で先へ進める必要はありません。パスワードや確認メールのリンクは、教室の共有画面や提出物へ貼り付けません。</p>
+    <p>質問の例：<strong>「STEP 5で、flutter --versionが3.41になりました」</strong>。表示された文字をそのまま伝えると、SDKの場所と版を一緒に確かめられます。</p>
+    <p class="next"><a href="#main" data-back>もとの教科書へ戻る</a></p>
+  </section>
+  <p class="footer">JEC / ハイブリッドアプリ開発技法 · 共通資料 · 2026-09-23</p>
+  <p class="sr-only" role="status" aria-live="polite" data-copy-status></p>
+</main>
+</body>
+</html>

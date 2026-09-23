@@ -1,0 +1,14 @@
+changelog:
+  exclude:
+    labels:
+      - skip-release-notes
+  categories:
+    - title: 教材の追加
+      labels:
+        - enhancement
+    - title: 誤記・不具合の修正
+      labels:
+        - bug
+    - title: その他の更新
+      labels:
+        - "*"
