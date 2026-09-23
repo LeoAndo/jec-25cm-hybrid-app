@@ -1,178 +1,246 @@
+# ハイブリッドアプリ開発技法 — 授業用教材
+
+JEC（25CM）の「ハイブリッドアプリ開発技法」で使う教材です。**1コマ90分**、**全15コマ**の授業を想定しています。
+
+**受講生は Web基礎（HTML / CSS / JavaScript）を履修済みで、Android（Java）と iOS（Swift）のネイティブアプリを作れます。Monaca と Flutter は初めて触ります。** プログラミングの入門ではなく、**知っている技術との差分でクロスプラットフォーム開発を覚える授業**です。変数・条件分岐・繰り返し・DOM・画面遷移・リスト表示といった概念そのものは説明しません。説明するのは、MonacaやFlutterでの書き方と、知っている書き方との違い、そして違う理由です。そのため各単元の各STEPには、Web基礎・Java/Android・Swift/iOS のいずれかとの比較を必ず置きます。予習なしで、授業内の操作・確認・ミニ練習まで進められる構成にします。
+
+単元は2系統あります。前半は**ブラウザ上の Monaca クラウド IDE**でWeb技術のままアプリを作る **Monaca系（コマ1〜7）**、後半は **Visual Studio Code** で Dart を書く **Flutter系（コマ8〜15）** です。使う道具が途中で変わるので、教科書とサイドバーでは、いまどちらを開くのかを必ず先に書きます。
+
+## 教科書一覧
+
+<!-- 単元ができたら、ここに教科書・完成プロジェクト・教員用ガイドのリンクを単元番号順で並べます。
+     scripts/check-teaching-materials.py が config/teaching-materials.json の projects と照合します。 -->
+
+[共通資料：授業を始めるまでの準備](docs/common/setup.html)を用意しました。教材の受け取り、Monacaのアカウント作成、Flutter 3.47.5の準備を授業内で進めます。単元の教科書は順次追加します。
+
+15コマの割り当ては下の「15コマ計画」にあります。教科書・教員用ガイド・`config/teaching-materials.json` への登録は、単元ごとのissueで行います（[AGENTS.md](AGENTS.md) §9、[単元追加用skill](skills/add-teaching-unit/SKILL.md)）。
+
+### 開き方
+
+教員はこのリポジトリをダウンロードした後、Finderで `docs/<単元>/index.html` をダブルクリックし、ブラウザで開きます。GitHub上のHTMLファイルはソース表示になるため、ローカルで開いてください。教材の本文・操作機能は外部ライブラリを使わず、オフラインで利用できます。Monacaはブラウザから使うサービスなので、Monaca系の単元を進めるにはインターネット接続が必要です。Flutterの初回準備とビルドにも接続が必要です。
+
+ブラウザの印刷（macOS：`⌘ P`）で、教材を紙やPDFに出力できます。チェック欄は自分の進み具合を確認するためのものです。教員への提出・送信は行いません。
+
+### 学生への配布
+
+学生には [最新の教材リリース](https://github.com/LeoAndo/jec-25cm-hybrid-app/releases/latest) の Assets にあるZIPを案内します（初回公開後から利用可能）。ファイル名には `hybrid-app-student-materials-2026-09-23.zip` のように版の日付が入り、展開してできるフォルダも同じ名前になります。ダウンロードフォルダでどの版か分かり、日付の違う版を同じ場所に展開しても混ざりません。
+
+**同じ日に2回公開すると、ファイル名も展開先のフォルダ名も同じになります。** 版タグ（`materials-日付-コミットID`）は別でも、学生が見る名前は日付までしか入らないためです。同じ日に出し直すときは、Google Classroomの投稿に「古いほうのフォルダを消してから展開してください」と添えてください。
+
+展開後、はじめて授業を受ける学生は [共通資料：授業を始めるまでの準備](docs/common/setup.html) をブラウザで開き、第1コマにSTEP 1〜3、第7コマにSTEP 4〜7を進めます（同梱の `はじめに.txt` でも、単元一覧より前に案内しています）。準備が済んだら、その日の単元の教科書をブラウザで開きます。
+
+学生用ZIPには `docs` 一式と、開き方・版情報を収録します。**いまは日本語だけの構成で配布します。** 展開してできたフォルダには `docs` / `はじめに.txt` / `VERSION.json` があり、完成見本を同梱する版には、展開済みの完成プロジェクトを入れた `samples` も加わります。現在は `config/teaching-materials.json` の `projects` が空なので、`samples` はありません。言語を選ぶ入口がないのは、`config/i18n.json` の5言語がすべて `distribute: false` のためです（「多言語展開」）。翻訳を終えた言語を `distribute: true` にすると、言語を選ぶ入口の `index.html` がZIPに入り、`はじめに.txt` にも各言語の案内が付きます。`teacher` フォルダとテンプレート原本（`MonacaTemplate`・`MonacaMinimumTemplate`）は収録しません。GitHubが自動で表示する **Source code (zip)** はリポジトリ全体のため、学生用ZIPには使いません。なお、このリポジトリ自体はPublicなので、教員用ファイルもGitHub上では閲覧できます。
+
+授業中は教員が指定した版を使います。授業ごとの案内には、内容が固定された個別リリースのURLを使ってください。更新版は別フォルダに展開し、学生自身のプロジェクトは上書きしません。
+
+**完成プロジェクト（先生が作った見本）を配るときは、系統ごとに次の形で渡します。** 共通資料だけの版には、完成見本や `samples` は含まれません。
+
+| 系統 | 学生が受け取る形 |
+| --- | --- |
+| Monaca | 教科書に載せた**取り込み用のURL**（`https://monaca.mobi/ja/directimport?pid=…`）を開くと、学生のMonacaにプロジェクトが取り込まれます。配布ZIPの `samples/` に入っているのは、コードを読み比べるための写しです |
+| Flutter | 配布ZIPの `samples/<プロジェクト名>` を、Visual Studio Code の `File > Open Folder…`で選ぶだけで開けます。展開は済んでいます |
+
+### Monacaのプランと、そこから来る制約
+
+**この授業のMonacaは「通常版Monaca（`console.monaca.mobi`）のFreeプラン」を使います。** Monaca Education は使いません。Freeプランの利用規約は法人の商用アプリ開発を禁じていますが、**学習・教育・研修利用を目的としたアプリ開発は商用に含まないと明記されている**ので、授業での利用は問題ありません。
+
+Freeプランの制限が、そのまま教材の設計を縛ります。詳細は [Freeプラン（公式）](https://ja.docs.monaca.io/faq/free-plan.md) と [AGENTS.md](AGENTS.md) §0-A にあります。とくに効くのは次の3つです。
+
+- **1人が同時に持てるプロジェクトは3個まで。** サインアップ直後に「はじめてのMonacaアプリ」が自動で1つ作られるので、実質の空きは2個です。**Monacaの7コマで7本のアプリは作れません。**
+- **プロジェクトのエクスポートができません。** 学生は自分の作品をZIPで書き出せないので、**課題のZIP提出は成立しません**。持ち出す手段は公開URLだけです。
+- **クラウドビルドは1日3回まで**、リリースビルドは使えません。
+
+**教員もFreeプランで、完成見本2本を公開したまま保持し、残り1枠を検証・採点に使います**（2026-09-23 オーナー決定）。学生作品は1件ずつ「取り込み → 動作確認・採点 → 取り込んだコピーだけ削除」の順に扱います。公開用の完成見本は削除しません。
+
+### 提出課題
+
+**Monaca系の課題は、学生が自分のプロジェクトを「公開」して、発行されたURLを先生に共有する形で提出します。** クラウド IDEの **プロジェクト → 公開…** で `https://monaca.mobi/ja/directimport?pid=…` が発行されます。このURLは、アプリを動かすURLではなく、**プロジェクトを相手のMonacaへ取り込ませるURL**です。教員はURLからインポートして、実際に動かして採点します。
+
+**Flutter系の課題は、学生自身がアレンジしたアプリのAPKファイルを提出します**（2026-09-23 オーナー決定）。署名鍵の作成は行わず、Flutterのテンプレートにあるデバッグ鍵による署名設定で作成します。`flutter build apk` で生成する通常の `app-release.apk` を使います（提出先の上限は100MB以上、または上限なし）。生成したAPKファイルの容量と、そのAPK自体の動作を提出前に確かめます。
+
+- **アプリに入力して保存したデータは、公開URLやAPKには含まれません。** 提出先でも見えるアレンジは、ソース中の初期データ・文字・色などを変更して作ります。公開URLの新規取り込み、またはAPKの新規インストール後に確認します。
+- **配布している完成プロジェクト（見本）をそのまま出しても、提出にはなりません。** 提出するのは、学生自身が授業で作ったプロジェクトに、学生自身がアレンジを加えたものです。
+- **提出先のサービス名と締め切りは、このREADMEには書きません。** 年度や運用で変わるため、教材側で断定せず、授業で教員が案内します。
+- ストアへの公開と署名鍵の作成は、この授業では扱いません。
+
+### 15コマ計画
+
+**2026-09-23にオーナー承認済みの計画です。** 1コマ90分、Monaca7コマ＋Flutter8コマ、計4単元です。各回10分の予備時間を確保し、実測した待ち時間や授業の進み具合に応じて配分を調整します。単元の登録は教材が完成した時点で行います。
+
+| コマ | 単元 | 内容・画面で確かめること | プロジェクト |
+| --- | --- | --- | --- |
+| 1 | M01OshiList | 通常版Monacaのアカウント・枠を確認し、静的な推しカードを表示する | 推しログ |
+| 2 | M01OshiList | Onsen UIのツールバーと一覧を作り、auto-stylingでOSによる見た目の差を確かめる | 推しログ |
+| 3 | M01OshiList | 配列から一覧を描き、押した行の名前を表示する | 推しログ |
+| 4 | M01OshiList | 一覧から詳細へ進み、戻る。文字・色・表示項目をアレンジする | 推しログ |
+| 5 | M02OshiSave | この単元だけで開始状態を用意し、入力した推しを追加する | 推しログ |
+| 6 | M02OshiSave | localStorageを既知の保存APIと比較し、JSONで一覧を保存・復元する | 推しログ |
+| 7 | M02OshiSave | 冒頭でFlutter SDKのダウンロードと既存iOS環境の確認を開始。待ち時間にアレンジ・公開URLの確認・提出を行う | 推しログ |
+| 8 | F01StampBoard | 準備確認を続け、空のFlutterプロジェクトをiOSで実行し、ホットリロードする | スタンプ帳 |
+| 9 | F01StampBoard | 習慣カードの余白と並びを整える | スタンプ帳 |
+| 10 | F01StampBoard | StatefulWidget・setStateでスタンプと回数を更新する | スタンプ帳 |
+| 11 | F01StampBoard | 習慣の一覧から表示専用の詳細へ進み、アレンジ箇所を確かめる | スタンプ帳 |
+| 12 | F02StampRelease | 単元内の開始コードと説明で再開し、入力した習慣を追加する | スタンプ帳 |
+| 13 | F02StampRelease | SharedPreferencesAsyncとasync / awaitで保存・読込・待機中表示を作る | スタンプ帳 |
+| 14 | F02StampRelease | Androidで実行し、iOSとの見た目を比較。配色変更と通常APKの試作を行う | スタンプ帳 |
+| 15 | F02StampRelease | アレンジした通常APKを生成し、そのAPKのインストール・動作確認後に提出する | スタンプ帳 |
+
+新概念は、M01のauto-styling、M02のJSON、F01の宣言的UI、F02のasync / awaitの4つです。M02・F02には、開始時の全コード、配置・実行手順、既知技術との比較説明を再掲し、前の教科書を読まなくても始められるようにします。FlutterはMonacaの成果物を前提にしません。
+
+**学生のダウンロードもすべて授業時間内に行います。** コマ7の冒頭10分でFlutter SDKの取得を始め、iOSの授業で使っているシミュレータも確認します。既存のiOS環境が使えれば、そのランタイムを使い、最新ランタイムを全員で追加取得することはありません。環境が見つからない・実行できない場合は先生と原因を確認し、必要な場合だけ `xcodebuild -downloadPlatform iOS` などで追加します。Flutter専用のiOS用資材は `flutter precache --ios` で用意します。待ち時間はMonacaの仕上げに使い、コマ7終盤にも5分を準備状況の確認に充て、コマ8の冒頭25分でも準備を続けます。回線が遅い場合は配分を調整し、家庭での作業が済んでいることを前提にしません。Gradleキャッシュの受け取り・配置も授業内で行います。
+
+### フォルダの役割
+
+| フォルダ | 内容 |
+| --- | --- |
+| `docs/common/` | 学生向けの共通準備資料 |
+| `docs/assets/` | 教科書の共通CSS・操作機能 |
+| `MonacaMinimumTemplate/` | [通常版の最小限テンプレート4.0.0と出所・比較記録](MonacaMinimumTemplate/README.md) |
+| `MonacaTemplate/` | 既存のCordova11テンプレート。比較用に保持 |
+| `scripts/` / `config/` | 教材検査と配布設定 |
+| `skills/` / `i18n/` | 制作手順と翻訳カタログ |
+
+### 前年度の教材との関係
+
+2025年度（24CM01）の「ハイブリッドアプリ開発技法」は**全11回**で、**Monaca 3回 / Flutter 4回 / Kotlin Multiplatform 4回**という配分でした。今年度は **Kotlin Multiplatform を扱わず、Monaca 7コマ ＋ Flutter 8コマ**にします。
+
+前年度の配布資料（Word / PDF）とサンプルプロジェクトは、参照元としてだけ使います。**資料そのものはリポジトリにcommitしません。** 置き場は `~/Documents/jec-25cm-hybrid-app-verification-deliverables/前年度の参考資料/` で、リポジトリの外です。今年の教材として学生が読むのは、HTMLの教科書だけです。
+
+**前年度の手順のうち、そのまま使えないものがあります。** 教材を書くときは必ず確かめてください。
+
+| 前年度の記述 | 2026年9月時点 |
+| --- | --- |
+| Monaca Education（edu.monaca.io）を使う | 今年度は通常版Monaca（console.monaca.mobi）のFreeプラン |
+| テンプレートは「クラシック」 | 「**最小限のテンプレート**」を選ぶ。名前だけでなく中身も違う（リポジトリの `MonacaTemplate/` は旧「クラシック」側。[AGENTS.md](AGENTS.md) §4） |
+| 課題は「プロジェクト → Web公開」で発行したURLで提出 | Web公開は教育版の機能。通常版では「**プロジェクト → 公開…**」で取り込み用URLを発行する |
+| 実機デバッグは App Store の「Monaca for Study」 | 通常版のストア版デバッガーはiOSで配信停止（2023-01-06）。`Monaca for Study` は教育版のアプリで、2023-12-26からメンテナンスモード |
+| Onsen UI は「AngularJSをベースに」 | Onsen UI 2 以降はフレームワーク非依存。最新は 2.12.9（2026-06-16） |
+| Flutter SDK 3.32.6 | 今年度の基準は **3.47.5 / Dart 3.13.4**（下の「Flutter SDKの基準バージョン」） |
+| `flutter create` の既定テンプレートから始める | 既定テンプレートはコメント60行＋StatefulWidget＋setState＋dot shorthandが一度に出る。`--empty` から始める |
+| 第4回でAndroidとiOSの両方を実行（Androidのgradleでタイムアウト多発） | 初回はiOSシミュレータ（SwiftPM既定でCocoaPods不要）。Androidは後の単元で扱う |
+
+### 完成プロジェクトのZIPを更新する（教員用）
+
+ZIPの再生成には、Gitと **Python 3.11以上**、および **`git clone` で取得したリポジトリ** が必要です。3.11以上が要るのは、`scripts/test_*.py` が `unittest.TestCase.enterContext`（3.11で入ったもの）を使っているためです。版は `python3 -V` で確かめられます。GitHubの「Download ZIP」で取得したフォルダにはGit管理情報がないため、再生成には使えません。教材の閲覧と、同梱済みの完成プロジェクトZIPの利用は「Download ZIP」でも可能です。
+
+```sh
+git clone https://github.com/LeoAndo/jec-25cm-hybrid-app.git
+cd jec-25cm-hybrid-app
+```
+
+完成コードを変更したときは、このリポジトリ直下で次を実行し、配布用ZIPも更新します。
+
+```sh
+python3 scripts/package-project.py --project <単元名> --output docs/<スラッグ>/downloads/<単元名>.zip
+```
+
+学生用ZIPを作成するときは、完成プロジェクトのZIPをまとめて再生成し、HTMLのリンク確認も行います。
+
+```sh
+python3 scripts/package-student-materials.py
+```
+
+ZIPにはGitで管理しているプロジェクトのファイルを収録し、IDE設定・ビルド出力・ローカルSDK設定を除外します。既存ファイルの編集内容も反映します。ファイルを新しく追加した場合は、配布対象であることを確認して、そのファイルを `git add` してから再生成してください。
+
+### GitHub Actionsでパッケージ化・リリースする（教員用）
+
+**main更新時に自動準備し、学生向けの公開は手動で行います。** 学生からのフィードバックは随時mainへ反映し、授業前や修正がまとまったタイミングで公開します。
+
+| 操作 | 自動で行う処理 | 学生向け公開 |
+| --- | --- | --- |
+| mainへのpush・PRマージ | テスト、完成版ZIPの再生成、教材ZIP生成、HTMLの相対リンク確認、リリースノート生成。未翻訳はSummaryに表示 | しない |
+| main向けのPR | テスト、教材ZIP生成、相対リンク確認。未翻訳はSummaryに表示 | しない |
+| 配布準備の翻訳PR | 配布対象の言語の差分翻訳、別AIによる照合、教材ZIPの確認 | しない |
+| Run workflow（publishオフ） | mainの教材とリリースノートを再生成 | しない |
+| Run workflow（publishオン） | mainの教材とリリースノートを再生成。配布対象の未翻訳が0文ならGitHub Releasesへ添付 | する |
+| Run workflow（publishオン・allow_untranslatedオン） | 緊急公開として未翻訳だけを許可。日本語で表示される件数をリリースノートに記録 | する |
+
+**CIはアプリをビルドしません。** MonacaのビルドはMonacaのクラウド上でしか行えず、Flutterのビルドは学生の手元で行います。CIが確かめるのは、教材・設定・配布物の整合性（`check-teaching-materials.py`）、スクリプト自身のテスト、対訳カタログ、配布ZIPが組み立つことの4つです。アプリが動くかどうかは、[AGENTS.md](AGENTS.md) §7 の手順で人が確かめます。
+
+#### 初回の導入
+
+1. `.github/workflows/student-materials.yml` を含む変更をmainへマージします。
+2. GitHubの **Actions → Student materials** で実行結果を確認します。
+3. `student-materials-ready-…` の成果物をダウンロードし、教材ZIPと `release-notes.md` を確認します。成果物の保存期間は30日です。GitHub Releasesの下書きはこの時点では作りません。
+4. 公開したいタイミングで、以下の手動公開を実行します。
+
+追加のSecretは不要です。リポジトリのGitHub Actionsが有効で、ワークフローの `contents: write` を許可するポリシーになっている必要があります。
+
+#### 手動公開
+
+1. 配布準備のissueを起票し、`config/i18n.json` で `distribute: true` の言語の未翻訳を確認します。エージェントが [翻訳用skill](skills/translate-teaching-materials/SKILL.md) に従って差分だけを訳し、翻訳PRを作ります。翻訳はエージェントのセッションで行い、Actionsから翻訳APIは呼びません。
+2. **翻訳PRを開いてから公開するまでは、`docs/` を触るPRをマージしません。** 別のAIが逆翻訳を原文と照合し、検査と配布ZIPの確認を済ませて翻訳PRをマージします。日本語の変更が先に入った場合は、最新のmainで差分を訳し直します。
+3. **Actions → Student materials → Run workflow** を開きます。ブランチに **main** を選び、**publish** にチェックを入れます。**allow_untranslated** はオフのままにします。
+4. **student_notes** に学生向けの案内を日本語で入力します。
+5. **Run workflow** を押します。配布対象の言語に未翻訳があると公開前に失敗し、Summaryに言語・ページ別の件数が出ます。差分翻訳を反映してから新しく実行してください。成功すると、Releasesに教材ZIP・チェックサム・リリースノートが掲載されます。
+6. 公開された個別リリースURLを授業で案内します。ここで `docs/` を触るPRのマージを再開します。
+
+授業を進められない不具合などの緊急修正に限り、**publish** と **allow_untranslated** の両方にチェックを入れて公開できます。未翻訳の文は日本語で表示され、公開ゲートを解除したことと未翻訳の件数がリリースノートに残ります。HTMLや対訳カタログの不正、ZIPの破損、mainの更新は解除できません。
+
+手動実行の開始時点のmainをパッケージ化します。公開直前にもmainを確認し、実行中に更新されていた場合は公開を中止します。その場合は最新のmainで新しく実行してください。main以外を選ぶと、パッケージの検証のみ行い、ノート生成・公開は行いません。
+
+版名は `materials-日付-コミットID` です。日付はコミット日時の日本時間で、同じコミットは同じ版になります。公開済みの版は再実行しても上書きしません。
+
+#### リリースノートとフィードバックの扱い
+
+- GitHubの自動生成ノートに、前回公開した教材からのPR一覧を載せます。初回は過去の変更を含みます。直接mainへコミットした変更も、折りたたみのコミット一覧で確認できます。
+- PRタイトルは学生が読んで分かる日本語にします。
+- PRに `enhancement` を付けると「教材の追加」、`bug` は「誤記・不具合の修正」、それ以外は「その他の更新」に分類されます。`skip-release-notes` はPR一覧から除外しますが、コミット一覧には残ります。
+- 自動生成はPRタイトルなどをまとめる機能です。修正内容をAIが解釈して学生への影響ややり直しの要否を書く機能ではないため、その案内は公開時の `student_notes` に記入します。
+- フィードバックは「教材の版・単元/STEP・起きたこと」で集めます。授業を進められない不具合は修正後すぐに手動公開し、誤字や説明の補足はまとめて公開する運用がおすすめです。
+
+#### ローカルで配布ZIPを確認する
+
+```sh
+python3 scripts/check-teaching-materials.py
+python3 -m unittest discover -s scripts -p 'test_*.py'
+python3 scripts/localize-student-materials.py check
+python3 scripts/package-student-materials.py
+```
+
+`dist/hybrid-app-student-materials-2026-09-23.zip` のように、版の日付（HEADのコミット日時をJSTにした日付。版タグと同じ日付）が入った名前で生成されます。対象はGit管理された `docs` のファイルです。完成プロジェクトが登録されている場合は、その完成版ZIPをソースから再生成し、中身を展開済みの見本として `samples/` にも収録します（`samples/` はリポジトリにはなく、完成見本を同梱する配布ZIPの中だけにできます）。完成プロジェクトが未登録の版には `samples/` はありません。新しい教材は `git add` 後に実行してください。ローカルの編集内容も含むため、正式な配布版はGitHub Actionsから公開します。
+
+**単元を追加するときに、配布スクリプトを直す必要はありません。** `scripts/package-student-materials.py` と `scripts/release-student-materials.py` は、完成プロジェクトのZIP生成・`はじめに.txt` の単元一覧・リリースノートの単元一覧を、すべて `config/teaching-materials.json` の `projects` から組み立てます。手順は [AGENTS.md](AGENTS.md) と [単元追加用skill](skills/add-teaching-unit/SKILL.md) にあります。
+
+### 多言語展開
+
+この教材を使う学生の母国語は、日本語・英語・中国語・韓国語・ミャンマー語・広東語の6つです。日本語で書いた教科書（`docs/`）を、配布前にほかの5言語へ展開します。
+
+**いまは5言語とも `config/i18n.json` の `distribute` が `false` です。** 翻訳がまだ1文もないため、配布対象にすると公開ゲートで止まります。初回翻訳と、別のAIによる独立した照合まで終わった言語から、その言語だけ `distribute` を `true` に上げてください。
+
+| 言語 | コード | `distribute` | 書き方 |
+| --- | --- | --- | --- |
+| 英語 | `en` | `false` | |
+| 中国語 | `zh-Hans` | `false` | 簡体字 |
+| 韓国語 | `ko` | `false` | |
+| ミャンマー語 | `my` | `false` | Unicode |
+| 広東語 | `zh-Hant-HK` | `false` | 繁体字の書き言葉に、香港の語彙を使う |
+
+- **日常のPRでは翻訳しません。** 教材は今までどおり日本語だけを直します。翻訳は、学生への配布前にまとめて翻訳PRで行います。
+- **コミットするのは、翻訳済みのHTMLではなく対訳カタログです。** `i18n/<言語>/<ページ>.json` に、原文と訳文の対を文単位で置きます。各言語のHTMLは、カタログから作ります（リポジトリにはコミットしません）。コード・画像・リンク・STEPの番号は日本語版からそのまま引き継ぐので、どの言語でも同じ位置に同じものが出ます。
+- **日本語の文を直すと、その文は自動で未翻訳に戻ります。** 未翻訳の文は日本語のまま表示されます。古い訳が学生に届くことはありません。
+- `<pre>` のコード、`<code>` の中身、Monaca クラウド IDEやVisual Studio Codeの画面に出る言葉、学生が打ち込む日本語は訳しません。授業は日本語で進むので、翻訳は読んで理解するための補助という位置づけです。
+
+```sh
+python3 scripts/localize-student-materials.py sync --lang en     # 未翻訳の文を dist/i18n-work/ に書き出す
+python3 scripts/localize-student-materials.py merge --lang en    # 訳した結果を検査して、対訳カタログへ入れる
+python3 scripts/localize-student-materials.py check              # 対訳カタログを検査する（CIでも実行）
+python3 scripts/localize-student-materials.py status             # 言語×ページごとに、訳した数を出す
+python3 scripts/localize-student-materials.py build --lang en    # dist/i18n-preview/docs/en/ に確認用のページを作る
+```
+
+CIは、対訳カタログが壊れていないことを確かめ、未翻訳の文の数を Summary に出します。通常のPRとmainへのpushは未翻訳があっても失敗にはしません。`publish` のときだけ、配布対象の言語に未翻訳があれば公開を止めます。教科書のHTMLは、開始タグと終了タグを必ず対応させてください。
+
+---
+
 # 開発環境：教員
+
 ```
 Android Studio Panda 2 | 2025.3.2
 Build #AI-253.30387.90.2532.14935130, built on February 25, 2026
 Runtime version: 21.0.9+-14787801-b1163.94 aarch64
 VM: OpenJDK 64-Bit Server VM by JetBrains s.r.o.
-Toolkit: sun.lwawt.macosx.LWCToolkit
 macOS 26.6.2
-StudioFlags with current overrides:
-  LazyStudioFlagSettings(StudioFlagSettings(data.size=3)):
-    studiobot.attachments=true
-    studiobot.chat.enable.context.attachment=false
-  PropertyOverrides(cache.size=477):
-    flags.configuration.level=COMPLETE
-  MendelOverrides(MendelFlagsProvider count=0):
-  ServerFlagOverrides(Name: analytics/surveys/followup
-        PercentEnabled: 100
-        Value: custom proto
-        
-        Name: analytics/surveys/sentiment/url
-        PercentEnabled: 100
-        Value: https://google.qualtrics.com/jfe/form/SV_4ZzP5RfbOtMwbxc
-        
-        Name: cxx/page_align_16kb
-        PercentEnabled: 100
-        Value: custom proto
-        
-        Name: exceptions/ClassCastException
-        PercentEnabled: 100
-        Value: custom proto
-        
-        Name: exceptions/ClassNotFoundException
-        PercentEnabled: 100
-        Value: custom proto
-        
-        Name: exceptions/PluginException-0073ff27
-        PercentEnabled: 100
-        Value: custom proto
-        
-        Name: exceptions/PluginException-722647e2
-        PercentEnabled: 100
-        Value: custom proto
-        
-        Name: exceptions/PluginException-8b332315
-        PercentEnabled: 100
-        Value: custom proto
-        
-        Name: exceptions/b_372743206
-        PercentEnabled: 100
-        Value: custom proto
-        
-        Name: exceptions/b_392056649
-        PercentEnabled: 100
-        Value: custom proto
-        
-        Name: exceptions/b_452882570
-        PercentEnabled: 100
-        Value: custom proto
-        
-        Name: exceptions/b_458923805
-        PercentEnabled: 100
-        Value: custom proto
-        
-        Name: exceptions/b_500401440
-        PercentEnabled: 100
-        Value: custom proto
-        
-        Name: studio_flags/benchmark.survey.2026.enable
-        PercentEnabled: 100
-        Value: true
-        
-        Name: studio_flags/cloud.enabled
-        PercentEnabled: 100
-        Value: true
-        
-        Name: studio_flags/firebasetestlab.direct.access.monthly.quota
-        PercentEnabled: 100
-        Value: true
-        
-        Name: studio_flags/rundebug.install.use.pm.terminate
-        PercentEnabled: 100
-        Value: false
-        
-        Name: studio_flags/studiobot.askgemini.include.build.files.in.context
-        PercentEnabled: 100
-        Value: true
-        
-        Name: studio_flags/studiobot.chat.use.compose.for.ui
-        PercentEnabled: 100
-        Value: true
-        
-        Name: studio_flags/studiobot.compiler.error.context.enabled
-        PercentEnabled: 100
-        Value: true
-        
-        Name: studio_flags/studiobot.completions.per.hour
-        PercentEnabled: 100
-        Value: 36000
-        
-        Name: studio_flags/studiobot.conversations.per.hour
-        PercentEnabled: 100
-        Value: 500
-        
-        Name: studio_flags/studiobot.current.file.context
-        PercentEnabled: 100
-        Value: true
-        
-        Name: studio_flags/studiobot.dac.skills.limit
-        PercentEnabled: 100
-        Value: 0
-        
-        Name: studio_flags/studiobot.generations.per.hour
-        PercentEnabled: 100
-        Value: 3600
-        
-        Name: studio_flags/studiobot.inline.code.completion.file.context.enabled
-        PercentEnabled: 100
-        Value: true
-        
-        Name: studio_flags/studiobot.npa.icon.image.generation.model.name
-        PercentEnabled: 100
-        Value: gemini-2.5-flash-image
-        
-        Name: studio_flags/studiobot.npa.mockup.image.generation.model.name
-        PercentEnabled: 100
-        Value: gemini-3-pro-image-preview
-        
-        Name: studio_flags/studiobot.project.facts.context.enabled
-        PercentEnabled: 100
-        Value: true
-        
-        Name: studio_flags/studiobot_gias_user_tier
-        PercentEnabled: 100
-        Value: custom proto
-        
-        Name: studio_flags/studiobot_push_notifications/create_with_ai_promotion_notification_DAC
-        PercentEnabled: 100
-        Value: custom proto
-        
-        Name: studio_flags/studiobot_push_notifications/notification_flag_list
-        PercentEnabled: 100
-        Value: custom proto
-        
-        ):
-    rundebug.install.use.pm.terminate=false
-    studiobot.askgemini.include.build.files.in.context=true
-    studiobot.compiler.error.context.enabled=true
-    studiobot.completions.per.hour=36000
-    studiobot.conversations.per.hour=500
-    studiobot.current.file.context=true
-    studiobot.generations.per.hour=3600
-    studiobot.inline.code.completion.file.context.enabled=true
-    studiobot.project.facts.context.enabled=true
-  AgpReleaseBranchProvider(releasedWithAgp=true):
-    gradle.ide.use.alongside.agp=true
-  AgpTestSuitesProvider(journeysWithGeminiEnabled=false):
-GC: G1 Young Generation, G1 Concurrent GC, G1 Old Generation
-Memory: 2048M
-Cores: 14
-Metal Rendering is ON
-Registry:
-  ide.experimental.ui=true
-Non-Bundled Plugins:
-  org.jetbrains.junie (253.819.54)
-  org.jetbrains.completion.full.line (253.30387.199)
-  Dart (509.0.0)
-  com.anthropic.code.plugin (0.1.14-beta)
-  com.intellij.marketplace (253.30387.205)
-  com.jetbrains.kmm (0.9-253.30387-AS-94)
-  com.github.copilot (1.18.0-251)
-  aws.toolkit.core (3.106.253)
-  Docker (253.30387.30)
-  com.intellij.ml.llm (253.30387.186)
-  io.flutter (96.0.0)
-  codiumai.codiumai (2.2.8)
 ```
 
 ```
@@ -180,8 +248,107 @@ Xcode Version 26.6 (17F113)
 ```
 
 ```
-Google Chrome バージョン 153.0.8010.50（公式ビルド） （arm64）
+Google Chrome バージョン 153.0.8010.50（公式ビルド）（arm64）
 ```
 
-### 多言語展開
-この教材を使う学生の母国語は、日本語・英語・中国語・韓国語・ミャンマー語・広東語の6つです。
+```
+Flutter 3.41.0 / Dart 3.11.0（/Users/ando/Downloads/flutter、2026-02-10ビルド）  ← 3.47.5 へ上げる予定
+CocoaPods 1.16.2 / Android SDK 37.0.0 / JDK 21（Android Studio Panda 2 同梱）
+```
+
+## Flutter SDKの基準バージョン
+
+**Flutter 3.47.5 / Dart 3.13.4（2026-09-18リリース）に固定します。** 学生のAndroid StudioとXcodeの組み合わせを全部満たす版として選びました。**この版で実際に動くかは、授業の中で確かめます。**
+
+- ダウンロード（Apple Silicon / arm64）：`https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos_arm64_3.47.5-stable.zip`。学生のMacは全員Apple Siliconです（2026-09-23 オーナー確認）。
+- **授業期間中は `flutter upgrade` しません。** 次の安定版（予定は11月）で SDK 内の Material / Cupertino が正式に非推奨になり、教材のコードに警告が出始めるためです。
+
+| 回答 | Android Studio | 同梱のJDK | Xcode | 3.41系 | 3.44系 | **3.47.5** |
+| --- | --- | --- | --- | --- | --- | --- |
+| 回答1 | 2026.1 | 25 | 27 | ✗ Androidのビルドが通らない／△ Xcode 27の不具合あり | △ Xcode 27の不具合あり | **○** |
+| 回答2 | Panda 2 | 21 | 26.4 | ○ | ○ | **○** |
+| 回答3 | Panda 3（2025.3.3） | 21（推定） | 26.4 | ○ | ○ | **○** |
+| 回答4 | Panda 2 | 21 | 26.5 | ○ | ○ | **○** |
+
+判断の根拠です。
+
+1. **Android側：Android Studio 2026.1 の学生は、3.41系ではビルドできません。** Flutterは既定で Android Studio 同梱のJDKを使います。教員Macの実物で確かめたところ、同梱JDKは Panda 2（2025.3）が **21.0.9**、2026.1 が **25.0.3** でした。Flutter自身の互換表は「Java 25 には Gradle 9.1.0 以上」で、3.41 のテンプレートは Gradle 8.14 です。**実測でも、3.41 で作ったプロジェクトは JDK 21 では通り、JDK 25 では失敗しました。** 3.44 のテンプレートは Gradle 9.1.0、3.47 は 9.3.1 なので、どちらも JDK 21 と 25 の両方で動く範囲に入ります（こちらは互換表による判断で、実機のビルドは授業内で確かめます）。回答3の Panda 3 は Panda 2 と同じ 2025.3 系なので、同梱JDKは21と推定しています。
+2. **iOS側：Xcode 27 の学生のために、3.47.4 以上が要ります。** 3.47.4 で「Xcode 27 でデバッグすると白い画面のまま数分止まる」不具合、3.47.5 で「iOS 27 の実機でデバッグ中にときどき落ちる」不具合が直っています。3.44系の変更履歴には Xcode 27 の修正がありません。Xcode 26.4 以上の実機デバッグで落ちる不具合は 3.41.7 で直っているので、3.47.5 には入っています。
+3. **下限は問題になりません。** Flutter が要求する Xcode は 3.44 以降で 15 以上（推奨16以上）で、学生の 26.4〜27 はすべて満たします。
+4. **教員マシンは、いま 3.41.0 です。教材を書く前に 3.47.5 へそろえます。** 3.41→3.47 の間に AGP 8→9、Gradle 8.14→9.3.1、iOSの最低バージョン 13→15 が動いているので、3.41 の画面や出力で教科書を書くと、学生の手元と合いません（[AGENTS.md](AGENTS.md) §0-B）。
+
+根拠の出典：`flutter_tools/lib/src/macos/xcode.dart`（必要・推奨Xcode）、`flutter_tools/lib/src/android/gradle_utils.dart`（テンプレートのGradle版とJava/Gradle互換表）、Flutter の `CHANGELOG.md`（いずれも各版のタグで確認）。実測のログは `~/Documents/jec-25cm-hybrid-app-verification-deliverables/flutter-sdk-compat-2026-09-23/` にあります（リポジトリの外）。
+
+# 開発環境：学生
+
+2026年9月に実施したアンケートの回答です。**回答数は4件（n=4）のみで、クラス全員を調べた結果ではありません。** 傾向を見るための標本として扱ってください。回答は匿名化して記録します。
+
+| | Android Studio | Xcode | MacBook / OS |
+| --- | --- | --- | --- |
+| 回答1 | 2026.1 | 27 | macOS 27 Golden Gate バージョン27.0 |
+| 回答2 | panda2 | 26.4 | tahoe ver.26.4.1 |
+| 回答3 | Android Studio Panda 3 \| 2025.3.3 | Xcode Version 26.4 | macOS Tahoe 26.5.2 |
+| 回答4 | Android Studio Panda 2 \| 2025.3 | Xcode Version 26.5 | macOS Tahoe バージョン 26.5.1 |
+
+- 表の内容は回答をそのまま記録したものです。表記はそろっていません。教員側で補完・推測はしていません。
+- **全員macOSです。Windowsは対象外です。**
+- **ブラウザはアンケートしていません。教員と同じ Google Chrome を使っている前提で教科書を書きます。**
+- **Xcodeが 26.4 / 26.5 / 27 に割れています。** シミュレータの起動方法がXcode 27の前後で変わるため、教材ではXcodeのアプリ名に触れず、Visual Studio Code のデバイス選択から起動させます（[AGENTS.md](AGENTS.md) §0-B）。
+- Android Studio は、Flutterの Android エミュレータとSDKのために使います。Flutterのコードを書くのは Visual Studio Code です。
+
+# 基本方針
+
+学生から見たときに、この授業が何をどう扱うかの方針です。コードの書き方そのものは、下の「完成コードの書き方（全単元共通）」にまとめています。
+
+1. **1コマで新しく覚えることは1つだけにする。** 1単元で導入する新概念は1つまでです。覚えることが増えるほど、コードを追えなくなる学生が出ます。ここでいう「新概念」は、**Web基礎にもJava/Androidにも Swift/iOS にもないもの**を指します（下の「単元の範囲の決め方」）。書き方だけが違うものは、比較で見せれば足ります。
+2. **やったことの結果が、必ず目に見える形にする。** Monaca系ならプレビュー画面、Flutter系ならシミュレータ／エミュレータの画面で確かめられるところまでを1単元にします。
+3. **Monaca系は素のHTML / CSS / JavaScript で書く。** Vue・React・AngularJSなどのフレームワークやビルドツールは入れません。M01・M02ではOnsen UI 2.12.9を素のJavaScriptから使うUIライブラリとして採用します。要素の取得は `document.getElementById`、イベントは `addEventListener`、クラスの付け外しは `classList` と、Web基礎で習った書き方にそろえます。
+4. **Monaca系はCordovaプラグインに依存しません。** 使うのはブラウザだけで動く範囲です。Freeプランでコアプラグインしか使えないうえ、プレビューでもローカルでも確かめられない機能が増えると、学生が自分のコードの結果を見られなくなります。
+5. **伝えたいことは画面に出します。** `console.log` や `print` だけで済ませません。学生はアプリを触っているとき開発者ツールを見ていないからです。
+6. **完成プロジェクトにUnit Testは書きません。** テストしやすくするためのリファクタリングもしません。授業で扱わないコードが増えると、読む量だけが増えるためです（教材を検査する `scripts/test_*.py` はCIで動くので、通る状態を保ちます）。
+7. **ライブラリ・パッケージは必要なときだけ足します。**
+8. **コメントは日本語で書きます。** 学生が読んで意味が分かることを優先し、英語のコメントにはしません。
+9. **次は扱いません。** タブレット・フォルダブル端末への対応、ダークテーマ対応、画面回転時のデータ保持と横画面レイアウト、アプリの署名とストア公開。
+10. **Flutterの対象プラットフォームは iOS と Android だけです。** Web・macOS・Linux・Windows は扱いません。
+
+# 授業用教科書の基本方針
+
+1. 各単元で、学生自身が手を動かしながらハンズオン形式で進めます。公開する完成版は動作確認・コード比較の参考資料とします。
+2. **各STEPに、既知の技術との比較を必ず置きます。** 比較の相手は Web基礎（HTML / CSS / JavaScript）、Java / Android、Swift / iOS のいずれかです。受講生はこの3つを書けるので、いちばん短い説明は「あなたが知っているあの書き方が、ここではこうなる」です。
+3. **概念そのものの説明はしません。** 変数とは何か、画面遷移とは何かは書きません。書くのは、MonacaやFlutterでの書き方と、知っている書き方との違い、そして**なぜ違うのか**です。理由まで書くのは、書き方の暗記ではなく、次に似た場面で自分で判断できるようにするためです。
+4. **用語に読みがなは振りません。** 受講生は用語を知っています。代わりに、Monaca / Flutter 固有の用語には、**既知の技術での対応物**を添えます。
+5. 教科書はGoogle Codelabなどを参考にした、STEPを前から順にたどる構成にします。
+6. 教科書はHTML形式とします。1単元＝1ファイル（`docs/<スラッグ>/index.html`）です。
+7. 複数の単元で共有する説明が出てきたら、そのつど共通資料として別のHTMLファイルに切り出します。具体例：授業を始めるまでの準備、Monacaのアカウント作成、Flutterの開発環境の用意、提出のしかた。
+8. 教科書に載せるスクリーンショットは、Monaca系はクラウド IDEのプレビュー画面、Flutter系はiOSシミュレータ／Androidエミュレータで撮ります。
+9. **大半の学生は予習も復習もしないという前提で書きます。** 学生が教科書を読むのは授業中が最初で、そのとき読むのはその単元を前から順にだけです。判断基準は「予習も復習もしない学生が、その単元を前から順に読んで躓かないか」です。
+10. **手順やコードをその単元に書かずに、ほかの単元へ送ってはいけません。** 過去の単元へ送る場合も、先の単元へ送る場合も同じ扱いです。**とくに、Monaca系で作ったものをFlutter系の前提にしてはいけません。** 使う道具も画面も違うので、学生にとって手がかりになりません。ほかの単元を挙げてよいのは「これは初めてではない」と伝えるときだけで、そう書いたら直後に手順とコードをすべて書きます。同じ単元の中で別のSTEPを指す参照は対象外です。サイドバーの単元一覧と共通資料へのリンクは本文ではなく導線なので、これも対象外です。
+11. **単元の教科書は、学生が「アレンジできる場所」が分かる形で終わります。** 最後まで進めた学生が、**どこを変えると、画面や動きの何が変わるか**を、その単元のコードの中で見つけられるようにします（文字・色・数値・件数のように、その単元で扱った範囲で変えられるもの）。提出課題は自分で作ったアプリをアレンジして出す形なので、単元の終わりが、そのときの手がかりになります。例は挙げますが、正解は決めません。ここで新しい概念やAPIを足すことはしません。
+
+# 単元の範囲の決め方（全単元共通）
+
+演習と教科書を作るとき、範囲が広がりすぎていないかを次の3点で判断します。
+
+1. **1単元で導入する新概念は1つまで。** 「新概念」は、それまでの単元に1度も出ていない考え方やAPIのうち、**Web基礎にもJava/Androidにも Swift/iOS にもない**ものを指します。実在するかは `git grep` で確認します。2つ以上必要に見えるときは、単元を分けるか、片方を後の単元へ回します。
+   - 受講生は3つの技術を知っているので、**書き方だけが違うもの**は新概念に数えません。Web基礎で未習のAPIでもJava/AndroidまたはSwift/iOSに対応物があれば、比較STEPで書き方と違いを説明し、新概念の上限には数えません（2026-09-23 オーナー決定）。たとえば `localStorage` は `SharedPreferences`／`UserDefaults` と比較し、JSONへの変換とは分けて説明します。たとえばFlutterの `Navigator.push` は、AndroidのIntentやiOSの画面遷移と同じことをする別の書き方なので、新概念には数えません。
+   - **数えるのは、知っている技術のどれにも対応物がないもの**です。Dartの `async` / `await`（Web基礎にPromiseもasync-awaitもない）、Widgetツリーによる宣言的UIなどが候補になります。Dartのdot shorthand（`.center`）はSwiftのimplicit member expressionと比較し、新概念には数えません。
+2. **その概念の効果を、学生が目で確かめられる形にする。** Monaca系ならプレビュー画面の変化、Flutter系なら実行中のアプリの変化です。どちらにも出てこない概念は、その単元では導入しません。「実務ではこう書く」は理由にしません。
+3. **網羅を目的にしない。** 型のバリエーション、APIの全メソッド、同じ操作の複数パターンを並べても、理解は増えず読む量だけが増えます。代表的な1つに絞り、残りは発展課題か後の単元へ回します。**「いろいろなWidgetを試してみる」という回は作りません**（前年度の第6回-1がこの形でした）。
+
+ただし**公式ドキュメントが「こう書け」と指定している形は削りません**。削ってよいのは、公式が推奨する形のうち「その単元では効果が見えない部分」だけで、それは後の単元へ回します。
+
+判断に迷ったときは、その概念が**後続の単元で必要になるか**で決めます。次の単元で使うなら残します。使わないなら、発展課題か「解説」の読み物にします。
+
+# 完成コードの書き方（全単元共通）
+
+完成プロジェクトのコードは、単元をまたいで同じ書き方にそろえます。教科書に掲載するコードと `teacher/<スラッグ>/code` の照合コードも同じ形にします。系統ごとの具体的な決めごとは [AGENTS.md](AGENTS.md) §11 にあります。
+
+1. **Monaca系は素のHTML / CSS / JavaScript。** フレームワークもビルドツールも使いません。Web基礎で習った書き方（`getElementById` / `addEventListener` / `classList`）にそろえ、別の書き方へ変えません。
+2. **Monaca系はCordovaプラグインを使いません。** `www/` を静的サーバで開くだけで、全部の動作を確かめられる状態を保ちます。
+3. **Flutter系は `lib/` だけを触ります。** `android/` と `ios/` はウィザードが作ったままにします（通信を扱う単元の `INTERNET` 追記と、初回ビルドを軽くする `gradle-wrapper.properties` の書き換えだけが例外です）。
+4. **Flutter系は `import 'package:flutter/material.dart'` で通します。** `package:material_ui` への移行は追いません。画面遷移は `Navigator.push` ＋ `MaterialPageRoute` で、名前付きルートは使いません（公式が非推奨としているため）。
+5. **結果は画面に出します。** `console.log` / `print` だけで済ませません。
+6. **警告は隠さず、原因そのものを消します。** Flutter系は `flutter analyze` が何も出さない状態を保ちます。
+7. **完成プロジェクトにUnit Testは書きません。**
+8. **コメントは日本語で書きます。**
+9. **ここに書いた書き方を保ちます。** レビューで「初学者向けにかみ砕くべき」と指摘されても、既定の対応は「教科書で説明する」です。採用するのは、動作を変えない小さな明確化だけにします。受講生は3つの技術を書けるので、コードを薄めるより、既知の技術との比較を1つ足すほうが早く伝わります。

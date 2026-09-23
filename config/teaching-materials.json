@@ -1,0 +1,67 @@
+{
+  "course": {
+    "name": "ハイブリッドアプリ開発技法",
+    "total_sessions": 15,
+    "minutes_per_session": 90
+  },
+  "scan_roots": [
+    "README.md",
+    "docs"
+  ],
+  "terms": [
+    {
+      "name": "Monacaの開発環境",
+      "canonical": "Monaca クラウド IDE",
+      "forbidden": [
+        "MonacaクラウドIDE",
+        "Monaca クラウドIDE",
+        "Monaca Cloud IDE"
+      ],
+      "applies_to": [
+        "monaca"
+      ],
+      "required_in": [
+        "README.md"
+      ]
+    },
+    {
+      "name": "Flutterのエディタ",
+      "canonical": "Visual Studio Code",
+      "forbidden": [
+        "VSCode",
+        "VS Code"
+      ],
+      "applies_to": [
+        "flutter"
+      ],
+      "required_in": [
+        "README.md"
+      ]
+    }
+  ],
+  "registration": {
+    "targets": [
+      {
+        "path": "README.md",
+        "requires": [
+          "student_doc",
+          "teacher_doc",
+          "archive"
+        ]
+      }
+    ]
+  },
+  "project_layout": {
+    "gitignore_reference": {
+      "monaca": null,
+      "flutter": null
+    },
+    "untracked_parts": [
+      ".idea"
+    ],
+    "untracked_names": [
+      ".DS_Store"
+    ]
+  },
+  "projects": []
+}

@@ -1,0 +1,112 @@
+name: Student materials
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: 学生向けにGitHub Releasesへ公開する
+        required: true
+        type: boolean
+        default: false
+      allow_untranslated:
+        description: 緊急公開時だけ未翻訳を許可する（日本語で表示し、件数をノートに記録）
+        required: true
+        type: boolean
+        default: false
+      student_notes:
+        description: 学生向けの補足（対象単元・変更点・やり直しの要否）
+        required: false
+        type: string
+  merge_group:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: validate-teaching-materials
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: 教材・ソース・配布物の整合性確認
+        run: python3 scripts/check-teaching-materials.py
+      - name: 整合性検査の回帰テスト
+        run: python3 -m unittest scripts.test_check_teaching_materials -v
+      # 翻訳は配布前にまとめて行う。日常のPRでは、対訳カタログが壊れていないことだけを確かめる。
+      - name: 対訳カタログの検査
+        run: python3 scripts/localize-student-materials.py check
+      # 未翻訳の文があっても失敗にしない。件数をSummaryに出すだけ。
+      - name: 翻訳の進み具合
+        run: python3 scripts/localize-student-materials.py status
+
+  package:
+    needs: validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: 配布スクリプトのテスト
+        run: python3 -m unittest discover -s scripts -p 'test_*.py' -v
+      - name: 学生用教材ZIPの生成とリンク確認
+        run: python3 scripts/package-student-materials.py
+      # PRではprepare-releaseが動かないため、この成果物を使う側がいない。生成と
+      # リンク確認だけ行い、保存はmainとworkflow_dispatchのときだけにする。
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        if: github.event_name != 'pull_request'
+        with:
+          name: student-materials-package-${{ github.run_id }}
+          overwrite: true
+          path: dist/
+          if-no-files-found: error
+          retention-days: 14
+
+  prepare-release:
+    needs: package
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    # 手動公開同士を直列化。mainへのpushで実行中の公開処理を中断しない。
+    concurrency:
+      group: student-materials-release-${{ github.event_name }}
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: student-materials-package-${{ github.run_id }}
+          path: dist/
+      - name: リリースノートを自動作成
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          STUDENT_NOTES: ${{ inputs.student_notes }}
+          ALLOW_UNTRANSLATED: ${{ inputs.publish && inputs.allow_untranslated }}
+        run: python3 scripts/release-student-materials.py prepare
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: student-materials-ready-${{ github.run_id }}
+          overwrite: true
+          path: dist/
+          if-no-files-found: error
+          retention-days: 30
+      - name: 学生向けリリースを公開
+        if: github.event_name == 'workflow_dispatch' && inputs.publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          ALLOW_UNTRANSLATED: ${{ inputs.allow_untranslated }}
+        run: python3 scripts/release-student-materials.py publish
