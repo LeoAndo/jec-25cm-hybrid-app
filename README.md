@@ -8,10 +8,11 @@ JEC（25CM）の「ハイブリッドアプリ開発技法」で使う教材で�
 
 ## 教科書一覧
 
-<!-- 単元ができたら、ここに教科書・完成プロジェクト・教員用ガイドのリンクを単元番号順で並べます。
-     scripts/check-teaching-materials.py が config/teaching-materials.json の projects と照合します。 -->
+| 単元 | 学生用教科書 | 完成プロジェクト | 教員用ガイド | 完成ZIP |
+| --- | --- | --- | --- | --- |
+| M01OshiList（コマ1〜4） | [推しログ：一覧と詳細](docs/oshi-list/index.html) | [M01OshiList](M01OshiList/) | [進め方と照合コード](teacher/oshi-list/index.html) | [M01OshiList.zip](docs/oshi-list/downloads/M01OshiList.zip) |
 
-[共通資料：授業を始めるまでの準備](docs/common/setup.html)を用意しました。教材の受け取り、Monacaのアカウント作成、Flutter 3.47.5の準備を授業内で進めます。単元の教科書は順次追加します。
+[共通資料：授業を始めるまでの準備](docs/common/setup.html)では、教材の受け取り、Monacaのアカウント作成、Flutter 3.47.5の準備を授業内で進めます。M01では、静的な推しカードからOnsen UIの一覧・詳細へ進み、auto-stylingによるOSごとの見た目を比べます。以降の単元は順次追加します。
 
 15コマの割り当ては下の「15コマ計画」にあります。教科書・教員用ガイド・`config/teaching-materials.json` への登録は、単元ごとのissueで行います（[AGENTS.md](AGENTS.md) §9、[単元追加用skill](skills/add-teaching-unit/SKILL.md)）。
 
@@ -29,11 +30,11 @@ JEC（25CM）の「ハイブリッドアプリ開発技法」で使う教材で�
 
 展開後、はじめて授業を受ける学生は [共通資料：授業を始めるまでの準備](docs/common/setup.html) をブラウザで開き、第1コマにSTEP 1〜3、第7コマにSTEP 4〜7を進めます（同梱の `はじめに.txt` でも、単元一覧より前に案内しています）。準備が済んだら、その日の単元の教科書をブラウザで開きます。
 
-学生用ZIPには `docs` 一式と、開き方・版情報を収録します。**いまは日本語だけの構成で配布します。** 展開してできたフォルダには `docs` / `はじめに.txt` / `VERSION.json` があり、完成見本を同梱する版には、展開済みの完成プロジェクトを入れた `samples` も加わります。現在は `config/teaching-materials.json` の `projects` が空なので、`samples` はありません。言語を選ぶ入口がないのは、`config/i18n.json` の5言語がすべて `distribute: false` のためです（「多言語展開」）。翻訳を終えた言語を `distribute: true` にすると、言語を選ぶ入口の `index.html` がZIPに入り、`はじめに.txt` にも各言語の案内が付きます。`teacher` フォルダとテンプレート原本（`MonacaTemplate`・`MonacaMinimumTemplate`）は収録しません。GitHubが自動で表示する **Source code (zip)** はリポジトリ全体のため、学生用ZIPには使いません。なお、このリポジトリ自体はPublicなので、教員用ファイルもGitHub上では閲覧できます。
+学生用ZIPには `docs` 一式と、開き方・版情報を収録します。**いまは日本語だけの構成で配布します。** 展開してできたフォルダには `docs` / `samples` / `はじめに.txt` / `VERSION.json` があります。現在の登録単元は `M01OshiList` で、`samples/M01OshiList` に展開済みの完成見本を収録します。Monacaへは教科書の取り込み用URLから開き、`samples` はコードを読み比べるために使います。言語を選ぶ入口がないのは、`config/i18n.json` の5言語がすべて `distribute: false` のためです（「多言語展開」）。翻訳を終えた言語を `distribute: true` にすると、言語を選ぶ入口の `index.html` がZIPに入り、`はじめに.txt` にも各言語の案内が付きます。`teacher` フォルダとテンプレート原本（`MonacaTemplate`・`MonacaMinimumTemplate`）は収録しません。GitHubが自動で表示する **Source code (zip)** はリポジトリ全体のため、学生用ZIPには使いません。なお、このリポジトリ自体はPublicなので、教員用ファイルもGitHub上では閲覧できます。
 
 授業中は教員が指定した版を使います。授業ごとの案内には、内容が固定された個別リリースのURLを使ってください。更新版は別フォルダに展開し、学生自身のプロジェクトは上書きしません。
 
-**完成プロジェクト（先生が作った見本）を配るときは、系統ごとに次の形で渡します。** 共通資料だけの版には、完成見本や `samples` は含まれません。
+**完成プロジェクト（先生が作った見本）を配るときは、系統ごとに次の形で渡します。** 現在はMonacaのM01を収録しています。
 
 | 系統 | 学生が受け取る形 |
 | --- | --- |
@@ -93,6 +94,9 @@ Freeプランの制限が、そのまま教材の設計を縛ります。詳細�
 
 | フォルダ | 内容 |
 | --- | --- |
+| `M01OshiList/` | [推しログの完成ソースと実装の説明](M01OshiList/README.md) |
+| `docs/oshi-list/` | M01の学生用教科書と完成プロジェクトZIP |
+| `teacher/oshi-list/` | M01の教員用ガイドとSTEPごとの照合コード |
 | `docs/common/` | 学生向けの共通準備資料 |
 | `docs/assets/` | 教科書の共通CSS・操作機能 |
 | `MonacaMinimumTemplate/` | [通常版の最小限テンプレート4.0.0と出所・比較記録](MonacaMinimumTemplate/README.md) |
@@ -302,7 +306,7 @@ CocoaPods 1.16.2 / Android SDK 37.0.0 / JDK 21（Android Studio Panda 2 同梱�
 
 1. **1コマで新しく覚えることは1つだけにする。** 1単元で導入する新概念は1つまでです。覚えることが増えるほど、コードを追えなくなる学生が出ます。ここでいう「新概念」は、**Web基礎にもJava/Androidにも Swift/iOS にもないもの**を指します（下の「単元の範囲の決め方」）。書き方だけが違うものは、比較で見せれば足ります。
 2. **やったことの結果が、必ず目に見える形にする。** Monaca系ならプレビュー画面、Flutter系ならシミュレータ／エミュレータの画面で確かめられるところまでを1単元にします。
-3. **Monaca系は素のHTML / CSS / JavaScript で書く。** Vue・React・AngularJSなどのフレームワークやビルドツールは入れません。M01・M02ではOnsen UI 2.12.9を素のJavaScriptから使うUIライブラリとして採用します。要素の取得は `document.getElementById`、イベントは `addEventListener`、クラスの付け外しは `classList` と、Web基礎で習った書き方にそろえます。
+3. **Monaca系は素のHTML / CSS / JavaScript で書く。** 承認済みのM01・M02では、Onsen UI 2.12.9を素のJavaScriptから使うUIライブラリとして採用します。Vue・React・AngularJSや、webpackなどのバンドラー・ビルドツールは追加しません。要素の取得は `document.getElementById`、イベントは `addEventListener`、クラスの付け外しは `classList` と、Web基礎で習った書き方にそろえます。
 4. **Monaca系はCordovaプラグインに依存しません。** 使うのはブラウザだけで動く範囲です。Freeプランでコアプラグインしか使えないうえ、プレビューでもローカルでも確かめられない機能が増えると、学生が自分のコードの結果を見られなくなります。
 5. **伝えたいことは画面に出します。** `console.log` や `print` だけで済ませません。学生はアプリを触っているとき開発者ツールを見ていないからです。
 6. **完成プロジェクトにUnit Testは書きません。** テストしやすくするためのリファクタリングもしません。授業で扱わないコードが増えると、読む量だけが増えるためです（教材を検査する `scripts/test_*.py` はCIで動くので、通る状態を保ちます）。
@@ -343,7 +347,7 @@ CocoaPods 1.16.2 / Android SDK 37.0.0 / JDK 21（Android Studio Panda 2 同梱�
 
 完成プロジェクトのコードは、単元をまたいで同じ書き方にそろえます。教科書に掲載するコードと `teacher/<スラッグ>/code` の照合コードも同じ形にします。系統ごとの具体的な決めごとは [AGENTS.md](AGENTS.md) §11 にあります。
 
-1. **Monaca系は素のHTML / CSS / JavaScript。** フレームワークもビルドツールも使いません。Web基礎で習った書き方（`getElementById` / `addEventListener` / `classList`）にそろえ、別の書き方へ変えません。
+1. **Monaca系は素のHTML / CSS / JavaScript。** 承認済みのM01・M02では、Onsen UI 2.12.9を素のJavaScriptから使うUIライブラリとして採用します。Vue・React・AngularJSや、webpackなどのバンドラー・ビルドツールは追加しません。Web基礎で習った書き方（`getElementById` / `addEventListener` / `classList`）にそろえ、別の書き方へ変えません。
 2. **Monaca系はCordovaプラグインを使いません。** `www/` を静的サーバで開くだけで、全部の動作を確かめられる状態を保ちます。
 3. **Flutter系は `lib/` だけを触ります。** `android/` と `ios/` はウィザードが作ったままにします（通信を扱う単元の `INTERNET` 追記と、初回ビルドを軽くする `gradle-wrapper.properties` の書き換えだけが例外です）。
 4. **Flutter系は `import 'package:flutter/material.dart'` で通します。** `package:material_ui` への移行は追いません。画面遷移は `Navigator.push` ＋ `MaterialPageRoute` で、名前付きルートは使いません（公式が非推奨としているため）。

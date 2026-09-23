@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>M01OshiList 教員用ガイド | ハイブリッドアプリ開発技法</title>
+  <link rel="stylesheet" href="../../docs/assets/textbook.css">
+</head>
+<body class="plain">
+<a class="skip" href="#main">本文へ移動</a>
+<header class="topbar"><span class="brand">JEC / 教員用ガイド</span><a href="../../docs/oshi-list/index.html">学生用教科書</a></header>
+<main id="main">
+<div class="hero"><p class="eyebrow">Monaca · 4コマ</p><h1>M01OshiList：一覧と詳細</h1><p class="lede">学びや開発の中で見つけたお気に入りを記録する、静的な推しカードから始め、Onsen UIの静的一覧、配列による一覧生成、詳細画面の順で育てます。各回の開始コードと全STEPの照合コードを用意し、途中からでも同じ状態へ合流できます。</p><div class="tags"><span>Monaca クラウド IDE / Google Chrome</span><span>Onsen UI 2.12.9</span><span>1コマ90分 × 4</span></div></div>
+<section id="policy"><h2>この単元の教材方針</h2>
+<p>新概念は <strong>auto-stylingの1つ</strong>です。同じHTMLでiOS向けとAndroid向けの部品の見た目が変わることをSTEP 08で確かめます。API名や構文がWeb基礎で初出という理由だけでは新概念に数えず、Java / Android・Swift / iOSに既習の対応物があれば、比較STEPで違いと理由を説明します（2026-09-23オーナー方針）。</p>
+<p>受講生はHTML・CSS・JavaScriptとJava・Swiftを書いた経験があります。文法の入門を繰り返すのではなく、Webでの記法、画面の生成時点、OS別スタイルを比較します。初回は登録・ダウンロード・作成にも時間を割きます。宿題として環境を用意させる前提にはしません。</p>
+<table><thead><tr><th>扱う内容</th><th>既習の対応物</th><th>違いと理由を説明するSTEP</th></tr></thead><tbody>
+<tr><td>HTMLとCSS、クラスの再利用</td><td>Web基礎の構造・装飾。Android / iOSの画面部品と余白。</td><td>00〜04：ファイルの置き場所、文章と色の変更箇所、同じ形の再利用。</td></tr>
+<tr><td>UIライブラリとOnsen UIの部品</td><td>Webの外部CSS / JavaScript。Android Toolbar、iOSのバー・一覧のセル。</td><td>05〜07：版固定、読み込み順、役割を示すタグ、見た目とクリック処理の違い。07では既習のborder・border-radius・marginとoshi-cardをOnsen UIの行へ再利用。</td></tr>
+<tr><td>auto-styling</td><td>共通HTMLへOSごとの見た目を適用する仕組みは、本単元の新概念。</td><td>08〜09：HTML / CSSを固定してOS指定だけを切り替え、比較後は自動へ戻す。</td></tr>
+<tr><td>Onsen UIのinit</td><td>Webのイベント登録。Androidのビュー生成後の設定、iOSのviewDidLoad。</td><td>10：イベント名・対象・発生時点が違う。要素が配置されてから取得する。</td></tr>
+<tr><td>配列、オブジェクト、for、文字列連結</td><td>Web基礎の配列・オブジェクト。Java / Swiftの配列とデータ。</td><td>11〜12：3件のデータ、件数、番号付きid、構造と表示データの分離。</td></tr>
+<tr><td>textContent</td><td>Web基礎のDOM表示。AndroidのTextView.setText、iOSのUILabel.text。</td><td>12：固定タグだけをinnerHTMLへ入れ、名前はHTMLとして解釈せず文字として入れる。</td></tr>
+<tr><td>行のクリック、引数、letのループ変数</td><td>Web基礎のaddEventListener。Androidのリスナー、iOSのアクション。</td><td>13〜14：行ごとの番号とデータを渡す。DOMを置いた後にイベントを登録する。</td></tr>
+<tr><td>template / ons-navigator / ons-back-button</td><td>画面のレイアウト定義と表示。iOSのナビゲーションスタック、Androidの次画面から戻る操作。</td><td>15〜16：ひな形は未配置、navigatorがページを作る。画面内の戻るはpopに対応。</td></tr>
+<tr><td>pushPageのdata / page.data</td><td>Android・iOSでの画面間の値の受け渡し。</td><td>17：送り手のdataと受け手のpage.dataを対にする。保存や文字列化とは違う。</td></tr>
+<tr><td>callbackと連続操作の防止</td><td>Web基礎のイベントに渡す関数、Androidの終了通知、iOSの完了ハンドラ。</td><td>18：真偽値の条件と現在のページの条件を分け、完了時に真偽値を戻す。</td></tr>
+<tr><td>完成後の変更箇所と確認</td><td>HTML / CSS / JavaScriptの役割分担とネイティブアプリの操作確認。</td><td>19：データ、装飾、画面遷移を区別して確かめる。</td></tr>
+</tbody></table>
+<h3>カード例とアレンジの問い</h3>
+<p>完成例は「NotebookLM／学習ツール」「Android Studio / Xcode／開発ツール」「AIエージェントを使ったアプリ開発／気になる技術」の3件です。学びや開発の中で見つけた「推し」と、その推しポイント・次に試したいことを記録します。M01は、コードに書いた推しをカードに集めて読む範囲です。例に登場するツールの利用や登録は、この単元の作業には含めません。</p>
+<p>アレンジでは「自分の推しは何か」「どこが推しポイントか」「次に何を試したいか」を問い、名前と理由を本人の言葉へ変えてもらいます。ツール名を変えるだけで終えず、好きな理由や次の行動を説明できることを確認します。</p>
+<h3>意図的に外したもの</h3>
+<ul><li>入力フォーム・編集・削除・保存は扱いません。一覧と詳細、auto-stylingに集中し、授業中の選択が再読み込みで戻ることを明示します。</li><li>外部API通信、認証、写真・通知などのCordovaプラグインは使いません。ブラウザだけで操作できる範囲にします。</li><li>Vue / React / AngularJSなどのフレームワーク、ビルドツール、追加のUIライブラリは使いません。Onsen UIは版を固定して、素のJavaScriptから操作します。</li><li>JSのアロー関数、クラス構文、テンプレート文字列を使いません。文字列連結はWeb基礎のプラス記号で書きます。</li><li>OSの内部部品の再実装、画面遷移の独自アニメーション、複雑なナビゲーション設計は扱いません。Onsen UIの既定の動きを確かめます。</li><li>APK・実機配布はこの単元の課題にしません。Flutter系の教材では承認済みの通常APK提出を維持しますが、M01の前提にしません。</li></ul>
+<h3>未習事項ゲート</h3>
+<p>学生が編集する3ファイルと本文の照合コードが対象です。Monaca原本のcomponents、Onsen UIの配信ファイル、教科書自身のassetsは学生が書くコードから除きます。</p>
+<table><thead><tr><th>ゲートの対象</th><th>M01の判断</th></tr></thead><tbody>
+<tr><td>querySelector / querySelectorAll</td><td>不使用。要素の取得はgetElementByIdに統一。</td></tr>
+<tr><td>fetch、Promise、then、async / await</td><td>学生コードでは不使用。pushPageの返り値は使わず、完了処理はcallbackへ渡す。戻り値の非同期API体系へ話を広げない。</td></tr>
+<tr><td>JSON、localStorage、sessionStorage</td><td>不使用。配列のオブジェクトをそのまま画面間で渡す。保存されるとは説明しない。</td></tr>
+<tr><td>アロー関数、ES Modules、JavaScriptのクラス構文</td><td>不使用。通常のfunction、script読み込み、オブジェクトリテラルを使う。</td></tr>
+<tr><td>@keyframes、animation、CSS Grid</td><td>学生のCSSでは不使用。Onsen UI内部の表現と、学生が実装する範囲を分ける。</td></tr>
+<tr><td>init、template、navigator、data、callback</td><td>上の既習対応表とSTEP 10・15〜18で説明。対応物との比較を省略しない。</td></tr>
+</tbody></table>
+</section>
+<section id="sessions"><h2>90分ごとの進め方</h2>
+<p>各回の本体80分と予備10分を確保します。以下は授業設計上の配分であり、実際の入力時間・回線待ちを計測した結果ではありません。登録待ちや読み込み待ちがある場合は、アレンジを減らし、合流コードから当日の到達点を確認します。説明を読ませず全文を貼るだけにはしません。</p>
+<table><thead><tr><th>コマ</th><th>90分の配分</th><th>当日の終了条件</th></tr></thead><tbody>
+<tr><td>1 / STEP 00〜04</td><td>00：教材取得・登録・枠・作成25分、01：静的カード10分、02：CSS15分、03：3件化15分、04：確認・アレンジ15分、予備10分。</td><td>自分のプロジェクトで3枚が表示される。HTMLの文字とCSSの色を変えられる。</td></tr>
+<tr><td>2 / STEP 05〜09</td><td>05：再開・合流・ライブラリ取得15分、06：ページ・バー10分、07：一覧20分、08：OSスタイル比較20分、09：確認・アレンジ15分、予備10分。</td><td>同じHTMLでOSスタイルの違いを説明できる。強制指定をコメントへ戻す。</td></tr>
+<tr><td>3 / STEP 10〜14</td><td>10：再開・合流・init15分、11：配列15分、12：一覧生成25分、13：クリック15分、14：確認・アレンジ10分、予備10分。</td><td>配列から行ができ、どの行も正しい名前を表示する。再読み込みで選択が戻る。</td></tr>
+<tr><td>4 / STEP 15〜19</td><td>15：再開・合流・navigator15分、16：詳細・戻る15分、17：データ受渡し20分、18：連続操作15分、19：完成確認・アレンジ・変更箇所の記録15分、予備10分。</td><td>3件の詳細を開ける。戻ると一覧になる。連打で画面が重ならず、OSスタイルを比べられる。</td></tr>
+</tbody></table>
+<p>2〜4コマ目の最初のSTEPには、それぞれ04・09・14の全コードを再掲しています。途中合流ではその開始コードをそろえ、開始状態の操作を確認してから新しいSTEPへ進みます。毎回プロジェクトを作り直しません。個人のアレンジを上書きする前に、変更した文字や色を本人に控えてもらいます。</p>
+</section>
+<section id="operation"><h2>教室での運用</h2>
+<p>通常版MonacaのFreeプランを使います。学生のダウンロードとアカウント準備は授業時間内に行い、アカウント登録の手順は<a href="../../docs/common/setup.html?from=oshi-list#step-2">共通資料</a>へ集約しています。学生が自分で編集したプロジェクトを、枠確保のために削除させません。</p>
+<p>教員は完成見本2本を保持し、残り1枠を検証・採点に使います。URLからの取り込みは1件ずつ行い、確認済みの学生作品のコピーだけを削除して次へ進みます。公開用の完成見本は保持します。M01完成見本の取り込み用URLは、<a href="https://monaca.mobi/ja/directimport?pid=6ab3e25de78885da2c0a0ae6">実際に公開して発行したURL</a>をconfigと学生用の完成見本リンクへ記載しています。配布見本を更新した場合は、取り込み先が配布対象のコードかも確認します。</p>
+<p>M01の第4コマは、完成確認とアレンジ箇所の記録で終えます。正式な提出はMonaca系の提出回（承認済み計画では第7コマ）に行い、対象の作品・提出先・締め切りをその回に案内します。提出には、学生が <code>プロジェクト → 公開…</code> で発行した取り込み用URLを使います。これはソースの共有であり、実行中の画面やブラウザの保存データは相手へ移りません。M01自体は保存機能を持たないため、この単元の完成確認ではソース内の配列を使い、未選択状態から操作できるかを確認します。</p>
+<h3>教師からの確認質問</h3>
+<ul><li>第1コマ：「同じ文字色を3枚とも変えるには、どこを1か所直す？」</li><li>第2コマ：「自分のHTMLを変えずに、何が変わった？ どこは同じ？」</li><li>第3コマ：「名前に山かっこがあっても文字になるのはなぜ？ イベントは行を置く前と後のどちら？」</li><li>第4コマ：「送り手のdataと受け手のpage.dataは、どこで対応する？ 戻る1回で一覧へ戻れる？」</li></ul>
+</section>
+<section id="troubleshooting"><h2>つまずいたときの確認順</h2>
+<table><thead><tr><th>見える状態</th><th>最初に確かめること</th></tr></thead><tbody>
+<tr><td>装飾のない縦並びになる。</td><td>index.htmlのCDNの版・パスと、style.cssのパス。保存後にプレビューを再読み込みしたか。回線でunpkg.comへ接続できるか。</td></tr>
+<tr><td>app.jsが動かない。</td><td>配置先はwww/js/app.jsか。index.htmlのscriptがOnsen UIの後になっているか。ファイルを保存したか。</td></tr>
+<tr><td>一覧が空になる。</td><td>page_list・list_oshiのid。配列のカンマと引用符。init内からrenderOshiListを呼んでいるか。</td></tr>
+<tr><td>どの行も同じ項目になる。</td><td>ループがfor (let i = …)になっているか。固定の0ではなくoshiItems[i]を渡しているか。</td></tr>
+<tr><td>クリックしても反応しない。</td><td>innerHTMLを設定した後でaddEventListenerを登録しているか。tappableだけでは処理は付かない。</td></tr>
+<tr><td>templateを追加したら空白になる。</td><td>navigatorのpageとtemplateのidの綴り。templateの中に1個のons-pageがあるか。要素をinitより前に取得していないか。</td></tr>
+<tr><td>詳細が空になる。</td><td>pushPageのdata内のoshiと、page.data.oshi、3つの表示用idを照合する。</td></tr>
+<tr><td>OS指定を変えても形が変わらない。</td><td>ons.platform.selectをapp.js先頭で実行しているか。画面内の戻るではなく、プレビューのReloadを押したか。端末選択で比べるときはコードの強制指定をコメントに戻したか。</td></tr>
+</tbody></table>
+<p>Monacaの画面の項目名やテンプレートの位置が変わっていたら、当日の実画面で確認して学生へ案内します。未確認の操作名や所要時間を、保証された手順として補わないでください。</p>
+</section>
+<section id="verification"><h2>完成コードの検証と未確認項目</h2>
+<p>完成版のHTML・CSS・JavaScriptをSTEP 18・19の照合コードへそのまま複製し、本文のpreはそのファイルからHTMLエスケープして生成します。最終版の対応はconfigのmirrors、本文はsnippetsに登録します。完成アプリのUnit Testは追加しません。</p>
+<p>ローカル確認では、完成プロジェクトのルートから次の静的サーバを起動し、Google Chromeで開きます。fileプロトコルから直接開きません。</p>
+<div class="code-head">Terminal · M01OshiListで実行</div><pre tabindex="0"><code>python3 -m http.server 8765 --bind 127.0.0.1 --directory www</code></pre>
+<p><code>http://127.0.0.1:8765/?platform=ios</code> と <code>http://127.0.0.1:8765/?platform=android</code> で表示を比べます。OS指定行をコメントに戻した状態で開きます。デバイス幅を狭くして3件・詳細・戻る・連続クリック・長文・改行を確認します。localhostでのcordova.jsの404は、Cordovaプラグインを使わない本単元では区別して扱います。</p>
+<p>各STEPの照合コードも、最小限テンプレートまたは完成プロジェクトの検証用コピーに3ファイルを配置して確認できます。00〜04のapp.jsは読み込まれないコメントのみです。共有の原本や学生の作品へ上書きしません。</p>
+<div class="note"><p class="box-title">この教材作成段階で残っている確認</p><p>2026-09-23に、config.xmlを直下へ置くZIPのMonacaへの取り込み、Cordova 12、クラウドのiPhone 15 / Pixel 8プレビューで完成版の一覧・全3件の詳細、戻ったときの選択保持、Pixel 8での連続クリックを確認し、公開URLを発行しました。端末選択の変更後はReloadが必要なことも確認しています。その後、題材を学習・開発に関する推しへ更新し、カードの枠・余白と短い見出しをiPhone 15／Pixel 8で再確認しました。ローカルChromeでも変更後の一覧・詳細を確認し、STEP 07・12・17の最新コードでカード表示と詳細への値の受け渡しを確認しました。各STEPのクラウド動作、公開URLからの再取り込み、通常授業での操作時間は未確認です。ローカルのGoogle Chromeでは、390px幅で完成版の全3件・詳細・戻る・連打・OS別スタイル、検証用コピーで4件目とHTML記号の文字表示を確認しました。中間コードはSTEP 04・09・10・12・14〜17の画面と操作を確認し、全20 STEPのJavaScript構文を検査しています。</p></div>
+<p>教科書の公開URLは実際に発行したものです。スクリーンショットはまだ掲載していません。スクリーンショットを追加する場合は、Monaca クラウド IDEのプレビューで撮影し、実寸のwidthとheightを指定します。</p>
+<p>登録・配布のPRでは、教材検査、scriptsのテスト、翻訳構造検査、学生用ZIPの生成を正式worktreeで実行します。ZIPと本文のコードが現在の完成ソースに一致することも確かめます。</p>
+</section>
+<section id="references"><h2>公式APIの確認先</h2>
+<ul><li><a href="https://onsen.io/v2/guide/theming.html#cross-platform-styling-autostyling">Onsen UI：auto-styling</a> — OSに応じた見た目と手動のプラットフォーム指定。</li><li><a href="https://onsen.io/v2/guide/lifecycle.html">Onsen UI：ページのライフサイクル</a> — init時点での処理。</li><li><a href="https://onsen.io/v2/api/js/ons-page.html">ons-page</a> — ページのデータとイベント。</li><li><a href="https://onsen.io/v2/api/js/ons-navigator.html">ons-navigator</a> — page、pushPage、data、callback、topPage。</li><li><a href="https://onsen.io/v2/api/js/ons-list-item.html">ons-list-item</a> — 行の構造、tappable、modifier。</li><li><a href="https://unpkg.com/onsenui@2.12.9/package.json">Onsen UI 2.12.9の配布情報</a> — 教材で固定する版。</li></ul>
+<p>最新版の例をそのまま貼り付けず、固定した2.12.9と学生の未習事項ゲートに照らして使います。</p>
+</section>
+<section id="snapshots"><h2>STEPごとの照合コード</h2>
+<p>各行はそのSTEPの終了状態です。アレンジ前の基準コードを保存しています。00〜04のapp.jsはまだ読み込まないコメントのみで、学生は第2コマで作ります。18・19は完成プロジェクトの3ファイルと同一です。</p>
+<table><thead><tr><th>STEP</th><th>HTML</th><th>CSS</th><th>JavaScript</th></tr></thead><tbody>
+<tr><td>00</td><td><a href="code/00-index.html">index.html</a></td><td><a href="code/00-style.css">style.css</a></td><td><a href="code/00-app.js">app.js</a></td></tr>
+<tr><td>01</td><td><a href="code/01-index.html">index.html</a></td><td><a href="code/01-style.css">style.css</a></td><td><a href="code/01-app.js">app.js</a></td></tr>
+<tr><td>02</td><td><a href="code/02-index.html">index.html</a></td><td><a href="code/02-style.css">style.css</a></td><td><a href="code/02-app.js">app.js</a></td></tr>
+<tr><td>03</td><td><a href="code/03-index.html">index.html</a></td><td><a href="code/03-style.css">style.css</a></td><td><a href="code/03-app.js">app.js</a></td></tr>
+<tr><td>04</td><td><a href="code/04-index.html">index.html</a></td><td><a href="code/04-style.css">style.css</a></td><td><a href="code/04-app.js">app.js</a></td></tr>
+<tr><td>05</td><td><a href="code/05-index.html">index.html</a></td><td><a href="code/05-style.css">style.css</a></td><td><a href="code/05-app.js">app.js</a></td></tr>
+<tr><td>06</td><td><a href="code/06-index.html">index.html</a></td><td><a href="code/06-style.css">style.css</a></td><td><a href="code/06-app.js">app.js</a></td></tr>
+<tr><td>07</td><td><a href="code/07-index.html">index.html</a></td><td><a href="code/07-style.css">style.css</a></td><td><a href="code/07-app.js">app.js</a></td></tr>
+<tr><td>08</td><td><a href="code/08-index.html">index.html</a></td><td><a href="code/08-style.css">style.css</a></td><td><a href="code/08-app.js">app.js</a></td></tr>
+<tr><td>09</td><td><a href="code/09-index.html">index.html</a></td><td><a href="code/09-style.css">style.css</a></td><td><a href="code/09-app.js">app.js</a></td></tr>
+<tr><td>10</td><td><a href="code/10-index.html">index.html</a></td><td><a href="code/10-style.css">style.css</a></td><td><a href="code/10-app.js">app.js</a></td></tr>
+<tr><td>11</td><td><a href="code/11-index.html">index.html</a></td><td><a href="code/11-style.css">style.css</a></td><td><a href="code/11-app.js">app.js</a></td></tr>
+<tr><td>12</td><td><a href="code/12-index.html">index.html</a></td><td><a href="code/12-style.css">style.css</a></td><td><a href="code/12-app.js">app.js</a></td></tr>
+<tr><td>13</td><td><a href="code/13-index.html">index.html</a></td><td><a href="code/13-style.css">style.css</a></td><td><a href="code/13-app.js">app.js</a></td></tr>
+<tr><td>14</td><td><a href="code/14-index.html">index.html</a></td><td><a href="code/14-style.css">style.css</a></td><td><a href="code/14-app.js">app.js</a></td></tr>
+<tr><td>15</td><td><a href="code/15-index.html">index.html</a></td><td><a href="code/15-style.css">style.css</a></td><td><a href="code/15-app.js">app.js</a></td></tr>
+<tr><td>16</td><td><a href="code/16-index.html">index.html</a></td><td><a href="code/16-style.css">style.css</a></td><td><a href="code/16-app.js">app.js</a></td></tr>
+<tr><td>17</td><td><a href="code/17-index.html">index.html</a></td><td><a href="code/17-style.css">style.css</a></td><td><a href="code/17-app.js">app.js</a></td></tr>
+<tr><td>18</td><td><a href="code/18-index.html">index.html</a></td><td><a href="code/18-style.css">style.css</a></td><td><a href="code/18-app.js">app.js</a></td></tr>
+<tr><td>19</td><td><a href="code/19-index.html">index.html</a></td><td><a href="code/19-style.css">style.css</a></td><td><a href="code/19-app.js">app.js</a></td></tr>
+</tbody></table>
+</section>
+<p class="footer">JEC / ハイブリッドアプリ開発技法 · M01OshiList · 教員用</p>
+</main>
+</body>
+</html>

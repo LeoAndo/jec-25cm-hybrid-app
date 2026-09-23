@@ -1,0 +1,68 @@
+.app-section {
+  padding: 20px 16px;
+}
+
+.app-caption {
+  margin: 0 0 12px;
+  color: #765744;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.app-heading {
+  margin: 0 0 16px;
+  font-size: 24px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.app-description {
+  margin: 0;
+  color: #555555;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.app-selection {
+  margin: 0;
+  color: #765744;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.app-label {
+  margin: 24px 0 8px;
+  color: #555555;
+  font-size: 14px;
+}
+
+.app-comment {
+  margin: 0;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+#list_oshi {
+  background-color: transparent;
+  background-image: none;
+}
+
+.oshi-card {
+  /* 左右の余白を足しても、カードを画面の幅に収める。 */
+  width: auto;
+  margin: 0 16px 12px;
+  border: 1px solid #d8c9bd;
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
+.oshi-card .list-item__center {
+  /* 一覧の既定罫線を外し、カードの枠で区切る。 */
+  background-image: none;
+}
+
+.oshi-name,
+.oshi-genre {
+  overflow-wrap: anywhere;
+}

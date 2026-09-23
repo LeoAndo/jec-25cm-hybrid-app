@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  background-color: #f6f1eb;
+  color: #333333;
+  font-family: sans-serif;
+}
+
+.app-section {
+  padding: 20px 16px;
+}
+
+.app-heading {
+  margin: 0 0 16px;
+  font-size: 24px;
+}
+
+.oshi-card {
+  margin: 0 0 16px;
+  padding: 16px;
+  border: 1px solid #d8c9bd;
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
+.app-caption {
+  margin: 0 0 12px;
+  color: #765744;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.oshi-name {
+  margin: 0 0 12px;
+  font-size: 20px;
+  overflow-wrap: anywhere;
+}
