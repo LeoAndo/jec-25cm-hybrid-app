@@ -12,8 +12,11 @@ import argparse
 from pathlib import Path
 from shutil import which
 import subprocess
+import sys
 from zipfile import ZIP_DEFLATED, ZipFile, ZipInfo
 
+# importlibから読み込まれる場合も、同じフォルダのヘルパーを探せるようにする。
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 from project_files import excluded_project_path, project_kind
 
 

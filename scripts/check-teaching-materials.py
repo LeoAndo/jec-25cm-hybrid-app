@@ -14,6 +14,8 @@ import sys
 from xml.etree import ElementTree
 from zipfile import BadZipFile, ZipFile
 
+# importlibから読み込まれる場合も、同じフォルダのヘルパーを探せるようにする。
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 from project_files import LOCAL_PARTS, LOCAL_NAMES, excluded_project_path, project_kind
 
 CONFIG = Path("config/teaching-materials.json")

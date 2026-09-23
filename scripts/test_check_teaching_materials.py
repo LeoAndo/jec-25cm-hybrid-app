@@ -28,6 +28,28 @@ SPEC.loader.exec_module(CHECKER)
 PACKAGER = Path(__file__).with_name("package-project.py")
 
 
+class ScriptImportTest(unittest.TestCase):
+    def test_project_helper_loads_outside_repository(self):
+        """CLIとimportlibのどちらでも、cwdやテスト探索時のsys.pathに依存しない。"""
+        loader = (
+            "import importlib.util, sys; "
+            "spec = importlib.util.spec_from_file_location('under_test', sys.argv[1]); "
+            "module = importlib.util.module_from_spec(spec); "
+            "spec.loader.exec_module(module)"
+        )
+        with tempfile.TemporaryDirectory() as outside:
+            for script in (SCRIPT, PACKAGER):
+                for mode in ("cli", "importlib"):
+                    with self.subTest(script=script.name, mode=mode):
+                        args = ([str(script.resolve()), "--help"] if mode == "cli"
+                                else ["-c", loader, str(script.resolve())])
+                        result = subprocess.run(
+                            [sys.executable, "-I", *args], cwd=outside,
+                            capture_output=True, text=True,
+                        )
+                        self.assertEqual(result.returncode, 0, result.stderr)
+
+
 class TeachingMaterialsCheckTest(unittest.TestCase):
     # 系統ごとの正式表記。Monaca系とFlutter系で、使う道具の名前が違う。
     IDE = "Monaca クラウドIDE"
