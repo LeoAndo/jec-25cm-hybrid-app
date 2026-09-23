@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+  <title>推しログ</title>
+  <script src="components/loader.js"></script>
+  <link rel="stylesheet" href="components/loader.css">
+  <link rel="stylesheet" href="https://unpkg.com/onsenui@2.12.9/css/onsenui.css">
+  <link rel="stylesheet" href="https://unpkg.com/onsenui@2.12.9/css/onsen-css-components.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/onsenui@2.12.9/js/onsenui.min.js"></script>
+  <script src="js/app.js"></script>
+</head>
+<body>
+  <ons-navigator id="nav_app" page="list.html"></ons-navigator>
+
+  <template id="list.html">
+    <ons-page id="page_list">
+      <ons-toolbar>
+        <div class="center">推しログ</div>
+      </ons-toolbar>
+
+      <div class="app-section">
+        <p class="app-caption">わたしの推し</p>
+        <h1 class="app-heading">好きな理由を集めよう。</h1>
+        <p class="app-description">学びや開発の中で見つけた、お気に入りの記録。</p>
+      </div>
+
+      <ons-list id="list_oshi"></ons-list>
+      <p id="txt_selected" class="app-section app-selection" aria-live="polite">まだ選択していません</p>
+    </ons-page>
+  </template>
+
+  <template id="detail.html">
+    <ons-page id="page_detail">
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button>戻る</ons-back-button>
+        </div>
+        <div class="center">推しの詳細</div>
+      </ons-toolbar>
+
+      <div class="app-section">
+        <p id="txt_detail_genre" class="app-caption">学習ツール</p>
+        <h1 id="txt_detail_name" class="app-heading">詳細画面の見本</h1>
+        <p class="app-label">私の推しポイント・次に試したいこと</p>
+        <p id="txt_detail_comment" class="app-comment">戻るボタンで一覧に戻れます。</p>
+      </div>
+    </ons-page>
+  </template>
+</body>
+</html>

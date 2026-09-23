@@ -20,22 +20,12 @@ let oshiItems = [
   }
 ];
 
-let isOpeningDetail = false;
-
-// templateの中身は、ページが作られてから取得する。
+// ページの要素が使えるようになってから処理する。
 document.addEventListener("init", function(event) {
   const page = event.target;
 
   if (page.id === "page_list") {
     renderOshiList();
-  }
-
-  if (page.id === "page_detail") {
-    const oshi = page.data.oshi;
-
-    document.getElementById("txt_detail_name").textContent = oshi.name;
-    document.getElementById("txt_detail_genre").textContent = oshi.genre;
-    document.getElementById("txt_detail_comment").textContent = oshi.comment;
   }
 });
 
@@ -69,28 +59,11 @@ function renderOshiList() {
 
     const itemOshi = document.getElementById("item_oshi_" + i);
     itemOshi.addEventListener("click", function() {
-      openOshiDetail(oshiItems[i]);
+      selectOshi(oshiItems[i]);
     });
   }
 }
 
-function openOshiDetail(oshi) {
-  const navApp = document.getElementById("nav_app");
-
-  // 続けて押しても、詳細画面を重ねて開かない。
-  if (isOpeningDetail || navApp.topPage.id !== "page_list") {
-    return;
-  }
-
-  isOpeningDetail = true;
+function selectOshi(oshi) {
   document.getElementById("txt_selected").textContent = "選択中：" + oshi.name;
-
-  navApp.pushPage("detail.html", {
-    data: {
-      oshi: oshi
-    },
-    callback: function() {
-      isOpeningDetail = false;
-    }
-  });
 }
