@@ -1,0 +1,24 @@
+{
+  "name": "m01-oshi-list",
+  "version": "1.0.0",
+  "displayName": "推しログ",
+  "engines": {
+    "node": ">=18.16"
+  },
+  "dependencies": {
+    "monaca-plugin-monaca-core": "3.3.1"
+  },
+  "scripts": {
+    "monaca:preview": "npm run dev",
+    "dev": "browser-sync start -s www/ --watch --port 8080 --ui-port 8081"
+  },
+  "cordova": {
+    "plugins": {
+      "monaca-plugin-monaca-core": {}
+    }
+  },
+  "devDependencies": {
+    "browser-sync": "~2.27.7",
+    "cordova": "^12.0.0"
+  }
+}
