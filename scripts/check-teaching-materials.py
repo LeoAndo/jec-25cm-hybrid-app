@@ -14,6 +14,7 @@ import sys
 from xml.etree import ElementTree
 from zipfile import BadZipFile, ZipFile
 
+from project_files import LOCAL_PARTS, LOCAL_NAMES, excluded_project_path, project_kind
 
 CONFIG = Path("config/teaching-materials.json")
 # Flutterのプロジェクトには、android/ の Kotlin と Gradle（.kt・.kts）と、ios/ の Swift も入っている。
@@ -22,15 +23,7 @@ TEXT_SUFFIXES = {
     ".md", ".properties", ".py", ".sh", ".swift", ".toml", ".txt", ".xml", ".yml",
     ".yaml",
 }
-# build は Flutter（Gradle と Xcode）のビルド出力。.dart_tool は Flutter の作業フォルダ。
-# Pods・.symlinks・ephemeral は iOS のビルドで作られるもの。
-# node_modules・platforms・plugins は、Monacaのプロジェクトをローカルで扱ったときに作られるもの。
-BUILD_PARTS = {".dart_tool", ".gradle", ".idea", ".symlinks", "Pods", "build", "ephemeral",
-               "node_modules", "platforms", "plugins"}
-IGNORED_PARTS = {".git", "__pycache__", "dist", *BUILD_PARTS}
-# 完成プロジェクトZIPに入れないもの。scripts/package-project.py の除外と同じにしておく。
-IGNORED_ARCHIVE_PARTS = set(BUILD_PARTS)
-IGNORED_ARCHIVE_NAMES = {"local.properties"}
+IGNORED_PARTS = LOCAL_PARTS
 # 単元の種類。Monaca系はブラウザ上の Monaca クラウドIDE、Flutter系は Visual Studio Code で作る。
 KINDS = ("monaca", "flutter")
 # 設定に無いまま検査へ進むと、日本語のエラーではなくPythonのトレースバックになるキー。
@@ -80,7 +73,7 @@ def inside(name: str, folder: str) -> bool:
     return posixpath.normpath(name).startswith(folder.rstrip("/") + "/")
 
 
-def text_files(root: Path, scan_roots: list[str]):
+def text_files(root: Path, scan_roots: list[str], projects=()):
     seen = set()
     for item in scan_roots:
         path = root / item
@@ -90,7 +83,15 @@ def text_files(root: Path, scan_roots: list[str]):
         for candidate in candidates:
             if not candidate.is_file() or candidate.suffix.lower() not in TEXT_SUFFIXES:
                 continue
-            if any(part in IGNORED_PARTS for part in candidate.relative_to(root).parts):
+            relative = candidate.relative_to(root)
+            if (IGNORED_PARTS.intersection(relative.parts) or relative.name in LOCAL_NAMES
+                    or relative.parts[0] == "dist"):
+                continue
+            # 登録済みのrootを優先し、登録前の単元もマーカーと名前から検査する。
+            project = next((item for item in projects if inside(relative.as_posix(), item["root"])), None)
+            folder = Path(project["root"]) if project else Path(relative.parts[0])
+            kind = project.get("kind") if project else project_kind(root / folder)
+            if kind and excluded_project_path(relative.relative_to(folder), kind):
                 continue
             key = candidate.resolve()
             if key not in seen:
@@ -110,12 +111,12 @@ def tracked_files(root: Path, project_root: str) -> list[str]:
     return [name for name in result.stdout.decode().split("\0") if name]
 
 
-def archive_sources(root: Path, project_root: str) -> set[str]:
+def archive_sources(root: Path, project_root: str, kind: str | None = None) -> set[str]:
     """完成プロジェクトZIPに入れるファイル。Git管理下で、IDE設定やビルド出力でないもの。"""
+    kind = kind or project_kind(root / project_root)
     return {
         name for name in tracked_files(root, project_root)
-        if not any(part in IGNORED_ARCHIVE_PARTS for part in Path(name).parts)
-        and Path(name).name not in IGNORED_ARCHIVE_NAMES
+        if not excluded_project_path(Path(name).relative_to(project_root), kind)
     }
 
 
@@ -223,7 +224,7 @@ def check_terms(root: Path, config: dict, errors: list[str]) -> None:
     for item in config["scan_roots"]:
         if not (root / item).exists():
             add(errors, root, item, 1, "表記揺れ検査対象のパスがありません")
-    files = list(text_files(root, config["scan_roots"]))
+    files = list(text_files(root, config["scan_roots"], config["projects"]))
     contents = {path: read(path) for path in files}
     for term in config["terms"]:
         for path, content in contents.items():
@@ -454,7 +455,7 @@ def check_project(root: Path, project: dict, errors: list[str]) -> None:
         add(errors, root, archive_path, 1, "完成プロジェクトZIPがありません")
         return
     try:
-        expected_names = archive_sources(root, project["root"])
+        expected_names = archive_sources(root, project["root"], project.get("kind"))
         with ZipFile(archive_path) as archive:
             actual_names = set(archive.namelist())
             for name in sorted(expected_names - actual_names):
@@ -540,7 +541,7 @@ def check_downloads(root: Path, project: dict, errors: list[str]) -> None:
     downloads = project.get("downloads", [])
     if not downloads:
         return
-    sources = archive_sources(root, project["root"])
+    sources = archive_sources(root, project["root"], project.get("kind"))
     textbook_path = root / project["docs"][0]
     sections = SectionTexts()
     if textbook_path.is_file():
@@ -771,6 +772,8 @@ def check_project_layout(root: Path, config: dict, errors: list[str]) -> None:
     Monacaはプロジェクトの直下に置かない）ので、kind → パス の辞書で書く。
     値が null の kind は、.gitignore を照合しない。基準がまだ無い系統（単元が1つもない系統）と、
     直下に .gitignore を置かない系統に使う。追跡してはいけないファイルは、null でも確かめる。
+    既知の生成物は共通の除外判定で検出する。untracked_parts・untracked_names は、
+    それに加えて全階層で禁止する名前だけを指定する。
     """
     setting = config.get("project_layout")
     if not setting:
@@ -811,7 +814,9 @@ def check_project_layout(root: Path, config: dict, errors: list[str]) -> None:
             add(errors, root, path, 1, f"{reference_setting[kind]}と内容が異なります")
         for name in tracked_files(root, project_root):
             tracked = Path(name)
-            if parts.intersection(tracked.parts) or tracked.name in names:
+            relative = tracked.relative_to(project_root)
+            if (excluded_project_path(relative, kind)
+                    or parts.intersection(relative.parts) or tracked.name in names):
                 add(errors, root, name, 1, "Git管理してはいけないファイルです")
 
 

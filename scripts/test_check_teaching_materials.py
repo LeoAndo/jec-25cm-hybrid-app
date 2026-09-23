@@ -89,9 +89,8 @@ class TeachingMaterialsCheckTest(unittest.TestCase):
         "}\n"
     )
     # config/teaching-materials.json と同じ、追跡してはいけないもの。
-    UNTRACKED_PARTS = [".dart_tool", ".gradle", ".idea", "build", "Pods", ".symlinks", "ephemeral",
-                       "node_modules", "platforms", "plugins"]
-    UNTRACKED_NAMES = ["local.properties", ".flutter-plugins", ".flutter-plugins-dependencies", ".DS_Store"]
+    UNTRACKED_PARTS = [".idea"]
+    UNTRACKED_NAMES = [".DS_Store"]
     MONACA_IGNORE = "node_modules/\nplatforms/\nplugins/\n"
     FLUTTER_IGNORE = ".dart_tool/\nbuild/\n.flutter-plugins-dependencies\n"
 
@@ -923,6 +922,16 @@ class TeachingMaterialsCheckTest(unittest.TestCase):
                 errors = self._spelling_errors(Path(temporary), name, "VSCode\n", "VSCode", scan_root)
                 self.assertEqual(errors, [])
 
+    def test_source_folders_with_generated_names_are_scanned_for_spelling(self):
+        """配布するlib/build/やwww/plugins/も表記検査から抜けない。"""
+        for name in ("F01HelloFlutter/lib/build/screen.dart",
+                     "F01HelloFlutter/lib/plugins/helper.dart",
+                     "M01HelloMonaca/www/plugins/app.js", "docs/build/index.html"):
+            with self.subTest(name=name), tempfile.TemporaryDirectory() as temporary:
+                errors = self._spelling_errors(Path(temporary), name, "VSCode\n", "VSCode", name.split("/")[0])
+                self.assertEqual(len(errors), 1, errors)
+                self.assertIn(f"{name}:1", errors[0])
+
     def test_missing_scan_root_is_rejected(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
@@ -986,6 +995,20 @@ class TeachingMaterialsCheckTest(unittest.TestCase):
             self.assertEqual(len(errors), 1, errors)
             self.assertIn("ZIPに配布対象外ファイルがあります: M01HelloMonaca/memo.txt", errors[0])
 
+    def test_archive_requires_sources_with_generated_directory_names(self):
+        """ZIPと検査が同じ誤除外をしていても通らないよう、欠落ZIPそのものを検査する。"""
+        for kind, name in (("flutter", "F01HelloFlutter/lib/build/screen.dart"),
+                           ("flutter", "F01HelloFlutter/lib/plugins/helper.dart"),
+                           ("monaca", "M01HelloMonaca/www/plugins/app.js")):
+            with self.subTest(name=name), tempfile.TemporaryDirectory() as temporary:
+                root = Path(temporary)
+                self._repository(root, kinds=(kind,))
+                self._write(root, name, "// 完成コード\n")
+                self._git_add(root, name, force=True)
+                errors = CHECKER.validate(root)
+                self.assertEqual(len(errors), 1, errors)
+                self.assertIn(f"ZIPにソースがありません: {name}", errors[0])
+
     def test_archive_leaves_out_build_outputs_even_if_tracked(self):
         """ビルド出力を誤ってGit管理していても、ZIPに入れないのが正しい形。"""
         with tempfile.TemporaryDirectory() as temporary:
@@ -1019,6 +1042,7 @@ class TeachingMaterialsCheckTest(unittest.TestCase):
             self._git_add(root, "M01HelloMonaca", "F01HelloFlutter", force=True)
             (root / "scripts").mkdir()
             copy2(PACKAGER, root / "scripts" / PACKAGER.name)
+            copy2(PACKAGER.with_name("project_files.py"), root / "scripts/project_files.py")
             for project in self._read_config(root)["projects"]:
                 result = subprocess.run(
                     [sys.executable, str(root / "scripts" / PACKAGER.name),

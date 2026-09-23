@@ -14,16 +14,8 @@ from shutil import which
 import subprocess
 from zipfile import ZIP_DEFLATED, ZipFile, ZipInfo
 
+from project_files import excluded_project_path, project_kind
 
-# ZIPに入れないフォルダとファイル。scripts/check-teaching-materials.py の
-# IGNORED_ARCHIVE_PARTS・IGNORED_ARCHIVE_NAMES と同じにしておく（違うと、作ったZIPが検査で落ちる）。
-# build は Flutter（Gradle と Xcode）のビルド出力、.dart_tool は Flutter の作業フォルダ、
-# Pods・.symlinks・ephemeral は iOS のビルドで作られるもの、
-# node_modules・platforms・plugins は Monaca をローカルで扱ったときの残り。どれも配らない。
-EXCLUDED_PARTS = {".dart_tool", ".gradle", ".idea", ".symlinks", "Pods", "build", "ephemeral",
-                  "node_modules", "platforms", "plugins"}
-# 学生のパソコンのSDKの場所を書いたファイル。配ると、学生の環境で読み違える。
-EXCLUDED_NAMES = {"local.properties"}
 
 root = Path(__file__).resolve().parents[1]
 git = which("git")
@@ -48,6 +40,7 @@ except (OSError, subprocess.CalledProcessError):
 
 def package(project, output):
     """Gitで管理されたプロジェクトだけを、IDE設定を除外してZIPにする。"""
+    kind = project_kind(root / project)
     try:
         tracked = subprocess.check_output(
             [git, "ls-files", "-z", "--", project], cwd=root
@@ -56,8 +49,7 @@ def package(project, output):
         raise SystemExit("Git管理情報を読み取れません。ZIPを再生成できません。") from None
     files = [
         name for name in tracked
-        if name and not EXCLUDED_PARTS.intersection(Path(name).parts)
-        and Path(name).name not in EXCLUDED_NAMES
+        if name and not excluded_project_path(Path(name).relative_to(project), kind)
     ]
     if not files:
         raise SystemExit("配布対象のプロジェクトが見つかりません。")

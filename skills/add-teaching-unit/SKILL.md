@@ -11,7 +11,7 @@ description: Add a new teaching unit to this hybrid app course repository - a Mo
 
 | 系統 | `kind` | 単元名 | 開発環境 | 確かめ方 |
 | --- | --- | --- | --- | --- |
-| Monaca（コマ1〜7） | `"monaca"` | `M01HelloMonaca` など | Google Chrome 上の Monaca クラウドIDE | ローカルの静的サーバ＋Chrome、最後にオーナーがMonacaへインポートしてプレビュー |
+| Monaca（コマ1〜7） | `"monaca"` | `M01HelloMonaca` など | Google Chrome 上の Monaca クラウド IDE | ローカルの静的サーバ＋Chrome、最後にオーナーがMonacaへインポートしてプレビュー |
 | Flutter（コマ8〜15） | `"flutter"` | `F01HelloFlutter` など | Visual Studio Code | `flutter analyze`、iOSシミュレータ／Androidエミュレータ |
 
 単元名は「接頭辞（`M` か `F`）＋2桁の番号＋PascalCase」。`config/teaching-materials.json` の `projects` は M→F の順に並べ、一度Fに変わったらMに戻さない。同じ接頭辞の中は番号の昇順。
@@ -73,7 +73,7 @@ description: Add a new teaching unit to this hybrid app course repository - a Mo
 4. **完成コードで守ること**（AGENTS.md §11 の Monaca系）。
    - 素のHTML / CSS / JavaScript。フレームワークもビルドツールも入れない。
    - 要素の取得は `document.getElementById`、イベントは `addEventListener`、クラスの付け外しは `classList.add` / `classList.remove`。`querySelector` にしない。
-   - **Web基礎で習っていないもの**（`querySelector` / `fetch` / `Promise` / `async`・`await` / `JSON` / `localStorage` / アロー関数 / `@keyframes` / CSS Grid / ES Modules / クラス構文）は、その単元の新概念として教員用ガイドに宣言したときだけ使う。**1単元で導入する新概念は1つまで。**
+   - **Web基礎で習っていないもの**（`querySelector` / `fetch` / `Promise` / `async`・`await` / `JSON` / `localStorage` / アロー関数 / `@keyframes` / CSS Grid / ES Modules / クラス構文）は、黙って使わない。Java / Android または Swift / iOS で既習の対応物があるなら、教員用ガイドに対応物を書き、比較STEPで違いと理由を教える。この場合は新概念に数えない。対応物がないものは新概念として宣言して教え、**1単元で導入する新概念は1つまで**にする。`getElementById` など、完成コードの書き方をそろえる方針はこの判定と別に守る。
    - Cordovaプラグインに依存しない。ブラウザだけで動く範囲で書く。
    - 結果は画面に出す。`console.log` で済ませない。`alert` に頼らない。
    - 命名は `txtXxx` / `btnXxx` / `imgXxx` / `listXxx`。idは `btn_start` のようなスネークケース、JavaScriptの変数は `btnStart` のようなキャメルケース。
@@ -92,8 +92,8 @@ description: Add a new teaching unit to this hybrid app course repository - a Mo
    python3 scripts/package-project.py --project M0NXxx --output ~/Documents/jec-25cm-hybrid-app-verification-deliverables/M0NXxx.zip
    ```
 
-   このZIPの形（単元のフォルダで1階層包んだもの）をMonacaのインポートが受け付けるかは、最初のMonaca単元で確かめる。教科書のスクリーンショットはこのプレビューで撮る。Freeプランはプロジェクト3個までなので、確認が済んだら消して枠を空ける。**エージェントはこの段を「未確認」としてPR本文に書く。** 1段目を飛ばして「Monacaで動くはず」と書かない。
-7. **取り込み用URL（`import_url`）を配るとき。** オーナーが完成プロジェクトを **プロジェクト → 公開…** で公開すると、`https://monaca.mobi/ja/directimport?pid=<32桁>` の形のURLが発行される。これをconfigの `import_url` に書き、教科書の「完成プロジェクトを開く」にも同じURLを載せる。URLはオーナーのMonacaにあるプロジェクトを指すので、そのプロジェクトを消すと取り込めなくなると考えられる（未確認）。6の「確認が済んだら消す」とは両立しないので、どのプロジェクトを公開したまま残すかは、オーナーが決める。
+   このZIPの形（単元のフォルダで1階層包んだもの）をMonacaのインポートが受け付けるかは、最初のMonaca単元で確かめる。教科書のスクリーンショットはこのプレビューで撮る。教員のFreeプランの3枠は、完成プロジェクトの公開用に2枠、採点・一時確認用に1枠を使う。公開用の2件は残し、一時確認用のプロジェクトは確認後にオーナーが削除して枠を空ける。**エージェントが確かめられない段は「未確認」としてPR本文に書く。** 1段目を飛ばして「Monacaで動くはず」と書かない。
+7. **取り込み用URL（`import_url`）を配るとき。** オーナーが完成プロジェクトを **プロジェクト → 公開…** で公開すると、`https://monaca.mobi/ja/directimport?pid=…` の形のURLが発行される。**実際に発行されたURLをそのまま**configの `import_url` に書き、教科書の「完成プロジェクトを開く」にも同じURLを載せる。`pid` の桁数を固定して書かず、IDやURLを推測で作らない。公開用の2枠にあるプロジェクトは配布中も保持する。
 
 ### Flutter系（`kind: "flutter"`）
 
@@ -104,7 +104,7 @@ description: Add a new teaching unit to this hybrid app course repository - a Mo
    flutter create --empty --platforms=ios,android --org jp.ac.jec --project-name f01_hello_flutter F01HelloFlutter
    ```
 
-   - `--empty` を付ける。既定テンプレートはTRY THISコメント約60行・`StatefulWidget`・`setState`・dot shorthand が一度に出て、初回で「1単元1新概念」を破る。
+   - `--empty` を付ける。既定テンプレートはTRY THISコメント約60行・`StatefulWidget`・`setState`・dot shorthand が一度に出て、初回から比較して説明する項目が増える。最小の画面から始め、状態の更新は扱う単元で導入する。
    - `--platforms=ios,android` を付ける。`web/`・`macos/`・`linux/`・`windows/` は作らない（AGENTS.md §10）。
    - `pubspec.yaml` の `name`（`f01_hello_flutter`）をconfigの `package_name` に、`android/app/build.gradle.kts` の `namespace` と `applicationId`（`jp.ac.jec.f01_hello_flutter`）をconfigの `application_id` に書く。iOSの `PRODUCT_BUNDLE_IDENTIFIER` はキャメルケース（`jp.ac.jec.f01HelloFlutter`）になり、configには書かない。
 3. **生成物を整える。**
@@ -121,7 +121,7 @@ description: Add a new teaching unit to this hybrid app course repository - a Mo
    - 結果は画面に出す。`print` / `debugPrint` で済ませない。
    - `// ignore:` / `// ignore_for_file:` で警告を隠さない。原因そのものを消す。
    - パッケージは必要なときだけ足し、バージョンは `pubspec.yaml` で管理する。`shared_preferences` は3系統のAPIのうち1つだけを使う。
-   - **1単元で導入する新概念は1つまで。** Dartの `async` / `await`、Widgetツリーによる宣言的UIなど、Web基礎にもJava/Androidにも Swift/iOS にもないものを数える（README「単元の範囲の決め方」）。
+   - **1単元で導入する新概念は1つまで。** API名や構文が初出という理由だけでは数えない。Web基礎・Java / Android・Swift / iOS で既習の対応物があるものは、教員用ガイドに対応物を書き、比較STEPで違いと理由を教える。dot shorthandはSwiftのimplicit member expressionと比較し、新概念には数えない。Dartの `async` / `await` なども対応物の既習範囲を確かめ、対応物がないものだけを数える（README「単元の範囲の決め方」）。
    - コメントは日本語で書く。
 6. **確かめる。**
 
@@ -143,7 +143,7 @@ description: Add a new teaching unit to this hybrid app course repository - a Mo
 - `docs/<スラッグ>/index.html`。HTMLの型は、`.skip` → `.topbar` → `.shell` → `.sidebar` → `main#main`、STEPは `<section id="step-N">`。CSSとJavaScriptは `../assets/textbook.css` と `../assets/textbook.js` を読む。このリポジトリに最初の教科書がまだ無いときは、同じ型で書いてある [jec-25cm-kotlin の docs/hello-kotlin/index.html](https://github.com/LeoAndo/jec-25cm-kotlin/blob/main/docs/hello-kotlin/index.html) を手本にしてよい（型だけを借りる。Kotlin・IntelliJ IDEA・Android Studio の記述は持ち込まない）。
 - `<body data-progress-key="jec-hybrid-<スラッグ>-v1">` を書く（`jec-hybrid-hello-monaca-v1`）。ページごとに別の値にする。
 - サイドバーの `.progress` の `max` と `data-progress-label` の総数を、STEP数に合わせる。複数コマにまたがる単元は、目次をコマごとの見出し（`<p class="eyebrow">1コマ目 · STEP 00〜06</p>`）で区切る。
-- **どちらの道具を開くかを、先に書く**（README）。冒頭（`.hero` の `.tags` など）に、Monaca系は「Monaca クラウドIDE / Google Chrome」、Flutter系は「Flutter / Visual Studio Code」のように書く。
+- **どちらの道具を開くかを、先に書く**（README）。冒頭（`.hero` の `.tags` など）に、Monaca系は「Monaca クラウド IDE / Google Chrome」、Flutter系は「Flutter / Visual Studio Code」のように書く。Visual Studio Code は英語UIを使い、画面の項目名は `Open Folder…` などの実際の英語表記で書く。
 - **本文に単元名（`M01HelloMonaca` のような `projects[].name`）の表記を必ず入れる。** `scripts/check-teaching-materials.py` がこれを探す。
 - **各STEPに、既知の技術との比較を置く。** 相手は Web基礎（HTML / CSS / JavaScript）、Java / Android、Swift / iOS のどれか（複数でもよい）。比較のないSTEPは未完成とみなす。比較ブロックは次の形で、この単元で書く言語を先頭（左端）に置く。
 
@@ -156,7 +156,7 @@ description: Add a new teaching unit to this hybrid app course repository - a Mo
   ```
 
   ラベルは言語名（`HTML`・`CSS`・`JavaScript`・`Java`・`Swift`・`Dart`）にして、`translate="no"` を付ける。「Web基礎の書き方」のように日本語を含むラベルにするときは、`translate="no"` を付けない（付けると、どの言語版でも日本語のまま出る）。
-- **Web基礎で習っていないもの**（上の「Monaca系」4の一覧）は、教科書の本文と `<pre>` にも黙って出さない。その単元の新概念として正面から教えるときだけ使う。
+- **Web基礎で習っていないもの**（上の「Monaca系」4の一覧）は、教科書の本文と `<pre>` にも黙って出さない。既習の対応物があるなら比較STEPで違いと理由を教え、対応物がないならその単元の新概念として正面から教える。
 - `docs/<スラッグ>/downloads/<単元名>.zip` を作る。単元ごとに別プロジェクトなので、ZIPも単元ごとに1つ。
 
   ```sh
@@ -166,7 +166,7 @@ description: Add a new teaching unit to this hybrid app course repository - a Mo
 
   ZIPはGitで管理しているファイルから作るので、新しいファイルは先に `git add` する。
 - **「完成プロジェクトを開く」（`#sample-project`）の書き方は系統で違う。** Monaca系は取り込み用URL（`import_url`。まだ無ければ、教員が案内すると書く）、Flutter系は配布ZIPの `samples/<単元名>` を Visual Studio Code で開く手順。
-- `docs/<スラッグ>/images/` は、**その教科書で実際に使うスクリーンショットがあるときだけ**作る。Monaca系はクラウドIDEのプレビュー、Flutter系はシミュレータ／エミュレータで撮る。「ここに画像を入れる」のようなプレースホルダは置かない。`<img>` には `width` と `height` を書く。
+- `docs/<スラッグ>/images/` は、**その教科書で実際に使うスクリーンショットがあるときだけ**作る。Monaca系はMonaca クラウド IDEのプレビュー、Flutter系はシミュレータ／エミュレータで撮る。「ここに画像を入れる」のようなプレースホルダは置かない。`<img>` には実寸の `width` と `height` を書く。
 - コードのスニペットは、`<pre id="code-…"><code>` に置き、**ソースからHTMLエスケープして差し込む**。configの `snippets` がバイト単位で照合するので、手で写して直さない。
 
   ```sh
@@ -180,14 +180,14 @@ description: Add a new teaching unit to this hybrid app course repository - a Mo
   - 属性値は必ず引用符で囲む（`<html lang="ja">`）。
   - 文の途中にHTMLコメントを書かない。段落の外に書く。
   - `/` で始まるルート相対リンクを使わない（`href="../assets/textbook.css"` と書く）。
-  - 文の途中の要素に `translate="no"` を付けない。訳してほしくない文字（MonacaクラウドIDEやVS Codeのメニュー名、Flutterのウィジェット名、パッケージ名）は `<code>` で囲む。
+  - 文の途中の要素に `translate="no"` を付けない。訳してほしくない文字（Monaca クラウド IDEやVisual Studio Codeのメニュー名、Flutterのウィジェット名、パッケージ名）は `<code>` で囲む。
 - 1,000行を超える教科書HTMLは、章ごとに分けて書いてから結合する（1回で書こうとするとツール呼び出しが長くなりすぎて止まる）。
 
 ## 3. 教員用ガイド `teacher/<スラッグ>/`
 
 - `teacher/<スラッグ>/index.html`。最初の単元のときは、[jec-25cm-kotlin の teacher/hello-kotlin/index.html](https://github.com/LeoAndo/jec-25cm-kotlin/blob/main/teacher/hello-kotlin/index.html) の型を借りてよい。
 - **「この単元の教材方針」の節を必ず置く。** 何を意図的に外したかを、理由つきで書く。
-  - その単元で導入する新概念（1つまで）を、ここで宣言する。Web基礎で習っていないもの（`querySelector`、`fetch`、`@keyframes` など）を使うなら、それがこの単元の新概念であることをここに書く。レビューの「未習事項ゲート」は、この宣言を見て判断する。
+  - その単元で導入する新概念（1つまで）を、ここで宣言する。Web基礎で習っていないもの（`querySelector`、`fetch`、`@keyframes` など）を使うときは、既習の対応物と比較STEP、または対応物がないため新概念に数える理由を書く。レビューの「未習事項ゲート」は、この対応付けと本文の説明を見て判断する。
   - Flutter系は、`package:material_ui` を使わない理由、`go_router` と名前付きルートを使わない理由を書く（AGENTS.md §0-B・§11）。`shared_preferences` を使う単元は、APIが3系統あることと、どれを選んだかを書く。
 - 進め方には、コマごとにどのSTEPを扱うかを書く。
 - `teacher/<スラッグ>/code/` に、STEPごとの照合コードを `NN-ファイル名.拡張子` の形式で置く（`01-index.html`、`03-app.js`、`02-main.dart` など）。完成プロジェクトと同じ中身のものは `mirrors` に登録する。
@@ -204,7 +204,6 @@ description: Add a new teaching unit to this hybrid app course repository - a Mo
   "root": "M01HelloMonaca",
   "app_id": "jp.ac.jec.m01hellomonaca",
   "entry": "M01HelloMonaca/www/index.html",
-  "import_url": "https://monaca.mobi/ja/directimport?pid=<32桁>",
   "sessions": 2,
   "docs": ["docs/hello-monaca/index.html", "teacher/hello-monaca/index.html"],
   "sources": ["M01HelloMonaca/www/index.html", "M01HelloMonaca/www/js/app.js"],
@@ -342,4 +341,4 @@ python3 scripts/package-student-materials.py
 - **Monaca単元**：`python3 -m http.server` とChromeで画面と操作を確かめる（エージェントが行う）。Monacaへのインポートとプレビューは、PR本文に「未確認（オーナー作業）」と書く。
 - **Flutter単元**：`flutter analyze` が何も出さないことと、iOSシミュレータかAndroidエミュレータで動くことを確かめる。
 
-`package-student-materials.py` が作った配布ZIPを展開し、入口から教科書・完成プロジェクト・共通資料へのリンクがたどれることも確かめる。commitする前に `git diff --cached --name-only` を見て、`.dart_tool/`・`build/`・`android/local.properties`・`node_modules/`・`platforms/`・`plugins/`・`.DS_Store` が紛れ込んでいないことを確かめる（AGENTS.md §5）。
+`package-student-materials.py` が作った配布ZIPを展開し、入口から教科書・完成プロジェクト・共通資料へのリンクがたどれることも確かめる。commitする前に `git diff --cached --name-only` を見て、系統ごとの所定の位置にある生成物やローカル設定が紛れ込んでいないことを確かめる（AGENTS.md §5）。除外は `scripts/project_files.py` の系統（`kind`）とプロジェクトからの相対パスに従う。Monacaなら直下の `node_modules/`・`platforms/`・`plugins/`、Flutterなら直下の `.dart_tool/`・`build/` や `android/local.properties` などが対象で、`lib/build/`・`lib/plugins/`・`www/plugins/` のような同名のソース用フォルダまで除外しない。`.DS_Store` など両系統のローカルファイルも含めない。

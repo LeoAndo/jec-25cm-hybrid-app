@@ -12,7 +12,7 @@
 
 | 系統 | コマ | 開発環境 | プロジェクト | 実行と確認のしかた |
 | --- | --- | --- | --- | --- |
-| Monaca | 1〜7 | **ブラウザ（Google Chrome）上の Monaca クラウドIDE**。ローカルにビルドコマンドはない | `M0NXxx`（`www/` と `config.xml`・`package.json`・`res/`） | クラウドIDEのプレビュー画面。ローカルでは `www/index.html` を静的サーバで開いて確認する |
+| Monaca | 1〜7 | **ブラウザ（Google Chrome）上の Monaca クラウド IDE**。ローカルにビルドコマンドはない | `M0NXxx`（`www/` と `config.xml`・`package.json`・`res/`） | クラウド IDEのプレビュー画面。ローカルでは `www/index.html` を静的サーバで開いて確認する |
 | Flutter | 8〜15 | **Visual Studio Code**。ローカルに `flutter` コマンドがある | `F0NXxx`（Flutterプロジェクト一式） | iOSシミュレータ／Androidエミュレータ。静的な確認は `flutter analyze` |
 
 2系統あることが、この運用のほとんどの分岐の理由になっている。**どちらの系統の作業かを先に決めてから読み進める。**
@@ -36,9 +36,11 @@ Freeプランの利用規約は「法人による商用でのアプリ開発」�
 
 **配布と提出は、どちらも「プロジェクトの公開URL」で行う。**
 
-- クラウドIDEの **プロジェクト → 公開…** で、`https://monaca.mobi/ja/directimport?pid=<32桁>` の形のURLが発行される。
+- クラウド IDEの **プロジェクト → 公開…** で、`https://monaca.mobi/ja/directimport?pid=<発行されたpid>` の形のURLが発行される。
 - このURLは **アプリを動かすURLではなく、プロジェクトを相手のMonacaへ取り込ませるURL**。前年度まで使っていた Monaca Education の「Web公開」（作品をWebで見せる機能）は、通常版Freeには無い。**前年度資料の課題提出手順をそのまま写さない。**
 - **学生の課題提出は、学生が自分のプロジェクトを公開し、そのURLを教員に共有する形**（オーナー決定）。教員はURLからインポートして実際に動かして採点する。
+
+**教員アカウントもFreeプランの3枠で運用する（2026-09-23 オーナー決定）。** 完成見本2本は公開を維持し、残り1枠を検証・採点に使う。学生作品は1件ずつ取り込み、確認・採点が済んだコピーだけを削除する。公開用の2本は消さない。
 
 **リポジトリが正で、Monacaは実行環境。** 完成プロジェクトのソースはこのリポジトリで書き、確認のときだけMonacaへ「インポート」で流し込む。Monaca側で書いてエクスポートする経路はFreeプランでは使えない。
 
@@ -57,7 +59,7 @@ Freeプランの利用規約は「法人による商用でのアプリ開発」�
   - **授業期間中は `flutter upgrade` しない。** 次の安定版（ブログでは11月）で SDK 内の Material / Cupertino が正式に非推奨になる予定で、上げると教材のコードに非推奨の警告が出始める。学生にもそう案内する。
   - **教員マシンは、いま 3.41.0 / Dart 3.11.0（2026-02-10ビルド）。教材を書く前に 3.47.5 へそろえる。** 3.41→3.47 の間に AGP 8→9、Gradle 8.14→9.3.1、iOS最低バージョン 13→15、`flutter_lints` 5→6 が動いているので、3.41 の画面や出力で教科書を書くと学生の手元と合わない。
 - **`flutter create` は `--empty` と `--platforms=ios,android` を付ける。**
-  - 既定テンプレートは、英語のTRY THISコメント約60行＋`StatefulWidget`＋`setState`＋dot shorthand＋`ColorScheme.fromSeed` が最初から全部入っていて、**初回の1コマで「1単元1新概念」を確実に破る**。`--empty` なら `MainApp` と `MaterialApp(home: Scaffold(body: Center(child: Text(...))))` の21行で始まる。カウンターと `setState` は、あとの単元で意図して導入する。
+  - 既定テンプレートは、英語のTRY THISコメント約60行＋`StatefulWidget`＋`setState`＋dot shorthand＋`ColorScheme.fromSeed` が最初から全部入っていて、**初回から比較して説明する項目が増え、授業時間を圧迫する**。`--empty` なら `MainApp` と `MaterialApp(home: Scaffold(body: Center(child: Text(...))))` の21行で始まる。カウンターと `setState` は、あとの単元で意図して導入する。
   - `--platforms` を省くと `web/`・`macos/`・`linux/`・`windows/` まで生成され、プロジェクトパネルが読みにくくなる。授業の対象は iOS と Android だけ（§10）。
   - **完成プロジェクトは、フォルダ名を単元名（`F01HelloFlutter`）、Dartのパッケージ名を `--project-name` で別に与える。** `flutter create` はフォルダ名をそのままパッケージ名にするが、パッケージ名は小文字とアンダースコアしか使えないので、`F01HelloFlutter` のままでは作れない。
 
@@ -66,16 +68,19 @@ Freeプランの利用規約は「法人による商用でのアプリ開発」�
     ```
 
     `android/app/build.gradle.kts` の `namespace` と `applicationId` は `--org の値 + . + パッケージ名`（この例では `jp.ac.jec.f01_hello_flutter`）になる。`config/teaching-materials.json` の `package_name` と `application_id` に同じ値を書き、`scripts/check-teaching-materials.py` が照合する。学生が授業で作るプロジェクトの `--org` や名前は、教科書の側で決める。
-- **dot shorthand（`.fromSeed(...)`、`.center`）は「隠れた新概念」。** Dart 3.10（Flutter 3.38）で入った書き方で、既定テンプレートの `main.dart` に最初から出てくる。Web基礎に対応物はないが、**Swiftの implicit member expression（`.center` など）とまったく同じ発想**なので、Swiftとの比較でそのまま説明できる。**黙って使うのだけは避ける。**
+- **dot shorthand（`.fromSeed(...)`、`.center`）は、未説明で使わない。** Dart 3.10（Flutter 3.38）で入った書き方で、既定テンプレートの `main.dart` に最初から出てくる。Web基礎に対応物はないが、**Swiftの implicit member expression（`.center` など）とまったく同じ発想**なので、Swiftとの比較でそのまま説明できる。**新概念の上限には数えないが、比較STEPを省かない。**
 - **Material / Cupertino が SDK 本体から独立パッケージ（`package:material_ui` / `package:cupertino_ui`）へ移行中。** SDK内ライブラリは「11月の安定版で正式に非推奨化」予定とブログにあり、授業期間の真ん中に当たる。**この教材は `import 'package:flutter/material.dart'` で通す**（3.47時点で完全に有効で、`flutter create` が生成するのもこれ）。移行は任意なので追わない。教員用ガイドに「なぜ `material_ui` を使わないか」を書く。**混ぜない。** 学生のimportが壊れる。
-- **初回のAndroidビルドが遅いのは、計算ではなく転送。** 実測（教員Mac・高速回線）で `flutter build apk --debug` の初回が97.4秒、その大半が `gradle-<版>-all.zip`（**224MB**）のダウンロードだった。2回目以降のreleaseビルドは30.1秒。学校のネットワークが遅い前提では、ここが丸ごと授業時間を潰す。有効な手はこの順。
-  1. `~/.gradle/wrapper/dists/gradle-<版>-all/` を学内共有かUSBで事前配布して置いておく（**`flutter precache` にAndroid用のフラグはないので、これしかない**）。
-  2. `android/gradle/wrapper/gradle-wrapper.properties` の `distributionUrl` を `-all.zip` から `-bin.zip` に書き換える（224MB→131MB、42%減）。
-  3. 授業の前日までに1回ビルドさせておく。
-- **初回の実行はiOSシミュレータのほうが軽い。** Swift Package Manager が Flutter 3.44 からデフォルトで有効になり、3.47のiOSテンプレートには Podfile が含まれていない。**プラグインを使わないアプリならCocoaPodsは要らず、Gradleを一切踏まない。** 前年度は初回の回でAndroidとiOSの両方を実行させてAndroidで詰まったので、**「初回はiOSシミュレータ、AndroidはAPKを作る単元で初めて触る」**という順序にする。ただし `xcodebuild -downloadPlatform iOS` のランタイム取得が数GB級なので、これも事前案内が要る。
+- **初回のAndroidビルドでは、Gradle本体と依存関係の取得に時間がかかる。** 過去の実測はFlutter 3.41.0での値で、初回debugビルド97.4秒、キャッシュ取得後のreleaseビルド30.1秒だった。3.47.5の授業時間を保証する数値にはしない。
+  - `android/gradle/wrapper/gradle-wrapper.properties` の `distributionUrl` を `https\://services.gradle.org/distributions/gradle-9.3.1-bin.zip` にそろえる。公式配布物は `-bin.zip` が約137MB、`-all.zip` が約235MBで、約42%小さい（2026-09-23確認）。
+  - 教員が同じURLで取得した `~/.gradle/wrapper/dists/gradle-9.3.1-bin/` を共有またはUSBで配り、学生は**授業時間内に**配置する。ハッシュ階層・展開済みディレクトリ・`.zip.ok` を保持し、別版のキャッシュを上書きしない。`-all.zip` のキャッシュとは共有できない。
+  - **`flutter precache` にはAndroid用のフラグがある。** 通常ヘルプでは隠れているだけで、Gradle・Android SDK・NDK・AGPのすべてを用意する保証にはならない。3.47.5のMaven予取得は別のWrapperを使うため、授業の準備完了条件にしない（[3.47.5の定義](https://github.com/flutter/flutter/blob/3.47.5/packages/flutter_tools/lib/src/commands/precache.dart)、[取得処理](https://github.com/flutter/flutter/blob/3.47.5/packages/flutter_tools/lib/src/flutter_cache.dart)）。
+  - 配布後もAndroid SDK・NDK・AGP等の取得が残り得る。初回Android実行はコマ14に置き、回線・キャッシュのない環境での所要時間は別途確認する。
+- **学生のダウンロードもすべて授業時間内に行う（2026-09-23 オーナー決定）。** コマ7の冒頭にFlutter SDK・iOSランタイムのダウンロードを開始し、Monacaの仕上げと並行する。コマ8にも準備確認の時間を設ける。授業前の自宅作業を完了条件にしない。
+- **初回の実行はiOSシミュレータのほうが軽い。** Swift Package Manager が Flutter 3.44 からデフォルトで有効になり、3.47のiOSテンプレートには Podfile が含まれていない。**プラグインを使わないアプリならCocoaPodsは要らず、Gradleを一切踏まない。** 前年度は初回の回でAndroidとiOSの両方を実行させてAndroidで詰まったので、**「初回はiOSシミュレータ、AndroidはAPKを作る単元で初めて触る」**という順序にする。ただし `xcodebuild -downloadPlatform iOS` のランタイム取得が数GB級なので、コマ7で案内して授業中に開始する。
+- **Flutter系の課題提出物はAPKファイルとする（2026-09-23 オーナー決定）。** ABI構成とファイル名は、教員の確認端末に合わせて提出手順で決める。
 - **releaseのAPKは、署名設定なしで作れる。** テンプレートの `android/app/build.gradle.kts` に `signingConfig = signingConfigs.getByName("debug")` が入っているため。**`flutter build apk` は既定でreleaseビルド**（デバッグAPKが欲しいときだけ `--debug`）。実測サイズは fat（全ABI）42.6MB、`--split-per-abi` なら arm64-v8a 15.0MB、debug は138MB。提出にサイズ上限があるなら `--split-per-abi` を教える。
 - **`INTERNET` パーミッションは `android/app/src/debug/AndroidManifest.xml` と `src/profile/…` にしか入っていない。** `src/main/AndroidManifest.xml` には無い。つまり **`flutter run` では通信できるのに、releaseのAPKでは通信が失敗する**。「授業では動いたのに提出物が動かない」の典型。通信を扱う単元では、その単元の本文の中に `main/AndroidManifest.xml` への追記STEPを置く（他の単元へ送らない）。
-- **学生のXcodeは 26.4 / 26.5 / 27 が混在している。** シミュレータの起動方法が Xcode 27以降は `open -a DeviceHub`、26以前は `open -a Simulator` と分かれるので、**教材では Xcode のアプリ名に触れず、VS Code のデバイス選択（または `flutter devices`）から起動させる。** 本文でOSバージョン分岐を作らない。
+- **学生のXcodeは 26.4 / 26.5 / 27 が混在している。** シミュレータの起動方法が Xcode 27以降は `open -a DeviceHub`、26以前は `open -a Simulator` と分かれるので、**教材では Xcode のアプリ名に触れず、Flutterプロジェクトを開いてからVisual Studio Codeの `Flutter: Launch Emulator` で起動し、デバイスを選択する。** `flutter devices` は接続済み端末の一覧表示であり、起動コマンドではない。 本文でOSバージョン分岐を作らない。
 - **CocoaPodsのレジストリは2026年12月2日に恒久的にread-onlyになる**と公式が告知している。授業期間中に到来する。プラグインを使う単元を置くなら、この日付の前後で手順が変わらないかを確かめる。
 
 ## 受講生像と、教材の書き方
@@ -87,7 +92,7 @@ Freeプランの利用規約は「法人による商用でのアプリ開発」�
   - **Web基礎（HTML / CSS / JavaScript）** — Monaca系ではこれが主軸になる。
   - **Android（Java）** — 画面部品・イベント・画面遷移・保存の対比に使う。
   - **iOS（Swift）** — 同上。
-- **Web基礎で習っていないものは、黙って使わない。** 受講生が履修した Web基礎（全14章）には、次のものが**入っていない**。使うなら、その単元の新概念として正面から教える。
+- **Web基礎で習っていないものは、黙って使わない。** 受講生が履修した Web基礎（全14章）には、次のものが**入っていない**。使うなら、必ずその単元のSTEPで書き方・違い・理由を教える。**Java/AndroidまたはSwift/iOSに対応物があるAPIは比較で説明し、新概念の上限には数えない**（2026-09-23 オーナー決定）。対応物がないものだけを、その単元の新概念として宣言する。
   - `querySelector` / `fetch` / `Promise` / `async`・`await` / `JSON` / `localStorage` / アロー関数 / `@keyframes` / CSS Grid / ES Modules / クラス構文
   - 逆に、次は**履修済み**なので説明しない：`getElementById`、`addEventListener`、`classList` の追加削除、フォームの入力値取得、`let` / `const`、配列、関数、条件分岐、繰り返し、flexboxの段組み、メディアクエリ、`transition` によるアニメーション、絶対配置。
 - **「1単元で導入する新概念は1つまで」の「新概念」は、Web基礎にもJava/Androidにも Swift/iOS にもないものを指す。** 書き方だけが違うものは数えない（READMEの「単元の範囲の決め方」）。
@@ -106,7 +111,7 @@ Freeプランの利用規約は「法人による商用でのアプリ開発」�
 
 ## 2. 作業場所
 
-- ローカルのcloneは1つだけにする。cloneした場所そのもの（mainチェックアウト）は、オーナーとVSCode／Android Studioが使う。常に `main` のままにして、そこではブランチを切り替えず、コミットもしない。
+- ローカルのcloneは1つだけにする。cloneした場所そのもの（mainチェックアウト）は、オーナーとVisual Studio Code／Android Studioが使う。常に `main` のままにして、そこではブランチを切り替えず、コミットもしない。
 - エージェントは必ずworktreeで作業する。ツールが自動で作るworktree（Claude Codeの `.claude/worktrees/` など）はそのまま使ってよい。手動で作るときは、mainチェックアウトの外に作る（次のコマンドはmainチェックアウトで実行する）。
 
   ```sh
@@ -185,7 +190,7 @@ Freeプランの利用規約は「法人による商用でのアプリ開発」�
 - **配布ZIPはバイナリなので、並行する2本のPRが両方作り直すと必ず衝突する。** 片方がマージされたあと、§3の手順6でもう一度 `python3 scripts/package-project.py --project <単元名> --output docs/<スラッグ>/downloads/<単元名>.zip` を実行し直して、自分のPRのZIPを作り直す。ZIPは決め打ちタイムスタンプで作るので、中身が同じなら同じバイト列になる。
 - **`MonacaTemplate/` は単元ではなく、しかも2026年の通常版の「最小限のテンプレート」でもない。** 中身は前年度まで使っていた Monaca Education の「クラシック」テンプレートで、`www/classic.js` の冒頭に `Monaca Education Classic Library`、`.monaca/project_info.json` に `cordova_version: 11.0` とある（`classic.js` は `index.html` から読み込まれていない）。オーナーが2026-09-23に通常版で「最小限のテンプレート」から作ったプロジェクトには `.gitignore`・`.monacaignore`・`LICENSE` があって `classic.js` は無く、フレームワークは Cordova 12.0.0 だった。
   - `config/teaching-materials.json` には登録せず、学生用ZIPにも入れない。**中身に手を入れない**（オーナーがcommitしたものなので、比較の基準として残す）。
-  - **単元の完成プロジェクトの出発点にしない。** 出発点は、通常版の「最小限のテンプレート」の実物にする。公開リポジトリ [monaca-templates/blank](https://github.com/monaca-templates/blank)（MIT、最新リリース「Support Cordova 12」）は、ファイル構成（`.monaca`・`res`・`www`・`.gitignore`・`.monacaignore`・`.nvmrc`・`LICENSE`・`config.xml`・`package.json`）がオーナーのスクリーンショットと一致するが、**クラウドIDEが作るものと同一かは未確認**。取り込むときは、オーナーが新規作成したプロジェクトのファイルと突き合わせてから別フォルダとして足す。
+  - **単元の完成プロジェクトの出発点にしない。** 出発点は、通常版の「最小限のテンプレート」の実物にする。公開リポジトリ [monaca-templates/blank](https://github.com/monaca-templates/blank)（MIT、最新リリース「Support Cordova 12」）は、ファイル構成（`.monaca`・`res`・`www`・`.gitignore`・`.monacaignore`・`.nvmrc`・`LICENSE`・`config.xml`・`package.json`）がオーナーのスクリーンショットと一致するが、**クラウド IDEが作るものと同一かは未確認**。取り込むときは、オーナーが新規作成したプロジェクトのファイルと突き合わせてから別フォルダとして足す。
   - `www/index.html` と `www/components/loader.js` は **CRLF** になっている。単元へ複製するときは LF にそろえる。`snippets` のバイト一致検査が、教科書のHTML側にも CR を要求してしまうため。
 - 新しい単元の登録（§9）は必ず共有ファイルに当たる。2つの単元を同時に登録しない。登録のPRは、既存の全単元の教科書のサイドバーも触る（§9）。`<div class="resources">` は全体で1行なので、ほかの単元のPRが同じ行を触っていると、先にマージされた側と衝突する。相手のPRが開いているあいだは、手順6では分からない（比べる相手が `origin/main` だけのため）。相手がマージされたあとの§3の手順6で確かめ、両方の変更を残す。
 - 教科書 `docs/<スラッグ>/index.html` から他単元へのリンクは、topbarとサイドバーの2か所にある。どちらも本文ではなく導線で、手順やコードを他単元へ送るものではない。サイドバーに先の単元へのリンクがあっても、方針違反ではない。
@@ -274,7 +279,7 @@ Freeプランの利用規約は「法人による商用でのアプリ開発」�
 - **Monaca単元**を触ったら、次の2段階で確かめる。
 
   1. **ローカルのブラウザ（Google Chrome）で確かめる。** `www/` を静的サーバで開き、画面と操作が教科書のとおりかを見る（§2）。**教材はCordovaプラグインに依存しない作りにするので（§11）、ここまでで機能は全部確かめられる。** `cordova.js` はローカルでは404になるが、プラグインを呼んでいなければ動作に影響しない。
-  2. **MonacaのクラウドIDEに取り込んで、プレビューで確かめる。** ダッシュボードの「インポート」から入れる。教科書に載せるスクリーンショットは、このプレビュー画面で撮る。**Freeプランはプロジェクト3個までなので、確認が済んだら消して枠を空ける。**
+  2. **Monacaのクラウド IDEに取り込んで、プレビューで確かめる。** ダッシュボードの「インポート」から入れる。教科書に載せるスクリーンショットは、このプレビュー画面で撮る。**Freeプランはプロジェクト3個までなので、確認が済んだ一時コピーだけを消して枠を空ける。配布中の完成見本2本は削除しない。**
 
   この2段階を分けているのは、**エージェントは1だけ自分でできて、2はオーナーのMonacaアカウントが要る**ため。エージェントは1まで実行し、2は「未確認」としてPR本文に書く（オーナーが確認する）。1を飛ばして「Monacaで動くはず」と書かない。
 - **Flutter単元**を触ったら、`flutter analyze` を通したうえで、iOSシミュレータかAndroidエミュレータで動かす。画面に関わる変更は必ず実機相当の画面で確かめる。教科書のスクリーンショットもそこで撮る。
@@ -318,7 +323,7 @@ Freeプランの利用規約は「法人による商用でのアプリ開発」�
    ```
 
    `--project` と `--output` はどちらも必須で、既定値はない。
-   - **`images/` を作るのは、その教科書で実際に使うスクリーンショットがあるときだけ。** Monaca系はクラウドIDEのプレビュー、Flutter系はシミュレータ／エミュレータで撮る。**「ここに画像を入れる」のようなプレースホルダは置かない。**
+   - **`images/` を作るのは、その教科書で実際に使うスクリーンショットがあるときだけ。** Monaca系はクラウド IDEのプレビュー、Flutter系はシミュレータ／エミュレータで撮る。**「ここに画像を入れる」のようなプレースホルダは置かない。**
 3. `teacher/<スラッグ>/index.html` と `teacher/<スラッグ>/code/`（STEPごとの照合コード。`NN-ファイル名.拡張子` の形式）。「この単元の教材方針」の節を必ず置き、何を意図的に外したかを理由つきで書く。
    - **教科書（手順2）と教員用ガイドの本文には、単元名（`projects[].name`）の表記を必ず入れる。** `scripts/check-teaching-materials.py` が、`docs` に挙げたHTMLを1つずつ開いて探す。
 4. `config/teaching-materials.json`：`scan_roots`、正式表記の `required_in`、`projects`。
@@ -397,7 +402,7 @@ READMEの「完成コードの書き方（全単元共通）」を、系統ご�
   - 文の途中のHTMLコメント（`<p>あいう<!-- メモ -->えお</p>`）。訳文で置き換えるとコメントが消え、前後の文字が連結される。段落の外に書く。
   - `/` で始まるルート相対のリンク（`href="/docs/assets/textbook.css"`）。GitHub Pagesがリポジトリ名の下にあるので日本語版でも使えない。
   - 文の途中の要素に付けた `translate="no"`（`<span translate="no">`）。その文が断片に割れて訳せなくなる。
-- **訳してほしくない文字は、`<code>` で囲む。** `<code>`・`<kbd>`・`<pre>` の中身は、どの言語でも日本語版のまま出る。既知技術との比較ブロックのコードも `<pre>` の中なので、どの言語版でもそのまま出る。言語名のラベルだけは文になるので、`<p class="compare-lang" translate="no">JavaScript</p>` のように**ブロック要素に** `translate="no"` を付けて外す。MonacaクラウドIDEのメニュー名、VSCodeのメニュー名、Flutterのウィジェット名、パッケージ名はここに入れる。段落や表のセルを丸ごと訳の対象から外したいときは、その要素（`<p>`・`<td>`・`<div>` など、文の区切りになる要素）に `translate="no"` を付ける。
+- **訳してほしくない文字は、`<code>` で囲む。** `<code>`・`<kbd>`・`<pre>` の中身は、どの言語でも日本語版のまま出る。既知技術との比較ブロックのコードも `<pre>` の中なので、どの言語版でもそのまま出る。言語名のラベルだけは文になるので、`<p class="compare-lang" translate="no">JavaScript</p>` のように**ブロック要素に** `translate="no"` を付けて外す。Monaca クラウド IDEのメニュー名、Visual Studio Codeのメニュー名、Flutterのウィジェット名、パッケージ名はここに入れる。段落や表のセルを丸ごと訳の対象から外したいときは、その要素（`<p>`・`<td>`・`<div>` など、文の区切りになる要素）に `translate="no"` を付ける。
 - **各言語のHTMLはコミットしない。** コミットするのは `i18n/<言語>/` の対訳カタログと `glossary.md`（用語集）だけ。確認用のページは `dist/i18n-preview/` に作る（`dist/` はGit管理の対象外）。
 - **カタログの `source` は手で書き換えない。** 訳を直すときは `translation` だけを直す。並べ替えと、使わなくなった訳の削除は、`sync` と `merge` が行う。
 - 翻訳のPRには `area:i18n` を付ける。学生用ZIPに入るまでは `skip-release-notes` も付ける。

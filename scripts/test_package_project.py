@@ -26,6 +26,7 @@ class PackageProjectTest(unittest.TestCase):
         self.root = self.parent / "source"
         (self.root / "scripts").mkdir(parents=True)
         copy2(SCRIPT, self.root / "scripts" / SCRIPT.name)
+        copy2(SCRIPT.with_name("project_files.py"), self.root / "scripts/project_files.py")
         self.output = self.root / "docs/hello-monaca/downloads/M01HelloMonaca.zip"
         self.output.parent.mkdir(parents=True)
         self.output.write_bytes(b"previous archive")
@@ -136,6 +137,8 @@ class PackageProjectTest(unittest.TestCase):
             "pubspec.yaml", "lib/main.dart",
             ".dart_tool/package_config.json", "build/app/outputs/app.apk",
             "android/.gradle/cache.bin", "android/local.properties",
+            "android/build/cache.bin", "android/app/build/app.apk", "ios/build/app.bin",
+            ".flutter-plugins", ".flutter-plugins-dependencies", ".DS_Store",
             "ios/Pods/Manifest.lock", "ios/.symlinks/plugins/x/pubspec.yaml",
             "ios/Flutter/ephemeral/flutter_lldbinit",
         ])
@@ -148,6 +151,40 @@ class PackageProjectTest(unittest.TestCase):
                 "F01HelloFlutter/lib/main.dart",
                 "F01HelloFlutter/pubspec.yaml",
             ])
+
+    def test_source_folders_with_generated_names_are_preserved(self):
+        """生成物と同名でも、Flutterのlib/やMonacaのwww/のソースは配布する。"""
+        self.git("init")
+        for project, source_root, marker, suffix in (
+                ("F01HelloFlutter", "lib", "pubspec.yaml", "dart"),
+                ("M01HelloMonaca", "www", "config.xml", "js")):
+            with self.subTest(project=project):
+                files = [marker, *[
+                    f"{source_root}/{folder}/source.{suffix}"
+                    for folder in ("plugins", "platforms", "build", "Pods", "ephemeral", "node_modules")
+                ], f"{source_root}/local.properties"]
+                self.write_project(project, files)
+                self.git("add", "-f", project)
+                output = self.parent / f"{project}.zip"
+                result = self.run_package("--project", project, "--output", str(output))
+                self.assertEqual(result.returncode, 0, result.stderr)
+                with ZipFile(output) as archive:
+                    self.assertEqual(archive.namelist(), sorted(f"{project}/{name}" for name in files))
+
+    def test_generated_directories_are_specific_to_the_project_kind(self):
+        """Flutter直下のplugins/やMonaca直下のbuild/を、別系統の生成物と混同しない。"""
+        self.git("init")
+        for project, files in (
+                ("F01HelloFlutter", ["pubspec.yaml", "plugins/helper.dart", "platforms/note.txt"]),
+                ("M01HelloMonaca", ["config.xml", "build/note.txt", "ios/Pods/note.txt"])):
+            with self.subTest(project=project):
+                self.write_project(project, files)
+                self.git("add", "-f", project)
+                output = self.parent / f"{project}.zip"
+                result = self.run_package("--project", project, "--output", str(output))
+                self.assertEqual(result.returncode, 0, result.stderr)
+                with ZipFile(output) as archive:
+                    self.assertEqual(archive.namelist(), sorted(f"{project}/{name}" for name in files))
 
     def test_only_the_named_project_is_packaged(self):
         """--project に渡したフォルダだけをZIPにする。ほかの単元やテンプレートは混ぜない。"""

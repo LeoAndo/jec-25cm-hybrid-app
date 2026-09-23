@@ -39,7 +39,7 @@ def load_projects():
 
 
 def sample_example(projects):
-    """リリースノートの「フォルダーを開く」の例に挙げる見本。
+    """リリースノートの「File > Open Folder…」の例に挙げる見本。
 
     フォルダーを開いて使うのはFlutterの単元の見本だけ（Monacaの見本は取り込み用のURLから取り込む）。
     projects の先頭はMonacaの単元なので、先頭を挙げるとFlutterの案内にMonacaの見本が出てしまう。
@@ -194,7 +194,7 @@ def prepare(repo, metadata):
         "3. 授業で使う単元の教科書をブラウザで開きます。\n\n"
         f"{unit_list(projects)}\n\n"
         "4. 完成プロジェクト（先生が作った見本）は、`samples` フォルダに入っています。\n"
-        f"   Flutterの単元は、Visual Studio Code の「フォルダーを開く」で `{sample_example(projects)}` のように選ぶだけで開けます。\n"
+        f"   Flutterの単元は、Visual Studio Code の「File > Open Folder…」で `{sample_example(projects)}` のように選ぶだけで開けます。\n"
         "   Monacaの単元は、教科書に載っている取り込み用のURLからMonacaへ取り込みます。\n"
         "   `samples` フォルダの中身は、コードを読み比べるための写しです。\n\n"
         "教材を更新するときは別フォルダに展開し、自分で作ったプロジェクトを上書きしないでください。\n"

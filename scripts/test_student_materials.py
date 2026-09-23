@@ -95,7 +95,8 @@ class PackageStudentMaterialsTest(unittest.TestCase):
         self.addCleanup(temporary.cleanup)
         self.root = Path(temporary.name)
         (self.root / "scripts").mkdir()
-        for script in ("package-project.py", "package-student-materials.py", "localize-student-materials.py"):
+        for script in ("package-project.py", "package-student-materials.py", "localize-student-materials.py",
+                       "project_files.py"):
             copy2(SCRIPTS / script, self.root / "scripts" / script)
         self.set_integrity_check(0)
         (self.root / "config").mkdir()
@@ -227,11 +228,11 @@ class PackageStudentMaterialsTest(unittest.TestCase):
             self.assertNotIn(word, instructions)
 
     def test_instructions_open_a_flutter_sample_as_the_folder_example(self):
-        """「フォルダーを開く」の例は、先頭のMonacaの見本ではなく、最初のFlutterの見本にする。"""
+        """「File > Open Folder…」の例は、先頭のMonacaの見本ではなく、最初のFlutterの見本にする。"""
         self.assertEqual(self.package().returncode, 0)
         with ZipFile(self.archive) as archive:
             instructions = archive.read(f"{FIXTURE_STEM}/はじめに.txt").decode()
-        self.assertIn("「フォルダーを開く」で samples/F01HelloFlutter のように", instructions)
+        self.assertIn("「File > Open Folder…」で samples/F01HelloFlutter のように", instructions)
         self.assertNotIn("samples/M01HelloMonaca のように", instructions)
 
     def test_sample_example_without_flutter_unit(self):
@@ -395,7 +396,7 @@ class PackageStudentMaterialsTest(unittest.TestCase):
                 data = archive.read(prefix + archive_name)
                 with ZipFile(io.BytesIO(data)) as project:
                     # 展開済みの見本は、教科書からリンクしているZIPと同じ中身。
-                    # Flutterの見本は、Visual Studio Code の「フォルダーを開く」で選ぶだけで開ける。
+                    # Flutterの見本は、Visual Studio Code の「File > Open Folder…」で選ぶだけで開ける。
                     for item in project.infolist():
                         sample = archive.getinfo(prefix + "samples/" + item.filename)
                         self.assertEqual(archive.read(sample), project.read(item))
@@ -409,6 +410,31 @@ class PackageStudentMaterialsTest(unittest.TestCase):
             # Monacaの見本とFlutterの見本が、samples/ の中で別々のフォルダに入る。
             self.assertIn(prefix + "samples/M01HelloMonaca/www/index.html", bundled)
             self.assertIn(prefix + "samples/F01HelloFlutter/lib/main.dart", bundled)
+
+    def test_generated_directory_names_do_not_remove_materials_or_samples(self):
+        """完成ZIP・samples・教科書のどこでも、生成物と同名の正規ファイルは残る。"""
+        sources = {
+            "F01HelloFlutter/lib/build/screen.dart": "// 画面のソース\n",
+            "F01HelloFlutter/lib/plugins/helper.dart": "// アプリのソース\n",
+            "M01HelloMonaca/www/plugins/app.js": "// アプリのソース\n",
+        }
+        textbook = "docs/build/index.html"
+        for name, content in {**sources, textbook: page("ビルド", "<p>教材</p>")}.items():
+            path = self.root / name
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(content, encoding="utf-8")
+        self.git("add", "-f", *sources, textbook)
+        result = self.package()
+        self.assertEqual(result.returncode, 0, result.stderr)
+        prefix = f"{FIXTURE_STEM}/"
+        with ZipFile(self.archive) as archive:
+            self.assertIn(prefix + textbook, archive.namelist())
+            for name, content in sources.items():
+                self.assertEqual(archive.read(prefix + "samples/" + name).decode(), content)
+                archive_name = ("docs/hello-flutter/downloads/F01HelloFlutter.zip"
+                                if name.startswith("F") else "docs/hello-monaca/downloads/M01HelloMonaca.zip")
+                with ZipFile(io.BytesIO(archive.read(prefix + archive_name))) as project:
+                    self.assertEqual(project.read(name).decode(), content)
 
     def test_asset_name_and_folder_carry_the_release_date(self):
         self.assertEqual(self.package().returncode, 0)
@@ -497,8 +523,8 @@ class StudentReleaseTest(unittest.TestCase):
         self.assertIn("- `M01 HelloMonaca：docs/hello-monaca/index.html`", text)
         self.assertIn("- `M02 TapCounter：docs/tap-counter/index.html`", text)
         self.assertIn("- `F01 HelloFlutter：docs/hello-flutter/index.html`", text)
-        # 「フォルダーを開く」の例は、先頭のMonacaの見本ではなく、最初のFlutterの見本にする。
-        self.assertIn("「フォルダーを開く」で `samples/F01HelloFlutter`", text)
+        # 「File > Open Folder…」の例は、先頭のMonacaの見本ではなく、最初のFlutterの見本にする。
+        self.assertIn("「File > Open Folder…」で `samples/F01HelloFlutter`", text)
         self.assertIn("取り込み用のURL", text)
         for word in ("Kotlin", "IntelliJ IDEA", "Android Studio"):
             self.assertNotIn(word, text)

@@ -8,12 +8,46 @@
     "README.md",
     "docs"
   ],
-  "terms": [],
+  "terms": [
+    {
+      "name": "Monacaの開発環境",
+      "canonical": "Monaca クラウド IDE",
+      "forbidden": [
+        "MonacaクラウドIDE",
+        "Monaca クラウドIDE",
+        "Monaca Cloud IDE"
+      ],
+      "applies_to": [
+        "monaca"
+      ],
+      "required_in": [
+        "README.md"
+      ]
+    },
+    {
+      "name": "Flutterのエディタ",
+      "canonical": "Visual Studio Code",
+      "forbidden": [
+        "VSCode",
+        "VS Code"
+      ],
+      "applies_to": [
+        "flutter"
+      ],
+      "required_in": [
+        "README.md"
+      ]
+    }
+  ],
   "registration": {
     "targets": [
       {
         "path": "README.md",
-        "requires": ["student_doc", "teacher_doc", "archive"]
+        "requires": [
+          "student_doc",
+          "teacher_doc",
+          "archive"
+        ]
       }
     ]
   },
@@ -23,21 +57,9 @@
       "flutter": null
     },
     "untracked_parts": [
-      ".dart_tool",
-      ".gradle",
-      ".idea",
-      "build",
-      "Pods",
-      ".symlinks",
-      "ephemeral",
-      "node_modules",
-      "platforms",
-      "plugins"
+      ".idea"
     ],
     "untracked_names": [
-      "local.properties",
-      ".flutter-plugins",
-      ".flutter-plugins-dependencies",
       ".DS_Store"
     ]
   },

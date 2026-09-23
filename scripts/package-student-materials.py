@@ -20,8 +20,7 @@ from zipfile import ZIP_DEFLATED, ZipFile, ZipInfo
 ROOT = Path(__file__).resolve().parents[1]
 ASSET_STEM = "hybrid-app-student-materials"
 MATERIALS_CONFIG = "config/teaching-materials.json"
-EXCLUDED = {".git", ".idea", ".gradle", ".dart_tool", "build", "Pods", "node_modules",
-            "platforms", "plugins", "local.properties", ".DS_Store", "__pycache__"}
+EXCLUDED = {".git", ".idea", ".DS_Store", "__pycache__"}
 
 
 def split_unit(name):
@@ -57,7 +56,7 @@ def archive_targets(projects):
 
 
 def sample_example(projects):
-    """はじめに.txt の「フォルダーを開く」の例に挙げる見本。
+    """はじめに.txt の「File > Open Folder…」の例に挙げる見本。
 
     フォルダーを開いて使うのはFlutterの単元の見本だけ（Monacaの見本は取り込み用のURLから取り込む）。
     projects の先頭はMonacaの単元なので、先頭を挙げるとFlutterの案内にMonacaの見本が出てしまう。
@@ -203,7 +202,7 @@ def build(output_dir):
     check_links(files)
 
     # 完成プロジェクトを、展開済みの見本として samples/ にも収録する。Flutterの単元は、学生がダウンロードも
-    # 展開もせず、Visual Studio Code の「フォルダーを開く」で選ぶだけになる。Monacaの単元の見本は、
+    # 展開もせず、Visual Studio Code の「File > Open Folder…」で選ぶだけになる。Monacaの単元の見本は、
     # 取り込み用のURLから取り込むので、samples/ の中身はコードを読み比べるための写しになる。
     # 中身は配布物に入れるZIPと同じなので、新たにcommitするファイルはない。
     # リンク検査のあとで足すので、検査の対象は教科書と多言語の入口で、samples の中は検査しない。
@@ -238,7 +237,7 @@ def build(output_dir):
         "3. 授業で使う単元の教科書をブラウザで開きます。\n"
         f"{unit_lines}"
         "4. 完成プロジェクト（先生が作った見本）は、samples フォルダに入っています。\n"
-        f"   Flutterの単元は、Visual Studio Code の「フォルダーを開く」で {sample_example(projects)} のように選ぶだけで開けます。\n"
+        f"   Flutterの単元は、Visual Studio Code の「File > Open Folder…」で {sample_example(projects)} のように選ぶだけで開けます。\n"
         "   Monacaの単元は、教科書に載っている取り込み用のURLからMonacaへ取り込みます。\n"
         "   samples フォルダの中身は、コードを読み比べるための写しです。\n\n"
         "教科書はオフラインで利用できます。Monacaはブラウザから使うサービスなので、ネット接続が必要です。\n"

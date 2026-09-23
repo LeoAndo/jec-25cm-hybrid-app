@@ -104,14 +104,11 @@ img { max-width: 100%; height: auto; display: block; border-radius: 9px; border:
 figcaption { font-size: .78rem; margin-top: .6rem; line-height: 1.7; }
 .phones { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
 .phones figure { margin: .6rem 0; }
-/* スマホ画面の画像は、幅で大きさを決める。max-height と width: auto で決めると、画像が届くまで箱が0になり、届いたときにページが伸びて、ページ内リンクの飛び先がずれる。
-   <img> には必ず width と height を書く。ブラウザはその比で、画像が届く前から高さを確保する。
-   幅の式は「枠線2px ＋ (H − 2px) × 横 ÷ 縦」で、見せたい高さ H から決める。下は順に H ＝ 460px・500px（720px以下では 350px）。
-   いまの横 1080 ÷ 縦 2424 は、Kotlin演習の指定エミュレータの画面比を引き継いだもの。この授業のスクリーンショット
-   （Monacaのプレビュー、iOSシミュレータ、Androidエミュレータ）の撮り方を決めたら、その縦横比で式を直す。
-   比が違う画像をこのまま載せても崩れはしないが、見える高さが H からずれる。 */
-.phones img { width: calc(2px + 458px * 1080 / 2424); margin: auto; }
-.phone img { width: calc(2px + 498px * 1080 / 2424); margin: auto; }
+/* 画像の表示幅だけを決め、縦横比は各画像の実寸に任せる。
+   Monacaのプレビューと各シミュレータは画面比が異なるため、特定端末の比率を固定しない。
+   <img> の width と height には実寸を書く。読み込み前にも高さを確保でき、ページ内リンクがずれない。 */
+.phones img { width: 220px; margin: auto; }
+.phone img { width: 240px; margin: auto; }
 .phone figcaption { text-align: center; }
 details { border: 1px solid var(--line); border-radius: 8px; margin: 1rem 0; padding: .85rem 1rem; }
 summary { cursor: pointer; font-weight: 650; }
@@ -140,7 +137,7 @@ details[open] > summary { margin-bottom: 1rem; }
   main { padding: 1.75rem 1rem 3rem; }
   h2 { font-size: 1.45rem; }
   .phones { gap: .8rem; }
-  .phones img { width: calc(2px + 348px * 1080 / 2424); }
+  .phones img { width: 168px; }
   th, td { padding: .6rem .3rem; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

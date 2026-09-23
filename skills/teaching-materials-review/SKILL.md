@@ -11,7 +11,7 @@ description: Review teaching materials of this hybrid app course (Monaca units i
 
 | 系統 | `config/teaching-materials.json` の `kind` | 完成プロジェクト | 動かし方 |
 | --- | --- | --- | --- |
-| Monaca（`M01`〜） | `monaca` | `M01HelloMonaca/`（`config.xml`・`package.json`・`www/`・`res/`） | `www/` を静的サーバで開いてChromeで確かめ、Monaca クラウドIDEへインポートしてプレビュー |
+| Monaca（`M01`〜） | `monaca` | `M01HelloMonaca/`（`config.xml`・`package.json`・`www/`・`res/`） | `www/` を静的サーバで開いてChromeで確かめ、Monaca クラウド IDEへインポートしてプレビュー |
 | Flutter（`F01`〜） | `flutter` | `F01HelloFlutter/`（`flutter create --empty --platforms=ios,android` で作ったもの） | `flutter analyze`、iOSシミュレータ／Androidエミュレータ |
 
 ## 必須確認
@@ -28,13 +28,13 @@ description: Review teaching materials of this hybrid app course (Monaca units i
 2. 検査が失敗した場合は、PRを承認可能と判断しない。
 3. `config/teaching-materials.json` の `terms` の正式表記を基準にし、禁止表記を個別に修正する。
 4. 教材の完成コードとプロジェクトの実ファイルが一致することを確認する。`snippets` はバイト単位で照合されるので、教科書のコードを手で写して直していないかを見る。
-5. ZIPの内容が現行ソースと一致し、IDE設定・SDK設定・ビルド生成物を含まないことを確認する。Flutter系は `.dart_tool` `build` `.gradle` `.idea` `Pods` `.symlinks` `ephemeral` `local.properties` `.flutter-plugins` `.flutter-plugins-dependencies`、Monaca系は `node_modules` `platforms` `plugins`、どちらも `.DS_Store`（`project_layout` の `untracked_parts` と `untracked_names`）。
+5. ZIPの内容が現行ソースと一致し、IDE設定・SDK設定・ビルド生成物を含まないことを確認する。除外は `scripts/project_files.py` の系統（`kind`）とプロジェクトからの相対パスに従う。Monacaは直下の `node_modules/`・`platforms/`・`plugins/`、Flutterは直下の `.dart_tool/`・`build/`、`android/.gradle/`・`android/app/build/`・`android/local.properties`・`ios/Pods/` など、所定の位置にあるものを除外する。名前だけで `lib/build/`・`lib/plugins/`・`www/plugins/` のようなソース用フォルダを落としていたら「対応が必要」とする。`.idea`・`.DS_Store` など両系統のローカル設定も含めない。`project_layout` の `untracked_parts` と `untracked_names` は共通のローカル設定の検査用である。
 6. 下の「未習事項ゲート」を行う。
 7. PRレビュー指摘には、妥当性・再現性・デグレの可能性・修正コスト・既存仕様への影響を確認したうえで、対応が必要、任意対応、対応不要のいずれかを明記する。
 
 ## 未習事項ゲート
 
-**受講生は Web基礎（HTML / CSS / JavaScript、全14章）を履修しているが、次のものは習っていない**（AGENTS.md「受講生像と、教材の書き方」）。教材で使うなら、その単元の新概念として正面から教えることになっている。
+**受講生は Web基礎（HTML / CSS / JavaScript、全14章）を履修しているが、次のものはその授業では習っていない**（AGENTS.md「受講生像と、教材の書き方」）。ただし、Java / Android または Swift / iOS で既習の対応物があるものは、比較STEPで違いと理由を教えれば新概念には数えない。このゲートは、対応物の有無と必要な説明の抜けを確認するもので、一覧にあるAPIを自動的に新概念へ数えるものではない。
 
 `querySelector` / `fetch` / `Promise` / `async`・`await` / `JSON` / `localStorage` / アロー関数 / `@keyframes` / CSS Grid / ES Modules / クラス構文
 
@@ -112,10 +112,10 @@ PY
 
 これは候補を挙げるだけで、判定はしない（`<script async>` の属性や、コメントの中の語も拾う）。出てきた1つ1つについて、次の順に判断する。
 
-1. **その単元の教員用ガイド**（`teacher/<スラッグ>/index.html`）の「この単元の教材方針」に、それがこの単元の新概念だと宣言してあり、教科書のSTEPで正面から教えているか。宣言も説明もあれば、ゲートは通る。
-2. 宣言がこの単元になくても、**`projects` の並びで前にある単元**の教員用ガイドで新概念として宣言され、教えられていれば、既習として扱ってよい。
-3. どちらでもなければ「**対応が必要**」とする。直し方は、Web基礎で習った書き方に戻す（`querySelector` → `getElementById`、アロー関数 → `function`、CSS Grid → flexbox、`@keyframes` → `transition` など）か、その単元の新概念として宣言して教科書で教えるかのどちらか。**1単元で導入する新概念は1つまで**なので、宣言を足すと2つ目になる場合は、単元を分けるか片方を外す指摘にする。
-4. `fetch` を教えると、`Promise`（か `async`・`await`）と `JSON` も同時に出る。これらをまとめて1つの新概念として扱うなら、その理由が教員用ガイドに書いてあるかを見る。書いてなければ「対応が必要」とする。
+1. **その単元の教員用ガイド**（`teacher/<スラッグ>/index.html`）の「この単元の教材方針」に、Web基礎・Java / Android・Swift / iOS で既習の対応物が書いてあり、教科書の比較STEPで違いと理由を教えているか。両方あれば新概念には数えない。API名や構文が初出という理由だけで新概念と判定しない。
+2. 対応物がないものは、その単元の新概念として宣言され、教科書のSTEPで正面から教えているかを見る。**1単元で導入する新概念は1つまで**にする。`projects` の並びで前にある**同じ系統の単元**で既に教えた概念は重ねて数えない。ただし、本文をほかの単元へ送らず、今回必要な手順とコードは今回の教科書にも置く。Monacaの作品や手順をFlutterの前提にはしない。
+3. 上の1または2を満たす説明がなければ「**対応が必要**」とする。Web基礎で習った書き方に戻すか、既習の対応物との比較STEPを足すか、対応物のない新概念として教える。2つ目の新概念になる場合は、単元を分けるか片方を外す。`getElementById` など完成コードの書き方をそろえる方針は、概念の数え方と別に守る。
+4. `fetch`・`Promise`（または `async`・`await`）・`JSON` を使うときは、それぞれについて既習の対応物と比較STEPを確かめる。対応物のない独立した概念が複数残る場合は、まとめて「通信」という1つの名前にして数を減らさず、扱う範囲を分ける。
 
 ## 系統ごとに確かめること
 
@@ -133,7 +133,7 @@ PY
 
   `cordova.js` の404は、プラグインを呼んでいなければ問題ない。
 - Monacaへのインポートとプレビューでの確認は、オーナーのアカウントが要る。レビュワーが確かめられない場合は「未確認項目」として総括コメントに残す。推測で「Monacaで動いた」と書かない。
-- `import_url` があれば、`https://monaca.mobi/ja/directimport?pid=` ＋32桁の形であること、教科書の「完成プロジェクトを開く」に同じURLがあること。URLの先が生きているかは、開いて確かめられなければ「未確認項目」にする。
+- `import_url` があれば、Monacaで実際に発行された `https://monaca.mobi/ja/directimport?pid=…` のURLと一致し、教科書の「完成プロジェクトを開く」にも同じURLがあること。`pid` の桁数を固定して判定せず、推測のIDやプレースホルダを使わない。URLの先が生きているかは、開いて確かめられなければ「未確認項目」にする。
 - 学生向けの教材に、Monaca Education 前提の手順（「Web公開」での提出、「クラシック」テンプレート、App Store の `Monaca for Study`、`edu.monaca.io`）が入っていたら「対応が必要」とする（AGENTS.md §0-A）。教員用ガイドで前年度との違いとして挙げるのは問題ない。
 
 **Flutter単元（`kind: "flutter"`）**
@@ -148,7 +148,7 @@ PY
 - プラットフォームのディレクトリが `ios/` と `android/` だけで、`web/`・`macos/`・`linux/`・`windows/` が無いこと。`test/` が無いこと。
 - `lib/` と `pubspec.yaml` の外を変えていないこと。例外は、通信を扱う単元の `android/app/src/main/AndroidManifest.xml` への `INTERNET` 追記と、`gradle-wrapper.properties` の `-bin.zip` 書き換えの2つだけ（AGENTS.md §11）。通信を扱う単元で `INTERNET` の追記STEPが教科書に無ければ、releaseのAPKで通信が失敗するので「対応が必要」とする。
 - 画面の確認は、iOSシミュレータかAndroidエミュレータで行う。READMEの「開発環境」に書いた基準のFlutter SDKと違う版で撮ったスクリーンショットは指摘する。レビュワーが動かせない場合は「未確認項目」として残す。
-- 教科書にXcodeのアプリ名（`Simulator`・`DeviceHub`）での起動手順が書かれていたら指摘する。シミュレータは VS Code のデバイス選択（または `flutter devices`）から起動させる（AGENTS.md §0-B）。
+- 教科書にXcodeのアプリ名（`Simulator`・`DeviceHub`）での起動手順が書かれていたら指摘する。シミュレータは Visual Studio Code のデバイス選択（または `flutter devices`）から起動させる（AGENTS.md §0-B）。Visual Studio Code は英語UIを使い、操作名が `Open Folder…` など実際の表示に合っていることを確認する。
 - 完成プロジェクトの `README.md` が、画面の構成の表 → 使用しているAPI（または画像・素材）→ ソースコードの構成の表 → 処理の流れ → 実装のポイント → 主なパッケージ → ビルドと実行、の順になっていること。
 
 ## 完成コードの判断基準
@@ -177,7 +177,7 @@ PY
 **両系統に共通**
 
 14. **コメントは、学生が読んで意味が分かる日本語で書く。** 英語のコメントは指摘する。
-15. **1単元で導入する新概念は1つまで。** 「新概念」は、Web基礎にもJava/Androidにも Swift/iOS にもないもの（README「単元の範囲の決め方」）。Monaca系は上の「未習事項ゲート」で、Flutter系は Dartの `async` / `await`、Widgetツリーによる宣言的UI、dot shorthand などの候補で数える。画面（Monacaはプレビュー、Flutterはシミュレータ／エミュレータ）で効果が見える形になっているかも見る。2つ目の新概念が混ざっていたら、別issueへ分ける指摘にする。
+15. **1単元で導入する新概念は1つまで。** 「新概念」は、Web基礎にもJava / AndroidにもSwift / iOSにも既習の対応物がないもの（README「単元の範囲の決め方」）。対応物があるものは比較STEPで教え、新概念には数えない。Monaca系は上の「未習事項ゲート」で、Flutter系もDartの `async` / `await` やWidgetツリーによる宣言的UIなどについて対応物と説明を確認する。dot shorthandはSwiftのimplicit member expressionと比較し、新概念には数えない。画面（Monacaはプレビュー、Flutterはシミュレータ／エミュレータ）で効果が見える形になっているかも見る。2つ目の新概念が混ざっていたら、別issueへ分ける指摘にする。
 16. **完成プロジェクトにUnit Testは書かない。** テストの追加や、そのための構造変更を求める指摘は「対応不要」とする。`scripts/test_*.py` はCIで動くので、通る状態を保つ。
 17. **オーナーの書き方を保つ。** 「初学者向けに書き直すべき」という指摘の既定の対応は「教科書で説明する」。採用するのは、動作を変えない小さな明確化だけにする。
 
@@ -185,7 +185,7 @@ PY
 
 - **各STEPに、既知の技術（Web基礎・Java/Android・Swift/iOS）との比較があること。** 比較のないSTEPは未完成として指摘する。概念そのもの（変数・DOM・画面遷移とは何か）の説明を足す指摘は採用しない。
 - **本文でほかの単元へ手順やコードを送っていないこと。** とくに、Monaca系で作ったものをFlutter系の前提にしていたら「対応が必要」とする。サイドバーとtopbarのリンクは導線なので対象外。
-- **どちらの道具（Monaca クラウドIDE／Visual Studio Code）を開くかが、先に書いてあること。**
+- **どちらの道具（Monaca クラウド IDE／Visual Studio Code）を開くかが、先に書いてあること。**
 - **単元（コマ）の最後に「アレンジできる場所」があること。** そこで新しい概念やAPIを足していたら指摘する。
 - 多言語展開の制約（開始タグと終了タグの対応、引用符のない属性、文の途中のコメント・`translate="no"`、ルート相対リンク）は `localize-student-materials.py check` が落とす。比較ブロックの言語名ラベルに `translate="no"` が付いているかも見る。
 

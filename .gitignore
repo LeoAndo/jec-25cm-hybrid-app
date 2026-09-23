@@ -1,15 +1,16 @@
 # ---------------------------------------------------------------------------
 # Flutter / Dart（Flutter単元の完成プロジェクト）
 # ---------------------------------------------------------------------------
-.dart_tool/
-.flutter-plugins
-.flutter-plugins-dependencies
-.pub-cache/
-.pub/
-build/
+/F[0-9][0-9]*/.dart_tool/
+/F[0-9][0-9]*/.flutter-plugins
+/F[0-9][0-9]*/.flutter-plugins-dependencies
+/F[0-9][0-9]*/.pub-cache/
+/F[0-9][0-9]*/.pub/
+/F[0-9][0-9]*/build/
+/F[0-9][0-9]*/ios/build/
 **/doc/api/
 **/ios/Flutter/.last_build_id
-migrate_working_dir/
+/F[0-9][0-9]*/migrate_working_dir/
 
 # 難読化・シンボル
 app.*.symbols
@@ -28,8 +29,10 @@ app.*.map.json
 **/ios/Flutter/ephemeral/
 
 # Gradle / ローカルSDK設定
-.gradle/
-local.properties
+/F[0-9][0-9]*/android/.gradle/
+/F[0-9][0-9]*/android/build/
+/F[0-9][0-9]*/android/app/build/
+/F[0-9][0-9]*/android/local.properties
 *.aab
 *.apk
 output-metadata.json
@@ -43,9 +46,9 @@ output-metadata.json
 # ---------------------------------------------------------------------------
 # Monaca CLI / Localkit でローカル開発したときだけできるもの。
 # クラウドIDEで作った場合は現れないが、混入を防ぐために無視する。
-node_modules/
-platforms/
-plugins/
+/M[0-9][0-9]*/node_modules/
+/M[0-9][0-9]*/platforms/
+/M[0-9][0-9]*/plugins/
 
 # www/components/ の loader.js / loader.css はMonacaの自動生成ファイルだが、
 # 配布ZIPを取り込んだ直後から動くようにコミットする（MonacaTemplate と同じ扱い）。

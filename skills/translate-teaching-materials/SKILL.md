@@ -17,7 +17,7 @@ description: Translate the Japanese student textbooks (docs/**/*.html) into the 
 
 | 道具 | 使う単元 | 表示言語 | 訳文での扱い |
 | --- | --- | --- | --- |
-| Monaca クラウドIDE・ダッシュボード（Google Chrome 上） | Monaca系（M01〜） | **日本語** | 日本語のまま残し、訳をかっこで添える |
+| Monaca クラウド IDE・ダッシュボード（Google Chrome 上） | Monaca系（M01〜） | **日本語** | 日本語のまま残し、訳をかっこで添える |
 | Visual Studio Code | Flutter系（F01〜） | **英語** | 英語のまま残す |
 | Xcode・Android Studio・iOSシミュレータ・Androidエミュレータ | Flutter系 | 英語 | 英語のまま残す |
 | macOS（Finder など）・Google Chrome のメニュー | 全単元 | 学生ごとに違う | 原文の日本語を残し、訳をかっこで添える |
@@ -123,8 +123,8 @@ description: Translate the Japanese student textbooks (docs/**/*.html) into the 
 
 - ファイル名、フォルダ名、パス（`config.xml`、`www/index.html`、`pubspec.yaml`、`lib/main.dart`）、パッケージ名（`f01_hello_flutter`、`package:flutter/material.dart`、`jp.ac.jec.…`）、クラス名、関数名、id、プロジェクト名（`M01HelloMonaca`、`F01HelloFlutter`）。
 - **Flutterのウィジェット名、Dartのキーワード、パッケージ名。** `StatelessWidget`、`Scaffold`、`setState`、`async`、`final`、`shared_preferences` などは、原文で `<code>` に入っているので訳さない。原文が `<code>` に入れずに書いていても訳さず、PR本文に挙げる（日本語版を `<code>` に直すのは、翻訳PRではなく日常のPRで行う）。
-- **Monaca クラウドIDEとダッシュボードの画面に出る言葉。** Monacaは日本語表示のまま使う（教科書のスクリーンショットも日本語の画面）。原文が日本語で書いているメニュー名・ボタン名・画面名は、どの言語でも日本語のまま残し、その言語での意味をかっこで添える。学生が画面の文字と見比べて探せるようにするためである。
-  - クラウドIDEのメニュー：**ファイル**／**編集**／**表示**／**実行**／**ビルド**／**プロジェクト**／**設定**／**ヘルプ**
+- **Monaca クラウド IDEとダッシュボードの画面に出る言葉。** Monacaは日本語表示のまま使う（教科書のスクリーンショットも日本語の画面）。原文が日本語で書いているメニュー名・ボタン名・画面名は、どの言語でも日本語のまま残し、その言語での意味をかっこで添える。学生が画面の文字と見比べて探せるようにするためである。
+  - クラウド IDEのメニュー：**ファイル**／**編集**／**表示**／**実行**／**ビルド**／**プロジェクト**／**設定**／**ヘルプ**
   - よく出る項目：**公開…**、**インポート**、**プレビュー**、**最小限のテンプレート**、**クラウドIDEで開く**、**新しいプロジェクトを作る**
 
   ```text
@@ -212,8 +212,9 @@ description: Translate the Japanese student textbooks (docs/**/*.html) into the 
 3. 上の「逆翻訳による照合」を終え、指摘をすべて反映してある。
 4. `build --lang <言語>` で作った確認用ページを開き、レイアウト・リンク・コードのコピー・共通資料からの戻り先を目で確かめてある。
 5. `i18n/<言語>/glossary.md` に、その言語で決めた訳語と書き方の決まりが書いてある。
+6. 今回配布する本文で使う用語に「要確認」が残っていない。該当語は、その言語の資料または独立した照合で確かめ、根拠と照合結果をPR本文に記録してから用語集の「要確認」を外す。今回の本文に出てこない予定語は、要確認のまま残してよい。
 
-`true` に上げるのは、上げる理由と確認結果を書いたPRで行う。**翻訳が途中の言語を `true` にしない。** `release-student-materials.py` の公開ゲートが、`distribute: true` の言語に未翻訳があると公開を止める。未翻訳を許可する `ALLOW_UNTRANSLATED` は緊急修正のための入力で、通常の配布準備では使わない。
+`true` に上げるのは、上げる理由と確認結果を書いたPRで行う。**翻訳が途中の言語や、本文で使う用語の確認が済んでいない言語を `true` にしない。** `release-student-materials.py` の公開ゲートが、`distribute: true` の言語に未翻訳があると公開を止める。用語の意味と「要確認」の解消は、コマンドの成功だけでは保証されないので、上の照合を別に行う。未翻訳を許可する `ALLOW_UNTRANSLATED` は緊急修正のための入力で、通常の配布準備では使わない。
 
 ## 配布前の差分翻訳
 
@@ -231,6 +232,7 @@ description: Translate the Japanese student textbooks (docs/**/*.html) into the 
 - `check` が通っていること。未翻訳の数は `status` で見る。
 - 分担して訳したときは、担当どうしで言い回しが割れていないかを見る（引用符、同じ見出しの訳、チェック欄の文の形、韓国語なら文体と助詞）。
 - 逆翻訳による照合が行われ、担当と照合範囲がPR本文に書いてあること。
+- 今回の本文で使う「要確認」の用語について、その言語の資料または独立した照合による確認の根拠と結果が記録されていること。未確認の語が残る言語は配布対象に上げない。
 - 見つけた誤訳は、カタログの `translation` を直接直す。`source` は手で書き換えない。
 
 ## やってはいけないこと
