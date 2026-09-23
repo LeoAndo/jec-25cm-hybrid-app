@@ -9,9 +9,10 @@
 | 日本語 | 訳 | メモ |
 | --- | --- | --- |
 | Monaca | Monaca | 通常版Monaca（Freeプラン）。Monaca Education とは別のサービス |
+| Monaca クラウド IDE | Monaca クラウド IDE | 正式表記をそのまま保持する |
 | Flutter | Flutter | |
 | Dart | Dart | |
-| Visual Studio Code | Visual Studio Code | 本文で VS Code と書いていれば VS Code |
+| Visual Studio Code | Visual Studio Code | 正式表記をそのまま保持する |
 | Google Chrome | Google Chrome | |
 | Xcode | Xcode | |
 | Android Studio | Android Studio | Androidエミュレータと Android SDK のために使う |
@@ -28,8 +29,8 @@
 | パッケージ | package | `f01_hello_flutter`・`package:flutter/material.dart` などのパッケージ名は訳さない |
 | 関数 | function | `function`（JavaScript）・`void main()`（Dart）の表記は原文のまま |
 | 変数 | variable | `let` / `const`（JavaScript）・`var` / `final`（Dart）の表記は原文のまま。定義文では日本語の用語と読みも添える |
-| 実行 | run လုပ်ခြင်း | Monacaのメニュー名 **実行** は日本語のまま残し (Run) を添える。VS Code のUI名の Run は保持 |
-| コンソール | console | Chromeのデベロッパーツールの Console、VS Code の Debug Console は保持 |
+| 実行 | run လုပ်ခြင်း | Monacaのメニュー名 **実行** は日本語のまま残し (Run) を添える。Visual Studio Code のUI名の Run は保持 |
+| コンソール | console | Chromeのデベロッパーツールの Console、Visual Studio Code の Debug Console は保持 |
 | エミュレータ | emulator | Androidエミュレータ。Flutter系の単元で使う |
 
 ## この授業の用語
@@ -53,7 +54,7 @@
 | デバッグ | debug | jec-25cm-kotlin の用語集にはまだ無い |
 | 実機 | real device | |
 | シミュレータ | simulator | iOSシミュレータ。jec-25cm-kotlin の用語集にはまだ無い |
-| デバイス | device | VS Code のデバイス選択の画面名は英語のまま |
+| デバイス | device | Visual Studio Code のデバイス選択の画面名は英語のまま |
 | ウィジェット | widget | 個々のクラス名（`Text`、`Scaffold`）は `<code>` の中なので訳さない |
 | 宣言的UI | declarative UI | |
 | 状態 | state | `setState` は `<code>` のまま |

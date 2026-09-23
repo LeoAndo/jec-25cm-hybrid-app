@@ -537,6 +537,20 @@ class StudentReleaseTest(unittest.TestCase):
         text = (self.dist / "release-notes.md").read_text(encoding="utf-8")
         self.assertIn("   - （教科書はまだありません）", text)
         self.assertIn("`samples/<プロジェクト名>`", text)
+        self.assertIn("見本）を含む版には、`samples` フォルダがあります", text)
+        self.assertNotIn("見本）は、`samples` フォルダに入っています", text)
+
+    def test_release_notes_follow_in_class_setup_schedule(self):
+        """共通準備で全環境と初回実行を一度に済ませる旧案内へ戻さない。"""
+        with patch.object(release.subprocess, "check_output", return_value=""):
+            release.prepare(self.repo, self.metadata)
+        text = (self.dist / "release-notes.md").read_text(encoding="utf-8")
+        for instruction in (
+            "第1コマにSTEP 1〜3", "第7コマにSTEP 4〜7を開始", "第8コマでも確認を続けます",
+            "ダウンロードも授業時間内", "初回実行は単元の教科書",
+        ):
+            self.assertIn(instruction, text)
+        self.assertNotIn("はじめてのアプリが動くまでを説明", text)
 
     def test_download_guidance_covers_every_configured_language(self):
         """翻訳を配る言語を増やしたときに、公開案内の書き忘れを見つける。"""
@@ -670,6 +684,8 @@ class StudentReleaseTest(unittest.TestCase):
         self.assertIn("直接修正", text)
         payload = self.api.call_args.args[1]
         self.assertEqual(payload["target_commitish"], self.metadata["revision"])
+        # APIはリポジトリ内のパスを読む。モックでは見逃す設定ファイルの欠落を検出する。
+        self.assertTrue((SCRIPTS.parent / payload["configuration_file_path"]).is_file())
         self.assertNotIn("previous_tag_name", payload)
         self.gh.assert_not_called()
 

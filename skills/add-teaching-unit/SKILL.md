@@ -128,7 +128,7 @@ description: Add a new teaching unit to this hybrid app course repository - a Mo
    cd F01HelloFlutter && flutter pub get && flutter analyze
    ```
 
-   `flutter analyze` が何も出さない（`No issues found!`）ことを確かめてから、iOSシミュレータかAndroidエミュレータで動かす（`flutter devices` で端末を選び、`flutter run -d <端末ID>`）。初回はiOSシミュレータのほうが軽い。Androidでビルドするときは、worktreeに `android/local.properties` が無いので環境変数で通す。
+   `flutter analyze` が何も出さない（`No issues found!`）ことを確かめてから、Flutterプロジェクトを開いた Visual Studio Code の `Flutter: Launch Emulator` でiOSシミュレータかAndroidエミュレータを起動する。`flutter devices` で起動した端末のIDを一覧から確認し、`flutter run -d <端末ID>` で実行する。初回はiOSシミュレータのほうが軽い。Androidでビルドするときは、worktreeに `android/local.properties` が無いので環境変数で通す。
 
    ```sh
    cd F01HelloFlutter && ANDROID_HOME="$HOME/Library/Android/sdk" flutter build apk --debug

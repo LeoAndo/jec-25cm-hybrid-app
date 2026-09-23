@@ -7,9 +7,10 @@
 | 日本語 | 訳 | メモ |
 | --- | --- | --- |
 | Monaca | Monaca | 通常版Monaca（Freeプラン）。Monaca Education とは別のサービス |
+| Monaca クラウド IDE | Monaca クラウド IDE | 正式表記をそのまま保持する |
 | Flutter | Flutter | |
 | Dart | Dart | |
-| Visual Studio Code | Visual Studio Code | 本文で VS Code と書いていれば VS Code |
+| Visual Studio Code | Visual Studio Code | 正式表記をそのまま保持する |
 | Google Chrome | Google Chrome | |
 | Xcode | Xcode | |
 | Android Studio | Android Studio | Androidエミュレータと Android SDK のために使う |
@@ -26,8 +27,8 @@
 | パッケージ | 包 | `f01_hello_flutter`・`package:flutter/material.dart` などのパッケージ名は訳さない |
 | 関数 | 函数 | `function`（JavaScript）・`void main()`（Dart）の表記は原文のまま |
 | 変数 | 变量 | `let` / `const`（JavaScript）・`var` / `final`（Dart）の表記は原文のまま |
-| 実行 | 运行 | Monacaのメニュー名 **実行** は日本語のまま残し（运行）を添える。VS Code のボタンの表示は Run を保持 |
-| コンソール | 控制台 | Chromeのデベロッパーツールの Console、VS Code の Debug Console は保持 |
+| 実行 | 运行 | Monacaのメニュー名 **実行** は日本語のまま残し（运行）を添える。Visual Studio Code のボタンの表示は Run を保持 |
+| コンソール | 控制台 | Chromeのデベロッパーツールの Console、Visual Studio Code の Debug Console は保持 |
 | エミュレータ | 模拟器 | Androidエミュレータ。Flutter系の単元で使う。シミュレータと同じ語になるので、区別が要るときは Android 模拟器 と書く |
 
 ## この授業の用語
@@ -51,7 +52,7 @@
 | デバッグ | 调试 | jec-25cm-kotlin の用語集にはまだ無い |
 | 実機 | 真机 | |
 | シミュレータ | 模拟器 | iOSシミュレータ。エミュレータと同じ語になるので、区別が要るときは iOS 模拟器 と書く。jec-25cm-kotlin の用語集にはまだ無い |
-| デバイス | 设备 | VS Code のデバイス選択の画面名は英語のまま |
+| デバイス | 设备 | Visual Studio Code のデバイス選択の画面名は英語のまま |
 | ウィジェット | Widget | Flutter中文文档（docs.flutter.cn）に合わせて英字のまま。组件 と訳す資料もある。要確認 |
 | 宣言的UI | 声明式 UI | |
 | 状態 | 状态 | `setState` は `<code>` のまま |

@@ -168,6 +168,8 @@
     const previous = `${filename}${section ? `#${section.id}` : current.hash}`;
     // 本文の「setupへ戻る」などで既に読んだページへ戻るときは、履歴を巻き戻す。
     const previousIndex = backPages.findIndex(page => new URL(page, current).pathname === target.pathname);
+    // リンクに節の指定がなければ、前に読んでいた節へ戻す。
+    if (previousIndex >= 0 && !target.hash) target.hash = new URL(backPages[previousIndex], current).hash;
     setNavigation(target, previousIndex < 0 ? [...backPages, previous] : backPages.slice(0, previousIndex));
     link.setAttribute('href', target.href);
   });
