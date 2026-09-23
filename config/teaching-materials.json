@@ -1,0 +1,45 @@
+{
+  "course": {
+    "name": "ハイブリッドアプリ開発技法",
+    "total_sessions": 15,
+    "minutes_per_session": 90
+  },
+  "scan_roots": [
+    "README.md",
+    "docs"
+  ],
+  "terms": [],
+  "registration": {
+    "targets": [
+      {
+        "path": "README.md",
+        "requires": ["student_doc", "teacher_doc", "archive"]
+      }
+    ]
+  },
+  "project_layout": {
+    "gitignore_reference": {
+      "monaca": null,
+      "flutter": null
+    },
+    "untracked_parts": [
+      ".dart_tool",
+      ".gradle",
+      ".idea",
+      "build",
+      "Pods",
+      ".symlinks",
+      "ephemeral",
+      "node_modules",
+      "platforms",
+      "plugins"
+    ],
+    "untracked_names": [
+      "local.properties",
+      ".flutter-plugins",
+      ".flutter-plugins-dependencies",
+      ".DS_Store"
+    ]
+  },
+  "projects": []
+}
