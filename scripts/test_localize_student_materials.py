@@ -262,6 +262,44 @@ class LocalizeTest(unittest.TestCase):
         self.assertIn('<p><span lang="en">Press it.</span></p>', rendered)
         self.assertIn('<a href="#next" title="次の説明" lang="ja"><span lang="en">Next</span></a>', rendered)
 
+    def test_right_to_left_page_marks_direction_wherever_it_marks_language(self):
+        """右から左のページでは、ページ全体に dir="rtl"、日本語のまま残す部分に dir="ltr" を付ける。
+
+        dir がないと、右から左の段落に置いた日本語の文末の「。」が、文の反対側（左端）へ回り込む。
+        """
+        source = ('<html lang="ja"><body><p>未翻訳の文です。</p><p>訳した文です。</p>'
+                  '<p><a href="#next" title="次の説明">次へ</a>進みます。</p>'
+                  '<img src="images/a.png" alt="図の説明"><pre><code>// コード</code></pre></body></html>')
+        translations = {"訳した文です。": "جملة مترجمة.", "<a1>次へ</a1>進みます。": "<a1>التالي</a1>."}
+        rendered = localize.localize(page_of(source), translations, "ar", "docs", self.PAGES,
+                                     mark_untranslated=True, direction="rtl")
+        self.assertIn('<html lang="ar" dir="rtl">', rendered)
+        self.assertIn('<p><span lang="ja" dir="ltr">未翻訳の文です。</span></p>', rendered)
+        self.assertIn('<p>جملة مترجمة.</p>', rendered)
+        # 属性だけが日本語の要素は日本語と示し、その中の訳した本文は、アラビア語の向きに戻す。
+        self.assertIn('<a href="#next" title="次の説明" lang="ja" dir="ltr">'
+                      '<span lang="ar" dir="rtl">التالي</span></a>', rendered)
+        self.assertIn('alt="図の説明" lang="ja" dir="ltr">', rendered)
+        # コードは日本語版のバイト列のまま。左から右で読む指定はCSSが受け持つ。
+        self.assertIn('<pre><code>// コード</code></pre>', rendered)
+        page_of(rendered)
+        # 左から右の言語のページには、dir を足さない（今までと同じHTMLになる）。
+        english = localize.localize(page_of(source), {}, "en", "docs", self.PAGES, mark_untranslated=True)
+        self.assertNotIn(" dir=", english)
+        self.assertIn('<span lang="ja">未翻訳の文です。</span>', english)
+
+    def test_existing_dir_on_html_is_replaced_not_duplicated(self):
+        source = '<html lang="ja" dir="ltr"><body><p>文です。</p></body></html>'
+        rendered = localize.localize(page_of(source), {}, "ar", "docs", self.PAGES, direction="rtl")
+        self.assertIn('<html lang="ar" dir="rtl">', rendered)
+        self.assertEqual(rendered.count("dir="), 1)
+        english = localize.localize(page_of(source), {}, "en", "docs", self.PAGES)
+        self.assertIn('<html lang="en" dir="ltr">', english)
+
+    def test_unquoted_dir_on_html_is_rejected(self):
+        with self.assertRaisesRegex(localize.LocalizeError, "dir 属性は引用符で囲んでください"):
+            page_of('<html lang="ja" dir=ltr><body><p>あ</p></body></html>')
+
     def test_without_translations_only_language_and_resource_links_change(self):
         html = (
             '<!doctype html>\n<html lang="ja">\n<head><link rel="stylesheet" href="../assets/textbook.css"></head>\n'
@@ -817,6 +855,47 @@ class CommandTest(unittest.TestCase):
         config_path.write_text(json.dumps(config))
         self.assertIn("?hl=en", localize.localized_pages(self.settings(), "fr")["docs/fr/unit/index.html"])
 
+    def add_right_to_left_language(self):
+        path = self.root / "config/i18n.json"
+        config = json.loads(path.read_text(encoding="utf-8"))
+        config["languages"].append({"code": "ar", "name": "العربية", "distribute": False, "dir": "rtl",
+                                    "ui": ui("نسخ")})
+        path.write_text(json.dumps(config, ensure_ascii=False), encoding="utf-8")
+
+    def test_direction_comes_from_the_configuration(self):
+        self.add_right_to_left_language()
+        settings = self.settings()
+        self.assertEqual(settings.direction("ar"), "rtl")
+        # 書かなかった言語と、原文の日本語は左から右。
+        self.assertEqual(settings.direction("en"), "ltr")
+        self.assertEqual(settings.direction("ja"), "ltr")
+
+    def test_invalid_direction_is_rejected(self):
+        config_path = self.root / "config/i18n.json"
+        config = json.loads(config_path.read_text())
+        for value in ("RTL", "auto", "", 1, None):
+            with self.subTest(value=value):
+                config["languages"][0]["dir"] = value
+                config_path.write_text(json.dumps(config))
+                with self.assertRaisesRegex(localize.LocalizeError, "en の dir は ltr か rtl"):
+                    self.settings()
+
+    def test_build_writes_right_to_left_pages_and_marks_untranslated_text(self):
+        """確認用ページも、配布物と同じく、未翻訳の文を日本語と示し、向きを付けて出す。"""
+        self.add_right_to_left_language()
+        self.sync("ar")
+        self.merge({"はじめての単元": "الوحدة الأولى"}, language="ar")
+        output = self.root / "dist/i18n-preview"
+        self.quiet(localize.build, self.settings(), ["ar", "en"], output)
+        arabic = (output / "docs/ar/unit/index.html").read_text(encoding="utf-8")
+        self.assertIn('<html lang="ar" dir="rtl">', arabic)
+        self.assertIn("<h1>الوحدة الأولى</h1>", arabic)
+        self.assertIn('<p><span lang="ja" dir="ltr">ここで止まって、確認</span></p>', arabic)
+        self.assertIn('<title lang="ja" dir="ltr">単元</title>', arabic)
+        english = (output / "docs/en/unit/index.html").read_text(encoding="utf-8")
+        self.assertIn('<html lang="en">', english)
+        self.assertIn('<p><span lang="ja">ここで止まって、確認</span></p>', english)
+
     def test_invalid_official_documentation_language_is_rejected(self):
         config_path = self.root / "config/i18n.json"
         config = json.loads(config_path.read_text())
@@ -850,9 +929,10 @@ class RepositoryTest(unittest.TestCase):
             for name, text in localize.localized_pages(self.settings, code).items():
                 source = posixpath_source(name, code)
                 original = (self.settings.root / source).read_text(encoding="utf-8")
+                direction = ' dir="rtl"' if self.settings.direction(code) == "rtl" else ""
                 with self.subTest(page=name):
                     self.assertEqual(blocks.findall(text), blocks.findall(original))
-                    self.assertIn(f'<html lang="{code}">', text)
+                    self.assertIn(f'<html lang="{code}"{direction}>', text)
 
 
 def posixpath_source(name, code):

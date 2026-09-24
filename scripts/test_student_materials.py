@@ -318,12 +318,27 @@ class PackageStudentMaterialsTest(unittest.TestCase):
         with ZipFile(self.archive) as archive:
             for language in config["languages"]:
                 page = archive.read(prefix + f"docs/{language['code']}/hello-monaca/index.html").decode()
-                self.assertIn(f'<html lang="{language["code"]}">', page)
+                # 右から左の言語だけ、ページ全体と、日本語のまま残す部分に向きを付ける。
+                rtl = language.get("dir") == "rtl"
+                page_dir, japanese_dir = (' dir="rtl"', ' dir="ltr"') if rtl else ("", "")
+                self.assertIn(f'<html lang="{language["code"]}"{page_dir}>', page)
                 # 注記、UIと全言語の導線はカタログの有無に左右されない。
                 self.assertIn(language['translation_notice'], page)
                 self.assertIn(language['ui']['copy'], page)
                 self.assertEqual(page.count('hreflang='), len(config['languages']) + 1)
-                self.assertIn('<span lang="ja">未翻訳の文', page)
+                self.assertIn(f'<span lang="ja"{japanese_dir}>未翻訳の文', page)
+                # 言語の切り替えでは、どのページでも、言語名をその言語の向きで出す。
+                nav = page.split('<nav class="language-nav"', 1)[1].split("</nav>", 1)[0]
+                for choice in config["languages"]:
+                    direction = choice.get("dir", "ltr")
+                    self.assertIn(f'lang="{choice["code"]}" dir="{direction}"', nav)
+                self.assertIn('lang="ja" dir="ltr"', nav)
+            entrance = archive.read(prefix + "index.html").decode()
+            self.assertIn('<li lang="ja" dir="ltr">', entrance)
+            for language in config["languages"]:
+                self.assertIn(f'<li lang="{language["code"]}" dir="{language.get("dir", "ltr")}">', entrance)
+        # アラビア語は右から左の言語として設定してある（この検査で右から左の出力を必ず通すため）。
+        self.assertIn("rtl", [language.get("dir") for language in config["languages"]])
 
     def test_translation_does_not_include_untracked_pages(self):
         self.enable_translation()
@@ -608,6 +623,17 @@ class StudentReleaseTest(unittest.TestCase):
         with patch.dict(os.environ, {"ALLOW_UNTRANSLATED": "true"}), patch.object(release.subprocess, "check_output", return_value=""):
             release.prepare(self.repo, self.metadata)
         self.assertIn("**4文**", (self.dist / "release-notes.md").read_text(encoding="utf-8"))
+
+    def test_right_to_left_guidance_is_wrapped_with_its_direction(self):
+        """GitHubのMarkdownは段落に向きを付けないので、右から左の言語の案内だけを dir で囲む。"""
+        report = [{"language": {"code": "ar", "name": "العربية", "dir": "rtl"}, "rows": []},
+                  {"language": {"code": "en", "name": "English"}, "rows": []}]
+        notes = release.localized_download_guidance(report, self.asset)
+        arabic, english = notes.split("### English")
+        self.assertTrue(arabic.startswith('<div dir="rtl">\n\n### العربية\n'), arabic)
+        self.assertIn(self.asset, arabic)
+        self.assertIn("</div>", arabic)
+        self.assertNotIn("dir=", english)
 
     def test_each_distribution_language_has_native_opening_instructions(self):
         report = [{"language": {"code": code, "name": code}, "rows": []} for code in release.DOWNLOAD_GUIDANCE]

@@ -138,6 +138,26 @@
       "japanese_version": "Abrir la versión en japonés en la misma posición",
       "open_instructions": "Abre index.html en tu navegador y elige Español.",
       "start_here": "Empieza aquí"
+    },
+    {
+      "code": "ar",
+      "name": "العربية",
+      "distribute": false,
+      "dir": "rtl",
+      "ui": {
+        "copy": "نسخ",
+        "copy_label": "نسخ شيفرة {title}",
+        "copied": "تم النسخ",
+        "copy_success": "تم نسخ الشيفرة. الصقها في المحرر.",
+        "copy_shortcut": "انسخ باستخدام ⌘ C",
+        "copy_selected": "تم تحديد الشيفرة. اضغط ⌘ C لنسخها.",
+        "progress": "الخطوات التي تم التحقق منها: {count} / {total}"
+      },
+      "language_label": "اللغة",
+      "translation_notice": "تمت ترجمة هذه الصفحة باستخدام الذكاء الاصطناعي. النسخة اليابانية هي المرجع. إذا بدت لك الترجمة خاطئة، فاسأل المعلم.",
+      "japanese_version": "فتح النسخة اليابانية في الموضع نفسه",
+      "open_instructions": "افتح index.html في المتصفح، ثم اختر العربية.",
+      "start_here": "ابدأ من هنا"
     }
   ],
   "source_ui": {

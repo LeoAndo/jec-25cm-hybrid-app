@@ -62,6 +62,10 @@ ATTRIBUTE = re.compile(r"""\s+([^\s/>=]+)(?:\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s"
 CATALOG_TAG = re.compile(r"<(/?)([a-z]+)(\d*)(/?)>")
 ENTITY = re.compile(r"&(?:[A-Za-z][A-Za-z0-9]*|#[0-9]+|#[xX][0-9A-Fa-f]+);")
 LANGUAGE_CODE = re.compile(r"[A-Za-z]{2,3}(?:-[A-Za-z0-9]+)*")
+# 書字方向。config/i18n.json の dir に書く値で、省略した言語は左から右（ltr）。
+DIRECTIONS = ("ltr", "rtl")
+# 未翻訳の文は日本語のまま出すので、その部分の書字方向は左から右になる。
+FALLBACK_DIRECTION = "ltr"
 
 
 class LocalizeError(ValueError):
@@ -398,11 +402,11 @@ class _Extractor:
         for child in element.children:
             if not isinstance(child, Element):
                 continue
-            for name in LINK_ATTRIBUTES + (("lang",) if child.tag == "html" else ()):
+            for name in LINK_ATTRIBUTES + (("lang", "dir") if child.tag == "html" else ()):
                 if child.attribute(name) is None:
                     continue
                 raw = _raw_attribute(self.text, child, name, self.name)
-                if name == "lang":
+                if name in ("lang", "dir"):
                     continue
                 url = urlsplit(html.unescape(raw or ""))
                 # 外部のURLは対象外。パスが / で始まるのは当たり前なので、見るのは相対のリンクだけ。
@@ -563,7 +567,7 @@ class Catalog:
 
 class _Localizer:
     def __init__(self, page: Page, translations: dict, language: str, source_root: str, pages: set,
-                 android_docs_hl: str | None = None, *, mark_untranslated: bool = False):
+                 android_docs_hl: str | None = None, *, mark_untranslated: bool = False, direction: str = "ltr"):
         self.page = page
         catalog = translations if isinstance(translations, Catalog) else Catalog(translations)
         self.translations = catalog.entries
@@ -575,9 +579,25 @@ class _Localizer:
         self.fallback_elements = set()
         self.fallback_attributes = {}
         self.android_docs_hl = android_docs_hl
+        self.direction = direction
 
     def translation(self, source: str, where: str) -> str | None:
         return self.overrides.get((source, where), self.translations.get(source))
+
+    def _marks(self, code: str) -> list:
+        """言語を示す要素に付ける (属性, 値) の組。右から左のページでは、lang と一緒に dir も付ける。
+
+        右から左の段落に日本語を置くと、文末の「。」や「…」が、日本語の反対側（左端）へ回り込む。
+        dir を付けた要素は、その向きで周りから切り離して並ぶ（HTMLの既定で unicode-bidi: isolate）。
+        左から右のページでは、日本語も同じ向きなので付けない（今までと同じHTMLになる）。
+        """
+        marks = [("lang", code)]
+        if self.direction == "rtl":
+            marks.append(("dir", FALLBACK_DIRECTION if code == "ja" else self.direction))
+        return marks
+
+    def _span(self, code: str) -> str:
+        return "<span" + "".join(f' {name}="{value}"' for name, value in self._marks(code)) + ">"
 
     def start_tag(self, element: Element) -> str:
         """開始タグを、訳した属性・書き換えたリンク・言語の指定つきで作り直す。"""
@@ -598,17 +618,24 @@ class _Localizer:
                                       self.android_docs_hl)
                 if moved != html.unescape(value):
                     values[name] = html.escape(moved, quote=True)
+        marks = []
         if element.tag == "html" and element.attribute("lang") is not None:
-            values["lang"] = self.language
+            # ページ全体の書字方向。右から左の言語だけ dir を足す（左から右は既定なので書かない）。
+            marks = [("lang", self.language)] + ([("dir", self.direction)] if self.direction == "rtl" else [])
         attribute_language = self.language if self.mark_untranslated and any(
             name in values for name in _translated_attributes(element)) else None
         element_language = "ja" if id(element) in self.fallback_elements else attribute_language
         if element_language is not None:
-            if element.attribute("lang") is None:
-                close = "/>" if raw.endswith("/>") else ">"
-                raw = raw[:-len(close)] + f' lang="{element_language}"' + close
+            marks = self._marks(element_language)
+        appended = []
+        for name, value in marks:
+            if element.attribute(name) is None:
+                appended.append(f' {name}="{value}"')
             else:
-                values["lang"] = element_language
+                values[name] = value
+        if appended:
+            close = "/>" if raw.endswith("/>") else ">"
+            raw = raw[:-len(close)] + "".join(appended) + close
         if not values:
             return raw
         # 属性の位置を見て、一度に組み立てる。置き換えた値をもう一度走査しないので、
@@ -634,7 +661,7 @@ class _Localizer:
                               and element.tag not in VOID)
             if closing:
                 return ('</span>' if reset_language else '') + self.page.text[element.inner_end:element.end]
-            return self.start_tag(element) + (f'<span lang="{self.language}">' if reset_language else '')
+            return self.start_tag(element) + (self._span(self.language) if reset_language else '')
         return CATALOG_TAG.sub(replace, translation)
 
     def run(self) -> str:
@@ -658,13 +685,13 @@ class _Localizer:
                     and any(element.inner_start <= segment.start and segment.end <= element.inner_end
                             for element in self.fallback_attributes.values())
                     and segment.where not in {"title", "option", "textarea"}):
-                rendered = f'<span lang="{self.language}">{rendered}</span>'
+                rendered = f'{self._span(self.language)}{rendered}</span>'
             if self.mark_untranslated and translation is None:
                 # title/option/textarea には span を入れられないので、その要素に言語を付ける。
                 if segment.where in {"title", "option", "textarea"}:
                     self._mark_fallback_container(self.page.root, segment)
                 else:
-                    rendered = f'<span lang="ja">{rendered}</span>'
+                    rendered = f'{self._span("ja")}{rendered}</span>'
             replacements.append((segment.start, segment.end, rendered))
         self._start_tags(self.page.root, replacements)
         parts, position = [], 0
@@ -712,9 +739,10 @@ class _Localizer:
 
 
 def localize(page: Page, translations: dict, language: str, source_root: str, pages: set,
-             android_docs_hl: str | None = None, *, mark_untranslated: bool = False) -> str:
+             android_docs_hl: str | None = None, *, mark_untranslated: bool = False,
+             direction: str = "ltr") -> str:
     return _Localizer(page, translations, language, source_root, pages, android_docs_hl,
-                      mark_untranslated=mark_untranslated).run()
+                      mark_untranslated=mark_untranslated, direction=direction).run()
 
 
 # ---------------------------------------------------------------------------
@@ -739,6 +767,12 @@ class Settings:
         if found is None:
             raise LocalizeError(f"{CONFIG.as_posix()}にない言語です: {code}（使えるのは {'、'.join(self.codes())}）")
         return found
+
+    def direction(self, code: str) -> str:
+        """書字方向（config/i18n.json の dir）。省略した言語と、原文の日本語は左から右。"""
+        if code == self.source_language:
+            return FALLBACK_DIRECTION
+        return self.language(code).get("dir", "ltr")
 
     def uses_han(self, code: str) -> bool:
         """漢字を使う言語か。訳しても原文と同じ字になることがある（config/i18n.json の han）。"""
@@ -777,6 +811,10 @@ def load_settings(root: Path) -> Settings:
         hl = language.get("android_docs_hl", "en")
         if not isinstance(hl, str) or not LANGUAGE_CODE.fullmatch(hl):
             raise LocalizeError(f"{CONFIG.as_posix()}: android_docs_hl の形が正しくありません: {hl}")
+        direction = language.get("dir", "ltr")
+        if direction not in DIRECTIONS:
+            # 値を間違えると、右から左の言語が左から右で出る（崩れても気付きにくい）ので止める。
+            raise LocalizeError(f"{CONFIG.as_posix()}: {language['code']} の dir は ltr か rtl にしてください: {direction!r}")
     terms = []
     if (root / TERMS_CONFIG).is_file():
         try:
@@ -1233,7 +1271,7 @@ def localized_pages(settings: Settings, code: str, *, mark_untranslated: bool = 
         translations = read_catalog(settings.catalog_path(code, name))
         result[output_name(name, code, settings.source_root)] = localize(
             page, translations, code, settings.source_root, set(names), android_docs_hl,
-            mark_untranslated=mark_untranslated)
+            mark_untranslated=mark_untranslated, direction=settings.direction(code))
     return result
 
 
@@ -1251,7 +1289,9 @@ def build(settings: Settings, languages: list, output: Path) -> None:
         target = output / settings.source_root / code
         if target.exists():
             shutil.rmtree(target)
-        pages = localized_pages(settings, code)
+        # 未翻訳の文は、配布物と同じく日本語だと示して出す。右から左の言語では、その部分の向きも
+        # 配布物と同じになる（示さないと、日本語の文末の「。」が行の反対側へ回り込んで見える）。
+        pages = localized_pages(settings, code, mark_untranslated=True)
         # 配布物と同じUI文言を渡す。言語の切り替えと翻訳の注記は配布物だけのもので、ここには入れない。
         addition = f"\n{textbook_i18n_script(ui_messages(settings, code))}\n"
         for name, text in pages.items():
