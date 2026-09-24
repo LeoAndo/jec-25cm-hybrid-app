@@ -7,19 +7,19 @@ const STORAGE_KEY = "jec-25cm-oshi-save-v1";
 function createInitialItems() {
   return [
     {
-      name: "NotebookLM",
-      genre: "学習ツール",
-      comment: "授業のノートをもとに、自分の言葉で説明できるまで質問しています。\n分からなかったことがつながる瞬間が好きです。"
+      name: "好きな音楽",
+      genre: "音楽",
+      comment: "通学中に聴くと、元気になります。"
     },
     {
-      name: "Android Studio / Xcode",
-      genre: "開発ツール",
-      comment: "Android StudioやXcodeで、思いついた画面を形にするのが好きです。\n次は自分が毎日使えるアプリを作ってみたいです。"
+      name: "カレー",
+      genre: "食べ物",
+      comment: "自分の好きな辛さを選べるところが好きです。"
     },
     {
-      name: "AIエージェントを使ったアプリ開発",
-      genre: "気になる技術",
-      comment: "AIエージェントと相談しながら、アプリを作る方法に興味があります。\n提案されたコードの理由を確かめ、自分でも直せるようになりたいです。"
+      name: "公園",
+      genre: "場所",
+      comment: "ゆっくり歩いて、気分を変えられます。"
     }
   ];
 }
@@ -131,7 +131,7 @@ function addOshi() {
   const genre = document.getElementById("txt_input_genre").value.trim();
   const comment = document.getElementById("txt_input_comment").value.trim();
   if (name === "" || genre === "" || comment === "") {
-    txtMessage.textContent = "名前・ジャンル・推しポイントをすべて入力してください。";
+    txtMessage.textContent = "名前・種類・好きな理由をすべて入力してください。";
     return;
   }
 
@@ -150,6 +150,6 @@ function addOshi() {
   oshiItems = nextItems;
   renderOshiList();
   document.getElementById("txt_storage").textContent = oshiItems.length + "件をこのブラウザに保存しました。";
-  document.getElementById("txt_selected").textContent = "追加した推し：" + name;
+  document.getElementById("txt_selected").textContent = "追加したもの：" + name;
   document.getElementById("nav_app").popPage();
 }

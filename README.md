@@ -10,12 +10,14 @@ JEC（25CM）の「ハイブリッドアプリ開発技法」で使う教材で�
 
 | 単元 | 学生用教科書 | 完成プロジェクト | 教員用ガイド | 完成ZIP |
 | --- | --- | --- | --- | --- |
-| M01OshiList（コマ1〜4） | [推しログ：一覧と詳細](docs/oshi-list/index.html) | [M01OshiList](M01OshiList/) | [進め方と照合コード](teacher/oshi-list/index.html) | [M01OshiList.zip](docs/oshi-list/downloads/M01OshiList.zip) |
-| M02OshiSave（コマ5〜7） | [推しログ：追加と保存](docs/oshi-save/index.html) | [M02OshiSave](M02OshiSave/) | [進め方と照合コード](teacher/oshi-save/index.html) | [M02OshiSave.zip](docs/oshi-save/downloads/M02OshiSave.zip) |
+| M01OshiList（コマ1〜4） | [好きなものノート：一覧と詳細](docs/oshi-list/index.html) | [M01OshiList](M01OshiList/) | [進め方と照合コード](teacher/oshi-list/index.html) | [M01OshiList.zip](docs/oshi-list/downloads/M01OshiList.zip) |
+| M02OshiSave（コマ5〜7） | [好きなものノート：追加と保存](docs/oshi-save/index.html) | [M02OshiSave](M02OshiSave/) | [進め方と照合コード](teacher/oshi-save/index.html) | [M02OshiSave.zip](docs/oshi-save/downloads/M02OshiSave.zip) |
 | F01StampBoard（コマ8〜11） | [スタンプ帳：一覧・状態・詳細](docs/stamp-board/index.html) | [F01StampBoard](F01StampBoard/) | [進め方と照合コード](teacher/stamp-board/index.html) | [F01StampBoard.zip](docs/stamp-board/downloads/F01StampBoard.zip) |
 | F02StampRelease（コマ12〜15） | [スタンプ帳：入力・保存・APK提出](docs/stamp-release/index.html) | [F02StampRelease](F02StampRelease/) | [進め方と照合コード](teacher/stamp-release/index.html) | [F02StampRelease.zip](docs/stamp-release/downloads/F02StampRelease.zip) |
 
-[共通資料：授業を始めるまでの準備](docs/common/setup.html)では、教材の受け取り、Monacaのアカウント作成、Flutter 3.47.5の準備を授業内で進めます。M01では、静的な推しカードからOnsen UIの一覧・詳細へ進み、auto-stylingによるOSごとの見た目を比べます。M02では入力・JSON保存・復元へ進み、コマ7に公開URLを提出します。F01では空のFlutterプロジェクトから一覧・状態更新・詳細を作ります。F02では入力・非同期保存・復元を加え、確認した通常APKをコマ15に提出します。
+**Monacaの題材はM01・M02とも「好きなものノート」に統一します（2026-09-24 オーナー決定）。** 好きな音楽・食べ物・場所など、身近なものの名前・種類・好きな理由を記録します。留学生にも意味をつかみやすい表現を使い、個人的な話の開示は求めません。コマ数と学習内容は維持します。既存の配布リンクと保存データを引き継ぐため、プロジェクト名・URL・コード内の識別子は継続して使います。
+
+[共通資料：授業を始めるまでの準備](docs/common/setup.html)では、教材の受け取り、Monacaのアカウント作成、Flutter 3.47.5の準備を授業内で進めます。M01では、静的なカードからOnsen UIの一覧・詳細へ進み、auto-stylingによるOSごとの見た目を比べます。M02では入力・JSON保存・復元へ進み、コマ7に公開URLを提出します。F01では空のFlutterプロジェクトから一覧・状態更新・詳細を作ります。F02では入力・非同期保存・復元を加え、確認した通常APKをコマ15に提出します。
 
 15コマの割り当ては下の「15コマ計画」にあります。教科書・教員用ガイド・`config/teaching-materials.json` への登録は、単元ごとのissueで行います（[AGENTS.md](AGENTS.md) §9、[単元追加用skill](skills/add-teaching-unit/SKILL.md)）。
 
@@ -73,13 +75,13 @@ Freeプランの制限が、そのまま教材の設計を縛ります。詳細�
 
 | コマ | 単元 | 内容・画面で確かめること | プロジェクト |
 | --- | --- | --- | --- |
-| 1 | M01OshiList | 通常版Monacaのアカウント・枠を確認し、静的な推しカードを表示する | 推しログ |
-| 2 | M01OshiList | Onsen UIのツールバーと一覧を作り、auto-stylingでOSによる見た目の差を確かめる | 推しログ |
-| 3 | M01OshiList | 配列から一覧を描き、押した行の名前を表示する | 推しログ |
-| 4 | M01OshiList | 一覧から詳細へ進み、戻る。文字・色・表示項目をアレンジする | 推しログ |
-| 5 | M02OshiSave | この単元だけで開始状態を用意し、入力した推しを追加する | 推しログ |
-| 6 | M02OshiSave | localStorageを既知の保存APIと比較し、JSONで一覧を保存・復元する | 推しログ |
-| 7 | M02OshiSave | 冒頭でFlutter SDKのダウンロードと既存iOS環境の確認を開始。待ち時間にアレンジ・公開URLの確認・提出を行う | 推しログ |
+| 1 | M01OshiList | 通常版Monacaのアカウント・枠を確認し、静的なカードを表示する | 好きなものノート |
+| 2 | M01OshiList | Onsen UIのツールバーと一覧を作り、auto-stylingでOSによる見た目の差を確かめる | 好きなものノート |
+| 3 | M01OshiList | 配列から一覧を描き、押した行の名前を表示する | 好きなものノート |
+| 4 | M01OshiList | 一覧から詳細へ進み、戻る。文字・色・表示項目をアレンジする | 好きなものノート |
+| 5 | M02OshiSave | この単元だけで開始状態を用意し、入力した好きなものを追加する | 好きなものノート |
+| 6 | M02OshiSave | localStorageを既知の保存APIと比較し、JSONで一覧を保存・復元する | 好きなものノート |
+| 7 | M02OshiSave | 冒頭でFlutter SDKのダウンロードと既存iOS環境の確認を開始。待ち時間にアレンジ・公開URLの確認・提出を行う | 好きなものノート |
 | 8 | F01StampBoard | 準備確認を続け、空のFlutterプロジェクトをiOSで実行し、ホットリロードする | スタンプ帳 |
 | 9 | F01StampBoard | 習慣カードの余白と並びを整える | スタンプ帳 |
 | 10 | F01StampBoard | StatefulWidget・setStateでスタンプと回数を更新する | スタンプ帳 |
@@ -97,10 +99,10 @@ Freeプランの制限が、そのまま教材の設計を縛ります。詳細�
 
 | フォルダ | 内容 |
 | --- | --- |
-| `M01OshiList/` | [推しログの完成ソースと実装の説明](M01OshiList/README.md) |
+| `M01OshiList/` | [好きなものノートの完成ソースと実装の説明](M01OshiList/README.md) |
 | `docs/oshi-list/` | M01の学生用教科書と完成プロジェクトZIP |
 | `teacher/oshi-list/` | M01の教員用ガイドとSTEPごとの照合コード |
-| `M02OshiSave/` | [推しログの追加・保存の完成ソース](M02OshiSave/README.md) |
+| `M02OshiSave/` | [好きなものノートの追加・保存の完成ソース](M02OshiSave/README.md) |
 | `docs/oshi-save/` / `teacher/oshi-save/` | M02の教科書・完成ZIP・教員用ガイドと照合コード |
 | `F01StampBoard/` | [スタンプ帳の一覧・状態更新・詳細の完成ソース](F01StampBoard/README.md) |
 | `docs/stamp-board/` / `teacher/stamp-board/` | F01の教科書・完成ZIP・教員用ガイドと照合コード |

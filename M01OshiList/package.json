@@ -1,7 +1,7 @@
 {
   "name": "m01-oshi-list",
   "version": "1.0.0",
-  "displayName": "推しログ",
+  "displayName": "好きなものノート",
   "engines": {
     "node": ">=18.16"
   },

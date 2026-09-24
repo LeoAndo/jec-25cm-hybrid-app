@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
-  <title>推しログ</title>
+  <title>好きなものノート</title>
   <script src="components/loader.js"></script>
   <link rel="stylesheet" href="components/loader.css">
   <link rel="stylesheet" href="https://unpkg.com/onsenui@2.12.9/css/onsenui.css">
@@ -19,14 +19,14 @@
   <template id="list.html">
     <ons-page id="page_list">
       <ons-toolbar>
-        <div class="center">推しログ</div>
+        <div class="center">好きなものノート</div>
       </ons-toolbar>
 
       <div class="app-section">
-        <p class="app-caption">わたしの推し</p>
+        <p class="app-caption">わたしの好きなもの</p>
         <h1 class="app-heading">好きな理由を集めよう。</h1>
-        <p class="app-description">学びや開発の中で見つけた、お気に入りの記録。</p>
-        <ons-button id="btn_open_add" class="app-action">推しを追加</ons-button>
+        <p class="app-description">音楽、食べ物、場所。好きなものと理由の記録。</p>
+        <ons-button id="btn_open_add" class="app-action">好きなものを追加</ons-button>
         <p id="txt_storage" class="app-message" aria-live="polite"></p>
       </div>
 
@@ -39,15 +39,15 @@
     <ons-page id="page_add">
       <ons-toolbar>
         <div class="left"><ons-back-button>戻る</ons-back-button></div>
-        <div class="center">推しを追加</div>
+        <div class="center">好きなものを追加</div>
       </ons-toolbar>
       <div class="app-section">
-        <p class="app-description">好きな理由や、次に試したいことを自分の言葉で残しましょう。</p>
-        <label class="app-label" for="txt_input_name">推しの名前</label>
-        <input id="txt_input_name" class="app-input" type="text" maxlength="60" placeholder="例：ノートからアプリを作ること">
-        <label class="app-label" for="txt_input_genre">ジャンル</label>
-        <input id="txt_input_genre" class="app-input" type="text" maxlength="30" placeholder="例：学び方">
-        <label class="app-label" for="txt_input_comment">私の推しポイント・次に試したいこと</label>
+        <p class="app-description">好きなものと、その理由を自分の言葉で残しましょう。</p>
+        <label class="app-label" for="txt_input_name">名前</label>
+        <input id="txt_input_name" class="app-input" type="text" maxlength="60" placeholder="例：アイスクリーム">
+        <label class="app-label" for="txt_input_genre">種類</label>
+        <input id="txt_input_genre" class="app-input" type="text" maxlength="30" placeholder="例：食べ物">
+        <label class="app-label" for="txt_input_comment">好きな理由</label>
         <textarea id="txt_input_comment" class="app-input" rows="4" maxlength="500" placeholder="好きな理由をひとこと"></textarea>
         <p id="txt_add_message" class="app-message" aria-live="polite"></p>
         <ons-button id="btn_save_oshi" disabled>追加する</ons-button>
@@ -62,13 +62,13 @@
         <div class="left">
           <ons-back-button>戻る</ons-back-button>
         </div>
-        <div class="center">推しの詳細</div>
+        <div class="center">詳細</div>
       </ons-toolbar>
 
       <div class="app-section">
         <p id="txt_detail_genre" class="app-caption"></p>
         <h1 id="txt_detail_name" class="app-heading"></h1>
-        <p class="app-label">私の推しポイント・次に試したいこと</p>
+        <p class="app-label">好きな理由</p>
         <p id="txt_detail_comment" class="app-comment"></p>
       </div>
     </ons-page>

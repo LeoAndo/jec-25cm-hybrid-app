@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" id="jp.ac.jec.m01oshilist" version="1.0.0">
-  <name>推しログ</name>
+  <name>好きなものノート</name>
   <description/>
   <author/>
   <content src="index.html"/>

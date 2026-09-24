@@ -24,6 +24,8 @@ Cordovaの版と主要な構成は一致しますが、画面にある `.nvmrc` 
 
 調査時のmaster（4.1.6）はCordova13でした。今回の画面資料に合わせ、移動するmasterではなくCordova12の4.0.0を選んでいます。
 
+2026-09-24、オーナーから共有された [master](https://github.com/monaca-templates/blank/tree/master) を再確認しました。確認時のコミットは `78f4430830a95cf3e54833e1c472b451018a6e2a`（4.1.6）です。Cordova 13、Androidプラットフォーム14.0.1、iOSプラットフォーム8.0.1、Nodeの要件・loader・iOSアイコン構成が変わっています。`index.html` には `cordova.js` の直接読み込みも追加されています。**オーナーが現在のFreeプランで新規作成した最小限テンプレートもCordova 12であると確認し、blank 4.0.0／Cordova 12の維持を決定しました。** 本原本とM01・M02のテンプレート構成は更新しません。
+
 ## 単元へ複製するとき
 
 `.monaca/project_info.json`、`.gitignore`、`.monacaignore`、`LICENSE`、`config.xml`、`package.json`、`www/`、`res/` を複製します。`.monaca` のほかのローカル情報は含めません。単元のREADMEはその単元用に作ります。

@@ -1,13 +1,13 @@
 <!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>M02 推しログ：追加と保存 | ハイブリッドアプリ開発技法</title>
+<title>M02 好きなものノート：追加と保存 | ハイブリッドアプリ開発技法</title>
 <link rel="stylesheet" href="../assets/textbook.css"><script src="../assets/textbook.js" defer></script></head>
 <body data-progress-key="jec-hybrid-oshi-save-v1"><a class="skip" href="#main">本文へ移動</a>
 <header class="topbar"><span class="brand">JEC / ハイブリッドアプリ開発技法</span><a href="../oshi-list/index.html">← M01：OshiList</a></header>
 <div class="shell"><aside class="sidebar"><div class="sidebar-inner">
 <div class="progress"><span data-progress-label>0 / 15 ステップ確認済み</span><progress max="15" value="0" aria-label="単元の進み具合"></progress></div>
 <nav aria-label="コマごとの目次"><p class="eyebrow">コマ5 · STEP 00〜04</p><ol>
-<li><a href="#step-0">00 自分の推しログを開く</a></li>
+<li><a href="#step-0">00 自分の好きなものノートを開く</a></li>
 <li><a href="#step-1">01 入力画面を作る</a></li>
 <li><a href="#step-2">02 入力した文字を確認する</a></li>
 <li><a href="#step-3">03 配列へ追加して戻る</a></li>
@@ -28,18 +28,18 @@
 <li><a href="#step-14">14 アレンジ箇所を言葉にする</a></li>
 </ol></nav>
 <div class="resources"><a href="#help">困ったとき</a><a href="#sample-project">完成プロジェクトを開く</a><a href="../oshi-list/index.html">M01：OshiList</a><span aria-current="page">M02：OshiSave</span><a href="../stamp-board/index.html">F01：StampBoard</a><a href="../stamp-release/index.html">F02：StampRelease</a><a href="../common/setup.html?from=oshi-save">共通：はじめの準備</a></div>
-</div></aside><main id="main"><div class="hero"><div class="unit">M02</div><p class="eyebrow">コマ5〜7 · 各90分</p><h1>推しログ：追加して、残そう。</h1>
-<p class="lede">学びや開発の中で見つけた推しと、好きな理由を画面から追加します。再読み込みしても自分の記録が戻る仕組みを作り、ソースにアレンジを残して公開URLを提出します。</p>
+</div></aside><main id="main"><div class="hero"><div class="unit">M02</div><p class="eyebrow">コマ5〜7 · 各90分</p><h1>好きなものノート：追加して、残そう。</h1>
+<p class="lede">日常の中で見つけた好きなものと、好きな理由を画面から追加します。再読み込みしても自分の記録が戻る仕組みを作り、ソースにアレンジを残して公開URLを提出します。</p>
 <div class="tags"><span>Monaca クラウド IDE / Google Chrome</span><span>Onsen UI 2.12.9</span><span>HTML / CSS / JavaScript</span></div>
 <div class="goal"><p class="box-title">この単元で分かること</p><p>新しい考え方は<strong>JSON</strong>です。画面で使う配列を保存用の文字列にし、読み込んだ文字列を配列へ戻します。保存先はJavaのSharedPreferences・SwiftのUserDefaultsと比較します。</p></div>
-<p>完成見本の名前は <code>M02OshiSave</code> です。学生は自分の推しログを同じ1プロジェクトで育てます。まだプロジェクトがない場合の作り方も、一覧・詳細の開始コードも、この本文にあります。</p>
-<table><thead><tr><th>コマ</th><th>到達点</th></tr></thead><tbody><tr><td>5</td><td>入力した推しを一覧へ追加し、詳細を読める。</td></tr><tr><td>6</td><td>JSONとlocalStorageで保存・復元できる。初期化には確認を挟む。</td></tr><tr><td>7</td><td>授業内でFlutter準備を開始し、待ち時間に推しログをアレンジ・確認・提出する。</td></tr></tbody></table></div>
+<p>完成見本の名前は <code>M02OshiSave</code> です。学生は自分の好きなものノートを同じ1プロジェクトで育てます。まだプロジェクトがない場合の作り方も、一覧・詳細の開始コードも、この本文にあります。</p>
+<table><thead><tr><th>コマ</th><th>到達点</th></tr></thead><tbody><tr><td>5</td><td>入力した好きなものを一覧へ追加し、詳細を読める。</td></tr><tr><td>6</td><td>JSONとlocalStorageで保存・復元できる。初期化には確認を挟む。</td></tr><tr><td>7</td><td>授業内でFlutter準備を開始し、待ち時間に好きなものノートをアレンジ・確認・提出する。</td></tr></tbody></table></div>
 <section id="sample-project"><h2>完成プロジェクトを開く</h2><p><a href="https://monaca.mobi/ja/directimport?pid=6ab5042ee78885db0a1a0da2">M02OshiSaveをMonacaへ取り込む</a>。これはアプリを動かすURLではなく、完成見本のソースを取り込むURLです。リンク先でインポートすると自分のMonacaへコピーを取り込むため、Freeプランの3枠のうち1枠を使います。自分の制作を始める人は、STEP 00へ進みます。</p><p>配布ZIPの <code>samples/M02OshiSave</code> はコードを読み比べるための完成見本です。自分の作品を見本で上書きしません。</p></section>
-<section id="step-0"><p class="step-meta">STEP 00 · コマ5</p><h2>自分の推しログを開く</h2>
-<p>Google Chromeで通常版Monacaへログインし、自分の推しログを開きます。続けて使っているプロジェクトは、名前が <code>M01OshiList</code> のままで構いません。今日のためにコピーを増やしたり、削除したりしません。</p>
-<ol><li>まだ自分の推しログがない人だけ、ダッシュボードで新規作成し、<code>最小限のテンプレート</code> を選び、<code>M02OshiSave</code> と名付けます。登録や空き枠が不明なら、<a href="../common/setup.html?from=oshi-save#step-2">共通資料のSTEP 2〜3</a>で確認して戻ります。</li><li><code>www/index.html</code>・<code>www/css/style.css</code> を開きます。<code>www/js/app.js</code> がなければ、ファイル一覧の作成操作で <code>www</code> の下に <code>js</code> フォルダ、その中に <code>app.js</code> ファイルを作ります。</li><li>自分のアレンジがある場合は、変えた文字と色を控えます。下の開始コード3ファイルをそろえ、保存してプレビューを再読み込みします。<code>components</code> や <code>res</code> は変更しません。</li><li>3件の名前を押して詳細を開き、<code>戻る</code> で一覧へ戻ります。タイトルと詳細の組み合わせを確かめます。</li></ol>
+<section id="step-0"><p class="step-meta">STEP 00 · コマ5</p><h2>自分の好きなものノートを開く</h2>
+<p>Google Chromeで通常版Monacaへログインし、自分の好きなものノートを開きます。続けて使っているプロジェクトは、名前が <code>M01OshiList</code> のままで構いません。今日のためにコピーを増やしたり、削除したりしません。</p>
+<ol><li>まだ自分の好きなものノートがない人だけ、ダッシュボードで新規作成し、<code>最小限のテンプレート</code> を選び、<code>M02OshiSave</code> と名付けます。登録や空き枠が不明なら、<a href="../common/setup.html?from=oshi-save#step-2">共通資料のSTEP 2〜3</a>で確認して戻ります。</li><li><code>www/index.html</code>・<code>www/css/style.css</code> を開きます。<code>www/js/app.js</code> がなければ、ファイル一覧の作成操作で <code>www</code> の下に <code>js</code> フォルダ、その中に <code>app.js</code> ファイルを作ります。</li><li>自分のアレンジがある場合は、変えた文字と色を控えます。下の開始コード3ファイルをそろえ、保存してプレビューを再読み込みします。<code>components</code> や <code>res</code> は変更しません。</li><li>3件の名前を押して詳細を開き、<code>戻る</code> で一覧へ戻ります。タイトルと詳細の組み合わせを確かめます。</li></ol>
 <p>開始コードの役割を、次の順で追いましょう。新しいファイル名を <code>detail.html</code> として作る操作は不要です。これは <code>index.html</code> の中の <code>template</code> のidです。</p>
-<table><thead><tr><th>場所</th><th>処理と理由</th></tr></thead><tbody><tr><td>HTMLのhead</td><td>標準loader、Onsen UI 2.12.9のCSS・JavaScript、自作CSS・app.jsを読み込む。自作JSはOnsen UIより後。</td></tr><tr><td>ons-navigator / template</td><td>navigatorがlist.htmlを実体化する。templateは配置前のひな形で、詳細へ進んだときにdetail.htmlの要素が作られる。</td></tr><tr><td>initのリスナー</td><td>ページの要素が使える時点に、そのページのidを見てイベント登録や文字の設定を行う。</td></tr><tr><td>oshiItems / renderOshiList</td><td>配列の件数だけ固定の行構造を作る。名前やジャンルはtextContentへ入れ、文字をHTMLとして解釈しない。</td></tr><tr><td>openOshiDetail</td><td>pushPageのdataへ選んだデータを渡し、詳細のpage.dataで受け取る。現在のページと移動中の旗を調べ、連打でページを重ねない。</td></tr><tr><td>callback / 戻る</td><td>移動完了のcallbackで旗を戻す。ons-back-buttonはページを1つ戻す。</td></tr></tbody></table>
+<table><thead><tr><th>場所</th><th>処理と理由</th></tr></thead><tbody><tr><td>HTMLのhead</td><td>標準loader、Onsen UI 2.12.9のCSS・JavaScript、自作CSS・app.jsを読み込む。自作JSはOnsen UIより後。</td></tr><tr><td>ons-navigator / template</td><td>navigatorがlist.htmlを実体化する。templateは配置前のひな形で、詳細へ進んだときにdetail.htmlの要素が作られる。</td></tr><tr><td>initのリスナー</td><td>ページの要素が使える時点に、そのページのidを見てイベント登録や文字の設定を行う。</td></tr><tr><td>oshiItems / renderOshiList</td><td>配列の件数だけ固定の行構造を作る。名前や種類はtextContentへ入れ、文字をHTMLとして解釈しない。</td></tr><tr><td>openOshiDetail</td><td>pushPageのdataへ選んだデータを渡し、詳細のpage.dataで受け取る。現在のページと移動中の旗を調べ、連打でページを重ねない。</td></tr><tr><td>callback / 戻る</td><td>移動完了のcallbackで旗を戻す。ons-back-buttonはページを1つ戻す。</td></tr></tbody></table>
 <p>CSSはクラスで余白・色・カードの枠を対応させています。Onsen UIは同じHTMLへOSに合わせた部品のスタイルを適用します。今回も素のJavaScriptから使い、別のフレームワークは追加しません。</p>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎と同じ3ファイル構成ですが、操作する場所はMonaca クラウド IDEです。initはAndroidのビュー生成後の設定やiOSのviewDidLoadに相当するタイミングで、JavaScriptのaddEventListenerで受け取ります。pushPageのdataは、ネイティブアプリで次の画面へ値を渡す操作に対応します。まだ保存用の文字列には変換していません。</p></div>
 <details><summary>このSTEPの全コード（照合・合流用）</summary><div class="code-head">www/index.html · 全文</div>
@@ -49,7 +49,7 @@
   &lt;meta charset=&quot;utf-8&quot;&gt;
   &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;
   &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src * data: gap: content: https://ssl.gstatic.com; style-src * &#x27;unsafe-inline&#x27;; script-src * &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27;&quot;&gt;
-  &lt;title&gt;推しログ&lt;/title&gt;
+  &lt;title&gt;好きなものノート&lt;/title&gt;
   &lt;script src=&quot;components/loader.js&quot;&gt;&lt;/script&gt;
   &lt;link rel=&quot;stylesheet&quot; href=&quot;components/loader.css&quot;&gt;
   &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsenui.css&quot;&gt;
@@ -64,13 +64,13 @@
   &lt;template id=&quot;list.html&quot;&gt;
     &lt;ons-page id=&quot;page_list&quot;&gt;
       &lt;ons-toolbar&gt;
-        &lt;div class=&quot;center&quot;&gt;推しログ&lt;/div&gt;
+        &lt;div class=&quot;center&quot;&gt;好きなものノート&lt;/div&gt;
       &lt;/ons-toolbar&gt;
 
       &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p class=&quot;app-caption&quot;&gt;わたしの推し&lt;/p&gt;
+        &lt;p class=&quot;app-caption&quot;&gt;わたしの好きなもの&lt;/p&gt;
         &lt;h1 class=&quot;app-heading&quot;&gt;好きな理由を集めよう。&lt;/h1&gt;
-        &lt;p class=&quot;app-description&quot;&gt;学びや開発の中で見つけた、お気に入りの記録。&lt;/p&gt;
+        &lt;p class=&quot;app-description&quot;&gt;音楽、食べ物、場所。好きなものと理由の記録。&lt;/p&gt;
       &lt;/div&gt;
 
       &lt;ons-list id=&quot;list_oshi&quot;&gt;&lt;/ons-list&gt;
@@ -84,13 +84,13 @@
         &lt;div class=&quot;left&quot;&gt;
           &lt;ons-back-button&gt;戻る&lt;/ons-back-button&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;center&quot;&gt;推しの詳細&lt;/div&gt;
+        &lt;div class=&quot;center&quot;&gt;詳細&lt;/div&gt;
       &lt;/ons-toolbar&gt;
 
       &lt;div class=&quot;app-section&quot;&gt;
         &lt;p id=&quot;txt_detail_genre&quot; class=&quot;app-caption&quot;&gt;&lt;/p&gt;
         &lt;h1 id=&quot;txt_detail_name&quot; class=&quot;app-heading&quot;&gt;&lt;/h1&gt;
-        &lt;p class=&quot;app-label&quot;&gt;私の推しポイント・次に試したいこと&lt;/p&gt;
+        &lt;p class=&quot;app-label&quot;&gt;好きな理由&lt;/p&gt;
         &lt;p id=&quot;txt_detail_comment&quot; class=&quot;app-comment&quot;&gt;&lt;/p&gt;
       &lt;/div&gt;
     &lt;/ons-page&gt;
@@ -173,19 +173,19 @@
 
 let oshiItems = [
   {
-    name: &quot;NotebookLM&quot;,
-    genre: &quot;学習ツール&quot;,
-    comment: &quot;授業のノートをもとに、自分の言葉で説明できるまで質問しています。\n分からなかったことがつながる瞬間が好きです。&quot;
+    name: &quot;好きな音楽&quot;,
+    genre: &quot;音楽&quot;,
+    comment: &quot;通学中に聴くと、元気になります。&quot;
   },
   {
-    name: &quot;Android Studio / Xcode&quot;,
-    genre: &quot;開発ツール&quot;,
-    comment: &quot;Android StudioやXcodeで、思いついた画面を形にするのが好きです。\n次は自分が毎日使えるアプリを作ってみたいです。&quot;
+    name: &quot;カレー&quot;,
+    genre: &quot;食べ物&quot;,
+    comment: &quot;自分の好きな辛さを選べるところが好きです。&quot;
   },
   {
-    name: &quot;AIエージェントを使ったアプリ開発&quot;,
-    genre: &quot;気になる技術&quot;,
-    comment: &quot;AIエージェントと相談しながら、アプリを作る方法に興味があります。\n提案されたコードの理由を確かめ、自分でも直せるようになりたいです。&quot;
+    name: &quot;公園&quot;,
+    genre: &quot;場所&quot;,
+    comment: &quot;ゆっくり歩いて、気分を変えられます。&quot;
   }
 ];
 
@@ -265,11 +265,11 @@ function openOshiDetail(oshi) {
 }</code></pre></details>
 <div class="check"><label><input type="checkbox" data-check="oshi-save-00"><span>自分の1プロジェクトで3件の一覧・詳細・戻るを確認し、HTMLとJSの対応を追えた。</span></label></div></section>
 <section id="step-1"><p class="step-meta">STEP 01 · コマ5</p><h2>入力画面を作る</h2>
-<p>3ファイルをこのSTEPのコードへ更新します。HTMLに <code>add.html</code> のtemplateを加え、名前・ジャンルの <code>input</code> と、推しポイントの <code>textarea</code> を置きます。<code>label</code> のforと入力欄のidが対応します。</p>
+<p>3ファイルをこのSTEPのコードへ更新します。HTMLに <code>add.html</code> のtemplateを加え、名前・種類の <code>input</code> と、好きな理由の <code>textarea</code> を置きます。<code>label</code> のforと入力欄のidが対応します。</p>
 <p>CSSの <code>.app-input</code> は幅を100%にし、<code>box-sizing: border-box</code> でpaddingと枠をその幅の内側へ収めます。<code>font: inherit</code> で文字を周囲とそろえ、focusのoutlineで選択中の欄を見分けます。reset用のクラスは後の確認表示で使います。</p>
 <p>一覧の <code>btn_open_add</code> へopenAddPageを登録し、<code>pushPage("add.html", ...)</code> で入力画面へ進みます。詳細と同じ移動中の旗を共有するため、片方を開いている最中にもう片方は開きません。</p>
 <p>初期データは <code>createInitialItems</code> が新しい配列を返す形にまとめました。後で初期化したときにも同じ内容を作り直せるようにするためです。呼び出しのたびに新しい配列になる点を、returnの位置と一緒に読みます。</p>
-<ol><li>保存・再読み込み後に <code>推しを追加</code> を押します。</li><li>3つの欄へ文字を入力して、戻る操作をします。もう一度開くと新しい入力画面が作られ、欄は空に戻ります。</li><li>このSTEPでは <code>追加する</code> をdisabledにしてあります。まだクリック処理を付けていないため、押せない状態が正解です。</li></ol>
+<ol><li>保存・再読み込み後に <code>好きなものを追加</code> を押します。</li><li>3つの欄へ文字を入力して、戻る操作をします。もう一度開くと新しい入力画面が作られ、欄は空に戻ります。</li><li>このSTEPでは <code>追加する</code> をdisabledにしてあります。まだクリック処理を付けていないため、押せない状態が正解です。</li></ol>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎のinput・textarea・labelをそのまま使います。AndroidのEditText、iOSのUITextField・UITextViewと同じ役割です。画面を開く処理は詳細への移動と同じ形で、渡すデータが要らないためdataを省きます。createInitialItemsは、Java／Swiftでデータの配列を関数から返す書き方と対応します。</p></div>
 <details><summary>このSTEPの全コード（照合・合流用）</summary><div class="code-head">www/index.html · 全文</div>
 <pre id="code-01-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
@@ -278,7 +278,7 @@ function openOshiDetail(oshi) {
   &lt;meta charset=&quot;utf-8&quot;&gt;
   &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;
   &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src * data: gap: content: https://ssl.gstatic.com; style-src * &#x27;unsafe-inline&#x27;; script-src * &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27;&quot;&gt;
-  &lt;title&gt;推しログ&lt;/title&gt;
+  &lt;title&gt;好きなものノート&lt;/title&gt;
   &lt;script src=&quot;components/loader.js&quot;&gt;&lt;/script&gt;
   &lt;link rel=&quot;stylesheet&quot; href=&quot;components/loader.css&quot;&gt;
   &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsenui.css&quot;&gt;
@@ -293,14 +293,14 @@ function openOshiDetail(oshi) {
   &lt;template id=&quot;list.html&quot;&gt;
     &lt;ons-page id=&quot;page_list&quot;&gt;
       &lt;ons-toolbar&gt;
-        &lt;div class=&quot;center&quot;&gt;推しログ&lt;/div&gt;
+        &lt;div class=&quot;center&quot;&gt;好きなものノート&lt;/div&gt;
       &lt;/ons-toolbar&gt;
 
       &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p class=&quot;app-caption&quot;&gt;わたしの推し&lt;/p&gt;
+        &lt;p class=&quot;app-caption&quot;&gt;わたしの好きなもの&lt;/p&gt;
         &lt;h1 class=&quot;app-heading&quot;&gt;好きな理由を集めよう。&lt;/h1&gt;
-        &lt;p class=&quot;app-description&quot;&gt;学びや開発の中で見つけた、お気に入りの記録。&lt;/p&gt;
-        &lt;ons-button id=&quot;btn_open_add&quot; class=&quot;app-action&quot;&gt;推しを追加&lt;/ons-button&gt;
+        &lt;p class=&quot;app-description&quot;&gt;音楽、食べ物、場所。好きなものと理由の記録。&lt;/p&gt;
+        &lt;ons-button id=&quot;btn_open_add&quot; class=&quot;app-action&quot;&gt;好きなものを追加&lt;/ons-button&gt;
         &lt;p id=&quot;txt_storage&quot; class=&quot;app-message&quot; aria-live=&quot;polite&quot;&gt;&lt;/p&gt;
       &lt;/div&gt;
 
@@ -313,15 +313,15 @@ function openOshiDetail(oshi) {
     &lt;ons-page id=&quot;page_add&quot;&gt;
       &lt;ons-toolbar&gt;
         &lt;div class=&quot;left&quot;&gt;&lt;ons-back-button&gt;戻る&lt;/ons-back-button&gt;&lt;/div&gt;
-        &lt;div class=&quot;center&quot;&gt;推しを追加&lt;/div&gt;
+        &lt;div class=&quot;center&quot;&gt;好きなものを追加&lt;/div&gt;
       &lt;/ons-toolbar&gt;
       &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p class=&quot;app-description&quot;&gt;好きな理由や、次に試したいことを自分の言葉で残しましょう。&lt;/p&gt;
-        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_name&quot;&gt;推しの名前&lt;/label&gt;
-        &lt;input id=&quot;txt_input_name&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;60&quot; placeholder=&quot;例：ノートからアプリを作ること&quot;&gt;
-        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_genre&quot;&gt;ジャンル&lt;/label&gt;
-        &lt;input id=&quot;txt_input_genre&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;30&quot; placeholder=&quot;例：学び方&quot;&gt;
-        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_comment&quot;&gt;私の推しポイント・次に試したいこと&lt;/label&gt;
+        &lt;p class=&quot;app-description&quot;&gt;好きなものと、その理由を自分の言葉で残しましょう。&lt;/p&gt;
+        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_name&quot;&gt;名前&lt;/label&gt;
+        &lt;input id=&quot;txt_input_name&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;60&quot; placeholder=&quot;例：アイスクリーム&quot;&gt;
+        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_genre&quot;&gt;種類&lt;/label&gt;
+        &lt;input id=&quot;txt_input_genre&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;30&quot; placeholder=&quot;例：食べ物&quot;&gt;
+        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_comment&quot;&gt;好きな理由&lt;/label&gt;
         &lt;textarea id=&quot;txt_input_comment&quot; class=&quot;app-input&quot; rows=&quot;4&quot; maxlength=&quot;500&quot; placeholder=&quot;好きな理由をひとこと&quot;&gt;&lt;/textarea&gt;
         &lt;p id=&quot;txt_add_message&quot; class=&quot;app-message&quot; aria-live=&quot;polite&quot;&gt;&lt;/p&gt;
         &lt;ons-button id=&quot;btn_save_oshi&quot; disabled&gt;追加する&lt;/ons-button&gt;
@@ -336,13 +336,13 @@ function openOshiDetail(oshi) {
         &lt;div class=&quot;left&quot;&gt;
           &lt;ons-back-button&gt;戻る&lt;/ons-back-button&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;center&quot;&gt;推しの詳細&lt;/div&gt;
+        &lt;div class=&quot;center&quot;&gt;詳細&lt;/div&gt;
       &lt;/ons-toolbar&gt;
 
       &lt;div class=&quot;app-section&quot;&gt;
         &lt;p id=&quot;txt_detail_genre&quot; class=&quot;app-caption&quot;&gt;&lt;/p&gt;
         &lt;h1 id=&quot;txt_detail_name&quot; class=&quot;app-heading&quot;&gt;&lt;/h1&gt;
-        &lt;p class=&quot;app-label&quot;&gt;私の推しポイント・次に試したいこと&lt;/p&gt;
+        &lt;p class=&quot;app-label&quot;&gt;好きな理由&lt;/p&gt;
         &lt;p id=&quot;txt_detail_comment&quot; class=&quot;app-comment&quot;&gt;&lt;/p&gt;
       &lt;/div&gt;
     &lt;/ons-page&gt;
@@ -475,19 +475,19 @@ label.app-label {
 function createInitialItems() {
   return [
     {
-      name: &quot;NotebookLM&quot;,
-      genre: &quot;学習ツール&quot;,
-      comment: &quot;授業のノートをもとに、自分の言葉で説明できるまで質問しています。\n分からなかったことがつながる瞬間が好きです。&quot;
+      name: &quot;好きな音楽&quot;,
+      genre: &quot;音楽&quot;,
+      comment: &quot;通学中に聴くと、元気になります。&quot;
     },
     {
-      name: &quot;Android Studio / Xcode&quot;,
-      genre: &quot;開発ツール&quot;,
-      comment: &quot;Android StudioやXcodeで、思いついた画面を形にするのが好きです。\n次は自分が毎日使えるアプリを作ってみたいです。&quot;
+      name: &quot;カレー&quot;,
+      genre: &quot;食べ物&quot;,
+      comment: &quot;自分の好きな辛さを選べるところが好きです。&quot;
     },
     {
-      name: &quot;AIエージェントを使ったアプリ開発&quot;,
-      genre: &quot;気になる技術&quot;,
-      comment: &quot;AIエージェントと相談しながら、アプリを作る方法に興味があります。\n提案されたコードの理由を確かめ、自分でも直せるようになりたいです。&quot;
+      name: &quot;公園&quot;,
+      genre: &quot;場所&quot;,
+      comment: &quot;ゆっくり歩いて、気分を変えられます。&quot;
     }
   ];
 }
@@ -595,7 +595,7 @@ function openAddPage() {
   &lt;meta charset=&quot;utf-8&quot;&gt;
   &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;
   &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src * data: gap: content: https://ssl.gstatic.com; style-src * &#x27;unsafe-inline&#x27;; script-src * &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27;&quot;&gt;
-  &lt;title&gt;推しログ&lt;/title&gt;
+  &lt;title&gt;好きなものノート&lt;/title&gt;
   &lt;script src=&quot;components/loader.js&quot;&gt;&lt;/script&gt;
   &lt;link rel=&quot;stylesheet&quot; href=&quot;components/loader.css&quot;&gt;
   &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsenui.css&quot;&gt;
@@ -610,14 +610,14 @@ function openAddPage() {
   &lt;template id=&quot;list.html&quot;&gt;
     &lt;ons-page id=&quot;page_list&quot;&gt;
       &lt;ons-toolbar&gt;
-        &lt;div class=&quot;center&quot;&gt;推しログ&lt;/div&gt;
+        &lt;div class=&quot;center&quot;&gt;好きなものノート&lt;/div&gt;
       &lt;/ons-toolbar&gt;
 
       &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p class=&quot;app-caption&quot;&gt;わたしの推し&lt;/p&gt;
+        &lt;p class=&quot;app-caption&quot;&gt;わたしの好きなもの&lt;/p&gt;
         &lt;h1 class=&quot;app-heading&quot;&gt;好きな理由を集めよう。&lt;/h1&gt;
-        &lt;p class=&quot;app-description&quot;&gt;学びや開発の中で見つけた、お気に入りの記録。&lt;/p&gt;
-        &lt;ons-button id=&quot;btn_open_add&quot; class=&quot;app-action&quot;&gt;推しを追加&lt;/ons-button&gt;
+        &lt;p class=&quot;app-description&quot;&gt;音楽、食べ物、場所。好きなものと理由の記録。&lt;/p&gt;
+        &lt;ons-button id=&quot;btn_open_add&quot; class=&quot;app-action&quot;&gt;好きなものを追加&lt;/ons-button&gt;
         &lt;p id=&quot;txt_storage&quot; class=&quot;app-message&quot; aria-live=&quot;polite&quot;&gt;&lt;/p&gt;
       &lt;/div&gt;
 
@@ -630,15 +630,15 @@ function openAddPage() {
     &lt;ons-page id=&quot;page_add&quot;&gt;
       &lt;ons-toolbar&gt;
         &lt;div class=&quot;left&quot;&gt;&lt;ons-back-button&gt;戻る&lt;/ons-back-button&gt;&lt;/div&gt;
-        &lt;div class=&quot;center&quot;&gt;推しを追加&lt;/div&gt;
+        &lt;div class=&quot;center&quot;&gt;好きなものを追加&lt;/div&gt;
       &lt;/ons-toolbar&gt;
       &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p class=&quot;app-description&quot;&gt;好きな理由や、次に試したいことを自分の言葉で残しましょう。&lt;/p&gt;
-        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_name&quot;&gt;推しの名前&lt;/label&gt;
-        &lt;input id=&quot;txt_input_name&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;60&quot; placeholder=&quot;例：ノートからアプリを作ること&quot;&gt;
-        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_genre&quot;&gt;ジャンル&lt;/label&gt;
-        &lt;input id=&quot;txt_input_genre&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;30&quot; placeholder=&quot;例：学び方&quot;&gt;
-        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_comment&quot;&gt;私の推しポイント・次に試したいこと&lt;/label&gt;
+        &lt;p class=&quot;app-description&quot;&gt;好きなものと、その理由を自分の言葉で残しましょう。&lt;/p&gt;
+        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_name&quot;&gt;名前&lt;/label&gt;
+        &lt;input id=&quot;txt_input_name&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;60&quot; placeholder=&quot;例：アイスクリーム&quot;&gt;
+        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_genre&quot;&gt;種類&lt;/label&gt;
+        &lt;input id=&quot;txt_input_genre&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;30&quot; placeholder=&quot;例：食べ物&quot;&gt;
+        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_comment&quot;&gt;好きな理由&lt;/label&gt;
         &lt;textarea id=&quot;txt_input_comment&quot; class=&quot;app-input&quot; rows=&quot;4&quot; maxlength=&quot;500&quot; placeholder=&quot;好きな理由をひとこと&quot;&gt;&lt;/textarea&gt;
         &lt;p id=&quot;txt_add_message&quot; class=&quot;app-message&quot; aria-live=&quot;polite&quot;&gt;&lt;/p&gt;
         &lt;ons-button id=&quot;btn_save_oshi&quot;&gt;追加する&lt;/ons-button&gt;
@@ -653,13 +653,13 @@ function openAddPage() {
         &lt;div class=&quot;left&quot;&gt;
           &lt;ons-back-button&gt;戻る&lt;/ons-back-button&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;center&quot;&gt;推しの詳細&lt;/div&gt;
+        &lt;div class=&quot;center&quot;&gt;詳細&lt;/div&gt;
       &lt;/ons-toolbar&gt;
 
       &lt;div class=&quot;app-section&quot;&gt;
         &lt;p id=&quot;txt_detail_genre&quot; class=&quot;app-caption&quot;&gt;&lt;/p&gt;
         &lt;h1 id=&quot;txt_detail_name&quot; class=&quot;app-heading&quot;&gt;&lt;/h1&gt;
-        &lt;p class=&quot;app-label&quot;&gt;私の推しポイント・次に試したいこと&lt;/p&gt;
+        &lt;p class=&quot;app-label&quot;&gt;好きな理由&lt;/p&gt;
         &lt;p id=&quot;txt_detail_comment&quot; class=&quot;app-comment&quot;&gt;&lt;/p&gt;
       &lt;/div&gt;
     &lt;/ons-page&gt;
@@ -792,19 +792,19 @@ label.app-label {
 function createInitialItems() {
   return [
     {
-      name: &quot;NotebookLM&quot;,
-      genre: &quot;学習ツール&quot;,
-      comment: &quot;授業のノートをもとに、自分の言葉で説明できるまで質問しています。\n分からなかったことがつながる瞬間が好きです。&quot;
+      name: &quot;好きな音楽&quot;,
+      genre: &quot;音楽&quot;,
+      comment: &quot;通学中に聴くと、元気になります。&quot;
     },
     {
-      name: &quot;Android Studio / Xcode&quot;,
-      genre: &quot;開発ツール&quot;,
-      comment: &quot;Android StudioやXcodeで、思いついた画面を形にするのが好きです。\n次は自分が毎日使えるアプリを作ってみたいです。&quot;
+      name: &quot;カレー&quot;,
+      genre: &quot;食べ物&quot;,
+      comment: &quot;自分の好きな辛さを選べるところが好きです。&quot;
     },
     {
-      name: &quot;AIエージェントを使ったアプリ開発&quot;,
-      genre: &quot;気になる技術&quot;,
-      comment: &quot;AIエージェントと相談しながら、アプリを作る方法に興味があります。\n提案されたコードの理由を確かめ、自分でも直せるようになりたいです。&quot;
+      name: &quot;公園&quot;,
+      genre: &quot;場所&quot;,
+      comment: &quot;ゆっくり歩いて、気分を変えられます。&quot;
     }
   ];
 }
@@ -913,7 +913,7 @@ function addOshi() {
   const genre = document.getElementById(&quot;txt_input_genre&quot;).value.trim();
   const comment = document.getElementById(&quot;txt_input_comment&quot;).value.trim();
   if (name === &quot;&quot; || genre === &quot;&quot; || comment === &quot;&quot;) {
-    txtMessage.textContent = &quot;名前・ジャンル・推しポイントをすべて入力してください。&quot;;
+    txtMessage.textContent = &quot;名前・種類・好きな理由をすべて入力してください。&quot;;
     return;
   }
   txtMessage.textContent = &quot;入力を確認しました：&quot; + name;
@@ -923,7 +923,7 @@ function addOshi() {
 <p>JSのaddOshiで、入力確認だけの行を、配列へ追加して一覧を描き直す処理へ替えます。<code>oshiItems.push({ name: name, genre: genre, comment: comment })</code> の左側はデータの項目名、右側は入力欄から読んだ変数です。</p>
 <p>次にrenderOshiListを呼びます。この関数はinnerHTMLで行を置き直した後に、textContentの設定とクリックの登録をやり直します。古い行に登録したイベントは、新しい行へ自動では移らないためです。</p>
 <p>最後に <code>popPage()</code> で入力画面を閉じます。一覧はその下に残っているので、新しい行が見えます。追加を始める直前にボタンを無効にしておくことで、戻る途中の連続操作でも同じ内容を二重に追加しません。</p>
-<ol><li>新しい推しを1件入力して追加します。一覧が4件になったことを確認します。</li><li>追加した行を押し、名前・ジャンル・推しポイントが入力どおりか確かめます。推しポイントに改行を入れた場合も確認します。</li><li>戻ってからプレビューを再読み込みします。配列はソースの初期データから作り直されるため、3件に戻ります。今日はこれで正解です。</li></ol>
+<ol><li>新しい好きなものを1件入力して追加します。一覧が4件になったことを確認します。</li><li>追加した行を押し、名前・種類・好きな理由が入力どおりか確かめます。好きな理由に改行を入れた場合も確認します。</li><li>戻ってからプレビューを再読み込みします。配列はソースの初期データから作り直されるため、3件に戻ります。今日はこれで正解です。</li></ol>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>pushはJavaのArrayList.addやSwiftのArray.appendと同じ追加です。popPageはiOSで前の画面へ戻す操作に対応します。ここで変えたのは実行中の配列だけなので、ファイルに文字を保存したときやSharedPreferences／UserDefaultsへ書いたときとは残り方が異なります。</p></div>
 <details><summary>このSTEPの全コード（照合・合流用）</summary><div class="code-head">www/index.html · 全文</div>
 <pre id="code-03-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
@@ -932,7 +932,7 @@ function addOshi() {
   &lt;meta charset=&quot;utf-8&quot;&gt;
   &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;
   &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src * data: gap: content: https://ssl.gstatic.com; style-src * &#x27;unsafe-inline&#x27;; script-src * &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27;&quot;&gt;
-  &lt;title&gt;推しログ&lt;/title&gt;
+  &lt;title&gt;好きなものノート&lt;/title&gt;
   &lt;script src=&quot;components/loader.js&quot;&gt;&lt;/script&gt;
   &lt;link rel=&quot;stylesheet&quot; href=&quot;components/loader.css&quot;&gt;
   &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsenui.css&quot;&gt;
@@ -947,14 +947,14 @@ function addOshi() {
   &lt;template id=&quot;list.html&quot;&gt;
     &lt;ons-page id=&quot;page_list&quot;&gt;
       &lt;ons-toolbar&gt;
-        &lt;div class=&quot;center&quot;&gt;推しログ&lt;/div&gt;
+        &lt;div class=&quot;center&quot;&gt;好きなものノート&lt;/div&gt;
       &lt;/ons-toolbar&gt;
 
       &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p class=&quot;app-caption&quot;&gt;わたしの推し&lt;/p&gt;
+        &lt;p class=&quot;app-caption&quot;&gt;わたしの好きなもの&lt;/p&gt;
         &lt;h1 class=&quot;app-heading&quot;&gt;好きな理由を集めよう。&lt;/h1&gt;
-        &lt;p class=&quot;app-description&quot;&gt;学びや開発の中で見つけた、お気に入りの記録。&lt;/p&gt;
-        &lt;ons-button id=&quot;btn_open_add&quot; class=&quot;app-action&quot;&gt;推しを追加&lt;/ons-button&gt;
+        &lt;p class=&quot;app-description&quot;&gt;音楽、食べ物、場所。好きなものと理由の記録。&lt;/p&gt;
+        &lt;ons-button id=&quot;btn_open_add&quot; class=&quot;app-action&quot;&gt;好きなものを追加&lt;/ons-button&gt;
         &lt;p id=&quot;txt_storage&quot; class=&quot;app-message&quot; aria-live=&quot;polite&quot;&gt;&lt;/p&gt;
       &lt;/div&gt;
 
@@ -967,15 +967,15 @@ function addOshi() {
     &lt;ons-page id=&quot;page_add&quot;&gt;
       &lt;ons-toolbar&gt;
         &lt;div class=&quot;left&quot;&gt;&lt;ons-back-button&gt;戻る&lt;/ons-back-button&gt;&lt;/div&gt;
-        &lt;div class=&quot;center&quot;&gt;推しを追加&lt;/div&gt;
+        &lt;div class=&quot;center&quot;&gt;好きなものを追加&lt;/div&gt;
       &lt;/ons-toolbar&gt;
       &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p class=&quot;app-description&quot;&gt;好きな理由や、次に試したいことを自分の言葉で残しましょう。&lt;/p&gt;
-        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_name&quot;&gt;推しの名前&lt;/label&gt;
-        &lt;input id=&quot;txt_input_name&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;60&quot; placeholder=&quot;例：ノートからアプリを作ること&quot;&gt;
-        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_genre&quot;&gt;ジャンル&lt;/label&gt;
-        &lt;input id=&quot;txt_input_genre&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;30&quot; placeholder=&quot;例：学び方&quot;&gt;
-        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_comment&quot;&gt;私の推しポイント・次に試したいこと&lt;/label&gt;
+        &lt;p class=&quot;app-description&quot;&gt;好きなものと、その理由を自分の言葉で残しましょう。&lt;/p&gt;
+        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_name&quot;&gt;名前&lt;/label&gt;
+        &lt;input id=&quot;txt_input_name&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;60&quot; placeholder=&quot;例：アイスクリーム&quot;&gt;
+        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_genre&quot;&gt;種類&lt;/label&gt;
+        &lt;input id=&quot;txt_input_genre&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;30&quot; placeholder=&quot;例：食べ物&quot;&gt;
+        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_comment&quot;&gt;好きな理由&lt;/label&gt;
         &lt;textarea id=&quot;txt_input_comment&quot; class=&quot;app-input&quot; rows=&quot;4&quot; maxlength=&quot;500&quot; placeholder=&quot;好きな理由をひとこと&quot;&gt;&lt;/textarea&gt;
         &lt;p id=&quot;txt_add_message&quot; class=&quot;app-message&quot; aria-live=&quot;polite&quot;&gt;&lt;/p&gt;
         &lt;ons-button id=&quot;btn_save_oshi&quot;&gt;追加する&lt;/ons-button&gt;
@@ -990,13 +990,13 @@ function addOshi() {
         &lt;div class=&quot;left&quot;&gt;
           &lt;ons-back-button&gt;戻る&lt;/ons-back-button&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;center&quot;&gt;推しの詳細&lt;/div&gt;
+        &lt;div class=&quot;center&quot;&gt;詳細&lt;/div&gt;
       &lt;/ons-toolbar&gt;
 
       &lt;div class=&quot;app-section&quot;&gt;
         &lt;p id=&quot;txt_detail_genre&quot; class=&quot;app-caption&quot;&gt;&lt;/p&gt;
         &lt;h1 id=&quot;txt_detail_name&quot; class=&quot;app-heading&quot;&gt;&lt;/h1&gt;
-        &lt;p class=&quot;app-label&quot;&gt;私の推しポイント・次に試したいこと&lt;/p&gt;
+        &lt;p class=&quot;app-label&quot;&gt;好きな理由&lt;/p&gt;
         &lt;p id=&quot;txt_detail_comment&quot; class=&quot;app-comment&quot;&gt;&lt;/p&gt;
       &lt;/div&gt;
     &lt;/ons-page&gt;
@@ -1129,19 +1129,19 @@ label.app-label {
 function createInitialItems() {
   return [
     {
-      name: &quot;NotebookLM&quot;,
-      genre: &quot;学習ツール&quot;,
-      comment: &quot;授業のノートをもとに、自分の言葉で説明できるまで質問しています。\n分からなかったことがつながる瞬間が好きです。&quot;
+      name: &quot;好きな音楽&quot;,
+      genre: &quot;音楽&quot;,
+      comment: &quot;通学中に聴くと、元気になります。&quot;
     },
     {
-      name: &quot;Android Studio / Xcode&quot;,
-      genre: &quot;開発ツール&quot;,
-      comment: &quot;Android StudioやXcodeで、思いついた画面を形にするのが好きです。\n次は自分が毎日使えるアプリを作ってみたいです。&quot;
+      name: &quot;カレー&quot;,
+      genre: &quot;食べ物&quot;,
+      comment: &quot;自分の好きな辛さを選べるところが好きです。&quot;
     },
     {
-      name: &quot;AIエージェントを使ったアプリ開発&quot;,
-      genre: &quot;気になる技術&quot;,
-      comment: &quot;AIエージェントと相談しながら、アプリを作る方法に興味があります。\n提案されたコードの理由を確かめ、自分でも直せるようになりたいです。&quot;
+      name: &quot;公園&quot;,
+      genre: &quot;場所&quot;,
+      comment: &quot;ゆっくり歩いて、気分を変えられます。&quot;
     }
   ];
 }
@@ -1250,20 +1250,20 @@ function addOshi() {
   const genre = document.getElementById(&quot;txt_input_genre&quot;).value.trim();
   const comment = document.getElementById(&quot;txt_input_comment&quot;).value.trim();
   if (name === &quot;&quot; || genre === &quot;&quot; || comment === &quot;&quot;) {
-    txtMessage.textContent = &quot;名前・ジャンル・推しポイントをすべて入力してください。&quot;;
+    txtMessage.textContent = &quot;名前・種類・好きな理由をすべて入力してください。&quot;;
     return;
   }
   btnSave.disabled = true;
   oshiItems.push({ name: name, genre: genre, comment: comment });
   renderOshiList();
-  document.getElementById(&quot;txt_selected&quot;).textContent = &quot;追加した推し：&quot; + name;
+  document.getElementById(&quot;txt_selected&quot;).textContent = &quot;追加したもの：&quot; + name;
   document.getElementById(&quot;nav_app&quot;).popPage();
 }</code></pre></details>
 <div class="check"><label><input type="checkbox" data-check="oshi-save-03"><span>追加した行の詳細が入力と一致し、再読み込みでは初期データへ戻ることを確認できた。</span></label></div></section>
 <section id="step-4"><p class="step-meta">STEP 04 · コマ5</p><h2>確認とアレンジ</h2>
 <p>今日の終わりは、作った範囲を使って自分の表現に変えます。コードはSTEP 03の状態です。下の全コードは照合用で、自分の変更を無条件に貼り戻すためのものではありません。</p>
-<table><thead><tr><th>変える場所</th><th>変わること</th></tr></thead><tbody><tr><td>HTMLのplaceholder</td><td>入力前に見える記入例。</td></tr><tr><td>CSSのapp-inputの枠色・padding</td><td>入力欄の見た目と内側の余白。</td></tr><tr><td>JSのcreateInitialItems</td><td>再読み込み時に表示される自分の推しと理由。</td></tr></tbody></table>
-<p>入力例には、自分が好きな学び方や、次に試したいアプリ作りの方法を使えます。ほかの人の個人情報や、共有したくない内容は例に入れません。名前だけでなく、なぜ好きなのかを自分の言葉にしましょう。</p>
+<table><thead><tr><th>変える場所</th><th>変わること</th></tr></thead><tbody><tr><td>HTMLのplaceholder</td><td>入力前に見える記入例。</td></tr><tr><td>CSSのapp-inputの枠色・padding</td><td>入力欄の見た目と内側の余白。</td></tr><tr><td>JSのcreateInitialItems</td><td>再読み込み時に表示される自分の好きなものと理由。</td></tr></tbody></table>
+<p>入力例には、好きな音楽や食べ物、場所を使えます。ほかの人の個人情報や、共有したくない内容は例に入れません。名前だけでなく、なぜ好きなのかを自分の言葉にしましょう。</p>
 <p>1か所変えたら保存・再読み込みし、入力・追加・詳細・戻るをもう一度試します。変えたファイル名と、画面のどこが変わったかを控えます。</p>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>HTMLは構造と記入例、CSSは装飾、JavaScriptはデータと動きというWeb基礎の役割分担を使います。画面に入力した値と、ソースの初期データの違いを、再読み込み後の結果で見分けます。</p></div>
 <details><summary>このSTEPの全コード（照合・合流用）</summary><div class="code-head">www/index.html · 全文</div>
@@ -1273,7 +1273,7 @@ function addOshi() {
   &lt;meta charset=&quot;utf-8&quot;&gt;
   &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;
   &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src * data: gap: content: https://ssl.gstatic.com; style-src * &#x27;unsafe-inline&#x27;; script-src * &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27;&quot;&gt;
-  &lt;title&gt;推しログ&lt;/title&gt;
+  &lt;title&gt;好きなものノート&lt;/title&gt;
   &lt;script src=&quot;components/loader.js&quot;&gt;&lt;/script&gt;
   &lt;link rel=&quot;stylesheet&quot; href=&quot;components/loader.css&quot;&gt;
   &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsenui.css&quot;&gt;
@@ -1288,14 +1288,14 @@ function addOshi() {
   &lt;template id=&quot;list.html&quot;&gt;
     &lt;ons-page id=&quot;page_list&quot;&gt;
       &lt;ons-toolbar&gt;
-        &lt;div class=&quot;center&quot;&gt;推しログ&lt;/div&gt;
+        &lt;div class=&quot;center&quot;&gt;好きなものノート&lt;/div&gt;
       &lt;/ons-toolbar&gt;
 
       &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p class=&quot;app-caption&quot;&gt;わたしの推し&lt;/p&gt;
+        &lt;p class=&quot;app-caption&quot;&gt;わたしの好きなもの&lt;/p&gt;
         &lt;h1 class=&quot;app-heading&quot;&gt;好きな理由を集めよう。&lt;/h1&gt;
-        &lt;p class=&quot;app-description&quot;&gt;学びや開発の中で見つけた、お気に入りの記録。&lt;/p&gt;
-        &lt;ons-button id=&quot;btn_open_add&quot; class=&quot;app-action&quot;&gt;推しを追加&lt;/ons-button&gt;
+        &lt;p class=&quot;app-description&quot;&gt;音楽、食べ物、場所。好きなものと理由の記録。&lt;/p&gt;
+        &lt;ons-button id=&quot;btn_open_add&quot; class=&quot;app-action&quot;&gt;好きなものを追加&lt;/ons-button&gt;
         &lt;p id=&quot;txt_storage&quot; class=&quot;app-message&quot; aria-live=&quot;polite&quot;&gt;&lt;/p&gt;
       &lt;/div&gt;
 
@@ -1308,15 +1308,15 @@ function addOshi() {
     &lt;ons-page id=&quot;page_add&quot;&gt;
       &lt;ons-toolbar&gt;
         &lt;div class=&quot;left&quot;&gt;&lt;ons-back-button&gt;戻る&lt;/ons-back-button&gt;&lt;/div&gt;
-        &lt;div class=&quot;center&quot;&gt;推しを追加&lt;/div&gt;
+        &lt;div class=&quot;center&quot;&gt;好きなものを追加&lt;/div&gt;
       &lt;/ons-toolbar&gt;
       &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p class=&quot;app-description&quot;&gt;好きな理由や、次に試したいことを自分の言葉で残しましょう。&lt;/p&gt;
-        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_name&quot;&gt;推しの名前&lt;/label&gt;
-        &lt;input id=&quot;txt_input_name&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;60&quot; placeholder=&quot;例：ノートからアプリを作ること&quot;&gt;
-        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_genre&quot;&gt;ジャンル&lt;/label&gt;
-        &lt;input id=&quot;txt_input_genre&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;30&quot; placeholder=&quot;例：学び方&quot;&gt;
-        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_comment&quot;&gt;私の推しポイント・次に試したいこと&lt;/label&gt;
+        &lt;p class=&quot;app-description&quot;&gt;好きなものと、その理由を自分の言葉で残しましょう。&lt;/p&gt;
+        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_name&quot;&gt;名前&lt;/label&gt;
+        &lt;input id=&quot;txt_input_name&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;60&quot; placeholder=&quot;例：アイスクリーム&quot;&gt;
+        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_genre&quot;&gt;種類&lt;/label&gt;
+        &lt;input id=&quot;txt_input_genre&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;30&quot; placeholder=&quot;例：食べ物&quot;&gt;
+        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_comment&quot;&gt;好きな理由&lt;/label&gt;
         &lt;textarea id=&quot;txt_input_comment&quot; class=&quot;app-input&quot; rows=&quot;4&quot; maxlength=&quot;500&quot; placeholder=&quot;好きな理由をひとこと&quot;&gt;&lt;/textarea&gt;
         &lt;p id=&quot;txt_add_message&quot; class=&quot;app-message&quot; aria-live=&quot;polite&quot;&gt;&lt;/p&gt;
         &lt;ons-button id=&quot;btn_save_oshi&quot;&gt;追加する&lt;/ons-button&gt;
@@ -1331,13 +1331,13 @@ function addOshi() {
         &lt;div class=&quot;left&quot;&gt;
           &lt;ons-back-button&gt;戻る&lt;/ons-back-button&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;center&quot;&gt;推しの詳細&lt;/div&gt;
+        &lt;div class=&quot;center&quot;&gt;詳細&lt;/div&gt;
       &lt;/ons-toolbar&gt;
 
       &lt;div class=&quot;app-section&quot;&gt;
         &lt;p id=&quot;txt_detail_genre&quot; class=&quot;app-caption&quot;&gt;&lt;/p&gt;
         &lt;h1 id=&quot;txt_detail_name&quot; class=&quot;app-heading&quot;&gt;&lt;/h1&gt;
-        &lt;p class=&quot;app-label&quot;&gt;私の推しポイント・次に試したいこと&lt;/p&gt;
+        &lt;p class=&quot;app-label&quot;&gt;好きな理由&lt;/p&gt;
         &lt;p id=&quot;txt_detail_comment&quot; class=&quot;app-comment&quot;&gt;&lt;/p&gt;
       &lt;/div&gt;
     &lt;/ons-page&gt;
@@ -1470,19 +1470,19 @@ label.app-label {
 function createInitialItems() {
   return [
     {
-      name: &quot;NotebookLM&quot;,
-      genre: &quot;学習ツール&quot;,
-      comment: &quot;授業のノートをもとに、自分の言葉で説明できるまで質問しています。\n分からなかったことがつながる瞬間が好きです。&quot;
+      name: &quot;好きな音楽&quot;,
+      genre: &quot;音楽&quot;,
+      comment: &quot;通学中に聴くと、元気になります。&quot;
     },
     {
-      name: &quot;Android Studio / Xcode&quot;,
-      genre: &quot;開発ツール&quot;,
-      comment: &quot;Android StudioやXcodeで、思いついた画面を形にするのが好きです。\n次は自分が毎日使えるアプリを作ってみたいです。&quot;
+      name: &quot;カレー&quot;,
+      genre: &quot;食べ物&quot;,
+      comment: &quot;自分の好きな辛さを選べるところが好きです。&quot;
     },
     {
-      name: &quot;AIエージェントを使ったアプリ開発&quot;,
-      genre: &quot;気になる技術&quot;,
-      comment: &quot;AIエージェントと相談しながら、アプリを作る方法に興味があります。\n提案されたコードの理由を確かめ、自分でも直せるようになりたいです。&quot;
+      name: &quot;公園&quot;,
+      genre: &quot;場所&quot;,
+      comment: &quot;ゆっくり歩いて、気分を変えられます。&quot;
     }
   ];
 }
@@ -1591,13 +1591,13 @@ function addOshi() {
   const genre = document.getElementById(&quot;txt_input_genre&quot;).value.trim();
   const comment = document.getElementById(&quot;txt_input_comment&quot;).value.trim();
   if (name === &quot;&quot; || genre === &quot;&quot; || comment === &quot;&quot;) {
-    txtMessage.textContent = &quot;名前・ジャンル・推しポイントをすべて入力してください。&quot;;
+    txtMessage.textContent = &quot;名前・種類・好きな理由をすべて入力してください。&quot;;
     return;
   }
   btnSave.disabled = true;
   oshiItems.push({ name: name, genre: genre, comment: comment });
   renderOshiList();
-  document.getElementById(&quot;txt_selected&quot;).textContent = &quot;追加した推し：&quot; + name;
+  document.getElementById(&quot;txt_selected&quot;).textContent = &quot;追加したもの：&quot; + name;
   document.getElementById(&quot;nav_app&quot;).popPage();
 }</code></pre></details>
 <div class="check"><label><input type="checkbox" data-check="oshi-save-04"><span>アレンジした場所と結果を説明でき、追加・詳細・戻るが引き続き動いた。</span></label></div></section>
@@ -1609,7 +1609,7 @@ function addOshi() {
   &lt;meta charset=&quot;utf-8&quot;&gt;
   &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;
   &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src * data: gap: content: https://ssl.gstatic.com; style-src * &#x27;unsafe-inline&#x27;; script-src * &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27;&quot;&gt;
-  &lt;title&gt;推しログ&lt;/title&gt;
+  &lt;title&gt;好きなものノート&lt;/title&gt;
   &lt;script src=&quot;components/loader.js&quot;&gt;&lt;/script&gt;
   &lt;link rel=&quot;stylesheet&quot; href=&quot;components/loader.css&quot;&gt;
   &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsenui.css&quot;&gt;
@@ -1624,14 +1624,14 @@ function addOshi() {
   &lt;template id=&quot;list.html&quot;&gt;
     &lt;ons-page id=&quot;page_list&quot;&gt;
       &lt;ons-toolbar&gt;
-        &lt;div class=&quot;center&quot;&gt;推しログ&lt;/div&gt;
+        &lt;div class=&quot;center&quot;&gt;好きなものノート&lt;/div&gt;
       &lt;/ons-toolbar&gt;
 
       &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p class=&quot;app-caption&quot;&gt;わたしの推し&lt;/p&gt;
+        &lt;p class=&quot;app-caption&quot;&gt;わたしの好きなもの&lt;/p&gt;
         &lt;h1 class=&quot;app-heading&quot;&gt;好きな理由を集めよう。&lt;/h1&gt;
-        &lt;p class=&quot;app-description&quot;&gt;学びや開発の中で見つけた、お気に入りの記録。&lt;/p&gt;
-        &lt;ons-button id=&quot;btn_open_add&quot; class=&quot;app-action&quot;&gt;推しを追加&lt;/ons-button&gt;
+        &lt;p class=&quot;app-description&quot;&gt;音楽、食べ物、場所。好きなものと理由の記録。&lt;/p&gt;
+        &lt;ons-button id=&quot;btn_open_add&quot; class=&quot;app-action&quot;&gt;好きなものを追加&lt;/ons-button&gt;
         &lt;p id=&quot;txt_storage&quot; class=&quot;app-message&quot; aria-live=&quot;polite&quot;&gt;&lt;/p&gt;
       &lt;/div&gt;
 
@@ -1644,15 +1644,15 @@ function addOshi() {
     &lt;ons-page id=&quot;page_add&quot;&gt;
       &lt;ons-toolbar&gt;
         &lt;div class=&quot;left&quot;&gt;&lt;ons-back-button&gt;戻る&lt;/ons-back-button&gt;&lt;/div&gt;
-        &lt;div class=&quot;center&quot;&gt;推しを追加&lt;/div&gt;
+        &lt;div class=&quot;center&quot;&gt;好きなものを追加&lt;/div&gt;
       &lt;/ons-toolbar&gt;
       &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p class=&quot;app-description&quot;&gt;好きな理由や、次に試したいことを自分の言葉で残しましょう。&lt;/p&gt;
-        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_name&quot;&gt;推しの名前&lt;/label&gt;
-        &lt;input id=&quot;txt_input_name&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;60&quot; placeholder=&quot;例：ノートからアプリを作ること&quot;&gt;
-        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_genre&quot;&gt;ジャンル&lt;/label&gt;
-        &lt;input id=&quot;txt_input_genre&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;30&quot; placeholder=&quot;例：学び方&quot;&gt;
-        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_comment&quot;&gt;私の推しポイント・次に試したいこと&lt;/label&gt;
+        &lt;p class=&quot;app-description&quot;&gt;好きなものと、その理由を自分の言葉で残しましょう。&lt;/p&gt;
+        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_name&quot;&gt;名前&lt;/label&gt;
+        &lt;input id=&quot;txt_input_name&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;60&quot; placeholder=&quot;例：アイスクリーム&quot;&gt;
+        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_genre&quot;&gt;種類&lt;/label&gt;
+        &lt;input id=&quot;txt_input_genre&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;30&quot; placeholder=&quot;例：食べ物&quot;&gt;
+        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_comment&quot;&gt;好きな理由&lt;/label&gt;
         &lt;textarea id=&quot;txt_input_comment&quot; class=&quot;app-input&quot; rows=&quot;4&quot; maxlength=&quot;500&quot; placeholder=&quot;好きな理由をひとこと&quot;&gt;&lt;/textarea&gt;
         &lt;p id=&quot;txt_add_message&quot; class=&quot;app-message&quot; aria-live=&quot;polite&quot;&gt;&lt;/p&gt;
         &lt;ons-button id=&quot;btn_save_oshi&quot;&gt;追加する&lt;/ons-button&gt;
@@ -1667,13 +1667,13 @@ function addOshi() {
         &lt;div class=&quot;left&quot;&gt;
           &lt;ons-back-button&gt;戻る&lt;/ons-back-button&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;center&quot;&gt;推しの詳細&lt;/div&gt;
+        &lt;div class=&quot;center&quot;&gt;詳細&lt;/div&gt;
       &lt;/ons-toolbar&gt;
 
       &lt;div class=&quot;app-section&quot;&gt;
         &lt;p id=&quot;txt_detail_genre&quot; class=&quot;app-caption&quot;&gt;&lt;/p&gt;
         &lt;h1 id=&quot;txt_detail_name&quot; class=&quot;app-heading&quot;&gt;&lt;/h1&gt;
-        &lt;p class=&quot;app-label&quot;&gt;私の推しポイント・次に試したいこと&lt;/p&gt;
+        &lt;p class=&quot;app-label&quot;&gt;好きな理由&lt;/p&gt;
         &lt;p id=&quot;txt_detail_comment&quot; class=&quot;app-comment&quot;&gt;&lt;/p&gt;
       &lt;/div&gt;
     &lt;/ons-page&gt;
@@ -1806,19 +1806,19 @@ label.app-label {
 function createInitialItems() {
   return [
     {
-      name: &quot;NotebookLM&quot;,
-      genre: &quot;学習ツール&quot;,
-      comment: &quot;授業のノートをもとに、自分の言葉で説明できるまで質問しています。\n分からなかったことがつながる瞬間が好きです。&quot;
+      name: &quot;好きな音楽&quot;,
+      genre: &quot;音楽&quot;,
+      comment: &quot;通学中に聴くと、元気になります。&quot;
     },
     {
-      name: &quot;Android Studio / Xcode&quot;,
-      genre: &quot;開発ツール&quot;,
-      comment: &quot;Android StudioやXcodeで、思いついた画面を形にするのが好きです。\n次は自分が毎日使えるアプリを作ってみたいです。&quot;
+      name: &quot;カレー&quot;,
+      genre: &quot;食べ物&quot;,
+      comment: &quot;自分の好きな辛さを選べるところが好きです。&quot;
     },
     {
-      name: &quot;AIエージェントを使ったアプリ開発&quot;,
-      genre: &quot;気になる技術&quot;,
-      comment: &quot;AIエージェントと相談しながら、アプリを作る方法に興味があります。\n提案されたコードの理由を確かめ、自分でも直せるようになりたいです。&quot;
+      name: &quot;公園&quot;,
+      genre: &quot;場所&quot;,
+      comment: &quot;ゆっくり歩いて、気分を変えられます。&quot;
     }
   ];
 }
@@ -1927,17 +1927,17 @@ function addOshi() {
   const genre = document.getElementById(&quot;txt_input_genre&quot;).value.trim();
   const comment = document.getElementById(&quot;txt_input_comment&quot;).value.trim();
   if (name === &quot;&quot; || genre === &quot;&quot; || comment === &quot;&quot;) {
-    txtMessage.textContent = &quot;名前・ジャンル・推しポイントをすべて入力してください。&quot;;
+    txtMessage.textContent = &quot;名前・種類・好きな理由をすべて入力してください。&quot;;
     return;
   }
   btnSave.disabled = true;
   oshiItems.push({ name: name, genre: genre, comment: comment });
   renderOshiList();
-  document.getElementById(&quot;txt_selected&quot;).textContent = &quot;追加した推し：&quot; + name;
+  document.getElementById(&quot;txt_selected&quot;).textContent = &quot;追加したもの：&quot; + name;
   document.getElementById(&quot;nav_app&quot;).popPage();
-}</code></pre></details><p>Monaca クラウド IDEで同じ推しログを開きます。開始状態は「入力して追加できるが、再読み込みすると初期データに戻る」です。保存する前に、画面で使う配列と、保存へ渡す文字列を区別します。</p>
+}</code></pre></details><p>Monaca クラウド IDEで同じ好きなものノートを開きます。開始状態は「入力して追加できるが、再読み込みすると初期データに戻る」です。保存する前に、画面で使う配列と、保存へ渡す文字列を区別します。</p>
 <p><strong>JSONは、値を文字で表すための決まった形式</strong>です。JavaScriptの配列やオブジェクトそのものではありません。<code>JSON.stringify</code> は値をJSONの文字列にし、<code>JSON.parse</code> はJSONの文字列から値を復元します。今回の保存対象は文字列の3項目を持つオブジェクトの配列です。</p>
-<table><thead><tr><th>場面</th><th>値</th><th>型</th></tr></thead><tbody><tr><td>画面で使う1件の例</td><td><code>{ name: "NotebookLM" }</code></td><td>オブジェクト</td></tr><tr><td>JSONで表した内容</td><td><code>{"name":"NotebookLM"}</code></td><td>この文字の並びを持つ文字列</td></tr><tr><td>parseした後</td><td><code>item.name</code> を読める値</td><td>再びオブジェクト</td></tr></tbody></table>
+<table><thead><tr><th>場面</th><th>値</th><th>型</th></tr></thead><tbody><tr><td>画面で使う1件の例</td><td><code>{ name: "好きな音楽" }</code></td><td>オブジェクト</td></tr><tr><td>JSONで表した内容</td><td><code>{"name":"好きな音楽"}</code></td><td>この文字の並びを持つ文字列</td></tr><tr><td>parseした後</td><td><code>item.name</code> を読める値</td><td>再びオブジェクト</td></tr></tbody></table>
 <p>JSONではキーもダブルクォートで囲みます。コメントや末尾の余分なカンマは使えません。ただし、今回の保存文字列は手で組み立てず、stringifyに作らせます。名前に引用符や改行があっても、必要な表現への変換を任せられます。</p>
 <p>次の3行は処理順を読むための抜粋です。まだ追加する必要はありません。次のSTEPで保存、STEP 07で読み込みへ組み込みます。</p>
 <div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">JavaScript</p><pre><code>const text = JSON.stringify(oshiItems);
@@ -1962,7 +1962,7 @@ const restored = JSON.parse(text);
   &lt;meta charset=&quot;utf-8&quot;&gt;
   &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;
   &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src * data: gap: content: https://ssl.gstatic.com; style-src * &#x27;unsafe-inline&#x27;; script-src * &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27;&quot;&gt;
-  &lt;title&gt;推しログ&lt;/title&gt;
+  &lt;title&gt;好きなものノート&lt;/title&gt;
   &lt;script src=&quot;components/loader.js&quot;&gt;&lt;/script&gt;
   &lt;link rel=&quot;stylesheet&quot; href=&quot;components/loader.css&quot;&gt;
   &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsenui.css&quot;&gt;
@@ -1977,14 +1977,14 @@ const restored = JSON.parse(text);
   &lt;template id=&quot;list.html&quot;&gt;
     &lt;ons-page id=&quot;page_list&quot;&gt;
       &lt;ons-toolbar&gt;
-        &lt;div class=&quot;center&quot;&gt;推しログ&lt;/div&gt;
+        &lt;div class=&quot;center&quot;&gt;好きなものノート&lt;/div&gt;
       &lt;/ons-toolbar&gt;
 
       &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p class=&quot;app-caption&quot;&gt;わたしの推し&lt;/p&gt;
+        &lt;p class=&quot;app-caption&quot;&gt;わたしの好きなもの&lt;/p&gt;
         &lt;h1 class=&quot;app-heading&quot;&gt;好きな理由を集めよう。&lt;/h1&gt;
-        &lt;p class=&quot;app-description&quot;&gt;学びや開発の中で見つけた、お気に入りの記録。&lt;/p&gt;
-        &lt;ons-button id=&quot;btn_open_add&quot; class=&quot;app-action&quot;&gt;推しを追加&lt;/ons-button&gt;
+        &lt;p class=&quot;app-description&quot;&gt;音楽、食べ物、場所。好きなものと理由の記録。&lt;/p&gt;
+        &lt;ons-button id=&quot;btn_open_add&quot; class=&quot;app-action&quot;&gt;好きなものを追加&lt;/ons-button&gt;
         &lt;p id=&quot;txt_storage&quot; class=&quot;app-message&quot; aria-live=&quot;polite&quot;&gt;&lt;/p&gt;
       &lt;/div&gt;
 
@@ -1997,15 +1997,15 @@ const restored = JSON.parse(text);
     &lt;ons-page id=&quot;page_add&quot;&gt;
       &lt;ons-toolbar&gt;
         &lt;div class=&quot;left&quot;&gt;&lt;ons-back-button&gt;戻る&lt;/ons-back-button&gt;&lt;/div&gt;
-        &lt;div class=&quot;center&quot;&gt;推しを追加&lt;/div&gt;
+        &lt;div class=&quot;center&quot;&gt;好きなものを追加&lt;/div&gt;
       &lt;/ons-toolbar&gt;
       &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p class=&quot;app-description&quot;&gt;好きな理由や、次に試したいことを自分の言葉で残しましょう。&lt;/p&gt;
-        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_name&quot;&gt;推しの名前&lt;/label&gt;
-        &lt;input id=&quot;txt_input_name&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;60&quot; placeholder=&quot;例：ノートからアプリを作ること&quot;&gt;
-        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_genre&quot;&gt;ジャンル&lt;/label&gt;
-        &lt;input id=&quot;txt_input_genre&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;30&quot; placeholder=&quot;例：学び方&quot;&gt;
-        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_comment&quot;&gt;私の推しポイント・次に試したいこと&lt;/label&gt;
+        &lt;p class=&quot;app-description&quot;&gt;好きなものと、その理由を自分の言葉で残しましょう。&lt;/p&gt;
+        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_name&quot;&gt;名前&lt;/label&gt;
+        &lt;input id=&quot;txt_input_name&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;60&quot; placeholder=&quot;例：アイスクリーム&quot;&gt;
+        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_genre&quot;&gt;種類&lt;/label&gt;
+        &lt;input id=&quot;txt_input_genre&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;30&quot; placeholder=&quot;例：食べ物&quot;&gt;
+        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_comment&quot;&gt;好きな理由&lt;/label&gt;
         &lt;textarea id=&quot;txt_input_comment&quot; class=&quot;app-input&quot; rows=&quot;4&quot; maxlength=&quot;500&quot; placeholder=&quot;好きな理由をひとこと&quot;&gt;&lt;/textarea&gt;
         &lt;p id=&quot;txt_add_message&quot; class=&quot;app-message&quot; aria-live=&quot;polite&quot;&gt;&lt;/p&gt;
         &lt;ons-button id=&quot;btn_save_oshi&quot;&gt;追加して保存&lt;/ons-button&gt;
@@ -2020,13 +2020,13 @@ const restored = JSON.parse(text);
         &lt;div class=&quot;left&quot;&gt;
           &lt;ons-back-button&gt;戻る&lt;/ons-back-button&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;center&quot;&gt;推しの詳細&lt;/div&gt;
+        &lt;div class=&quot;center&quot;&gt;詳細&lt;/div&gt;
       &lt;/ons-toolbar&gt;
 
       &lt;div class=&quot;app-section&quot;&gt;
         &lt;p id=&quot;txt_detail_genre&quot; class=&quot;app-caption&quot;&gt;&lt;/p&gt;
         &lt;h1 id=&quot;txt_detail_name&quot; class=&quot;app-heading&quot;&gt;&lt;/h1&gt;
-        &lt;p class=&quot;app-label&quot;&gt;私の推しポイント・次に試したいこと&lt;/p&gt;
+        &lt;p class=&quot;app-label&quot;&gt;好きな理由&lt;/p&gt;
         &lt;p id=&quot;txt_detail_comment&quot; class=&quot;app-comment&quot;&gt;&lt;/p&gt;
       &lt;/div&gt;
     &lt;/ons-page&gt;
@@ -2161,19 +2161,19 @@ const STORAGE_KEY = &quot;jec-25cm-oshi-save-v1&quot;;
 function createInitialItems() {
   return [
     {
-      name: &quot;NotebookLM&quot;,
-      genre: &quot;学習ツール&quot;,
-      comment: &quot;授業のノートをもとに、自分の言葉で説明できるまで質問しています。\n分からなかったことがつながる瞬間が好きです。&quot;
+      name: &quot;好きな音楽&quot;,
+      genre: &quot;音楽&quot;,
+      comment: &quot;通学中に聴くと、元気になります。&quot;
     },
     {
-      name: &quot;Android Studio / Xcode&quot;,
-      genre: &quot;開発ツール&quot;,
-      comment: &quot;Android StudioやXcodeで、思いついた画面を形にするのが好きです。\n次は自分が毎日使えるアプリを作ってみたいです。&quot;
+      name: &quot;カレー&quot;,
+      genre: &quot;食べ物&quot;,
+      comment: &quot;自分の好きな辛さを選べるところが好きです。&quot;
     },
     {
-      name: &quot;AIエージェントを使ったアプリ開発&quot;,
-      genre: &quot;気になる技術&quot;,
-      comment: &quot;AIエージェントと相談しながら、アプリを作る方法に興味があります。\n提案されたコードの理由を確かめ、自分でも直せるようになりたいです。&quot;
+      name: &quot;公園&quot;,
+      genre: &quot;場所&quot;,
+      comment: &quot;ゆっくり歩いて、気分を変えられます。&quot;
     }
   ];
 }
@@ -2285,7 +2285,7 @@ function addOshi() {
   const genre = document.getElementById(&quot;txt_input_genre&quot;).value.trim();
   const comment = document.getElementById(&quot;txt_input_comment&quot;).value.trim();
   if (name === &quot;&quot; || genre === &quot;&quot; || comment === &quot;&quot;) {
-    txtMessage.textContent = &quot;名前・ジャンル・推しポイントをすべて入力してください。&quot;;
+    txtMessage.textContent = &quot;名前・種類・好きな理由をすべて入力してください。&quot;;
     return;
   }
 
@@ -2304,7 +2304,7 @@ function addOshi() {
   oshiItems = nextItems;
   renderOshiList();
   document.getElementById(&quot;txt_storage&quot;).textContent = oshiItems.length + &quot;件をこのブラウザに保存しました。&quot;;
-  document.getElementById(&quot;txt_selected&quot;).textContent = &quot;追加した推し：&quot; + name;
+  document.getElementById(&quot;txt_selected&quot;).textContent = &quot;追加したもの：&quot; + name;
   document.getElementById(&quot;nav_app&quot;).popPage();
 }</code></pre></details>
 <div class="check"><label><input type="checkbox" data-check="oshi-save-06"><span>保存成功の文を確認し、コピー・保存・表示更新の順番を説明できた。</span></label></div></section>
@@ -2314,7 +2314,7 @@ function addOshi() {
 <p>JSONとして読めることと、画面で使えることは別です。たとえば数値のJSONもparseできますが、今回欲しいのは文字列の項目を持つ配列です。isValidItemsは次の順に確かめます。</p>
 <ol><li><code>Array.isArray</code> で配列か確認します。</li><li>各itemがnullでなく、オブジェクトであるかを <code>typeof</code> と条件式で確認します。</li><li>name・genre・commentがすべてstringで、trim後に空でないか確認します。先に型を確認するため、文字列でないものへtrimを呼びません。</li><li>全部通ればtrueを返します。空の配列は有効な0件として扱います。</li></ol>
 <p>読み込みやparseが失敗したとき、または構造が違うときはcanSaveをfalseにします。保存済みの文字列を自動で消したり、初期データで上書きしたりしません。一覧には初期データと失敗メッセージを表示し、追加は止めます。次のSTEPで、本人が選んだときだけ初期化できる操作を作ります。</p>
-<ol><li>名前に引用符や山かっこ、推しポイントに改行を入れて1件追加します。</li><li>同じプレビューを再読み込みし、保存した件数と追加した行が戻ることを確かめます。</li><li>詳細を開き、文字・改行が入力どおりに戻ったことを確認します。</li></ol>
+<ol><li>名前に引用符や山かっこ、好きな理由に改行を入れて1件追加します。</li><li>同じプレビューを再読み込みし、保存した件数と追加した行が戻ることを確かめます。</li><li>詳細を開き、文字・改行が入力どおりに戻ったことを確認します。</li></ol>
 <p>保存領域はブラウザやプレビューの場所に結び付きます。別の端末・別のブラウザ・別のプロジェクトのコピーへ、内容が自動で移る仕組みではありません。</p>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>保存を読むタイミングは、AndroidのonCreateやiOSのviewDidLoadで保存値を画面へ戻すときに対応します。Javaの型検査やSwiftの型確認と同じ目的で、今回はJavaScriptのArray.isArrayとtypeofを使います。JSON.parseの結果を信頼し切らず、画面に必要な項目と型を確かめる点が違いです。</p></div>
 <details><summary>このSTEPの全コード（照合・合流用）</summary><div class="code-head">www/index.html · 全文</div>
@@ -2324,7 +2324,7 @@ function addOshi() {
   &lt;meta charset=&quot;utf-8&quot;&gt;
   &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;
   &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src * data: gap: content: https://ssl.gstatic.com; style-src * &#x27;unsafe-inline&#x27;; script-src * &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27;&quot;&gt;
-  &lt;title&gt;推しログ&lt;/title&gt;
+  &lt;title&gt;好きなものノート&lt;/title&gt;
   &lt;script src=&quot;components/loader.js&quot;&gt;&lt;/script&gt;
   &lt;link rel=&quot;stylesheet&quot; href=&quot;components/loader.css&quot;&gt;
   &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsenui.css&quot;&gt;
@@ -2339,14 +2339,14 @@ function addOshi() {
   &lt;template id=&quot;list.html&quot;&gt;
     &lt;ons-page id=&quot;page_list&quot;&gt;
       &lt;ons-toolbar&gt;
-        &lt;div class=&quot;center&quot;&gt;推しログ&lt;/div&gt;
+        &lt;div class=&quot;center&quot;&gt;好きなものノート&lt;/div&gt;
       &lt;/ons-toolbar&gt;
 
       &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p class=&quot;app-caption&quot;&gt;わたしの推し&lt;/p&gt;
+        &lt;p class=&quot;app-caption&quot;&gt;わたしの好きなもの&lt;/p&gt;
         &lt;h1 class=&quot;app-heading&quot;&gt;好きな理由を集めよう。&lt;/h1&gt;
-        &lt;p class=&quot;app-description&quot;&gt;学びや開発の中で見つけた、お気に入りの記録。&lt;/p&gt;
-        &lt;ons-button id=&quot;btn_open_add&quot; class=&quot;app-action&quot;&gt;推しを追加&lt;/ons-button&gt;
+        &lt;p class=&quot;app-description&quot;&gt;音楽、食べ物、場所。好きなものと理由の記録。&lt;/p&gt;
+        &lt;ons-button id=&quot;btn_open_add&quot; class=&quot;app-action&quot;&gt;好きなものを追加&lt;/ons-button&gt;
         &lt;p id=&quot;txt_storage&quot; class=&quot;app-message&quot; aria-live=&quot;polite&quot;&gt;&lt;/p&gt;
       &lt;/div&gt;
 
@@ -2359,15 +2359,15 @@ function addOshi() {
     &lt;ons-page id=&quot;page_add&quot;&gt;
       &lt;ons-toolbar&gt;
         &lt;div class=&quot;left&quot;&gt;&lt;ons-back-button&gt;戻る&lt;/ons-back-button&gt;&lt;/div&gt;
-        &lt;div class=&quot;center&quot;&gt;推しを追加&lt;/div&gt;
+        &lt;div class=&quot;center&quot;&gt;好きなものを追加&lt;/div&gt;
       &lt;/ons-toolbar&gt;
       &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p class=&quot;app-description&quot;&gt;好きな理由や、次に試したいことを自分の言葉で残しましょう。&lt;/p&gt;
-        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_name&quot;&gt;推しの名前&lt;/label&gt;
-        &lt;input id=&quot;txt_input_name&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;60&quot; placeholder=&quot;例：ノートからアプリを作ること&quot;&gt;
-        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_genre&quot;&gt;ジャンル&lt;/label&gt;
-        &lt;input id=&quot;txt_input_genre&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;30&quot; placeholder=&quot;例：学び方&quot;&gt;
-        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_comment&quot;&gt;私の推しポイント・次に試したいこと&lt;/label&gt;
+        &lt;p class=&quot;app-description&quot;&gt;好きなものと、その理由を自分の言葉で残しましょう。&lt;/p&gt;
+        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_name&quot;&gt;名前&lt;/label&gt;
+        &lt;input id=&quot;txt_input_name&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;60&quot; placeholder=&quot;例：アイスクリーム&quot;&gt;
+        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_genre&quot;&gt;種類&lt;/label&gt;
+        &lt;input id=&quot;txt_input_genre&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;30&quot; placeholder=&quot;例：食べ物&quot;&gt;
+        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_comment&quot;&gt;好きな理由&lt;/label&gt;
         &lt;textarea id=&quot;txt_input_comment&quot; class=&quot;app-input&quot; rows=&quot;4&quot; maxlength=&quot;500&quot; placeholder=&quot;好きな理由をひとこと&quot;&gt;&lt;/textarea&gt;
         &lt;p id=&quot;txt_add_message&quot; class=&quot;app-message&quot; aria-live=&quot;polite&quot;&gt;&lt;/p&gt;
         &lt;ons-button id=&quot;btn_save_oshi&quot;&gt;追加して保存&lt;/ons-button&gt;
@@ -2382,13 +2382,13 @@ function addOshi() {
         &lt;div class=&quot;left&quot;&gt;
           &lt;ons-back-button&gt;戻る&lt;/ons-back-button&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;center&quot;&gt;推しの詳細&lt;/div&gt;
+        &lt;div class=&quot;center&quot;&gt;詳細&lt;/div&gt;
       &lt;/ons-toolbar&gt;
 
       &lt;div class=&quot;app-section&quot;&gt;
         &lt;p id=&quot;txt_detail_genre&quot; class=&quot;app-caption&quot;&gt;&lt;/p&gt;
         &lt;h1 id=&quot;txt_detail_name&quot; class=&quot;app-heading&quot;&gt;&lt;/h1&gt;
-        &lt;p class=&quot;app-label&quot;&gt;私の推しポイント・次に試したいこと&lt;/p&gt;
+        &lt;p class=&quot;app-label&quot;&gt;好きな理由&lt;/p&gt;
         &lt;p id=&quot;txt_detail_comment&quot; class=&quot;app-comment&quot;&gt;&lt;/p&gt;
       &lt;/div&gt;
     &lt;/ons-page&gt;
@@ -2523,19 +2523,19 @@ const STORAGE_KEY = &quot;jec-25cm-oshi-save-v1&quot;;
 function createInitialItems() {
   return [
     {
-      name: &quot;NotebookLM&quot;,
-      genre: &quot;学習ツール&quot;,
-      comment: &quot;授業のノートをもとに、自分の言葉で説明できるまで質問しています。\n分からなかったことがつながる瞬間が好きです。&quot;
+      name: &quot;好きな音楽&quot;,
+      genre: &quot;音楽&quot;,
+      comment: &quot;通学中に聴くと、元気になります。&quot;
     },
     {
-      name: &quot;Android Studio / Xcode&quot;,
-      genre: &quot;開発ツール&quot;,
-      comment: &quot;Android StudioやXcodeで、思いついた画面を形にするのが好きです。\n次は自分が毎日使えるアプリを作ってみたいです。&quot;
+      name: &quot;カレー&quot;,
+      genre: &quot;食べ物&quot;,
+      comment: &quot;自分の好きな辛さを選べるところが好きです。&quot;
     },
     {
-      name: &quot;AIエージェントを使ったアプリ開発&quot;,
-      genre: &quot;気になる技術&quot;,
-      comment: &quot;AIエージェントと相談しながら、アプリを作る方法に興味があります。\n提案されたコードの理由を確かめ、自分でも直せるようになりたいです。&quot;
+      name: &quot;公園&quot;,
+      genre: &quot;場所&quot;,
+      comment: &quot;ゆっくり歩いて、気分を変えられます。&quot;
     }
   ];
 }
@@ -2647,7 +2647,7 @@ function addOshi() {
   const genre = document.getElementById(&quot;txt_input_genre&quot;).value.trim();
   const comment = document.getElementById(&quot;txt_input_comment&quot;).value.trim();
   if (name === &quot;&quot; || genre === &quot;&quot; || comment === &quot;&quot;) {
-    txtMessage.textContent = &quot;名前・ジャンル・推しポイントをすべて入力してください。&quot;;
+    txtMessage.textContent = &quot;名前・種類・好きな理由をすべて入力してください。&quot;;
     return;
   }
 
@@ -2666,13 +2666,13 @@ function addOshi() {
   oshiItems = nextItems;
   renderOshiList();
   document.getElementById(&quot;txt_storage&quot;).textContent = oshiItems.length + &quot;件をこのブラウザに保存しました。&quot;;
-  document.getElementById(&quot;txt_selected&quot;).textContent = &quot;追加した推し：&quot; + name;
+  document.getElementById(&quot;txt_selected&quot;).textContent = &quot;追加したもの：&quot; + name;
   document.getElementById(&quot;nav_app&quot;).popPage();
 }
 
 function loadOshiItems() {
   const txtStorage = document.getElementById(&quot;txt_storage&quot;);
-  txtStorage.textContent = &quot;ソースに書いた初期の推しを表示しています。&quot;;
+  txtStorage.textContent = &quot;ソースに書いた初期の内容を表示しています。&quot;;
   try {
     const text = localStorage.getItem(STORAGE_KEY);
     if (text === null) {
@@ -2690,7 +2690,7 @@ function loadOshiItems() {
     canSave = false;
   }
   if (!canSave) {
-    txtStorage.textContent = &quot;保存内容を読み込めません。保存データは変更していません。初期の推しに戻すか、ブラウザの保存設定を先生と確認してください。&quot;;
+    txtStorage.textContent = &quot;保存内容を読み込めません。保存データは変更していません。初期の内容に戻すか、ブラウザの保存設定を先生と確認してください。&quot;;
   }
 }
 
@@ -2713,8 +2713,8 @@ function isValidItems(items) {
 }</code></pre></details>
 <div class="check"><label><input type="checkbox" data-check="oshi-save-07"><span>追加した内容を再読み込み後にも一覧・詳細で読め、null・不正データ・空配列の扱いを区別できた。</span></label></div></section>
 <section id="step-8"><p class="step-meta">STEP 08 · コマ6</p><h2>初期化の確認と失敗への対応</h2>
-<p>HTMLに初期化ボタンと確認欄、JSにそのイベントとresetOshiItemsを加えます。<code>初期の推しに戻す</code> を押すと、is-hiddenをremoveして確認欄を見せます。<code>やめる</code> ではクラスをaddし、欄を閉じるだけです。</p>
-<p>実際の削除は <code>削除して初期の推しに戻す</code> を押した場合だけです。<code>localStorage.removeItem(STORAGE_KEY)</code> で、このアプリのキー1つだけを削除します。保存領域全体を空にするclearは使いません。</p>
+<p>HTMLに初期化ボタンと確認欄、JSにそのイベントとresetOshiItemsを加えます。<code>初期の内容に戻す</code> を押すと、is-hiddenをremoveして確認欄を見せます。<code>やめる</code> ではクラスをaddし、欄を閉じるだけです。</p>
+<p>実際の削除は <code>削除して初期の内容に戻す</code> を押した場合だけです。<code>localStorage.removeItem(STORAGE_KEY)</code> で、このアプリのキー1つだけを削除します。保存領域全体を空にするclearは使いません。</p>
 <p>削除に成功したらcreateInitialItemsで新しい初期配列を作り、canSaveをtrueへ戻し、一覧と文を更新します。削除に失敗したら画面の配列も変更せず、削除できなかったと表示します。初期化が終わると、以前入力した内容は戻せません。</p>
 <ol><li>検証用に追加したデータを使い、初期化の確認欄を開いて <code>やめる</code> を押します。件数が変わらないことを確認します。</li><li>残す必要のある内容は控えてから、もう一度確認欄を開き、削除するボタンを押します。</li><li>一覧がソースの初期データに戻り、再読み込みしてもその初期データになることを確かめます。</li></ol>
 <p>通常の操作で保存・読込に失敗した場合は、表示された文を先生と確認します。教材の確認のために、ブラウザのセキュリティ設定を変更する必要はありません。</p>
@@ -2726,7 +2726,7 @@ function isValidItems(items) {
   &lt;meta charset=&quot;utf-8&quot;&gt;
   &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;
   &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src * data: gap: content: https://ssl.gstatic.com; style-src * &#x27;unsafe-inline&#x27;; script-src * &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27;&quot;&gt;
-  &lt;title&gt;推しログ&lt;/title&gt;
+  &lt;title&gt;好きなものノート&lt;/title&gt;
   &lt;script src=&quot;components/loader.js&quot;&gt;&lt;/script&gt;
   &lt;link rel=&quot;stylesheet&quot; href=&quot;components/loader.css&quot;&gt;
   &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsenui.css&quot;&gt;
@@ -2741,25 +2741,25 @@ function isValidItems(items) {
   &lt;template id=&quot;list.html&quot;&gt;
     &lt;ons-page id=&quot;page_list&quot;&gt;
       &lt;ons-toolbar&gt;
-        &lt;div class=&quot;center&quot;&gt;推しログ&lt;/div&gt;
+        &lt;div class=&quot;center&quot;&gt;好きなものノート&lt;/div&gt;
       &lt;/ons-toolbar&gt;
 
       &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p class=&quot;app-caption&quot;&gt;わたしの推し&lt;/p&gt;
+        &lt;p class=&quot;app-caption&quot;&gt;わたしの好きなもの&lt;/p&gt;
         &lt;h1 class=&quot;app-heading&quot;&gt;好きな理由を集めよう。&lt;/h1&gt;
-        &lt;p class=&quot;app-description&quot;&gt;学びや開発の中で見つけた、お気に入りの記録。&lt;/p&gt;
-        &lt;ons-button id=&quot;btn_open_add&quot; class=&quot;app-action&quot;&gt;推しを追加&lt;/ons-button&gt;
+        &lt;p class=&quot;app-description&quot;&gt;音楽、食べ物、場所。好きなものと理由の記録。&lt;/p&gt;
+        &lt;ons-button id=&quot;btn_open_add&quot; class=&quot;app-action&quot;&gt;好きなものを追加&lt;/ons-button&gt;
         &lt;p id=&quot;txt_storage&quot; class=&quot;app-message&quot; aria-live=&quot;polite&quot;&gt;&lt;/p&gt;
       &lt;/div&gt;
 
       &lt;ons-list id=&quot;list_oshi&quot;&gt;&lt;/ons-list&gt;
       &lt;p id=&quot;txt_selected&quot; class=&quot;app-section app-selection&quot; aria-live=&quot;polite&quot;&gt;まだ選択していません&lt;/p&gt;
       &lt;div class=&quot;app-section reset-section&quot;&gt;
-        &lt;p class=&quot;app-description&quot;&gt;保存した推しを消し、ソースに書いた初期の推しへ戻せます。&lt;/p&gt;
-        &lt;ons-button id=&quot;btn_request_reset&quot; modifier=&quot;quiet&quot;&gt;初期の推しに戻す&lt;/ons-button&gt;
+        &lt;p class=&quot;app-description&quot;&gt;保存した内容を消し、ソースに書いた初期の内容へ戻せます。&lt;/p&gt;
+        &lt;ons-button id=&quot;btn_request_reset&quot; modifier=&quot;quiet&quot;&gt;初期の内容に戻す&lt;/ons-button&gt;
         &lt;div id=&quot;panel_reset&quot; class=&quot;is-hidden&quot;&gt;
-          &lt;p class=&quot;app-description&quot;&gt;このブラウザに保存した推しを削除します。元に戻せません。&lt;/p&gt;
-          &lt;ons-button id=&quot;btn_confirm_reset&quot;&gt;削除して初期の推しに戻す&lt;/ons-button&gt;
+          &lt;p class=&quot;app-description&quot;&gt;このブラウザに保存した内容を削除します。元に戻せません。&lt;/p&gt;
+          &lt;ons-button id=&quot;btn_confirm_reset&quot;&gt;削除して初期の内容に戻す&lt;/ons-button&gt;
           &lt;ons-button id=&quot;btn_cancel_reset&quot; modifier=&quot;quiet&quot;&gt;やめる&lt;/ons-button&gt;
         &lt;/div&gt;
       &lt;/div&gt;
@@ -2770,15 +2770,15 @@ function isValidItems(items) {
     &lt;ons-page id=&quot;page_add&quot;&gt;
       &lt;ons-toolbar&gt;
         &lt;div class=&quot;left&quot;&gt;&lt;ons-back-button&gt;戻る&lt;/ons-back-button&gt;&lt;/div&gt;
-        &lt;div class=&quot;center&quot;&gt;推しを追加&lt;/div&gt;
+        &lt;div class=&quot;center&quot;&gt;好きなものを追加&lt;/div&gt;
       &lt;/ons-toolbar&gt;
       &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p class=&quot;app-description&quot;&gt;好きな理由や、次に試したいことを自分の言葉で残しましょう。&lt;/p&gt;
-        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_name&quot;&gt;推しの名前&lt;/label&gt;
-        &lt;input id=&quot;txt_input_name&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;60&quot; placeholder=&quot;例：ノートからアプリを作ること&quot;&gt;
-        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_genre&quot;&gt;ジャンル&lt;/label&gt;
-        &lt;input id=&quot;txt_input_genre&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;30&quot; placeholder=&quot;例：学び方&quot;&gt;
-        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_comment&quot;&gt;私の推しポイント・次に試したいこと&lt;/label&gt;
+        &lt;p class=&quot;app-description&quot;&gt;好きなものと、その理由を自分の言葉で残しましょう。&lt;/p&gt;
+        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_name&quot;&gt;名前&lt;/label&gt;
+        &lt;input id=&quot;txt_input_name&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;60&quot; placeholder=&quot;例：アイスクリーム&quot;&gt;
+        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_genre&quot;&gt;種類&lt;/label&gt;
+        &lt;input id=&quot;txt_input_genre&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;30&quot; placeholder=&quot;例：食べ物&quot;&gt;
+        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_comment&quot;&gt;好きな理由&lt;/label&gt;
         &lt;textarea id=&quot;txt_input_comment&quot; class=&quot;app-input&quot; rows=&quot;4&quot; maxlength=&quot;500&quot; placeholder=&quot;好きな理由をひとこと&quot;&gt;&lt;/textarea&gt;
         &lt;p id=&quot;txt_add_message&quot; class=&quot;app-message&quot; aria-live=&quot;polite&quot;&gt;&lt;/p&gt;
         &lt;ons-button id=&quot;btn_save_oshi&quot;&gt;追加して保存&lt;/ons-button&gt;
@@ -2793,13 +2793,13 @@ function isValidItems(items) {
         &lt;div class=&quot;left&quot;&gt;
           &lt;ons-back-button&gt;戻る&lt;/ons-back-button&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;center&quot;&gt;推しの詳細&lt;/div&gt;
+        &lt;div class=&quot;center&quot;&gt;詳細&lt;/div&gt;
       &lt;/ons-toolbar&gt;
 
       &lt;div class=&quot;app-section&quot;&gt;
         &lt;p id=&quot;txt_detail_genre&quot; class=&quot;app-caption&quot;&gt;&lt;/p&gt;
         &lt;h1 id=&quot;txt_detail_name&quot; class=&quot;app-heading&quot;&gt;&lt;/h1&gt;
-        &lt;p class=&quot;app-label&quot;&gt;私の推しポイント・次に試したいこと&lt;/p&gt;
+        &lt;p class=&quot;app-label&quot;&gt;好きな理由&lt;/p&gt;
         &lt;p id=&quot;txt_detail_comment&quot; class=&quot;app-comment&quot;&gt;&lt;/p&gt;
       &lt;/div&gt;
     &lt;/ons-page&gt;
@@ -2934,19 +2934,19 @@ const STORAGE_KEY = &quot;jec-25cm-oshi-save-v1&quot;;
 function createInitialItems() {
   return [
     {
-      name: &quot;NotebookLM&quot;,
-      genre: &quot;学習ツール&quot;,
-      comment: &quot;授業のノートをもとに、自分の言葉で説明できるまで質問しています。\n分からなかったことがつながる瞬間が好きです。&quot;
+      name: &quot;好きな音楽&quot;,
+      genre: &quot;音楽&quot;,
+      comment: &quot;通学中に聴くと、元気になります。&quot;
     },
     {
-      name: &quot;Android Studio / Xcode&quot;,
-      genre: &quot;開発ツール&quot;,
-      comment: &quot;Android StudioやXcodeで、思いついた画面を形にするのが好きです。\n次は自分が毎日使えるアプリを作ってみたいです。&quot;
+      name: &quot;カレー&quot;,
+      genre: &quot;食べ物&quot;,
+      comment: &quot;自分の好きな辛さを選べるところが好きです。&quot;
     },
     {
-      name: &quot;AIエージェントを使ったアプリ開発&quot;,
-      genre: &quot;気になる技術&quot;,
-      comment: &quot;AIエージェントと相談しながら、アプリを作る方法に興味があります。\n提案されたコードの理由を確かめ、自分でも直せるようになりたいです。&quot;
+      name: &quot;公園&quot;,
+      genre: &quot;場所&quot;,
+      comment: &quot;ゆっくり歩いて、気分を変えられます。&quot;
     }
   ];
 }
@@ -3064,7 +3064,7 @@ function addOshi() {
   const genre = document.getElementById(&quot;txt_input_genre&quot;).value.trim();
   const comment = document.getElementById(&quot;txt_input_comment&quot;).value.trim();
   if (name === &quot;&quot; || genre === &quot;&quot; || comment === &quot;&quot;) {
-    txtMessage.textContent = &quot;名前・ジャンル・推しポイントをすべて入力してください。&quot;;
+    txtMessage.textContent = &quot;名前・種類・好きな理由をすべて入力してください。&quot;;
     return;
   }
 
@@ -3083,13 +3083,13 @@ function addOshi() {
   oshiItems = nextItems;
   renderOshiList();
   document.getElementById(&quot;txt_storage&quot;).textContent = oshiItems.length + &quot;件をこのブラウザに保存しました。&quot;;
-  document.getElementById(&quot;txt_selected&quot;).textContent = &quot;追加した推し：&quot; + name;
+  document.getElementById(&quot;txt_selected&quot;).textContent = &quot;追加したもの：&quot; + name;
   document.getElementById(&quot;nav_app&quot;).popPage();
 }
 
 function loadOshiItems() {
   const txtStorage = document.getElementById(&quot;txt_storage&quot;);
-  txtStorage.textContent = &quot;ソースに書いた初期の推しを表示しています。&quot;;
+  txtStorage.textContent = &quot;ソースに書いた初期の内容を表示しています。&quot;;
   try {
     const text = localStorage.getItem(STORAGE_KEY);
     if (text === null) {
@@ -3107,7 +3107,7 @@ function loadOshiItems() {
     canSave = false;
   }
   if (!canSave) {
-    txtStorage.textContent = &quot;保存内容を読み込めません。保存データは変更していません。初期の推しに戻すか、ブラウザの保存設定を先生と確認してください。&quot;;
+    txtStorage.textContent = &quot;保存内容を読み込めません。保存データは変更していません。初期の内容に戻すか、ブラウザの保存設定を先生と確認してください。&quot;;
   }
 }
 
@@ -3144,13 +3144,13 @@ function resetOshiItems() {
   document.getElementById(&quot;panel_reset&quot;).classList.add(&quot;is-hidden&quot;);
   renderOshiList();
   document.getElementById(&quot;txt_selected&quot;).textContent = &quot;まだ選択していません&quot;;
-  txtStorage.textContent = &quot;保存内容を削除し、ソースに書いた初期の推しへ戻しました。&quot;;
+  txtStorage.textContent = &quot;保存内容を削除し、ソースに書いた初期の内容へ戻しました。&quot;;
 }</code></pre></details>
-<div class="check"><label><input type="checkbox" data-check="oshi-save-08"><span>初期化を中止したときは内容が残り、確定したときだけ初期の推しへ戻った。</span></label></div></section>
+<div class="check"><label><input type="checkbox" data-check="oshi-save-08"><span>初期化を中止したときは内容が残り、確定したときだけ初期の内容へ戻った。</span></label></div></section>
 <section id="step-9"><p class="step-meta">STEP 09 · コマ6</p><h2>保存を確かめてアレンジする</h2>
 <p>入力→追加→詳細→戻る→再読み込みの順で動かし、保存した内容が復元されることを確認します。次に、ソースの初期データを自分の言葉へ変えます。</p>
 <p><strong>保存データがあると、ソースの初期データより優先して表示されます。</strong> createInitialItemsを書き換えても画面が変わらない場合は、変更したコードのミスとは限りません。必要な入力を控えたうえで、アプリ内の初期化を使ってソースの内容を確認します。</p>
-<table><thead><tr><th>アレンジする場所</th><th>確かめること</th></tr></thead><tbody><tr><td>createInitialItemsのname・genre・comment</td><td>初期化後の一覧と詳細が自分の推しになる。</td></tr><tr><td>HTMLの案内文・placeholder</td><td>何を入力するアプリか伝わる。</td></tr><tr><td>CSSの色・枠・余白</td><td>長い日本語や改行も読める。</td></tr></tbody></table>
+<table><thead><tr><th>アレンジする場所</th><th>確かめること</th></tr></thead><tbody><tr><td>createInitialItemsのname・genre・comment</td><td>初期化後の一覧と詳細が自分の好きなものになる。</td></tr><tr><td>HTMLの案内文・placeholder</td><td>何を入力するアプリか伝わる。</td></tr><tr><td>CSSの色・枠・余白</td><td>長い日本語や改行も読める。</td></tr></tbody></table>
 <p>保存キーは変えず、まず文字や色を変えましょう。保存して再読み込みし、どの変更がソースに残り、どの内容がブラウザだけに残るかを説明します。</p>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>ネイティブアプリでも、コードに書いた既定値より保存済みの設定を優先することがあります。同じ区別を、createInitialItemsとgetItemのどちらが最終的なoshiItemsになるかで追います。アレンジは既習のデータと装飾の変更だけで行います。</p></div>
 <details><summary>このSTEPの全コード（照合・合流用）</summary><div class="code-head">www/index.html · 全文</div>
@@ -3160,7 +3160,7 @@ function resetOshiItems() {
   &lt;meta charset=&quot;utf-8&quot;&gt;
   &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;
   &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src * data: gap: content: https://ssl.gstatic.com; style-src * &#x27;unsafe-inline&#x27;; script-src * &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27;&quot;&gt;
-  &lt;title&gt;推しログ&lt;/title&gt;
+  &lt;title&gt;好きなものノート&lt;/title&gt;
   &lt;script src=&quot;components/loader.js&quot;&gt;&lt;/script&gt;
   &lt;link rel=&quot;stylesheet&quot; href=&quot;components/loader.css&quot;&gt;
   &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsenui.css&quot;&gt;
@@ -3175,25 +3175,25 @@ function resetOshiItems() {
   &lt;template id=&quot;list.html&quot;&gt;
     &lt;ons-page id=&quot;page_list&quot;&gt;
       &lt;ons-toolbar&gt;
-        &lt;div class=&quot;center&quot;&gt;推しログ&lt;/div&gt;
+        &lt;div class=&quot;center&quot;&gt;好きなものノート&lt;/div&gt;
       &lt;/ons-toolbar&gt;
 
       &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p class=&quot;app-caption&quot;&gt;わたしの推し&lt;/p&gt;
+        &lt;p class=&quot;app-caption&quot;&gt;わたしの好きなもの&lt;/p&gt;
         &lt;h1 class=&quot;app-heading&quot;&gt;好きな理由を集めよう。&lt;/h1&gt;
-        &lt;p class=&quot;app-description&quot;&gt;学びや開発の中で見つけた、お気に入りの記録。&lt;/p&gt;
-        &lt;ons-button id=&quot;btn_open_add&quot; class=&quot;app-action&quot;&gt;推しを追加&lt;/ons-button&gt;
+        &lt;p class=&quot;app-description&quot;&gt;音楽、食べ物、場所。好きなものと理由の記録。&lt;/p&gt;
+        &lt;ons-button id=&quot;btn_open_add&quot; class=&quot;app-action&quot;&gt;好きなものを追加&lt;/ons-button&gt;
         &lt;p id=&quot;txt_storage&quot; class=&quot;app-message&quot; aria-live=&quot;polite&quot;&gt;&lt;/p&gt;
       &lt;/div&gt;
 
       &lt;ons-list id=&quot;list_oshi&quot;&gt;&lt;/ons-list&gt;
       &lt;p id=&quot;txt_selected&quot; class=&quot;app-section app-selection&quot; aria-live=&quot;polite&quot;&gt;まだ選択していません&lt;/p&gt;
       &lt;div class=&quot;app-section reset-section&quot;&gt;
-        &lt;p class=&quot;app-description&quot;&gt;保存した推しを消し、ソースに書いた初期の推しへ戻せます。&lt;/p&gt;
-        &lt;ons-button id=&quot;btn_request_reset&quot; modifier=&quot;quiet&quot;&gt;初期の推しに戻す&lt;/ons-button&gt;
+        &lt;p class=&quot;app-description&quot;&gt;保存した内容を消し、ソースに書いた初期の内容へ戻せます。&lt;/p&gt;
+        &lt;ons-button id=&quot;btn_request_reset&quot; modifier=&quot;quiet&quot;&gt;初期の内容に戻す&lt;/ons-button&gt;
         &lt;div id=&quot;panel_reset&quot; class=&quot;is-hidden&quot;&gt;
-          &lt;p class=&quot;app-description&quot;&gt;このブラウザに保存した推しを削除します。元に戻せません。&lt;/p&gt;
-          &lt;ons-button id=&quot;btn_confirm_reset&quot;&gt;削除して初期の推しに戻す&lt;/ons-button&gt;
+          &lt;p class=&quot;app-description&quot;&gt;このブラウザに保存した内容を削除します。元に戻せません。&lt;/p&gt;
+          &lt;ons-button id=&quot;btn_confirm_reset&quot;&gt;削除して初期の内容に戻す&lt;/ons-button&gt;
           &lt;ons-button id=&quot;btn_cancel_reset&quot; modifier=&quot;quiet&quot;&gt;やめる&lt;/ons-button&gt;
         &lt;/div&gt;
       &lt;/div&gt;
@@ -3204,15 +3204,15 @@ function resetOshiItems() {
     &lt;ons-page id=&quot;page_add&quot;&gt;
       &lt;ons-toolbar&gt;
         &lt;div class=&quot;left&quot;&gt;&lt;ons-back-button&gt;戻る&lt;/ons-back-button&gt;&lt;/div&gt;
-        &lt;div class=&quot;center&quot;&gt;推しを追加&lt;/div&gt;
+        &lt;div class=&quot;center&quot;&gt;好きなものを追加&lt;/div&gt;
       &lt;/ons-toolbar&gt;
       &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p class=&quot;app-description&quot;&gt;好きな理由や、次に試したいことを自分の言葉で残しましょう。&lt;/p&gt;
-        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_name&quot;&gt;推しの名前&lt;/label&gt;
-        &lt;input id=&quot;txt_input_name&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;60&quot; placeholder=&quot;例：ノートからアプリを作ること&quot;&gt;
-        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_genre&quot;&gt;ジャンル&lt;/label&gt;
-        &lt;input id=&quot;txt_input_genre&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;30&quot; placeholder=&quot;例：学び方&quot;&gt;
-        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_comment&quot;&gt;私の推しポイント・次に試したいこと&lt;/label&gt;
+        &lt;p class=&quot;app-description&quot;&gt;好きなものと、その理由を自分の言葉で残しましょう。&lt;/p&gt;
+        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_name&quot;&gt;名前&lt;/label&gt;
+        &lt;input id=&quot;txt_input_name&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;60&quot; placeholder=&quot;例：アイスクリーム&quot;&gt;
+        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_genre&quot;&gt;種類&lt;/label&gt;
+        &lt;input id=&quot;txt_input_genre&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;30&quot; placeholder=&quot;例：食べ物&quot;&gt;
+        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_comment&quot;&gt;好きな理由&lt;/label&gt;
         &lt;textarea id=&quot;txt_input_comment&quot; class=&quot;app-input&quot; rows=&quot;4&quot; maxlength=&quot;500&quot; placeholder=&quot;好きな理由をひとこと&quot;&gt;&lt;/textarea&gt;
         &lt;p id=&quot;txt_add_message&quot; class=&quot;app-message&quot; aria-live=&quot;polite&quot;&gt;&lt;/p&gt;
         &lt;ons-button id=&quot;btn_save_oshi&quot;&gt;追加して保存&lt;/ons-button&gt;
@@ -3227,13 +3227,13 @@ function resetOshiItems() {
         &lt;div class=&quot;left&quot;&gt;
           &lt;ons-back-button&gt;戻る&lt;/ons-back-button&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;center&quot;&gt;推しの詳細&lt;/div&gt;
+        &lt;div class=&quot;center&quot;&gt;詳細&lt;/div&gt;
       &lt;/ons-toolbar&gt;
 
       &lt;div class=&quot;app-section&quot;&gt;
         &lt;p id=&quot;txt_detail_genre&quot; class=&quot;app-caption&quot;&gt;&lt;/p&gt;
         &lt;h1 id=&quot;txt_detail_name&quot; class=&quot;app-heading&quot;&gt;&lt;/h1&gt;
-        &lt;p class=&quot;app-label&quot;&gt;私の推しポイント・次に試したいこと&lt;/p&gt;
+        &lt;p class=&quot;app-label&quot;&gt;好きな理由&lt;/p&gt;
         &lt;p id=&quot;txt_detail_comment&quot; class=&quot;app-comment&quot;&gt;&lt;/p&gt;
       &lt;/div&gt;
     &lt;/ons-page&gt;
@@ -3368,19 +3368,19 @@ const STORAGE_KEY = &quot;jec-25cm-oshi-save-v1&quot;;
 function createInitialItems() {
   return [
     {
-      name: &quot;NotebookLM&quot;,
-      genre: &quot;学習ツール&quot;,
-      comment: &quot;授業のノートをもとに、自分の言葉で説明できるまで質問しています。\n分からなかったことがつながる瞬間が好きです。&quot;
+      name: &quot;好きな音楽&quot;,
+      genre: &quot;音楽&quot;,
+      comment: &quot;通学中に聴くと、元気になります。&quot;
     },
     {
-      name: &quot;Android Studio / Xcode&quot;,
-      genre: &quot;開発ツール&quot;,
-      comment: &quot;Android StudioやXcodeで、思いついた画面を形にするのが好きです。\n次は自分が毎日使えるアプリを作ってみたいです。&quot;
+      name: &quot;カレー&quot;,
+      genre: &quot;食べ物&quot;,
+      comment: &quot;自分の好きな辛さを選べるところが好きです。&quot;
     },
     {
-      name: &quot;AIエージェントを使ったアプリ開発&quot;,
-      genre: &quot;気になる技術&quot;,
-      comment: &quot;AIエージェントと相談しながら、アプリを作る方法に興味があります。\n提案されたコードの理由を確かめ、自分でも直せるようになりたいです。&quot;
+      name: &quot;公園&quot;,
+      genre: &quot;場所&quot;,
+      comment: &quot;ゆっくり歩いて、気分を変えられます。&quot;
     }
   ];
 }
@@ -3498,7 +3498,7 @@ function addOshi() {
   const genre = document.getElementById(&quot;txt_input_genre&quot;).value.trim();
   const comment = document.getElementById(&quot;txt_input_comment&quot;).value.trim();
   if (name === &quot;&quot; || genre === &quot;&quot; || comment === &quot;&quot;) {
-    txtMessage.textContent = &quot;名前・ジャンル・推しポイントをすべて入力してください。&quot;;
+    txtMessage.textContent = &quot;名前・種類・好きな理由をすべて入力してください。&quot;;
     return;
   }
 
@@ -3517,13 +3517,13 @@ function addOshi() {
   oshiItems = nextItems;
   renderOshiList();
   document.getElementById(&quot;txt_storage&quot;).textContent = oshiItems.length + &quot;件をこのブラウザに保存しました。&quot;;
-  document.getElementById(&quot;txt_selected&quot;).textContent = &quot;追加した推し：&quot; + name;
+  document.getElementById(&quot;txt_selected&quot;).textContent = &quot;追加したもの：&quot; + name;
   document.getElementById(&quot;nav_app&quot;).popPage();
 }
 
 function loadOshiItems() {
   const txtStorage = document.getElementById(&quot;txt_storage&quot;);
-  txtStorage.textContent = &quot;ソースに書いた初期の推しを表示しています。&quot;;
+  txtStorage.textContent = &quot;ソースに書いた初期の内容を表示しています。&quot;;
   try {
     const text = localStorage.getItem(STORAGE_KEY);
     if (text === null) {
@@ -3541,7 +3541,7 @@ function loadOshiItems() {
     canSave = false;
   }
   if (!canSave) {
-    txtStorage.textContent = &quot;保存内容を読み込めません。保存データは変更していません。初期の推しに戻すか、ブラウザの保存設定を先生と確認してください。&quot;;
+    txtStorage.textContent = &quot;保存内容を読み込めません。保存データは変更していません。初期の内容に戻すか、ブラウザの保存設定を先生と確認してください。&quot;;
   }
 }
 
@@ -3578,7 +3578,7 @@ function resetOshiItems() {
   document.getElementById(&quot;panel_reset&quot;).classList.add(&quot;is-hidden&quot;);
   renderOshiList();
   document.getElementById(&quot;txt_selected&quot;).textContent = &quot;まだ選択していません&quot;;
-  txtStorage.textContent = &quot;保存内容を削除し、ソースに書いた初期の推しへ戻しました。&quot;;
+  txtStorage.textContent = &quot;保存内容を削除し、ソースに書いた初期の内容へ戻しました。&quot;;
 }</code></pre></details>
 <div class="check"><label><input type="checkbox" data-check="oshi-save-09"><span>保存・復元の一連の操作ができ、ソースのアレンジと入力データの保存先を説明できた。</span></label></div></section>
 <section id="step-10"><p class="step-meta">STEP 10 · コマ7</p><h2>授業内でFlutterの準備を始める</h2>
@@ -3589,7 +3589,7 @@ function resetOshiItems() {
   &lt;meta charset=&quot;utf-8&quot;&gt;
   &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;
   &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src * data: gap: content: https://ssl.gstatic.com; style-src * &#x27;unsafe-inline&#x27;; script-src * &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27;&quot;&gt;
-  &lt;title&gt;推しログ&lt;/title&gt;
+  &lt;title&gt;好きなものノート&lt;/title&gt;
   &lt;script src=&quot;components/loader.js&quot;&gt;&lt;/script&gt;
   &lt;link rel=&quot;stylesheet&quot; href=&quot;components/loader.css&quot;&gt;
   &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsenui.css&quot;&gt;
@@ -3604,25 +3604,25 @@ function resetOshiItems() {
   &lt;template id=&quot;list.html&quot;&gt;
     &lt;ons-page id=&quot;page_list&quot;&gt;
       &lt;ons-toolbar&gt;
-        &lt;div class=&quot;center&quot;&gt;推しログ&lt;/div&gt;
+        &lt;div class=&quot;center&quot;&gt;好きなものノート&lt;/div&gt;
       &lt;/ons-toolbar&gt;
 
       &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p class=&quot;app-caption&quot;&gt;わたしの推し&lt;/p&gt;
+        &lt;p class=&quot;app-caption&quot;&gt;わたしの好きなもの&lt;/p&gt;
         &lt;h1 class=&quot;app-heading&quot;&gt;好きな理由を集めよう。&lt;/h1&gt;
-        &lt;p class=&quot;app-description&quot;&gt;学びや開発の中で見つけた、お気に入りの記録。&lt;/p&gt;
-        &lt;ons-button id=&quot;btn_open_add&quot; class=&quot;app-action&quot;&gt;推しを追加&lt;/ons-button&gt;
+        &lt;p class=&quot;app-description&quot;&gt;音楽、食べ物、場所。好きなものと理由の記録。&lt;/p&gt;
+        &lt;ons-button id=&quot;btn_open_add&quot; class=&quot;app-action&quot;&gt;好きなものを追加&lt;/ons-button&gt;
         &lt;p id=&quot;txt_storage&quot; class=&quot;app-message&quot; aria-live=&quot;polite&quot;&gt;&lt;/p&gt;
       &lt;/div&gt;
 
       &lt;ons-list id=&quot;list_oshi&quot;&gt;&lt;/ons-list&gt;
       &lt;p id=&quot;txt_selected&quot; class=&quot;app-section app-selection&quot; aria-live=&quot;polite&quot;&gt;まだ選択していません&lt;/p&gt;
       &lt;div class=&quot;app-section reset-section&quot;&gt;
-        &lt;p class=&quot;app-description&quot;&gt;保存した推しを消し、ソースに書いた初期の推しへ戻せます。&lt;/p&gt;
-        &lt;ons-button id=&quot;btn_request_reset&quot; modifier=&quot;quiet&quot;&gt;初期の推しに戻す&lt;/ons-button&gt;
+        &lt;p class=&quot;app-description&quot;&gt;保存した内容を消し、ソースに書いた初期の内容へ戻せます。&lt;/p&gt;
+        &lt;ons-button id=&quot;btn_request_reset&quot; modifier=&quot;quiet&quot;&gt;初期の内容に戻す&lt;/ons-button&gt;
         &lt;div id=&quot;panel_reset&quot; class=&quot;is-hidden&quot;&gt;
-          &lt;p class=&quot;app-description&quot;&gt;このブラウザに保存した推しを削除します。元に戻せません。&lt;/p&gt;
-          &lt;ons-button id=&quot;btn_confirm_reset&quot;&gt;削除して初期の推しに戻す&lt;/ons-button&gt;
+          &lt;p class=&quot;app-description&quot;&gt;このブラウザに保存した内容を削除します。元に戻せません。&lt;/p&gt;
+          &lt;ons-button id=&quot;btn_confirm_reset&quot;&gt;削除して初期の内容に戻す&lt;/ons-button&gt;
           &lt;ons-button id=&quot;btn_cancel_reset&quot; modifier=&quot;quiet&quot;&gt;やめる&lt;/ons-button&gt;
         &lt;/div&gt;
       &lt;/div&gt;
@@ -3633,15 +3633,15 @@ function resetOshiItems() {
     &lt;ons-page id=&quot;page_add&quot;&gt;
       &lt;ons-toolbar&gt;
         &lt;div class=&quot;left&quot;&gt;&lt;ons-back-button&gt;戻る&lt;/ons-back-button&gt;&lt;/div&gt;
-        &lt;div class=&quot;center&quot;&gt;推しを追加&lt;/div&gt;
+        &lt;div class=&quot;center&quot;&gt;好きなものを追加&lt;/div&gt;
       &lt;/ons-toolbar&gt;
       &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p class=&quot;app-description&quot;&gt;好きな理由や、次に試したいことを自分の言葉で残しましょう。&lt;/p&gt;
-        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_name&quot;&gt;推しの名前&lt;/label&gt;
-        &lt;input id=&quot;txt_input_name&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;60&quot; placeholder=&quot;例：ノートからアプリを作ること&quot;&gt;
-        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_genre&quot;&gt;ジャンル&lt;/label&gt;
-        &lt;input id=&quot;txt_input_genre&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;30&quot; placeholder=&quot;例：学び方&quot;&gt;
-        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_comment&quot;&gt;私の推しポイント・次に試したいこと&lt;/label&gt;
+        &lt;p class=&quot;app-description&quot;&gt;好きなものと、その理由を自分の言葉で残しましょう。&lt;/p&gt;
+        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_name&quot;&gt;名前&lt;/label&gt;
+        &lt;input id=&quot;txt_input_name&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;60&quot; placeholder=&quot;例：アイスクリーム&quot;&gt;
+        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_genre&quot;&gt;種類&lt;/label&gt;
+        &lt;input id=&quot;txt_input_genre&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;30&quot; placeholder=&quot;例：食べ物&quot;&gt;
+        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_comment&quot;&gt;好きな理由&lt;/label&gt;
         &lt;textarea id=&quot;txt_input_comment&quot; class=&quot;app-input&quot; rows=&quot;4&quot; maxlength=&quot;500&quot; placeholder=&quot;好きな理由をひとこと&quot;&gt;&lt;/textarea&gt;
         &lt;p id=&quot;txt_add_message&quot; class=&quot;app-message&quot; aria-live=&quot;polite&quot;&gt;&lt;/p&gt;
         &lt;ons-button id=&quot;btn_save_oshi&quot;&gt;追加して保存&lt;/ons-button&gt;
@@ -3656,13 +3656,13 @@ function resetOshiItems() {
         &lt;div class=&quot;left&quot;&gt;
           &lt;ons-back-button&gt;戻る&lt;/ons-back-button&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;center&quot;&gt;推しの詳細&lt;/div&gt;
+        &lt;div class=&quot;center&quot;&gt;詳細&lt;/div&gt;
       &lt;/ons-toolbar&gt;
 
       &lt;div class=&quot;app-section&quot;&gt;
         &lt;p id=&quot;txt_detail_genre&quot; class=&quot;app-caption&quot;&gt;&lt;/p&gt;
         &lt;h1 id=&quot;txt_detail_name&quot; class=&quot;app-heading&quot;&gt;&lt;/h1&gt;
-        &lt;p class=&quot;app-label&quot;&gt;私の推しポイント・次に試したいこと&lt;/p&gt;
+        &lt;p class=&quot;app-label&quot;&gt;好きな理由&lt;/p&gt;
         &lt;p id=&quot;txt_detail_comment&quot; class=&quot;app-comment&quot;&gt;&lt;/p&gt;
       &lt;/div&gt;
     &lt;/ons-page&gt;
@@ -3797,19 +3797,19 @@ const STORAGE_KEY = &quot;jec-25cm-oshi-save-v1&quot;;
 function createInitialItems() {
   return [
     {
-      name: &quot;NotebookLM&quot;,
-      genre: &quot;学習ツール&quot;,
-      comment: &quot;授業のノートをもとに、自分の言葉で説明できるまで質問しています。\n分からなかったことがつながる瞬間が好きです。&quot;
+      name: &quot;好きな音楽&quot;,
+      genre: &quot;音楽&quot;,
+      comment: &quot;通学中に聴くと、元気になります。&quot;
     },
     {
-      name: &quot;Android Studio / Xcode&quot;,
-      genre: &quot;開発ツール&quot;,
-      comment: &quot;Android StudioやXcodeで、思いついた画面を形にするのが好きです。\n次は自分が毎日使えるアプリを作ってみたいです。&quot;
+      name: &quot;カレー&quot;,
+      genre: &quot;食べ物&quot;,
+      comment: &quot;自分の好きな辛さを選べるところが好きです。&quot;
     },
     {
-      name: &quot;AIエージェントを使ったアプリ開発&quot;,
-      genre: &quot;気になる技術&quot;,
-      comment: &quot;AIエージェントと相談しながら、アプリを作る方法に興味があります。\n提案されたコードの理由を確かめ、自分でも直せるようになりたいです。&quot;
+      name: &quot;公園&quot;,
+      genre: &quot;場所&quot;,
+      comment: &quot;ゆっくり歩いて、気分を変えられます。&quot;
     }
   ];
 }
@@ -3927,7 +3927,7 @@ function addOshi() {
   const genre = document.getElementById(&quot;txt_input_genre&quot;).value.trim();
   const comment = document.getElementById(&quot;txt_input_comment&quot;).value.trim();
   if (name === &quot;&quot; || genre === &quot;&quot; || comment === &quot;&quot;) {
-    txtMessage.textContent = &quot;名前・ジャンル・推しポイントをすべて入力してください。&quot;;
+    txtMessage.textContent = &quot;名前・種類・好きな理由をすべて入力してください。&quot;;
     return;
   }
 
@@ -3946,13 +3946,13 @@ function addOshi() {
   oshiItems = nextItems;
   renderOshiList();
   document.getElementById(&quot;txt_storage&quot;).textContent = oshiItems.length + &quot;件をこのブラウザに保存しました。&quot;;
-  document.getElementById(&quot;txt_selected&quot;).textContent = &quot;追加した推し：&quot; + name;
+  document.getElementById(&quot;txt_selected&quot;).textContent = &quot;追加したもの：&quot; + name;
   document.getElementById(&quot;nav_app&quot;).popPage();
 }
 
 function loadOshiItems() {
   const txtStorage = document.getElementById(&quot;txt_storage&quot;);
-  txtStorage.textContent = &quot;ソースに書いた初期の推しを表示しています。&quot;;
+  txtStorage.textContent = &quot;ソースに書いた初期の内容を表示しています。&quot;;
   try {
     const text = localStorage.getItem(STORAGE_KEY);
     if (text === null) {
@@ -3970,7 +3970,7 @@ function loadOshiItems() {
     canSave = false;
   }
   if (!canSave) {
-    txtStorage.textContent = &quot;保存内容を読み込めません。保存データは変更していません。初期の推しに戻すか、ブラウザの保存設定を先生と確認してください。&quot;;
+    txtStorage.textContent = &quot;保存内容を読み込めません。保存データは変更していません。初期の内容に戻すか、ブラウザの保存設定を先生と確認してください。&quot;;
   }
 }
 
@@ -4007,17 +4007,17 @@ function resetOshiItems() {
   document.getElementById(&quot;panel_reset&quot;).classList.add(&quot;is-hidden&quot;);
   renderOshiList();
   document.getElementById(&quot;txt_selected&quot;).textContent = &quot;まだ選択していません&quot;;
-  txtStorage.textContent = &quot;保存内容を削除し、ソースに書いた初期の推しへ戻しました。&quot;;
-}</code></pre></details><p>今日は推しログを仕上げて提出します。最初の10分で、後半に使うFlutter SDKのダウンロードと既存のiOS環境の確認を始めます。授業前に取得しておく必要はありません。</p>
+  txtStorage.textContent = &quot;保存内容を削除し、ソースに書いた初期の内容へ戻しました。&quot;;
+}</code></pre></details><p>今日は好きなものノートを仕上げて提出します。最初の10分で、後半に使うFlutter SDKのダウンロードと既存のiOS環境の確認を始めます。授業前に取得しておく必要はありません。</p>
 <ol><li><a href="../common/setup.html?from=oshi-save#step-4">共通資料のSTEP 4〜7</a>を別のタブで開きます。</li><li>Apple Silicon用のFlutter 3.47.5 / Dart 3.13.4を取得します。既にその版を用意できている場合は、版を確認して重複取得を避けます。</li><li>別科目で使っているXcodeのiOS環境を確認します。利用できるランタイムは再利用します。<code>xcodebuild -downloadPlatform iOS</code> は全員必須ではありません。</li><li>不足分だけ先生と確認して取得を始め、この教科書へ戻ります。Flutter専用のiOS資材は共通資料の <code>flutter precache --ios</code> で用意します。</li></ol>
-<p>取得待ちは推しログのアレンジに使います。コマ8の冒頭にも準備確認の時間があります。家庭での作業が済んでいることを前提にはしません。</p>
+<p>取得待ちは好きなものノートのアレンジに使います。コマ8の冒頭にも準備確認の時間があります。家庭での作業が済んでいることを前提にはしません。</p>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>Android StudioやXcodeでも、開発用SDKとアプリのソースは別です。今回はFlutter SDKと既存のiOS環境を組み合わせます。MonacaのソースをFlutterへ変換する操作ではなく、後半に使う道具の準備です。</p></div>
 
 <div class="check"><label><input type="checkbox" data-check="oshi-save-10"><span>指定SDKの取得を開始または版を確認し、既存iOS環境の状態を先生へ伝えられる。</span></label></div></section>
 <section id="step-11"><p class="step-meta">STEP 11 · コマ7</p><h2>提出に残るアレンジを作る</h2>
-<p>Monaca クラウド IDEへ戻り、自分の推しログを仕上げます。既に扱った文字・色・初期データから変更箇所を選び、なぜ好きなのか、次に何を試したいのかが伝わる内容にします。</p>
-<table><thead><tr><th>場所</th><th>変わること</th><th>確認方法</th></tr></thead><tbody><tr><td>createInitialItemsの配列</td><td>最初に読める推しとその理由。</td><td>必要な保存内容を控えて初期化し、全件の詳細を開く。</td></tr><tr><td>HTMLの見出し・案内文・入力例</td><td>自分の題材が画面から伝わる。</td><td>入力画面を開き、迷わず入力できるか読む。</td></tr><tr><td>CSSの文字色・枠色・余白</td><td>カードと入力欄の印象。</td><td>長い日本語を入れて、文字が切れないか見る。</td></tr></tbody></table>
-<p><strong>画面から追加して保存したデータは、公開URLへ含まれません。</strong> 先生が新しく取り込んだときに見えるアレンジは、ソースへ書きます。入力例として見せたい推しも、createInitialItemsに書いて保存します。</p>
+<p>Monaca クラウド IDEへ戻り、自分の好きなものノートを仕上げます。既に扱った文字・色・初期データから変更箇所を選び、どんなものが好きで、なぜ好きなのかが伝わる内容にします。</p>
+<table><thead><tr><th>場所</th><th>変わること</th><th>確認方法</th></tr></thead><tbody><tr><td>createInitialItemsの配列</td><td>最初に読める好きなものとその理由。</td><td>必要な保存内容を控えて初期化し、全件の詳細を開く。</td></tr><tr><td>HTMLの見出し・案内文・入力例</td><td>自分の題材が画面から伝わる。</td><td>入力画面を開き、迷わず入力できるか読む。</td></tr><tr><td>CSSの文字色・枠色・余白</td><td>カードと入力欄の印象。</td><td>長い日本語を入れて、文字が切れないか見る。</td></tr></tbody></table>
+<p><strong>画面から追加して保存したデータは、公開URLへ含まれません。</strong> 先生が新しく取り込んだときに見えるアレンジは、ソースへ書きます。入力例として見せたい好きなものも、createInitialItemsに書いて保存します。</p>
 <p>ソースを変えても以前の保存内容が表示される場合はSTEP 09を確認します。保存キーを変えて見えなくする方法で済ませず、残す内容を控えてからアプリ内の初期化を使います。</p>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>JavaやSwiftでコードの初期値を変えることと、実行中に端末へ保存した内容を変えることは別です。公開URLで渡すのはソースなので、ブラウザの入力内容だけを変えても相手の初期画面には反映されません。</p></div>
 <details><summary>このSTEPの全コード（照合・合流用）</summary><div class="code-head">www/index.html · 全文</div>
@@ -4027,7 +4027,7 @@ function resetOshiItems() {
   &lt;meta charset=&quot;utf-8&quot;&gt;
   &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;
   &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src * data: gap: content: https://ssl.gstatic.com; style-src * &#x27;unsafe-inline&#x27;; script-src * &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27;&quot;&gt;
-  &lt;title&gt;推しログ&lt;/title&gt;
+  &lt;title&gt;好きなものノート&lt;/title&gt;
   &lt;script src=&quot;components/loader.js&quot;&gt;&lt;/script&gt;
   &lt;link rel=&quot;stylesheet&quot; href=&quot;components/loader.css&quot;&gt;
   &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsenui.css&quot;&gt;
@@ -4042,25 +4042,25 @@ function resetOshiItems() {
   &lt;template id=&quot;list.html&quot;&gt;
     &lt;ons-page id=&quot;page_list&quot;&gt;
       &lt;ons-toolbar&gt;
-        &lt;div class=&quot;center&quot;&gt;推しログ&lt;/div&gt;
+        &lt;div class=&quot;center&quot;&gt;好きなものノート&lt;/div&gt;
       &lt;/ons-toolbar&gt;
 
       &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p class=&quot;app-caption&quot;&gt;わたしの推し&lt;/p&gt;
+        &lt;p class=&quot;app-caption&quot;&gt;わたしの好きなもの&lt;/p&gt;
         &lt;h1 class=&quot;app-heading&quot;&gt;好きな理由を集めよう。&lt;/h1&gt;
-        &lt;p class=&quot;app-description&quot;&gt;学びや開発の中で見つけた、お気に入りの記録。&lt;/p&gt;
-        &lt;ons-button id=&quot;btn_open_add&quot; class=&quot;app-action&quot;&gt;推しを追加&lt;/ons-button&gt;
+        &lt;p class=&quot;app-description&quot;&gt;音楽、食べ物、場所。好きなものと理由の記録。&lt;/p&gt;
+        &lt;ons-button id=&quot;btn_open_add&quot; class=&quot;app-action&quot;&gt;好きなものを追加&lt;/ons-button&gt;
         &lt;p id=&quot;txt_storage&quot; class=&quot;app-message&quot; aria-live=&quot;polite&quot;&gt;&lt;/p&gt;
       &lt;/div&gt;
 
       &lt;ons-list id=&quot;list_oshi&quot;&gt;&lt;/ons-list&gt;
       &lt;p id=&quot;txt_selected&quot; class=&quot;app-section app-selection&quot; aria-live=&quot;polite&quot;&gt;まだ選択していません&lt;/p&gt;
       &lt;div class=&quot;app-section reset-section&quot;&gt;
-        &lt;p class=&quot;app-description&quot;&gt;保存した推しを消し、ソースに書いた初期の推しへ戻せます。&lt;/p&gt;
-        &lt;ons-button id=&quot;btn_request_reset&quot; modifier=&quot;quiet&quot;&gt;初期の推しに戻す&lt;/ons-button&gt;
+        &lt;p class=&quot;app-description&quot;&gt;保存した内容を消し、ソースに書いた初期の内容へ戻せます。&lt;/p&gt;
+        &lt;ons-button id=&quot;btn_request_reset&quot; modifier=&quot;quiet&quot;&gt;初期の内容に戻す&lt;/ons-button&gt;
         &lt;div id=&quot;panel_reset&quot; class=&quot;is-hidden&quot;&gt;
-          &lt;p class=&quot;app-description&quot;&gt;このブラウザに保存した推しを削除します。元に戻せません。&lt;/p&gt;
-          &lt;ons-button id=&quot;btn_confirm_reset&quot;&gt;削除して初期の推しに戻す&lt;/ons-button&gt;
+          &lt;p class=&quot;app-description&quot;&gt;このブラウザに保存した内容を削除します。元に戻せません。&lt;/p&gt;
+          &lt;ons-button id=&quot;btn_confirm_reset&quot;&gt;削除して初期の内容に戻す&lt;/ons-button&gt;
           &lt;ons-button id=&quot;btn_cancel_reset&quot; modifier=&quot;quiet&quot;&gt;やめる&lt;/ons-button&gt;
         &lt;/div&gt;
       &lt;/div&gt;
@@ -4071,15 +4071,15 @@ function resetOshiItems() {
     &lt;ons-page id=&quot;page_add&quot;&gt;
       &lt;ons-toolbar&gt;
         &lt;div class=&quot;left&quot;&gt;&lt;ons-back-button&gt;戻る&lt;/ons-back-button&gt;&lt;/div&gt;
-        &lt;div class=&quot;center&quot;&gt;推しを追加&lt;/div&gt;
+        &lt;div class=&quot;center&quot;&gt;好きなものを追加&lt;/div&gt;
       &lt;/ons-toolbar&gt;
       &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p class=&quot;app-description&quot;&gt;好きな理由や、次に試したいことを自分の言葉で残しましょう。&lt;/p&gt;
-        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_name&quot;&gt;推しの名前&lt;/label&gt;
-        &lt;input id=&quot;txt_input_name&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;60&quot; placeholder=&quot;例：ノートからアプリを作ること&quot;&gt;
-        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_genre&quot;&gt;ジャンル&lt;/label&gt;
-        &lt;input id=&quot;txt_input_genre&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;30&quot; placeholder=&quot;例：学び方&quot;&gt;
-        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_comment&quot;&gt;私の推しポイント・次に試したいこと&lt;/label&gt;
+        &lt;p class=&quot;app-description&quot;&gt;好きなものと、その理由を自分の言葉で残しましょう。&lt;/p&gt;
+        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_name&quot;&gt;名前&lt;/label&gt;
+        &lt;input id=&quot;txt_input_name&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;60&quot; placeholder=&quot;例：アイスクリーム&quot;&gt;
+        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_genre&quot;&gt;種類&lt;/label&gt;
+        &lt;input id=&quot;txt_input_genre&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;30&quot; placeholder=&quot;例：食べ物&quot;&gt;
+        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_comment&quot;&gt;好きな理由&lt;/label&gt;
         &lt;textarea id=&quot;txt_input_comment&quot; class=&quot;app-input&quot; rows=&quot;4&quot; maxlength=&quot;500&quot; placeholder=&quot;好きな理由をひとこと&quot;&gt;&lt;/textarea&gt;
         &lt;p id=&quot;txt_add_message&quot; class=&quot;app-message&quot; aria-live=&quot;polite&quot;&gt;&lt;/p&gt;
         &lt;ons-button id=&quot;btn_save_oshi&quot;&gt;追加して保存&lt;/ons-button&gt;
@@ -4094,13 +4094,13 @@ function resetOshiItems() {
         &lt;div class=&quot;left&quot;&gt;
           &lt;ons-back-button&gt;戻る&lt;/ons-back-button&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;center&quot;&gt;推しの詳細&lt;/div&gt;
+        &lt;div class=&quot;center&quot;&gt;詳細&lt;/div&gt;
       &lt;/ons-toolbar&gt;
 
       &lt;div class=&quot;app-section&quot;&gt;
         &lt;p id=&quot;txt_detail_genre&quot; class=&quot;app-caption&quot;&gt;&lt;/p&gt;
         &lt;h1 id=&quot;txt_detail_name&quot; class=&quot;app-heading&quot;&gt;&lt;/h1&gt;
-        &lt;p class=&quot;app-label&quot;&gt;私の推しポイント・次に試したいこと&lt;/p&gt;
+        &lt;p class=&quot;app-label&quot;&gt;好きな理由&lt;/p&gt;
         &lt;p id=&quot;txt_detail_comment&quot; class=&quot;app-comment&quot;&gt;&lt;/p&gt;
       &lt;/div&gt;
     &lt;/ons-page&gt;
@@ -4235,19 +4235,19 @@ const STORAGE_KEY = &quot;jec-25cm-oshi-save-v1&quot;;
 function createInitialItems() {
   return [
     {
-      name: &quot;NotebookLM&quot;,
-      genre: &quot;学習ツール&quot;,
-      comment: &quot;授業のノートをもとに、自分の言葉で説明できるまで質問しています。\n分からなかったことがつながる瞬間が好きです。&quot;
+      name: &quot;好きな音楽&quot;,
+      genre: &quot;音楽&quot;,
+      comment: &quot;通学中に聴くと、元気になります。&quot;
     },
     {
-      name: &quot;Android Studio / Xcode&quot;,
-      genre: &quot;開発ツール&quot;,
-      comment: &quot;Android StudioやXcodeで、思いついた画面を形にするのが好きです。\n次は自分が毎日使えるアプリを作ってみたいです。&quot;
+      name: &quot;カレー&quot;,
+      genre: &quot;食べ物&quot;,
+      comment: &quot;自分の好きな辛さを選べるところが好きです。&quot;
     },
     {
-      name: &quot;AIエージェントを使ったアプリ開発&quot;,
-      genre: &quot;気になる技術&quot;,
-      comment: &quot;AIエージェントと相談しながら、アプリを作る方法に興味があります。\n提案されたコードの理由を確かめ、自分でも直せるようになりたいです。&quot;
+      name: &quot;公園&quot;,
+      genre: &quot;場所&quot;,
+      comment: &quot;ゆっくり歩いて、気分を変えられます。&quot;
     }
   ];
 }
@@ -4365,7 +4365,7 @@ function addOshi() {
   const genre = document.getElementById(&quot;txt_input_genre&quot;).value.trim();
   const comment = document.getElementById(&quot;txt_input_comment&quot;).value.trim();
   if (name === &quot;&quot; || genre === &quot;&quot; || comment === &quot;&quot;) {
-    txtMessage.textContent = &quot;名前・ジャンル・推しポイントをすべて入力してください。&quot;;
+    txtMessage.textContent = &quot;名前・種類・好きな理由をすべて入力してください。&quot;;
     return;
   }
 
@@ -4384,13 +4384,13 @@ function addOshi() {
   oshiItems = nextItems;
   renderOshiList();
   document.getElementById(&quot;txt_storage&quot;).textContent = oshiItems.length + &quot;件をこのブラウザに保存しました。&quot;;
-  document.getElementById(&quot;txt_selected&quot;).textContent = &quot;追加した推し：&quot; + name;
+  document.getElementById(&quot;txt_selected&quot;).textContent = &quot;追加したもの：&quot; + name;
   document.getElementById(&quot;nav_app&quot;).popPage();
 }
 
 function loadOshiItems() {
   const txtStorage = document.getElementById(&quot;txt_storage&quot;);
-  txtStorage.textContent = &quot;ソースに書いた初期の推しを表示しています。&quot;;
+  txtStorage.textContent = &quot;ソースに書いた初期の内容を表示しています。&quot;;
   try {
     const text = localStorage.getItem(STORAGE_KEY);
     if (text === null) {
@@ -4408,7 +4408,7 @@ function loadOshiItems() {
     canSave = false;
   }
   if (!canSave) {
-    txtStorage.textContent = &quot;保存内容を読み込めません。保存データは変更していません。初期の推しに戻すか、ブラウザの保存設定を先生と確認してください。&quot;;
+    txtStorage.textContent = &quot;保存内容を読み込めません。保存データは変更していません。初期の内容に戻すか、ブラウザの保存設定を先生と確認してください。&quot;;
   }
 }
 
@@ -4445,12 +4445,12 @@ function resetOshiItems() {
   document.getElementById(&quot;panel_reset&quot;).classList.add(&quot;is-hidden&quot;);
   renderOshiList();
   document.getElementById(&quot;txt_selected&quot;).textContent = &quot;まだ選択していません&quot;;
-  txtStorage.textContent = &quot;保存内容を削除し、ソースに書いた初期の推しへ戻しました。&quot;;
+  txtStorage.textContent = &quot;保存内容を削除し、ソースに書いた初期の内容へ戻しました。&quot;;
 }</code></pre></details>
 <div class="check"><label><input type="checkbox" data-check="oshi-save-11"><span>自分の題材に合わせた変更をソースへ保存し、初期状態から確認できた。</span></label></div></section>
 <section id="step-12"><p class="step-meta">STEP 12 · コマ7</p><h2>操作と公開URLを確認する</h2>
-<p>ソースの初期の推しが表示された状態から完成確認を始めます。必要な入力は内容を控えて、先生と確認してから初期化します。</p>
-<ol><li>一覧の各行から詳細へ進み、名前・ジャンル・理由が一致することを確認します。</li><li>追加画面で空欄を試し、同じ画面に案内が出ることを確認します。</li><li>確認用の1件を追加し、成功の文・件数・詳細・再読み込み後の復元を確認します。</li><li>初期化で <code>やめる</code> を選び、データが残ることを確かめます。必要な内容を控えた後に初期化し、ソースのデータへ戻します。</li><li>iPhone系・Android系のプレビューで入力・戻る・ボタンの見た目を比べます。比較用の <code>ons.platform.select("android")</code> を有効にした場合は、最後にコメントへ戻します。</li><li>クラウド IDEの <code>プロジェクト → 公開…</code> を開き、自分の作品であることを確かめ、公開URLを発行します。</li></ol>
+<p>ソースの初期の内容が表示された状態から完成確認を始めます。必要な入力は内容を控えて、先生と確認してから初期化します。</p>
+<ol><li>一覧の各行から詳細へ進み、名前・種類・理由が一致することを確認します。</li><li>追加画面で空欄を試し、同じ画面に案内が出ることを確認します。</li><li>確認用の1件を追加し、成功の文・件数・詳細・再読み込み後の復元を確認します。</li><li>初期化で <code>やめる</code> を選び、データが残ることを確かめます。必要な内容を控えた後に初期化し、ソースのデータへ戻します。</li><li>iPhone系・Android系のプレビューで入力・戻る・ボタンの見た目を比べます。比較用の <code>ons.platform.select("android")</code> を有効にした場合は、最後にコメントへ戻します。</li><li>クラウド IDEの <code>プロジェクト → 公開…</code> を開き、自分の作品であることを確かめ、公開URLを発行します。</li></ol>
 <p>提出するのは <code>https://monaca.mobi/ja/directimport?pid=…</code> という形の、実際に発行されたURLです。クラウド IDEやプレビューのアドレス、先生の完成見本URLを代わりに貼りません。相手のMonacaへソースを取り込むためのURLです。</p>
 <p>発行したURLを開き、対象のプロジェクトを確かめます。取り込みを確定するとコピーが増えるため、繰り返して枠を埋めないようにします。教員側で新しく取り込んだ状態の動作も確認します。</p>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>OSの見た目が変わっても入力・保存の処理は同じです。ネイティブアプリのビルド成果物を渡す方法と違い、ここではソースを相手の開発環境へコピーします。ブラウザの保存領域まで渡す操作ではありません。</p></div>
@@ -4458,7 +4458,7 @@ function resetOshiItems() {
 <div class="check"><label><input type="checkbox" data-check="oshi-save-12"><span>初期状態と追加後の操作を確認し、自分の作品の取り込み用公開URLを発行できた。</span></label></div></section>
 <section id="step-13"><p class="step-meta">STEP 13 · コマ7</p><h2>提出と準備状況を確認する</h2>
 <p>先生が授業中に案内する提出先・締め切りを確認し、次の内容を提出します。まだ案内がない場合は、URLと説明を控えて先生へ確認します。</p>
-<ul><li>自分の推しログで発行した公開URL。</li><li>アレンジした場所と、画面へどう表れるかの短い説明。</li></ul>
+<ul><li>自分の好きなものノートで発行した公開URL。</li><li>アレンジした場所と、画面へどう表れるかの短い説明。</li></ul>
 <p>通常版MonacaのFreeプランではZIPを学生の提出物にしません。先生は公開URLから取り込み、初期データと操作を確認します。公開中の自分のプロジェクトは提出後に削除しません。</p>
 <p>Flutter準備のタブへ戻り、取得が終わったか、SDKの版、flutter doctorで止まっている項目を確認します。終わっていない項目はその場で先生へ伝え、コマ8へ引き継ぎます。授業外で終わらせることを条件にはしません。</p>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>ソースを共有する提出と、端末に保存したデータを見せることを区別します。Android／iOSの実行環境を確認するときと同様に、準備済みの項目とまだ使えない項目を具体的に記録します。</p></div>
@@ -4477,7 +4477,7 @@ function resetOshiItems() {
   &lt;meta charset=&quot;utf-8&quot;&gt;
   &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;
   &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src * data: gap: content: https://ssl.gstatic.com; style-src * &#x27;unsafe-inline&#x27;; script-src * &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27;&quot;&gt;
-  &lt;title&gt;推しログ&lt;/title&gt;
+  &lt;title&gt;好きなものノート&lt;/title&gt;
   &lt;script src=&quot;components/loader.js&quot;&gt;&lt;/script&gt;
   &lt;link rel=&quot;stylesheet&quot; href=&quot;components/loader.css&quot;&gt;
   &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsenui.css&quot;&gt;
@@ -4492,25 +4492,25 @@ function resetOshiItems() {
   &lt;template id=&quot;list.html&quot;&gt;
     &lt;ons-page id=&quot;page_list&quot;&gt;
       &lt;ons-toolbar&gt;
-        &lt;div class=&quot;center&quot;&gt;推しログ&lt;/div&gt;
+        &lt;div class=&quot;center&quot;&gt;好きなものノート&lt;/div&gt;
       &lt;/ons-toolbar&gt;
 
       &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p class=&quot;app-caption&quot;&gt;わたしの推し&lt;/p&gt;
+        &lt;p class=&quot;app-caption&quot;&gt;わたしの好きなもの&lt;/p&gt;
         &lt;h1 class=&quot;app-heading&quot;&gt;好きな理由を集めよう。&lt;/h1&gt;
-        &lt;p class=&quot;app-description&quot;&gt;学びや開発の中で見つけた、お気に入りの記録。&lt;/p&gt;
-        &lt;ons-button id=&quot;btn_open_add&quot; class=&quot;app-action&quot;&gt;推しを追加&lt;/ons-button&gt;
+        &lt;p class=&quot;app-description&quot;&gt;音楽、食べ物、場所。好きなものと理由の記録。&lt;/p&gt;
+        &lt;ons-button id=&quot;btn_open_add&quot; class=&quot;app-action&quot;&gt;好きなものを追加&lt;/ons-button&gt;
         &lt;p id=&quot;txt_storage&quot; class=&quot;app-message&quot; aria-live=&quot;polite&quot;&gt;&lt;/p&gt;
       &lt;/div&gt;
 
       &lt;ons-list id=&quot;list_oshi&quot;&gt;&lt;/ons-list&gt;
       &lt;p id=&quot;txt_selected&quot; class=&quot;app-section app-selection&quot; aria-live=&quot;polite&quot;&gt;まだ選択していません&lt;/p&gt;
       &lt;div class=&quot;app-section reset-section&quot;&gt;
-        &lt;p class=&quot;app-description&quot;&gt;保存した推しを消し、ソースに書いた初期の推しへ戻せます。&lt;/p&gt;
-        &lt;ons-button id=&quot;btn_request_reset&quot; modifier=&quot;quiet&quot;&gt;初期の推しに戻す&lt;/ons-button&gt;
+        &lt;p class=&quot;app-description&quot;&gt;保存した内容を消し、ソースに書いた初期の内容へ戻せます。&lt;/p&gt;
+        &lt;ons-button id=&quot;btn_request_reset&quot; modifier=&quot;quiet&quot;&gt;初期の内容に戻す&lt;/ons-button&gt;
         &lt;div id=&quot;panel_reset&quot; class=&quot;is-hidden&quot;&gt;
-          &lt;p class=&quot;app-description&quot;&gt;このブラウザに保存した推しを削除します。元に戻せません。&lt;/p&gt;
-          &lt;ons-button id=&quot;btn_confirm_reset&quot;&gt;削除して初期の推しに戻す&lt;/ons-button&gt;
+          &lt;p class=&quot;app-description&quot;&gt;このブラウザに保存した内容を削除します。元に戻せません。&lt;/p&gt;
+          &lt;ons-button id=&quot;btn_confirm_reset&quot;&gt;削除して初期の内容に戻す&lt;/ons-button&gt;
           &lt;ons-button id=&quot;btn_cancel_reset&quot; modifier=&quot;quiet&quot;&gt;やめる&lt;/ons-button&gt;
         &lt;/div&gt;
       &lt;/div&gt;
@@ -4521,15 +4521,15 @@ function resetOshiItems() {
     &lt;ons-page id=&quot;page_add&quot;&gt;
       &lt;ons-toolbar&gt;
         &lt;div class=&quot;left&quot;&gt;&lt;ons-back-button&gt;戻る&lt;/ons-back-button&gt;&lt;/div&gt;
-        &lt;div class=&quot;center&quot;&gt;推しを追加&lt;/div&gt;
+        &lt;div class=&quot;center&quot;&gt;好きなものを追加&lt;/div&gt;
       &lt;/ons-toolbar&gt;
       &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p class=&quot;app-description&quot;&gt;好きな理由や、次に試したいことを自分の言葉で残しましょう。&lt;/p&gt;
-        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_name&quot;&gt;推しの名前&lt;/label&gt;
-        &lt;input id=&quot;txt_input_name&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;60&quot; placeholder=&quot;例：ノートからアプリを作ること&quot;&gt;
-        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_genre&quot;&gt;ジャンル&lt;/label&gt;
-        &lt;input id=&quot;txt_input_genre&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;30&quot; placeholder=&quot;例：学び方&quot;&gt;
-        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_comment&quot;&gt;私の推しポイント・次に試したいこと&lt;/label&gt;
+        &lt;p class=&quot;app-description&quot;&gt;好きなものと、その理由を自分の言葉で残しましょう。&lt;/p&gt;
+        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_name&quot;&gt;名前&lt;/label&gt;
+        &lt;input id=&quot;txt_input_name&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;60&quot; placeholder=&quot;例：アイスクリーム&quot;&gt;
+        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_genre&quot;&gt;種類&lt;/label&gt;
+        &lt;input id=&quot;txt_input_genre&quot; class=&quot;app-input&quot; type=&quot;text&quot; maxlength=&quot;30&quot; placeholder=&quot;例：食べ物&quot;&gt;
+        &lt;label class=&quot;app-label&quot; for=&quot;txt_input_comment&quot;&gt;好きな理由&lt;/label&gt;
         &lt;textarea id=&quot;txt_input_comment&quot; class=&quot;app-input&quot; rows=&quot;4&quot; maxlength=&quot;500&quot; placeholder=&quot;好きな理由をひとこと&quot;&gt;&lt;/textarea&gt;
         &lt;p id=&quot;txt_add_message&quot; class=&quot;app-message&quot; aria-live=&quot;polite&quot;&gt;&lt;/p&gt;
         &lt;ons-button id=&quot;btn_save_oshi&quot;&gt;追加して保存&lt;/ons-button&gt;
@@ -4544,13 +4544,13 @@ function resetOshiItems() {
         &lt;div class=&quot;left&quot;&gt;
           &lt;ons-back-button&gt;戻る&lt;/ons-back-button&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;center&quot;&gt;推しの詳細&lt;/div&gt;
+        &lt;div class=&quot;center&quot;&gt;詳細&lt;/div&gt;
       &lt;/ons-toolbar&gt;
 
       &lt;div class=&quot;app-section&quot;&gt;
         &lt;p id=&quot;txt_detail_genre&quot; class=&quot;app-caption&quot;&gt;&lt;/p&gt;
         &lt;h1 id=&quot;txt_detail_name&quot; class=&quot;app-heading&quot;&gt;&lt;/h1&gt;
-        &lt;p class=&quot;app-label&quot;&gt;私の推しポイント・次に試したいこと&lt;/p&gt;
+        &lt;p class=&quot;app-label&quot;&gt;好きな理由&lt;/p&gt;
         &lt;p id=&quot;txt_detail_comment&quot; class=&quot;app-comment&quot;&gt;&lt;/p&gt;
       &lt;/div&gt;
     &lt;/ons-page&gt;
@@ -4685,19 +4685,19 @@ const STORAGE_KEY = &quot;jec-25cm-oshi-save-v1&quot;;
 function createInitialItems() {
   return [
     {
-      name: &quot;NotebookLM&quot;,
-      genre: &quot;学習ツール&quot;,
-      comment: &quot;授業のノートをもとに、自分の言葉で説明できるまで質問しています。\n分からなかったことがつながる瞬間が好きです。&quot;
+      name: &quot;好きな音楽&quot;,
+      genre: &quot;音楽&quot;,
+      comment: &quot;通学中に聴くと、元気になります。&quot;
     },
     {
-      name: &quot;Android Studio / Xcode&quot;,
-      genre: &quot;開発ツール&quot;,
-      comment: &quot;Android StudioやXcodeで、思いついた画面を形にするのが好きです。\n次は自分が毎日使えるアプリを作ってみたいです。&quot;
+      name: &quot;カレー&quot;,
+      genre: &quot;食べ物&quot;,
+      comment: &quot;自分の好きな辛さを選べるところが好きです。&quot;
     },
     {
-      name: &quot;AIエージェントを使ったアプリ開発&quot;,
-      genre: &quot;気になる技術&quot;,
-      comment: &quot;AIエージェントと相談しながら、アプリを作る方法に興味があります。\n提案されたコードの理由を確かめ、自分でも直せるようになりたいです。&quot;
+      name: &quot;公園&quot;,
+      genre: &quot;場所&quot;,
+      comment: &quot;ゆっくり歩いて、気分を変えられます。&quot;
     }
   ];
 }
@@ -4815,7 +4815,7 @@ function addOshi() {
   const genre = document.getElementById(&quot;txt_input_genre&quot;).value.trim();
   const comment = document.getElementById(&quot;txt_input_comment&quot;).value.trim();
   if (name === &quot;&quot; || genre === &quot;&quot; || comment === &quot;&quot;) {
-    txtMessage.textContent = &quot;名前・ジャンル・推しポイントをすべて入力してください。&quot;;
+    txtMessage.textContent = &quot;名前・種類・好きな理由をすべて入力してください。&quot;;
     return;
   }
 
@@ -4834,13 +4834,13 @@ function addOshi() {
   oshiItems = nextItems;
   renderOshiList();
   document.getElementById(&quot;txt_storage&quot;).textContent = oshiItems.length + &quot;件をこのブラウザに保存しました。&quot;;
-  document.getElementById(&quot;txt_selected&quot;).textContent = &quot;追加した推し：&quot; + name;
+  document.getElementById(&quot;txt_selected&quot;).textContent = &quot;追加したもの：&quot; + name;
   document.getElementById(&quot;nav_app&quot;).popPage();
 }
 
 function loadOshiItems() {
   const txtStorage = document.getElementById(&quot;txt_storage&quot;);
-  txtStorage.textContent = &quot;ソースに書いた初期の推しを表示しています。&quot;;
+  txtStorage.textContent = &quot;ソースに書いた初期の内容を表示しています。&quot;;
   try {
     const text = localStorage.getItem(STORAGE_KEY);
     if (text === null) {
@@ -4858,7 +4858,7 @@ function loadOshiItems() {
     canSave = false;
   }
   if (!canSave) {
-    txtStorage.textContent = &quot;保存内容を読み込めません。保存データは変更していません。初期の推しに戻すか、ブラウザの保存設定を先生と確認してください。&quot;;
+    txtStorage.textContent = &quot;保存内容を読み込めません。保存データは変更していません。初期の内容に戻すか、ブラウザの保存設定を先生と確認してください。&quot;;
   }
 }
 
@@ -4895,13 +4895,13 @@ function resetOshiItems() {
   document.getElementById(&quot;panel_reset&quot;).classList.add(&quot;is-hidden&quot;);
   renderOshiList();
   document.getElementById(&quot;txt_selected&quot;).textContent = &quot;まだ選択していません&quot;;
-  txtStorage.textContent = &quot;保存内容を削除し、ソースに書いた初期の推しへ戻しました。&quot;;
+  txtStorage.textContent = &quot;保存内容を削除し、ソースに書いた初期の内容へ戻しました。&quot;;
 }</code></pre></details>
 <div class="check"><label><input type="checkbox" data-check="oshi-save-14"><span>自分の変更箇所と結果を説明でき、初期状態からも伝わる作品にできた。</span></label></div></section>
 <section id="help"><h2>困ったとき</h2><table><thead><tr><th>見えること</th><th>確認すること</th></tr></thead><tbody>
 <tr><td>入力画面が開かない</td><td>3ファイルが同じSTEPか、保存したかを確認。読込失敗の表示が出ていればSTEP 08へ。</td></tr>
 <tr><td>追加した文字が消えた</td><td>コマ5では未保存が正常。コマ6以降は保存成功の文、同じブラウザ・同じプレビューかを確認。</td></tr>
-<tr><td>初期データを書き換えても古い内容が出る</td><td>保存データが優先される。必要な内容を控えたうえで、アプリ内の「初期の推しに戻す」を使う。</td></tr>
+<tr><td>初期データを書き換えても古い内容が出る</td><td>保存データが優先される。必要な内容を控えたうえで、アプリ内の「初期の内容に戻す」を使う。</td></tr>
 <tr><td>保存・読込失敗と出る</td><td>その表示を先生へ見せる。読込に失敗したデータは自動で上書きしない。ブラウザ設定を無理に変更しない。</td></tr>
 <tr><td>提出URLが先生の見本と同じ</td><td>自分のプロジェクトで発行したURLか確認。クラウド IDEのアドレスやプレビューURLでは提出しない。</td></tr>
 </tbody></table></section><p class="footer">JEC / ハイブリッドアプリ開発技法 · M02OshiSave</p><p class="sr-only" role="status" aria-live="polite" data-copy-status></p></main></div></body></html>
