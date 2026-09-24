@@ -289,8 +289,10 @@ Flutter単元なら次の形になる（`F01HelloFlutter` を足す場合）。
 **topbar は、直前の単元へのリンク1つ**（最初の単元はリンクなし）。ブランドは `JEC / ハイブリッドアプリ開発技法` にそろえる。F01の直前がM01なら、次のようになる。
 
 ```html
-<header class="topbar"><span class="brand">JEC / ハイブリッドアプリ開発技法</span><a href="../hello-monaca/index.html">← M01：HelloMonaca</a></header>
+<header class="topbar"><span class="brand">JEC / ハイブリッドアプリ開発技法</span><a href="../hello-monaca/index.html"><span class="back-arrow" aria-hidden="true">←</span> M01：HelloMonaca</a></header>
 ```
+
+**矢印の `←` は `<span class="back-arrow" aria-hidden="true">` で囲む。** `←` は右から左の文の中でも向きが変わらないので、アラビア語のページ（`<html dir="rtl">`）では「進む」向きに見える。`docs/assets/textbook.css` が、右から左のページでだけこの `span` を左右反転する。日本語のページの見た目は変わらない。`aria-hidden` は、読み上げで「左向き矢印」と読ませないため。
 
 topbarは導線であって、本文で前の単元へ送ることではない。**Flutter系の最初の単元のtopbarがMonaca系の単元を指していても、本文でMonacaの作品を前提にしてはいけない。** 単元を途中に挿入したときは、**次の単元のtopbar**も新しい単元へ付け替える。topbarは検査されないので、目で確かめる。
 

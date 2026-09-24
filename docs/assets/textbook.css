@@ -36,6 +36,10 @@ button { cursor: pointer; }
 .skip:focus { top: 1rem; }
 .topbar { border-bottom: 1px solid var(--line); padding: .75rem 2rem; display: flex; justify-content: space-between; gap: 1rem; font-size: .82rem; letter-spacing: .03em; }
 .topbar a { color: var(--ink); }
+/* 前の単元へ戻るリンクの ←。← は右から左の文の中でも向きが変わらず、右から左のページでは「進む」向きに見えるので、
+   そのページだけ左右を反転する。transform は inline-block にしないと効かない。inline-block にはリンクの下線が
+   引き継がれないので、text-decoration も引き継ぐ。日本語のページでは何も当てず、見た目を変えない。 */
+[dir="rtl"] .back-arrow { display: inline-block; transform: scaleX(-1); text-decoration: inherit; }
 .brand { font-weight: 750; }
 .shell { display: grid; grid-template-columns: 260px minmax(0, 900px); max-width: 1260px; margin: auto; }
 .sidebar { padding: 2rem 1.25rem; border-inline-end: 1px solid var(--line); }
