@@ -2430,7 +2430,7 @@ function openOshiDetail(oshi) {
 <p><code>pushPage</code> の2番目の引数に <code>{ data: { oshi: oshi } }</code> を渡します。左側の <code>oshi</code> は受け渡す項目の名前、右側の <code>oshi</code> は関数の引数で受け取った好きなもの1件です。</p>
 <p>詳細ページの <code>init</code> では、<code>const oshi = page.data.oshi;</code> でその1件を取り出します。その後、<code>txt_detail_name</code>・<code>txt_detail_genre</code>・<code>txt_detail_comment</code> の <code>textContent</code> を設定します。</p>
 <ol><li>1件目を押し、名前・種類・理由が配列の1件目と一致することを確かめます。</li><li>戻って2件目、3件目でも確かめます。</li><li>理由の <code>\n</code> が改行になっていることを見ます。CSSの <code>white-space: pre-wrap</code> が、改行を保ちながら折り返します。</li></ol>
-<p>このSTEPも画面の動きが終わってから次を押します。繰り返し押されても詳細を重ねない処理は次のSTEPで追加します。</p>
+<p>このSTEPも画面の動きが終わってから次を押します。画面の切り替えの途中に届いた2回目の操作は、Onsen UIのnavigatorが受け付けないので、続けて押しても詳細は重なりません。次のSTEPでは、この仕組みに任せきりにせず、アプリの側でも開く途中かどうかを記録します。</p>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>Androidで次の画面へ値を渡す、iOSで遷移先に表示用の値を渡す目的と同じです。Onsen UIではnavigatorの <code>data</code> を渡し、作られたページの <code>page.data</code> から受け取ります。ここで渡すのは実行中のJavaScriptオブジェクトで、ファイルへ保存したり文字列へ変換したりしているわけではありません。</p></div>
 <details><summary>このSTEPの全コード（照合・合流用）</summary>
 <div class="code-head">www/index.html · 全文</div>
@@ -2649,10 +2649,11 @@ function openOshiDetail(oshi) {
 </section>
 <section id="step-18">
 <p class="step-meta">STEP 18 · 4コマ目</p><h2>連続して押されても詳細を重ねない</h2>
-<p><code>www/js/app.js</code> を全文に置き換えます。完成版では <code>isOpeningDetail</code> という真偽値と、navigatorの現在のページを使って、詳細を重ねて開くことを防ぎます。</p>
+<p><code>www/js/app.js</code> を全文に置き換えます。完成版では <code>isOpeningDetail</code> という真偽値と、navigatorの現在のページを使って、詳細を重ねて開くことを防ぎます。Onsen UIのnavigatorも、切り替えの途中に届いた2回目の <code>pushPage</code> は受け付けませんが、断られた呼び出しはエラーになります。アプリの側で開く途中かどうかを記録しておけば、2回目の呼び出しそのものをしないで済みます。</p>
 <table><thead><tr><th>場所</th><th>意味</th></tr></thead><tbody><tr><td><code>isOpeningDetail = false</code></td><td>まだ詳細を開く途中ではない。</td></tr><tr><td><code>if (isOpeningDetail || navApp.topPage.id !== "page_list")</code></td><td>開いている途中、または一覧が一番上でなければ処理を抜ける。</td></tr><tr><td><code>isOpeningDetail = true</code></td><td>次のクリックが来る前に、開く途中だと記録する。</td></tr><tr><td><code>callback: function() { ... }</code></td><td>ページを開く処理が終わったときに実行される関数。ここで真偽値をfalseへ戻す。</td></tr></tbody></table>
 <p><code>||</code> は「どちらか」、<code>!==</code> は「等しくない」、<code>return</code> はこの関数をそこで終える、というWeb基礎の書き方です。開き終わって真偽値がfalseになっても、詳細が一番上ならもう一度開きません。</p>
 <ol><li>保存して再読み込みし、同じ行を続けて2回押します。</li><li>詳細の左上の戻るボタンを1回押します。一覧に戻れば、詳細は重なっていません。</li><li>別の行を押し、別の詳細も開けることを確かめます。</li></ol>
+<p>画面の見た目は、STEP 17のときと同じです。ここでは、処理を足したあとも、今までどおり詳細が1枚だけ開き、戻れることを確かめます。</p>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎でクリック後の処理を関数として登録したのと同じく、<code>callback</code> へ「終わったら行う関数」を渡します。Androidのアニメーション終了の通知やiOSの完了ハンドラと対応します。最初に真偽値を変え、完了通知で戻すことで、画面の切り替えを待つ間だけ次の開始を止めます。</p></div>
 <details><summary>このSTEPの全コード（照合・合流用）</summary>
 <div class="code-head">www/index.html · 全文</div>
