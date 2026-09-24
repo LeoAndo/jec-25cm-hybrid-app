@@ -27,6 +27,65 @@ permissions:
   contents: read
 
 jobs:
+  app-sources:
+    name: validate-app-sources
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '24'
+      # 教材の登録前に作る完成プロジェクトのPRも検査するため、Git管理下の実物から選ぶ。
+      - name: Monacaの構文検査とFlutterプロジェクトの検出
+        id: projects
+        shell: python
+        run: |
+          import json
+          import os
+          from pathlib import PurePosixPath
+          import re
+          import subprocess
+
+          files = subprocess.check_output(['git', 'ls-files', '-z']).decode().split('\0')
+          flutter_roots = []
+          for name in files:
+              path = PurePosixPath(name)
+              parts = path.parts
+              if not parts:
+                  continue
+              if re.fullmatch(r'M\d+[A-Za-z0-9_]+', parts[0]):
+                  if len(parts) >= 3 and parts[1] == 'www' and parts[2] != 'components' and path.suffix == '.js':
+                      print('JavaScript構文検査:', name, flush=True)
+                      subprocess.run(['node', '--check', name], check=True)
+              elif re.fullmatch(r'F\d+[A-Za-z0-9_]+', parts[0]):
+                  if len(parts) == 2 and parts[1] == 'pubspec.yaml':
+                      flutter_roots.append(parts[0])
+          with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as output:
+              print('flutter=' + json.dumps(sorted(flutter_roots)), file=output)
+      - name: 授業で使うFlutter SDKを準備
+        if: steps.projects.outputs.flutter != '[]'
+        uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2.23.0
+        with:
+          flutter-version: '3.47.5'
+          channel: stable
+      - name: Flutterの依存取得と静的解析
+        if: steps.projects.outputs.flutter != '[]'
+        env:
+          FLUTTER_PROJECTS: ${{ steps.projects.outputs.flutter }}
+        shell: python
+        run: |
+          import json
+          import os
+          import subprocess
+
+          for project in json.loads(os.environ['FLUTTER_PROJECTS']):
+              print('Flutter静的解析:', project, flush=True)
+              subprocess.run(['flutter', 'pub', 'get'], cwd=project, check=True)
+              subprocess.run(['flutter', 'analyze', '--no-pub'], cwd=project, check=True)
+
   validate:
     name: validate-teaching-materials
     runs-on: ubuntu-latest
@@ -47,7 +106,7 @@ jobs:
         run: python3 scripts/localize-student-materials.py status
 
   package:
-    needs: validate
+    needs: [validate, app-sources]
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
