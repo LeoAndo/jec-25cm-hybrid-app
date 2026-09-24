@@ -57,6 +57,10 @@ Onsen UIはCDNから2.12.9を固定して読み込みます。テンプレート
 
 このフォルダで`python3 -m http.server 8780 --bind 127.0.0.1 --directory www`を実行し、Google Chromeで`http://127.0.0.1:8780/`を開きます。`file://`では検証しません。初回のCDN読み込みとMonacaでの利用にはネット接続が必要です。
 
-2026-09-24、ローカルChromeの390px幅で初期表示、空入力の案内、HTML記号・改行を含む追加、再読み込み後の復元、詳細と戻る、初期化の確認・中止を確認しました。検証用コピーで、不正なJSON・不正な項目構造からの読込失敗、空配列の復元、保存失敗時の入力保持と元の一覧の維持も確認しました。Monacaへの取り込みとクラウドプレビューは未確認です。完成アプリのUnit Testは作りません。
+2026-09-24、ローカルChromeの390px幅で初期表示、空入力の案内、HTML記号・改行を含む追加、再読み込み後の復元、詳細と戻る、初期化の確認・中止を確認しました。検証用コピーで、不正なJSON・不正な項目構造からの読込失敗、空配列の復元、保存失敗時の入力保持と元の一覧の維持も確認しました。完成アプリのUnit Testは作りません。
+
+同日、コミット`68a5925`の配布用ZIPを通常版Monacaの「URLを指定してインポート」で取り込みました。クラウドのiPhone 15・Pixel 8プレビューで初期表示、空入力の案内、追加・保存、再読み込み後の復元、詳細と戻るを確認しました。iPhone表示では理由の改行と初期化の取消し、Pixel表示では初期化の確定と再読み込み後の初期3件も確認しました。端末の切替えは同じプレビューオリジンでの表示確認であり、異なる端末間の同期を確認したものではありません。
+
+[取り込み用の公開URL](https://monaca.mobi/ja/directimport?pid=6ab5042ee78885db0a1a0da2)を発行し、リンク先に`M02OshiSave`とインポート操作が表示されることを確認しました。公開中の完成見本はM01・M02の2本で、採点用に1枠を残しています。公開URLから別プロジェクトへの再取り込みは未確認です。公開したアプリのHTML・CSS・JavaScriptはこのフォルダと同一で、この検証記録は公開後に追記しています。
 
 参考：[Web Storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)、[JSON.parse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)、[Onsen UI navigator](https://onsen.io/v2/api/js/ons-navigator.html)。

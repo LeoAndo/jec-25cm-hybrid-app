@@ -738,7 +738,8 @@
           "copy": "teacher/oshi-save/code/14-app.js"
         }
       ],
-      "archive": "docs/oshi-save/downloads/M02OshiSave.zip"
+      "archive": "docs/oshi-save/downloads/M02OshiSave.zip",
+      "import_url": "https://monaca.mobi/ja/directimport?pid=6ab5042ee78885db0a1a0da2"
     },
     {
       "name": "F01StampBoard",
