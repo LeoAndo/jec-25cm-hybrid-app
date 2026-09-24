@@ -89,7 +89,7 @@ code, pre, kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, mon
 [dir="rtl"] strong { unicode-bidi: plaintext; }
 code { background: #eef1f3; border-radius: 3px; padding: .13em .3em; font-size: .88em; overflow-wrap: anywhere; }
 pre { background: #192635; color: #edf4fc; border-radius: 0 0 9px 9px; padding: 1.2rem; margin: 0 0 1.2rem; overflow-x: auto; line-height: 1.65; font-size: .82rem; tab-size: 4; }
-pre code { padding: 0; background: transparent; color: inherit; font-size: inherit; overflow-wrap: normal; }
+pre code { padding: 0; background: transparent; color: inherit; font-size: inherit; overflow-wrap: inherit; }
 .code-head { background: #293c51; color: #edf4fc; border-radius: 9px 9px 0 0; padding: .5rem .8rem; display: flex; gap: 1rem; justify-content: space-between; align-items: center; margin-top: .8rem; font-size: .78rem; }
 .code-head button { border: 1px solid #a6bed5; border-radius: 5px; padding: .15rem .6rem; color: white; background: transparent; white-space: nowrap; font-size: .75rem; }
 .code-head button:hover { background: #435a73; }
@@ -110,7 +110,9 @@ pre code { padding: 0; background: transparent; color: inherit; font-size: inher
    1列が260px前後しかないので、既存の pre のまま（padding 1.2rem・横スクロール）だと
    `System.out.println(number1);` のような短い行まではみ出し、3つを見比べられない。
    余白と字を詰めたうえで、横スクロールではなく折り返しにする。見比べるのが目的なので、
-   隠れて読めないより、折り返して全部見えるほうがよい。@media print も同じ扱いにしてある。 */
+   隠れて読めないより、折り返して全部見えるほうがよい。@media print も同じ扱いにしてある。
+   中の code は、pre code の overflow-wrap: inherit で、この pre の anywhere を引き継ぐ。code 側で normal にすると、
+   `document.getElementById('txt_message').textContent` のような空白のない長い語だけが折り返されず、欄の外へはみ出す。 */
 .compare-item pre { border-radius: 9px; margin: 0; flex: 1 1 auto; padding: .9rem; font-size: .76rem; white-space: pre-wrap; overflow-wrap: anywhere; overflow-x: visible; }
 kbd { font-size: .84em; border: 1px solid #bfc7cf; border-bottom-width: 2px; border-radius: 4px; padding: .1em .4em; white-space: nowrap; }
 table { width: 100%; border-collapse: collapse; margin: 1.2rem 0; font-size: .88rem; }
