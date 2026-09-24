@@ -10,7 +10,8 @@
     "teacher",
     "M01OshiList",
     "M02OshiSave",
-    "F01StampBoard"
+    "F01StampBoard",
+    "F02StampRelease"
   ],
   "terms": [
     {
@@ -45,7 +46,9 @@
       "required_in": [
         "README.md",
         "docs/stamp-board/index.html",
-        "teacher/stamp-board/index.html"
+        "teacher/stamp-board/index.html",
+        "docs/stamp-release/index.html",
+        "teacher/stamp-release/index.html"
       ]
     }
   ],
@@ -881,6 +884,150 @@
         {
           "source": "F01StampBoard/lib/main.dart",
           "copy": "teacher/stamp-board/code/19-main.dart"
+        }
+      ]
+    },
+    {
+      "name": "F02StampRelease",
+      "root": "F02StampRelease",
+      "kind": "flutter",
+      "sessions": 4,
+      "package_name": "f02_stamp_release",
+      "application_id": "jp.ac.jec.f02_stamp_release",
+      "entry": "F02StampRelease/lib/main.dart",
+      "sources": [
+        "F02StampRelease/lib/main.dart"
+      ],
+      "docs": [
+        "docs/stamp-release/index.html",
+        "teacher/stamp-release/index.html"
+      ],
+      "archive": "docs/stamp-release/downloads/F02StampRelease.zip",
+      "snippets": [
+        {
+          "html": "docs/stamp-release/index.html",
+          "id": "code-00-main-dart",
+          "source": "teacher/stamp-release/code/00-main.dart"
+        },
+        {
+          "html": "docs/stamp-release/index.html",
+          "id": "code-01-main-dart",
+          "source": "teacher/stamp-release/code/01-main.dart"
+        },
+        {
+          "html": "docs/stamp-release/index.html",
+          "id": "code-02-main-dart",
+          "source": "teacher/stamp-release/code/02-main.dart"
+        },
+        {
+          "html": "docs/stamp-release/index.html",
+          "id": "code-03-main-dart",
+          "source": "teacher/stamp-release/code/03-main.dart"
+        },
+        {
+          "html": "docs/stamp-release/index.html",
+          "id": "code-04-main-dart",
+          "source": "teacher/stamp-release/code/04-main.dart"
+        },
+        {
+          "html": "docs/stamp-release/index.html",
+          "id": "start-04-main-dart",
+          "source": "teacher/stamp-release/code/04-main.dart"
+        },
+        {
+          "html": "docs/stamp-release/index.html",
+          "id": "code-06-main-dart",
+          "source": "teacher/stamp-release/code/06-main.dart"
+        },
+        {
+          "html": "docs/stamp-release/index.html",
+          "id": "code-07-main-dart",
+          "source": "teacher/stamp-release/code/07-main.dart"
+        },
+        {
+          "html": "docs/stamp-release/index.html",
+          "id": "code-08-main-dart",
+          "source": "teacher/stamp-release/code/08-main.dart"
+        },
+        {
+          "html": "docs/stamp-release/index.html",
+          "id": "code-09-main-dart",
+          "source": "teacher/stamp-release/code/09-main.dart"
+        },
+        {
+          "html": "docs/stamp-release/index.html",
+          "id": "start-09-main-dart",
+          "source": "teacher/stamp-release/code/09-main.dart"
+        },
+        {
+          "html": "docs/stamp-release/index.html",
+          "id": "code-14-main-dart",
+          "source": "teacher/stamp-release/code/14-main.dart"
+        },
+        {
+          "html": "docs/stamp-release/index.html",
+          "id": "start-14-main-dart",
+          "source": "teacher/stamp-release/code/14-main.dart"
+        },
+        {
+          "html": "docs/stamp-release/index.html",
+          "id": "code-16-main-dart",
+          "source": "teacher/stamp-release/code/16-main.dart"
+        },
+        {
+          "html": "docs/stamp-release/index.html",
+          "id": "code-19-main-dart",
+          "source": "teacher/stamp-release/code/19-main.dart"
+        }
+      ],
+      "mirrors": [
+        {
+          "source": "F02StampRelease/lib/main.dart",
+          "copy": "teacher/stamp-release/code/08-main.dart"
+        },
+        {
+          "source": "F02StampRelease/lib/main.dart",
+          "copy": "teacher/stamp-release/code/09-main.dart"
+        },
+        {
+          "source": "F02StampRelease/lib/main.dart",
+          "copy": "teacher/stamp-release/code/10-main.dart"
+        },
+        {
+          "source": "F02StampRelease/lib/main.dart",
+          "copy": "teacher/stamp-release/code/11-main.dart"
+        },
+        {
+          "source": "F02StampRelease/lib/main.dart",
+          "copy": "teacher/stamp-release/code/12-main.dart"
+        },
+        {
+          "source": "F02StampRelease/lib/main.dart",
+          "copy": "teacher/stamp-release/code/13-main.dart"
+        },
+        {
+          "source": "F02StampRelease/lib/main.dart",
+          "copy": "teacher/stamp-release/code/14-main.dart"
+        },
+        {
+          "source": "F02StampRelease/lib/main.dart",
+          "copy": "teacher/stamp-release/code/15-main.dart"
+        },
+        {
+          "source": "F02StampRelease/lib/main.dart",
+          "copy": "teacher/stamp-release/code/16-main.dart"
+        },
+        {
+          "source": "F02StampRelease/lib/main.dart",
+          "copy": "teacher/stamp-release/code/17-main.dart"
+        },
+        {
+          "source": "F02StampRelease/lib/main.dart",
+          "copy": "teacher/stamp-release/code/18-main.dart"
+        },
+        {
+          "source": "F02StampRelease/lib/main.dart",
+          "copy": "teacher/stamp-release/code/19-main.dart"
         }
       ]
     }
