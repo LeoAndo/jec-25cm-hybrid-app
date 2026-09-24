@@ -7,19 +7,19 @@ const STORAGE_KEY = "jec-25cm-oshi-save-v1";
 function createInitialItems() {
   return [
     {
-      name: "NotebookLM",
-      genre: "学習ツール",
-      comment: "授業のノートをもとに、自分の言葉で説明できるまで質問しています。\n分からなかったことがつながる瞬間が好きです。"
+      name: "好きな音楽",
+      genre: "音楽",
+      comment: "通学中に聴くと、元気になります。\n好きな曲を何度も聴いています。"
     },
     {
-      name: "Android Studio / Xcode",
-      genre: "開発ツール",
-      comment: "Android StudioやXcodeで、思いついた画面を形にするのが好きです。\n次は自分が毎日使えるアプリを作ってみたいです。"
+      name: "カレー",
+      genre: "食べ物",
+      comment: "自分の好きな辛さを選べるところが好きです。\nお店ごとの味の違いも楽しめます。"
     },
     {
-      name: "AIエージェントを使ったアプリ開発",
-      genre: "気になる技術",
-      comment: "AIエージェントと相談しながら、アプリを作る方法に興味があります。\n提案されたコードの理由を確かめ、自分でも直せるようになりたいです。"
+      name: "公園",
+      genre: "場所",
+      comment: "ゆっくり歩いて、気分を変えられます。\n季節によって景色が変わるところも好きです。"
     }
   ];
 }
@@ -137,7 +137,7 @@ function addOshi() {
   const genre = document.getElementById("txt_input_genre").value.trim();
   const comment = document.getElementById("txt_input_comment").value.trim();
   if (name === "" || genre === "" || comment === "") {
-    txtMessage.textContent = "名前・ジャンル・推しポイントをすべて入力してください。";
+    txtMessage.textContent = "名前・種類・好きな理由をすべて入力してください。";
     return;
   }
 
@@ -156,13 +156,13 @@ function addOshi() {
   oshiItems = nextItems;
   renderOshiList();
   document.getElementById("txt_storage").textContent = oshiItems.length + "件をこのブラウザに保存しました。";
-  document.getElementById("txt_selected").textContent = "追加した推し：" + name;
+  document.getElementById("txt_selected").textContent = "追加したもの：" + name;
   document.getElementById("nav_app").popPage();
 }
 
 function loadOshiItems() {
   const txtStorage = document.getElementById("txt_storage");
-  txtStorage.textContent = "ソースに書いた初期の推しを表示しています。";
+  txtStorage.textContent = "ソースに書いた初期の内容を表示しています。";
   try {
     const text = localStorage.getItem(STORAGE_KEY);
     if (text === null) {
@@ -180,7 +180,7 @@ function loadOshiItems() {
     canSave = false;
   }
   if (!canSave) {
-    txtStorage.textContent = "保存内容を読み込めません。保存データは変更していません。初期の推しに戻すか、ブラウザの保存設定を先生と確認してください。";
+    txtStorage.textContent = "保存内容を読み込めません。保存データは変更していません。初期の内容に戻すか、ブラウザの保存設定を先生と確認してください。";
   }
 }
 
@@ -217,5 +217,5 @@ function resetOshiItems() {
   document.getElementById("panel_reset").classList.add("is-hidden");
   renderOshiList();
   document.getElementById("txt_selected").textContent = "まだ選択していません";
-  txtStorage.textContent = "保存内容を削除し、ソースに書いた初期の推しへ戻しました。";
+  txtStorage.textContent = "保存内容を削除し、ソースに書いた初期の内容へ戻しました。";
 }

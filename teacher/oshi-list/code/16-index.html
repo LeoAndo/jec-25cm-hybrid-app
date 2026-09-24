@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
-  <title>推しログ</title>
+  <title>好きなものノート</title>
   <script src="components/loader.js"></script>
   <link rel="stylesheet" href="components/loader.css">
   <link rel="stylesheet" href="https://unpkg.com/onsenui@2.12.9/css/onsenui.css">
@@ -19,13 +19,13 @@
   <template id="list.html">
     <ons-page id="page_list">
       <ons-toolbar>
-        <div class="center">推しログ</div>
+        <div class="center">好きなものノート</div>
       </ons-toolbar>
 
       <div class="app-section">
-        <p class="app-caption">わたしの推し</p>
+        <p class="app-caption">わたしの好きなもの</p>
         <h1 class="app-heading">好きな理由を集めよう。</h1>
-        <p class="app-description">学びや開発の中で見つけた、お気に入りの記録。</p>
+        <p class="app-description">音楽、食べ物、場所。好きなものと理由の記録。</p>
       </div>
 
       <ons-list id="list_oshi"></ons-list>
@@ -39,13 +39,13 @@
         <div class="left">
           <ons-back-button>戻る</ons-back-button>
         </div>
-        <div class="center">推しの詳細</div>
+        <div class="center">詳細</div>
       </ons-toolbar>
 
       <div class="app-section">
-        <p id="txt_detail_genre" class="app-caption">学習ツール</p>
+        <p id="txt_detail_genre" class="app-caption">音楽</p>
         <h1 id="txt_detail_name" class="app-heading">詳細画面の見本</h1>
-        <p class="app-label">私の推しポイント・次に試したいこと</p>
+        <p class="app-label">好きな理由</p>
         <p id="txt_detail_comment" class="app-comment">戻るボタンで一覧に戻れます。</p>
       </div>
     </ons-page>
