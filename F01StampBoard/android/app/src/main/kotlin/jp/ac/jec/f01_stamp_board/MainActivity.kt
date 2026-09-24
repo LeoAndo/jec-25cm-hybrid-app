@@ -1,0 +1,5 @@
+package jp.ac.jec.f01_stamp_board
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity : FlutterActivity()
