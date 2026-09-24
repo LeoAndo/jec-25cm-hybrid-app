@@ -8,7 +8,9 @@
     "README.md",
     "docs",
     "teacher",
-    "M01OshiList"
+    "M01OshiList",
+    "M02OshiSave",
+    "F01StampBoard"
   ],
   "terms": [
     {
@@ -25,7 +27,9 @@
       "required_in": [
         "README.md",
         "docs/oshi-list/index.html",
-        "teacher/oshi-list/index.html"
+        "teacher/oshi-list/index.html",
+        "docs/oshi-save/index.html",
+        "teacher/oshi-save/index.html"
       ]
     },
     {
@@ -39,7 +43,9 @@
         "flutter"
       ],
       "required_in": [
-        "README.md"
+        "README.md",
+        "docs/stamp-board/index.html",
+        "teacher/stamp-board/index.html"
       ]
     }
   ],
@@ -58,7 +64,7 @@
   "project_layout": {
     "gitignore_reference": {
       "monaca": null,
-      "flutter": null
+      "flutter": "F01StampBoard/.gitignore"
     },
     "untracked_parts": [
       ".idea"
@@ -429,6 +435,454 @@
       ],
       "archive": "docs/oshi-list/downloads/M01OshiList.zip",
       "import_url": "https://monaca.mobi/ja/directimport?pid=6ab3e25de78885da2c0a0ae6"
+    },
+    {
+      "name": "M02OshiSave",
+      "kind": "monaca",
+      "root": "M02OshiSave",
+      "app_id": "jp.ac.jec.m02oshisave",
+      "entry": "M02OshiSave/www/index.html",
+      "sessions": 3,
+      "docs": [
+        "docs/oshi-save/index.html",
+        "teacher/oshi-save/index.html"
+      ],
+      "sources": [
+        "M02OshiSave/www/index.html",
+        "M02OshiSave/www/css/style.css",
+        "M02OshiSave/www/js/app.js"
+      ],
+      "snippets": [
+        {
+          "html": "docs/oshi-save/index.html",
+          "id": "code-00-index-html",
+          "source": "teacher/oshi-save/code/00-index.html"
+        },
+        {
+          "html": "docs/oshi-save/index.html",
+          "id": "code-00-style-css",
+          "source": "teacher/oshi-save/code/00-style.css"
+        },
+        {
+          "html": "docs/oshi-save/index.html",
+          "id": "code-00-app-js",
+          "source": "teacher/oshi-save/code/00-app.js"
+        },
+        {
+          "html": "docs/oshi-save/index.html",
+          "id": "code-01-index-html",
+          "source": "teacher/oshi-save/code/01-index.html"
+        },
+        {
+          "html": "docs/oshi-save/index.html",
+          "id": "code-01-style-css",
+          "source": "teacher/oshi-save/code/01-style.css"
+        },
+        {
+          "html": "docs/oshi-save/index.html",
+          "id": "code-01-app-js",
+          "source": "teacher/oshi-save/code/01-app.js"
+        },
+        {
+          "html": "docs/oshi-save/index.html",
+          "id": "code-02-index-html",
+          "source": "teacher/oshi-save/code/02-index.html"
+        },
+        {
+          "html": "docs/oshi-save/index.html",
+          "id": "code-02-style-css",
+          "source": "teacher/oshi-save/code/02-style.css"
+        },
+        {
+          "html": "docs/oshi-save/index.html",
+          "id": "code-02-app-js",
+          "source": "teacher/oshi-save/code/02-app.js"
+        },
+        {
+          "html": "docs/oshi-save/index.html",
+          "id": "code-03-index-html",
+          "source": "teacher/oshi-save/code/03-index.html"
+        },
+        {
+          "html": "docs/oshi-save/index.html",
+          "id": "code-03-style-css",
+          "source": "teacher/oshi-save/code/03-style.css"
+        },
+        {
+          "html": "docs/oshi-save/index.html",
+          "id": "code-03-app-js",
+          "source": "teacher/oshi-save/code/03-app.js"
+        },
+        {
+          "html": "docs/oshi-save/index.html",
+          "id": "code-04-index-html",
+          "source": "teacher/oshi-save/code/04-index.html"
+        },
+        {
+          "html": "docs/oshi-save/index.html",
+          "id": "code-04-style-css",
+          "source": "teacher/oshi-save/code/04-style.css"
+        },
+        {
+          "html": "docs/oshi-save/index.html",
+          "id": "code-04-app-js",
+          "source": "teacher/oshi-save/code/04-app.js"
+        },
+        {
+          "html": "docs/oshi-save/index.html",
+          "id": "start-04-index-html",
+          "source": "teacher/oshi-save/code/04-index.html"
+        },
+        {
+          "html": "docs/oshi-save/index.html",
+          "id": "start-04-style-css",
+          "source": "teacher/oshi-save/code/04-style.css"
+        },
+        {
+          "html": "docs/oshi-save/index.html",
+          "id": "start-04-app-js",
+          "source": "teacher/oshi-save/code/04-app.js"
+        },
+        {
+          "html": "docs/oshi-save/index.html",
+          "id": "code-06-index-html",
+          "source": "teacher/oshi-save/code/06-index.html"
+        },
+        {
+          "html": "docs/oshi-save/index.html",
+          "id": "code-06-style-css",
+          "source": "teacher/oshi-save/code/06-style.css"
+        },
+        {
+          "html": "docs/oshi-save/index.html",
+          "id": "code-06-app-js",
+          "source": "teacher/oshi-save/code/06-app.js"
+        },
+        {
+          "html": "docs/oshi-save/index.html",
+          "id": "code-07-index-html",
+          "source": "teacher/oshi-save/code/07-index.html"
+        },
+        {
+          "html": "docs/oshi-save/index.html",
+          "id": "code-07-style-css",
+          "source": "teacher/oshi-save/code/07-style.css"
+        },
+        {
+          "html": "docs/oshi-save/index.html",
+          "id": "code-07-app-js",
+          "source": "teacher/oshi-save/code/07-app.js"
+        },
+        {
+          "html": "docs/oshi-save/index.html",
+          "id": "code-08-index-html",
+          "source": "teacher/oshi-save/code/08-index.html"
+        },
+        {
+          "html": "docs/oshi-save/index.html",
+          "id": "code-08-style-css",
+          "source": "teacher/oshi-save/code/08-style.css"
+        },
+        {
+          "html": "docs/oshi-save/index.html",
+          "id": "code-08-app-js",
+          "source": "teacher/oshi-save/code/08-app.js"
+        },
+        {
+          "html": "docs/oshi-save/index.html",
+          "id": "code-09-index-html",
+          "source": "teacher/oshi-save/code/09-index.html"
+        },
+        {
+          "html": "docs/oshi-save/index.html",
+          "id": "code-09-style-css",
+          "source": "teacher/oshi-save/code/09-style.css"
+        },
+        {
+          "html": "docs/oshi-save/index.html",
+          "id": "code-09-app-js",
+          "source": "teacher/oshi-save/code/09-app.js"
+        },
+        {
+          "html": "docs/oshi-save/index.html",
+          "id": "start-09-index-html",
+          "source": "teacher/oshi-save/code/09-index.html"
+        },
+        {
+          "html": "docs/oshi-save/index.html",
+          "id": "start-09-style-css",
+          "source": "teacher/oshi-save/code/09-style.css"
+        },
+        {
+          "html": "docs/oshi-save/index.html",
+          "id": "start-09-app-js",
+          "source": "teacher/oshi-save/code/09-app.js"
+        },
+        {
+          "html": "docs/oshi-save/index.html",
+          "id": "code-11-index-html",
+          "source": "teacher/oshi-save/code/11-index.html"
+        },
+        {
+          "html": "docs/oshi-save/index.html",
+          "id": "code-11-style-css",
+          "source": "teacher/oshi-save/code/11-style.css"
+        },
+        {
+          "html": "docs/oshi-save/index.html",
+          "id": "code-11-app-js",
+          "source": "teacher/oshi-save/code/11-app.js"
+        },
+        {
+          "html": "docs/oshi-save/index.html",
+          "id": "code-14-index-html",
+          "source": "teacher/oshi-save/code/14-index.html"
+        },
+        {
+          "html": "docs/oshi-save/index.html",
+          "id": "code-14-style-css",
+          "source": "teacher/oshi-save/code/14-style.css"
+        },
+        {
+          "html": "docs/oshi-save/index.html",
+          "id": "code-14-app-js",
+          "source": "teacher/oshi-save/code/14-app.js"
+        }
+      ],
+      "mirrors": [
+        {
+          "source": "M02OshiSave/www/index.html",
+          "copy": "teacher/oshi-save/code/08-index.html"
+        },
+        {
+          "source": "M02OshiSave/www/css/style.css",
+          "copy": "teacher/oshi-save/code/08-style.css"
+        },
+        {
+          "source": "M02OshiSave/www/js/app.js",
+          "copy": "teacher/oshi-save/code/08-app.js"
+        },
+        {
+          "source": "M02OshiSave/www/index.html",
+          "copy": "teacher/oshi-save/code/09-index.html"
+        },
+        {
+          "source": "M02OshiSave/www/css/style.css",
+          "copy": "teacher/oshi-save/code/09-style.css"
+        },
+        {
+          "source": "M02OshiSave/www/js/app.js",
+          "copy": "teacher/oshi-save/code/09-app.js"
+        },
+        {
+          "source": "M02OshiSave/www/index.html",
+          "copy": "teacher/oshi-save/code/10-index.html"
+        },
+        {
+          "source": "M02OshiSave/www/css/style.css",
+          "copy": "teacher/oshi-save/code/10-style.css"
+        },
+        {
+          "source": "M02OshiSave/www/js/app.js",
+          "copy": "teacher/oshi-save/code/10-app.js"
+        },
+        {
+          "source": "M02OshiSave/www/index.html",
+          "copy": "teacher/oshi-save/code/11-index.html"
+        },
+        {
+          "source": "M02OshiSave/www/css/style.css",
+          "copy": "teacher/oshi-save/code/11-style.css"
+        },
+        {
+          "source": "M02OshiSave/www/js/app.js",
+          "copy": "teacher/oshi-save/code/11-app.js"
+        },
+        {
+          "source": "M02OshiSave/www/index.html",
+          "copy": "teacher/oshi-save/code/12-index.html"
+        },
+        {
+          "source": "M02OshiSave/www/css/style.css",
+          "copy": "teacher/oshi-save/code/12-style.css"
+        },
+        {
+          "source": "M02OshiSave/www/js/app.js",
+          "copy": "teacher/oshi-save/code/12-app.js"
+        },
+        {
+          "source": "M02OshiSave/www/index.html",
+          "copy": "teacher/oshi-save/code/13-index.html"
+        },
+        {
+          "source": "M02OshiSave/www/css/style.css",
+          "copy": "teacher/oshi-save/code/13-style.css"
+        },
+        {
+          "source": "M02OshiSave/www/js/app.js",
+          "copy": "teacher/oshi-save/code/13-app.js"
+        },
+        {
+          "source": "M02OshiSave/www/index.html",
+          "copy": "teacher/oshi-save/code/14-index.html"
+        },
+        {
+          "source": "M02OshiSave/www/css/style.css",
+          "copy": "teacher/oshi-save/code/14-style.css"
+        },
+        {
+          "source": "M02OshiSave/www/js/app.js",
+          "copy": "teacher/oshi-save/code/14-app.js"
+        }
+      ],
+      "archive": "docs/oshi-save/downloads/M02OshiSave.zip"
+    },
+    {
+      "name": "F01StampBoard",
+      "root": "F01StampBoard",
+      "kind": "flutter",
+      "sessions": 4,
+      "package_name": "f01_stamp_board",
+      "application_id": "jp.ac.jec.f01_stamp_board",
+      "entry": "F01StampBoard/lib/main.dart",
+      "sources": [
+        "F01StampBoard/lib/main.dart"
+      ],
+      "docs": [
+        "docs/stamp-board/index.html",
+        "teacher/stamp-board/index.html"
+      ],
+      "archive": "docs/stamp-board/downloads/F01StampBoard.zip",
+      "snippets": [
+        {
+          "html": "docs/stamp-board/index.html",
+          "id": "code-01-main-dart",
+          "source": "teacher/stamp-board/code/01-main.dart"
+        },
+        {
+          "html": "docs/stamp-board/index.html",
+          "id": "code-02-main-dart",
+          "source": "teacher/stamp-board/code/02-main.dart"
+        },
+        {
+          "html": "docs/stamp-board/index.html",
+          "id": "code-03-main-dart",
+          "source": "teacher/stamp-board/code/03-main.dart"
+        },
+        {
+          "html": "docs/stamp-board/index.html",
+          "id": "code-04-main-dart",
+          "source": "teacher/stamp-board/code/04-main.dart"
+        },
+        {
+          "html": "docs/stamp-board/index.html",
+          "id": "start-04-main-dart",
+          "source": "teacher/stamp-board/code/04-main.dart"
+        },
+        {
+          "html": "docs/stamp-board/index.html",
+          "id": "code-05-main-dart",
+          "source": "teacher/stamp-board/code/05-main.dart"
+        },
+        {
+          "html": "docs/stamp-board/index.html",
+          "id": "code-06-main-dart",
+          "source": "teacher/stamp-board/code/06-main.dart"
+        },
+        {
+          "html": "docs/stamp-board/index.html",
+          "id": "code-07-main-dart",
+          "source": "teacher/stamp-board/code/07-main.dart"
+        },
+        {
+          "html": "docs/stamp-board/index.html",
+          "id": "code-08-main-dart",
+          "source": "teacher/stamp-board/code/08-main.dart"
+        },
+        {
+          "html": "docs/stamp-board/index.html",
+          "id": "code-09-main-dart",
+          "source": "teacher/stamp-board/code/09-main.dart"
+        },
+        {
+          "html": "docs/stamp-board/index.html",
+          "id": "start-09-main-dart",
+          "source": "teacher/stamp-board/code/09-main.dart"
+        },
+        {
+          "html": "docs/stamp-board/index.html",
+          "id": "code-10-main-dart",
+          "source": "teacher/stamp-board/code/10-main.dart"
+        },
+        {
+          "html": "docs/stamp-board/index.html",
+          "id": "code-11-main-dart",
+          "source": "teacher/stamp-board/code/11-main.dart"
+        },
+        {
+          "html": "docs/stamp-board/index.html",
+          "id": "code-12-main-dart",
+          "source": "teacher/stamp-board/code/12-main.dart"
+        },
+        {
+          "html": "docs/stamp-board/index.html",
+          "id": "code-13-main-dart",
+          "source": "teacher/stamp-board/code/13-main.dart"
+        },
+        {
+          "html": "docs/stamp-board/index.html",
+          "id": "code-14-main-dart",
+          "source": "teacher/stamp-board/code/14-main.dart"
+        },
+        {
+          "html": "docs/stamp-board/index.html",
+          "id": "start-14-main-dart",
+          "source": "teacher/stamp-board/code/14-main.dart"
+        },
+        {
+          "html": "docs/stamp-board/index.html",
+          "id": "code-15-main-dart",
+          "source": "teacher/stamp-board/code/15-main.dart"
+        },
+        {
+          "html": "docs/stamp-board/index.html",
+          "id": "code-16-main-dart",
+          "source": "teacher/stamp-board/code/16-main.dart"
+        },
+        {
+          "html": "docs/stamp-board/index.html",
+          "id": "code-17-main-dart",
+          "source": "teacher/stamp-board/code/17-main.dart"
+        },
+        {
+          "html": "docs/stamp-board/index.html",
+          "id": "code-18-main-dart",
+          "source": "teacher/stamp-board/code/18-main.dart"
+        },
+        {
+          "html": "docs/stamp-board/index.html",
+          "id": "code-19-main-dart",
+          "source": "teacher/stamp-board/code/19-main.dart"
+        }
+      ],
+      "mirrors": [
+        {
+          "source": "F01StampBoard/lib/main.dart",
+          "copy": "teacher/stamp-board/code/16-main.dart"
+        },
+        {
+          "source": "F01StampBoard/lib/main.dart",
+          "copy": "teacher/stamp-board/code/17-main.dart"
+        },
+        {
+          "source": "F01StampBoard/lib/main.dart",
+          "copy": "teacher/stamp-board/code/18-main.dart"
+        },
+        {
+          "source": "F01StampBoard/lib/main.dart",
+          "copy": "teacher/stamp-board/code/19-main.dart"
+        }
+      ]
     }
   ]
 }
