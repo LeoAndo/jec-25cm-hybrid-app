@@ -735,7 +735,7 @@
 <section id="step-8">
 <p class="step-meta">STEP 08 · 2コマ目</p><h2>同じHTMLでiOSとAndroidの見た目を比べる</h2>
 <p>この単元の新概念は <strong>auto-styling</strong> です。Onsen UIは実行環境に応じ、同じ <code>ons-toolbar</code> や <code>ons-list-item</code> をiOS向け・Android向けの見た目へ切り替えます。自分でOSごとに2組の画面を作る必要はありません。</p>
-<ol><li><code>www/js/app.js</code> を、このSTEPの全文に置き換えます。先頭の <code>ons.platform.select("android");</code> が有効になっています。保存して<strong>プレビュー全体を再読み込み</strong>します。</li><li>ツールバーの高さ・題名の位置、行を押した反応、右端の目印を見ます。Android向けでは目印が出ない部品もあります。</li><li><code>"android"</code> を <code>"ios"</code> へ書き換え、保存してプレビュー全体を再読み込みします。HTMLと自分のCSSは変更せず、同じ箇所を比べます。</li><li>違いを1つ、共通する内容を1つ、言葉で説明します。</li></ol>
+<ol><li><code>www/js/app.js</code> を、このSTEPの全文に置き換えます。先頭の <code>ons.platform.select("android");</code> が有効になっています。保存して<strong>プレビュー全体を再読み込み</strong>します。</li><li>ツールバーの高さ・題名の位置、行を押した反応、右端の目印を見ます。右端の目印「＞」は、iOS向けとAndroid向けのどちらにも出ます。</li><li><code>"android"</code> を <code>"ios"</code> へ書き換え、保存してプレビュー全体を再読み込みします。HTMLと自分のCSSは変更せず、同じ箇所を比べます。</li><li>違いを1つ、共通する内容を1つ、言葉で説明します。</li></ol>
 <p>OSの指定はOnsen UIが画面を作る前に必要です。<code>app.js</code> の先頭で行い、後のイベント処理の中へ移しません。この指定は<strong>表示スタイルの比較</strong>であり、ブラウザをAndroidやiOSの実機に変える操作ではありません。</p>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎では、CSSを自分で書き換えると見た目が変わりました。ここではHTMLを変えず、Onsen UIがOSに合った部品の見た目を選びます。Androidで作ったツールバーとiOSで作ったナビゲーションバーには違いがありました。その違いを、共通のHTMLへライブラリが適用する仕組みがauto-stylingです。</p></div>
 <details><summary>このSTEPの全コード（照合・合流用）</summary>
