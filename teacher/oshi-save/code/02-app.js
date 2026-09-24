@@ -1,4 +1,5 @@
 // 見た目の比較では、次の行を有効にして再読み込みする。
+// OSの指定は、Onsen UIが画面を作る前に行う。
 // ons.platform.select("android");
 
 // 初期化のたびに新しい配列を返し、追加した内容と混ぜない。
@@ -25,6 +26,7 @@ function createInitialItems() {
 let oshiItems = createInitialItems();
 let isOpeningPage = false;
 
+// templateの中身は、ページが作られてから取得する。
 document.addEventListener("init", function(event) {
   const page = event.target;
 
