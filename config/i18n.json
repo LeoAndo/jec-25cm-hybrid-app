@@ -63,6 +63,26 @@
       "start_here": "由這裏開始"
     },
     {
+      "code": "zh-Hant-TW",
+      "name": "繁體中文（台灣）",
+      "distribute": false,
+      "han": true,
+      "ui": {
+        "copy": "複製",
+        "copy_label": "複製{title}的程式碼",
+        "copied": "已複製",
+        "copy_success": "已複製程式碼。請貼到編輯器中。",
+        "copy_shortcut": "按 ⌘ C 複製",
+        "copy_selected": "已選取程式碼。請按 ⌘ C 複製。",
+        "progress": "已確認 {count} / {total} 個步驟"
+      },
+      "language_label": "語言",
+      "translation_notice": "本頁面由 AI 翻譯。請以日文版為準。如果覺得翻譯有誤，請告訴老師。",
+      "japanese_version": "在相同位置開啟日文版",
+      "open_instructions": "請用瀏覽器開啟 index.html，然後選擇繁體中文（台灣）。",
+      "start_here": "從這裡開始"
+    },
+    {
       "code": "ko",
       "name": "한국어",
       "distribute": false,
@@ -99,6 +119,25 @@
       "japanese_version": "ဂျပန်ဘာသာမူရင်းကို တူညီသောနေရာတွင် ဖွင့်ရန်",
       "open_instructions": "index.html ကို ဘရောက်ဇာတွင် ဖွင့်ပြီး မြန်မာဘာသာကို ရွေးပါ။",
       "start_here": "ဤနေရာမှ စတင်ပါ"
+    },
+    {
+      "code": "es",
+      "name": "Español",
+      "distribute": false,
+      "ui": {
+        "copy": "Copiar",
+        "copy_label": "Copiar el código de {title}",
+        "copied": "Copiado",
+        "copy_success": "Código copiado. Pégalo en tu editor.",
+        "copy_shortcut": "Copia con ⌘ C",
+        "copy_selected": "Código seleccionado. Presiona ⌘ C para copiarlo.",
+        "progress": "{count} / {total} pasos verificados"
+      },
+      "language_label": "Idioma",
+      "translation_notice": "Esta página fue traducida con IA. La versión en japonés es la oficial. Si una traducción te parece incorrecta, pregúntale a tu docente.",
+      "japanese_version": "Abrir la versión en japonés en la misma posición",
+      "open_instructions": "Abre index.html en tu navegador y elige Español.",
+      "start_here": "Empieza aquí"
     }
   ],
   "source_ui": {

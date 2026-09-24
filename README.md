@@ -35,7 +35,7 @@ JEC（25CM）の「ハイブリッドアプリ開発技法」で使う教材で�
 
 展開後、はじめて授業を受ける学生は [共通資料：授業を始めるまでの準備](docs/common/setup.html) をブラウザで開き、第1コマにSTEP 1〜3、第7コマにSTEP 4〜7を進めます（同梱の `はじめに.txt` でも、単元一覧より前に案内しています）。準備が済んだら、その日の単元の教科書をブラウザで開きます。
 
-学生用ZIPには `docs` 一式と、開き方・版情報を収録します。**いまは日本語だけの構成で配布します。** 展開してできたフォルダには `docs` / `samples` / `はじめに.txt` / `VERSION.json` があります。現在の登録単元は `M01OshiList`・`M02OshiSave`・`F01StampBoard`・`F02StampRelease` で、`samples/` に各完成見本を展開済みで収録します。Monacaへは教科書の取り込み用URLから開き、`samples` はコードを読み比べるために使います。言語を選ぶ入口がないのは、`config/i18n.json` の5言語がすべて `distribute: false` のためです（「多言語展開」）。翻訳を終えた言語を `distribute: true` にすると、言語を選ぶ入口の `index.html` がZIPに入り、`はじめに.txt` にも各言語の案内が付きます。`teacher` フォルダとテンプレート原本（`MonacaTemplate`・`MonacaMinimumTemplate`）は収録しません。GitHubが自動で表示する **Source code (zip)** はリポジトリ全体のため、学生用ZIPには使いません。なお、このリポジトリ自体はPublicなので、教員用ファイルもGitHub上では閲覧できます。
+学生用ZIPには `docs` 一式と、開き方・版情報を収録します。**いまは日本語だけの構成で配布します。** 展開してできたフォルダには `docs` / `samples` / `はじめに.txt` / `VERSION.json` があります。現在の登録単元は `M01OshiList`・`M02OshiSave`・`F01StampBoard`・`F02StampRelease` で、`samples/` に各完成見本を展開済みで収録します。Monacaへは教科書の取り込み用URLから開き、`samples` はコードを読み比べるために使います。言語を選ぶ入口がないのは、`config/i18n.json` の7言語がすべて `distribute: false` のためです（「多言語展開」）。翻訳を終えた言語を `distribute: true` にすると、言語を選ぶ入口の `index.html` がZIPに入り、`はじめに.txt` にも各言語の案内が付きます。`teacher` フォルダとテンプレート原本（`MonacaTemplate`・`MonacaMinimumTemplate`）は収録しません。GitHubが自動で表示する **Source code (zip)** はリポジトリ全体のため、学生用ZIPには使いません。なお、このリポジトリ自体はPublicなので、教員用ファイルもGitHub上では閲覧できます。
 
 授業中は教員が指定した版を使います。授業ごとの案内には、内容が固定された個別リリースのURLを使ってください。更新版は別フォルダに展開し、学生自身のプロジェクトは上書きしません。
 
@@ -221,9 +221,9 @@ python3 scripts/package-student-materials.py
 
 ### 多言語展開
 
-この教材を使う学生の母国語は、日本語・英語・中国語・韓国語・ミャンマー語・広東語の6つです。日本語で書いた教科書（`docs/`）を、配布前にほかの5言語へ展開します。
+日本語で書いた教科書（`docs/`）を、配布前に学生の母国語へ展開します。対象は、日本語のほかに次の7言語です。スペイン語と台湾華語は、2026-09の学生アンケートで加えました。
 
-**いまは5言語とも `config/i18n.json` の `distribute` が `false` です。** 翻訳がまだ1文もないため、配布対象にすると公開ゲートで止まります。初回翻訳と、別のAIによる独立した照合まで終わった言語から、その言語だけ `distribute` を `true` に上げてください。
+**いまは7言語とも `config/i18n.json` の `distribute` が `false` です。** 翻訳がまだ1文もないため、配布対象にすると公開ゲートで止まります。初回翻訳と、別のAIによる独立した照合まで終わった言語から、その言語だけ `distribute` を `true` に上げてください。
 
 | 言語 | コード | `distribute` | 書き方 |
 | --- | --- | --- | --- |
@@ -232,6 +232,10 @@ python3 scripts/package-student-materials.py
 | 韓国語 | `ko` | `false` | |
 | ミャンマー語 | `my` | `false` | Unicode |
 | 広東語 | `zh-Hant-HK` | `false` | 繁体字の書き言葉に、香港の語彙を使う |
+| 台湾華語 | `zh-Hant-TW` | `false` | 繁体字に、台湾の語彙を使う |
+| スペイン語 | `es` | `false` | 中南米の言い方 |
+
+同じアンケートで挙がったアラビア語とモンゴル語は、まだ対象にしていません。アラビア語は右から左に書く表示への対応（[#39](https://github.com/LeoAndo/jec-25cm-hybrid-app/issues/39)）、モンゴル語は表記（キリル文字か伝統的モンゴル文字か）の確認（[#40](https://github.com/LeoAndo/jec-25cm-hybrid-app/issues/40)）が済んでから加えます。
 
 - **日常のPRでは翻訳しません。** 教材は今までどおり日本語だけを直します。翻訳は、学生への配布前にまとめて翻訳PRで行います。
 - **コミットするのは、翻訳済みのHTMLではなく対訳カタログです。** `i18n/<言語>/<ページ>.json` に、原文と訳文の対を文単位で置きます。各言語のHTMLは、カタログから作ります（リポジトリにはコミットしません）。コード・画像・リンク・STEPの番号は日本語版からそのまま引き継ぐので、どの言語でも同じ位置に同じものが出ます。

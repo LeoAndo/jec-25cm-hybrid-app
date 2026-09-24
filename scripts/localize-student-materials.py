@@ -468,7 +468,7 @@ def _protected_contents(text: str) -> Counter:
 def validate(source: str, translation: str, terms: list, han: bool = False) -> list:
     """原文と訳文だけを見て分かる誤りを返す。訳の良し悪しは見ない。
 
-    han は、漢字を使う言語（中国語・広東語）かどうか。その言語では、訳しても原文と
+    han は、漢字を使う言語（中国語・広東語・台湾華語）かどうか。その言語では、訳しても原文と
     同じ字になる言葉がある（「操作」など）ので、原文と同じ訳を誤りにしない。
     """
     if not translation.strip():
