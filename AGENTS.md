@@ -386,7 +386,7 @@ READMEの「完成コードの書き方（全単元共通）」を、系統ご�
 
 ### Flutter系（Dart）
 
-1. **`lib/` 以外は触らない。** `android/`・`ios/` はウィザードが作ったままにする。触るのは `pubspec.yaml`（パッケージ追加とアセット登録）まで。**例外は2つだけ**で、どちらも§0-Bに理由がある：通信を扱う単元の `android/app/src/main/AndroidManifest.xml` への `INTERNET` 追記と、初回ビルドを軽くするための `gradle-wrapper.properties` の `-bin.zip` 書き換え。
+1. **`lib/` 以外は触らない。** `android/`・`ios/` はウィザードが作ったままにする。触るのは `pubspec.yaml`（パッケージ追加とアセット登録）まで。**全単元に共通する例外は2つ**で、どちらも§0-Bに理由がある：通信を扱う単元の `android/app/src/main/AndroidManifest.xml` への `INTERNET` 追記と、初回ビルドを軽くするための `gradle-wrapper.properties` の `-bin.zip` 書き換え。 **これに加えて、F01・F02の配布見本では、生成時に入った作成者個人の `ios/Runner.xcodeproj/project.pbxproj` の `DEVELOPMENT_TEAM` 指定3行も除く（2026-09-24のオーナーへの確認と続行指示による例外）。** ほかの署名設定は変更せず、学生に署名作業は求めない。
 2. **`import 'package:flutter/material.dart'` で通す。** `package:material_ui` / `package:cupertino_ui` へは移行しない（§0-B）。
 3. **画面遷移は `Navigator.push` ＋ `MaterialPageRoute`。** 公式が「複雑なディープリンクのない小規模アプリは Navigator でよい」と明記しているので、`go_router` は教えない。**名前付きルート（`routes: {...}`）は公式が非推奨としているので採らない。** この2点は教員用ガイドの「意図的に外したもの」に書く。
 4. **`StatelessWidget` で足りる画面を `StatefulWidget` にしない。** 状態を持つ必要が出た画面だけを `StatefulWidget` にする。理由を教科書で説明できるようにする。
