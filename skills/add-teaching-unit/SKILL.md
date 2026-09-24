@@ -111,7 +111,7 @@ description: Add a new teaching unit to this hybrid app course repository - a Mo
    - `README.md` は生成されたものを消して、完成プロジェクトの説明に書き直す。節の順は、画面の構成の表 → 使用しているAPI（または画像・素材）→ ソースコードの構成の表 → 処理の流れ → 実装のポイント → 主なパッケージ → ビルドと実行（AGENTS.md §11 の Flutter系8）。
    - `.gitignore` は `flutter create` が生成したものをそのまま残す。**最初のFlutter単元のときだけ**、下の4で `project_layout.gitignore_reference.flutter` に、その `.gitignore` のパスを書く。
    - `*.iml`、`.dart_tool/`、`build/`、`android/local.properties` はcommitしない（`.gitignore` で無視される）。
-4. **`lib/` 以外は触らない。** 触ってよいのは `pubspec.yaml`（パッケージの追加とアセットの登録）まで。例外は2つだけ：通信を扱う単元の `android/app/src/main/AndroidManifest.xml` への `INTERNET` 追記（`src/main` に無いので、releaseのAPKだけ通信に失敗するため）と、初回ビルドを軽くするための `android/gradle/wrapper/gradle-wrapper.properties` の `-all.zip` → `-bin.zip` の書き換え（AGENTS.md §0-B）。 **F01・F02の配布見本では、生成時に入った作成者個人の `ios/Runner.xcodeproj/project.pbxproj` の `DEVELOPMENT_TEAM` 指定3行も除く（2026-09-24のオーナーへの確認と続行指示による例外）。** ほかの署名設定は変更せず、学生に署名作業は求めない。
+4. **`lib/` 以外は触らない。** 触ってよいのは `pubspec.yaml`（パッケージの追加とアセットの登録）まで。全単元に共通する例外は2つ：通信を扱う単元の `android/app/src/main/AndroidManifest.xml` への `INTERNET` 追記（`src/main` に無いので、releaseのAPKだけ通信に失敗するため）と、初回ビルドを軽くするための `android/gradle/wrapper/gradle-wrapper.properties` の `-all.zip` → `-bin.zip` の書き換え（AGENTS.md §0-B）。 **これに加えて、F01・F02の配布見本では、生成時に入った作成者個人の `ios/Runner.xcodeproj/project.pbxproj` の `DEVELOPMENT_TEAM` 指定3行も除く（2026-09-24のオーナーへの確認と続行指示による例外）。** ほかの署名設定は変更せず、学生に署名作業は求めない。
 5. **完成コードで守ること**（AGENTS.md §11 の Flutter系）。
    - `import 'package:flutter/material.dart'` で通す。`package:material_ui` / `package:cupertino_ui` は使わない。混ぜない。
    - 画面遷移は `Navigator.push` ＋ `MaterialPageRoute`。名前付きルート（`routes: {...}`）と `go_router` は使わない。
