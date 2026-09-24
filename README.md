@@ -269,7 +269,7 @@ Google Chrome バージョン 153.0.8010.50（公式ビルド）（arm64）
 ```
 
 ```
-Flutter 3.41.0 / Dart 3.11.0（/Users/ando/Downloads/flutter、2026-02-10ビルド）  ← 3.47.5 へ上げる予定
+Flutter 3.47.5 / Dart 3.13.4（/Users/ando/Downloads/flutter、2026-09-24 確認）
 CocoaPods 1.16.2 / Android SDK 37.0.0 / JDK 21（Android Studio Panda 2 同梱）
 ```
 
@@ -292,7 +292,7 @@ CocoaPods 1.16.2 / Android SDK 37.0.0 / JDK 21（Android Studio Panda 2 同梱�
 1. **Android側：Android Studio 2026.1 の学生は、3.41系ではビルドできません。** Flutterは既定で Android Studio 同梱のJDKを使います。教員Macの実物で確かめたところ、同梱JDKは Panda 2（2025.3）が **21.0.9**、2026.1 が **25.0.3** でした。Flutter自身の互換表は「Java 25 には Gradle 9.1.0 以上」で、3.41 のテンプレートは Gradle 8.14 です。**実測でも、3.41 で作ったプロジェクトは JDK 21 では通り、JDK 25 では失敗しました。** 3.44 のテンプレートは Gradle 9.1.0、3.47 は 9.3.1 なので、どちらも JDK 21 と 25 の両方で動く範囲に入ります（こちらは互換表による判断で、実機のビルドは授業内で確かめます）。回答3の Panda 3 は Panda 2 と同じ 2025.3 系なので、同梱JDKは21と推定しています。
 2. **iOS側：Xcode 27 の学生のために、3.47.4 以上が要ります。** 3.47.4 で「Xcode 27 でデバッグすると白い画面のまま数分止まる」不具合、3.47.5 で「iOS 27 の実機でデバッグ中にときどき落ちる」不具合が直っています。3.44系の変更履歴には Xcode 27 の修正がありません。Xcode 26.4 以上の実機デバッグで落ちる不具合は 3.41.7 で直っているので、3.47.5 には入っています。
 3. **下限は問題になりません。** Flutter が要求する Xcode は 3.44 以降で 15 以上（推奨16以上）で、学生の 26.4〜27 はすべて満たします。
-4. **教員マシンは、いま 3.41.0 です。教材を書く前に 3.47.5 へそろえます。** 3.41→3.47 の間に AGP 8→9、Gradle 8.14→9.3.1、iOSの最低バージョン 13→15 が動いているので、3.41 の画面や出力で教科書を書くと、学生の手元と合いません（[AGENTS.md](AGENTS.md) §0-B）。
+4. **教員マシンも 3.47.5 にそろえました（2026-09-24 確認）。** 3.41→3.47 の間に AGP 8→9、Gradle 8.14→9.3.1、iOSの最低バージョン 13→15 が動いているので、3.41 の画面や出力で教科書を書くと、学生の手元と合いません（[AGENTS.md](AGENTS.md) §0-B）。
 
 根拠の出典：`flutter_tools/lib/src/macos/xcode.dart`（必要・推奨Xcode）、`flutter_tools/lib/src/android/gradle_utils.dart`（テンプレートのGradle版とJava/Gradle互換表）、Flutter の `CHANGELOG.md`（いずれも各版のタグで確認）。実測のログは `~/Documents/jec-25cm-hybrid-app-verification-deliverables/flutter-sdk-compat-2026-09-23/` にあります（リポジトリの外）。
 
