@@ -165,7 +165,7 @@ ZIPにはGitで管理しているプロジェクトのファイルを収録し�
 | --- | --- | --- |
 | mainへのpush・PRマージ | テスト、完成版ZIPの再生成、教材ZIP生成、HTMLの相対リンク確認、リリースノート生成。未翻訳はSummaryに表示 | しない |
 | main向けのPR | テスト、教材ZIP生成、相対リンク確認。未翻訳はSummaryに表示 | しない |
-| 配布準備の翻訳PR | 配布対象の言語の差分翻訳、別AIによる照合、教材ZIPの確認 | しない |
+| 配布準備の翻訳PR | 配布対象の言語の差分翻訳、別AIによる照合（訳した文が50文以上のとき）、教材ZIPの確認 | しない |
 | Run workflow（publishオフ） | mainの教材とリリースノートを再生成 | しない |
 | Run workflow（publishオン） | mainの教材とリリースノートを再生成。配布対象の未翻訳が0文ならGitHub Releasesへ添付 | する |
 | Run workflow（publishオン・allow_untranslatedオン） | 緊急公開として未翻訳だけを許可。日本語で表示される件数をリリースノートに記録 | する |
@@ -186,7 +186,7 @@ CIではアプリのビルドや画面の操作を行いません。アプリが
 #### 手動公開
 
 1. 配布準備のissueを起票し、`config/i18n.json` で `distribute: true` の言語の未翻訳を確認します。エージェントが [翻訳用skill](skills/translate-teaching-materials/SKILL.md) に従って差分だけを訳し、翻訳PRを作ります。翻訳はエージェントのセッションで行い、Actionsから翻訳APIは呼びません。
-2. **翻訳PRを開いてから公開するまでは、`docs/` を触るPRをマージしません。** 訳したのとは別のAIが訳文を原文と照合し（教員が読めない言語では、日本語へ訳し戻してから比べます）、検査と配布ZIPの確認を済ませて翻訳PRをマージします。日本語の変更が先に入った場合は、最新のmainで差分を訳し直します。
+2. **翻訳PRを開いてから公開するまでは、`docs/` を触るPRをマージしません。** 訳した文が50文以上なら、訳したのとは別のAIが訳文を原文と照合します（ミャンマー語だけは、日本語へ訳し戻してから比べます）。50文未満なら照合せず、翻訳の担当が見直します。検査と配布ZIPの確認を済ませて翻訳PRをマージします。日本語の変更が先に入った場合は、最新のmainで差分を訳し直します。
 3. **Actions → Student materials → Run workflow** を開きます。ブランチに **main** を選び、**publish** にチェックを入れます。**allow_untranslated** はオフのままにします。
 4. **student_notes** に学生向けの案内を日本語で入力します。
 5. **Run workflow** を押します。配布対象の言語に未翻訳があると公開前に失敗し、Summaryに言語・ページ別の件数が出ます。差分翻訳を反映してから新しく実行してください。成功すると、Releasesに教材ZIP・チェックサム・リリースノートが掲載されます。
@@ -223,7 +223,7 @@ python3 scripts/package-student-materials.py
 
 日本語で書いた教科書（`docs/`）を、配布前に学生の母国語へ展開します。対象は、日本語のほかに次の8言語です。スペイン語・台湾華語・アラビア語は、2026-09の学生アンケートで加えました。
 
-**いまは8言語とも `config/i18n.json` の `distribute` が `false` です。** 翻訳がまだ1文もないため、配布対象にすると公開ゲートで止まります。初回翻訳と、別のAIによる独立した照合まで終わった言語から、その言語だけ `distribute` を `true` に上げてください。
+**いまは8言語とも `config/i18n.json` の `distribute` が `false` です。** 翻訳がまだ1文もないため、配布対象にすると公開ゲートで止まります。全文を訳し終え、別のAIがその言語の全文を1回照合した言語から、その言語だけ `distribute` を `true` に上げてください。**照合は、学生の手に渡る前のこの1回を中心にします**（2026-09-25 オーナー決定、[#87](https://github.com/LeoAndo/jec-25cm-hybrid-app/issues/87)。Kotlin演習の [jec-25cm-kotlin](https://github.com/LeoAndo/jec-25cm-kotlin) と同じ決まりです）。配布していない言語の翻訳PRでは照合しません。くわしくは [AGENTS.md](AGENTS.md) §12 と [翻訳用skill](skills/translate-teaching-materials/SKILL.md) の「別のモデルによる照合」にあります。
 
 | 言語 | コード | `distribute` | 書き方 |
 | --- | --- | --- | --- |
