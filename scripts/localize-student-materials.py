@@ -66,6 +66,9 @@ LANGUAGE_CODE = re.compile(r"[A-Za-z]{2,3}(?:-[A-Za-z0-9]+)*")
 DIRECTIONS = ("ltr", "rtl")
 # 未翻訳の文は日本語のまま出すので、その部分の書字方向は左から右になる。
 FALLBACK_DIRECTION = "ltr"
+# 向きを変える見えない文字（LRM・RLM・ALM・埋め込み・上書き・分離）。訳文に書くときは &lrm; のように、
+# 目に見える書き方にする（2026-09-25 オーナー決定）。そのまま入れると、レビューで見落とし、コピーにも紛れ込む。
+BIDI_CONTROLS = re.compile("[\u061c\u200e\u200f\u202a-\u202e\u2066-\u2069]")
 
 
 class LocalizeError(ValueError):
@@ -480,6 +483,8 @@ def validate(source: str, translation: str, terms: list, han: bool = False) -> l
     errors = []
     if translation != normalize(translation):
         errors.append("訳文の前後か途中に、余分な空白や改行があります")
+    if BIDI_CONTROLS.search(translation):
+        errors.append("訳文に、向きを変える見えない文字（U+200E など）がそのまま入っています（&lrm; のように書く）")
     # <code>・<kbd> の中身は原文のまま残すので、そこに書かれた < や & は見ない
     # （中身が原文と同じかどうかは、このあと _protected_contents で照合する）。
     rest = ENTITY.sub("", plain_text(translation))
@@ -591,8 +596,8 @@ class _Localizer:
         右から左の段落に日本語の文を置くと、文末の「。」や「…」が、文の反対側（左端）へ回り込む。
         dir を付けた要素は、その向きで周りから切り離して並ぶ（HTMLの既定で unicode-bidi: isolate）。
         左から右のページでは、日本語も同じ向きなので付けない（今までと同じHTMLになる）。
-        属性（alt・title など）だけが日本語の要素には使わない。dir を付けると、中の訳した本文や
-        入れ物のリストまで左から右に並んでしまう。
+        属性（aria-label・title など）だけが日本語の要素には使わない。dir を付けると、中の訳した本文や
+        入れ物のリストまで左から右に並んでしまう。中身のない要素（img の alt など）には使う。
         """
         marks = [("lang", "ja")]
         if self.direction == "rtl":
@@ -626,8 +631,10 @@ class _Localizer:
             name in values for name in _translated_attributes(element)) else None
         element_language = "ja" if id(element) in self.fallback_elements else attribute_language
         if element_language is not None:
-            marks = (self._japanese_marks() if id(element) in self.fallback_containers
-                     else [("lang", element_language)])
+            # 中身のない要素（img・input）は、dir が効くのが属性の表示（alt など）だけなので、向きも日本語にする。
+            japanese_text = id(element) in self.fallback_containers or (
+                element_language == "ja" and element.tag in VOID)
+            marks = self._japanese_marks() if japanese_text else [("lang", element_language)]
         appended = []
         for name, value in marks:
             if element.attribute(name) is None:

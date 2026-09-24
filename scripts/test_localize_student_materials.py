@@ -156,6 +156,15 @@ class ValidateTest(unittest.TestCase):
             "Use <code>a &lt; b</code> &amp; the <strong>reference</strong> <a1>sample</a1>.",
         ), [])
 
+    def test_direction_marks_must_be_written_as_visible_entities(self):
+        """&lrm; は目に見える書き方なので通す。見えない文字そのものは、レビューで見落とすので落とす。"""
+        self.assertEqual(self.problems("「保存しました。」を確かめます。",
+                                       "تحقق من 「保存しました。&lrm;」."), [])
+        for character in ("\u200e", "\u200f", "\u061c", "\u202b", "\u2067", "\u2069"):
+            with self.subTest(character=f"U+{ord(character):04X}"):
+                found = self.problems("「保存しました。」を確かめます。", f"تحقق من 「保存しました。{character}」.")
+                self.assertTrue(any("見えない文字" in problem for problem in found), found)
+
     def test_kanji_only_text_may_stay_the_same_only_in_han_languages(self):
         # 中国語では、日本語と同じ字になる言葉がある。英語などでは、訳し忘れである。
         self.assertEqual(self.problems("操作", "操作", han=True), [])
@@ -279,7 +288,8 @@ class LocalizeTest(unittest.TestCase):
         # 属性だけが日本語の要素には lang だけを付ける。dir まで付けると、中の訳した本文や
         # 入れ物のリスト（aria-label だけが未翻訳の目次など）が左から右に並んでしまう。
         self.assertIn('<a href="#next" title="次の説明" lang="ja"><span lang="ar">التالي</span></a>', rendered)
-        self.assertIn('alt="図の説明" lang="ja">', rendered)
+        # 中身のない img は、dir が効くのが alt の表示だけなので、向きも日本語にする。
+        self.assertIn('alt="図の説明" lang="ja" dir="ltr">', rendered)
         # コードは日本語版のバイト列のまま。左から右で読む指定はCSSが受け持つ。
         self.assertIn('<pre><code>// コード</code></pre>', rendered)
         page_of(rendered)
