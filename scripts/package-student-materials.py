@@ -148,10 +148,12 @@ def add_localized_materials(files):
         if not projects:
             raise ValueError("配布物の入口にするページがありません。")
         start = projects[0]["docs"][0]
-    items = [f'<li lang="ja" dir="ltr"><a href="{start}">日本語 — ここから始める</a></li>']
+    # 入口の一覧は、項目の頭（行頭記号）を左にそろえたまま、リンクの文字だけをその言語の向きで出す。
+    # <li> に dir を付けると、右から左の言語の項目だけが行頭記号ごと右端へ離れる。
+    items = [f'<li lang="ja"><a href="{start}" dir="ltr">日本語 — ここから始める</a></li>']
     for item in languages:
         target = localizer.output_name(start, item["code"], settings.source_root)
-        items.append(f'<li lang="{item["code"]}" dir="{directions[item["code"]]}"><a href="{html.escape(target, quote=True)}">'
+        items.append(f'<li lang="{item["code"]}"><a href="{html.escape(target, quote=True)}" dir="{directions[item["code"]]}">'
                      + html.escape(item["name"] + " — " + item["start_here"]) + '</a></li>')
     files["index.html"] = ('<!doctype html>\n<html lang="ja"><head><meta charset="utf-8">'
                            '<meta name="viewport" content="width=device-width, initial-scale=1">'

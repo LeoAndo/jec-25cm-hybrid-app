@@ -930,6 +930,17 @@ class RepositoryTest(unittest.TestCase):
     # 英語の訳文が入っていることを前提にした検査は、翻訳を始めるまで成り立たない。
     # 最初の言語の翻訳を入れるissueで、そのときの単元名に合わせて書き直す。
 
+    def test_textbook_css_does_not_fix_left_or_right(self):
+        """右から左の言語のページで左右が入れ替わるよう、教科書のCSSは論理プロパティで書く。
+
+        border-left などで書くと、アラビア語のページでも枠線や字下げが左に残る。
+        """
+        css = (self.settings.root / self.settings.source_root / "assets/textbook.css").read_text(encoding="utf-8")
+        css = re.sub(r"/\*.*?\*/", "", css, flags=re.DOTALL)
+        fixed = re.findall(r"(?:^|[;{\s])((?:margin|padding|border|inset)-(?:left|right)[\w-]*|left|right)\s*:"
+                           r"|((?:text-align|float|clear)\s*:\s*(?:left|right))\b", css)
+        self.assertEqual([next(filter(None, found)) for found in fixed], [])
+
     def test_code_blocks_are_identical_in_every_language(self):
         # <pre> とソースのバイト一致（check-teaching-materials.py）が、どの言語でも保たれる。
         blocks = re.compile(r"<pre.*?</pre>", re.DOTALL)

@@ -158,8 +158,9 @@ def localized_download_guidance(report, asset):
             raise ValueError(f"公開案内がない配布言語です：{code}")
         guidance = [f"### {language['name']}", "", DOWNLOAD_GUIDANCE[code].format(asset=asset), ""]
         if language.get("dir") == "rtl":
-            # GitHubのMarkdownは段落に書字方向を付けない。囲まないと、アラビア語の文が左から右の段落に
-            # 入り、文中の英字（Assets、index.html）との並びが逆になる。dir はGitHubの表示でも残る。
+            # github.com のREADMEの画面では段落に dir="auto" が付き、アラビア語の段落は右から左で出る。
+            # ただし Markdown API の出力には付かず、リリースの画面で同じになるかは確かめられていない
+            # （2026-09-25時点でリリースがない）。表示の仕組みに頼らないよう、dir を付けた <div> で囲む。
             guidance = ['<div dir="rtl">', "", *guidance, "</div>", ""]
         lines.extend(guidance)
     return "\n".join(lines) + "\n" if lines else ""

@@ -334,9 +334,10 @@ class PackageStudentMaterialsTest(unittest.TestCase):
                     self.assertIn(f'lang="{choice["code"]}" dir="{direction}"', nav)
                 self.assertIn('lang="ja" dir="ltr"', nav)
             entrance = archive.read(prefix + "index.html").decode()
-            self.assertIn('<li lang="ja" dir="ltr">', entrance)
+            self.assertIn('<li lang="ja"><a href="docs/common/setup.html" dir="ltr">', entrance)
             for language in config["languages"]:
-                self.assertIn(f'<li lang="{language["code"]}" dir="{language.get("dir", "ltr")}">', entrance)
+                code, direction = language["code"], language.get("dir", "ltr")
+                self.assertIn(f'<li lang="{code}"><a href="docs/{code}/common/setup.html" dir="{direction}">', entrance)
         # アラビア語は右から左の言語として設定してある（この検査で右から左の出力を必ず通すため）。
         self.assertIn("rtl", [language.get("dir") for language in config["languages"]])
 
@@ -625,7 +626,7 @@ class StudentReleaseTest(unittest.TestCase):
         self.assertIn("**4文**", (self.dist / "release-notes.md").read_text(encoding="utf-8"))
 
     def test_right_to_left_guidance_is_wrapped_with_its_direction(self):
-        """GitHubのMarkdownは段落に向きを付けないので、右から左の言語の案内だけを dir で囲む。"""
+        """GitHubの表示の仕組みに頼らず、右から左の言語の案内だけを dir を付けた <div> で囲む。"""
         report = [{"language": {"code": "ar", "name": "العربية", "dir": "rtl"}, "rows": []},
                   {"language": {"code": "en", "name": "English"}, "rows": []}]
         notes = release.localized_download_guidance(report, self.asset)
