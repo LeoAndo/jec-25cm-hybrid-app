@@ -60,6 +60,8 @@
 .oshi-card .list-item__center {
   /* 一覧の既定罫線を外し、カードの枠で区切る。 */
   background-image: none;
+  /* 右端の目印（＞）の分を空け、長い名前が目印と重ならないようにする。 */
+  padding-right: 30px;
 }
 
 .oshi-name,

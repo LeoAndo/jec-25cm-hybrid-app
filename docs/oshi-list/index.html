@@ -612,7 +612,7 @@
 <p class="step-meta">STEP 07 · 2コマ目</p><h2>カードをOnsen UIの一覧へ置き換える</h2>
 <p>このSTEPのHTMLとCSSを全文に置き換えます。JavaScriptはコメントだけのままです。カード用のHTMLをOnsen UIの部品へ置き換え、<code>ons-list</code> の中へ3個の <code>ons-list-item</code> を置きます。それぞれに <code>class="oshi-card"</code> を付け、第1コマで使ったカードの見た目を引き継ぎます。</p>
 <table><thead><tr><th>部品・指定</th><th>役割</th></tr></thead><tbody><tr><td><code>ons-list</code></td><td>一覧全体。</td></tr><tr><td><code>ons-list-item</code></td><td>一覧の1行。</td></tr><tr><td><code>tappable</code></td><td>押したときの見た目を付ける。</td></tr><tr><td><code>modifier="chevron"</code></td><td>OSのスタイルに応じた右端の目印を指定する。</td></tr><tr><td><code>list-item__title</code> / <code>list-item__subtitle</code></td><td>主な文字と補足の文字。Onsen UIが用意するクラス名。</td></tr></tbody></table>
-<p><code>oshi-card</code> は、好きなものを1枚ずつ区切るための自分のクラスです。第1コマと同じ <code>border</code>・<code>border-radius</code>・<code>margin</code> で、枠・角丸・カードの間隔を設定します。一覧の1行としての役割はOnsen UI、カードの外枠は自分のCSSが担当します。<code>#list_oshi</code> と <code>.oshi-card .list-item__center</code> では、標準の区切り線を消してカードの外枠だけを見せます。後者は、カードの中にある中央領域だけを指定するCSSの子孫セレクタです。ツールバーや押したときの反応など、OSによる部品の違いは引き続き比べられます。<code>oshi-name</code>・<code>oshi-genre</code> は自分のCSSで折り返しを指定するために加えた名前です。保存・再読み込みをして、名前と種類が各行に表示されることを確かめます。押した見た目は付きますが、選択の処理は第3コマで書きます。</p>
+<p><code>oshi-card</code> は、好きなものを1枚ずつ区切るための自分のクラスです。第1コマと同じ <code>border</code>・<code>border-radius</code>・<code>margin</code> で、枠・角丸・カードの間隔を設定します。一覧の1行としての役割はOnsen UI、カードの外枠は自分のCSSが担当します。<code>#list_oshi</code> と <code>.oshi-card .list-item__center</code> では、標準の区切り線を消してカードの外枠だけを見せます。後者は、カードの中にある中央領域だけを指定するCSSの子孫セレクタです。後者では右の余白も30px空けます。長い名前を折り返したときに、行の終わりが右端の目印「＞」と重ならないようにするためです（Onsen UIが目印の横に空ける幅と同じ値です）。ツールバーや押したときの反応など、OSによる部品の違いは引き続き比べられます。<code>oshi-name</code>・<code>oshi-genre</code> は自分のCSSで折り返しを指定するために加えた名前です。保存・再読み込みをして、名前と種類が各行に表示されることを確かめます。押した見た目は付きますが、選択の処理は第3コマで書きます。</p>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎の <code>ul</code> と <code>li</code> のように、一覧全体と1行を分けます。第1コマの <code>article</code> に付けた <code>oshi-card</code> を、ここでは <code>ons-list-item</code> に付け、既習のCSSでカードの形を再利用します。Androidのリストの行やiOSのテーブルのセルと同じ役割です。<code>tappable</code> はクリック処理そのものではありません。見た目とイベント処理を分ける点は、Webのボタンと <code>addEventListener</code> の関係と同じです。</p></div>
 <details><summary>このSTEPの全コード（照合・合流用）</summary>
 <div class="code-head">www/index.html · 全文</div>
@@ -717,6 +717,8 @@
 .oshi-card .list-item__center {
   /* 一覧の既定罫線を外し、カードの枠で区切る。 */
   background-image: none;
+  /* 右端の目印（＞）の分を空け、長い名前が目印と重ならないようにする。 */
+  padding-right: 30px;
 }
 
 .oshi-name,
@@ -841,6 +843,8 @@
 .oshi-card .list-item__center {
   /* 一覧の既定罫線を外し、カードの枠で区切る。 */
   background-image: none;
+  /* 右端の目印（＞）の分を空け、長い名前が目印と重ならないようにする。 */
+  padding-right: 30px;
 }
 
 .oshi-name,
@@ -966,6 +970,8 @@ ons.platform.select(&quot;android&quot;);
 .oshi-card .list-item__center {
   /* 一覧の既定罫線を外し、カードの枠で区切る。 */
   background-image: none;
+  /* 右端の目印（＞）の分を空け、長い名前が目印と重ならないようにする。 */
+  padding-right: 30px;
 }
 
 .oshi-name,
@@ -1086,6 +1092,8 @@ ons.platform.select(&quot;android&quot;);
 .oshi-card .list-item__center {
   /* 一覧の既定罫線を外し、カードの枠で区切る。 */
   background-image: none;
+  /* 右端の目印（＞）の分を空け、長い名前が目印と重ならないようにする。 */
+  padding-right: 30px;
 }
 
 .oshi-name,
@@ -1203,6 +1211,8 @@ ons.platform.select(&quot;android&quot;);
 .oshi-card .list-item__center {
   /* 一覧の既定罫線を外し、カードの枠で区切る。 */
   background-image: none;
+  /* 右端の目印（＞）の分を空け、長い名前が目印と重ならないようにする。 */
+  padding-right: 30px;
 }
 
 .oshi-name,
@@ -1336,6 +1346,8 @@ document.addEventListener(&quot;init&quot;, function(event) {
 .oshi-card .list-item__center {
   /* 一覧の既定罫線を外し、カードの枠で区切る。 */
   background-image: none;
+  /* 右端の目印（＞）の分を空け、長い名前が目印と重ならないようにする。 */
+  padding-right: 30px;
 }
 
 .oshi-name,
@@ -1468,6 +1480,8 @@ document.addEventListener(&quot;init&quot;, function(event) {
 .oshi-card .list-item__center {
   /* 一覧の既定罫線を外し、カードの枠で区切る。 */
   background-image: none;
+  /* 右端の目印（＞）の分を空け、長い名前が目印と重ならないようにする。 */
+  padding-right: 30px;
 }
 
 .oshi-name,
@@ -1632,6 +1646,8 @@ function renderOshiList() {
 .oshi-card .list-item__center {
   /* 一覧の既定罫線を外し、カードの枠で区切る。 */
   background-image: none;
+  /* 右端の目印（＞）の分を空け、長い名前が目印と重ならないようにする。 */
+  padding-right: 30px;
 }
 
 .oshi-name,
@@ -1802,6 +1818,8 @@ function selectOshi(oshi) {
 .oshi-card .list-item__center {
   /* 一覧の既定罫線を外し、カードの枠で区切る。 */
   background-image: none;
+  /* 右端の目印（＞）の分を空け、長い名前が目印と重ならないようにする。 */
+  padding-right: 30px;
 }
 
 .oshi-name,
@@ -1968,6 +1986,8 @@ function selectOshi(oshi) {
 .oshi-card .list-item__center {
   /* 一覧の既定罫線を外し、カードの枠で区切る。 */
   background-image: none;
+  /* 右端の目印（＞）の分を空け、長い名前が目印と重ならないようにする。 */
+  padding-right: 30px;
 }
 
 .oshi-name,
@@ -2136,6 +2156,8 @@ function selectOshi(oshi) {
 .oshi-card .list-item__center {
   /* 一覧の既定罫線を外し、カードの枠で区切る。 */
   background-image: none;
+  /* 右端の目印（＞）の分を空け、長い名前が目印と重ならないようにする。 */
+  padding-right: 30px;
 }
 
 .oshi-name,
@@ -2342,6 +2364,8 @@ function selectOshi(oshi) {
 .oshi-card .list-item__center {
   /* 一覧の既定罫線を外し、カードの枠で区切る。 */
   background-image: none;
+  /* 右端の目印（＞）の分を空け、長い名前が目印と重ならないようにする。 */
+  padding-right: 30px;
 }
 
 .oshi-name,
@@ -2551,6 +2575,8 @@ function openOshiDetail(oshi) {
 .oshi-card .list-item__center {
   /* 一覧の既定罫線を外し、カードの枠で区切る。 */
   background-image: none;
+  /* 右端の目印（＞）の分を空け、長い名前が目印と重ならないようにする。 */
+  padding-right: 30px;
 }
 
 .oshi-name,
@@ -2774,6 +2800,8 @@ function openOshiDetail(oshi) {
 .oshi-card .list-item__center {
   /* 一覧の既定罫線を外し、カードの枠で区切る。 */
   background-image: none;
+  /* 右端の目印（＞）の分を空け、長い名前が目印と重ならないようにする。 */
+  padding-right: 30px;
 }
 
 .oshi-name,
@@ -3007,6 +3035,8 @@ function openOshiDetail(oshi) {
 .oshi-card .list-item__center {
   /* 一覧の既定罫線を外し、カードの枠で区切る。 */
   background-image: none;
+  /* 右端の目印（＞）の分を空け、長い名前が目印と重ならないようにする。 */
+  padding-right: 30px;
 }
 
 .oshi-name,
