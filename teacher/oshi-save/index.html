@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>M02OshiSave 教員用ガイド</title><link rel="stylesheet" href="../../docs/assets/textbook.css"></head>
+<body class="plain"><a class="skip" href="#main">本文へ移動</a><header class="topbar"><span class="brand">JEC / 教員用ガイド</span><a href="../../docs/oshi-save/index.html">学生用教科書</a></header><main id="main">
+<div class="hero"><p class="eyebrow">Monaca · コマ5〜7</p><h1>M02OshiSave：追加と保存</h1><p class="lede">自分の推しを入力して一覧へ加え、再読み込み後も戻る形にします。最後はソースに残るアレンジと公開URLを確認し、提出します。</p><div class="tags"><span>Monaca クラウド IDE / Google Chrome</span><span>1コマ90分 × 3</span><span>Onsen UI 2.12.9</span></div></div>
+<section id="policy"><h2>この単元の教材方針</h2>
+<p>新概念は<strong>JSONの1つ</strong>です。STEP 05で配列・オブジェクトと文字列を区別し、06の保存と07の復元で効果を確かめます。対応物のあるAPIは、教員用の次表と本文の比較説明を対にして教え、新概念の上限へ重ねて数えません。</p>
+<table><thead><tr><th>内容</th><th>既習の対応物</th><th>説明と確認</th></tr></thead><tbody>
+<tr><td>ページ生成、一覧、詳細、data受渡し</td><td>WebのDOM・イベント、AndroidのIntent、iOSの遷移先プロパティ</td><td>00・01で開始コードを再掲。init時点、template、pushPageのdataとcallback、戻るときの一覧を説明。</td></tr>
+<tr><td>入力と検証</td><td>HTMLのinput・textarea、EditText、UITextField、文字列の空欄判定</td><td>01・02でlabel、value、trim、maxlength、画面内のメッセージを比較。</td></tr>
+<tr><td>配列の更新と再描画</td><td>ArrayListへの追加、Swiftの配列のappend、JavaScriptのpush</td><td>03・04で追加後にDOMを作り直す理由と二重操作の防止。</td></tr>
+<tr><td>JSON</td><td>配列と文字列は既知だが、相互変換する表現形式を本単元の新概念とする。</td><td>05〜07。stringifyで保存用の文字列へ、parseで画面用の値へ。parseが成功してもアプリが期待する形とは限らない。</td></tr>
+<tr><td>localStorage</td><td>JavaのSharedPreferences、SwiftのUserDefaults</td><td>06・07でキーによる端末内保存を比較。localStorageは文字列を同期的に読み書きし、保存範囲は同じブラウザの同じオリジン。</td></tr>
+<tr><td>例外、複製、検証、初期化</td><td>Javaのtry/catch、Swiftのdo/try/catch、リストのコピー、保存キーの削除</td><td>06〜09でslice、Array.isArray、typeof、removeItemを説明。失敗した読み込みを空の成功と扱わない。</td></tr>
+<tr><td>共有・提出・ダウンロード</td><td>ネイティブアプリのソースと実行時データ、SDK取得、提出前の実行確認</td><td>10〜14で作品のソースと入力済みデータを分け、教員の新規取り込みで再現できる変更を確認。</td></tr>
+</tbody></table>
+<p>学生は自分の推しログ1本を使い続けます。M02のSTEP 00だけで新規作成・配置・実行まで進められるようにし、一覧・詳細の全コードと説明を置きます。前の教科書へ手順を探しに行かせません。各コマの開始コードも再掲します。個人のアレンジは合流前に本人が控えます。</p>
+<h3>意図的に外したもの</h3><p>fetch、Promise、async / await、アロー関数、クラス、querySelector、外部データベース、アカウント連携、Cordovaプラグインは使いません。同期のlocalStorageを使い、保存成功後に一覧を更新します。閲覧画面はtextContentで表示し、入力文字をHTMLとして組み立てません。</p>
+<p>JSON.parseが返した配列と各要素の3つの文字列を検査します。空配列は有効です。読み込み失敗時は初期例を参考表示し、追加を止めて元データを上書きしません。初期化には確認を挟み、削除するのは本アプリのキー1個だけです。障害を起こすためのコードを学生の作品へ入れさせません。</p>
+<p>変更・削除・並べ替えや画像入力を足すと確認範囲が増えるため、題材・文字・色・初期データのアレンジに絞ります。個人的な話の開示は必須にせず、架空の推しでも構いません。</p>
+</section>
+<section id="schedule"><h2>90分ごとの進め方</h2>
+<table><thead><tr><th>コマ / STEP</th><th>配分</th><th>到達点</th></tr></thead><tbody>
+<tr><td>5 / 00〜04</td><td>再開15分、入力画面20分、検証15分、追加20分、アレンジ10分、予備10分。</td><td>空欄は止まり、追加した内容を詳細で読める。まだ再読み込みで消えることを区別する。</td></tr>
+<tr><td>6 / 05〜09</td><td>JSON15分、保存20分、読込25分、初期化10分、アレンジ10分、予備10分。</td><td>追加後の再読み込みで内容が残り、初期化の取消し・確定を区別できる。</td></tr>
+<tr><td>7 / 10〜14</td><td>Flutter準備開始10分、アレンジ25分、操作・公開URL20分、提出と準備確認15分、変更説明10分、予備10分。</td><td>自分の変更が新規取り込みでも見え、公開URLを提出できる。SDK取得の進み具合を教員と確認する。</td></tr>
+</tbody></table>
+<p>コマ7は全員Apple SiliconのFlutter SDK取得を授業内で開始し、既存のiOSランタイムが使える学生には追加取得を求めません。不足分だけを確認し、待ち時間はMonacaの仕上げに使います。終盤に準備状況を確認し、コマ8にも25分を確保します。回線・教室の同時取得時間は未実測なので、時間が足りない場合は予備時間と次回冒頭を使い、家庭でのダウンロードを課しません。</p>
+</section>
+<section id="operation"><h2>公開URLと採点の運用</h2>
+<p>通常版MonacaのFreeプランを前提とします。教員は完成見本2本を残し、残り1枠で学生作品を1件ずつ取り込み、確認済みのコピーだけを削除して採点します。学生の制作中の作品や、公開用の完成見本を枠確保のために削除しません。</p>
+<p>公開URLは実行URLではなくソースの取り込みURLです。localStorageの入力済みデータは相手へ渡りません。アレンジはcreateInitialItemsの名前・ジャンル・推しポイント、HTMLの文章、CSSの配色・余白などへ残します。保存済みの配列があると初期配列の変更は隠れるので、必要な記録を控えたうえでアプリ内の初期化を使って確認します。</p>
+<p>提出先・締め切りは教員が授業中に案内します。教員は提出URLを新規取り込みし、初期のアレンジ、入力追加、空欄検証、保存・再読み込み、詳細・戻るを確認します。学生には自分のURLと、変更したファイル・箇所・画面の変化を説明してもらいます。</p>
+<h3>確認質問</h3><ul><li>コマ5：「valueを読むだけ」と「配列へ追加する」の違いはどの行？</li><li>コマ6：保存する値は配列か文字列か。保存に失敗したのに一覧へ増やすと、何が困る？</li><li>コマ7：いま入力した4件目は先生にも渡るか。渡したい内容をどのファイルへ書く？</li></ul>
+</section>
+<section id="troubleshooting"><h2>つまずいたときの確認順</h2>
+<table><thead><tr><th>状態</th><th>確認箇所</th></tr></thead><tbody>
+<tr><td>追加画面が開かない</td><td>page_addのid、templateのid、init内のイベント登録。保存の読込エラーが出ている場合は追加を止める仕様。</td></tr>
+<tr><td>入力しても空欄と言われる</td><td>3つとも入力したか、valueの取得先id、半角スペースだけになっていないか。</td></tr>
+<tr><td>追加後に元へ戻る</td><td>STEP 06は保存だけ、07から読込が有効。保存側と読込側のSTORAGE_KEYが同一か。</td></tr>
+<tr><td>保存内容を読み込めない</td><td>JSONの形・読み取り制限を確認。勝手に保存し直さず、元データを守る。初期化は本人が記録を控えてから行う。</td></tr>
+<tr><td>初期データを書き換えても変わらない</td><td>保存済みデータが優先される。コード保存後に再読み込みし、必要な記録を控えて「初期の推しに戻す」を確定。</td></tr>
+<tr><td>公開先に入力内容が出ない</td><td>正常な仕組み。実行時データは共有されない。ソース中の初期例をアレンジする。</td></tr>
+<tr><td>別のブラウザで記録が消えたように見える</td><td>保存範囲が異なる。アカウント同期・クラウド保存ではない。</td></tr>
+</tbody></table></section>
+<section id="verification"><h2>検証と未確認項目</h2>
+<p>ローカルChromeの390px幅で初期3件、空欄検証、文字としての山かっこ・改行、4件目の追加、再読み込み後の復元、詳細、初期化の取消し・確定を確認しています。リポジトリ外の検証コピーで不正JSON・不正な要素・空配列・保存失敗も確認し、入力保持と上書き防止を確かめました。完成版と全15 STEPのJavaScript構文を検査しています。中間STEP 01・02・03・06・07・08では、入力画面・検証メッセージ・メモリ追加・保存だけの段階・復元・詳細・初期化の取消しと確定をChromeで確認しました。</p>
+<p>Monacaの公開見本は取り込み作業中です。公開URLを発行した場合は、実際のURLをconfigと学生用の完成見本へ同時に記載します。公開URLからの再取り込み、全中間STEPのクラウド動作、通常授業の所要時間は未確認です。スクリーンショットは掲載していません。</p>
+<p>完成アプリのUnit Testは作りません。教材整合性・スクリプトテスト・翻訳抽出・学生用ZIP生成の4検査に加え、スニペットのバイト一致と配布ZIPの内容一致を確認します。</p>
+</section>
+<section id="snapshots"><h2>STEPごとの照合コード</h2><p>各行はアレンジ前の終了状態です。00は開始時の一覧・詳細、01は入力画面のみ、02は検証、03〜05はメモリ追加、06は保存のみ、07は読込、08〜14は完成版です。</p><table><thead><tr><th>STEP</th><th>HTML</th><th>CSS</th><th>JavaScript</th></tr></thead><tbody><tr><td>00</td><td><a href="code/00-index.html">index.html</a></td><td><a href="code/00-style.css">style.css</a></td><td><a href="code/00-app.js">app.js</a></td></tr>
+<tr><td>01</td><td><a href="code/01-index.html">index.html</a></td><td><a href="code/01-style.css">style.css</a></td><td><a href="code/01-app.js">app.js</a></td></tr>
+<tr><td>02</td><td><a href="code/02-index.html">index.html</a></td><td><a href="code/02-style.css">style.css</a></td><td><a href="code/02-app.js">app.js</a></td></tr>
+<tr><td>03</td><td><a href="code/03-index.html">index.html</a></td><td><a href="code/03-style.css">style.css</a></td><td><a href="code/03-app.js">app.js</a></td></tr>
+<tr><td>04</td><td><a href="code/04-index.html">index.html</a></td><td><a href="code/04-style.css">style.css</a></td><td><a href="code/04-app.js">app.js</a></td></tr>
+<tr><td>05</td><td><a href="code/05-index.html">index.html</a></td><td><a href="code/05-style.css">style.css</a></td><td><a href="code/05-app.js">app.js</a></td></tr>
+<tr><td>06</td><td><a href="code/06-index.html">index.html</a></td><td><a href="code/06-style.css">style.css</a></td><td><a href="code/06-app.js">app.js</a></td></tr>
+<tr><td>07</td><td><a href="code/07-index.html">index.html</a></td><td><a href="code/07-style.css">style.css</a></td><td><a href="code/07-app.js">app.js</a></td></tr>
+<tr><td>08</td><td><a href="code/08-index.html">index.html</a></td><td><a href="code/08-style.css">style.css</a></td><td><a href="code/08-app.js">app.js</a></td></tr>
+<tr><td>09</td><td><a href="code/09-index.html">index.html</a></td><td><a href="code/09-style.css">style.css</a></td><td><a href="code/09-app.js">app.js</a></td></tr>
+<tr><td>10</td><td><a href="code/10-index.html">index.html</a></td><td><a href="code/10-style.css">style.css</a></td><td><a href="code/10-app.js">app.js</a></td></tr>
+<tr><td>11</td><td><a href="code/11-index.html">index.html</a></td><td><a href="code/11-style.css">style.css</a></td><td><a href="code/11-app.js">app.js</a></td></tr>
+<tr><td>12</td><td><a href="code/12-index.html">index.html</a></td><td><a href="code/12-style.css">style.css</a></td><td><a href="code/12-app.js">app.js</a></td></tr>
+<tr><td>13</td><td><a href="code/13-index.html">index.html</a></td><td><a href="code/13-style.css">style.css</a></td><td><a href="code/13-app.js">app.js</a></td></tr>
+<tr><td>14</td><td><a href="code/14-index.html">index.html</a></td><td><a href="code/14-style.css">style.css</a></td><td><a href="code/14-app.js">app.js</a></td></tr>
+</tbody></table></section>
+<section id="references"><h2>公式資料</h2><ul><li><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON">MDN：JSON</a></li><li><a href="https://developer.mozilla.org/ja/docs/Web/API/Window/localStorage">MDN：localStorage</a></li><li><a href="https://onsen.io/v2/api/js/ons-navigator.html">Onsen UI：ons-navigator</a></li></ul></section><p class="footer">JEC / ハイブリッドアプリ開発技法 · M02OshiSave · 教員用</p></main></body></html>
