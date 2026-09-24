@@ -20,6 +20,9 @@ body:lang(zh-Hant-TW), [lang="zh-Hant-TW"] { font-family: -apple-system, BlinkMa
 body:lang(my), [lang="my"] { font-family: "Myanmar Sangam MN", "Myanmar MN", sans-serif; }
 body:lang(ko), [lang="ko"] { font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Nanum Gothic", sans-serif; }
 body:lang(ar), [lang="ar"] { font-family: -apple-system, BlinkMacSystemFont, "Geeza Pro", sans-serif; }
+/* モンゴル語のキリル文字の Ө ө Ү ү は、ヒラギノにない。キリル文字がヒラギノに落ちて字形が混ざらないよう、
+   Ө・Ү を持つ欧文フォントを日本語フォントより前に置く。訳文に残す日本語の画面名は、そのうしろのヒラギノで出す。 */
+body:lang(mn), [lang="mn"] { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif; }
 body:lang(ja), [lang="ja"] { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif; }
 .language-nav, .translation-note { max-width: 1260px; margin: auto; padding: .6rem 2rem; font-size: .88rem; }
 .language-nav { background: var(--paper); display: flex; flex-wrap: wrap; align-items: center; gap: .3rem .6rem; border-bottom: 1px solid var(--line); }

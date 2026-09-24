@@ -404,12 +404,12 @@ READMEの「完成コードの書き方（全単元共通）」を、系統ご�
 
 ## 12. 多言語展開（対訳カタログ）
 
-日本語の教科書（`docs/`）を、配布前にほかの言語へ展開する。しくみの説明は `README.md` の「多言語展開」、翻訳の手順とルールは `skills/translate-teaching-materials/SKILL.md` にある。対象は日本語（原文）＋英語・中国語（簡体）・韓国語・ミャンマー語・広東語（繁体・香港）・台湾華語（繁体・台湾）・スペイン語・アラビア語の8言語。
+日本語の教科書（`docs/`）を、配布前にほかの言語へ展開する。しくみの説明は `README.md` の「多言語展開」、翻訳の手順とルールは `skills/translate-teaching-materials/SKILL.md` にある。対象は日本語（原文）＋英語・中国語（簡体）・韓国語・ミャンマー語・広東語（繁体・香港）・台湾華語（繁体・台湾）・スペイン語・アラビア語・モンゴル語（キリル文字）の9言語。
 
 - **2026-09の学生アンケートで対象を広げた（2026-09-24 オーナー決定）。** 台湾華語とスペイン語を加えた。スペイン語は中南米の言い方にそろえる。回答のなかった言語も、未回答の学生がいるので外さない。**アンケートの回答ファイルは学生のメールアドレスを含むので、リポジトリにもissue・PRにも写さない。** 書いてよいのは、挙がった言語の一覧までにする。
 - **アラビア語は、右から左に書く表示に対応してから加えた（2026-09-25、[issue #39](https://github.com/LeoAndo/jec-25cm-hybrid-app/issues/39)）。** 右から左に書く言語は、`config/i18n.json` の `dir` を `rtl` にする。生成するページの `<html>` に `dir="rtl"` が付き、日本語のまま残る未翻訳の文には `dir="ltr"` が付く。
 - **`docs/assets/textbook.css` には、左右を決め打ちした指定を書かない。** `border-left`・`padding-left`・`left:`・`text-align: left` などの代わりに、論理プロパティ（`border-inline-start`・`padding-inline-start`・`inset-inline-start`・`text-align: start`）を使う。日本語のページでは同じ見た目になり、アラビア語のページでは左右が入れ替わる。`scripts/test_localize_student_materials.py` が検査する。右から左のページだけに当てる指定は `[dir="rtl"]` で絞る（`code` に `unicode-bidi: isolate` を当てると、日本語のページでも行の折り返す位置が変わるため）。
-- **モンゴル語は、まだ `config/i18n.json` に足さない。** キリル文字か伝統的モンゴル文字（縦書き）かを学生本人に確かめてから決める（[issue #40](https://github.com/LeoAndo/jec-25cm-hybrid-app/issues/40)）。
+- **モンゴル語は、モンゴル国のキリル文字（`mn`、横書き）で加えた（2026-09-25 オーナー確認）。** 学生本人に読む文字を確かめた結果（[issue #40](https://github.com/LeoAndo/jec-25cm-hybrid-app/issues/40)）。伝統的モンゴル文字（縦書き、`mn-Mong`）には対応しない。
 
 - **いまは `config/i18n.json` の全言語が `distribute: false`。** 翻訳が1文もないため、`true` にすると公開ゲート（`localize-student-materials.py status --require-complete`）で止まる。
 - **`true` に上げてよいのは、次の2つが両方終わった言語だけ。**

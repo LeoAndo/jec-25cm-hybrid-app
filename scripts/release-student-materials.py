@@ -103,6 +103,7 @@ DOWNLOAD_GUIDANCE = {
     "my": "Assets မှ **{asset}** ကို ဒေါင်းလုဒ်လုပ်ပြီး ZIP ဖိုင်ကို ဖြည်ပါ။ ဘရောက်ဇာတွင် `index.html` ကိုဖွင့်၍ မြန်မာဘာသာကို ရွေးပြီး သင်တန်းအတွက် ပြင်ဆင်ခြင်းလမ်းညွှန်မှ စတင်ပါ။ သင်တန်းကို ဂျပန်ဘာသာဖြင့် သင်ကြားပြီး ဘာသာပြန်သည် စာအုပ်ကို နားလည်ရန် အထောက်အကူပြုပါသည်။",
     "es": "Descarga **{asset}** desde Assets y descomprímelo. Abre `index.html` en tu navegador, elige Español y empieza por la guía de preparación. Las clases son en japonés; las traducciones te ayudan a entender el libro de texto.",
     "ar": "نزّل **{asset}** من Assets وفك ضغطه. افتح `index.html` في المتصفح، واختر العربية، ثم ابدأ بدليل التحضير. تُدرَّس الحصص باللغة اليابانية، والترجمة تساعدك على فهم الكتاب المدرسي.",
+    "mn": "Assets хэсгээс **{asset}** файлыг татаж аваад задална уу. `index.html` файлыг вэб хөтчөөрөө нээгээд монгол хэлийг сонгож, бэлтгэлийн заавраас эхэлнэ үү. Хичээл япон хэлээр явагдана. Орчуулга нь сурах бичгийг ойлгоход тань туслах зорилготой.",
 }
 EXCEPTION_MARKER = "<!-- translation-release-exception -->"
 
