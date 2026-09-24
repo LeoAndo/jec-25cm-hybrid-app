@@ -576,7 +576,8 @@ class _Localizer:
         self.source_root = source_root
         self.pages = pages
         self.mark_untranslated = mark_untranslated
-        self.fallback_elements = set()
+        self.fallback_elements = set()  # 日本語のまま出す属性か本文を持つ要素。lang="ja" を付ける
+        self.fallback_containers = set()  # 本文を日本語のまま出す title・option・textarea。向きも日本語にする
         self.fallback_attributes = {}
         self.android_docs_hl = android_docs_hl
         self.direction = direction
@@ -584,20 +585,19 @@ class _Localizer:
     def translation(self, source: str, where: str) -> str | None:
         return self.overrides.get((source, where), self.translations.get(source))
 
-    def _marks(self, code: str) -> list:
-        """言語を示す要素に付ける (属性, 値) の組。右から左のページでは、lang と一緒に dir も付ける。
+    def _japanese_marks(self) -> list:
+        """日本語のまま出す本文に付ける (属性, 値) の組。右から左のページでは、lang と一緒に dir も付ける。
 
-        右から左の段落に日本語を置くと、文末の「。」や「…」が、日本語の反対側（左端）へ回り込む。
+        右から左の段落に日本語の文を置くと、文末の「。」や「…」が、文の反対側（左端）へ回り込む。
         dir を付けた要素は、その向きで周りから切り離して並ぶ（HTMLの既定で unicode-bidi: isolate）。
         左から右のページでは、日本語も同じ向きなので付けない（今までと同じHTMLになる）。
+        属性（alt・title など）だけが日本語の要素には使わない。dir を付けると、中の訳した本文や
+        入れ物のリストまで左から右に並んでしまう。
         """
-        marks = [("lang", code)]
+        marks = [("lang", "ja")]
         if self.direction == "rtl":
-            marks.append(("dir", FALLBACK_DIRECTION if code == "ja" else self.direction))
+            marks.append(("dir", FALLBACK_DIRECTION))
         return marks
-
-    def _span(self, code: str) -> str:
-        return "<span" + "".join(f' {name}="{value}"' for name, value in self._marks(code)) + ">"
 
     def start_tag(self, element: Element) -> str:
         """開始タグを、訳した属性・書き換えたリンク・言語の指定つきで作り直す。"""
@@ -626,7 +626,8 @@ class _Localizer:
             name in values for name in _translated_attributes(element)) else None
         element_language = "ja" if id(element) in self.fallback_elements else attribute_language
         if element_language is not None:
-            marks = self._marks(element_language)
+            marks = (self._japanese_marks() if id(element) in self.fallback_containers
+                     else [("lang", element_language)])
         appended = []
         for name, value in marks:
             if element.attribute(name) is None:
@@ -661,7 +662,7 @@ class _Localizer:
                               and element.tag not in VOID)
             if closing:
                 return ('</span>' if reset_language else '') + self.page.text[element.inner_end:element.end]
-            return self.start_tag(element) + (self._span(self.language) if reset_language else '')
+            return self.start_tag(element) + (f'<span lang="{self.language}">' if reset_language else '')
         return CATALOG_TAG.sub(replace, translation)
 
     def run(self) -> str:
@@ -685,13 +686,14 @@ class _Localizer:
                     and any(element.inner_start <= segment.start and segment.end <= element.inner_end
                             for element in self.fallback_attributes.values())
                     and segment.where not in {"title", "option", "textarea"}):
-                rendered = f'{self._span(self.language)}{rendered}</span>'
+                rendered = f'<span lang="{self.language}">{rendered}</span>'
             if self.mark_untranslated and translation is None:
                 # title/option/textarea には span を入れられないので、その要素に言語を付ける。
                 if segment.where in {"title", "option", "textarea"}:
                     self._mark_fallback_container(self.page.root, segment)
                 else:
-                    rendered = f'{self._span("ja")}{rendered}</span>'
+                    marks = "".join(f' {name}="{value}"' for name, value in self._japanese_marks())
+                    rendered = f'<span{marks}>{rendered}</span>'
             replacements.append((segment.start, segment.end, rendered))
         self._start_tags(self.page.root, replacements)
         parts, position = [], 0
@@ -706,6 +708,7 @@ class _Localizer:
             if isinstance(child, Element) and child.inner_start <= segment.start and child.inner_end >= segment.end:
                 if child.tag == segment.where:
                     self.fallback_elements.add(id(child))
+                    self.fallback_containers.add(id(child))
                 self._mark_fallback_container(child, segment)
 
     def _source(self, segment: Segment) -> str:

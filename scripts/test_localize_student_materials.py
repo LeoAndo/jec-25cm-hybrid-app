@@ -276,10 +276,10 @@ class LocalizeTest(unittest.TestCase):
         self.assertIn('<html lang="ar" dir="rtl">', rendered)
         self.assertIn('<p><span lang="ja" dir="ltr">未翻訳の文です。</span></p>', rendered)
         self.assertIn('<p>جملة مترجمة.</p>', rendered)
-        # 属性だけが日本語の要素は日本語と示し、その中の訳した本文は、アラビア語の向きに戻す。
-        self.assertIn('<a href="#next" title="次の説明" lang="ja" dir="ltr">'
-                      '<span lang="ar" dir="rtl">التالي</span></a>', rendered)
-        self.assertIn('alt="図の説明" lang="ja" dir="ltr">', rendered)
+        # 属性だけが日本語の要素には lang だけを付ける。dir まで付けると、中の訳した本文や
+        # 入れ物のリスト（aria-label だけが未翻訳の目次など）が左から右に並んでしまう。
+        self.assertIn('<a href="#next" title="次の説明" lang="ja"><span lang="ar">التالي</span></a>', rendered)
+        self.assertIn('alt="図の説明" lang="ja">', rendered)
         # コードは日本語版のバイト列のまま。左から右で読む指定はCSSが受け持つ。
         self.assertIn('<pre><code>// コード</code></pre>', rendered)
         page_of(rendered)
@@ -287,6 +287,14 @@ class LocalizeTest(unittest.TestCase):
         english = localize.localize(page_of(source), {}, "en", "docs", self.PAGES, mark_untranslated=True)
         self.assertNotIn(" dir=", english)
         self.assertIn('<span lang="ja">未翻訳の文です。</span>', english)
+
+    def test_container_with_only_a_japanese_label_keeps_the_page_direction(self):
+        source = '<nav class="sidebar" aria-label="目次"><ol><li><a href="#a">はじめに</a></li></ol></nav>'
+        rendered = localize.localize(page_of(source), {"はじめに": "مقدمة"}, "ar", "docs", self.PAGES,
+                                     mark_untranslated=True, direction="rtl")
+        self.assertIn('<nav class="sidebar" aria-label="目次" lang="ja"><ol><li><a href="#a">'
+                      '<span lang="ar">مقدمة</span></a></li></ol></nav>', rendered)
+        self.assertNotIn("dir=", rendered)
 
     def test_existing_dir_on_html_is_replaced_not_duplicated(self):
         source = '<html lang="ja" dir="ltr"><body><p>文です。</p></body></html>'
