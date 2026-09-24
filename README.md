@@ -159,7 +159,9 @@ ZIPにはGitで管理しているプロジェクトのファイルを収録し�
 | Run workflow（publishオン） | mainの教材とリリースノートを再生成。配布対象の未翻訳が0文ならGitHub Releasesへ添付 | する |
 | Run workflow（publishオン・allow_untranslatedオン） | 緊急公開として未翻訳だけを許可。日本語で表示される件数をリリースノートに記録 | する |
 
-**CIはアプリをビルドしません。** MonacaのビルドはMonacaのクラウド上でしか行えず、Flutterのビルドは学生の手元で行います。CIが確かめるのは、教材・設定・配布物の整合性（`check-teaching-materials.py`）、スクリプト自身のテスト、対訳カタログ、配布ZIPが組み立つことの4つです。アプリが動くかどうかは、[AGENTS.md](AGENTS.md) §7 の手順で人が確かめます。
+**CIでは、教材の整合性と完成アプリの静的エラーを検査します。** 教材・設定・配布物の整合性（`check-teaching-materials.py`）、スクリプト自身のテスト、対訳カタログ、配布ZIPの生成に加え、MonacaのJavaScriptに `node --check`、Flutterに3.47.5で `flutter pub get` と `flutter analyze --no-pub` を実行します。Git管理下のM系・F系プロジェクトから対象を選ぶため、教材登録前の完成見本も検査されます。Monacaのテンプレート原本と標準の `www/components/` は構文検査の対象外です。静的検査に失敗した場合は、配布物の生成へ進みません。
+
+CIではアプリのビルドや画面の操作を行いません。アプリが動くかどうかは、[AGENTS.md](AGENTS.md) §7 の手順でブラウザ・シミュレータ・エミュレータを使って確かめます。
 
 #### 初回の導入
 

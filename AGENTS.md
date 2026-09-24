@@ -266,6 +266,8 @@ Freeプランの利用規約は「法人による商用でのアプリ開発」�
 
 ## 7. 検証
 
+- **CIにMonacaのJavaScript構文検査とFlutterの静的解析を導入する（2026-09-24 オーナー承認）。** `.github/workflows/student-materials.yml` の `validate-app-sources` が、Git管理下のM系 `www/` のJavaScript（標準の `components/` を除く）とF系のFlutterプロジェクトを検出する。教材登録前の完成プロジェクトも対象とし、単元を足すたびにワークフローへ名前を追加しない。Flutterは3.47.5に固定する。第三者Actionの `subosito/flutter-action` は利用可と承認済みで、確認したコミットSHAに固定する。静的解析は以下の画面確認の代わりにはならない。
+
 - 教材・設定・スクリプトを触ったら、次の4つを通す。**4つ目は配布物に入れるファイルを `git ls-files -- docs` で選ぶので、新しいファイルは先に `git add` しておく。** 未追跡のままだと、エラーにならずに配布物から抜け落ちる。**3つ目は `docs/` 配下のHTMLをファイルシステムから直接読むので、未追跡のHTMLも検査の対象になる。**
 
   ```sh
