@@ -1,0 +1,2972 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>F01 スタンプ帳 | ハイブリッドアプリ開発技法</title><link rel="stylesheet" href="../assets/textbook.css"><script src="../assets/textbook.js" defer></script></head>
+<body data-progress-key="jec-hybrid-stamp-board-v1"><a class="skip" href="#main">本文へ移動</a><header class="topbar"><span class="brand">JEC / ハイブリッドアプリ開発技法</span><a href="../oshi-save/index.html">← M02：OshiSave</a></header><div class="shell"><aside class="sidebar"><div class="sidebar-inner"><div class="progress"><span data-progress-label>0 / 20 ステップ確認済み</span><progress max="20" value="0" aria-label="単元の進み具合"></progress></div><nav aria-label="コマごとの目次"><p class="eyebrow">コマ8 · STEP 00〜04</p><ol><li><a href="#step-0">00 道具と作業フォルダを用意する</a></li><li><a href="#step-1">01 空のアプリを起動する</a></li><li><a href="#step-2">02 Widgetの組み合わせで画面を書く</a></li><li><a href="#step-3">03 保存してホットリロードする</a></li><li><a href="#step-4">04 文字と大きさをアレンジする</a></li></ol><p class="eyebrow">コマ9 · STEP 05〜09</p><ol><li><a href="#step-5">05 習慣を1枚のカードにする</a></li><li><a href="#step-6">06 余白と縦横の並びを読む</a></li><li><a href="#step-7">07 データから一覧を作る</a></li><li><a href="#step-8">08 配色と表示をそろえる</a></li><li><a href="#step-9">09 カードの題材をアレンジする</a></li></ol><p class="eyebrow">コマ10 · STEP 10〜14</p><ol><li><a href="#step-10">10 回数と画面の関係を読む</a></li><li><a href="#step-11">11 setStateでスタンプを増やす</a></li><li><a href="#step-12">12 合計とマークを値から作る</a></li><li><a href="#step-13">13 上限と戻す操作を確かめる</a></li><li><a href="#step-14">14 回数と見た目をアレンジする</a></li></ol><p class="eyebrow">コマ11 · STEP 15〜19</p><ol><li><a href="#step-15">15 詳細へ渡す値を決める</a></li><li><a href="#step-16">16 Navigatorで詳細を開く</a></li><li><a href="#step-17">17 受け取った習慣を表示する</a></li><li><a href="#step-18">18 一覧と詳細を通して確かめる</a></li><li><a href="#step-19">19 アレンジできる場所を説明する</a></li></ol></nav><div class="resources"><a href="#help">困ったとき</a><a href="#sample-project">完成プロジェクトを開く</a><a href="../oshi-list/index.html">M01：OshiList</a><a href="../oshi-save/index.html">M02：OshiSave</a><span aria-current="page">F01：StampBoard</span><a href="../common/setup.html?from=stamp-board">共通：はじめの準備</a></div></div></aside><main id="main"><div class="hero"><div class="unit">F01</div><p class="eyebrow">コマ8〜11 · 各90分</p><h1>小さな「できた」を、スタンプに。</h1><p class="lede">自分が続けたい習慣をカードにし、できたときにスタンプを押すアプリを作ります。画面の部品を一つずつ変更する方法と、値から画面を組み立てる方法の違いを確かめましょう。</p><div class="tags"><span>Flutter / Visual Studio Code</span><span>Flutter 3.47.5 / Dart 3.13.4</span><span>iOS / Android</span></div><p>完成見本はF01StampBoardです。この教科書だけで、新規作成から一覧・スタンプ・詳細の実行まで進められます。Web基礎とJava／Swiftの知識を比べながら読みます。</p></div>
+<section id="step-0"><p class="step-meta">STEP 00 · コマ8</p><h2>道具と作業フォルダを用意する</h2><p>Visual Studio Codeを使います。最初の25分でFlutter 3.47.5 / Dart 3.13.4、Flutter拡張、iOS実行環境を確認します。<a href="../common/setup.html?from=stamp-board#step-4">共通資料のSTEP 4〜7</a>を開き、不足分は授業中に用意してください。学生のMacはApple Siliconです。既存のXcodeで使えるiOSランタイムは再利用し、全員に再取得は求めません。</p><p><code>flutter --version</code>と<code>flutter doctor -v</code>を確認します。この単元はiOSで始めるため、Android欄の課題は先生と切り分けます。取得が終わらないときは授業中に相談し、自宅で終わらせることを条件にはしません。</p><p>macOSのTerminalで、制作フォルダを用意して次を実行します。同名フォルダが既にある場合は上書きせず、内容を先生と確認します。<code>mkdir -p</code>は親フォルダが既にあっても使えます。</p><pre><code>mkdir -p ~/Documents/HybridApp
+cd ~/Documents/HybridApp
+flutter create --empty --platforms=ios,android --org jp.ac.jec --project-name f01_stamp_board F01StampBoard</code></pre><p><code>--empty</code>は空の画面、<code>--platforms</code>は対象OSを選ぶ指定です。フォルダ名はF01StampBoard、Dartのパッケージ名は小文字のf01_stamp_boardに分けます。<code>--org</code>は識別子の先頭で、今回のAndroidアプリIDは<code>jp.ac.jec.f01_stamp_board</code>です。</p><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Dart</p><pre><code>import &#x27;package:flutter/material.dart&#x27;;</code></pre></div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre><code>import android.app.Activity;</code></pre></div></div><p>Javaのimportと同様に、使う型を読み込みます。Flutter SDKとアプリのフォルダは別物です。Android StudioやXcodeで作成したプロジェクトを開くように、次は生成したF01StampBoardを開きます。</p><div class="check"><label><input type="checkbox" data-check="stamp-board-00"><span>SDKの版と準備状況を確認し、空のプロジェクトを作れた。</span></label></div></section>
+<section id="step-1"><p class="step-meta">STEP 01 · コマ8</p><h2>空のアプリを起動する</h2><ol><li>Visual Studio Codeの<code>File &gt; Open Folder…</code>でF01StampBoardを選びます。pubspec.yamlが直接見えるフォルダです。</li><li><code>Terminal &gt; New Terminal</code>を開き、<code>flutter pub get</code>を実行します。</li><li>Command Paletteを開き、<code>Flutter: Launch Emulator</code>から既存のiOSシミュレータを選びます。</li><li><code>flutter devices</code>に表示されたiOS端末のIDを使って<code>flutter run -d 端末ID</code>を実行します。端末IDという文字のまま実行しません。</li></ol><p><code>flutter devices</code>は一覧表示で、端末を起動するコマンドではありません。実行が完了すると白い画面の中央にHello World!が出ます。ビルドの取得待ちは先生へ状況を伝え、同じコマンドを重ねて実行しません。</p><p>lib/main.dartが画面の入口です。mainからrunAppへMainAppを渡し、MainAppのbuildがMaterialAppとScaffoldを返します。android/とios/は起動の土台で、この単元では直接編集しません。</p><p>pubspec.yamlのdev_dependenciesにある<code>flutter_test:</code>と、その直下の<code>sdk: flutter</code>の2行は使わないため除きます。dependencies側のFlutter SDKは残します。test/が生成されていた場合だけ、そのひな形も除きます。flutter_lintsは残し、もう一度flutter pub getを実行します。</p><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Dart</p><pre><code>void main() {
+  runApp(const MainApp());
+}</code></pre></div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre><code>public static void main(String[] args) {
+    // アプリの処理を開始する入口
+}</code></pre></div></div><p>Dartもmainが開始点です。runAppに最上位のWidgetを渡すところがFlutter固有です。constは実行時に変化しない設定の生成に使います。classとextendsはJavaの継承に対応し、super.keyは親へ識別用の引数を渡す省略形です。</p><details><summary>このSTEPの全コード（照合・合流用）</summary><div class="code-head">lib/main.dart · 全文</div><pre id="code-01-main-dart" tabindex="0"><code>import &#x27;package:flutter/material.dart&#x27;;
+
+void main() {
+  runApp(const MainApp());
+}
+
+class MainApp extends StatelessWidget {
+  const MainApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      home: Scaffold(body: Center(child: Text(&#x27;Hello World!&#x27;))),
+    );
+  }
+}</code></pre></details><div class="check"><label><input type="checkbox" data-check="stamp-board-01"><span>iOSでHello World!が表示され、入口のファイルを開けた。</span></label></div></section>
+<section id="step-2"><p class="step-meta">STEP 02 · コマ8</p><h2>Widgetの組み合わせで画面を書く</h2><p>この単元の新概念は<strong>宣言的UI</strong>です。現在の値に対応する画面の構成をbuildで返します。既存のViewやDOMを順番に探して書き換えるのではなく、「この値なら、この部品を置く」と記述します。</p><p>lib/main.dartをこのSTEPの全文へ更新します。MaterialAppはアプリの設定、Scaffoldは画面の基本枠、SafeAreaはOSの表示領域を避ける余白、Centerは中央配置、Textは文字を担当します。<code>child:</code>は1つのWidget、後で使う<code>children:</code>は複数のWidgetのリストです。</p><p><code>Text('今日の小さな一歩', style: TextStyle(fontSize: 28))</code>では、最初の引数が文字、名前付き引数styleが装飾です。括弧とカンマの対応をインデントで追いましょう。<code>@override</code>は親のメソッドを実装し直す印です。buildへ渡されるBuildContextは、そのWidgetがツリーのどこにあるかを表す情報です。</p><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Dart</p><pre><code>Text(&#x27;今日の小さな一歩&#x27;, style: TextStyle(fontSize: 28))</code></pre></div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre><code>textView.setText(&quot;今日の小さな一歩&quot;);
+textView.setTextSize(28);</code></pre></div></div><p>JavaでViewを更新した手順に対して、Dartは表示したい文字と大きさをWidgetの構成として返します。Dartの名前付き引数はSwiftの引数ラベルに近く、設定の意味を引数名で読み取れます。</p><details><summary>このSTEPの全コード（照合・合流用）</summary><div class="code-head">lib/main.dart · 全文</div><pre id="code-02-main-dart" tabindex="0"><code>import &#x27;package:flutter/material.dart&#x27;;
+
+void main() {
+  runApp(const MainApp());
+}
+
+class MainApp extends StatelessWidget {
+  const MainApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: SafeArea(
+          child: Center(
+            child: Text(&#x27;今日の小さな一歩&#x27;, style: TextStyle(fontSize: 28)),
+          ),
+        ),
+      ),
+    );
+  }
+}</code></pre></details><div class="check"><label><input type="checkbox" data-check="stamp-board-02"><span>Widgetの親子関係とchildの役割を説明できた。</span></label></div></section>
+<section id="step-3"><p class="step-meta">STEP 03 · コマ8</p><h2>保存してホットリロードする</h2><p>実行中のままTextの文字を1か所変え、保存します。ターミナルからflutter runしている場合は、その実行中のターミナルで<code>r</code>を押すとホットリロードします。Visual Studio Codeの実行機能を使っている場合は<code>Flutter: Hot Reload</code>を選べます。</p><p>ホットリロードはコードの変更を反映し、現在の状態をできるだけ保ちます。<code>R</code>によるホットリスタートはDart側を起動し直します。いまは状態を持たない画面ですが、後の回数の操作で違いが見えます。mainや状態の初期値を変えた場合にはホットリスタートを使います。</p><p>styleのfontSizeを28から別の値へ変え、1回ごとの変化を確認します。エラーが出たらターミナルかProblemsの最初のエラーを読み、閉じ括弧・カンマを確認します。実行を終了する場合は実行中のターミナルでqを押します。</p><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Dart</p><pre><code>Text(&#x27;自分の小さな一歩&#x27;, style: TextStyle(fontSize: 30))</code></pre></div><div class="compare-item"><p class="compare-lang" translate="no">Swift</p><pre><code>label.text = &quot;自分の小さな一歩&quot;
+label.font = .systemFont(ofSize: 30)</code></pre></div></div><p>変更する文字とサイズはSwiftのラベル設定と同じ目的です。FlutterではWidgetを記述し直して再表示します。ホットリロードは保存したコードを実行中のアプリへ反映する機能で、ソースを端末内へ永続保存する機能ではありません。</p><details><summary>このSTEPの全コード（照合・合流用）</summary><div class="code-head">lib/main.dart · 全文</div><pre id="code-03-main-dart" tabindex="0"><code>import &#x27;package:flutter/material.dart&#x27;;
+
+void main() {
+  runApp(const MainApp());
+}
+
+class MainApp extends StatelessWidget {
+  const MainApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: SafeArea(
+          child: Center(
+            child: Text(&#x27;今日の小さな一歩&#x27;, style: TextStyle(fontSize: 28)),
+          ),
+        ),
+      ),
+    );
+  }
+}</code></pre></details><div class="check"><label><input type="checkbox" data-check="stamp-board-03"><span>文字とサイズを変え、ホットリロードで結果を確認できた。</span></label></div></section>
+<section id="step-4"><p class="step-meta">STEP 04 · コマ8</p><h2>文字と大きさをアレンジする</h2><p>最後に、表示する一言と文字の大きさを自分の題材へ変えます。「毎日必ず」より「できたときに少し」のように、自分が使いやすい文でも構いません。</p><table><thead><tr><th>場所</th><th>変わること</th></tr></thead><tbody><tr><td>Textの文字列</td><td>画面中央の一言。</td></tr><tr><td>TextStyleのfontSize</td><td>文字の大きさ。</td></tr></tbody></table><p>保存し、ホットリロードして、全文が読めるか確認します。次回の合流のため、変えた文字・数値を控えておきます。全コードは見比べるための基準で、自分の変更を消すためのものではありません。</p><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Dart</p><pre><code>Text(&#x27;少しずつ進めよう&#x27;)</code></pre></div><div class="compare-item"><p class="compare-lang" translate="no">JavaScript</p><pre><code>document.getElementById(&#x27;txt_message&#x27;).textContent = &#x27;少しずつ進めよう&#x27;;</code></pre></div></div><p>Web基礎では既存要素へtextContentを設定しました。Flutterでは表示するTextを返します。同じ「文字を変える」操作でも、画面の指定方法が違います。</p><details><summary>このSTEPの全コード（照合・合流用）</summary><div class="code-head">lib/main.dart · 全文</div><pre id="code-04-main-dart" tabindex="0"><code>import &#x27;package:flutter/material.dart&#x27;;
+
+void main() {
+  runApp(const MainApp());
+}
+
+class MainApp extends StatelessWidget {
+  const MainApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: SafeArea(
+          child: Center(
+            child: Text(&#x27;今日の小さな一歩&#x27;, style: TextStyle(fontSize: 28)),
+          ),
+        ),
+      ),
+    );
+  }
+}</code></pre></details><div class="check"><label><input type="checkbox" data-check="stamp-board-04"><span>変更した場所と、画面の変化を説明できた。</span></label></div></section>
+<section id="step-5"><p class="step-meta">STEP 05 · コマ9</p><h2>習慣を1枚のカードにする</h2><details><summary>このコマの開始コード</summary><p>途中から合流する場合は、自分が変えた文字・色・数値を控えてからlib/main.dartをそろえます。</p><div class="code-head">lib/main.dart · 全文</div><pre id="start-04-main-dart" tabindex="0"><code>import &#x27;package:flutter/material.dart&#x27;;
+
+void main() {
+  runApp(const MainApp());
+}
+
+class MainApp extends StatelessWidget {
+  const MainApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: SafeArea(
+          child: Center(
+            child: Text(&#x27;今日の小さな一歩&#x27;, style: TextStyle(fontSize: 28)),
+          ),
+        ),
+      ),
+    );
+  }
+}</code></pre></details><p>Visual Studio Codeで同じF01StampBoardを開き、iOSで実行します。今日の開始状態は中央に1つのTextがある画面です。このSTEPではCenterのchildをCardへ替え、習慣名・マーク・回数を1枚にまとめます。</p><p>Cardの中にPadding、さらにColumnを置きます。childrenの角括弧の中へText、SizedBox、Iconを順番に並べます。今回は回数を変える処理をまだ付けないため、0 / 5 回のままです。</p><p>Cardはまとまりのある面、Paddingは内側の余白、SizedBoxは部品間の空きを作ります。IconにはSDKに含まれるMaterialアイコンを使い、画像ファイルは追加しません。</p><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Dart</p><pre><code>Card(child: Padding(
+  padding: EdgeInsets.all(24),
+  child: Text(&#x27;コードを15分読む&#x27;),
+))</code></pre></div><div class="compare-item"><p class="compare-lang" translate="no">HTML</p><pre><code>&lt;div class=&quot;card&quot;&gt;コードを15分読む&lt;/div&gt;
+/* .card { padding: 24px; } */</code></pre></div></div><p>HTMLの要素とCSSの余白を分けた書き方に対し、FlutterではCard・Padding・TextというWidgetを組み合わせます。装飾の目的は同じですが、CSSファイルへ書く操作はありません。</p><details><summary>このSTEPの全コード（照合・合流用）</summary><div class="code-head">lib/main.dart · 全文</div><pre id="code-05-main-dart" tabindex="0"><code>import &#x27;package:flutter/material.dart&#x27;;
+
+void main() {
+  runApp(const MainApp());
+}
+
+class MainApp extends StatelessWidget {
+  const MainApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: SafeArea(
+          child: Center(
+            child: Card(
+              child: Padding(
+                padding: EdgeInsets.all(24),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(&#x27;コードを15分読む&#x27;, style: TextStyle(fontSize: 24)),
+                    SizedBox(height: 16),
+                    Icon(Icons.radio_button_unchecked, size: 36),
+                    SizedBox(height: 8),
+                    Text(&#x27;0 / 5 回&#x27;),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}</code></pre></details><div class="check"><label><input type="checkbox" data-check="stamp-board-05"><span>習慣名・マーク・回数が1枚のカードに表示された。</span></label></div></section>
+<section id="step-6"><p class="step-meta">STEP 06 · コマ9</p><h2>余白と縦横の並びを読む</h2><p>Columnは縦、Rowは横にchildrenを並べます。Columnの<code>mainAxisSize: MainAxisSize.min</code>は主軸方向を必要な大きさに絞り、<code>crossAxisAlignment: CrossAxisAlignment.start</code>は横方向の開始側へ寄せます。型名を省略したdot shorthandは使いません。</p><p><code>EdgeInsets.all(24)</code>は上下左右同じ余白、<code>SizedBox(height: 16)</code>は縦の空きです。余白を1か所変えて保存し、カード外側の位置とカード内側の間隔を区別します。ContainerやCardのmarginを後で使うときも、Paddingの内側とは別です。</p><p>文字が複数行になる題材を使い、カードの高さが内容に合わせて変わることを確かめます。Textの文字列を変えるときは、最後の閉じクォートとカンマを残します。</p><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Dart</p><pre><code>Column(
+  crossAxisAlignment: CrossAxisAlignment.start,
+  children: [Text(&#x27;習慣&#x27;), SizedBox(height: 16), Text(&#x27;0 / 5 回&#x27;)],
+)</code></pre></div><div class="compare-item"><p class="compare-lang" translate="no">Swift</p><pre><code>// UIStackViewの縦配置に対応
+stack.axis = .vertical
+stack.spacing = 16</code></pre></div></div><p>Swiftの縦のStackと同じ配置の目的です。Flutterは間隔にもSizedBoxというWidgetを置きます。childrenはDartのListで、Widgetを順に並べた角括弧です。</p><details><summary>このSTEPの全コード（照合・合流用）</summary><div class="code-head">lib/main.dart · 全文</div><pre id="code-06-main-dart" tabindex="0"><code>import &#x27;package:flutter/material.dart&#x27;;
+
+void main() {
+  runApp(const MainApp());
+}
+
+class MainApp extends StatelessWidget {
+  const MainApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: SafeArea(
+          child: Center(
+            child: Card(
+              child: Padding(
+                padding: EdgeInsets.all(24),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(&#x27;コードを15分読む&#x27;, style: TextStyle(fontSize: 24)),
+                    SizedBox(height: 16),
+                    Icon(Icons.radio_button_unchecked, size: 36),
+                    SizedBox(height: 8),
+                    Text(&#x27;0 / 5 回&#x27;),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}</code></pre></details><div class="check"><label><input type="checkbox" data-check="stamp-board-06"><span>内側の余白と部品間の間隔を見分け、変更できた。</span></label></div></section>
+<section id="step-7"><p class="step-meta">STEP 07 · コマ9</p><h2>データから一覧を作る</h2><p>習慣を3件へ増やします。同じカードを3回コピーする代わりに、名前・理由・回数をHabitにまとめ、habitsのリストから作ります。</p><p><code>Habit({required this.name, required this.reason, this.count = 0})</code>は名前付き引数を持つコンストラクタです。requiredは必須、this.nameは受け取った値を同名フィールドへ代入する省略形、count = 0は省略時の初期値です。name・reasonはfinalで一度代入した参照を再代入せず、回数countはintとして後で変更します。</p><p>ListViewは縦にスクロールする領域です。childrenの中の<code>for (final habit in habits) buildHabitCard(habit)</code>で各データからCardを作ります。buildHabitCardは1件をWidgetとして返すメソッドです。この段階の一覧はStatelessWidgetで、操作ボタンはありません。</p><p>コード中の<code>var total = 0</code>は型を推論した変更可能なint、<code>final habit</code>はループの各回で再代入しない変数です。リストをfinalにしても、中身が自動的に変更不可になるわけではありません。</p><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Dart</p><pre><code>final habits = [Habit(name: &#x27;コードを15分読む&#x27;, reason: &#x27;仕組みを知りたい&#x27;)];
+for (final habit in habits) buildHabitCard(habit)</code></pre></div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre><code>for (Habit habit : habits) {
+    // 1件ごとのViewを作る
+}</code></pre></div></div><p>HabitのクラスとリストはJavaのデータクラス・ArrayListに対応します。Dartではリストの中にforを置けるため、生成したWidgetをchildrenへ並べられます。Web基礎のDOMを直接生成するコードへ置き換える必要はありません。</p><details><summary>このSTEPの全コード（照合・合流用）</summary><div class="code-head">lib/main.dart · 全文</div><pre id="code-07-main-dart" tabindex="0"><code>import &#x27;package:flutter/material.dart&#x27;;
+
+const stampGoal = 5;
+
+void main() {
+  runApp(const StampApp());
+}
+
+class StampApp extends StatelessWidget {
+  const StampApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: &#x27;スタンプ帳&#x27;,
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF287A70)),
+        scaffoldBackgroundColor: const Color(0xFFF6F7F2),
+      ),
+      home: StampBoardPage(),
+    );
+  }
+}
+
+class Habit {
+  Habit({required this.name, required this.reason, this.count = 0});
+
+  final String name;
+  final String reason;
+  int count;
+}
+
+class StampBoardPage extends StatelessWidget {
+  StampBoardPage({super.key});
+
+  final List&lt;Habit&gt; habits = [
+    Habit(name: &#x27;コードを15分読む&#x27;, reason: &#x27;気になったアプリの仕組みを、少しずつ読めるようになりたい。&#x27;),
+    Habit(name: &#x27;外を10分歩く&#x27;, reason: &#x27;画面から離れて気分を切り替え、次の作業を気持ちよく始めたい。&#x27;),
+    Habit(name: &#x27;学びを1行メモ&#x27;, reason: &#x27;今日分かったことを自分の言葉にして、明日の自分へ残したい。&#x27;),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    var total = 0;
+    for (final habit in habits) {
+      total += habit.count;
+    }
+    return Scaffold(
+      appBar: AppBar(title: const Text(&#x27;スタンプ帳&#x27;)),
+      body: SafeArea(
+        child: ListView(
+          padding: const EdgeInsets.all(20),
+          children: [
+            const Text(
+              &#x27;小さな「できた」を、\nひとつずつ。&#x27;,
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            Text(&#x27;できたときに1つ押そう。まずは各$stampGoal回。&#x27;),
+            const SizedBox(height: 16),
+            Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                color: const Color(0xFFDDEFE7),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Row(
+                children: [
+                  const Icon(Icons.auto_awesome, size: 32),
+                  const SizedBox(width: 16),
+                  Expanded(
+                    child: Text(
+                      &#x27;集めたスタンプ  $total 個&#x27;,
+                      style: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 20),
+            for (final habit in habits) buildHabitCard(habit),
+            const SizedBox(height: 8),
+            const Text(&#x27;この段階ではアプリを終了すると回数は0に戻ります。&#x27;),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget buildHabitCard(Habit habit) {
+    return Card(
+      margin: const EdgeInsets.only(bottom: 16),
+      color: Colors.white,
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              habit.name,
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 12),
+            StampMarks(count: habit.count),
+            const SizedBox(height: 8),
+            Text(
+              habit.count == stampGoal
+                  ? &#x27;$stampGoal回達成！ 小さな積み重ねができました。&#x27;
+                  : &#x27;${habit.count} / $stampGoal 回 · あと${stampGoal - habit.count}回&#x27;,
+            ),
+            const SizedBox(height: 12),
+            const Text(&#x27;回数を変える操作は、このあと作ります。&#x27;),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class StampMarks extends StatelessWidget {
+  const StampMarks({super.key, required this.count});
+
+  final int count;
+
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      spacing: 8,
+      runSpacing: 8,
+      children: [
+        for (var i = 0; i &lt; stampGoal; i++)
+          Icon(
+            i &lt; count ? Icons.check_circle : Icons.radio_button_unchecked,
+            color: i &lt; count
+                ? const Color(0xFF287A70)
+                : const Color(0xFF89958F),
+            size: 36,
+          ),
+      ],
+    );
+  }
+}</code></pre></details><div class="check"><label><input type="checkbox" data-check="stamp-board-07"><span>3件のカードを表示し、データのどの項目がどの文字になるか説明できた。</span></label></div></section>
+<section id="step-8"><p class="step-meta">STEP 08 · コマ9</p><h2>配色と表示をそろえる</h2><p>画面全体の配色をStampAppで指定します。MaterialAppのthemeにThemeData、colorSchemeにColorScheme.fromSeedを渡し、seedColorで基準の色を決めます。<code>Color(0xFF287A70)</code>のFFは不透明度、続く6桁はRGBです。</p><p>Scaffoldの背景はscaffoldBackgroundColor、カードの背景はColors.whiteです。TextStyleのfontWeightで文字の太さを指定します。ContainerのBoxDecorationとBorderRadius.circularで合計欄の背景と角を整えます。</p><p>合計欄のRowはアイコンと文字を横へ並べ、Expandedが文字へ残りの幅を渡します。StampMarksのWrapは必要なら次の行へ折り返します。ListViewは縦へ動かせるため、下のカードも確認できます。</p><p>見出しの文字列中の<code>
+</code>は改行です。<code>'集めたスタンプ $total 個'</code>は文字列補間で、式を含む場合は<code>${habit.count}</code>のように波括弧で囲みます。</p><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Dart</p><pre><code>const Color(0xFF287A70)
+Text(&#x27;集めたスタンプ $total 個&#x27;)</code></pre></div><div class="compare-item"><p class="compare-lang" translate="no">JavaScript</p><pre><code>/* color: #287a70; */
+// 文字を組み立てる例
+&#x27;集めたスタンプ &#x27; + total + &#x27; 個&#x27;</code></pre></div></div><p>CSSの16進色と同じRGBを使いますが、Flutterは先頭に不透明度も書きます。文字列補間はJavaScriptで文字と変数を連結する目的と同じで、Dartでは$と必要に応じた波括弧で埋め込みます。</p><details><summary>このSTEPの全コード（照合・合流用）</summary><div class="code-head">lib/main.dart · 全文</div><pre id="code-08-main-dart" tabindex="0"><code>import &#x27;package:flutter/material.dart&#x27;;
+
+const stampGoal = 5;
+
+void main() {
+  runApp(const StampApp());
+}
+
+class StampApp extends StatelessWidget {
+  const StampApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: &#x27;スタンプ帳&#x27;,
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF287A70)),
+        scaffoldBackgroundColor: const Color(0xFFF6F7F2),
+      ),
+      home: StampBoardPage(),
+    );
+  }
+}
+
+class Habit {
+  Habit({required this.name, required this.reason, this.count = 0});
+
+  final String name;
+  final String reason;
+  int count;
+}
+
+class StampBoardPage extends StatelessWidget {
+  StampBoardPage({super.key});
+
+  final List&lt;Habit&gt; habits = [
+    Habit(name: &#x27;コードを15分読む&#x27;, reason: &#x27;気になったアプリの仕組みを、少しずつ読めるようになりたい。&#x27;),
+    Habit(name: &#x27;外を10分歩く&#x27;, reason: &#x27;画面から離れて気分を切り替え、次の作業を気持ちよく始めたい。&#x27;),
+    Habit(name: &#x27;学びを1行メモ&#x27;, reason: &#x27;今日分かったことを自分の言葉にして、明日の自分へ残したい。&#x27;),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    var total = 0;
+    for (final habit in habits) {
+      total += habit.count;
+    }
+    return Scaffold(
+      appBar: AppBar(title: const Text(&#x27;スタンプ帳&#x27;)),
+      body: SafeArea(
+        child: ListView(
+          padding: const EdgeInsets.all(20),
+          children: [
+            const Text(
+              &#x27;小さな「できた」を、\nひとつずつ。&#x27;,
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            Text(&#x27;できたときに1つ押そう。まずは各$stampGoal回。&#x27;),
+            const SizedBox(height: 16),
+            Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                color: const Color(0xFFDDEFE7),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Row(
+                children: [
+                  const Icon(Icons.auto_awesome, size: 32),
+                  const SizedBox(width: 16),
+                  Expanded(
+                    child: Text(
+                      &#x27;集めたスタンプ  $total 個&#x27;,
+                      style: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 20),
+            for (final habit in habits) buildHabitCard(habit),
+            const SizedBox(height: 8),
+            const Text(&#x27;この段階ではアプリを終了すると回数は0に戻ります。&#x27;),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget buildHabitCard(Habit habit) {
+    return Card(
+      margin: const EdgeInsets.only(bottom: 16),
+      color: Colors.white,
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              habit.name,
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 12),
+            StampMarks(count: habit.count),
+            const SizedBox(height: 8),
+            Text(
+              habit.count == stampGoal
+                  ? &#x27;$stampGoal回達成！ 小さな積み重ねができました。&#x27;
+                  : &#x27;${habit.count} / $stampGoal 回 · あと${stampGoal - habit.count}回&#x27;,
+            ),
+            const SizedBox(height: 12),
+            const Text(&#x27;回数を変える操作は、このあと作ります。&#x27;),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class StampMarks extends StatelessWidget {
+  const StampMarks({super.key, required this.count});
+
+  final int count;
+
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      spacing: 8,
+      runSpacing: 8,
+      children: [
+        for (var i = 0; i &lt; stampGoal; i++)
+          Icon(
+            i &lt; count ? Icons.check_circle : Icons.radio_button_unchecked,
+            color: i &lt; count
+                ? const Color(0xFF287A70)
+                : const Color(0xFF89958F),
+            size: 36,
+          ),
+      ],
+    );
+  }
+}</code></pre></details><div class="check"><label><input type="checkbox" data-check="stamp-board-08"><span>色・角・余白・折り返しを読み分け、3件とも表示できた。</span></label></div></section>
+<section id="step-9"><p class="step-meta">STEP 09 · コマ9</p><h2>カードの題材をアレンジする</h2><p>3件の名前と理由を、自分が使いたい題材へ変えます。学習でも、休憩でも、架空の習慣でも構いません。Habitを1つ増やす場合は同じ形でリストへ加えます。</p><table><thead><tr><th>場所</th><th>確認すること</th></tr></thead><tbody><tr><td>Habitのname・reason</td><td>カードに自分の名前が出る。理由は次の詳細画面で使うため空にしない。</td></tr><tr><td>seedColor・scaffoldBackgroundColor</td><td>文字が読みやすい配色。</td></tr><tr><td>Padding・SizedBox</td><td>カードの間隔と余白。</td></tr></tbody></table><p>初期リストを書き換えたらホットリスタートします。いまは静的な一覧の完成です。まだボタンが無いことと、どの値から表示されているかを確かめます。</p><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Dart</p><pre><code>Habit(name: &#x27;学びを1行メモ&#x27;, reason: &#x27;明日の自分へ残したい&#x27;)</code></pre></div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre><code>new Habit(&quot;学びを1行メモ&quot;, &quot;明日の自分へ残したい&quot;);</code></pre></div></div><p>データの値を変えて表示を変える点はJavaのモデルと同じです。Dartは名前付き引数なので、nameとreasonを取り違えず読めます。新しいAPIを追加せず、既存の値と装飾でアレンジします。</p><details><summary>このSTEPの全コード（照合・合流用）</summary><div class="code-head">lib/main.dart · 全文</div><pre id="code-09-main-dart" tabindex="0"><code>import &#x27;package:flutter/material.dart&#x27;;
+
+const stampGoal = 5;
+
+void main() {
+  runApp(const StampApp());
+}
+
+class StampApp extends StatelessWidget {
+  const StampApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: &#x27;スタンプ帳&#x27;,
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF287A70)),
+        scaffoldBackgroundColor: const Color(0xFFF6F7F2),
+      ),
+      home: StampBoardPage(),
+    );
+  }
+}
+
+class Habit {
+  Habit({required this.name, required this.reason, this.count = 0});
+
+  final String name;
+  final String reason;
+  int count;
+}
+
+class StampBoardPage extends StatelessWidget {
+  StampBoardPage({super.key});
+
+  final List&lt;Habit&gt; habits = [
+    Habit(name: &#x27;コードを15分読む&#x27;, reason: &#x27;気になったアプリの仕組みを、少しずつ読めるようになりたい。&#x27;),
+    Habit(name: &#x27;外を10分歩く&#x27;, reason: &#x27;画面から離れて気分を切り替え、次の作業を気持ちよく始めたい。&#x27;),
+    Habit(name: &#x27;学びを1行メモ&#x27;, reason: &#x27;今日分かったことを自分の言葉にして、明日の自分へ残したい。&#x27;),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    var total = 0;
+    for (final habit in habits) {
+      total += habit.count;
+    }
+    return Scaffold(
+      appBar: AppBar(title: const Text(&#x27;スタンプ帳&#x27;)),
+      body: SafeArea(
+        child: ListView(
+          padding: const EdgeInsets.all(20),
+          children: [
+            const Text(
+              &#x27;小さな「できた」を、\nひとつずつ。&#x27;,
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            Text(&#x27;できたときに1つ押そう。まずは各$stampGoal回。&#x27;),
+            const SizedBox(height: 16),
+            Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                color: const Color(0xFFDDEFE7),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Row(
+                children: [
+                  const Icon(Icons.auto_awesome, size: 32),
+                  const SizedBox(width: 16),
+                  Expanded(
+                    child: Text(
+                      &#x27;集めたスタンプ  $total 個&#x27;,
+                      style: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 20),
+            for (final habit in habits) buildHabitCard(habit),
+            const SizedBox(height: 8),
+            const Text(&#x27;この段階ではアプリを終了すると回数は0に戻ります。&#x27;),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget buildHabitCard(Habit habit) {
+    return Card(
+      margin: const EdgeInsets.only(bottom: 16),
+      color: Colors.white,
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              habit.name,
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 12),
+            StampMarks(count: habit.count),
+            const SizedBox(height: 8),
+            Text(
+              habit.count == stampGoal
+                  ? &#x27;$stampGoal回達成！ 小さな積み重ねができました。&#x27;
+                  : &#x27;${habit.count} / $stampGoal 回 · あと${stampGoal - habit.count}回&#x27;,
+            ),
+            const SizedBox(height: 12),
+            const Text(&#x27;回数を変える操作は、このあと作ります。&#x27;),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class StampMarks extends StatelessWidget {
+  const StampMarks({super.key, required this.count});
+
+  final int count;
+
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      spacing: 8,
+      runSpacing: 8,
+      children: [
+        for (var i = 0; i &lt; stampGoal; i++)
+          Icon(
+            i &lt; count ? Icons.check_circle : Icons.radio_button_unchecked,
+            color: i &lt; count
+                ? const Color(0xFF287A70)
+                : const Color(0xFF89958F),
+            size: 36,
+          ),
+      ],
+    );
+  }
+}</code></pre></details><div class="check"><label><input type="checkbox" data-check="stamp-board-09"><span>題材と配色を変え、どの値が画面へ出るか説明できた。</span></label></div></section>
+<section id="step-10"><p class="step-meta">STEP 10 · コマ10</p><h2>回数と画面の関係を読む</h2><details><summary>このコマの開始コード</summary><p>途中から合流する場合は、自分が変えた文字・色・数値を控えてからlib/main.dartをそろえます。</p><div class="code-head">lib/main.dart · 全文</div><pre id="start-09-main-dart" tabindex="0"><code>import &#x27;package:flutter/material.dart&#x27;;
+
+const stampGoal = 5;
+
+void main() {
+  runApp(const StampApp());
+}
+
+class StampApp extends StatelessWidget {
+  const StampApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: &#x27;スタンプ帳&#x27;,
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF287A70)),
+        scaffoldBackgroundColor: const Color(0xFFF6F7F2),
+      ),
+      home: StampBoardPage(),
+    );
+  }
+}
+
+class Habit {
+  Habit({required this.name, required this.reason, this.count = 0});
+
+  final String name;
+  final String reason;
+  int count;
+}
+
+class StampBoardPage extends StatelessWidget {
+  StampBoardPage({super.key});
+
+  final List&lt;Habit&gt; habits = [
+    Habit(name: &#x27;コードを15分読む&#x27;, reason: &#x27;気になったアプリの仕組みを、少しずつ読めるようになりたい。&#x27;),
+    Habit(name: &#x27;外を10分歩く&#x27;, reason: &#x27;画面から離れて気分を切り替え、次の作業を気持ちよく始めたい。&#x27;),
+    Habit(name: &#x27;学びを1行メモ&#x27;, reason: &#x27;今日分かったことを自分の言葉にして、明日の自分へ残したい。&#x27;),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    var total = 0;
+    for (final habit in habits) {
+      total += habit.count;
+    }
+    return Scaffold(
+      appBar: AppBar(title: const Text(&#x27;スタンプ帳&#x27;)),
+      body: SafeArea(
+        child: ListView(
+          padding: const EdgeInsets.all(20),
+          children: [
+            const Text(
+              &#x27;小さな「できた」を、\nひとつずつ。&#x27;,
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            Text(&#x27;できたときに1つ押そう。まずは各$stampGoal回。&#x27;),
+            const SizedBox(height: 16),
+            Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                color: const Color(0xFFDDEFE7),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Row(
+                children: [
+                  const Icon(Icons.auto_awesome, size: 32),
+                  const SizedBox(width: 16),
+                  Expanded(
+                    child: Text(
+                      &#x27;集めたスタンプ  $total 個&#x27;,
+                      style: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 20),
+            for (final habit in habits) buildHabitCard(habit),
+            const SizedBox(height: 8),
+            const Text(&#x27;この段階ではアプリを終了すると回数は0に戻ります。&#x27;),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget buildHabitCard(Habit habit) {
+    return Card(
+      margin: const EdgeInsets.only(bottom: 16),
+      color: Colors.white,
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              habit.name,
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 12),
+            StampMarks(count: habit.count),
+            const SizedBox(height: 8),
+            Text(
+              habit.count == stampGoal
+                  ? &#x27;$stampGoal回達成！ 小さな積み重ねができました。&#x27;
+                  : &#x27;${habit.count} / $stampGoal 回 · あと${stampGoal - habit.count}回&#x27;,
+            ),
+            const SizedBox(height: 12),
+            const Text(&#x27;回数を変える操作は、このあと作ります。&#x27;),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class StampMarks extends StatelessWidget {
+  const StampMarks({super.key, required this.count});
+
+  final int count;
+
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      spacing: 8,
+      runSpacing: 8,
+      children: [
+        for (var i = 0; i &lt; stampGoal; i++)
+          Icon(
+            i &lt; count ? Icons.check_circle : Icons.radio_button_unchecked,
+            color: i &lt; count
+                ? const Color(0xFF287A70)
+                : const Color(0xFF89958F),
+            size: 36,
+          ),
+      ],
+    );
+  }
+}</code></pre></details><p>Visual Studio CodeでF01StampBoardを開き、3件の静的な一覧から再開します。今日は「現在の回数から表示する」という宣言的UIの使い方を操作で確かめます。</p><p>Habitのcount、合計total、StampMarksのcountがどうつながるかを先に読みます。数値・マーク・達成メッセージを別々に記憶せず、countを基準に計算します。初期データのcountを一時的に1へ変えてホットリスタートし、複数の表示が同時に変わることを確かめ、0へ戻します。</p><p>アプリを閉じて起動し直すと、ソースの初期値へ戻ります。この単元では端末内保存をまだ作りません。ホットリロードで状態が残ることと、永続保存は分けて考えます。</p><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Dart</p><pre><code>Habit(name: &#x27;コードを15分読む&#x27;, reason: &#x27;仕組みを知りたい&#x27;, count: 1)</code></pre></div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre><code>habit.count = 1;
+// この値を表示へ反映する</code></pre></div></div><p>Javaのモデルの値とViewを対応させた経験を使います。Flutterでも値は必要ですが、buildが値から関連する表示をまとめて返します。どのWidgetが同じcountを読むかを追うのが要点です。</p><details><summary>このSTEPの全コード（照合・合流用）</summary><div class="code-head">lib/main.dart · 全文</div><pre id="code-10-main-dart" tabindex="0"><code>import &#x27;package:flutter/material.dart&#x27;;
+
+const stampGoal = 5;
+
+void main() {
+  runApp(const StampApp());
+}
+
+class StampApp extends StatelessWidget {
+  const StampApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: &#x27;スタンプ帳&#x27;,
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF287A70)),
+        scaffoldBackgroundColor: const Color(0xFFF6F7F2),
+      ),
+      home: StampBoardPage(),
+    );
+  }
+}
+
+class Habit {
+  Habit({required this.name, required this.reason, this.count = 0});
+
+  final String name;
+  final String reason;
+  int count;
+}
+
+class StampBoardPage extends StatelessWidget {
+  StampBoardPage({super.key});
+
+  final List&lt;Habit&gt; habits = [
+    Habit(name: &#x27;コードを15分読む&#x27;, reason: &#x27;気になったアプリの仕組みを、少しずつ読めるようになりたい。&#x27;),
+    Habit(name: &#x27;外を10分歩く&#x27;, reason: &#x27;画面から離れて気分を切り替え、次の作業を気持ちよく始めたい。&#x27;),
+    Habit(name: &#x27;学びを1行メモ&#x27;, reason: &#x27;今日分かったことを自分の言葉にして、明日の自分へ残したい。&#x27;),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    var total = 0;
+    for (final habit in habits) {
+      total += habit.count;
+    }
+    return Scaffold(
+      appBar: AppBar(title: const Text(&#x27;スタンプ帳&#x27;)),
+      body: SafeArea(
+        child: ListView(
+          padding: const EdgeInsets.all(20),
+          children: [
+            const Text(
+              &#x27;小さな「できた」を、\nひとつずつ。&#x27;,
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            Text(&#x27;できたときに1つ押そう。まずは各$stampGoal回。&#x27;),
+            const SizedBox(height: 16),
+            Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                color: const Color(0xFFDDEFE7),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Row(
+                children: [
+                  const Icon(Icons.auto_awesome, size: 32),
+                  const SizedBox(width: 16),
+                  Expanded(
+                    child: Text(
+                      &#x27;集めたスタンプ  $total 個&#x27;,
+                      style: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 20),
+            for (final habit in habits) buildHabitCard(habit),
+            const SizedBox(height: 8),
+            const Text(&#x27;この段階ではアプリを終了すると回数は0に戻ります。&#x27;),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget buildHabitCard(Habit habit) {
+    return Card(
+      margin: const EdgeInsets.only(bottom: 16),
+      color: Colors.white,
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              habit.name,
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 12),
+            StampMarks(count: habit.count),
+            const SizedBox(height: 8),
+            Text(
+              habit.count == stampGoal
+                  ? &#x27;$stampGoal回達成！ 小さな積み重ねができました。&#x27;
+                  : &#x27;${habit.count} / $stampGoal 回 · あと${stampGoal - habit.count}回&#x27;,
+            ),
+            const SizedBox(height: 12),
+            const Text(&#x27;回数を変える操作は、このあと作ります。&#x27;),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class StampMarks extends StatelessWidget {
+  const StampMarks({super.key, required this.count});
+
+  final int count;
+
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      spacing: 8,
+      runSpacing: 8,
+      children: [
+        for (var i = 0; i &lt; stampGoal; i++)
+          Icon(
+            i &lt; count ? Icons.check_circle : Icons.radio_button_unchecked,
+            color: i &lt; count
+                ? const Color(0xFF287A70)
+                : const Color(0xFF89958F),
+            size: 36,
+          ),
+      ],
+    );
+  }
+}</code></pre></details><div class="check"><label><input type="checkbox" data-check="stamp-board-10"><span>回数1つから数値・マーク・合計が変わることを追えた。</span></label></div></section>
+<section id="step-11"><p class="step-meta">STEP 11 · コマ10</p><h2>setStateでスタンプを増やす</h2><p>操作で変わるhabitsをStateへ移します。StampBoardPageはStatefulWidgetとなり、createStateが_StampBoardPageStateを作ります。Widgetは画面の設定、Stateは操作によって変わる値を保持します。名前の先頭のアンダースコアはDartのライブラリ内で使う名前という指定です。</p><p>ボタンのonPressedへ<code>() =&gt; changeStamp(habit, 1)</code>を渡します。これは引数のない関数で、押したときにchangeStampを呼びます。関数の呼出結果をその場で渡す書き方と区別してください。Dartのアローは1つの式を返す省略形です。</p><p>changeStampは次の回数が範囲内か確認し、<code>setState(() { habit.count = next; });</code>で値を変更します。setStateは変更をFlutterへ知らせ、buildで現在の値に合った画面を作り直せるようにします。setStateの中へ画面の部品を追加する操作は書きません。</p><p>1回押して、カードの回数・合計・マークが一緒に1になることを確かめます。0に戻す操作も試します。</p><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Dart</p><pre><code>onPressed: () =&gt; changeStamp(habit, 1)
+
+setState(() {
+  habit.count = next;
+});</code></pre></div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre><code>button.setOnClickListener(view -&gt; changeStamp(habit, 1));</code></pre></div></div><p>ボタンへ処理を渡す目的はJavaのリスナーやSwiftのクロージャと同じです。Dartでは() =>で1式の関数を渡します。値を変えた後に個別のラベルを更新する代わりに、setStateで再構築を知らせます。</p><details><summary>このSTEPの全コード（照合・合流用）</summary><div class="code-head">lib/main.dart · 全文</div><pre id="code-11-main-dart" tabindex="0"><code>import &#x27;package:flutter/material.dart&#x27;;
+
+const stampGoal = 5;
+
+void main() {
+  runApp(const StampApp());
+}
+
+class StampApp extends StatelessWidget {
+  const StampApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: &#x27;スタンプ帳&#x27;,
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF287A70)),
+        scaffoldBackgroundColor: const Color(0xFFF6F7F2),
+      ),
+      home: const StampBoardPage(),
+    );
+  }
+}
+
+class Habit {
+  Habit({required this.name, required this.reason, this.count = 0});
+
+  final String name;
+  final String reason;
+  int count;
+}
+
+class StampBoardPage extends StatefulWidget {
+  const StampBoardPage({super.key});
+
+  @override
+  State&lt;StampBoardPage&gt; createState() =&gt; _StampBoardPageState();
+}
+
+class _StampBoardPageState extends State&lt;StampBoardPage&gt; {
+  final List&lt;Habit&gt; habits = [
+    Habit(name: &#x27;コードを15分読む&#x27;, reason: &#x27;気になったアプリの仕組みを、少しずつ読めるようになりたい。&#x27;),
+    Habit(name: &#x27;外を10分歩く&#x27;, reason: &#x27;画面から離れて気分を切り替え、次の作業を気持ちよく始めたい。&#x27;),
+    Habit(name: &#x27;学びを1行メモ&#x27;, reason: &#x27;今日分かったことを自分の言葉にして、明日の自分へ残したい。&#x27;),
+  ];
+
+  void changeStamp(Habit habit, int change) {
+    final nextCount = habit.count + change;
+    if (nextCount &lt; 0 || nextCount &gt; stampGoal) {
+      return;
+    }
+    setState(() {
+      habit.count = nextCount;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    var total = 0;
+    for (final habit in habits) {
+      total += habit.count;
+    }
+    return Scaffold(
+      appBar: AppBar(title: const Text(&#x27;スタンプ帳&#x27;)),
+      body: SafeArea(
+        child: ListView(
+          padding: const EdgeInsets.all(20),
+          children: [
+            const Text(
+              &#x27;小さな「できた」を、\nひとつずつ。&#x27;,
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            Text(&#x27;できたときに1つ押そう。まずは各$stampGoal回。&#x27;),
+            const SizedBox(height: 16),
+            Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                color: const Color(0xFFDDEFE7),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Row(
+                children: [
+                  const Icon(Icons.auto_awesome, size: 32),
+                  const SizedBox(width: 16),
+                  Expanded(
+                    child: Text(
+                      &#x27;集めたスタンプ  $total 個&#x27;,
+                      style: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 20),
+            for (final habit in habits) buildHabitCard(habit),
+            const SizedBox(height: 8),
+            const Text(&#x27;この段階ではアプリを終了すると回数は0に戻ります。&#x27;),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget buildHabitCard(Habit habit) {
+    return Card(
+      margin: const EdgeInsets.only(bottom: 16),
+      color: Colors.white,
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              habit.name,
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 12),
+            StampMarks(count: habit.count),
+            const SizedBox(height: 8),
+            Text(
+              habit.count == stampGoal
+                  ? &#x27;$stampGoal回達成！ 小さな積み重ねができました。&#x27;
+                  : &#x27;${habit.count} / $stampGoal 回 · あと${stampGoal - habit.count}回&#x27;,
+            ),
+            const SizedBox(height: 12),
+            Wrap(
+              spacing: 8,
+              runSpacing: 4,
+              children: [
+                FilledButton.icon(
+                  onPressed: habit.count &lt; stampGoal
+                      ? () =&gt; changeStamp(habit, 1)
+                      : null,
+                  icon: const Icon(Icons.add),
+                  label: const Text(&#x27;スタンプを押す&#x27;),
+                ),
+                TextButton(
+                  onPressed: habit.count &gt; 0
+                      ? () =&gt; changeStamp(habit, -1)
+                      : null,
+                  child: const Text(&#x27;1つ戻す&#x27;),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class StampMarks extends StatelessWidget {
+  const StampMarks({super.key, required this.count});
+
+  final int count;
+
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      spacing: 8,
+      runSpacing: 8,
+      children: [
+        for (var i = 0; i &lt; stampGoal; i++)
+          Icon(
+            i &lt; count ? Icons.check_circle : Icons.radio_button_unchecked,
+            color: i &lt; count
+                ? const Color(0xFF287A70)
+                : const Color(0xFF89958F),
+            size: 36,
+          ),
+      ],
+    );
+  }
+}</code></pre></details><div class="check"><label><input type="checkbox" data-check="stamp-board-11"><span>押す・戻すで回数とマークが同時に変わった。</span></label></div></section>
+<section id="step-12"><p class="step-meta">STEP 12 · コマ10</p><h2>合計とマークを値から作る</h2><p>buildの最初でtotalを0にし、forで全件のcountを足します。合計を別の状態として持たないため、戻す操作でも合計の更新忘れが起こりにくくなります。</p><p>StampMarksはcountを引数で受け取るStatelessWidgetです。0からstampGoal未満までのforでIconを並べ、<code>i &lt; count ? Icons.check_circle : Icons.radio_button_unchecked</code>で押した分と未達成の分を切り替えます。<code>条件 ? 成立時 : 不成立時</code>は条件演算子です。</p><p>同じ条件で色も変え、Wrapで幅が足りないと折り返します。目標stampGoalはファイル先頭に1か所だけ置き、マーク数・上限・残り回数が同じ目標を参照します。残り回数はstampGoal - habit.countです。</p><p>別々のカードを1回ずつ押し、合計が2、各カードは1になることを確認します。</p><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Dart</p><pre><code>var total = 0;
+for (final habit in habits) {
+  total += habit.count;
+}</code></pre></div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre><code>int total = 0;
+for (Habit habit : habits) {
+    total += habit.count;
+}</code></pre></div></div><p>合計の計算はJavaの拡張forと同じです。違うのは、Flutterではbuildのたびに現在の一覧から算出し、その結果をTextへ渡すことです。StampMarksは状態を所有せず、受け取った値の表示だけを担当します。</p><details><summary>このSTEPの全コード（照合・合流用）</summary><div class="code-head">lib/main.dart · 全文</div><pre id="code-12-main-dart" tabindex="0"><code>import &#x27;package:flutter/material.dart&#x27;;
+
+const stampGoal = 5;
+
+void main() {
+  runApp(const StampApp());
+}
+
+class StampApp extends StatelessWidget {
+  const StampApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: &#x27;スタンプ帳&#x27;,
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF287A70)),
+        scaffoldBackgroundColor: const Color(0xFFF6F7F2),
+      ),
+      home: const StampBoardPage(),
+    );
+  }
+}
+
+class Habit {
+  Habit({required this.name, required this.reason, this.count = 0});
+
+  final String name;
+  final String reason;
+  int count;
+}
+
+class StampBoardPage extends StatefulWidget {
+  const StampBoardPage({super.key});
+
+  @override
+  State&lt;StampBoardPage&gt; createState() =&gt; _StampBoardPageState();
+}
+
+class _StampBoardPageState extends State&lt;StampBoardPage&gt; {
+  final List&lt;Habit&gt; habits = [
+    Habit(name: &#x27;コードを15分読む&#x27;, reason: &#x27;気になったアプリの仕組みを、少しずつ読めるようになりたい。&#x27;),
+    Habit(name: &#x27;外を10分歩く&#x27;, reason: &#x27;画面から離れて気分を切り替え、次の作業を気持ちよく始めたい。&#x27;),
+    Habit(name: &#x27;学びを1行メモ&#x27;, reason: &#x27;今日分かったことを自分の言葉にして、明日の自分へ残したい。&#x27;),
+  ];
+
+  void changeStamp(Habit habit, int change) {
+    final nextCount = habit.count + change;
+    if (nextCount &lt; 0 || nextCount &gt; stampGoal) {
+      return;
+    }
+    setState(() {
+      habit.count = nextCount;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    var total = 0;
+    for (final habit in habits) {
+      total += habit.count;
+    }
+    return Scaffold(
+      appBar: AppBar(title: const Text(&#x27;スタンプ帳&#x27;)),
+      body: SafeArea(
+        child: ListView(
+          padding: const EdgeInsets.all(20),
+          children: [
+            const Text(
+              &#x27;小さな「できた」を、\nひとつずつ。&#x27;,
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            Text(&#x27;できたときに1つ押そう。まずは各$stampGoal回。&#x27;),
+            const SizedBox(height: 16),
+            Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                color: const Color(0xFFDDEFE7),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Row(
+                children: [
+                  const Icon(Icons.auto_awesome, size: 32),
+                  const SizedBox(width: 16),
+                  Expanded(
+                    child: Text(
+                      &#x27;集めたスタンプ  $total 個&#x27;,
+                      style: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 20),
+            for (final habit in habits) buildHabitCard(habit),
+            const SizedBox(height: 8),
+            const Text(&#x27;この段階ではアプリを終了すると回数は0に戻ります。&#x27;),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget buildHabitCard(Habit habit) {
+    return Card(
+      margin: const EdgeInsets.only(bottom: 16),
+      color: Colors.white,
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              habit.name,
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 12),
+            StampMarks(count: habit.count),
+            const SizedBox(height: 8),
+            Text(
+              habit.count == stampGoal
+                  ? &#x27;$stampGoal回達成！ 小さな積み重ねができました。&#x27;
+                  : &#x27;${habit.count} / $stampGoal 回 · あと${stampGoal - habit.count}回&#x27;,
+            ),
+            const SizedBox(height: 12),
+            Wrap(
+              spacing: 8,
+              runSpacing: 4,
+              children: [
+                FilledButton.icon(
+                  onPressed: habit.count &lt; stampGoal
+                      ? () =&gt; changeStamp(habit, 1)
+                      : null,
+                  icon: const Icon(Icons.add),
+                  label: const Text(&#x27;スタンプを押す&#x27;),
+                ),
+                TextButton(
+                  onPressed: habit.count &gt; 0
+                      ? () =&gt; changeStamp(habit, -1)
+                      : null,
+                  child: const Text(&#x27;1つ戻す&#x27;),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class StampMarks extends StatelessWidget {
+  const StampMarks({super.key, required this.count});
+
+  final int count;
+
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      spacing: 8,
+      runSpacing: 8,
+      children: [
+        for (var i = 0; i &lt; stampGoal; i++)
+          Icon(
+            i &lt; count ? Icons.check_circle : Icons.radio_button_unchecked,
+            color: i &lt; count
+                ? const Color(0xFF287A70)
+                : const Color(0xFF89958F),
+            size: 36,
+          ),
+      ],
+    );
+  }
+}</code></pre></details><div class="check"><label><input type="checkbox" data-check="stamp-board-12"><span>複数カードの回数と合計が一致し、マークの条件を説明できた。</span></label></div></section>
+<section id="step-13"><p class="step-meta">STEP 13 · コマ10</p><h2>上限と戻す操作を確かめる</h2><p>回数は0〜stampGoalに収めます。ボタン側では、上限ならonPressedをnullにして押せない表示にし、関数側でも範囲外ならreturnします。表示の無効化とデータの範囲確認を両方置きます。</p><ol><li>1件を5回まで押し、達成の文と押せない追加ボタンを確認します。</li><li>1つ戻して4回にし、追加ボタンがまた使えることを確認します。</li><li>0回まで戻し、1つ戻すが無効になることを確認します。</li><li>もう一度1回押し、ホットリロードでは1回が残ることを見ます。</li><li>ホットリスタートすると、保存していないため初期値0へ戻ることを確かめます。</li></ol><p>アプリをバックグラウンドへ移すだけでは終了せず、回数が残ることがあります。再起動の検証と混同しないようにします。</p><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Dart</p><pre><code>onPressed: habit.count &lt; stampGoal
+    ? () =&gt; changeStamp(habit, 1)
+    : null</code></pre></div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre><code>button.setEnabled(habit.count &lt; goal);</code></pre></div></div><p>Javaでenabledを切り替える目的に対応します。FlutterのボタンはonPressedがnullなら無効です。nullを呼ぶ関数として書くのではなく、押したときの処理が無いことを値で表しています。</p><details><summary>このSTEPの全コード（照合・合流用）</summary><div class="code-head">lib/main.dart · 全文</div><pre id="code-13-main-dart" tabindex="0"><code>import &#x27;package:flutter/material.dart&#x27;;
+
+const stampGoal = 5;
+
+void main() {
+  runApp(const StampApp());
+}
+
+class StampApp extends StatelessWidget {
+  const StampApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: &#x27;スタンプ帳&#x27;,
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF287A70)),
+        scaffoldBackgroundColor: const Color(0xFFF6F7F2),
+      ),
+      home: const StampBoardPage(),
+    );
+  }
+}
+
+class Habit {
+  Habit({required this.name, required this.reason, this.count = 0});
+
+  final String name;
+  final String reason;
+  int count;
+}
+
+class StampBoardPage extends StatefulWidget {
+  const StampBoardPage({super.key});
+
+  @override
+  State&lt;StampBoardPage&gt; createState() =&gt; _StampBoardPageState();
+}
+
+class _StampBoardPageState extends State&lt;StampBoardPage&gt; {
+  final List&lt;Habit&gt; habits = [
+    Habit(name: &#x27;コードを15分読む&#x27;, reason: &#x27;気になったアプリの仕組みを、少しずつ読めるようになりたい。&#x27;),
+    Habit(name: &#x27;外を10分歩く&#x27;, reason: &#x27;画面から離れて気分を切り替え、次の作業を気持ちよく始めたい。&#x27;),
+    Habit(name: &#x27;学びを1行メモ&#x27;, reason: &#x27;今日分かったことを自分の言葉にして、明日の自分へ残したい。&#x27;),
+  ];
+
+  void changeStamp(Habit habit, int change) {
+    final nextCount = habit.count + change;
+    if (nextCount &lt; 0 || nextCount &gt; stampGoal) {
+      return;
+    }
+    setState(() {
+      habit.count = nextCount;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    var total = 0;
+    for (final habit in habits) {
+      total += habit.count;
+    }
+    return Scaffold(
+      appBar: AppBar(title: const Text(&#x27;スタンプ帳&#x27;)),
+      body: SafeArea(
+        child: ListView(
+          padding: const EdgeInsets.all(20),
+          children: [
+            const Text(
+              &#x27;小さな「できた」を、\nひとつずつ。&#x27;,
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            Text(&#x27;できたときに1つ押そう。まずは各$stampGoal回。&#x27;),
+            const SizedBox(height: 16),
+            Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                color: const Color(0xFFDDEFE7),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Row(
+                children: [
+                  const Icon(Icons.auto_awesome, size: 32),
+                  const SizedBox(width: 16),
+                  Expanded(
+                    child: Text(
+                      &#x27;集めたスタンプ  $total 個&#x27;,
+                      style: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 20),
+            for (final habit in habits) buildHabitCard(habit),
+            const SizedBox(height: 8),
+            const Text(&#x27;この段階ではアプリを終了すると回数は0に戻ります。&#x27;),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget buildHabitCard(Habit habit) {
+    return Card(
+      margin: const EdgeInsets.only(bottom: 16),
+      color: Colors.white,
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              habit.name,
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 12),
+            StampMarks(count: habit.count),
+            const SizedBox(height: 8),
+            Text(
+              habit.count == stampGoal
+                  ? &#x27;$stampGoal回達成！ 小さな積み重ねができました。&#x27;
+                  : &#x27;${habit.count} / $stampGoal 回 · あと${stampGoal - habit.count}回&#x27;,
+            ),
+            const SizedBox(height: 12),
+            Wrap(
+              spacing: 8,
+              runSpacing: 4,
+              children: [
+                FilledButton.icon(
+                  onPressed: habit.count &lt; stampGoal
+                      ? () =&gt; changeStamp(habit, 1)
+                      : null,
+                  icon: const Icon(Icons.add),
+                  label: const Text(&#x27;スタンプを押す&#x27;),
+                ),
+                TextButton(
+                  onPressed: habit.count &gt; 0
+                      ? () =&gt; changeStamp(habit, -1)
+                      : null,
+                  child: const Text(&#x27;1つ戻す&#x27;),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class StampMarks extends StatelessWidget {
+  const StampMarks({super.key, required this.count});
+
+  final int count;
+
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      spacing: 8,
+      runSpacing: 8,
+      children: [
+        for (var i = 0; i &lt; stampGoal; i++)
+          Icon(
+            i &lt; count ? Icons.check_circle : Icons.radio_button_unchecked,
+            color: i &lt; count
+                ? const Color(0xFF287A70)
+                : const Color(0xFF89958F),
+            size: 36,
+          ),
+      ],
+    );
+  }
+}</code></pre></details><div class="check"><label><input type="checkbox" data-check="stamp-board-13"><span>0と5の境界、取消し、再起動時の初期化を確認できた。</span></label></div></section>
+<section id="step-14"><p class="step-meta">STEP 14 · コマ10</p><h2>回数と見た目をアレンジする</h2><p>ファイル先頭のstampGoalを5から3や7へ変え、上限・マークの数・残り回数・達成の文がそろうことを確認します。目標を減らす前には回数を0へ戻すか、ホットリスタートします。</p><p>マークの色、習慣名、見出しも既習の場所で変更できます。回数の操作を直接別の変数へ分散させず、countを表示の基準に保ちます。変更後は最低0・上限・1つ戻すの3通りを確かめます。</p><p>どの値からどの表示が決まるか、Habit.count・total・StampMarksの関係を短く説明しましょう。</p><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Dart</p><pre><code>const stampGoal = 3;</code></pre></div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre><code>final int goal = 3;</code></pre></div></div><p>Javaの変更しない基準値と同じ目的です。Dartのconstはコンパイル時に確定する値で、今回の目標回数を1か所で管理します。新しい機能ではなく既存の数値と装飾をアレンジします。</p><details><summary>このSTEPの全コード（照合・合流用）</summary><div class="code-head">lib/main.dart · 全文</div><pre id="code-14-main-dart" tabindex="0"><code>import &#x27;package:flutter/material.dart&#x27;;
+
+const stampGoal = 5;
+
+void main() {
+  runApp(const StampApp());
+}
+
+class StampApp extends StatelessWidget {
+  const StampApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: &#x27;スタンプ帳&#x27;,
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF287A70)),
+        scaffoldBackgroundColor: const Color(0xFFF6F7F2),
+      ),
+      home: const StampBoardPage(),
+    );
+  }
+}
+
+class Habit {
+  Habit({required this.name, required this.reason, this.count = 0});
+
+  final String name;
+  final String reason;
+  int count;
+}
+
+class StampBoardPage extends StatefulWidget {
+  const StampBoardPage({super.key});
+
+  @override
+  State&lt;StampBoardPage&gt; createState() =&gt; _StampBoardPageState();
+}
+
+class _StampBoardPageState extends State&lt;StampBoardPage&gt; {
+  final List&lt;Habit&gt; habits = [
+    Habit(name: &#x27;コードを15分読む&#x27;, reason: &#x27;気になったアプリの仕組みを、少しずつ読めるようになりたい。&#x27;),
+    Habit(name: &#x27;外を10分歩く&#x27;, reason: &#x27;画面から離れて気分を切り替え、次の作業を気持ちよく始めたい。&#x27;),
+    Habit(name: &#x27;学びを1行メモ&#x27;, reason: &#x27;今日分かったことを自分の言葉にして、明日の自分へ残したい。&#x27;),
+  ];
+
+  void changeStamp(Habit habit, int change) {
+    final nextCount = habit.count + change;
+    if (nextCount &lt; 0 || nextCount &gt; stampGoal) {
+      return;
+    }
+    setState(() {
+      habit.count = nextCount;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    var total = 0;
+    for (final habit in habits) {
+      total += habit.count;
+    }
+    return Scaffold(
+      appBar: AppBar(title: const Text(&#x27;スタンプ帳&#x27;)),
+      body: SafeArea(
+        child: ListView(
+          padding: const EdgeInsets.all(20),
+          children: [
+            const Text(
+              &#x27;小さな「できた」を、\nひとつずつ。&#x27;,
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            Text(&#x27;できたときに1つ押そう。まずは各$stampGoal回。&#x27;),
+            const SizedBox(height: 16),
+            Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                color: const Color(0xFFDDEFE7),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Row(
+                children: [
+                  const Icon(Icons.auto_awesome, size: 32),
+                  const SizedBox(width: 16),
+                  Expanded(
+                    child: Text(
+                      &#x27;集めたスタンプ  $total 個&#x27;,
+                      style: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 20),
+            for (final habit in habits) buildHabitCard(habit),
+            const SizedBox(height: 8),
+            const Text(&#x27;この段階ではアプリを終了すると回数は0に戻ります。&#x27;),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget buildHabitCard(Habit habit) {
+    return Card(
+      margin: const EdgeInsets.only(bottom: 16),
+      color: Colors.white,
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              habit.name,
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 12),
+            StampMarks(count: habit.count),
+            const SizedBox(height: 8),
+            Text(
+              habit.count == stampGoal
+                  ? &#x27;$stampGoal回達成！ 小さな積み重ねができました。&#x27;
+                  : &#x27;${habit.count} / $stampGoal 回 · あと${stampGoal - habit.count}回&#x27;,
+            ),
+            const SizedBox(height: 12),
+            Wrap(
+              spacing: 8,
+              runSpacing: 4,
+              children: [
+                FilledButton.icon(
+                  onPressed: habit.count &lt; stampGoal
+                      ? () =&gt; changeStamp(habit, 1)
+                      : null,
+                  icon: const Icon(Icons.add),
+                  label: const Text(&#x27;スタンプを押す&#x27;),
+                ),
+                TextButton(
+                  onPressed: habit.count &gt; 0
+                      ? () =&gt; changeStamp(habit, -1)
+                      : null,
+                  child: const Text(&#x27;1つ戻す&#x27;),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class StampMarks extends StatelessWidget {
+  const StampMarks({super.key, required this.count});
+
+  final int count;
+
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      spacing: 8,
+      runSpacing: 8,
+      children: [
+        for (var i = 0; i &lt; stampGoal; i++)
+          Icon(
+            i &lt; count ? Icons.check_circle : Icons.radio_button_unchecked,
+            color: i &lt; count
+                ? const Color(0xFF287A70)
+                : const Color(0xFF89958F),
+            size: 36,
+          ),
+      ],
+    );
+  }
+}</code></pre></details><div class="check"><label><input type="checkbox" data-check="stamp-board-14"><span>目標と配色を変えても、上限・取消し・合計がそろった。</span></label></div></section>
+<section id="step-15"><p class="step-meta">STEP 15 · コマ11</p><h2>詳細へ渡す値を決める</h2><details><summary>このコマの開始コード</summary><p>途中から合流する場合は、自分が変えた文字・色・数値を控えてからlib/main.dartをそろえます。</p><div class="code-head">lib/main.dart · 全文</div><pre id="start-14-main-dart" tabindex="0"><code>import &#x27;package:flutter/material.dart&#x27;;
+
+const stampGoal = 5;
+
+void main() {
+  runApp(const StampApp());
+}
+
+class StampApp extends StatelessWidget {
+  const StampApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: &#x27;スタンプ帳&#x27;,
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF287A70)),
+        scaffoldBackgroundColor: const Color(0xFFF6F7F2),
+      ),
+      home: const StampBoardPage(),
+    );
+  }
+}
+
+class Habit {
+  Habit({required this.name, required this.reason, this.count = 0});
+
+  final String name;
+  final String reason;
+  int count;
+}
+
+class StampBoardPage extends StatefulWidget {
+  const StampBoardPage({super.key});
+
+  @override
+  State&lt;StampBoardPage&gt; createState() =&gt; _StampBoardPageState();
+}
+
+class _StampBoardPageState extends State&lt;StampBoardPage&gt; {
+  final List&lt;Habit&gt; habits = [
+    Habit(name: &#x27;コードを15分読む&#x27;, reason: &#x27;気になったアプリの仕組みを、少しずつ読めるようになりたい。&#x27;),
+    Habit(name: &#x27;外を10分歩く&#x27;, reason: &#x27;画面から離れて気分を切り替え、次の作業を気持ちよく始めたい。&#x27;),
+    Habit(name: &#x27;学びを1行メモ&#x27;, reason: &#x27;今日分かったことを自分の言葉にして、明日の自分へ残したい。&#x27;),
+  ];
+
+  void changeStamp(Habit habit, int change) {
+    final nextCount = habit.count + change;
+    if (nextCount &lt; 0 || nextCount &gt; stampGoal) {
+      return;
+    }
+    setState(() {
+      habit.count = nextCount;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    var total = 0;
+    for (final habit in habits) {
+      total += habit.count;
+    }
+    return Scaffold(
+      appBar: AppBar(title: const Text(&#x27;スタンプ帳&#x27;)),
+      body: SafeArea(
+        child: ListView(
+          padding: const EdgeInsets.all(20),
+          children: [
+            const Text(
+              &#x27;小さな「できた」を、\nひとつずつ。&#x27;,
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            Text(&#x27;できたときに1つ押そう。まずは各$stampGoal回。&#x27;),
+            const SizedBox(height: 16),
+            Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                color: const Color(0xFFDDEFE7),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Row(
+                children: [
+                  const Icon(Icons.auto_awesome, size: 32),
+                  const SizedBox(width: 16),
+                  Expanded(
+                    child: Text(
+                      &#x27;集めたスタンプ  $total 個&#x27;,
+                      style: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 20),
+            for (final habit in habits) buildHabitCard(habit),
+            const SizedBox(height: 8),
+            const Text(&#x27;この段階ではアプリを終了すると回数は0に戻ります。&#x27;),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget buildHabitCard(Habit habit) {
+    return Card(
+      margin: const EdgeInsets.only(bottom: 16),
+      color: Colors.white,
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              habit.name,
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 12),
+            StampMarks(count: habit.count),
+            const SizedBox(height: 8),
+            Text(
+              habit.count == stampGoal
+                  ? &#x27;$stampGoal回達成！ 小さな積み重ねができました。&#x27;
+                  : &#x27;${habit.count} / $stampGoal 回 · あと${stampGoal - habit.count}回&#x27;,
+            ),
+            const SizedBox(height: 12),
+            Wrap(
+              spacing: 8,
+              runSpacing: 4,
+              children: [
+                FilledButton.icon(
+                  onPressed: habit.count &lt; stampGoal
+                      ? () =&gt; changeStamp(habit, 1)
+                      : null,
+                  icon: const Icon(Icons.add),
+                  label: const Text(&#x27;スタンプを押す&#x27;),
+                ),
+                TextButton(
+                  onPressed: habit.count &gt; 0
+                      ? () =&gt; changeStamp(habit, -1)
+                      : null,
+                  child: const Text(&#x27;1つ戻す&#x27;),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class StampMarks extends StatelessWidget {
+  const StampMarks({super.key, required this.count});
+
+  final int count;
+
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      spacing: 8,
+      runSpacing: 8,
+      children: [
+        for (var i = 0; i &lt; stampGoal; i++)
+          Icon(
+            i &lt; count ? Icons.check_circle : Icons.radio_button_unchecked,
+            color: i &lt; count
+                ? const Color(0xFF287A70)
+                : const Color(0xFF89958F),
+            size: 36,
+          ),
+      ],
+    );
+  }
+}</code></pre></details><p>Visual Studio CodeでF01StampBoardを開き、スタンプを増減できる一覧から再開します。今日は「続けたい理由」を別の画面で読めるようにします。</p><p>詳細へ渡すのは選んだHabitです。名前だけでなくreasonとcountも1つの値として渡せるため、同じ内容をもう一度検索する必要がありません。詳細では編集せず、スタンプの操作は一覧へ戻って行います。</p><p>まず名前とreasonを読み比べ、空の理由があれば記入します。個人的な内容を公開する必要はなく、架空の習慣でも構いません。クリック処理を増やす前に、表示に必要なデータがHabitへそろっていることを確認します。</p><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Dart</p><pre><code>final String name;
+final String reason;
+int count;</code></pre></div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre><code>class Habit {
+    String name;
+    String reason;
+    int count;
+}</code></pre></div></div><p>画面のデータをクラスへまとめる考え方はJavaと同じです。Dartのfinalは名前・理由の再代入を止め、回数だけが操作で変わります。画面間で何を渡すかを、モデルの項目で決めます。</p><details><summary>このSTEPの全コード（照合・合流用）</summary><div class="code-head">lib/main.dart · 全文</div><pre id="code-15-main-dart" tabindex="0"><code>import &#x27;package:flutter/material.dart&#x27;;
+
+const stampGoal = 5;
+
+void main() {
+  runApp(const StampApp());
+}
+
+class StampApp extends StatelessWidget {
+  const StampApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: &#x27;スタンプ帳&#x27;,
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF287A70)),
+        scaffoldBackgroundColor: const Color(0xFFF6F7F2),
+      ),
+      home: const StampBoardPage(),
+    );
+  }
+}
+
+class Habit {
+  Habit({required this.name, required this.reason, this.count = 0});
+
+  final String name;
+  final String reason;
+  int count;
+}
+
+class StampBoardPage extends StatefulWidget {
+  const StampBoardPage({super.key});
+
+  @override
+  State&lt;StampBoardPage&gt; createState() =&gt; _StampBoardPageState();
+}
+
+class _StampBoardPageState extends State&lt;StampBoardPage&gt; {
+  final List&lt;Habit&gt; habits = [
+    Habit(name: &#x27;コードを15分読む&#x27;, reason: &#x27;気になったアプリの仕組みを、少しずつ読めるようになりたい。&#x27;),
+    Habit(name: &#x27;外を10分歩く&#x27;, reason: &#x27;画面から離れて気分を切り替え、次の作業を気持ちよく始めたい。&#x27;),
+    Habit(name: &#x27;学びを1行メモ&#x27;, reason: &#x27;今日分かったことを自分の言葉にして、明日の自分へ残したい。&#x27;),
+  ];
+
+  void changeStamp(Habit habit, int change) {
+    final nextCount = habit.count + change;
+    if (nextCount &lt; 0 || nextCount &gt; stampGoal) {
+      return;
+    }
+    setState(() {
+      habit.count = nextCount;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    var total = 0;
+    for (final habit in habits) {
+      total += habit.count;
+    }
+    return Scaffold(
+      appBar: AppBar(title: const Text(&#x27;スタンプ帳&#x27;)),
+      body: SafeArea(
+        child: ListView(
+          padding: const EdgeInsets.all(20),
+          children: [
+            const Text(
+              &#x27;小さな「できた」を、\nひとつずつ。&#x27;,
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            Text(&#x27;できたときに1つ押そう。まずは各$stampGoal回。&#x27;),
+            const SizedBox(height: 16),
+            Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                color: const Color(0xFFDDEFE7),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Row(
+                children: [
+                  const Icon(Icons.auto_awesome, size: 32),
+                  const SizedBox(width: 16),
+                  Expanded(
+                    child: Text(
+                      &#x27;集めたスタンプ  $total 個&#x27;,
+                      style: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 20),
+            for (final habit in habits) buildHabitCard(habit),
+            const SizedBox(height: 8),
+            const Text(&#x27;この段階ではアプリを終了すると回数は0に戻ります。&#x27;),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget buildHabitCard(Habit habit) {
+    return Card(
+      margin: const EdgeInsets.only(bottom: 16),
+      color: Colors.white,
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              habit.name,
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 12),
+            StampMarks(count: habit.count),
+            const SizedBox(height: 8),
+            Text(
+              habit.count == stampGoal
+                  ? &#x27;$stampGoal回達成！ 小さな積み重ねができました。&#x27;
+                  : &#x27;${habit.count} / $stampGoal 回 · あと${stampGoal - habit.count}回&#x27;,
+            ),
+            const SizedBox(height: 12),
+            Wrap(
+              spacing: 8,
+              runSpacing: 4,
+              children: [
+                FilledButton.icon(
+                  onPressed: habit.count &lt; stampGoal
+                      ? () =&gt; changeStamp(habit, 1)
+                      : null,
+                  icon: const Icon(Icons.add),
+                  label: const Text(&#x27;スタンプを押す&#x27;),
+                ),
+                TextButton(
+                  onPressed: habit.count &gt; 0
+                      ? () =&gt; changeStamp(habit, -1)
+                      : null,
+                  child: const Text(&#x27;1つ戻す&#x27;),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class StampMarks extends StatelessWidget {
+  const StampMarks({super.key, required this.count});
+
+  final int count;
+
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      spacing: 8,
+      runSpacing: 8,
+      children: [
+        for (var i = 0; i &lt; stampGoal; i++)
+          Icon(
+            i &lt; count ? Icons.check_circle : Icons.radio_button_unchecked,
+            color: i &lt; count
+                ? const Color(0xFF287A70)
+                : const Color(0xFF89958F),
+            size: 36,
+          ),
+      ],
+    );
+  }
+}</code></pre></details><div class="check"><label><input type="checkbox" data-check="stamp-board-15"><span>選んだHabitに詳細で必要な3項目がそろっている。</span></label></div></section>
+<section id="step-16"><p class="step-meta">STEP 16 · コマ11</p><h2>Navigatorで詳細を開く</h2><p>カードに詳しく見るを加え、openDetail(habit)を呼びます。openDetailはNavigator.pushへcontextとMaterialPageRouteを渡し、ルートのbuilderでHabitDetailPageを作ります。</p><p>Navigatorは画面の重なりを管理します。pushで詳細を上に載せるため、一覧のStateは下に残ります。MaterialPageRouteの<code>&lt;void&gt;</code>は、この画面から結果の値を受け取らない指定です。builderのcontextは新しい画面を作る場所の情報です。</p><p>詳細のAppBarには戻る操作が自動で付きます。この単元では名前付きルートや追加パッケージを使わず、移動先の型と渡す値が同じ場所で見える書き方にします。</p><ol><li>1件目を1回押してから、詳しく見るを押します。</li><li>詳細の名前と回数が選んだカードに一致することを確かめます。</li><li>戻ると一覧の1回が残ることを確かめます。</li></ol><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Dart</p><pre><code>Navigator.push(context, MaterialPageRoute&lt;void&gt;(
+  builder: (context) =&gt; HabitDetailPage(habit: habit),
+));</code></pre></div><div class="compare-item"><p class="compare-lang" translate="no">Swift</p><pre><code>let detail = DetailViewController()
+detail.habit = habit
+navigationController?.pushViewController(detail, animated: true)</code></pre></div></div><p>Swiftのナビゲーションで次の画面へ値を渡して積む操作に対応します。Flutterはコンストラクタの名前付き引数habitで渡します。一覧を作り直して置き換える操作ではないため、戻ったときのStateを保持できます。</p><details><summary>このSTEPの全コード（照合・合流用）</summary><div class="code-head">lib/main.dart · 全文</div><pre id="code-16-main-dart" tabindex="0"><code>import &#x27;package:flutter/material.dart&#x27;;
+
+const stampGoal = 5;
+
+void main() {
+  runApp(const StampApp());
+}
+
+class StampApp extends StatelessWidget {
+  const StampApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: &#x27;スタンプ帳&#x27;,
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF287A70)),
+        scaffoldBackgroundColor: const Color(0xFFF6F7F2),
+      ),
+      home: const StampBoardPage(),
+    );
+  }
+}
+
+class Habit {
+  Habit({required this.name, required this.reason, this.count = 0});
+
+  final String name;
+  final String reason;
+  int count;
+}
+
+class StampBoardPage extends StatefulWidget {
+  const StampBoardPage({super.key});
+
+  @override
+  State&lt;StampBoardPage&gt; createState() =&gt; _StampBoardPageState();
+}
+
+class _StampBoardPageState extends State&lt;StampBoardPage&gt; {
+  final List&lt;Habit&gt; habits = [
+    Habit(name: &#x27;コードを15分読む&#x27;, reason: &#x27;気になったアプリの仕組みを、少しずつ読めるようになりたい。&#x27;),
+    Habit(name: &#x27;外を10分歩く&#x27;, reason: &#x27;画面から離れて気分を切り替え、次の作業を気持ちよく始めたい。&#x27;),
+    Habit(name: &#x27;学びを1行メモ&#x27;, reason: &#x27;今日分かったことを自分の言葉にして、明日の自分へ残したい。&#x27;),
+  ];
+
+  void changeStamp(Habit habit, int change) {
+    final nextCount = habit.count + change;
+    if (nextCount &lt; 0 || nextCount &gt; stampGoal) {
+      return;
+    }
+    setState(() {
+      habit.count = nextCount;
+    });
+  }
+
+  void openDetail(Habit habit) {
+    Navigator.push(
+      context,
+      MaterialPageRoute&lt;void&gt;(
+        builder: (context) =&gt; HabitDetailPage(habit: habit),
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    var total = 0;
+    for (final habit in habits) {
+      total += habit.count;
+    }
+    return Scaffold(
+      appBar: AppBar(title: const Text(&#x27;スタンプ帳&#x27;)),
+      body: SafeArea(
+        child: ListView(
+          padding: const EdgeInsets.all(20),
+          children: [
+            const Text(
+              &#x27;小さな「できた」を、\nひとつずつ。&#x27;,
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            Text(&#x27;できたときに1つ押そう。まずは各$stampGoal回。&#x27;),
+            const SizedBox(height: 16),
+            Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                color: const Color(0xFFDDEFE7),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Row(
+                children: [
+                  const Icon(Icons.auto_awesome, size: 32),
+                  const SizedBox(width: 16),
+                  Expanded(
+                    child: Text(
+                      &#x27;集めたスタンプ  $total 個&#x27;,
+                      style: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 20),
+            for (final habit in habits) buildHabitCard(habit),
+            const SizedBox(height: 8),
+            const Text(&#x27;この段階ではアプリを終了すると回数は0に戻ります。&#x27;),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget buildHabitCard(Habit habit) {
+    return Card(
+      margin: const EdgeInsets.only(bottom: 16),
+      color: Colors.white,
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              habit.name,
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 12),
+            StampMarks(count: habit.count),
+            const SizedBox(height: 8),
+            Text(
+              habit.count == stampGoal
+                  ? &#x27;$stampGoal回達成！ 小さな積み重ねができました。&#x27;
+                  : &#x27;${habit.count} / $stampGoal 回 · あと${stampGoal - habit.count}回&#x27;,
+            ),
+            const SizedBox(height: 12),
+            Wrap(
+              spacing: 8,
+              runSpacing: 4,
+              children: [
+                FilledButton.icon(
+                  onPressed: habit.count &lt; stampGoal
+                      ? () =&gt; changeStamp(habit, 1)
+                      : null,
+                  icon: const Icon(Icons.add),
+                  label: const Text(&#x27;スタンプを押す&#x27;),
+                ),
+                TextButton(
+                  onPressed: habit.count &gt; 0
+                      ? () =&gt; changeStamp(habit, -1)
+                      : null,
+                  child: const Text(&#x27;1つ戻す&#x27;),
+                ),
+                TextButton(
+                  onPressed: () =&gt; openDetail(habit),
+                  child: const Text(&#x27;詳しく見る&#x27;),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class StampMarks extends StatelessWidget {
+  const StampMarks({super.key, required this.count});
+
+  final int count;
+
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      spacing: 8,
+      runSpacing: 8,
+      children: [
+        for (var i = 0; i &lt; stampGoal; i++)
+          Icon(
+            i &lt; count ? Icons.check_circle : Icons.radio_button_unchecked,
+            color: i &lt; count
+                ? const Color(0xFF287A70)
+                : const Color(0xFF89958F),
+            size: 36,
+          ),
+      ],
+    );
+  }
+}
+
+class HabitDetailPage extends StatelessWidget {
+  const HabitDetailPage({super.key, required this.habit});
+
+  final Habit habit;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text(&#x27;習慣の詳細&#x27;)),
+      body: SafeArea(
+        child: ListView(
+          padding: const EdgeInsets.all(24),
+          children: [
+            Text(
+              habit.name,
+              style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 24),
+            StampMarks(count: habit.count),
+            const SizedBox(height: 12),
+            Text(&#x27;${habit.count} / $stampGoal 回&#x27;),
+            const SizedBox(height: 32),
+            const Text(
+              &#x27;続けたい理由&#x27;,
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              habit.reason,
+              style: const TextStyle(fontSize: 17, height: 1.7),
+            ),
+            const SizedBox(height: 32),
+            const Text(&#x27;スタンプは一覧画面で押せます。できたタイミングは自分で決めましょう。&#x27;),
+          ],
+        ),
+      ),
+    );
+  }
+}</code></pre></details><div class="check"><label><input type="checkbox" data-check="stamp-board-16"><span>選んだカードの詳細へ移り、戻って回数が維持された。</span></label></div></section>
+<section id="step-17"><p class="step-meta">STEP 17 · コマ11</p><h2>受け取った習慣を表示する</h2><p>HabitDetailPageは受け取ったHabitを表示するだけなのでStatelessWidgetです。<code>const HabitDetailPage({super.key, required this.habit})</code>でhabitを必須にし、finalフィールドへ保持します。</p><p>本文はSafeAreaの中のListViewへ名前・StampMarks・回数・理由を並べます。続けたい理由のTextStyleはheight: 1.7で行間を確保します。長い理由は折り返し、縦の領域が足りなければスクロールできます。</p><p>一覧と詳細で同じStampMarksを使うため、目標回数や色の基準がそろいます。詳細へ新しいcountの状態は作りません。受け取ったhabit.countをそのまま表示します。</p><p>3件とも詳細を開き、理由の取り違えがないか、長文が読めるかを確かめます。</p><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Dart</p><pre><code>class HabitDetailPage extends StatelessWidget {
+  const HabitDetailPage({super.key, required this.habit});
+  final Habit habit;
+  // buildでhabitを表示する。
+}</code></pre></div><div class="compare-item"><p class="compare-lang" translate="no">Swift</p><pre><code>final class DetailModel {
+    let habit: Habit
+    init(habit: Habit) { self.habit = habit }
+}</code></pre></div></div><p>Swiftの初期化時に値を受け取る形に対応します。Dartはrequired this.habitで必須引数と代入をまとめます。表示専用だからStatelessWidgetを選び、更新を管理するStateを余分に作りません。</p><details><summary>このSTEPの全コード（照合・合流用）</summary><div class="code-head">lib/main.dart · 全文</div><pre id="code-17-main-dart" tabindex="0"><code>import &#x27;package:flutter/material.dart&#x27;;
+
+const stampGoal = 5;
+
+void main() {
+  runApp(const StampApp());
+}
+
+class StampApp extends StatelessWidget {
+  const StampApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: &#x27;スタンプ帳&#x27;,
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF287A70)),
+        scaffoldBackgroundColor: const Color(0xFFF6F7F2),
+      ),
+      home: const StampBoardPage(),
+    );
+  }
+}
+
+class Habit {
+  Habit({required this.name, required this.reason, this.count = 0});
+
+  final String name;
+  final String reason;
+  int count;
+}
+
+class StampBoardPage extends StatefulWidget {
+  const StampBoardPage({super.key});
+
+  @override
+  State&lt;StampBoardPage&gt; createState() =&gt; _StampBoardPageState();
+}
+
+class _StampBoardPageState extends State&lt;StampBoardPage&gt; {
+  final List&lt;Habit&gt; habits = [
+    Habit(name: &#x27;コードを15分読む&#x27;, reason: &#x27;気になったアプリの仕組みを、少しずつ読めるようになりたい。&#x27;),
+    Habit(name: &#x27;外を10分歩く&#x27;, reason: &#x27;画面から離れて気分を切り替え、次の作業を気持ちよく始めたい。&#x27;),
+    Habit(name: &#x27;学びを1行メモ&#x27;, reason: &#x27;今日分かったことを自分の言葉にして、明日の自分へ残したい。&#x27;),
+  ];
+
+  void changeStamp(Habit habit, int change) {
+    final nextCount = habit.count + change;
+    if (nextCount &lt; 0 || nextCount &gt; stampGoal) {
+      return;
+    }
+    setState(() {
+      habit.count = nextCount;
+    });
+  }
+
+  void openDetail(Habit habit) {
+    Navigator.push(
+      context,
+      MaterialPageRoute&lt;void&gt;(
+        builder: (context) =&gt; HabitDetailPage(habit: habit),
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    var total = 0;
+    for (final habit in habits) {
+      total += habit.count;
+    }
+    return Scaffold(
+      appBar: AppBar(title: const Text(&#x27;スタンプ帳&#x27;)),
+      body: SafeArea(
+        child: ListView(
+          padding: const EdgeInsets.all(20),
+          children: [
+            const Text(
+              &#x27;小さな「できた」を、\nひとつずつ。&#x27;,
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            Text(&#x27;できたときに1つ押そう。まずは各$stampGoal回。&#x27;),
+            const SizedBox(height: 16),
+            Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                color: const Color(0xFFDDEFE7),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Row(
+                children: [
+                  const Icon(Icons.auto_awesome, size: 32),
+                  const SizedBox(width: 16),
+                  Expanded(
+                    child: Text(
+                      &#x27;集めたスタンプ  $total 個&#x27;,
+                      style: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 20),
+            for (final habit in habits) buildHabitCard(habit),
+            const SizedBox(height: 8),
+            const Text(&#x27;この段階ではアプリを終了すると回数は0に戻ります。&#x27;),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget buildHabitCard(Habit habit) {
+    return Card(
+      margin: const EdgeInsets.only(bottom: 16),
+      color: Colors.white,
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              habit.name,
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 12),
+            StampMarks(count: habit.count),
+            const SizedBox(height: 8),
+            Text(
+              habit.count == stampGoal
+                  ? &#x27;$stampGoal回達成！ 小さな積み重ねができました。&#x27;
+                  : &#x27;${habit.count} / $stampGoal 回 · あと${stampGoal - habit.count}回&#x27;,
+            ),
+            const SizedBox(height: 12),
+            Wrap(
+              spacing: 8,
+              runSpacing: 4,
+              children: [
+                FilledButton.icon(
+                  onPressed: habit.count &lt; stampGoal
+                      ? () =&gt; changeStamp(habit, 1)
+                      : null,
+                  icon: const Icon(Icons.add),
+                  label: const Text(&#x27;スタンプを押す&#x27;),
+                ),
+                TextButton(
+                  onPressed: habit.count &gt; 0
+                      ? () =&gt; changeStamp(habit, -1)
+                      : null,
+                  child: const Text(&#x27;1つ戻す&#x27;),
+                ),
+                TextButton(
+                  onPressed: () =&gt; openDetail(habit),
+                  child: const Text(&#x27;詳しく見る&#x27;),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class StampMarks extends StatelessWidget {
+  const StampMarks({super.key, required this.count});
+
+  final int count;
+
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      spacing: 8,
+      runSpacing: 8,
+      children: [
+        for (var i = 0; i &lt; stampGoal; i++)
+          Icon(
+            i &lt; count ? Icons.check_circle : Icons.radio_button_unchecked,
+            color: i &lt; count
+                ? const Color(0xFF287A70)
+                : const Color(0xFF89958F),
+            size: 36,
+          ),
+      ],
+    );
+  }
+}
+
+class HabitDetailPage extends StatelessWidget {
+  const HabitDetailPage({super.key, required this.habit});
+
+  final Habit habit;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text(&#x27;習慣の詳細&#x27;)),
+      body: SafeArea(
+        child: ListView(
+          padding: const EdgeInsets.all(24),
+          children: [
+            Text(
+              habit.name,
+              style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 24),
+            StampMarks(count: habit.count),
+            const SizedBox(height: 12),
+            Text(&#x27;${habit.count} / $stampGoal 回&#x27;),
+            const SizedBox(height: 32),
+            const Text(
+              &#x27;続けたい理由&#x27;,
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              habit.reason,
+              style: const TextStyle(fontSize: 17, height: 1.7),
+            ),
+            const SizedBox(height: 32),
+            const Text(&#x27;スタンプは一覧画面で押せます。できたタイミングは自分で決めましょう。&#x27;),
+          ],
+        ),
+      ),
+    );
+  }
+}</code></pre></details><div class="check"><label><input type="checkbox" data-check="stamp-board-17"><span>3件の名前・回数・理由が正しく表示された。</span></label></div></section>
+<section id="step-18"><p class="step-meta">STEP 18 · コマ11</p><h2>一覧と詳細を通して確かめる</h2><p>最後に一覧と詳細を通して動かします。説明を読めるだけでなく、変更したデータが操作中も一致することを確かめます。</p><ol><li>一覧で初期3件と合計0を確認します。</li><li>1件を5回まで押し、上限を確認して1つ戻します。</li><li>詳しく見るで名前・4回・理由が合うことを確認します。</li><li>戻って別のカードも操作し、合計と各回数の関係を確認します。</li><li>ホットリスタートで初期状態へ戻ることを確認します。</li></ol><p><code>flutter analyze</code>をプロジェクトのターミナルで実行し、指摘があれば最初の行から直します。実行中のflutter runとは別のターミナルを開いて構いません。解析は画面操作の確認を代わりに行うものではありません。</p><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Dart</p><pre><code>if (next &lt; 0 || next &gt; stampGoal) return;</code></pre></div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre><code>if (next &lt; 0 || next &gt; goal) { return; }</code></pre></div></div><p>範囲を守る条件はJavaと同じです。Flutterの画面が正しく見えていても、データ・上限・遷移が合うかは操作して確かめます。構文や型の静的解析と、画面の確認を分けます。</p><details><summary>このSTEPの全コード（照合・合流用）</summary><div class="code-head">lib/main.dart · 全文</div><pre id="code-18-main-dart" tabindex="0"><code>import &#x27;package:flutter/material.dart&#x27;;
+
+const stampGoal = 5;
+
+void main() {
+  runApp(const StampApp());
+}
+
+class StampApp extends StatelessWidget {
+  const StampApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: &#x27;スタンプ帳&#x27;,
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF287A70)),
+        scaffoldBackgroundColor: const Color(0xFFF6F7F2),
+      ),
+      home: const StampBoardPage(),
+    );
+  }
+}
+
+class Habit {
+  Habit({required this.name, required this.reason, this.count = 0});
+
+  final String name;
+  final String reason;
+  int count;
+}
+
+class StampBoardPage extends StatefulWidget {
+  const StampBoardPage({super.key});
+
+  @override
+  State&lt;StampBoardPage&gt; createState() =&gt; _StampBoardPageState();
+}
+
+class _StampBoardPageState extends State&lt;StampBoardPage&gt; {
+  final List&lt;Habit&gt; habits = [
+    Habit(name: &#x27;コードを15分読む&#x27;, reason: &#x27;気になったアプリの仕組みを、少しずつ読めるようになりたい。&#x27;),
+    Habit(name: &#x27;外を10分歩く&#x27;, reason: &#x27;画面から離れて気分を切り替え、次の作業を気持ちよく始めたい。&#x27;),
+    Habit(name: &#x27;学びを1行メモ&#x27;, reason: &#x27;今日分かったことを自分の言葉にして、明日の自分へ残したい。&#x27;),
+  ];
+
+  void changeStamp(Habit habit, int change) {
+    final nextCount = habit.count + change;
+    if (nextCount &lt; 0 || nextCount &gt; stampGoal) {
+      return;
+    }
+    setState(() {
+      habit.count = nextCount;
+    });
+  }
+
+  void openDetail(Habit habit) {
+    Navigator.push(
+      context,
+      MaterialPageRoute&lt;void&gt;(
+        builder: (context) =&gt; HabitDetailPage(habit: habit),
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    var total = 0;
+    for (final habit in habits) {
+      total += habit.count;
+    }
+    return Scaffold(
+      appBar: AppBar(title: const Text(&#x27;スタンプ帳&#x27;)),
+      body: SafeArea(
+        child: ListView(
+          padding: const EdgeInsets.all(20),
+          children: [
+            const Text(
+              &#x27;小さな「できた」を、\nひとつずつ。&#x27;,
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            Text(&#x27;できたときに1つ押そう。まずは各$stampGoal回。&#x27;),
+            const SizedBox(height: 16),
+            Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                color: const Color(0xFFDDEFE7),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Row(
+                children: [
+                  const Icon(Icons.auto_awesome, size: 32),
+                  const SizedBox(width: 16),
+                  Expanded(
+                    child: Text(
+                      &#x27;集めたスタンプ  $total 個&#x27;,
+                      style: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 20),
+            for (final habit in habits) buildHabitCard(habit),
+            const SizedBox(height: 8),
+            const Text(&#x27;この段階ではアプリを終了すると回数は0に戻ります。&#x27;),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget buildHabitCard(Habit habit) {
+    return Card(
+      margin: const EdgeInsets.only(bottom: 16),
+      color: Colors.white,
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              habit.name,
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 12),
+            StampMarks(count: habit.count),
+            const SizedBox(height: 8),
+            Text(
+              habit.count == stampGoal
+                  ? &#x27;$stampGoal回達成！ 小さな積み重ねができました。&#x27;
+                  : &#x27;${habit.count} / $stampGoal 回 · あと${stampGoal - habit.count}回&#x27;,
+            ),
+            const SizedBox(height: 12),
+            Wrap(
+              spacing: 8,
+              runSpacing: 4,
+              children: [
+                FilledButton.icon(
+                  onPressed: habit.count &lt; stampGoal
+                      ? () =&gt; changeStamp(habit, 1)
+                      : null,
+                  icon: const Icon(Icons.add),
+                  label: const Text(&#x27;スタンプを押す&#x27;),
+                ),
+                TextButton(
+                  onPressed: habit.count &gt; 0
+                      ? () =&gt; changeStamp(habit, -1)
+                      : null,
+                  child: const Text(&#x27;1つ戻す&#x27;),
+                ),
+                TextButton(
+                  onPressed: () =&gt; openDetail(habit),
+                  child: const Text(&#x27;詳しく見る&#x27;),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class StampMarks extends StatelessWidget {
+  const StampMarks({super.key, required this.count});
+
+  final int count;
+
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      spacing: 8,
+      runSpacing: 8,
+      children: [
+        for (var i = 0; i &lt; stampGoal; i++)
+          Icon(
+            i &lt; count ? Icons.check_circle : Icons.radio_button_unchecked,
+            color: i &lt; count
+                ? const Color(0xFF287A70)
+                : const Color(0xFF89958F),
+            size: 36,
+          ),
+      ],
+    );
+  }
+}
+
+class HabitDetailPage extends StatelessWidget {
+  const HabitDetailPage({super.key, required this.habit});
+
+  final Habit habit;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text(&#x27;習慣の詳細&#x27;)),
+      body: SafeArea(
+        child: ListView(
+          padding: const EdgeInsets.all(24),
+          children: [
+            Text(
+              habit.name,
+              style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 24),
+            StampMarks(count: habit.count),
+            const SizedBox(height: 12),
+            Text(&#x27;${habit.count} / $stampGoal 回&#x27;),
+            const SizedBox(height: 32),
+            const Text(
+              &#x27;続けたい理由&#x27;,
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              habit.reason,
+              style: const TextStyle(fontSize: 17, height: 1.7),
+            ),
+            const SizedBox(height: 32),
+            const Text(&#x27;スタンプは一覧画面で押せます。できたタイミングは自分で決めましょう。&#x27;),
+          ],
+        ),
+      ),
+    );
+  }
+}</code></pre></details><div class="check"><label><input type="checkbox" data-check="stamp-board-18"><span>一覧・詳細・境界・再起動を一続きで確認できた。</span></label></div></section>
+<section id="step-19"><p class="step-meta">STEP 19 · コマ11</p><h2>アレンジできる場所を説明する</h2><p>仕上げに、自分の題材で使いやすいスタンプ帳にします。変更する場所は、ここまでに扱った範囲から選びます。</p><table><thead><tr><th>場所</th><th>変わること</th></tr></thead><tbody><tr><td>Habitのname・reason</td><td>一覧の名前と詳細の理由。</td></tr><tr><td>stampGoal</td><td>マーク数・回数の上限・達成の表示。</td></tr><tr><td>seedColorとStampMarksの色</td><td>ボタンとスタンプの配色。</td></tr><tr><td>Textの文章・TextStyle・余白</td><td>見出しや詳細の読みやすさ。</td></tr></tbody></table><p>初期データを変えたらホットリスタートし、全件の詳細と上限・戻す操作を再確認します。「どの値を変え、画面のどこが変わったか」を説明してコマを終えます。次回の合流のため、自分の変更箇所を控えてください。</p><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Dart</p><pre><code>Habit(name: &#x27;サンプルを動かす&#x27;, reason: &#x27;自分の疑問を確かめたい&#x27;)</code></pre></div><div class="compare-item"><p class="compare-lang" translate="no">JavaScript</p><pre><code>{ name: &#x27;サンプルを動かす&#x27;, reason: &#x27;自分の疑問を確かめたい&#x27; }</code></pre></div></div><p>Web基礎のデータの項目を変更する目的と同じです。FlutterではHabitの型に沿って値を渡し、その値から一覧と詳細を作ります。自分の題材でも表示と操作がそろうことを確かめましょう。</p><details><summary>このSTEPの全コード（照合・合流用）</summary><div class="code-head">lib/main.dart · 全文</div><pre id="code-19-main-dart" tabindex="0"><code>import &#x27;package:flutter/material.dart&#x27;;
+
+const stampGoal = 5;
+
+void main() {
+  runApp(const StampApp());
+}
+
+class StampApp extends StatelessWidget {
+  const StampApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: &#x27;スタンプ帳&#x27;,
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF287A70)),
+        scaffoldBackgroundColor: const Color(0xFFF6F7F2),
+      ),
+      home: const StampBoardPage(),
+    );
+  }
+}
+
+class Habit {
+  Habit({required this.name, required this.reason, this.count = 0});
+
+  final String name;
+  final String reason;
+  int count;
+}
+
+class StampBoardPage extends StatefulWidget {
+  const StampBoardPage({super.key});
+
+  @override
+  State&lt;StampBoardPage&gt; createState() =&gt; _StampBoardPageState();
+}
+
+class _StampBoardPageState extends State&lt;StampBoardPage&gt; {
+  final List&lt;Habit&gt; habits = [
+    Habit(name: &#x27;コードを15分読む&#x27;, reason: &#x27;気になったアプリの仕組みを、少しずつ読めるようになりたい。&#x27;),
+    Habit(name: &#x27;外を10分歩く&#x27;, reason: &#x27;画面から離れて気分を切り替え、次の作業を気持ちよく始めたい。&#x27;),
+    Habit(name: &#x27;学びを1行メモ&#x27;, reason: &#x27;今日分かったことを自分の言葉にして、明日の自分へ残したい。&#x27;),
+  ];
+
+  void changeStamp(Habit habit, int change) {
+    final nextCount = habit.count + change;
+    if (nextCount &lt; 0 || nextCount &gt; stampGoal) {
+      return;
+    }
+    setState(() {
+      habit.count = nextCount;
+    });
+  }
+
+  void openDetail(Habit habit) {
+    Navigator.push(
+      context,
+      MaterialPageRoute&lt;void&gt;(
+        builder: (context) =&gt; HabitDetailPage(habit: habit),
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    var total = 0;
+    for (final habit in habits) {
+      total += habit.count;
+    }
+    return Scaffold(
+      appBar: AppBar(title: const Text(&#x27;スタンプ帳&#x27;)),
+      body: SafeArea(
+        child: ListView(
+          padding: const EdgeInsets.all(20),
+          children: [
+            const Text(
+              &#x27;小さな「できた」を、\nひとつずつ。&#x27;,
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            Text(&#x27;できたときに1つ押そう。まずは各$stampGoal回。&#x27;),
+            const SizedBox(height: 16),
+            Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                color: const Color(0xFFDDEFE7),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Row(
+                children: [
+                  const Icon(Icons.auto_awesome, size: 32),
+                  const SizedBox(width: 16),
+                  Expanded(
+                    child: Text(
+                      &#x27;集めたスタンプ  $total 個&#x27;,
+                      style: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 20),
+            for (final habit in habits) buildHabitCard(habit),
+            const SizedBox(height: 8),
+            const Text(&#x27;この段階ではアプリを終了すると回数は0に戻ります。&#x27;),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget buildHabitCard(Habit habit) {
+    return Card(
+      margin: const EdgeInsets.only(bottom: 16),
+      color: Colors.white,
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              habit.name,
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 12),
+            StampMarks(count: habit.count),
+            const SizedBox(height: 8),
+            Text(
+              habit.count == stampGoal
+                  ? &#x27;$stampGoal回達成！ 小さな積み重ねができました。&#x27;
+                  : &#x27;${habit.count} / $stampGoal 回 · あと${stampGoal - habit.count}回&#x27;,
+            ),
+            const SizedBox(height: 12),
+            Wrap(
+              spacing: 8,
+              runSpacing: 4,
+              children: [
+                FilledButton.icon(
+                  onPressed: habit.count &lt; stampGoal
+                      ? () =&gt; changeStamp(habit, 1)
+                      : null,
+                  icon: const Icon(Icons.add),
+                  label: const Text(&#x27;スタンプを押す&#x27;),
+                ),
+                TextButton(
+                  onPressed: habit.count &gt; 0
+                      ? () =&gt; changeStamp(habit, -1)
+                      : null,
+                  child: const Text(&#x27;1つ戻す&#x27;),
+                ),
+                TextButton(
+                  onPressed: () =&gt; openDetail(habit),
+                  child: const Text(&#x27;詳しく見る&#x27;),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class StampMarks extends StatelessWidget {
+  const StampMarks({super.key, required this.count});
+
+  final int count;
+
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      spacing: 8,
+      runSpacing: 8,
+      children: [
+        for (var i = 0; i &lt; stampGoal; i++)
+          Icon(
+            i &lt; count ? Icons.check_circle : Icons.radio_button_unchecked,
+            color: i &lt; count
+                ? const Color(0xFF287A70)
+                : const Color(0xFF89958F),
+            size: 36,
+          ),
+      ],
+    );
+  }
+}
+
+class HabitDetailPage extends StatelessWidget {
+  const HabitDetailPage({super.key, required this.habit});
+
+  final Habit habit;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text(&#x27;習慣の詳細&#x27;)),
+      body: SafeArea(
+        child: ListView(
+          padding: const EdgeInsets.all(24),
+          children: [
+            Text(
+              habit.name,
+              style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 24),
+            StampMarks(count: habit.count),
+            const SizedBox(height: 12),
+            Text(&#x27;${habit.count} / $stampGoal 回&#x27;),
+            const SizedBox(height: 32),
+            const Text(
+              &#x27;続けたい理由&#x27;,
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              habit.reason,
+              style: const TextStyle(fontSize: 17, height: 1.7),
+            ),
+            const SizedBox(height: 32),
+            const Text(&#x27;スタンプは一覧画面で押せます。できたタイミングは自分で決めましょう。&#x27;),
+          ],
+        ),
+      ),
+    );
+  }
+}</code></pre></details><div class="check"><label><input type="checkbox" data-check="stamp-board-19"><span>変更箇所と効果を説明でき、自分の題材でも一連の操作が動いた。</span></label></div></section>
+<section id="help"><h2>困ったとき</h2><table><thead><tr><th>状態</th><th>確認するところ</th></tr></thead><tbody><tr><td>flutterが見つからない</td><td>共通資料のSDK・PATHを確認し、Visual Studio Codeとターミナルを開き直す。</td></tr><tr><td>pubspec.yamlが見つからない</td><td>File &gt; Open Folder…でF01StampBoardそのものを開く。親のHybridAppではない。</td></tr><tr><td>端末が表示されない</td><td>Flutter: Launch Emulatorで既存のiOS端末を起動し、flutter devicesでIDを確認。</td></tr><tr><td>画面が変わらない</td><td>保存、実行中のプロジェクト、ホットリロードの結果を確認。初期値の変更はホットリスタート。</td></tr><tr><td>括弧のエラーが出た</td><td>最初のエラーから確認。childは1つ、childrenはリスト。各STEPの全文で閉じ括弧を照合。</td></tr><tr><td>再起動すると0に戻った</td><td>この単元はメモリだけ。保存していないため正常。</td></tr></tbody></table></section>
+<section id="sample-project"><h2>完成プロジェクトを開く</h2><p>学生用配布ZIPを展開し、<code>samples/F01StampBoard</code>をVisual Studio Codeの<code>File &gt; Open Folder…</code>で開きます。単体で受け取る場合は<a href="downloads/F01StampBoard.zip">完成プロジェクトZIP</a>を展開し、中のF01StampBoardを開きます。自分の制作フォルダと混ぜず、見比べるために使います。</p><p><code>Terminal &gt; New Terminal</code>で<code>flutter pub get</code>、<code>flutter analyze</code>を実行します。<code>Flutter: Launch Emulator</code>から既存iOSシミュレータを選び、<code>flutter devices</code>でIDを見て、<code>flutter run -d 端末ID</code>で実行します。端末IDは表示された値に置き換えます。</p></section><p class="footer">JEC / ハイブリッドアプリ開発技法 · F01StampBoard</p></main></div></body></html>
