@@ -110,6 +110,9 @@ def add_localized_materials(files):
     # 翻訳でも配布物の境界は同じ。Git未管理の確認用HTMLは生成しない。
     names = sorted(name for name in files if name.endswith(".html"))
     choices = [{"code": "ja", "name": "日本語"}, *languages]
+    # 言語名は、どのページに置いても、その言語の書字方向で表示する。dir がないと、
+    # 右から左のページに置いた「繁體中文（香港）」の閉じかっこが、名前の反対側（左端）へ回り込む。
+    directions = {choice["code"]: settings.direction(choice["code"]) for choice in choices}
     for language in languages:
         for name, text in localizer.localized_pages(
                 settings, language["code"], mark_untranslated=True, page_names=names).items():
@@ -123,11 +126,12 @@ def add_localized_materials(files):
                 target_code = choice["code"]
                 label = html.escape(choice["name"])
                 if code == target_code:
-                    links.append(f'<span lang="{code}" aria-current="page">{label}</span>')
+                    links.append(f'<span lang="{code}" dir="{directions[code]}" aria-current="page">{label}</span>')
                 else:
                     target = source if target_code == "ja" else localizer.output_name(source, target_code, settings.source_root)
                     href = html.escape(posixpath.relpath(target, posixpath.dirname(name)), quote=True)
-                    links.append(f'<a href="{href}" lang="{target_code}" hreflang="{target_code}" data-language-link>{label}</a>')
+                    links.append(f'<a href="{href}" lang="{target_code}" dir="{directions[target_code]}" '
+                                 f'hreflang="{target_code}" data-language-link>{label}</a>')
             label = "言語" if code == "ja" else language["language_label"]
             nav = f'<nav class="language-nav" aria-label="{html.escape(label, quote=True)}">' + " | ".join(links) + "</nav>"
             if code != "ja":
@@ -144,10 +148,12 @@ def add_localized_materials(files):
         if not projects:
             raise ValueError("配布物の入口にするページがありません。")
         start = projects[0]["docs"][0]
-    items = [f'<li lang="ja"><a href="{start}">日本語 — ここから始める</a></li>']
+    # 入口の一覧は、項目の頭（行頭記号）を左にそろえたまま、リンクの文字だけをその言語の向きで出す。
+    # <li> に dir を付けると、右から左の言語の項目だけが行頭記号ごと右端へ離れる。
+    items = [f'<li lang="ja"><a href="{start}" dir="ltr">日本語 — ここから始める</a></li>']
     for item in languages:
         target = localizer.output_name(start, item["code"], settings.source_root)
-        items.append(f'<li lang="{item["code"]}"><a href="{html.escape(target, quote=True)}">'
+        items.append(f'<li lang="{item["code"]}"><a href="{html.escape(target, quote=True)}" dir="{directions[item["code"]]}">'
                      + html.escape(item["name"] + " — " + item["start_here"]) + '</a></li>')
     files["index.html"] = ('<!doctype html>\n<html lang="ja"><head><meta charset="utf-8">'
                            '<meta name="viewport" content="width=device-width, initial-scale=1">'
