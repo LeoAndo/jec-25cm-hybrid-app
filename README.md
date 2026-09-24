@@ -11,8 +11,9 @@ JEC（25CM）の「ハイブリッドアプリ開発技法」で使う教材で�
 | 単元 | 学生用教科書 | 完成プロジェクト | 教員用ガイド | 完成ZIP |
 | --- | --- | --- | --- | --- |
 | M01OshiList（コマ1〜4） | [推しログ：一覧と詳細](docs/oshi-list/index.html) | [M01OshiList](M01OshiList/) | [進め方と照合コード](teacher/oshi-list/index.html) | [M01OshiList.zip](docs/oshi-list/downloads/M01OshiList.zip) |
+| M02OshiSave（コマ5〜7） | [推しログ：追加と保存](docs/oshi-save/index.html) | [M02OshiSave](M02OshiSave/) | [進め方と照合コード](teacher/oshi-save/index.html) | [M02OshiSave.zip](docs/oshi-save/downloads/M02OshiSave.zip) |
 
-[共通資料：授業を始めるまでの準備](docs/common/setup.html)では、教材の受け取り、Monacaのアカウント作成、Flutter 3.47.5の準備を授業内で進めます。M01では、静的な推しカードからOnsen UIの一覧・詳細へ進み、auto-stylingによるOSごとの見た目を比べます。以降の単元は順次追加します。
+[共通資料：授業を始めるまでの準備](docs/common/setup.html)では、教材の受け取り、Monacaのアカウント作成、Flutter 3.47.5の準備を授業内で進めます。M01では、静的な推しカードからOnsen UIの一覧・詳細へ進み、auto-stylingによるOSごとの見た目を比べます。M02では入力・JSON保存・復元へ進み、コマ7に公開URLを提出します。Flutterの教科書は順次追加します。
 
 15コマの割り当ては下の「15コマ計画」にあります。教科書・教員用ガイド・`config/teaching-materials.json` への登録は、単元ごとのissueで行います（[AGENTS.md](AGENTS.md) §9、[単元追加用skill](skills/add-teaching-unit/SKILL.md)）。
 
@@ -30,11 +31,11 @@ JEC（25CM）の「ハイブリッドアプリ開発技法」で使う教材で�
 
 展開後、はじめて授業を受ける学生は [共通資料：授業を始めるまでの準備](docs/common/setup.html) をブラウザで開き、第1コマにSTEP 1〜3、第7コマにSTEP 4〜7を進めます（同梱の `はじめに.txt` でも、単元一覧より前に案内しています）。準備が済んだら、その日の単元の教科書をブラウザで開きます。
 
-学生用ZIPには `docs` 一式と、開き方・版情報を収録します。**いまは日本語だけの構成で配布します。** 展開してできたフォルダには `docs` / `samples` / `はじめに.txt` / `VERSION.json` があります。現在の登録単元は `M01OshiList` で、`samples/M01OshiList` に展開済みの完成見本を収録します。Monacaへは教科書の取り込み用URLから開き、`samples` はコードを読み比べるために使います。言語を選ぶ入口がないのは、`config/i18n.json` の5言語がすべて `distribute: false` のためです（「多言語展開」）。翻訳を終えた言語を `distribute: true` にすると、言語を選ぶ入口の `index.html` がZIPに入り、`はじめに.txt` にも各言語の案内が付きます。`teacher` フォルダとテンプレート原本（`MonacaTemplate`・`MonacaMinimumTemplate`）は収録しません。GitHubが自動で表示する **Source code (zip)** はリポジトリ全体のため、学生用ZIPには使いません。なお、このリポジトリ自体はPublicなので、教員用ファイルもGitHub上では閲覧できます。
+学生用ZIPには `docs` 一式と、開き方・版情報を収録します。**いまは日本語だけの構成で配布します。** 展開してできたフォルダには `docs` / `samples` / `はじめに.txt` / `VERSION.json` があります。現在の登録単元は `M01OshiList` と `M02OshiSave` で、`samples/` に各完成見本を展開済みで収録します。Monacaへは教科書の取り込み用URLから開き、`samples` はコードを読み比べるために使います。言語を選ぶ入口がないのは、`config/i18n.json` の5言語がすべて `distribute: false` のためです（「多言語展開」）。翻訳を終えた言語を `distribute: true` にすると、言語を選ぶ入口の `index.html` がZIPに入り、`はじめに.txt` にも各言語の案内が付きます。`teacher` フォルダとテンプレート原本（`MonacaTemplate`・`MonacaMinimumTemplate`）は収録しません。GitHubが自動で表示する **Source code (zip)** はリポジトリ全体のため、学生用ZIPには使いません。なお、このリポジトリ自体はPublicなので、教員用ファイルもGitHub上では閲覧できます。
 
 授業中は教員が指定した版を使います。授業ごとの案内には、内容が固定された個別リリースのURLを使ってください。更新版は別フォルダに展開し、学生自身のプロジェクトは上書きしません。
 
-**完成プロジェクト（先生が作った見本）を配るときは、系統ごとに次の形で渡します。** 現在はMonacaのM01を収録しています。
+**完成プロジェクト（先生が作った見本）を配るときは、系統ごとに次の形で渡します。** 現在はMonacaのM01・M02を収録しています。
 
 | 系統 | 学生が受け取る形 |
 | --- | --- |
@@ -97,6 +98,8 @@ Freeプランの制限が、そのまま教材の設計を縛ります。詳細�
 | `M01OshiList/` | [推しログの完成ソースと実装の説明](M01OshiList/README.md) |
 | `docs/oshi-list/` | M01の学生用教科書と完成プロジェクトZIP |
 | `teacher/oshi-list/` | M01の教員用ガイドとSTEPごとの照合コード |
+| `M02OshiSave/` | [推しログの追加・保存の完成ソース](M02OshiSave/README.md) |
+| `docs/oshi-save/` / `teacher/oshi-save/` | M02の教科書・完成ZIP・教員用ガイドと照合コード |
 | `docs/common/` | 学生向けの共通準備資料 |
 | `docs/assets/` | 教科書の共通CSS・操作機能 |
 | `MonacaMinimumTemplate/` | [通常版の最小限テンプレート4.0.0と出所・比較記録](MonacaMinimumTemplate/README.md) |

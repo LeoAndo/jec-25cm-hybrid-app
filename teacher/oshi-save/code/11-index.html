@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+  <title>推しログ</title>
+  <script src="components/loader.js"></script>
+  <link rel="stylesheet" href="components/loader.css">
+  <link rel="stylesheet" href="https://unpkg.com/onsenui@2.12.9/css/onsenui.css">
+  <link rel="stylesheet" href="https://unpkg.com/onsenui@2.12.9/css/onsen-css-components.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/onsenui@2.12.9/js/onsenui.min.js"></script>
+  <script src="js/app.js"></script>
+</head>
+<body>
+  <ons-navigator id="nav_app" page="list.html"></ons-navigator>
+
+  <template id="list.html">
+    <ons-page id="page_list">
+      <ons-toolbar>
+        <div class="center">推しログ</div>
+      </ons-toolbar>
+
+      <div class="app-section">
+        <p class="app-caption">わたしの推し</p>
+        <h1 class="app-heading">好きな理由を集めよう。</h1>
+        <p class="app-description">学びや開発の中で見つけた、お気に入りの記録。</p>
+        <ons-button id="btn_open_add" class="app-action">推しを追加</ons-button>
+        <p id="txt_storage" class="app-message" aria-live="polite"></p>
+      </div>
+
+      <ons-list id="list_oshi"></ons-list>
+      <p id="txt_selected" class="app-section app-selection" aria-live="polite">まだ選択していません</p>
+      <div class="app-section reset-section">
+        <p class="app-description">保存した推しを消し、ソースに書いた初期の推しへ戻せます。</p>
+        <ons-button id="btn_request_reset" modifier="quiet">初期の推しに戻す</ons-button>
+        <div id="panel_reset" class="is-hidden">
+          <p class="app-description">このブラウザに保存した推しを削除します。元に戻せません。</p>
+          <ons-button id="btn_confirm_reset">削除して初期の推しに戻す</ons-button>
+          <ons-button id="btn_cancel_reset" modifier="quiet">やめる</ons-button>
+        </div>
+      </div>
+    </ons-page>
+  </template>
+
+  <template id="add.html">
+    <ons-page id="page_add">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>戻る</ons-back-button></div>
+        <div class="center">推しを追加</div>
+      </ons-toolbar>
+      <div class="app-section">
+        <p class="app-description">好きな理由や、次に試したいことを自分の言葉で残しましょう。</p>
+        <label class="app-label" for="txt_input_name">推しの名前</label>
+        <input id="txt_input_name" class="app-input" type="text" maxlength="60" placeholder="例：ノートからアプリを作ること">
+        <label class="app-label" for="txt_input_genre">ジャンル</label>
+        <input id="txt_input_genre" class="app-input" type="text" maxlength="30" placeholder="例：学び方">
+        <label class="app-label" for="txt_input_comment">私の推しポイント・次に試したいこと</label>
+        <textarea id="txt_input_comment" class="app-input" rows="4" maxlength="500" placeholder="好きな理由をひとこと"></textarea>
+        <p id="txt_add_message" class="app-message" aria-live="polite"></p>
+        <ons-button id="btn_save_oshi">追加して保存</ons-button>
+        <p class="app-note">保存先は、このブラウザの同じプレビューです。公開URLに入力内容は含まれません。</p>
+      </div>
+    </ons-page>
+  </template>
+
+  <template id="detail.html">
+    <ons-page id="page_detail">
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button>戻る</ons-back-button>
+        </div>
+        <div class="center">推しの詳細</div>
+      </ons-toolbar>
+
+      <div class="app-section">
+        <p id="txt_detail_genre" class="app-caption"></p>
+        <h1 id="txt_detail_name" class="app-heading"></h1>
+        <p class="app-label">私の推しポイント・次に試したいこと</p>
+        <p id="txt_detail_comment" class="app-comment"></p>
+      </div>
+    </ons-page>
+  </template>
+</body>
+</html>
