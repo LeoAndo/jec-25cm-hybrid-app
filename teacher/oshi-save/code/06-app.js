@@ -1,4 +1,5 @@
 // 見た目の比較では、次の行を有効にして再読み込みする。
+// OSの指定は、Onsen UIが画面を作る前に行う。
 // ons.platform.select("android");
 
 const STORAGE_KEY = "jec-25cm-oshi-save-v1";
@@ -28,6 +29,7 @@ let oshiItems = createInitialItems();
 let isOpeningPage = false;
 let canSave = true;
 
+// templateの中身は、ページが作られてから取得する。
 document.addEventListener("init", function(event) {
   const page = event.target;
 
