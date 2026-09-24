@@ -77,4 +77,6 @@ flutter build apk
 flutter run --release --no-resident -d <AndroidエミュレータのID> --use-application-binary=build/app/outputs/flutter-apk/app-release.apk
 ```
 
-生成物は`build/app/outputs/flutter-apk/app-release.apk`です。入力済みのデータを配るファイルではありません。2026-09-24に通常APK（約48.7MB）を生成しました。Flutter 3.47.5の`flutter analyze`は指摘なしです。Android 17のarm64エミュレータで初期表示・空欄検証・追加・スタンプ保存・詳細・再起動時の回数復元、iOS 26.5（iPhone 17 Pro）で起動・スタンプ保存・空欄検証を確認しました。学生全員のSDK・端末の組み合わせと教室の同時取得時間は未確認です。完成アプリのUnit Testはリポジトリ方針により作成していません。
+生成物は`build/app/outputs/flutter-apk/app-release.apk`です。入力済みのデータを配るファイルではありません。2026-09-24に通常APK（48,666,844 bytes、約48.7MB）を生成しました。Flutter 3.47.5の`flutter analyze`は指摘なしです。Android 17の専用arm64エミュレータで、最終APKの初期表示・追加・保存・5回上限・取消し・詳細・再起動時の名前／理由／回数の復元・初期化の取消しと確定を確認しました。Androidの空欄検証も実施し、リポジトリ外の検証コピーでは保存失敗時の回数維持と入力保持、不正データでの上書き防止、空リストの0件表示を確認しました。
+
+iOS 26.5（iPhone 17 Pro）で起動・スタンプ保存・空欄検証を確認しました。学生全員のSDK・端末の組み合わせと教室の同時取得時間は未確認です。完成アプリのUnit Testはリポジトリ方針により作成していません。
