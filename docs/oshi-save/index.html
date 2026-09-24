@@ -1965,7 +1965,7 @@ const restored = JSON.parse(text);
 <p><code>localStorage.setItem(STORAGE_KEY, JSON.stringify(nextItems))</code> が、同じブラウザの同じ保存領域へ文字列を保存する行です。localStorageは同期APIなので、次の行へ進む前にこの呼び出しが終わります。今回はPromiseやasync / awaitを使いません。</p>
 <p>保存設定や空き容量などの理由で書き込めないと例外が発生します。<code>try</code> 内の保存が成功したときだけ、oshiItemsをnextItemsへ替えて一覧を描き直します。<code>catch</code> 側では入力内容を残し、ボタンを戻してエラーを表示し、returnします。</p>
 <table><thead><tr><th>順番</th><th>そうする理由</th></tr></thead><tbody><tr><td>別の配列に追加</td><td>保存前に画面の元データを変えない。</td></tr><tr><td>ボタンを無効化して保存</td><td>同じ入力を連続して処理しない。</td></tr><tr><td>成功したら配列更新・一覧再描画・戻る</td><td>保存失敗を「追加できた」と見せない。</td></tr><tr><td>失敗したら画面に理由を出す</td><td>入力を消さず、次の確認や再試行につなげる。</td></tr></tbody></table>
-<p>1件追加して一覧へ戻り、<code>件をこのブラウザに保存しました。</code> の文を確かめます。このSTEPでは保存までなので、再読み込み時の表示はまだ初期データです。保存されていないと決めつけず、次のSTEPで読み込む側を作ります。</p>
+<p>1件追加して一覧へ戻り、<code>件をこのブラウザに保存しました。</code> の文を確かめます。このSTEPでは保存までなので、再読み込み時の表示はまだ初期データです。保存されていないと決めつけず、次のSTEPで読み込む側を作ります。また、このSTEPで再読み込みしてからもう一度追加すると、前に保存した内容は、ソースの初期データと新しい1件で上書きされます。保存した内容をまだ読み込んでいない配列に、新しい1件を足して保存するためです。次のSTEPで読み込めるのは、最後に保存した内容です。</p>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>キーと値で保存する目的はAndroidのSharedPreferencesやiOSのUserDefaultsと同じです。localStorageの値は文字列に限るためJSONへ変換します。sliceはJavaでArrayListを複製したり、Swiftで配列の別の値を作ったりする操作と比較できます。try / catchはJavaの例外処理、Swiftのdo / catchに対応し、今回は失敗後に表示中のデータを更新しない順序が要点です。</p></div>
 <details><summary>このSTEPの全コード（照合・合流用）</summary><div class="code-head">www/index.html · 全文</div>
 <pre id="code-06-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
