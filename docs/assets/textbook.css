@@ -8,6 +8,9 @@
   --mint: #eaf5ef;
 }
 * { box-sizing: border-box; }
+/* 右から左に書く言語（アラビア語）のページは <html dir="rtl"> になる。左右は決め打ちせず、
+   文の始まり側（inline-start）と終わり側（inline-end）で書く。日本語のページでは start が左、end が右になり、
+   見た目は left・right で書いたときと同じになる。 */
 html { scroll-behavior: smooth; scroll-padding-top: calc(var(--language-nav-height, 0px) + 1.5rem); }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif; font-size: 17px; line-height: 1.9; }
 /* macOS標準の各文字体系のフォント。日本語の未翻訳箇所は日本語の字形を保つ。 */
@@ -16,6 +19,7 @@ body:lang(zh-Hant-HK), [lang="zh-Hant-HK"] { font-family: -apple-system, BlinkMa
 body:lang(zh-Hant-TW), [lang="zh-Hant-TW"] { font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", sans-serif; }
 body:lang(my), [lang="my"] { font-family: "Myanmar Sangam MN", "Myanmar MN", sans-serif; }
 body:lang(ko), [lang="ko"] { font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Nanum Gothic", sans-serif; }
+body:lang(ar), [lang="ar"] { font-family: -apple-system, BlinkMacSystemFont, "Geeza Pro", sans-serif; }
 body:lang(ja), [lang="ja"] { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif; }
 .language-nav, .translation-note { max-width: 1260px; margin: auto; padding: .6rem 2rem; font-size: .88rem; }
 .language-nav { background: var(--paper); display: flex; flex-wrap: wrap; align-items: center; gap: .3rem .6rem; border-bottom: 1px solid var(--line); }
@@ -28,13 +32,13 @@ a:hover { text-decoration-thickness: 2px; }
 button, input { font: inherit; }
 button { cursor: pointer; }
 :focus-visible { outline: 3px solid #b44a00; outline-offset: 4px; }
-.skip { position: absolute; left: 1rem; top: -6rem; z-index: 10; background: white; padding: 1rem; }
+.skip { position: absolute; inset-inline-start: 1rem; top: -6rem; z-index: 10; background: white; padding: 1rem; }
 .skip:focus { top: 1rem; }
 .topbar { border-bottom: 1px solid var(--line); padding: .75rem 2rem; display: flex; justify-content: space-between; gap: 1rem; font-size: .82rem; letter-spacing: .03em; }
 .topbar a { color: var(--ink); }
 .brand { font-weight: 750; }
 .shell { display: grid; grid-template-columns: 260px minmax(0, 900px); max-width: 1260px; margin: auto; }
-.sidebar { padding: 2rem 1.25rem; border-right: 1px solid var(--line); }
+.sidebar { padding: 2rem 1.25rem; border-inline-end: 1px solid var(--line); }
 .sidebar-inner { position: sticky; top: calc(var(--language-nav-height, 0px) + 1.5rem); max-height: calc(100vh - var(--language-nav-height, 0px) - 3rem); overflow-y: auto; }
 .eyebrow { font-size: .78rem; letter-spacing: .11em; color: var(--muted); font-weight: 750; margin: 0 0 .7rem; }
 .sidebar ol { list-style: none; padding: 0; margin: 1rem 0; }
@@ -58,19 +62,27 @@ h2 { font-size: 1.7rem; line-height: 1.5; margin: .3rem 0 1.3rem; letter-spacing
 h3 { font-size: 1.14rem; line-height: 1.6; margin: 1.8rem 0 .6rem; }
 p { margin: .7rem 0 1rem; }
 li { margin: .45rem 0; }
-ul, ol { padding-left: 1.5rem; }
+ul, ol { padding-inline-start: 1.5rem; }
 .step-meta { color: var(--blue); font-size: .8rem; font-weight: 750; letter-spacing: .06em; margin: 0; }
 .goal, .check, .note, .task { border-radius: 9px; padding: 1rem 1.2rem; margin: 1.25rem 0; }
-.goal { background: #edf2ff; border-left: 4px solid var(--blue); }
-.check { background: var(--mint); border-left: 4px solid #24714f; }
-.note { background: #fff4d5; border-left: 4px solid #ac7200; }
-.task { background: #f5efff; border-left: 4px solid #7754a4; }
+.goal { background: #edf2ff; border-inline-start: 4px solid var(--blue); }
+.check { background: var(--mint); border-inline-start: 4px solid #24714f; }
+.note { background: #fff4d5; border-inline-start: 4px solid #ac7200; }
+.task { background: #f5efff; border-inline-start: 4px solid #7754a4; }
 .goal p:last-child, .check p:last-child, .note p:last-child, .task p:last-child { margin-bottom: 0; }
 .box-title { font-weight: 750; margin: 0 0 .3rem; }
 .check label { display: flex; align-items: flex-start; gap: .6rem; cursor: pointer; }
 input[type="checkbox"] { width: 1.2rem; height: 1.2rem; flex: 0 0 auto; margin-top: .4rem; accent-color: #24714f; }
 .file { display: block; color: var(--muted); overflow-wrap: anywhere; font-size: .8rem; padding: .5rem 0; }
 code, pre, kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+/* 右から左のページ（<html dir="rtl">）だけの指定。日本語のページに当てると、code の前後で行の折り返す位置が変わる。
+   コードとキーは、右から左のページでも左から右で読む。isolate で、前後のアラビア語との並びからも切り離す
+   （切り離さないと、`let count = 0;` の「;」が先頭へ回り込む）。pre は、行の頭も左にそろう。
+   strong は、中の最初の文字で向きを決める。訳文に日本語のまま残す画面の言葉（プロジェクト → 公開…）の
+   末尾の「…」が、言葉の反対側へ回り込まないようにするため。訳文ではタグを足せないので、CSSで受け持つ。 */
+[dir="rtl"] code, [dir="rtl"] kbd { direction: ltr; unicode-bidi: isolate; }
+[dir="rtl"] pre { direction: ltr; }
+[dir="rtl"] strong { unicode-bidi: plaintext; }
 code { background: #eef1f3; border-radius: 3px; padding: .13em .3em; font-size: .88em; overflow-wrap: anywhere; }
 pre { background: #192635; color: #edf4fc; border-radius: 0 0 9px 9px; padding: 1.2rem; margin: 0 0 1.2rem; overflow-x: auto; line-height: 1.65; font-size: .82rem; tab-size: 4; }
 pre code { padding: 0; background: transparent; color: inherit; font-size: inherit; overflow-wrap: normal; }
@@ -78,8 +90,8 @@ pre code { padding: 0; background: transparent; color: inherit; font-size: inher
 .code-head button { border: 1px solid #a6bed5; border-radius: 5px; padding: .15rem .6rem; color: white; background: transparent; white-space: nowrap; font-size: .75rem; }
 .code-head button:hover { background: #435a73; }
 /* 既知の技術（Web基礎の HTML / CSS / JavaScript、Java、Swift）との比較ブロック。
-   その単元で書く言語（Monaca系は HTML / CSS / JavaScript、Flutter系は Dart）を先頭（左端）に置き、
-   横に並べて見比べる。
+   その単元で書く言語（Monaca系は HTML / CSS / JavaScript、Flutter系は Dart）を先頭に置き、
+   横に並べて見比べる。先頭は、日本語のページでは左端、右から左の言語のページでは右端になる。
    auto-fit なので、幅が足りなくなれば2列→1列と自動で縦に積まれる。
    下限を min(240px, 100%) にしているのは、画面幅が240pxを下回ったときに
    列が画面からはみ出して横スクロールが出るのを防ぐため。 */
@@ -98,7 +110,7 @@ pre code { padding: 0; background: transparent; color: inherit; font-size: inher
 .compare-item pre { border-radius: 9px; margin: 0; flex: 1 1 auto; padding: .9rem; font-size: .76rem; white-space: pre-wrap; overflow-wrap: anywhere; overflow-x: visible; }
 kbd { font-size: .84em; border: 1px solid #bfc7cf; border-bottom-width: 2px; border-radius: 4px; padding: .1em .4em; white-space: nowrap; }
 table { width: 100%; border-collapse: collapse; margin: 1.2rem 0; font-size: .88rem; }
-th, td { border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; padding: .75rem .6rem; overflow-wrap: anywhere; }
+th, td { border-bottom: 1px solid var(--line); text-align: start; vertical-align: top; padding: .75rem .6rem; overflow-wrap: anywhere; }
 th { background: #f0f2ef; font-weight: 700; }
 figure { margin: 1.4rem 0; }
 img { max-width: 100%; height: auto; display: block; border-radius: 9px; border: 1px solid var(--line); }
@@ -131,7 +143,7 @@ details[open] > summary { margin-bottom: 1rem; }
   body { font-size: 16px; }
   .topbar { padding: .7rem 1rem; flex-wrap: wrap; }
   .shell { display: block; }
-  .sidebar { border-right: 0; border-bottom: 1px solid var(--line); padding: 1rem; }
+  .sidebar { border-inline-end: 0; border-bottom: 1px solid var(--line); padding: 1rem; }
   .sidebar-inner { position: static; max-height: none; }
   .sidebar ol { display: grid; grid-template-columns: 1fr 1fr; gap: .1rem .5rem; }
   .sidebar .resources { display: flex; flex-wrap: wrap; gap: .2rem 1rem; }
