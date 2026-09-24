@@ -13,6 +13,7 @@ body { margin: 0; background: var(--paper); color: var(--ink); font-family: -app
 /* macOS標準の各文字体系のフォント。日本語の未翻訳箇所は日本語の字形を保つ。 */
 body:lang(zh-Hans), [lang="zh-Hans"] { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", sans-serif; }
 body:lang(zh-Hant-HK), [lang="zh-Hant-HK"] { font-family: -apple-system, BlinkMacSystemFont, "PingFang HK", "PingFang TC", sans-serif; }
+body:lang(zh-Hant-TW), [lang="zh-Hant-TW"] { font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", sans-serif; }
 body:lang(my), [lang="my"] { font-family: "Myanmar Sangam MN", "Myanmar MN", sans-serif; }
 body:lang(ko), [lang="ko"] { font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Nanum Gothic", sans-serif; }
 body:lang(ja), [lang="ja"] { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif; }

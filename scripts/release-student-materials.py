@@ -98,8 +98,10 @@ DOWNLOAD_GUIDANCE = {
     "en": "Download **{asset}** from Assets and extract it. Open `index.html` in your browser, choose English, and start with the setup guide. Classes are taught in Japanese; translations help you understand the textbook.",
     "zh-Hans": "从 Assets 下载 **{asset}** 并解压。在浏览器中打开 `index.html`，选择简体中文，然后从课前准备指南开始。课程使用日语授课，译文用于帮助理解教材。",
     "zh-Hant-HK": "從 Assets 下載 **{asset}** 並解壓縮。在瀏覽器開啟 `index.html`，選擇繁體中文（香港），再從課前準備指南開始。課堂以日語授課，譯文用來協助理解教材。",
+    "zh-Hant-TW": "從 Assets 下載 **{asset}** 並解壓縮。在瀏覽器開啟 `index.html`，選擇繁體中文（台灣），再從課前準備指南開始。課程以日語授課，譯文是用來幫助你理解教材。",
     "ko": "Assets에서 **{asset}** 을 내려받아 압축을 풉니다. 브라우저에서 `index.html` 을 열고 한국어를 선택한 뒤, 수업 준비 안내부터 시작하세요. 수업은 일본어로 진행하며, 번역은 교재를 이해하는 데 도움을 주기 위한 것입니다.",
     "my": "Assets မှ **{asset}** ကို ဒေါင်းလုဒ်လုပ်ပြီး ZIP ဖိုင်ကို ဖြည်ပါ။ ဘရောက်ဇာတွင် `index.html` ကိုဖွင့်၍ မြန်မာဘာသာကို ရွေးပြီး သင်တန်းအတွက် ပြင်ဆင်ခြင်းလမ်းညွှန်မှ စတင်ပါ။ သင်တန်းကို ဂျပန်ဘာသာဖြင့် သင်ကြားပြီး ဘာသာပြန်သည် စာအုပ်ကို နားလည်ရန် အထောက်အကူပြုပါသည်။",
+    "es": "Descarga **{asset}** desde Assets y descomprímelo. Abre `index.html` en tu navegador, elige Español y empieza por la guía de preparación. Las clases son en japonés; las traducciones te ayudan a entender el libro de texto.",
 }
 EXCEPTION_MARKER = "<!-- translation-release-exception -->"
 
