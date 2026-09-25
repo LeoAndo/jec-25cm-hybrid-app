@@ -187,14 +187,6 @@
       "translation": "Pass values to the detail screen and finish the app, including going back."
     },
     {
-      "source": "先生が見本を使うと案内したら、<a1>M01OshiListの完成プロジェクトを開く</a1>へ進みます。通常版Monacaへログインした状態で、取り込むプロジェクトを確認します。自分の制作を始めるにはSTEP 00へ進みます。",
-      "translation": "If your teacher says to use the sample, go to <a1>Open the completed M01OshiList project</a1>. While logged in to standard Monaca, check the project you are about to import. To start building your own, go to STEP 00."
-    },
-    {
-      "source": "完成見本の取り込みにも1枠を使います。Freeプランの3枠を確認し、URLを繰り返し開いて複数のコピーを作らないようにします。自分の作品は削除しません。配布ZIPの <code>samples/M01OshiList</code> はコードを読むための見本です。",
-      "translation": "Importing the completed sample also uses one project slot. Check the three slots of the Free plan, and do not open the URL repeatedly, so that you do not create several copies. Do not delete your own work. The <code>samples/M01OshiList</code> folder in the distributed ZIP is a sample for reading the code."
-    },
-    {
       "source": "STEP 00 · コマ1",
       "translation": "STEP 00 · Session 1"
     },
@@ -399,10 +391,6 @@
       "translation": "Where you can customize"
     },
     {
-      "source": "カードの名前・種類・ひとこと、背景色、角丸の数値を変えられます。自分の好きなものと、その理由を自分の言葉で書きましょう。1か所変えるたびに保存・再読み込みをし、何が変わったかを説明します。",
-      "translation": "You can change the name, type, and short comment of each card, the background color, and the corner radius value. Write your own favorites and your reasons in your own words. Each time you change one thing, save, reload, and explain what changed."
-    },
-    {
       "source": "STEP 05 · コマ2",
       "translation": "STEP 05 · Session 2"
     },
@@ -565,10 +553,6 @@
     {
       "source": "<code>\"android\"</code> を <code>\"ios\"</code> へ書き換え、保存してプレビュー全体を再読み込みします。HTMLと自分のCSSは変更せず、同じ箇所を比べます。",
       "translation": "Change <code>\"android\"</code> to <code>\"ios\"</code>, save, and reload the whole preview. Do not change the HTML or your own CSS; compare the same places."
-    },
-    {
-      "source": "違いを1つ、共通する内容を1つ、言葉で説明します。",
-      "translation": "Describe in words one difference and one thing that is the same."
     },
     {
       "source": "OSの指定はOnsen UIが画面を作る前に必要です。<code>app.js</code> の先頭で行い、後のイベント処理の中へ移しません。この指定は<strong>表示スタイルの比較</strong>であり、ブラウザをAndroidやiOSの実機に変える操作ではありません。",
@@ -1041,18 +1025,6 @@
     {
       "source": "公開URLで相手へ渡るのは、ソースに書いた配列・HTML・CSSです。今画面で選んでいる項目は渡りません。この単元には保存機能もありません。",
       "translation": "What the import URL hands over to the other person is the array, HTML, and CSS written in the source. The item currently selected on the screen is not passed on. This unit also has no save feature."
-    },
-    {
-      "source": "Web基礎で作ったHTML・CSS・JavaScriptの役割分担は、完成版でも同じです。画面間の移動と値の受け渡しはAndroid・iOSの経験と対応します。今回の新しい考え方は、OS別の見た目を共通のHTMLへ適用するauto-stylingです。自分で変えた内容と、OSによる違いを分けて説明しましょう。",
-      "translation": "The division of roles among HTML, CSS, and JavaScript from Web Basics is the same in the finished version. Moving between screens and passing values match your experience in Android and iOS. The new idea this time is auto-styling, which applies an OS-specific look to shared HTML. Explain what you changed yourself separately from the differences caused by the OS."
-    },
-    {
-      "source": "一覧・詳細・戻る・連続クリック・OSによる差を確認し、自分の変更箇所を説明できる。",
-      "translation": "The list, the detail screen, going back, repeated clicks, and the differences by OS have been checked, and you can explain what you changed."
-    },
-    {
-      "source": "<code>oshiItems</code> の名前・種類・理由・件数、HTMLの見出し、CSSの色・余白・文字サイズを変えられます。自分の好きなものと、その理由を自分の言葉で書きます。次に1か所だけ見た目を変え、どのファイルの何を変え、どの画面へ反映されたかを説明してください。",
-      "translation": "You can change the names, types, reasons, and number of items in <code>oshiItems</code>, the headings in the HTML, and the colors, spacing, and font sizes in the CSS. Write your own favorites and reasons in your own words. Then change just one thing in the look, and explain what you changed in which file and on which screen it appeared."
     },
     {
       "source": "見えること",

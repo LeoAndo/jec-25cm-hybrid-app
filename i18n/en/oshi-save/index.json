@@ -95,10 +95,6 @@
       "translation": "13 Submit and check preparation status"
     },
     {
-      "source": "14 アレンジ箇所を言葉にする",
-      "translation": "14 Put your customizations into words"
-    },
-    {
       "source": "困ったとき",
       "translation": "Troubleshooting"
     },
@@ -157,14 +153,6 @@
     {
       "source": "授業内でFlutter準備を開始し、待ち時間に好きなものノートをアレンジ・確認・提出する。",
       "translation": "Start preparing Flutter in class, and customize, check, and submit your favorites notebook while waiting."
-    },
-    {
-      "source": "<a1>M02OshiSaveをMonacaへ取り込む</a1>。これはアプリを動かすURLではなく、完成見本のソースを取り込むURLです。リンク先でインポートすると自分のMonacaへコピーを取り込むため、Freeプランの3枠のうち1枠を使います。自分の制作を始める人は、STEP 00へ進みます。",
-      "translation": "<a1>Import M02OshiSave into Monaca</a1>. This is not a URL that runs the app; it is a URL that imports the source of the completed sample. Importing at the link copies the project into your own Monaca, so it uses one of the three project slots of the Free plan. If you are starting your own work, go on to STEP 00."
-    },
-    {
-      "source": "配布ZIPの <code>samples/M02OshiSave</code> はコードを読み比べるための完成見本です。自分の作品を見本で上書きしません。",
-      "translation": "<code>samples/M02OshiSave</code> in the distributed ZIP is the completed sample for comparing code. Do not overwrite your own work with the sample."
     },
     {
       "source": "STEP 00 · コマ5",
@@ -371,10 +359,6 @@
       "translation": "You use <code>input</code>, <code>textarea</code>, and <code>label</code> from Web Basics as they are. They play the same role as <code>EditText</code> on Android and <code>UITextField</code> and <code>UITextView</code> on iOS. Opening the screen has the same form as navigating to the detail screen, and <code>data</code> is omitted because no data needs to be passed. <code>createInitialItems</code> corresponds to returning an array of data from a function in Java or Swift."
     },
     {
-      "source": "入力画面を開き、3つの欄へ入力して戻れた。追加ボタンがまだ押せない理由を説明できた。",
-      "translation": "The input screen opens, the 3 fields can be filled in, and you can go back. You can explain why the add button cannot be pressed yet."
-    },
-    {
       "source": "STEP 02 · コマ5",
       "translation": "STEP 02 · Session 5"
     },
@@ -515,10 +499,6 @@
       "translation": "You use the division of roles from Web Basics: HTML for structure and example entries, CSS for decoration, and JavaScript for data and behavior. You tell the values entered on screen apart from the initial data in the source by the result after a reload."
     },
     {
-      "source": "アレンジした場所と結果を説明でき、追加・詳細・戻るが引き続き動いた。",
-      "translation": "You can explain where you customized and the result, and add, detail, and back still work."
-    },
-    {
       "source": "STEP 05 · コマ6",
       "translation": "STEP 05 · Session 6"
     },
@@ -599,10 +579,6 @@
       "translation": "The type differs between using arrays and data objects directly on screen, as in Java or Swift, and saving a string. JSON is introduced here as the representation that bridges this gap. You are not relearning array operations; you are confirming the direction of the conversion, \"array → JSON string → array\"."
     },
     {
-      "source": "JSONの文字列と配列を区別し、<code>stringify</code>と<code>parse</code>の向きを説明できた。",
-      "translation": "JSON strings and arrays are distinguished, and you can explain the direction of <code>stringify</code> and <code>parse</code>."
-    },
-    {
       "source": "STEP 06 · コマ6",
       "translation": "STEP 06 · Session 6"
     },
@@ -681,10 +657,6 @@
     {
       "source": "キーと値で保存する目的はAndroidの<code>SharedPreferences</code>やiOSの<code>UserDefaults</code>と同じです。<code>localStorage</code>の値は文字列に限るためJSONへ変換します。<code>slice</code>はJavaで<code>ArrayList</code>を複製したり、Swiftで配列の別の値を作ったりする操作と比較できます。<code>try</code> / <code>catch</code>はJavaの例外処理、Swiftの<code>do</code> / <code>catch</code>に対応し、今回は失敗後に表示中のデータを更新しない順序が要点です。<code>canSave</code>でボタンの <code>disabled</code> を切り替えるのは、Androidの<code>setEnabled(false)</code>やiOSの<code>isEnabled = false</code>で、条件がそろうまで操作を受け付けないのと同じです。",
       "translation": "The purpose of saving by key and value is the same as <code>SharedPreferences</code> on Android and <code>UserDefaults</code> on iOS. <code>localStorage</code> values are limited to strings, so you convert to JSON. <code>slice</code> can be compared with duplicating an <code>ArrayList</code> in Java or making a separate array value in Swift. <code>try</code> / <code>catch</code> corresponds to exception handling in Java and <code>do</code> / <code>catch</code> in Swift; the key point this time is the order, which does not update the displayed data after a failure. Switching the button's <code>disabled</code> with <code>canSave</code> is the same as <code>setEnabled(false)</code> on Android or <code>isEnabled = false</code> on iOS, which refuse operations until the conditions are met."
-    },
-    {
-      "source": "保存成功の文を確認し、コピー・保存・表示更新の順番を説明できた。",
-      "translation": "The save success message has been checked, and you can explain the order: copy, save, then update the display."
     },
     {
       "source": "STEP 07 · コマ6",
@@ -843,16 +815,8 @@
       "translation": "Long Japanese text and line breaks are still readable."
     },
     {
-      "source": "保存キーは変えず、まず文字や色を変えましょう。保存して再読み込みし、どの変更がソースに残り、どの内容がブラウザだけに残るかを説明します。",
-      "translation": "Leave the storage key alone, and change text and colors first. Save and reload, and explain which changes remain in the source and which content remains only in the browser."
-    },
-    {
       "source": "ネイティブアプリでも、コードに書いた既定値より保存済みの設定を優先することがあります。同じ区別を、<code>createInitialItems</code>と<code>getItem</code>のどちらが最終的な<code>oshiItems</code>になるかで追います。アレンジは既習のデータと装飾の変更だけで行います。",
       "translation": "Native apps, too, sometimes give saved settings priority over the default values written in the code. You follow the same distinction by seeing which of <code>createInitialItems</code> and <code>getItem</code> ends up as the final <code>oshiItems</code>. Customization uses only the changes to data and decoration that you have already learned."
-    },
-    {
-      "source": "保存・復元の一連の操作ができ、ソースのアレンジと入力データの保存先を説明できた。",
-      "translation": "The whole sequence of saving and restoring works, and you can explain the customizations in the source and where the entered data is saved."
     },
     {
       "source": "STEP 10 · コマ7",
@@ -1023,18 +987,6 @@
       "translation": "Submit and check preparation status"
     },
     {
-      "source": "先生が授業中に案内する提出先・締め切りを確認し、次の内容を提出します。まだ案内がない場合は、URLと説明を控えて先生へ確認します。",
-      "translation": "Check the submission site and deadline that your teacher announces in class, and submit the following. If there is no announcement yet, note down the URL and description and check with your teacher."
-    },
-    {
-      "source": "自分の好きなものノートで発行した公開URL。",
-      "translation": "The import URL issued for your own favorites notebook."
-    },
-    {
-      "source": "アレンジした場所と、画面へどう表れるかの短い説明。",
-      "translation": "A short description of where you customized and how it appears on the screen."
-    },
-    {
       "source": "通常版MonacaのFreeプランではZIPを学生の提出物にしません。先生は公開URLから取り込み、初期データと操作を確認します。公開中の自分のプロジェクトは提出後に削除しません。",
       "translation": "In the Free plan of standard Monaca, a ZIP is not used as the students' submission. The teacher imports from the import URL and checks the initial data and the operations. Do not delete your published project after submitting."
     },
@@ -1047,20 +999,8 @@
       "translation": "Distinguish submitting by sharing the source from showing the data saved on the device. As when checking the Android / iOS runtime environment, record specifically which items are ready and which cannot be used yet."
     },
     {
-      "source": "指定先へ自分のURLと変更説明を提出し、Flutter準備の状態も先生へ伝えた。",
-      "translation": "Your URL and change description have been submitted to the designated destination, and the state of your Flutter preparation has been reported to your teacher."
-    },
-    {
       "source": "STEP 14 · コマ7",
       "translation": "STEP 14 · Session 7"
-    },
-    {
-      "source": "アレンジできる場所を言葉にする",
-      "translation": "Put the parts you can customize into words"
-    },
-    {
-      "source": "最後に提出したソースを見ながら、次の3点を自分の言葉で説明します。",
-      "translation": "Finally, while looking at the source you submitted, explain the following 3 points in your own words."
     },
     {
       "source": "どのファイルの、どの文字・色・初期データを変更したか。",
@@ -1081,14 +1021,6 @@
     {
       "source": "全コードは見本との比較用です。自分の変更を消して見本に戻す必要はありません。動かなくなった部分や、変更した場所と結果の関係を確かめるために使います。",
       "translation": "The full code is for comparison with the sample. You do not need to erase your changes and go back to the sample. Use it to check parts that stopped working, and the relation between what you changed and the result."
-    },
-    {
-      "source": "HTML・CSS・JavaScriptの役割分担を使い、変更の理由をファイルの場所と結び付けて説明します。保存があるアプリでは、ソースの初期値と保存値の両方を見る点を、<code>SharedPreferences</code>／<code>UserDefaults</code>を使うアプリと比べて振り返ります。",
-      "translation": "Using the division of roles between HTML, CSS, and JavaScript, explain the reason for each change and tie it to its place in the files. For an app with saving, look back on the point that you look at both the initial values in the source and the saved values, compared with apps that use <code>SharedPreferences</code> / <code>UserDefaults</code>."
-    },
-    {
-      "source": "自分の変更箇所と結果を説明でき、初期状態からも伝わる作品にできた。",
-      "translation": "You can explain what you changed and the result, and the work comes across even from the initial state."
     },
     {
       "source": "見えること",

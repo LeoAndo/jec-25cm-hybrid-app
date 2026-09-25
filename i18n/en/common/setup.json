@@ -91,10 +91,6 @@
       "translation": "In Finder, double-click the downloaded ZIP to extract it. If it has already become a folder with the same name, use that folder."
     },
     {
-      "source": "展開したフォルダを、見つけやすい場所に置きます。例えば <code>書類</code> の中です。",
-      "translation": "Put the extracted folder somewhere easy to find, for example inside <code>書類</code> (Documents)."
-    },
-    {
       "source": "中に <code>docs</code>、<code>はじめに.txt</code>、<code>VERSION.json</code> があることを確かめます。完成見本が同梱されている版には <code>samples</code> もあります。言語を選ぶ <code>index.html</code> がある版では、そこから教科書を開けます。",
       "translation": "Check that it contains <code>docs</code>, <code>はじめに.txt</code>, and <code>VERSION.json</code>. Versions that include the completed samples also have <code>samples</code>. In versions that have an <code>index.html</code> for choosing a language, you can open the textbooks from there."
     },
@@ -119,32 +115,8 @@
       "translation": "Completed Monaca project"
     },
     {
-      "source": "教科書や先生が案内する取り込み用URLを開きます。<code>samples</code> の中身は、コードを読み比べるための写しです。",
-      "translation": "Open the import URL given in the textbook or by your teacher. The contents of <code>samples</code> are a copy for reading and comparing the code."
-    },
-    {
       "source": "Flutterの完成プロジェクト",
       "translation": "Completed Flutter project"
-    },
-    {
-      "source": "Visual Studio Code の <code>File → Open Folder…</code> で、<code>samples</code> 内の指定されたプロジェクトフォルダを開きます。<code>pubspec.yaml</code> が入っている階層を選びます。",
-      "translation": "In Visual Studio Code, use <code>File → Open Folder…</code> to open the specified project folder inside <code>samples</code>. Select the folder that contains <code>pubspec.yaml</code>."
-    },
-    {
-      "source": "Web基礎・Android・iOSの見本と同じく、自分の作品を分ける",
-      "translation": "As with the Web Basics, Android, and iOS samples, keep your own work separate"
-    },
-    {
-      "source": "先生の完成見本と、自分で作るプロジェクトは別のものです。自分の作品を配布フォルダの中へ保存すると、教材を入れ替えたときに混ざります。自作の保存先は、その日の教科書で決めます。",
-      "translation": "Your teacher's completed samples and the projects you create yourself are separate things. If you save your own work inside the distributed folder, it gets mixed up when the materials are replaced. The save location for your own work is decided in the textbook for that day."
-    },
-    {
-      "source": "更新版は別フォルダに展開します。同じ日に配り直された版は名前が同じになるため、先生の案内を確かめてから入れ替えてください。自分の作品を上書きしません。質問するときは、フォルダ名の日付と <code>VERSION.json</code> の <code>version</code> を伝えます。",
-      "translation": "Extract an updated version into a separate folder. A version redistributed on the same day has the same name, so check your teacher's instructions before replacing it. Do not overwrite your own work. When asking a question, give the date in the folder name and the <code>version</code> in <code>VERSION.json</code>."
-    },
-    {
-      "source": "先生が指定した版の教科書を開き、自分の作品と分けて置けた。",
-      "translation": "The textbook of the version your teacher specified is open, and the materials are kept separate from your own work."
     },
     {
       "source": "Google Chromeで <a1>Monacaの公式サイト</a1>を開き、<code>ログイン</code> から進みます。この授業は<strong>通常版MonacaのFreeプラン</strong>を使います。ログイン後の開発画面は <code>console.monaca.mobi</code> です。",

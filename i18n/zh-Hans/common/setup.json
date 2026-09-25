@@ -91,10 +91,6 @@
       "translation": "在 Finder 中双击下载的 ZIP，将其解压。如果已经是同名的文件夹，就使用那个文件夹。"
     },
     {
-      "source": "展開したフォルダを、見つけやすい場所に置きます。例えば <code>書類</code> の中です。",
-      "translation": "把解压出的文件夹放到容易找到的位置，例如放在 <code>書類</code>（文稿）里。"
-    },
-    {
       "source": "中に <code>docs</code>、<code>はじめに.txt</code>、<code>VERSION.json</code> があることを確かめます。完成見本が同梱されている版には <code>samples</code> もあります。言語を選ぶ <code>index.html</code> がある版では、そこから教科書を開けます。",
       "translation": "确认里面有 <code>docs</code>、<code>はじめに.txt</code>、<code>VERSION.json</code>。附带完成示例的版本还会有 <code>samples</code>。在带有用于选择语言的 <code>index.html</code> 的版本中，可以从那里打开课本。"
     },
@@ -119,32 +115,8 @@
       "translation": "Monaca 的完成项目"
     },
     {
-      "source": "教科書や先生が案内する取り込み用URLを開きます。<code>samples</code> の中身は、コードを読み比べるための写しです。",
-      "translation": "打开课本或老师告知的导入链接。<code>samples</code> 里的内容，是用来对照阅读代码的副本。"
-    },
-    {
       "source": "Flutterの完成プロジェクト",
       "translation": "Flutter 的完成项目"
-    },
-    {
-      "source": "Visual Studio Code の <code>File → Open Folder…</code> で、<code>samples</code> 内の指定されたプロジェクトフォルダを開きます。<code>pubspec.yaml</code> が入っている階層を選びます。",
-      "translation": "在 Visual Studio Code 中通过 <code>File → Open Folder…</code>，打开 <code>samples</code> 里指定的项目文件夹。选择包含 <code>pubspec.yaml</code> 的那一层文件夹。"
-    },
-    {
-      "source": "Web基礎・Android・iOSの見本と同じく、自分の作品を分ける",
-      "translation": "和 Web 基础、Android 与 iOS 的示例一样，把自己的作品分开放"
-    },
-    {
-      "source": "先生の完成見本と、自分で作るプロジェクトは別のものです。自分の作品を配布フォルダの中へ保存すると、教材を入れ替えたときに混ざります。自作の保存先は、その日の教科書で決めます。",
-      "translation": "老师的完成示例和自己创建的项目是不同的东西。如果把自己的作品保存到发放的文件夹里，更换教材时就会混在一起。自己作品的保存位置，在当天的课本中决定。"
-    },
-    {
-      "source": "更新版は別フォルダに展開します。同じ日に配り直された版は名前が同じになるため、先生の案内を確かめてから入れ替えてください。自分の作品を上書きしません。質問するときは、フォルダ名の日付と <code>VERSION.json</code> の <code>version</code> を伝えます。",
-      "translation": "更新版解压到另一个文件夹。同一天重新发放的版本，名称会相同，所以请先确认老师的说明，再进行替换。不要覆盖自己的作品。提问时，请告知文件夹名中的日期和 <code>VERSION.json</code> 里的 <code>version</code>。"
-    },
-    {
-      "source": "先生が指定した版の教科書を開き、自分の作品と分けて置けた。",
-      "translation": "老师指定版本的课本已打开，并已与自己的作品分开存放。"
     },
     {
       "source": "Google Chromeで <a1>Monacaの公式サイト</a1>を開き、<code>ログイン</code> から進みます。この授業は<strong>通常版MonacaのFreeプラン</strong>を使います。ログイン後の開発画面は <code>console.monaca.mobi</code> です。",
