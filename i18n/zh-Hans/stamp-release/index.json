@@ -72,7 +72,7 @@
     },
     {
       "source": "09 保存を確かめてアレンジする",
-      "translation": "09 确认保存并修改"
+      "translation": "09 确认保存并进行修改"
     },
     {
       "source": "コマ14 · STEP 10〜14",
@@ -172,7 +172,7 @@
     },
     {
       "source": "<code>Terminal &gt; New Terminal</code>で<code>flutter pub get</code>を実行し、<code>Flutter: Launch Emulator</code>で既存のiOSシミュレータを起動します。<code>flutter devices</code>でIDを読み、<code>flutter run -d 端末ID</code>で実行します。端末IDは表示された値へ置き換えます。",
-      "translation": "用 <code>Terminal &gt; New Terminal</code> 运行 <code>flutter pub get</code>，再用 <code>Flutter: Launch Emulator</code> 启动已有的 iOS 模拟器。用 <code>flutter devices</code> 查看 ID，然后用 <code>flutter run -d 端末ID</code> 运行。把 端末ID（设备 ID）替换成显示出来的值。"
+      "translation": "用 <code>Terminal &gt; New Terminal</code> 运行 <code>flutter pub get</code>，再用 <code>Flutter: Launch Emulator</code> 启动已有的 iOS 模拟器。用 <code>flutter devices</code> 查看 ID，然后用 <code>flutter run -d 端末ID</code> 运行。把「端末ID」（设备 ID）替换成显示出来的值。"
     },
     {
       "source": "コードを保存したら、<code>flutter run</code>が動いているターミナルで小文字の<code>r</code>を押すとホットリロードし、現在の<code>State</code>を保って画面を更新します。初期値や<code>initState</code>からやり直す場合は、大文字の<code>R</code>（<code>Shift + R</code>）でホットリスタートします。<code>q</code>は実行の終了です。以後、再起動による確認では<code>R</code>を使い、保存が未実装の段階では入力した習慣や回数が消えることも確かめます。",
@@ -192,7 +192,7 @@
     },
     {
       "source": "名前・理由・回数を保持。<code>required</code>は必須の名前付き引数、<code>final</code>は再代入しないフィールド。",
-      "translation": "保存名称、理由、次数。<code>required</code> 是必需的命名参数，<code>final</code> 是不重新赋值的字段。"
+      "translation": "持有名称、理由、次数。<code>required</code> 是必需的命名参数，<code>final</code> 是不重新赋值的字段。"
     },
     {
       "source": "<code>StampBoardPage</code>の<code>State</code>",
@@ -200,7 +200,7 @@
     },
     {
       "source": "<code>habits</code>を保持し、<code>setState</code>で回数の変更を通知。<code>build</code>が値から一覧・合計を作る。",
-      "translation": "保存 <code>habits</code>，用 <code>setState</code> 通知次数的变化。<code>build</code> 根据值生成列表和合计。"
+      "translation": "持有 <code>habits</code>，用 <code>setState</code> 通知次数的变化。<code>build</code> 根据值生成列表和合计。"
     },
     {
       "source": "<code>count</code>を受け取り、<code>for</code>と条件演算子でマークを並べる表示専用Widget。",
@@ -260,7 +260,7 @@
     },
     {
       "source": "Androidの<code>EditText</code>やiOSの<code>UITextField</code>から文字を読む場面に対応します。Flutterでは<code>controller</code>を<code>State</code>に保持し、画面が終わるときに解放します。入力欄を開き直しても残したい場合は別の場所へ保存が必要ですが、まだ行いません。",
-      "translation": "对应于从 Android 的 <code>EditText</code> 或 iOS 的 <code>UITextField</code> 读取文字的场景。在 Flutter 中，把 <code>controller</code> 保存在 <code>State</code> 里，页面结束时释放。如果希望重新打开输入框后内容仍然保留，就需要保存到别的地方，但现在还不做。"
+      "translation": "对应于从 Android 的 <code>EditText</code> 或 iOS 的 <code>UITextField</code> 读取文字的场景。在 Flutter 中，把 <code>controller</code> 放在 <code>State</code> 里持有，页面结束时释放。如果希望重新打开输入框后内容仍然保留，就需要保存到别的地方，但现在还不做。"
     },
     {
       "source": "2つの入力欄を開いて入力し、戻ることができた。",
@@ -380,7 +380,7 @@
     },
     {
       "source": "見出しの<code>Text</code>・余白",
-      "translation": "标题的 <code>Text</code>、留白"
+      "translation": "标题的 <code>Text</code>、边距"
     },
     {
       "source": "何を入力するかの伝わり方と読みやすさ。",
@@ -420,7 +420,7 @@
     },
     {
       "source": "途中から合流する場合は、自分が変えた文字・色・数値を控えてから<code>lib/main.dart</code>をそろえます。",
-      "translation": "如果是中途跟进，先记下自己改过的文字、颜色和数值，再把 <code>lib/main.dart</code> 改成与这份代码一致。"
+      "translation": "如果是中途加入，先记下自己改过的文字、颜色和数值，再把 <code>lib/main.dart</code> 改成与这份代码一致。"
     },
     {
       "source": "Visual Studio Codeで同じスタンプ帳を開きます。開始状態は「入力で追加できるが、再起動で消える」です。今日は記録を端末へ残します。",
@@ -436,7 +436,7 @@
     },
     {
       "source": "次は流れを読む抜粋で、このSTEPではまだ追加しません。次のSTEPでパッケージと全コードをそろえます。",
-      "translation": "下面是用来阅读流程的节选，在这个 STEP 里还不添加。下一个 STEP 再统一包和完整代码。"
+      "translation": "下面是用来阅读流程的节选，在这个 STEP 里还不添加。下一个 STEP 再准备好包和完整代码。"
     },
     {
       "source": "Javaの同期的な戻り値と比較し、今回は<code>Future</code>の完了を待って結果を得る点を新しく扱います。Java／Swiftの非同期APIを履修済みとは仮定しません。既知の順次処理から「完了後の続き」と「待機中の画面」を区別します。",
@@ -460,11 +460,11 @@
     },
     {
       "source": "実行中のアプリを<code>q</code>で終了し、<code>flutter pub get</code>を実行します。新しいネイティブプラグインを加えたのでホットリロードだけで済ませず、全コードを更新して<code>flutter run -d 端末ID</code>で起動し直します。",
-      "translation": "用 <code>q</code> 结束运行中的应用，运行 <code>flutter pub get</code>。因为加入了新的原生插件，不能只靠热重载，要更新完整代码后用 <code>flutter run -d 端末ID</code> 重新启动。"
+      "translation": "用 <code>q</code> 结束运行中的应用，运行 <code>flutter pub get</code>。因为加入了新的原生插件，不能只靠热重载，要更新完整代码后用 <code>flutter run -d 端末ID</code>（端末ID＝设备 ID）重新启动。"
     },
     {
       "source": "起動し直さずに<code>r</code>で反映すると、ターミナルにはエラーが出ませんが、スタンプを押しても習慣を追加しても「保存できませんでした。」で始まる文が出るだけで、保存できません。続けて<code>R</code>を押すと、画面全体が赤くなり<code>Bad state: The SharedPreferencesAsyncPlatform instance must be set.</code>と出ます。<code>r</code>と<code>R</code>はDartのコードを入れ替えるだけで、アプリのビルドをやり直しません。新しいプラグインは、ビルドし直したアプリにだけ組み込まれます。そのときは<code>q</code>で終了し、<code>flutter run -d 端末ID</code>で起動し直します。",
-      "translation": "如果不重新启动，只用 <code>r</code> 反映更改，终端里不会报错，但无论盖印章还是添加习惯，都只会显示以「保存できませんでした。」（保存失败）开头的文字，无法保存。接着按 <code>R</code>，整个屏幕会变红，并显示 <code>Bad state: The SharedPreferencesAsyncPlatform instance must be set.</code>。<code>r</code> 和 <code>R</code> 只是替换 Dart 代码，不会重新构建应用。新插件只会被组装进重新构建的应用里。这时用 <code>q</code> 结束，再用 <code>flutter run -d 端末ID</code> 重新启动。"
+      "translation": "如果不重新启动，只用 <code>r</code> 反映更改，终端里不会报错，但无论盖印章还是添加习惯，都只会显示以「保存できませんでした。」（保存失败）开头的文字，无法保存。接着按 <code>R</code>，整个屏幕会变红，并显示 <code>Bad state: The SharedPreferencesAsyncPlatform instance must be set.</code>。<code>r</code> 和 <code>R</code> 只是替换 Dart 代码，不会重新构建应用。新插件只会被组装进重新构建的应用里。这时用 <code>q</code> 结束，再用 <code>flutter run -d 端末ID</code>（端末ID＝设备 ID）重新启动。"
     },
     {
       "source": "<code>import</code>でパッケージを読み込み、<code>State</code>に<code>SharedPreferencesAsync</code>を1つ持ちます。保存キー<code>storageKey</code>も1か所です。このAPIだけを使い、旧APIやキャッシュ付きAPIを混ぜません。",
@@ -584,7 +584,7 @@
     },
     {
       "source": "削除するのは<code>preferences.remove(storageKey)</code>で指定したキー1個だけです。保存領域全体の<code>clear</code>は使いません。削除に成功してから初期の<code>Habit</code>配列へ戻し、保存を再び有効にします。削除に失敗したら元の一覧とエラーの文を残します。",
-      "translation": "删除的只有用 <code>preferences.remove(storageKey)</code> 指定的那1个键。不使用清空整个保存区域的 <code>clear</code>。删除成功后再恢复成初始的 <code>Habit</code> 数组，并重新启用保存。删除失败时，保留原来的列表和错误文字。"
+      "translation": "删除的只有用 <code>preferences.remove(storageKey)</code> 指定的那1个键。不使用清空整个存储区域的 <code>clear</code>。删除成功后再恢复成初始的 <code>Habit</code> 数组，并重新启用保存。删除失败时，保留原来的列表和错误文字。"
     },
     {
       "source": "自分が残す必要のない検証用の記録で、初期化を開いてやめるを押します。記録が残ることを確認します。",
@@ -636,7 +636,7 @@
     },
     {
       "source": "見出し、入力例、色、余白",
-      "translation": "标题、输入示例、颜色、留白"
+      "translation": "标题、输入示例、颜色、边距"
     },
     {
       "source": "使い方の伝わりやすさ。",
@@ -688,7 +688,7 @@
     },
     {
       "source": "キャッシュを受け取ってもAndroid SDK・NDK・AGP等の取得が残る場合があります。<code>flutter run -d Android端末ID</code>を実行し、ターミナルの取得状況を見ます。待機時間はコードと提出前チェックの確認に使い、途中で同じビルドを重ねて始めません。",
-      "translation": "即使拿到了缓存，也可能还需要下载 Android SDK、NDK、AGP 等。运行 <code>flutter run -d Android端末ID</code>，观察终端里的下载情况。等待时间用来确认代码和提交前的检查项目，不要在中途重复启动同一个构建。"
+      "translation": "即使拿到了缓存，也可能还需要下载 Android SDK、NDK、AGP 等。运行 <code>flutter run -d Android端末ID</code>（Android端末ID＝Android 设备 ID），观察终端里的下载情况。等待时间用来确认代码和提交前的检查项目，不要在中途重复启动同一个构建。"
     },
     {
       "source": "同じDartソースからiOS用とAndroid用をビルドしますが、ネイティブ側の道具と依存関係は別です。既に知っているAndroid StudioのSDK・エミュレータを使い、Flutterがビルドと起動をつなぎます。",
@@ -740,7 +740,7 @@
     },
     {
       "source": "生成したAPKをそのままAndroidエミュレータへ入れます。先に実行中の<code>flutter run</code>を<code>q</code>で終了し、<code>flutter devices</code>でAndroidのIDを確認します。下のAndroid端末IDは実際のIDに置き換えます。",
-      "translation": "把生成的 APK 直接安装到 Android 模拟器上。先用 <code>q</code> 结束运行中的 <code>flutter run</code>，再用 <code>flutter devices</code> 确认 Android 的 ID。把下面的 Android端末ID（Android 设备 ID）替换成实际的 ID。"
+      "translation": "把生成的 APK 直接安装到 Android 模拟器上。先用 <code>q</code> 结束运行中的 <code>flutter run</code>，再用 <code>flutter devices</code> 确认 Android 的 ID。把下面的「Android端末ID」（Android 设备 ID）替换成实际的 ID。"
     },
     {
       "source": "<code>use-application-binary</code>で指定したファイルを使うため、ここで別のソースを再ビルドする操作ではありません。<code>no-resident</code>は起動後にコマンドを終了する指定で、アプリは端末で操作できます。",
@@ -756,7 +756,7 @@
     },
     {
       "source": "スタンプの上限と1つ戻すを試します。",
-      "translation": "试试印章的上限和「1つ戻す」（撤销一个）。"
+      "translation": "试试印章的上限和「1つ戻す」（退回一个）。"
     },
     {
       "source": "Androidのアプリ情報からアプリを停止し、アイコンから起動し直して復元を確認します。バックグラウンドへ移すだけとは区別します。アプリ情報とアイコンに出るアプリの名前は、プロジェクト名の<code>f02_stamp_release</code>です（F01から続けている場合は<code>f01_stamp_board</code>）。",
@@ -796,11 +796,11 @@
     },
     {
       "source": "iOSとAndroidでは同じ名前の記録を使っても保存領域は別です。片方で入力してももう片方へ自動では移りません。両方の画面で文字・余白・入力・戻るを比較し、見た目の違いと動作の一致を確かめます。",
-      "translation": "iOS 和 Android 即使使用同名的记录，保存区域也是分开的。在一边输入，不会自动转移到另一边。在两边的页面上比较文字、留白、输入、返回，确认外观的差异和行为的一致。"
+      "translation": "iOS 和 Android 即使使用同名的记录，存储区域也是分开的。在一边输入，不会自动转移到另一边。在两边的页面上比较文字、边距、输入、返回，确认外观的差异和行为的一致。"
     },
     {
       "source": "ネイティブアプリでも、ソースの初期値と端末に保存した利用者データは別です。APKをコピーすることは、保存領域のバックアップを渡すことではありません。",
-      "translation": "原生应用也一样，源码中的初始值和保存在设备上的用户数据是分开的。复制 APK 并不是交出保存区域的备份。"
+      "translation": "原生应用也一样，源码中的初始值和保存在设备上的用户数据是分开的。复制 APK 并不是交出存储区域的备份。"
     },
     {
       "source": "教員側に見せる内容をソースへ残す理由を説明できた。",
@@ -816,7 +816,7 @@
     },
     {
       "source": "配色・余白・題材を調整し、もう一度APKを作ります。ここでは新しい機能を追加せず、既に扱った場所を変えます。",
-      "translation": "调整配色、留白、主题，再生成一次 APK。这里不添加新功能，只改已经处理过的地方。"
+      "translation": "调整配色、边距、主题，再生成一次 APK。这里不添加新功能，只改已经处理过的地方。"
     },
     {
       "source": "確認",
@@ -884,7 +884,7 @@
     },
     {
       "source": "スタンプの0と上限、1つ戻すが正しい。",
-      "translation": "印章的0和上限、「1つ戻す」（撤销一个）都正确。"
+      "translation": "印章的0和上限、「1つ戻す」（退回一个）都正确。"
     },
     {
       "source": "詳細の名前・理由・回数が選んだ習慣と一致する。",
@@ -928,7 +928,7 @@
     },
     {
       "source": "読込の検査は起動時だけなので、<code>r</code>（ホットリロード）で反映したときは行われず、回数がそのまま残ります。3回のまま目標を2にすると「3 / 2 回 · あと-1回」と出て、スタンプを押すは無効になります。1つ戻すは押せる表示ですが、<code>changeStamp</code>は目標を超える次の回数を受け付けません。この例のように目標を1回だけ超えているときは、押すと目標の2回に戻ります。2回以上超えているときは、押しても変わりません。目標を超えた回数が残ったまま<code>R</code>を押すと読込の検査に通らないので、上のとおり、必要な記録を控えてから初期化を選びます。",
-      "translation": "读取校验只在启动时进行，用 <code>r</code>（热重载）反映更改时不会执行，次数会原样保留。次数还是3次时把目标改成2，会显示「3 / 2 回 · あと-1回」（3 / 2 次 · 还差 -1 次），「スタンプを押す」（盖印章）变为禁用。「1つ戻す」（撤销一个）显示为可以按，但 <code>changeStamp</code> 不接受超过目标的下一个次数。像这个例子一样只超过目标1次时，按下后会回到目标的2次。超过2次及以上时，按了也不会变。在超过目标的次数还保留的状态下按 <code>R</code>，会通不过读取校验，所以如上所述，先记下需要的记录，再选择重置。"
+      "translation": "读取校验只在启动时进行，用 <code>r</code>（热重载）反映更改时不会执行，次数会原样保留。次数还是3次时把目标改成2，会显示「3 / 2 回 · あと-1回」（3 / 2 次 · 还差 -1 次），「スタンプを押す」（盖印章）变为禁用。「1つ戻す」（退回一个）显示为可以按，但 <code>changeStamp</code> 不接受超过目标的下一个次数。像这个例子一样只超过目标1次时，按下后会回到目标的2次。超过2次及以上时，按了也不会变。在超过目标的次数还保留的状态下按 <code>R</code>，会通不过读取校验，所以如上所述，先记下需要的记录，再选择重置。"
     },
     {
       "source": "保存キー・3要素の並び・検証条件は、見た目のアレンジとは分けます。今回の提出前に新しい保存形式や機能を増やさず、学んだ範囲で仕上げます。",
@@ -1024,7 +1024,7 @@
     },
     {
       "source": "最後に、既に扱ったアレンジの場所を振り返ります。<code>createInitialHabits</code>の題材、<code>Text</code>の案内、<code>ThemeData</code>の配色、<code>StampMarks</code>の色、<code>Padding</code>や<code>SizedBox</code>の余白を、自分の目的に合わせて変えられます。",
-      "translation": "最后，回顾已经处理过的可修改之处。<code>createInitialHabits</code> 的主题、<code>Text</code> 的提示文字、<code>ThemeData</code> 的配色、<code>StampMarks</code> 的颜色、<code>Padding</code> 和 <code>SizedBox</code> 的留白，都可以按自己的目的修改。"
+      "translation": "最后，回顾已经处理过的可修改之处。<code>createInitialHabits</code> 的主题、<code>Text</code> 的提示文字、<code>ThemeData</code> 的配色、<code>StampMarks</code> 的颜色、<code>Padding</code> 和 <code>SizedBox</code> 的边距，都可以按自己的目的修改。"
     },
     {
       "source": "追加で直す場合も、ソース保存→解析→APK作成→そのAPKの操作確認という順番を保ちます。提出後にファイルを差し替える場合は、教員の提出ルールに従い、どの変更を入れた版かを説明してください。",
@@ -1064,7 +1064,7 @@
     },
     {
       "source": "起動し直さずに<code>r</code>・<code>R</code>で反映した。<code>q</code>で終了し、<code>flutter run -d 端末ID</code>で起動し直す。",
-      "translation": "没有重新启动，只用 <code>r</code>、<code>R</code> 反映了更改。用 <code>q</code> 结束，再用 <code>flutter run -d 端末ID</code> 重新启动。"
+      "translation": "没有重新启动，只用 <code>r</code>、<code>R</code> 反映了更改。用 <code>q</code> 结束，再用 <code>flutter run -d 端末ID</code>（端末ID＝设备 ID）重新启动。"
     },
     {
       "source": "保存しても起動後に消える",
@@ -1088,7 +1088,7 @@
     },
     {
       "source": "回数が目標を超えたまま<code>stampGoal</code>を減らし、<code>r</code>で反映した。1つ戻すが効くのは、目標を1回だけ超えているとき。<code>R</code>では読込エラーになるので、必要な記録を控えて初期化。",
-      "translation": "在次数超过目标的状态下减小了 <code>stampGoal</code>，并用 <code>r</code> 反映了更改。「1つ戻す」（撤销一个）只在超过目标1次时有效。按 <code>R</code> 会出现读取错误，所以记下需要的记录后重置。"
+      "translation": "在次数超过目标的状态下减小了 <code>stampGoal</code>，并用 <code>r</code> 反映了更改。「1つ戻す」（退回一个）只在超过目标1次时有效。按 <code>R</code> 会出现读取错误，所以记下需要的记录后重置。"
     },
     {
       "source": "初期値を変えても出ない",
@@ -1120,7 +1120,7 @@
     },
     {
       "source": "<code>Terminal &gt; New Terminal</code>で<code>flutter pub get</code>と<code>flutter analyze</code>を実行します。<code>Flutter: Launch Emulator</code>で既存端末を起動し、<code>flutter devices</code>でIDを確認して<code>flutter run -d 端末ID</code>で実行します。APKの作成・実APKの確認は本文のSTEP 11〜12にあります。",
-      "translation": "用 <code>Terminal &gt; New Terminal</code> 运行 <code>flutter pub get</code> 和 <code>flutter analyze</code>。用 <code>Flutter: Launch Emulator</code> 启动已有的设备，用 <code>flutter devices</code> 确认 ID，再用 <code>flutter run -d 端末ID</code> 运行。APK 的生成和实际 APK 的确认在正文的 STEP 11～12。"
+      "translation": "用 <code>Terminal &gt; New Terminal</code> 运行 <code>flutter pub get</code> 和 <code>flutter analyze</code>。用 <code>Flutter: Launch Emulator</code> 启动已有的设备，用 <code>flutter devices</code> 确认 ID，再用 <code>flutter run -d 端末ID</code>（端末ID＝设备 ID）运行。APK 的生成和实际 APK 的确认在正文的 STEP 11～12。"
     },
     {
       "source": "JEC / ハイブリッドアプリ開発技法 · F02StampRelease",

@@ -68,7 +68,7 @@
     },
     {
       "source": "08 初期化の確認と失敗への対応",
-      "translation": "08 初始化的确认与失败处理"
+      "translation": "08 重置的确认与失败处理"
     },
     {
       "source": "09 保存を確かめてアレンジ",
@@ -152,7 +152,7 @@
     },
     {
       "source": "JSONと<code>localStorage</code>で保存・復元できる。初期化には確認を挟む。",
-      "translation": "能用 JSON 和 <code>localStorage</code> 保存与恢复。初始化前加入确认步骤。"
+      "translation": "能用 JSON 和 <code>localStorage</code> 保存与恢复。重置前加入确认步骤。"
     },
     {
       "source": "授業内でFlutter準備を開始し、待ち時間に好きなものノートをアレンジ・確認・提出する。",
@@ -164,7 +164,7 @@
     },
     {
       "source": "配布ZIPの <code>samples/M02OshiSave</code> はコードを読み比べるための完成見本です。自分の作品を見本で上書きしません。",
-      "translation": "分发的 ZIP 中的 <code>samples/M02OshiSave</code> 是用于对照阅读代码的完成示例。不要用示例覆盖自己的作品。"
+      "translation": "分发 ZIP 中的 <code>samples/M02OshiSave</code> 是用于对照阅读代码的完成示例。不要用示例覆盖自己的作品。"
     },
     {
       "source": "STEP 00 · コマ5",
@@ -212,7 +212,7 @@
     },
     {
       "source": "標準loader、Onsen UI 2.12.9のCSS・JavaScript、自作CSS・<code>app.js</code>を読み込む。自作JSはOnsen UIより後。",
-      "translation": "读取标准 loader、Onsen UI 2.12.9 的 CSS 和 JavaScript、自己编写的 CSS 和 <code>app.js</code>。自己编写的 JS 放在 Onsen UI 之后。"
+      "translation": "加载标准 loader、Onsen UI 2.12.9 的 CSS 和 JavaScript、自己编写的 CSS 和 <code>app.js</code>。自己编写的 JS 放在 Onsen UI 之后。"
     },
     {
       "source": "navigatorが<code>list.html</code>を実体化する。<code>template</code>は配置前のひな形で、詳細へ進んだときに<code>detail.html</code>の要素が作られる。",
@@ -228,7 +228,7 @@
     },
     {
       "source": "配列の件数だけ固定の行構造を作る。名前や種類は<code>textContent</code>へ入れ、文字をHTMLとして解釈しない。",
-      "translation": "按数组的条数生成固定结构的行。名称和种类放入 <code>textContent</code>，文字不会被当作 HTML 解释。"
+      "translation": "按数组的条数生成固定结构的行。名称和类别放入 <code>textContent</code>，文字不会被当作 HTML 解释。"
     },
     {
       "source": "<code>pushPage</code>の<code>data</code>へ選んだデータを渡し、詳細の<code>page.data</code>で受け取る。現在のページと移動中の旗を調べ、連打でページを重ねない。",
@@ -244,7 +244,7 @@
     },
     {
       "source": "CSSはクラスで余白・色・カードの枠を対応させています。Onsen UIは同じHTMLへOSに合わせた部品のスタイルを適用します。今回も素のJavaScriptから使い、別のフレームワークは追加しません。",
-      "translation": "CSS 通过 class 设置边距、颜色和卡片的边框。Onsen UI 会对同一份 HTML 应用符合各 OS 的组件样式。这次也直接用原生 JavaScript 来使用它，不添加其他框架。"
+      "translation": "CSS 通过 class 设置边距、颜色和卡片的边框。Onsen UI 会对同一份 HTML 应用符合各 OS 的部件样式。这次也直接用原生 JavaScript 来使用它，不添加其他框架。"
     },
     {
       "source": "既知の技術と比べる",
@@ -284,7 +284,7 @@
     },
     {
       "source": "3ファイルをこのSTEPのコードへ更新します。HTMLに <code>add.html</code> の<code>template</code>を加え、名前・種類の <code>input</code> と、好きな理由の <code>textarea</code> を置きます。<code>label</code> の<code>for</code>と入力欄の<code>id</code>が対応します。",
-      "translation": "把3个文件更新为本 STEP 的代码。在 HTML 中加入 <code>add.html</code> 的 <code>template</code>，放置名称、种类的 <code>input</code> 和喜欢的理由的 <code>textarea</code>。<code>label</code> 的 <code>for</code> 与输入框的 <code>id</code> 相对应。"
+      "translation": "把3个文件更新为本 STEP 的代码。在 HTML 中加入 <code>add.html</code> 的 <code>template</code>，放置名称、类别的 <code>input</code> 和喜欢的理由的 <code>textarea</code>。<code>label</code> 的 <code>for</code> 与输入框的 <code>id</code> 相对应。"
     },
     {
       "source": "CSSの <code>.app-input</code> は幅を100%にし、<code>box-sizing: border-box</code> で<code>padding</code>と枠をその幅の内側へ収めます。<code>font: inherit</code> で文字を周囲とそろえ、<code>focus</code>の<code>outline</code>で選択中の欄を見分けます。ほかに加わるクラスのうち、このSTEPの画面に当たる4つは次の表のとおりです。",
@@ -316,7 +316,7 @@
     },
     {
       "source": "上下に12pxの余白、<code>.app-caption</code> と同じ文字色、<code>overflow-wrap: anywhere</code>。JavaScriptから文を入れる案内用の段落で、長い文でも画面の幅で折り返します。<code>txt_add_message</code> はこのSTEPでは空で、STEP 02から文を出します。",
-      "translation": "上下各 12px 的边距、与 <code>.app-caption</code> 相同的文字颜色、<code>overflow-wrap: anywhere</code>。这是由 JavaScript 写入文字的提示段落，即使文字很长也会按页面宽度换行。<code>txt_add_message</code> 在本 STEP 中为空，从 STEP 02 开始显示文字。"
+      "translation": "上下各 12px 的边距、与 <code>.app-caption</code> 相同的文字颜色、<code>overflow-wrap: anywhere</code>。这是由 JavaScript 写入文字的提示段落，即使文字很长也会按屏幕宽度换行。<code>txt_add_message</code> 在本 STEP 中为空，从 STEP 02 开始显示文字。"
     },
     {
       "source": "入力画面の3つの <code>label</code>",
@@ -336,7 +336,7 @@
     },
     {
       "source": "<code>.reset-section</code>・<code>#panel_reset ons-button</code>・<code>.is-hidden</code> の3つは、STEP 08で足す初期化の確認欄のための指定です。このSTEPのHTMLには、まだ当たる要素がありません。",
-      "translation": "<code>.reset-section</code>、<code>#panel_reset ons-button</code>、<code>.is-hidden</code> 这3个是为 STEP 08 要添加的初始化确认面板准备的设置。在本 STEP 的 HTML 中，还没有它们作用的元素。"
+      "translation": "<code>.reset-section</code>、<code>#panel_reset ons-button</code>、<code>.is-hidden</code> 这3个是为 STEP 08 要添加的重置确认面板准备的设置。在本 STEP 的 HTML 中，还没有它们作用的元素。"
     },
     {
       "source": "一覧の <code>btn_open_add</code> へ<code>openAddPage</code>を登録し、<code>pushPage(\"add.html\", ...)</code> で入力画面へ進みます。詳細と同じ移動中の旗を共有するため、片方を開いている最中にもう片方は開きません。",
@@ -352,7 +352,7 @@
     },
     {
       "source": "初期データは <code>createInitialItems</code> が新しい配列を返す形にまとめました。後で初期化したときにも同じ内容を作り直せるようにするためです。呼び出しのたびに新しい配列になる点を、<code>return</code>の位置と一緒に読みます。",
-      "translation": "初始数据整理成了由 <code>createInitialItems</code> 返回一个新数组的形式。这是为了之后初始化时也能重新生成相同的内容。请结合 <code>return</code> 的位置，注意每次调用都会得到一个新数组这一点。"
+      "translation": "初始数据整理成了由 <code>createInitialItems</code> 返回一个新数组的形式。这是为了之后重置时也能重新生成相同的内容。请结合 <code>return</code> 的位置，注意每次调用都会得到一个新数组这一点。"
     },
     {
       "source": "保存・再読み込み後に <code>好きなものを追加</code> を押します。",
@@ -444,7 +444,7 @@
     },
     {
       "source": "追加した行を押し、名前・種類・好きな理由が入力どおりか確かめます。好きな理由に改行を入れた場合も確認します。",
-      "translation": "点击添加的行，确认名称、种类、喜欢的理由与输入的一致。在喜欢的理由中输入了换行的情况也要确认。"
+      "translation": "点击添加的行，确认名称、类别、喜欢的理由与输入的一致。在喜欢的理由中输入了换行的情况也要确认。"
     },
     {
       "source": "戻ってからプレビューを再読み込みします。配列はソースの初期データから作り直されるため、3件に戻ります。今日はこれで正解です。",
@@ -724,7 +724,7 @@
     },
     {
       "source": "読み込みや<code>parse</code>が失敗したとき、または構造が違うときは<code>canSave</code>を<code>false</code>にします。保存済みの文字列を自動で消したり、初期データで上書きしたりしません。一覧には初期データと失敗メッセージを表示し、追加は止めます。次のSTEPで、本人が選んだときだけ初期化できる操作を作ります。失敗メッセージが案内する「初期の内容に戻す」ボタンも、そのときに作ります。このSTEPの画面には、まだありません。",
-      "translation": "读取或 <code>parse</code> 失败时，或者结构不同时，把 <code>canSave</code> 设为 <code>false</code>。不会自动删除已保存的字符串，也不会用初始数据覆盖。列表中显示初始数据和失败消息，并停止添加。下一个 STEP 会制作只有本人选择时才能初始化的操作。失败消息中提到的「初期の内容に戻す」（恢复初始内容）按钮也在那时制作。本 STEP 的页面上还没有它。"
+      "translation": "读取或 <code>parse</code> 失败时，或者结构不同时，把 <code>canSave</code> 设为 <code>false</code>。不会自动删除已保存的字符串，也不会用初始数据覆盖。列表中显示初始数据和失败消息，并停止添加。下一个 STEP 会制作只有本人选择时才能重置的操作。失败消息中提到的「初期の内容に戻す」（恢复初始内容）按钮也在那时制作。本 STEP 的页面上还没有它。"
     },
     {
       "source": "名前に引用符や山かっこ、好きな理由に改行を入れて1件追加します。",
@@ -756,11 +756,11 @@
     },
     {
       "source": "初期化の確認と失敗への対応",
-      "translation": "初始化的确认与失败处理"
+      "translation": "重置的确认与失败处理"
     },
     {
       "source": "HTMLに初期化ボタンと確認欄、JSにそのイベントと<code>resetOshiItems</code>を加えます。<code>初期の内容に戻す</code> を押すと、<code>is-hidden</code>を<code>remove</code>して確認欄を見せます。<code>やめる</code> ではクラスを<code>add</code>し、欄を閉じるだけです。確認欄を囲む <code>reset-section</code> は上に区切りの線を引き、<code>#panel_reset ons-button</code> は確認欄の2つのボタンの上を12px空けます。この2つと <code>is-hidden</code> はSTEP 01のCSSに入れてあり、このSTEPのHTMLで初めて要素に当たります。",
-      "translation": "在 HTML 中加入初始化按钮和确认面板，在 JS 中加入对应的事件和 <code>resetOshiItems</code>。点击 <code>初期の内容に戻す</code>（恢复初始内容）时，<code>remove</code> 掉 <code>is-hidden</code>，显示确认面板。点击 <code>やめる</code>（取消）时，只是 <code>add</code> 这个 class，关闭面板。包住确认面板的 <code>reset-section</code> 在上方画一条分隔线，<code>#panel_reset ons-button</code> 在确认面板的2个按钮上方留出 12px。这2个和 <code>is-hidden</code> 已在 STEP 01 的 CSS 中写好，在本 STEP 的 HTML 中才第一次作用到元素上。"
+      "translation": "在 HTML 中加入重置按钮和确认面板，在 JS 中加入对应的事件和 <code>resetOshiItems</code>。点击 <code>初期の内容に戻す</code>（恢复初始内容）时，<code>remove</code> 掉 <code>is-hidden</code>，显示确认面板。点击 <code>やめる</code>（取消）时，只是 <code>add</code> 这个 class，关闭面板。包住确认面板的 <code>reset-section</code> 在上方画一条分隔线，<code>#panel_reset ons-button</code> 在确认面板的2个按钮上方留出 12px。这2个和 <code>is-hidden</code> 已在 STEP 01 的 CSS 中写好，在本 STEP 的 HTML 中才第一次作用到元素上。"
     },
     {
       "source": "実際の削除は <code>削除して初期の内容に戻す</code> を押した場合だけです。<code>localStorage.removeItem(STORAGE_KEY)</code> で、このアプリのキー1つだけを削除します。保存領域全体を空にする<code>clear</code>は使いません。",
@@ -768,11 +768,11 @@
     },
     {
       "source": "削除に成功したら<code>createInitialItems</code>で新しい初期配列を作り、<code>canSave</code>を<code>true</code>へ戻し、一覧と文を更新します。削除に失敗したら画面の配列も変更せず、削除できなかったと表示します。初期化が終わると、以前入力した内容は戻せません。",
-      "translation": "删除成功后，用 <code>createInitialItems</code> 生成新的初始数组，把 <code>canSave</code> 恢复为 <code>true</code>，并更新列表和文字。删除失败时，页面上的数组也不改变，并显示未能删除。初始化完成后，以前输入的内容无法找回。"
+      "translation": "删除成功后，用 <code>createInitialItems</code> 生成新的初始数组，把 <code>canSave</code> 恢复为 <code>true</code>，并更新列表和文字。删除失败时，页面上的数组也不改变，并显示未能删除。重置完成后，以前输入的内容无法找回。"
     },
     {
       "source": "検証用に追加したデータを使い、初期化の確認欄を開いて <code>やめる</code> を押します。件数が変わらないことを確認します。",
-      "translation": "利用为验证而添加的数据，打开初始化的确认面板，点击 <code>やめる</code>（取消）。确认条数没有变化。"
+      "translation": "利用为验证而添加的数据，打开重置的确认面板，点击 <code>やめる</code>（取消）。确认条数没有变化。"
     },
     {
       "source": "残す必要のある内容は控えてから、もう一度確認欄を開き、削除するボタンを押します。",
@@ -792,7 +792,7 @@
     },
     {
       "source": "初期化を中止したときは内容が残り、確定したときだけ初期の内容へ戻った。",
-      "translation": "取消初始化时内容保留，只有确定时才回到初始内容。"
+      "translation": "取消重置时内容保留，只有确定时才回到初始内容。"
     },
     {
       "source": "STEP 09 · コマ6",
@@ -808,7 +808,7 @@
     },
     {
       "source": "<strong>保存データがあると、ソースの初期データより優先して表示されます。</strong> <code>createInitialItems</code>を書き換えても画面が変わらない場合は、変更したコードのミスとは限りません。必要な入力を控えたうえで、アプリ内の初期化を使ってソースの内容を確認します。",
-      "translation": "<strong>有保存数据时，会优先显示保存数据，而不是源代码的初始数据。</strong>如果改写了 <code>createInitialItems</code> 但页面没有变化，不一定是改动的代码有错。先记下需要的输入内容，再用应用内的初始化来确认源代码的内容。"
+      "translation": "<strong>有保存数据时，会优先显示保存数据，而不是源代码的初始数据。</strong>如果改写了 <code>createInitialItems</code> 但页面没有变化，不一定是改动的代码有错。先记下需要的输入内容，再用应用内的重置功能来确认源代码的内容。"
     },
     {
       "source": "アレンジする場所",
@@ -824,7 +824,7 @@
     },
     {
       "source": "初期化後の一覧と詳細が自分の好きなものになる。",
-      "translation": "初始化后的列表和详情变成自己喜欢的东西。"
+      "translation": "重置后的列表和详情变成自己喜欢的东西。"
     },
     {
       "source": "HTMLの案内文・<code>placeholder</code>",
@@ -920,7 +920,7 @@
     },
     {
       "source": "必要な保存内容を控えて初期化し、全件の詳細を開く。",
-      "translation": "记下需要的保存内容后初始化，打开所有条目的详情。"
+      "translation": "记下需要的保存内容后重置，打开所有条目的详情。"
     },
     {
       "source": "HTMLの見出し・案内文・入力例",
@@ -932,7 +932,7 @@
     },
     {
       "source": "入力画面を開き、迷わず入力できるか読む。",
-      "translation": "打开输入页面，看看是否能不迷惑地输入。"
+      "translation": "打开输入页面，读一读，看能否顺利输入而不感到困惑。"
     },
     {
       "source": "CSSの文字色・枠色・余白",
@@ -952,7 +952,7 @@
     },
     {
       "source": "ソースを変えても以前の保存内容が表示される場合はSTEP 09を確認します。保存キーを変えて見えなくする方法で済ませず、残す内容を控えてからアプリ内の初期化を使います。",
-      "translation": "如果改了源代码却仍显示以前保存的内容，请查看 STEP 09。不要用更改保存键让它看不见的办法来敷衍，而是先记下要保留的内容，再使用应用内的初始化。"
+      "translation": "如果改了源代码却仍显示以前保存的内容，请查看 STEP 09。不要用更改保存键让它看不见的办法来应付，而是先记下要保留的内容，再使用应用内的重置功能。"
     },
     {
       "source": "JavaやSwiftでコードの初期値を変えることと、実行中に端末へ保存した内容を変えることは別です。公開URLで渡すのはソースなので、ブラウザの入力内容だけを変えても相手の初期画面には反映されません。",
@@ -972,11 +972,11 @@
     },
     {
       "source": "ソースの初期の内容が表示された状態から完成確認を始めます。必要な入力は内容を控えて、先生と確認してから初期化します。",
-      "translation": "从显示源代码初始内容的状态开始进行完成确认。需要的输入内容先记下来，和老师确认后再初始化。"
+      "translation": "从显示源代码初始内容的状态开始进行完成确认。需要的输入内容先记下来，和老师确认后再重置。"
     },
     {
       "source": "一覧の各行から詳細へ進み、名前・種類・理由が一致することを確認します。",
-      "translation": "从列表的每一行进入详情，确认名称、种类、理由一致。"
+      "translation": "从列表的每一行进入详情，确认名称、类别、理由一致。"
     },
     {
       "source": "追加画面で空欄を試し、同じ画面に案内が出ることを確認します。",
@@ -988,7 +988,7 @@
     },
     {
       "source": "初期化で <code>やめる</code> を選び、データが残ることを確かめます。必要な内容を控えた後に初期化し、ソースのデータへ戻します。",
-      "translation": "在初始化时选择 <code>やめる</code>（取消），确认数据仍然保留。记下需要的内容后再初始化，回到源代码的数据。"
+      "translation": "在重置时选择 <code>やめる</code>（取消），确认数据仍然保留。记下需要的内容后再重置，回到源代码的数据。"
     },
     {
       "source": "iPhone系・Android系のプレビューで入力・戻る・ボタンの見た目を比べます。比較用の <code>ons.platform.select(\"android\")</code> を有効にした場合は、最後にコメントへ戻します。",
@@ -1024,7 +1024,7 @@
     },
     {
       "source": "先生が授業中に案内する提出先・締め切りを確認し、次の内容を提出します。まだ案内がない場合は、URLと説明を控えて先生へ確認します。",
-      "translation": "确认老师在课堂上告知的提交位置和截止时间，提交下面的内容。如果还没有通知，就先记下链接和说明，向老师确认。"
+      "translation": "确认老师在课堂上告知的提交处和截止时间，提交下面的内容。如果还没有通知，就先记下链接和说明，向老师确认。"
     },
     {
       "source": "自分の好きなものノートで発行した公開URL。",
@@ -1048,7 +1048,7 @@
     },
     {
       "source": "指定先へ自分のURLと変更説明を提出し、Flutter準備の状態も先生へ伝えた。",
-      "translation": "已向指定位置提交自己的链接和修改说明，并向老师说明了 Flutter 的准备状态。"
+      "translation": "已向指定的提交处提交自己的链接和修改说明，并向老师说明了 Flutter 的准备状态。"
     },
     {
       "source": "STEP 14 · コマ7",
@@ -1128,7 +1128,7 @@
     },
     {
       "source": "その表示を先生へ見せる。読込に失敗したデータは自動で上書きしない。ブラウザ設定を無理に変更しない。",
-      "translation": "把这个显示给老师看。读取失败的数据不会自动覆盖。不要勉强更改浏览器设置。"
+      "translation": "把这个显示给老师看。读取失败的数据不会被自动覆盖。不要勉强更改浏览器设置。"
     },
     {
       "source": "提出URLが先生の見本と同じ",
