@@ -43,7 +43,7 @@ JEC（25CM）の「ハイブリッドアプリ開発技法」で使う教材で�
 
 | 系統 | 学生が受け取る形 |
 | --- | --- |
-| Monaca | 配布フォルダの `samples/<プロジェクト名>` をFinderで開いて、コードを読み比べます。Monaca クラウド IDEはMacのフォルダをそのまま開けないので、動かすときは教科書に載せた**取り込み用のURL**（教員がZIPにして公開した `https://monaca.mobi/ja/directimport?pid=…`）を開き、学生のMonacaにプロジェクトを取り込みます（Freeプランの1枠を使う）。2026-09-25 の先生レビュー時点ではこのURLがリンク切れ（Project Not Found）でしたが、同日に #132（PR #136）で公開し直した新しいURLに差し替えてあります |
+| Monaca | 配布フォルダの `samples/<プロジェクト名>` をFinderで開いて、コードを読み比べます。Monaca クラウド IDEはMacのフォルダをそのまま開けないので、動かすときは教科書に載せた**取り込み用のURL**（教員がZIPにして公開した `https://monaca.mobi/ja/directimport?pid=…`）を開き、学生のMonacaにプロジェクトを取り込みます（Freeプランの1枠を使う）。2026-09-25 の先生レビュー時点ではこのURLがリンク切れ（Project Not Found）でしたが、同日に #132（PR #136）で公開し直した新しいURLに差し替えてあります。URLがあっても Free プランの制限（プロジェクト数、対応する Cordova の版）で学生が取り込めない可能性があるので、教科書にはその旨と「取り込めなくても `samples` で進められる」ことを書いてあります（2026-09-25 オーナー指示） |
 | Flutter | 配布フォルダ（`~/Documents/hybrid-app-student-materials-日付/`）の `samples/<プロジェクト名>` をFinderで開き、Visual Studio Code の `File > Open Folder…` で選びます。展開は済んでいるので、教科書からZIPをダウンロードさせません |
 
 ### Monacaのプランと、そこから来る制約
