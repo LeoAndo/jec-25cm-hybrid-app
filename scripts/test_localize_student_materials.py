@@ -925,6 +925,181 @@ class CommandTest(unittest.TestCase):
                     self.settings()
 
 
+# 右から左のページ（<html dir="rtl">）だけに当てるセレクタ。このブロックの中は、左右を決め打ちしてよい（AGENTS.md §12）。
+RTL_ONLY_SELECTOR = re.compile(r"\[dir=[\"']?rtl[\"']?\]")
+# 4つの値を「上 右 下 左」の順に書くまとめ書き。2つ目（右）と4つ目（左）が違えば、左右の決め打ちになる。
+FOUR_SIDES_SHORTHANDS = {"margin", "padding", "inset", "border-width", "border-style", "border-color",
+                         "scroll-margin", "scroll-padding"}
+# 値に left・right の語が入るもの（text-align: left、background-position: left center、linear-gradient(to right, …) など）と、
+# 横に動かす translateX()。--left-gap のような名前の一部は、語ではないので数えない。
+SIDE_IN_VALUE = re.compile(r"(?<![\w-])(?:left|right)(?![\w-])|translatex\(")
+
+
+def fixed_direction_declarations(css):
+    """CSSから、左右を決め打ちした宣言を「プロパティ: 値」の形で集める。大文字と小文字は区別しない。
+
+    落とすのは次の書き方。
+    - プロパティ名に left・right が入るもの（left、margin-left、border-left-width、border-top-left-radius など）
+    - 4つの値を書いた margin・padding・inset・border-width・border-style・border-color・scroll-margin・scroll-padding で、
+      2つ目（右）と4つ目（左）の値が違うもの。1〜3つの値の書き方は、左右が必ず同じ値になる
+    - border-radius で、左の角と右の角の値が違うもの。2つの値でも、左上と右上が違えば落とす
+    - 値に left・right の語が入るもの（text-align・float・clear のほか、background-position・transform-origin・
+      justify-content など）と、transform の translateX()
+    [dir="rtl"] で絞ったブロックは、右から左のページだけに当てるものなので調べない。
+    """
+    css = re.sub(r"/\*.*?\*/", "", css, flags=re.DOTALL).lower()
+    found = []
+    # 宣言があるのは、いちばん内側のブロックだけ。@media { .a { … } } の .a も、この形で見つかる。
+    for block in re.finditer(r"([^{}]*)\{([^{}]*)\}", css):
+        selector, body = block.groups()
+        # 「[dir="rtl"] code, [dir="rtl"] kbd」のように、並べたセレクタの全部が絞られているときだけ飛ばす。
+        if all(RTL_ONLY_SELECTOR.search(part) for part in selector.split(",")):
+            continue
+        for declaration in body.split(";"):
+            if ":" not in declaration:
+                continue
+            name, value = declaration.split(":", 1)
+            name = name.strip()
+            value = re.sub(r"\s*!\s*important$", "", " ".join(value.split()))
+            if fixes_a_side(name, value):
+                found.append(f"{name}: {value}")
+    return found
+
+
+def fixes_a_side(name, value):
+    """宣言1つが、左右を決め打ちしているかを返す。name と value は小文字にそろえてある。"""
+    if "left" in name.split("-") or "right" in name.split("-"):
+        return True
+    if SIDE_IN_VALUE.search(value):
+        return True
+    if name in FOUR_SIDES_SHORTHANDS:
+        top, right, bottom, left = four_values(values_of(value))
+        return right != left
+    if name == "border-radius":
+        # 「横の半径 / 縦の半径」の形は、それぞれの側で左右の角をそろえる。
+        for radii in value.split("/"):
+            top_left, top_right, bottom_right, bottom_left = four_values(values_of(radii))
+            if top_left != top_right or bottom_left != bottom_right:
+                return True
+    return False
+
+
+def values_of(value):
+    """値を空白で区切る。calc(1rem + 2px) や var(--x, 0) のように、かっこの中の空白では区切らない。"""
+    values, depth = [""], 0
+    for character in value:
+        depth += (character == "(") - (character == ")")
+        if character.isspace() and depth == 0:
+            values.append("")
+        else:
+            values[-1] += character
+    return [each for each in values if each]
+
+
+def four_values(values):
+    """1〜4つの値を、CSSのまとめ書きの決まりどおりに4つへ広げる。
+
+    1つなら4辺とも同じ、2つなら「上下 左右」（border-radius では「左上と右下 右上と左下」）、
+    3つなら2つ目を4つ目にも使う。0個や5個以上（CSSとしては誤り）でも、呼び出し側が数を気にしなくてよいよう、
+    長さは4つにそろえる。
+    """
+    if not values:
+        return [""] * 4
+    if len(values) == 2:
+        values = values * 2
+    elif len(values) == 3:
+        values = values + values[1:2]
+    return (values + values[:1] * 4)[:4]
+
+
+class TextbookCssTest(unittest.TestCase):
+    """教科書のCSSの左右の検査（fixed_direction_declarations）を、見本のCSSで確かめる。"""
+
+    def test_declarations_that_fix_a_side_are_found(self):
+        # issue #77 の表の12行（古い正規表現は、最初の1行しか捕まえなかった）と、同じ種類の書き方。
+        cases = {
+            ".a{border-left:4px solid}": "border-left: 4px solid",
+            ".a{padding:0 0 0 1.5rem}": "padding: 0 0 0 1.5rem",
+            ".a{margin:0 2rem 0 0}": "margin: 0 2rem 0 0",
+            ".a{border-width:0 0 0 4px}": "border-width: 0 0 0 4px",
+            ".a{border-radius:9px 0 0 9px}": "border-radius: 9px 0 0 9px",
+            ".a{border-top-left-radius:4px}": "border-top-left-radius: 4px",
+            ".a{inset:0 auto auto 0}": "inset: 0 auto auto 0",
+            ".a{background-position:left center}": "background-position: left center",
+            ".a{transform-origin:left}": "transform-origin: left",
+            ".a{transform:translateX(-100%)}": "transform: translatex(-100%)",
+            ".a{justify-content:left}": "justify-content: left",
+            ".a{Text-Align:Left}": "text-align: left",
+            ".a{left:0}": "left: 0",
+            ".a{right:0}": "right: 0",
+            ".a{margin-right:auto}": "margin-right: auto",
+            ".a{scroll-padding-left:1rem}": "scroll-padding-left: 1rem",
+            ".a{-webkit-border-top-left-radius:4px}": "-webkit-border-top-left-radius: 4px",
+            ".a{float:right}": "float: right",
+            ".a{clear:left}": "clear: left",
+            ".a{border-style:none solid none none}": "border-style: none solid none none",
+            ".a{border-color:red blue red green}": "border-color: red blue red green",
+            ".a{scroll-margin:0 1rem 0 0}": "scroll-margin: 0 1rem 0 0",
+            ".a{border-radius:9px 0}": "border-radius: 9px 0",
+            ".a{border-radius:9px 0 0}": "border-radius: 9px 0 0",
+            ".a{border-radius:9px 9px 0 0 / 5px 0 0 5px}": "border-radius: 9px 9px 0 0 / 5px 0 0 5px",
+            ".a{background:url(x.png) left top no-repeat}": "background: url(x.png) left top no-repeat",
+            ".a{background:linear-gradient(to right, red, blue)}": "background: linear-gradient(to right, red, blue)",
+            ".a{margin:0 1rem 0 0 !important}": "margin: 0 1rem 0 0",
+            ".a{padding:0 var(--x, 0) 0 calc(1rem + 2px)}": "padding: 0 var(--x, 0) 0 calc(1rem + 2px)",
+            ".a{margin:0\n  2rem\n  0\n  0}": "margin: 0 2rem 0 0",
+            "@media (max-width: 720px) { .a { padding: 0 0 0 1rem; } }": "padding: 0 0 0 1rem",
+            "@media print { @page { margin: 0 1cm 0 0; } }": "margin: 0 1cm 0 0",
+            ".a{color:red;border-left:1px solid;margin:0}": "border-left: 1px solid",
+            ".a{border-left:1px solid;padding:0 0 0 1rem}": "border-left: 1px solid",
+        }
+        for css, declaration in cases.items():
+            with self.subTest(css=css):
+                self.assertEqual(fixed_direction_declarations(css)[:1], [declaration])
+        self.assertEqual(fixed_direction_declarations(".a{border-left:1px solid;padding:0 0 0 1rem}"),
+                         ["border-left: 1px solid", "padding: 0 0 0 1rem"])
+
+    def test_symmetric_declarations_pass(self):
+        # 今の textbook.css にある書き方と、左右が同じ値になるまとめ書き。
+        declarations = [
+            "padding: .4rem .55rem", "margin: .2rem 0 1rem", "margin: -1px", "margin: 0 auto", "margin: 16mm",
+            "padding: 0 1rem 0 1rem", "margin: 0 calc(1rem + 2px) 0 calc(1rem + 2px)", "padding: 0 var(--x, 0) 0 var(--x, 0)",
+            "border-radius: 0 0 9px 9px", "border-radius: 9px 9px 0 0", "border-radius: 9px", "border-radius: 9px 9px",
+            "border-radius: 9px 9px 9px", "border-radius: 9px 9px 0 0 / 5px 5px 0 0", "border-radius: 9px/5px",
+            "border-width: 0 1px 2px 1px", "border-style: solid", "inset: 0", "clip-path: inset(50%)",
+            "scroll-padding-top: calc(var(--language-nav-height, 0px) + 1.5rem)",
+            "justify-content: flex-end", "justify-content: space-between", "text-align: start", "text-align: center",
+            "inset-inline-start: 1rem", "border-inline-start: 4px solid var(--blue)", "border-inline-end: 0",
+            "padding-inline-start: 1.5rem", "border-bottom-width: 2px", "margin-top: .4rem", "margin-bottom: 1.25rem",
+            "border-start-start-radius: 9px", "display: none !important", "margin: 0 1rem 0 1rem !important",
+            "transform: scaleX(-1)", "transform: translateY(-50%)", "letter-spacing: -.04em",
+            "font-family: \"Hiragino Kaku Gothic ProN\", sans-serif", "gap: .3rem .6rem",
+        ]
+        for declaration in declarations:
+            with self.subTest(declaration=declaration):
+                self.assertEqual(fixed_direction_declarations(f".a {{ {declaration}; }}"), [])
+        self.assertEqual(fixed_direction_declarations("@media print { @page { margin: 16mm; } .a { padding: 0; } }"), [])
+        self.assertEqual(fixed_direction_declarations("/* border-left: 4px solid */ .a { text-align: start; }"), [])
+        self.assertEqual(fixed_direction_declarations(".a { color: red } /* text-align: left */"), [])
+
+    def test_rules_for_right_to_left_pages_only_are_skipped(self):
+        for css in ['[dir="rtl"] .back-arrow { display: inline-block; transform: scaleX(-1); }',
+                    '[dir="rtl"] .a { transform: translateX(-100%); }',
+                    "[dir=rtl] .a { border-left: 4px solid; }",
+                    "[dir='rtl'] .a { text-align: left; }",
+                    '[dir="rtl"] code, [dir="rtl"] kbd { direction: ltr; padding: 0 0 0 1rem; }',
+                    '@media print { [dir="rtl"] .a { float: left; } }']:
+            with self.subTest(css=css):
+                self.assertEqual(fixed_direction_declarations(css), [])
+        # 絞られていないブロックは落とす。並べたセレクタの1つでも絞られていなければ、全ページに当たる。
+        self.assertEqual(fixed_direction_declarations(".a { transform: translateX(-100%); }"),
+                         ["transform: translatex(-100%)"])
+        self.assertEqual(fixed_direction_declarations('[dir="rtl"] .a, .b { border-left: 4px solid; }'),
+                         ["border-left: 4px solid"])
+        self.assertEqual(fixed_direction_declarations('[dir="rtl"] .a { padding: 0; } .b { float: right; }'),
+                         ["float: right"])
+
+
 class RepositoryTest(unittest.TestCase):
     """実際の教材と対訳カタログで確かめる。"""
 
@@ -944,12 +1119,10 @@ class RepositoryTest(unittest.TestCase):
         """右から左の言語のページで左右が入れ替わるよう、教科書のCSSは論理プロパティで書く。
 
         border-left などで書くと、アラビア語のページでも枠線や字下げが左に残る。
+        落とす書き方は fixed_direction_declarations にあり、TextbookCssTest が見本のCSSで確かめている。
         """
         css = (self.settings.root / self.settings.source_root / "assets/textbook.css").read_text(encoding="utf-8")
-        css = re.sub(r"/\*.*?\*/", "", css, flags=re.DOTALL)
-        fixed = re.findall(r"(?:^|[;{\s])((?:margin|padding|border|inset)-(?:left|right)[\w-]*|left|right)\s*:"
-                           r"|((?:text-align|float|clear)\s*:\s*(?:left|right))\b", css)
-        self.assertEqual([next(filter(None, found)) for found in fixed], [])
+        self.assertEqual(fixed_direction_declarations(css), [])
 
     def test_code_blocks_are_identical_in_every_language(self):
         # <pre> とソースのバイト一致（check-teaching-materials.py）が、どの言語でも保たれる。
