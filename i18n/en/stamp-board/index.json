@@ -1,0 +1,946 @@
+{
+  "source": "docs/stamp-board/index.html",
+  "language": "en",
+  "entries": [
+    {
+      "source": "F01 スタンプ帳：一覧・状態・詳細 | ハイブリッドアプリ開発技法",
+      "translation": "F01 Stamp board: list, state, and detail | Hybrid App Development"
+    },
+    {
+      "source": "本文へ移動",
+      "translation": "Skip to main content"
+    },
+    {
+      "source": "JEC / ハイブリッドアプリ開発技法",
+      "translation": "JEC / Hybrid App Development"
+    },
+    {
+      "source": "0 / 20 ステップ確認済み",
+      "translation": "0 / 20 steps checked"
+    },
+    {
+      "source": "単元の進み具合",
+      "translation": "Progress in this unit"
+    },
+    {
+      "source": "コマごとの目次",
+      "translation": "Table of contents by session"
+    },
+    {
+      "source": "コマ8 · STEP 00〜04",
+      "translation": "Session 8 · STEP 00–04"
+    },
+    {
+      "source": "00 道具と作業フォルダを用意する",
+      "translation": "00 Prepare the tools and work folder"
+    },
+    {
+      "source": "01 空のアプリを起動する",
+      "translation": "01 Run the empty app"
+    },
+    {
+      "source": "02 Widgetの組み合わせで画面を書く",
+      "translation": "02 Build the screen by combining widgets"
+    },
+    {
+      "source": "03 保存してホットリロードする",
+      "translation": "03 Save and hot reload"
+    },
+    {
+      "source": "04 文字と大きさをアレンジする",
+      "translation": "04 Customize the text and size"
+    },
+    {
+      "source": "コマ9 · STEP 05〜09",
+      "translation": "Session 9 · STEP 05–09"
+    },
+    {
+      "source": "05 習慣を1枚のカードにする",
+      "translation": "05 Turn a habit into one card"
+    },
+    {
+      "source": "06 余白と縦横の並びを読む",
+      "translation": "06 Read the spacing and the vertical and horizontal layout"
+    },
+    {
+      "source": "07 データから一覧を作る",
+      "translation": "07 Build the list from data"
+    },
+    {
+      "source": "08 配色と表示をそろえる",
+      "translation": "08 Make the colors and display consistent"
+    },
+    {
+      "source": "09 カードの題材をアレンジする",
+      "translation": "09 Customize the card content"
+    },
+    {
+      "source": "コマ10 · STEP 10〜14",
+      "translation": "Session 10 · STEP 10–14"
+    },
+    {
+      "source": "10 回数と画面の関係を読む",
+      "translation": "10 Read how the count relates to the screen"
+    },
+    {
+      "source": "11 setStateでスタンプを増やす",
+      "translation": "11 Add stamps with setState"
+    },
+    {
+      "source": "12 合計とマークを値から作る",
+      "translation": "12 Build the total and marks from values"
+    },
+    {
+      "source": "13 上限と戻す操作を確かめる",
+      "translation": "13 Check the limit and the undo operation"
+    },
+    {
+      "source": "14 回数と見た目をアレンジする",
+      "translation": "14 Customize the count and appearance"
+    },
+    {
+      "source": "コマ11 · STEP 15〜19",
+      "translation": "Session 11 · STEP 15–19"
+    },
+    {
+      "source": "15 詳細へ渡す値を決める",
+      "translation": "15 Decide the values to pass to the detail page"
+    },
+    {
+      "source": "16 Navigatorで詳細を開く",
+      "translation": "16 Open the detail page with Navigator"
+    },
+    {
+      "source": "17 受け取った習慣を表示する",
+      "translation": "17 Show the habit you received"
+    },
+    {
+      "source": "18 一覧と詳細を通して確かめる",
+      "translation": "18 Check the list and detail page end to end"
+    },
+    {
+      "source": "19 アレンジできる場所を説明する",
+      "translation": "19 Explain the places you can customize"
+    },
+    {
+      "source": "困ったとき",
+      "translation": "Troubleshooting"
+    },
+    {
+      "source": "完成プロジェクトを開く",
+      "translation": "Open the completed project"
+    },
+    {
+      "source": "共通：はじめの準備",
+      "translation": "Shared: Getting ready for class"
+    },
+    {
+      "source": "コマ8〜11 · 各90分",
+      "translation": "Sessions 8–11 · 90 minutes each"
+    },
+    {
+      "source": "小さな「できた」を、スタンプに。",
+      "translation": "Turn each small \"I did it\" into a stamp."
+    },
+    {
+      "source": "自分が続けたい習慣をカードにし、できたときにスタンプを押すアプリを作ります。画面の部品を一つずつ変更する方法と、値から画面を組み立てる方法の違いを確かめましょう。",
+      "translation": "Build an app that turns the habits you want to keep up into cards and lets you add a stamp when you have done one. See the difference between changing UI elements one by one and building the screen from values."
+    },
+    {
+      "source": "完成見本は<code>F01StampBoard</code>です。この教科書だけで、新規作成から一覧・スタンプ・詳細の実行まで進められます。Web基礎とJava／Swiftの知識を比べながら読みます。",
+      "translation": "The completed sample is <code>F01StampBoard</code>. With this textbook alone, you can go from creating a new project to running the list, the stamps, and the detail page. Read it while comparing with what you know from Web Basics and Java / Swift."
+    },
+    {
+      "source": "STEP 00 · コマ8",
+      "translation": "STEP 00 · Session 8"
+    },
+    {
+      "source": "道具と作業フォルダを用意する",
+      "translation": "Prepare the tools and work folder"
+    },
+    {
+      "source": "Visual Studio Codeを使います。最初の25分でFlutter 3.47.5 / Dart 3.13.4、Flutter拡張、iOS実行環境を確認します。<a1>共通資料のSTEP 4〜7</a1>を開き、不足分は授業中に用意してください。学生のMacはApple Siliconです。既存のXcodeで使えるiOSランタイムは再利用し、全員に再取得は求めません。",
+      "translation": "You will use Visual Studio Code. In the first 25 minutes, check Flutter 3.47.5 / Dart 3.13.4, the Flutter extension, and the environment for running on iOS. Open <a1>STEP 4–7 of the shared guide</a1> and set up anything missing during class. Student Macs are Apple Silicon. Reuse the iOS runtimes that your existing Xcode can already use; nobody is asked to download them again."
+    },
+    {
+      "source": "<code>flutter --version</code>と<code>flutter doctor -v</code>を確認します。この単元はiOSで始めるため、Android欄の課題は先生と切り分けます。取得が終わらないときは授業中に相談し、自宅で終わらせることを条件にはしません。",
+      "translation": "Check <code>flutter --version</code> and <code>flutter doctor -v</code>. Because this unit starts on iOS, any issues in the Android section are sorted out separately with your teacher. If a download does not finish, talk to your teacher during class; finishing it at home is not a requirement."
+    },
+    {
+      "source": "macOSのTerminalで、制作フォルダを用意して次を実行します。同名フォルダが既にある場合は上書きせず、内容を先生と確認します。<code>mkdir -p</code>は親フォルダが既にあっても使えます。",
+      "translation": "In Terminal on macOS, prepare your work folder and run the following. If a folder with the same name already exists, do not overwrite it; check its contents with your teacher. <code>mkdir -p</code> works even if the parent folder already exists."
+    },
+    {
+      "source": "<code>--empty</code>は空の画面、<code>--platforms</code>は対象OSを選ぶ指定です。フォルダ名は<code>F01StampBoard</code>、Dartのパッケージ名は小文字の<code>f01_stamp_board</code>に分けます。<code>--org</code>は識別子の先頭で、今回のAndroidアプリIDは<code>jp.ac.jec.f01_stamp_board</code>です。",
+      "translation": "<code>--empty</code> means an empty screen, and <code>--platforms</code> selects the target OSes. The folder name is <code>F01StampBoard</code>, and the Dart package name is the lowercase <code>f01_stamp_board</code>; the two are kept separate. <code>--org</code> is the beginning of the identifier, so the Android application ID this time is <code>jp.ac.jec.f01_stamp_board</code>."
+    },
+    {
+      "source": "Javaの<code>import</code>と同様に、使う型を読み込みます。Flutter SDKとアプリのフォルダは別物です。Android StudioやXcodeで作成したプロジェクトを開くように、次は生成した<code>F01StampBoard</code>を開きます。",
+      "translation": "Like <code>import</code> in Java, this loads the types you use. The Flutter SDK and the app folder are two different things. Next, open the generated <code>F01StampBoard</code>, the same way you open a project created in Android Studio or Xcode."
+    },
+    {
+      "source": "SDKの版と準備状況を確認し、空のプロジェクトを作れた。",
+      "translation": "The SDK version and setup status have been checked, and an empty project has been created."
+    },
+    {
+      "source": "STEP 01 · コマ8",
+      "translation": "STEP 01 · Session 8"
+    },
+    {
+      "source": "空のアプリを起動する",
+      "translation": "Run the empty app"
+    },
+    {
+      "source": "Visual Studio Codeの<code>File &gt; Open Folder…</code>で<code>F01StampBoard</code>を選びます。<code>pubspec.yaml</code>が直接見えるフォルダです。",
+      "translation": "In Visual Studio Code, choose <code>F01StampBoard</code> from <code>File &gt; Open Folder…</code>. It is the folder in which <code>pubspec.yaml</code> is directly visible."
+    },
+    {
+      "source": "<code>Terminal &gt; New Terminal</code>を開き、<code>flutter pub get</code>を実行します。",
+      "translation": "Open <code>Terminal &gt; New Terminal</code> and run <code>flutter pub get</code>."
+    },
+    {
+      "source": "<code>Command Palette</code>を開き、<code>Flutter: Launch Emulator</code>から既存のiOSシミュレータを選びます。",
+      "translation": "Open the <code>Command Palette</code> and choose an existing iOS simulator from <code>Flutter: Launch Emulator</code>."
+    },
+    {
+      "source": "<code>flutter devices</code>に表示されたiOS端末のIDを使って<code>flutter run -d 端末ID</code>を実行します。端末IDという文字のまま実行しません。",
+      "translation": "Using the ID of the iOS device shown by <code>flutter devices</code>, run <code>flutter run -d 端末ID</code> (端末ID = device ID). Do not run it with the literal text 端末ID."
+    },
+    {
+      "source": "<code>flutter devices</code>は一覧表示で、端末を起動するコマンドではありません。実行が完了すると白い画面の中央にHello World!が出ます。ビルドの取得待ちは先生へ状況を伝え、同じコマンドを重ねて実行しません。",
+      "translation": "<code>flutter devices</code> only lists devices; it is not a command that starts one. When the run finishes, Hello World! appears in the center of a white screen. If the build is waiting on downloads, tell your teacher the situation, and do not run the same command again on top of it."
+    },
+    {
+      "source": "<code>lib/main.dart</code>が画面の入口です。<code>main</code>から<code>runApp</code>へ<code>MainApp</code>を渡し、<code>MainApp</code>の<code>build</code>が<code>MaterialApp</code>と<code>Scaffold</code>を返します。<code>android/</code>と<code>ios/</code>は起動の土台で、この単元では直接編集しません。",
+      "translation": "<code>lib/main.dart</code> is the entry point of the screen. <code>main</code> passes <code>MainApp</code> to <code>runApp</code>, and the <code>build</code> of <code>MainApp</code> returns a <code>MaterialApp</code> and a <code>Scaffold</code>. <code>android/</code> and <code>ios/</code> are the base for launching the app; you do not edit them directly in this unit."
+    },
+    {
+      "source": "<code>pubspec.yaml</code>の<code>dev_dependencies</code>にある<code>flutter_test:</code>と、その直下の<code>sdk: flutter</code>の2行は使わないため除きます。<code>dependencies</code>側のFlutter SDKは残します。<code>test/</code>が生成されていた場合だけ、そのひな形も除きます。<code>flutter_lints</code>は残し、もう一度<code>flutter pub get</code>を実行します。",
+      "translation": "In <code>pubspec.yaml</code>, remove the two lines <code>flutter_test:</code> under <code>dev_dependencies</code> and the <code>sdk: flutter</code> directly below it, because they are not used. Keep the Flutter SDK on the <code>dependencies</code> side. Only if a <code>test/</code> folder was generated, remove that template too. Keep <code>flutter_lints</code>, and run <code>flutter pub get</code> once more."
+    },
+    {
+      "source": "Dartも<code>main</code>が開始点です。<code>runApp</code>に最上位のWidgetを渡すところがFlutter固有です。<code>const</code>は実行時に変化しない設定の生成に使います。<code>class</code>と<code>extends</code>はJavaの継承に対応し、<code>super.key</code>は親へ識別用の引数を渡す省略形です。",
+      "translation": "In Dart, <code>main</code> is also the starting point. What is specific to Flutter is passing the top-level widget to <code>runApp</code>. <code>const</code> is used to create settings that do not change at run time. <code>class</code> and <code>extends</code> correspond to inheritance in Java, and <code>super.key</code> is shorthand for passing the identifying argument to the parent."
+    },
+    {
+      "source": "このSTEPの全コード（照合・合流用）",
+      "translation": "Full code for this STEP (to compare with yours, or to join from here)"
+    },
+    {
+      "source": "lib/main.dart · 全文",
+      "translation": "lib/main.dart · full file"
+    },
+    {
+      "source": "iOSでHello World!が表示され、入口のファイルを開けた。",
+      "translation": "Hello World! is shown on iOS, and the entry-point file has been opened."
+    },
+    {
+      "source": "STEP 02 · コマ8",
+      "translation": "STEP 02 · Session 8"
+    },
+    {
+      "source": "Widgetの組み合わせで画面を書く",
+      "translation": "Build the screen by combining widgets"
+    },
+    {
+      "source": "この単元の新概念は<strong>宣言的UI</strong>です。現在の値に対応する画面の構成を<code>build</code>で返します。既存の<code>View</code>やDOMを順番に探して書き換えるのではなく、「この値なら、この部品を置く」と記述します。",
+      "translation": "The new concept in this unit is <strong>declarative UI</strong> (宣言的UI). <code>build</code> returns the screen structure that corresponds to the current values. Instead of finding existing <code>View</code>s or DOM elements one after another and rewriting them, you write \"for this value, place this UI element\"."
+    },
+    {
+      "source": "<code>lib/main.dart</code>をこのSTEPの全文へ更新します。<code>MaterialApp</code>はアプリの設定、<code>Scaffold</code>は画面の基本枠、<code>SafeArea</code>はOSの表示領域を避ける余白、<code>Center</code>は中央配置、<code>Text</code>は文字を担当します。<code>child:</code>は1つのWidget、後で使う<code>children:</code>は複数のWidgetのリストです。<code>MaterialApp</code>に加えた<code>debugShowCheckedModeBanner: false</code>は、STEP 01で画面の右上に出ていたDEBUGの帯を消す設定です。帯はデバッグ実行中を示す目印で、アプリの動きには関係しません。",
+      "translation": "Update <code>lib/main.dart</code> to the full code of this STEP. <code>MaterialApp</code> holds the app settings, <code>Scaffold</code> is the basic frame of the screen, <code>SafeArea</code> is the margin that avoids the areas used by the OS display, <code>Center</code> centers its content, and <code>Text</code> shows text. <code>child:</code> takes one widget; <code>children:</code>, which you use later, takes a list of widgets. The <code>debugShowCheckedModeBanner: false</code> added to <code>MaterialApp</code> removes the DEBUG banner that appeared at the top right of the screen in STEP 01. The banner only marks that the app is running in debug mode; it does not affect how the app works."
+    },
+    {
+      "source": "<code>Text('今日の小さな一歩', style: TextStyle(fontSize: 28))</code>では、最初の引数が文字、名前付き引数<code>style</code>が装飾です。括弧とカンマの対応をインデントで追いましょう。<code>@override</code>は親のメソッドを実装し直す印です。<code>build</code>へ渡される<code>BuildContext</code>は、そのWidgetがツリーのどこにあるかを表す情報です。",
+      "translation": "In <code>Text('今日の小さな一歩', style: TextStyle(fontSize: 28))</code> (今日の小さな一歩 = a small step today), the first argument is the text, and the named argument <code>style</code> is the decoration. Follow how the brackets and commas pair up by using the indentation. <code>@override</code> marks that you are reimplementing a method of the parent. The <code>BuildContext</code> passed to <code>build</code> tells where this widget is in the tree."
+    },
+    {
+      "source": "Javaで<code>View</code>を更新した手順に対して、Dartは表示したい文字と大きさをWidgetの構成として返します。Dartの名前付き引数はSwiftの引数ラベルに近く、設定の意味を引数名で読み取れます。",
+      "translation": "Compared with the steps for updating a <code>View</code> in Java, Dart returns the text and size you want to show as a structure of widgets. Dart's named arguments are close to Swift's argument labels: you can read the meaning of each setting from the argument name."
+    },
+    {
+      "source": "Widgetの親子関係と<code>child</code>の役割を説明できた。",
+      "translation": "You can explain the parent–child relationship of widgets and the role of <code>child</code>."
+    },
+    {
+      "source": "STEP 03 · コマ8",
+      "translation": "STEP 03 · Session 8"
+    },
+    {
+      "source": "保存してホットリロードする",
+      "translation": "Save and hot reload"
+    },
+    {
+      "source": "実行中のまま<code>Text</code>の文字を1か所変え、保存します。ターミナルから<code>flutter run</code>している場合は、その実行中のターミナルで<code>r</code>を押すとホットリロードします。Visual Studio Codeの実行機能を使っている場合は<code>Flutter: Hot Reload</code>を選べます。",
+      "translation": "While the app is running, change the <code>Text</code> string in one place and save. If you started it with <code>flutter run</code> from the terminal, press <code>r</code> in that running terminal to hot reload. If you are using the run feature of Visual Studio Code, you can choose <code>Flutter: Hot Reload</code>."
+    },
+    {
+      "source": "ホットリロードはコードの変更を反映し、現在の状態をできるだけ保ちます。<code>R</code>によるホットリスタートはDart側を起動し直します。いまは状態を持たない画面ですが、後の回数の操作で違いが見えます。<code>main</code>や状態の初期値を変えた場合にはホットリスタートを使います。",
+      "translation": "Hot reload applies your code changes and keeps the current state as much as possible. Hot restart with <code>R</code> starts the Dart side over. Right now the screen has no state, but you will see the difference later when you operate the count. Use hot restart when you change <code>main</code> or the initial value of a state."
+    },
+    {
+      "source": "<code>style</code>の<code>fontSize</code>を28から別の値へ変え、1回ごとの変化を確認します。エラーが出たらターミナルか<code>Problems</code>の最初のエラーを読み、閉じ括弧・カンマを確認します。実行を終了する場合は実行中のターミナルで<code>q</code>を押します。",
+      "translation": "Change <code>fontSize</code> in <code>style</code> from 28 to another value, and check the change after each edit. If an error appears, read the first error in the terminal or in <code>Problems</code>, and check the closing brackets and commas. To stop the app, press <code>q</code> in the running terminal."
+    },
+    {
+      "source": "変更する文字とサイズはSwiftのラベル設定と同じ目的です。FlutterではWidgetを記述し直して再表示します。ホットリロードは保存したコードを実行中のアプリへ反映する機能で、ソースを端末内へ永続保存する機能ではありません。",
+      "translation": "Changing the text and size has the same purpose as setting up a label in Swift. In Flutter, you rewrite the widget and it is shown again. Hot reload is a feature that applies the saved code to the running app, not a feature that stores the source permanently on the device."
+    },
+    {
+      "source": "文字とサイズを変え、ホットリロードで結果を確認できた。",
+      "translation": "The text and size have been changed, and the result has been checked with hot reload."
+    },
+    {
+      "source": "STEP 04 · コマ8",
+      "translation": "STEP 04 · Session 8"
+    },
+    {
+      "source": "文字と大きさをアレンジする",
+      "translation": "Customize the text and size"
+    },
+    {
+      "source": "最後に、表示する一言と文字の大きさを自分の題材へ変えます。「毎日必ず」より「できたときに少し」のように、自分が使いやすい文でも構いません。",
+      "translation": "Finally, change the displayed message and the text size to fit your own content. Any wording that works for you is fine, for example 「できたときに少し」 (a little, whenever I manage it) rather than 「毎日必ず」 (every day without fail)."
+    },
+    {
+      "source": "場所",
+      "translation": "Place"
+    },
+    {
+      "source": "変わること",
+      "translation": "What changes"
+    },
+    {
+      "source": "<code>Text</code>の文字列",
+      "translation": "The string in <code>Text</code>"
+    },
+    {
+      "source": "画面中央の一言。",
+      "translation": "The message in the center of the screen."
+    },
+    {
+      "source": "<code>TextStyle</code>の<code>fontSize</code>",
+      "translation": "<code>fontSize</code> in <code>TextStyle</code>"
+    },
+    {
+      "source": "文字の大きさ。",
+      "translation": "The size of the text."
+    },
+    {
+      "source": "保存し、ホットリロードして、全文が読めるか確認します。次回の合流のため、変えた文字・数値を控えておきます。全コードは見比べるための基準で、自分の変更を消すためのものではありません。",
+      "translation": "Save, hot reload, and check that the whole message is readable. Note the text and numbers you changed so you can rejoin next time. The full code is a reference for comparison, not something that erases your changes."
+    },
+    {
+      "source": "Web基礎では既存要素へ<code>textContent</code>を設定しました。Flutterでは表示する<code>Text</code>を返します。同じ「文字を変える」操作でも、画面の指定方法が違います。",
+      "translation": "In Web Basics, you set <code>textContent</code> on an existing element. In Flutter, you return the <code>Text</code> to show. The operation is the same \"change the text\", but the way you specify the screen is different."
+    },
+    {
+      "source": "変更した場所と、画面の変化を説明できた。",
+      "translation": "You can explain what you changed and how the screen changed."
+    },
+    {
+      "source": "STEP 05 · コマ9",
+      "translation": "STEP 05 · Session 9"
+    },
+    {
+      "source": "習慣を1枚のカードにする",
+      "translation": "Turn a habit into one card"
+    },
+    {
+      "source": "このコマの開始コード",
+      "translation": "Starting code for this session"
+    },
+    {
+      "source": "途中から合流する場合は、自分が変えた文字・色・数値を控えてから<code>lib/main.dart</code>をそろえます。",
+      "translation": "If you are joining partway through, note the text, colors, and numbers you changed, then match <code>lib/main.dart</code> to this code."
+    },
+    {
+      "source": "Visual Studio Codeで同じ<code>F01StampBoard</code>を開き、iOSで実行します。今日の開始状態は中央に1つの<code>Text</code>がある画面です。このSTEPでは<code>Center</code>の<code>child</code>を<code>Card</code>へ替え、習慣名・マーク・回数を1枚にまとめます。",
+      "translation": "Open the same <code>F01StampBoard</code> in Visual Studio Code and run it on iOS. Today's starting state is a screen with one <code>Text</code> in the center. In this STEP, replace the <code>child</code> of <code>Center</code> with a <code>Card</code>, and put the habit name, the marks, and the count together on one card."
+    },
+    {
+      "source": "<code>Card</code>の中に<code>Padding</code>、さらに<code>Column</code>を置きます。<code>children</code>の角括弧の中へ<code>Text</code>、<code>SizedBox</code>、<code>Icon</code>を順番に並べます。今回は回数を変える処理をまだ付けないため、0 / 5 回のままです。",
+      "translation": "Inside the <code>Card</code>, place a <code>Padding</code>, and inside that a <code>Column</code>. Inside the square brackets of <code>children</code>, list <code>Text</code>, <code>SizedBox</code>, and <code>Icon</code> in order. Because you are not adding the code that changes the count yet, the card stays at 「0 / 5 回」 (0 / 5 times)."
+    },
+    {
+      "source": "<code>Card</code>はまとまりのある面、<code>Padding</code>は内側の余白、<code>SizedBox</code>は部品間の空きを作ります。<code>Icon</code>にはSDKに含まれるMaterialアイコンを使い、画像ファイルは追加しません。",
+      "translation": "<code>Card</code> makes a surface that groups things together, <code>Padding</code> adds inner spacing, and <code>SizedBox</code> creates space between elements. <code>Icon</code> uses the Material icons included in the SDK, so no image files are added."
+    },
+    {
+      "source": "HTMLの要素とCSSの余白を分けた書き方に対し、Flutterでは<code>Card</code>・<code>Padding</code>・<code>Text</code>というWidgetを組み合わせます。装飾の目的は同じですが、CSSファイルへ書く操作はありません。",
+      "translation": "Compared with HTML, where elements and CSS spacing are written separately, Flutter combines the widgets <code>Card</code>, <code>Padding</code>, and <code>Text</code>. The purpose of the decoration is the same, but there is no step of writing to a CSS file."
+    },
+    {
+      "source": "習慣名・マーク・回数が1枚のカードに表示された。",
+      "translation": "The habit name, the marks, and the count are shown on one card."
+    },
+    {
+      "source": "STEP 06 · コマ9",
+      "translation": "STEP 06 · Session 9"
+    },
+    {
+      "source": "余白と縦横の並びを読む",
+      "translation": "Read the spacing and the vertical and horizontal layout"
+    },
+    {
+      "source": "<code>Column</code>は縦、<code>Row</code>は横に<code>children</code>を並べます。<code>Column</code>の<code>mainAxisSize: MainAxisSize.min</code>は主軸方向を必要な大きさに絞り、<code>crossAxisAlignment: CrossAxisAlignment.start</code>は横方向の開始側へ寄せます。型名を省略したdot shorthandは使いません。",
+      "translation": "<code>Column</code> lays out its <code>children</code> vertically, and <code>Row</code> horizontally. In <code>Column</code>, <code>mainAxisSize: MainAxisSize.min</code> shrinks the main axis to the size needed, and <code>crossAxisAlignment: CrossAxisAlignment.start</code> aligns the items to the start side horizontally. The dot shorthand that omits the type name is not used."
+    },
+    {
+      "source": "<code>EdgeInsets.all(24)</code>は上下左右同じ余白、<code>SizedBox(height: 16)</code>は縦の空きです。余白を1か所変えて保存し、カード外側の位置とカード内側の間隔を区別します。<code>Container</code>や<code>Card</code>の<code>margin</code>を後で使うときも、<code>Padding</code>の内側とは別です。",
+      "translation": "<code>EdgeInsets.all(24)</code> gives the same spacing on all four sides, and <code>SizedBox(height: 16)</code> is a vertical gap. Change one spacing value and save, and tell apart the position outside the card from the spacing inside the card. When you later use <code>margin</code> on <code>Container</code> or <code>Card</code>, that is also different from the inside of <code>Padding</code>."
+    },
+    {
+      "source": "文字が複数行になる題材を使い、カードの高さが内容に合わせて変わることを確かめます。<code>Text</code>の文字列を変えるときは、最後の閉じクォートとカンマを残します。",
+      "translation": "Use content that makes the text span several lines, and check that the card height changes to fit the content. When you change the string in <code>Text</code>, keep the closing quote and the comma at the end."
+    },
+    {
+      "source": "Swiftの縦のStackと同じ配置の目的です。Flutterは間隔にも<code>SizedBox</code>というWidgetを置きます。<code>children</code>はDartの<code>List</code>で、Widgetを順に並べた角括弧です。",
+      "translation": "The layout purpose is the same as a vertical Stack in Swift. Flutter uses a widget, <code>SizedBox</code>, even for the gaps. <code>children</code> is a Dart <code>List</code>: square brackets with the widgets in order."
+    },
+    {
+      "source": "内側の余白と部品間の間隔を見分け、変更できた。",
+      "translation": "You can tell the inner padding from the spacing between elements, and both have been changed."
+    },
+    {
+      "source": "STEP 07 · コマ9",
+      "translation": "STEP 07 · Session 9"
+    },
+    {
+      "source": "データから一覧を作る",
+      "translation": "Build the list from data"
+    },
+    {
+      "source": "習慣を3件へ増やします。同じカードを3回コピーする代わりに、名前・理由・回数を<code>Habit</code>にまとめ、<code>habits</code>のリストから作ります。",
+      "translation": "Increase the habits to three. Instead of copying the same card three times, put the name, reason, and count together in <code>Habit</code>, and build the cards from the <code>habits</code> list."
+    },
+    {
+      "source": "<code>Habit({required this.name, required this.reason, this.count = 0})</code>は名前付き引数を持つコンストラクタです。<code>required</code>は必須、<code>this.name</code>は受け取った値を同名フィールドへ代入する省略形、<code>count = 0</code>は省略時の初期値です。<code>name</code>・<code>reason</code>は<code>final</code>で一度代入した参照を再代入せず、回数<code>count</code>は<code>int</code>として後で変更します。",
+      "translation": "<code>Habit({required this.name, required this.reason, this.count = 0})</code> is a constructor with named parameters. <code>required</code> makes a parameter mandatory, <code>this.name</code> is shorthand for assigning the received value to the field of the same name, and <code>count = 0</code> is the default value when it is omitted. <code>name</code> and <code>reason</code> are <code>final</code>: the reference assigned once is never reassigned. The count, <code>count</code>, is an <code>int</code> that is changed later."
+    },
+    {
+      "source": "<code>ListView</code>は縦にスクロールする領域です。<code>children</code>の中の<code>for (final habit in habits) buildHabitCard(habit)</code>で各データから<code>Card</code>を作ります。<code>buildHabitCard</code>は1件をWidgetとして返すメソッドです。この段階の一覧は<code>StatelessWidget</code>で、操作ボタンはありません。",
+      "translation": "<code>ListView</code> is an area that scrolls vertically. Inside <code>children</code>, <code>for (final habit in habits) buildHabitCard(habit)</code> builds a <code>Card</code> from each item of data. <code>buildHabitCard</code> is a method that returns one item as a widget. At this stage the list is a <code>StatelessWidget</code>, and there are no buttons to operate."
+    },
+    {
+      "source": "コード中の<code>var total = 0</code>は型を推論した変更可能な<code>int</code>、<code>final habit</code>はループの各回で再代入しない変数です。リストを<code>final</code>にしても、中身が自動的に変更不可になるわけではありません。",
+      "translation": "In the code, <code>var total = 0</code> is a changeable <code>int</code> whose type is inferred, and <code>final habit</code> is a variable that is not reassigned within each pass of the loop. Making the list <code>final</code> does not automatically make its contents unchangeable."
+    },
+    {
+      "source": "<code>Habit</code>のクラスとリストはJavaのデータクラス・<code>ArrayList</code>に対応します。Dartではリストの中に<code>for</code>を置けるため、生成したWidgetを<code>children</code>へ並べられます。Web基礎のDOMを直接生成するコードへ置き換える必要はありません。",
+      "translation": "The <code>Habit</code> class and the list correspond to a Java data class and an <code>ArrayList</code>. In Dart you can put a <code>for</code> inside a list, so the generated widgets can be lined up in <code>children</code>. There is no need to replace this with code that creates the DOM directly, as in Web Basics."
+    },
+    {
+      "source": "3件のカードを表示し、データのどの項目がどの文字になるか説明できた。",
+      "translation": "Three cards are shown, and you can explain which data field becomes which text."
+    },
+    {
+      "source": "STEP 08 · コマ9",
+      "translation": "STEP 08 · Session 9"
+    },
+    {
+      "source": "配色と表示をそろえる",
+      "translation": "Make the colors and display consistent"
+    },
+    {
+      "source": "画面全体の配色を<code>StampApp</code>で指定します。<code>MaterialApp</code>の<code>theme</code>に<code>ThemeData</code>、<code>colorScheme</code>に<code>ColorScheme.fromSeed</code>を渡し、<code>seedColor</code>で基準の色を決めます。<code>Color(0xFF287A70)</code>の<code>FF</code>は不透明度、続く6桁はRGBです。",
+      "translation": "Set the color scheme of the whole screen in <code>StampApp</code>. Pass <code>ThemeData</code> to <code>theme</code> of <code>MaterialApp</code> and <code>ColorScheme.fromSeed</code> to <code>colorScheme</code>, and choose the base color with <code>seedColor</code>. In <code>Color(0xFF287A70)</code>, <code>FF</code> is the opacity and the following six digits are RGB."
+    },
+    {
+      "source": "<code>Scaffold</code>の背景は<code>scaffoldBackgroundColor</code>、カードの背景は<code>Colors.white</code>です。<code>TextStyle</code>の<code>fontWeight</code>で文字の太さを指定します。<code>Container</code>の<code>BoxDecoration</code>と<code>BorderRadius.circular</code>で合計欄の背景と角を整えます。",
+      "translation": "The background of <code>Scaffold</code> is <code>scaffoldBackgroundColor</code>, and the background of the cards is <code>Colors.white</code>. <code>fontWeight</code> in <code>TextStyle</code> sets the thickness of the text. <code>BoxDecoration</code> and <code>BorderRadius.circular</code> on <code>Container</code> shape the background and corners of the total box."
+    },
+    {
+      "source": "合計欄の<code>Row</code>はアイコンと文字を横へ並べ、<code>Expanded</code>が文字へ残りの幅を渡します。<code>StampMarks</code>の<code>Wrap</code>は必要なら次の行へ折り返します。<code>ListView</code>は縦へ動かせるため、下のカードも確認できます。",
+      "translation": "The <code>Row</code> in the total box lines up the icon and the text horizontally, and <code>Expanded</code> gives the remaining width to the text. The <code>Wrap</code> in <code>StampMarks</code> wraps to the next line when needed. <code>ListView</code> can be scrolled vertically, so you can also check the cards below."
+    },
+    {
+      "source": "見出しの文字列中の<code>\\n</code>は改行です。<code>'集めたスタンプ $total 個'</code>は文字列補間で、式を含む場合は<code>${habit.count}</code>のように波括弧で囲みます。",
+      "translation": "The <code>\\n</code> in the heading string is a line break. <code>'集めたスタンプ $total 個'</code> (集めたスタンプ … 個 = … stamps collected) is string interpolation; when it contains an expression, wrap it in curly braces as in <code>${habit.count}</code>."
+    },
+    {
+      "source": "CSSの16進色と同じRGBを使いますが、Flutterは先頭に不透明度も書きます。文字列補間はJavaScriptで文字と変数を連結する目的と同じで、Dartでは$と必要に応じた波括弧で埋め込みます。",
+      "translation": "It uses the same RGB as hex colors in CSS, but Flutter also writes the opacity in front. String interpolation serves the same purpose as joining text and variables in JavaScript; in Dart you embed them with $ and, when needed, curly braces."
+    },
+    {
+      "source": "色・角・余白・折り返しを読み分け、3件とも表示できた。",
+      "translation": "You can tell apart the color, the corners, the spacing, and the wrapping in the code, and all three cards are shown."
+    },
+    {
+      "source": "STEP 09 · コマ9",
+      "translation": "STEP 09 · Session 9"
+    },
+    {
+      "source": "カードの題材をアレンジする",
+      "translation": "Customize the card content"
+    },
+    {
+      "source": "3件の名前と理由を、自分が使いたい題材へ変えます。学習でも、休憩でも、架空の習慣でも構いません。<code>Habit</code>を1つ増やす場合は同じ形でリストへ加えます。",
+      "translation": "Change the three names and reasons to content you want to use. Study, breaks, or made-up habits are all fine. To add one more <code>Habit</code>, add it to the list in the same form."
+    },
+    {
+      "source": "確認すること",
+      "translation": "What to check"
+    },
+    {
+      "source": "<code>Habit</code>の<code>name</code>・<code>reason</code>",
+      "translation": "<code>name</code> and <code>reason</code> in <code>Habit</code>"
+    },
+    {
+      "source": "カードに自分の名前が出る。理由は次の詳細画面で使うため空にしない。",
+      "translation": "The names you chose appear on the cards. Do not leave a reason empty, because the detail screen that comes next uses it."
+    },
+    {
+      "source": "文字が読みやすい配色。",
+      "translation": "A color scheme in which the text is easy to read."
+    },
+    {
+      "source": "カードの間隔と余白。",
+      "translation": "The gaps between the cards and the spacing inside them."
+    },
+    {
+      "source": "初期リストを書き換えたらホットリスタートします。いまは静的な一覧の完成です。まだボタンが無いことと、どの値から表示されているかを確かめます。",
+      "translation": "After rewriting the initial list, hot restart. This completes the static list for now. Confirm that there are no buttons yet, and which values the display comes from."
+    },
+    {
+      "source": "データの値を変えて表示を変える点はJavaのモデルと同じです。Dartは名前付き引数なので、<code>name</code>と<code>reason</code>を取り違えず読めます。新しいAPIを追加せず、既存の値と装飾でアレンジします。",
+      "translation": "Changing the display by changing data values is the same as with a Java model. Because Dart uses named arguments, you can read <code>name</code> and <code>reason</code> without mixing them up. Customize with the existing values and decoration, without adding any new API."
+    },
+    {
+      "source": "題材と配色を変え、どの値が画面へ出るか説明できた。",
+      "translation": "The content and colors have been changed, and you can explain which values appear on the screen."
+    },
+    {
+      "source": "STEP 10 · コマ10",
+      "translation": "STEP 10 · Session 10"
+    },
+    {
+      "source": "回数と画面の関係を読む",
+      "translation": "Read how the count relates to the screen"
+    },
+    {
+      "source": "Visual Studio Codeで<code>F01StampBoard</code>を開き、3件の静的な一覧から再開します。今日は「現在の回数から表示する」という宣言的UIの使い方を操作で確かめます。",
+      "translation": "Open <code>F01StampBoard</code> in Visual Studio Code and resume from the static list of three. Today, you will confirm by operating the app how declarative UI is used: \"the display comes from the current count\"."
+    },
+    {
+      "source": "<code>Habit</code>の<code>count</code>、合計<code>total</code>、<code>StampMarks</code>の<code>count</code>がどうつながるかを先に読みます。数値・マーク・達成メッセージを別々に記憶せず、<code>count</code>を基準に計算します。初期データの<code>count</code>を一時的に1へ変えてホットリスタートし、複数の表示が同時に変わることを確かめ、0へ戻します。",
+      "translation": "First, read how <code>count</code> in <code>Habit</code>, the total <code>total</code>, and <code>count</code> in <code>StampMarks</code> are connected. Instead of remembering the number, the marks, and the achievement message separately, calculate them from <code>count</code>. Temporarily change <code>count</code> in the initial data to 1, hot restart, confirm that several displays change at the same time, then set it back to 0."
+    },
+    {
+      "source": "アプリを閉じて起動し直すと、ソースの初期値へ戻ります。この単元では端末内保存をまだ作りません。ホットリロードで状態が残ることと、永続保存は分けて考えます。",
+      "translation": "If you close the app and start it again, it goes back to the initial values in the source. This unit does not yet save anything on the device. Think of state surviving a hot reload and permanent storage as two different things."
+    },
+    {
+      "source": "Javaのモデルの値と<code>View</code>を対応させた経験を使います。Flutterでも値は必要ですが、<code>build</code>が値から関連する表示をまとめて返します。どのWidgetが同じ<code>count</code>を読むかを追うのが要点です。",
+      "translation": "Use your experience of matching model values to a <code>View</code> in Java. Flutter also needs the values, but <code>build</code> returns all the related displays from the values at once. The point is to follow which widgets read the same <code>count</code>."
+    },
+    {
+      "source": "回数1つから数値・マーク・合計が変わることを追えた。",
+      "translation": "You have traced how a single count changes the number, the marks, and the total."
+    },
+    {
+      "source": "STEP 11 · コマ10",
+      "translation": "STEP 11 · Session 10"
+    },
+    {
+      "source": "setStateでスタンプを増やす",
+      "translation": "Add stamps with setState"
+    },
+    {
+      "source": "操作で変わる<code>habits</code>を<code>State</code>へ移します。<code>StampBoardPage</code>は<code>StatefulWidget</code>となり、<code>createState</code>が_StampBoardPageStateを作ります。Widgetは画面の設定、<code>State</code>は操作によって変わる値を保持します。名前の先頭のアンダースコアはDartのライブラリ内で使う名前という指定です。",
+      "translation": "Move <code>habits</code>, which changes through operations, into <code>State</code>. <code>StampBoardPage</code> becomes a <code>StatefulWidget</code>, and <code>createState</code> creates _StampBoardPageState. The widget holds the screen settings, and <code>State</code> holds the values that change through operations. The underscore at the start of the name declares it as a name used only inside the Dart library."
+    },
+    {
+      "source": "ボタンの<code>onPressed</code>へ<code>() =&gt; changeStamp(habit, 1)</code>を渡します。これは引数のない関数で、押したときに<code>changeStamp</code>を呼びます。関数の呼出結果をその場で渡す書き方と区別してください。Dartのアローは1つの式を返す省略形です。",
+      "translation": "Pass <code>() =&gt; changeStamp(habit, 1)</code> to the button's <code>onPressed</code>. This is a function with no parameters that calls <code>changeStamp</code> when the button is pressed. Distinguish it from writing that passes the result of calling the function on the spot. Dart's arrow is shorthand for returning a single expression."
+    },
+    {
+      "source": "<code>changeStamp</code>は次の回数が範囲内か確認し、<code>setState(() { habit.count = nextCount; });</code>で値を変更します。<code>setState</code>は変更をFlutterへ知らせ、<code>build</code>で現在の値に合った画面を作り直せるようにします。<code>setState</code>の中へ画面の部品を追加する操作は書きません。",
+      "translation": "<code>changeStamp</code> checks that the next count is within range, then changes the value with <code>setState(() { habit.count = nextCount; });</code>. <code>setState</code> tells Flutter about the change, so that <code>build</code> can rebuild the screen to match the current values. Do not write operations that add UI elements inside <code>setState</code>."
+    },
+    {
+      "source": "1回押して、カードの回数・合計・マークが一緒に1になることを確かめます。0に戻す操作も試します。",
+      "translation": "Press once, and confirm that the card's count, the total, and the marks all become 1 together. Also try the operation that goes back to 0."
+    },
+    {
+      "source": "ボタンへ処理を渡す目的はJavaのリスナーやSwiftのクロージャと同じです。Dartでは() =>で1式の関数を渡します。値を変えた後に個別のラベルを更新する代わりに、<code>setState</code>で再構築を知らせます。",
+      "translation": "Passing an action to a button has the same purpose as a listener in Java or a closure in Swift. In Dart, you pass a one-expression function with () =>. Instead of updating individual labels after changing the value, you tell Flutter to rebuild with <code>setState</code>."
+    },
+    {
+      "source": "押す・戻すで回数とマークが同時に変わった。",
+      "translation": "Pressing and undoing change the count and the marks at the same time."
+    },
+    {
+      "source": "STEP 12 · コマ10",
+      "translation": "STEP 12 · Session 10"
+    },
+    {
+      "source": "合計とマークを値から作る",
+      "translation": "Build the total and marks from values"
+    },
+    {
+      "source": "<code>build</code>の最初で<code>total</code>を0にし、<code>for</code>で全件の<code>count</code>を足します。合計を別の状態として持たないため、戻す操作でも合計の更新忘れが起こりにくくなります。",
+      "translation": "At the start of <code>build</code>, set <code>total</code> to 0 and add up <code>count</code> of every habit with <code>for</code>. Because the total is not held as separate state, forgetting to update the total is unlikely, even when undoing."
+    },
+    {
+      "source": "<code>StampMarks</code>は<code>count</code>を引数で受け取る<code>StatelessWidget</code>です。0から<code>stampGoal</code>未満までの<code>for</code>で<code>Icon</code>を並べ、<code>i &lt; count ? Icons.check_circle : Icons.radio_button_unchecked</code>で押した分と未達成の分を切り替えます。<code>条件 ? 成立時 : 不成立時</code>は条件演算子です。",
+      "translation": "<code>StampMarks</code> is a <code>StatelessWidget</code> that receives <code>count</code> as a parameter. A <code>for</code> from 0 to less than <code>stampGoal</code> lines up <code>Icon</code>s, and <code>i &lt; count ? Icons.check_circle : Icons.radio_button_unchecked</code> switches between the stamped ones and the ones not yet done. <code>条件 ? 成立時 : 不成立時</code> (条件 = condition, 成立時 = if true, 不成立時 = if false) is the conditional operator."
+    },
+    {
+      "source": "同じ条件で色も変え、<code>Wrap</code>で幅が足りないと折り返します。目標<code>stampGoal</code>はファイル先頭に1か所だけ置き、マーク数・上限・残り回数が同じ目標を参照します。残り回数は<code>stampGoal</code> - <code>habit.count</code>です。",
+      "translation": "The same condition also changes the color, and <code>Wrap</code> wraps when the width is not enough. The goal <code>stampGoal</code> is placed in exactly one place at the top of the file, so the number of marks, the limit, and the remaining count all refer to the same goal. The remaining count is <code>stampGoal</code> - <code>habit.count</code>."
+    },
+    {
+      "source": "別々のカードを1回ずつ押し、合計が2、各カードは1になることを確認します。",
+      "translation": "Press different cards once each, and confirm that the total is 2 and each card is 1."
+    },
+    {
+      "source": "合計の計算はJavaの拡張<code>for</code>と同じです。違うのは、Flutterでは<code>build</code>のたびに現在の一覧から算出し、その結果を<code>Text</code>へ渡すことです。<code>StampMarks</code>は状態を所有せず、受け取った値の表示だけを担当します。",
+      "translation": "Calculating the total is the same as an enhanced <code>for</code> in Java. The difference is that in Flutter it is calculated from the current list on every <code>build</code>, and the result is passed to <code>Text</code>. <code>StampMarks</code> owns no state; it only displays the value it receives."
+    },
+    {
+      "source": "複数カードの回数と合計が一致し、マークの条件を説明できた。",
+      "translation": "The counts on several cards match the total, and you can explain the condition for the marks."
+    },
+    {
+      "source": "STEP 13 · コマ10",
+      "translation": "STEP 13 · Session 10"
+    },
+    {
+      "source": "上限と戻す操作を確かめる",
+      "translation": "Check the limit and the undo operation"
+    },
+    {
+      "source": "回数は0〜<code>stampGoal</code>に収めます。ボタン側では、上限なら<code>onPressed</code>を<code>null</code>にして押せない表示にし、関数側でも範囲外なら<code>return</code>します。表示の無効化とデータの範囲確認を両方置きます。",
+      "translation": "The count is kept between 0 and <code>stampGoal</code>. On the button side, at the limit <code>onPressed</code> is set to <code>null</code> so the button is shown as not pressable; on the function side, it also <code>return</code>s when out of range. Both are in place: disabling the display and checking the data range."
+    },
+    {
+      "source": "1件を5回まで押し、達成の文と押せない追加ボタンを確認します。",
+      "translation": "Press one habit up to 5 times, and check the achievement message and the add button that can no longer be pressed."
+    },
+    {
+      "source": "1つ戻して4回にし、追加ボタンがまた使えることを確認します。",
+      "translation": "Undo one to make it 4, and check that the add button works again."
+    },
+    {
+      "source": "0回まで戻し、1つ戻すが無効になることを確認します。",
+      "translation": "Go back down to 0, and check that 「1つ戻す」 (Undo one) becomes disabled."
+    },
+    {
+      "source": "もう一度1回押し、ホットリロードでは1回が残ることを見ます。",
+      "translation": "Press once more, and see that the count of 1 stays after a hot reload."
+    },
+    {
+      "source": "ホットリスタートすると、保存していないため初期値0へ戻ることを確かめます。",
+      "translation": "Hot restart, and confirm that the count goes back to the initial value 0 because nothing is saved."
+    },
+    {
+      "source": "アプリをバックグラウンドへ移すだけでは終了せず、回数が残ることがあります。再起動の検証と混同しないようにします。",
+      "translation": "Just moving the app to the background does not end it, so the count may remain. Do not confuse this with checking a restart."
+    },
+    {
+      "source": "Javaで<code>enabled</code>を切り替える目的に対応します。Flutterのボタンは<code>onPressed</code>が<code>null</code>なら無効です。<code>null</code>を呼ぶ関数として書くのではなく、押したときの処理が無いことを値で表しています。",
+      "translation": "This corresponds to toggling <code>enabled</code> in Java. A Flutter button is disabled when <code>onPressed</code> is <code>null</code>. It is not written as a function that calls <code>null</code>; the value expresses that there is nothing to do when the button is pressed."
+    },
+    {
+      "source": "0と5の境界、取消し、再起動時の初期化を確認できた。",
+      "translation": "The limits at 0 and 5, undoing, and the reset on restart have been checked."
+    },
+    {
+      "source": "STEP 14 · コマ10",
+      "translation": "STEP 14 · Session 10"
+    },
+    {
+      "source": "回数と見た目をアレンジする",
+      "translation": "Customize the count and appearance"
+    },
+    {
+      "source": "ファイル先頭の<code>stampGoal</code>を5から3や7へ変え、上限・マークの数・残り回数・達成の文がそろうことを確認します。目標を減らす前には回数を0へ戻すか、ホットリスタートします。ホットリロードでは回数が残るため、5回のまま目標を3にすると「5 / 3 回 · あと-2回」と出ます。1つ戻すは押せる表示ですが、<code>changeStamp</code>が目標を超える次の回数を受け付けないため、押しても変わりません。そのときはホットリスタートで0へ戻します。",
+      "translation": "Change <code>stampGoal</code> at the top of the file from 5 to 3 or 7, and confirm that the limit, the number of marks, the remaining count, and the achievement message all agree. Before lowering the goal, set the count back to 0 or hot restart. Hot reload keeps the count, so if you set the goal to 3 while a count is still 5, the card shows 「5 / 3 回 · あと-2回」 (5 / 3 times · -2 to go). 「1つ戻す」 (Undo one) looks pressable, but <code>changeStamp</code> does not accept a next count above the goal, so pressing it changes nothing. In that case, hot restart to go back to 0."
+    },
+    {
+      "source": "マークの色、習慣名、見出しも既習の場所で変更できます。回数の操作を直接別の変数へ分散させず、<code>count</code>を表示の基準に保ちます。変更後は最低0・上限・1つ戻すの3通りを確かめます。",
+      "translation": "You can also change the mark color, the habit names, and the heading in the places you have already learned. Do not spread the count operations across other variables; keep <code>count</code> as the basis of the display. After a change, check three cases: the minimum of 0, the limit, and 「1つ戻す」 (Undo one)."
+    },
+    {
+      "source": "どの値からどの表示が決まるか、<code>Habit.count</code>・<code>total</code>・<code>StampMarks</code>の関係を短く説明しましょう。",
+      "translation": "Explain briefly which values decide which displays: the relationship between <code>Habit.count</code>, <code>total</code>, and <code>StampMarks</code>."
+    },
+    {
+      "source": "Javaの変更しない基準値と同じ目的です。Dartの<code>const</code>はコンパイル時に確定する値で、今回の目標回数を1か所で管理します。新しい機能ではなく既存の数値と装飾をアレンジします。",
+      "translation": "This has the same purpose as a fixed reference value in Java. Dart's <code>const</code> is a value fixed at compile time, and it manages this unit's goal count in one place. You are customizing the existing numbers and decoration, not adding a new feature."
+    },
+    {
+      "source": "目標と配色を変えても、上限・取消し・合計がそろった。",
+      "translation": "After changing the goal and colors, the limit, undo, and total still agree."
+    },
+    {
+      "source": "STEP 15 · コマ11",
+      "translation": "STEP 15 · Session 11"
+    },
+    {
+      "source": "詳細へ渡す値を決める",
+      "translation": "Decide the values to pass to the detail page"
+    },
+    {
+      "source": "Visual Studio Codeで<code>F01StampBoard</code>を開き、スタンプを増減できる一覧から再開します。今日は「続けたい理由」を別の画面で読めるようにします。",
+      "translation": "Open <code>F01StampBoard</code> in Visual Studio Code and resume from the list where stamps can be added and removed. Today, you will make 「続けたい理由」 (the reason you want to keep going) readable on a separate screen."
+    },
+    {
+      "source": "詳細へ渡すのは選んだ<code>Habit</code>です。名前だけでなく<code>reason</code>と<code>count</code>も1つの値として渡せるため、同じ内容をもう一度検索する必要がありません。詳細では編集せず、スタンプの操作は一覧へ戻って行います。",
+      "translation": "What you pass to the detail page is the selected <code>Habit</code>. Because you can pass not only the name but also <code>reason</code> and <code>count</code> as a single value, there is no need to look up the same content again. The detail page does not edit anything; stamp operations are done back on the list."
+    },
+    {
+      "source": "まず名前と<code>reason</code>を読み比べ、空の理由があれば記入します。個人的な内容を公開する必要はなく、架空の習慣でも構いません。クリック処理を増やす前に、表示に必要なデータが<code>Habit</code>へそろっていることを確認します。",
+      "translation": "First, read the names and <code>reason</code>s side by side, and fill in any empty reason. You do not have to share anything personal; made-up habits are fine. Before adding click handling, confirm that <code>Habit</code> has all the data needed for the display."
+    },
+    {
+      "source": "画面のデータをクラスへまとめる考え方はJavaと同じです。Dartの<code>final</code>は名前・理由の再代入を止め、回数だけが操作で変わります。画面間で何を渡すかを、モデルの項目で決めます。",
+      "translation": "The idea of grouping screen data into a class is the same as in Java. Dart's <code>final</code> stops the name and reason from being reassigned; only the count changes through operations. Decide what to pass between screens by the fields of the model."
+    },
+    {
+      "source": "選んだ<code>Habit</code>に詳細で必要な3項目がそろっている。",
+      "translation": "The selected <code>Habit</code> has the three fields the detail page needs."
+    },
+    {
+      "source": "STEP 16 · コマ11",
+      "translation": "STEP 16 · Session 11"
+    },
+    {
+      "source": "Navigatorで詳細を開く",
+      "translation": "Open the detail page with Navigator"
+    },
+    {
+      "source": "カードに詳しく見るを加え、<code>openDetail(habit)</code>を呼びます。<code>openDetail</code>は<code>Navigator.push</code>へ<code>context</code>と<code>MaterialPageRoute</code>を渡し、ルートの<code>builder</code>で<code>HabitDetailPage</code>を作ります。",
+      "translation": "Add 「詳しく見る」 (See details) to the card, and call <code>openDetail(habit)</code>. <code>openDetail</code> passes <code>context</code> and a <code>MaterialPageRoute</code> to <code>Navigator.push</code>, and the route's <code>builder</code> creates a <code>HabitDetailPage</code>."
+    },
+    {
+      "source": "<code>Navigator</code>は画面の重なりを管理します。<code>push</code>で詳細を上に載せるため、一覧の<code>State</code>は下に残ります。<code>MaterialPageRoute</code>の<code>&lt;void&gt;</code>は、この画面から結果の値を受け取らない指定です。<code>builder</code>の<code>context</code>は新しい画面を作る場所の情報です。",
+      "translation": "<code>Navigator</code> manages the stack of screens. Because <code>push</code> places the detail page on top, the <code>State</code> of the list stays underneath. The <code>&lt;void&gt;</code> on <code>MaterialPageRoute</code> means that no result value is received from this screen. The <code>context</code> in <code>builder</code> is information about the place where the new screen is created."
+    },
+    {
+      "source": "詳細の<code>AppBar</code>には戻る操作が自動で付きます。この単元では名前付きルートや追加パッケージを使わず、移動先の型と渡す値が同じ場所で見える書き方にします。",
+      "translation": "The <code>AppBar</code> of the detail page gets a back action automatically. This unit does not use named routes or extra packages; it uses a style in which the destination type and the value being passed are visible in the same place."
+    },
+    {
+      "source": "1件目を1回押してから、詳しく見るを押します。",
+      "translation": "Press the first habit once, then press 「詳しく見る」 (See details)."
+    },
+    {
+      "source": "詳細の名前と回数が選んだカードに一致することを確かめます。",
+      "translation": "Confirm that the name and count on the detail page match the card you selected."
+    },
+    {
+      "source": "戻ると一覧の1回が残ることを確かめます。",
+      "translation": "Confirm that the count of 1 remains on the list after you go back."
+    },
+    {
+      "source": "Swiftのナビゲーションで次の画面へ値を渡して積む操作に対応します。Flutterはコンストラクタの名前付き引数<code>habit</code>で渡します。一覧を作り直して置き換える操作ではないため、戻ったときの<code>State</code>を保持できます。",
+      "translation": "This corresponds to pushing the next screen with a value in Swift navigation. Flutter passes it through the constructor's named argument <code>habit</code>. Because it does not rebuild and replace the list, the <code>State</code> is kept when you come back."
+    },
+    {
+      "source": "選んだカードの詳細へ移り、戻って回数が維持された。",
+      "translation": "The detail page of the selected card opens, and the count is kept after going back."
+    },
+    {
+      "source": "STEP 17 · コマ11",
+      "translation": "STEP 17 · Session 11"
+    },
+    {
+      "source": "受け取った習慣を表示する",
+      "translation": "Show the habit you received"
+    },
+    {
+      "source": "<code>HabitDetailPage</code>は受け取った<code>Habit</code>を表示するだけなので<code>StatelessWidget</code>です。<code>const HabitDetailPage({super.key, required this.habit})</code>で<code>habit</code>を必須にし、<code>final</code>フィールドへ保持します。",
+      "translation": "<code>HabitDetailPage</code> only shows the <code>Habit</code> it received, so it is a <code>StatelessWidget</code>. <code>const HabitDetailPage({super.key, required this.habit})</code> makes <code>habit</code> required and keeps it in a <code>final</code> field."
+    },
+    {
+      "source": "本文は<code>SafeArea</code>の中の<code>ListView</code>へ名前・<code>StampMarks</code>・回数・理由を並べます。続けたい理由の<code>TextStyle</code>は<code>height: 1.7</code>で行間を確保します。長い理由は折り返し、縦の領域が足りなければスクロールできます。",
+      "translation": "The body lines up the name, <code>StampMarks</code>, the count, and the reason in a <code>ListView</code> inside <code>SafeArea</code>. The <code>TextStyle</code> for the reason (続けたい理由) uses <code>height: 1.7</code> to give line spacing. A long reason wraps, and if the vertical space is not enough, you can scroll."
+    },
+    {
+      "source": "一覧と詳細で同じ<code>StampMarks</code>を使うため、目標回数や色の基準がそろいます。詳細へ新しい<code>count</code>の状態は作りません。受け取った<code>habit.count</code>をそのまま表示します。",
+      "translation": "Because the list and the detail page use the same <code>StampMarks</code>, the goal count and the colors are consistent. Do not create a new <code>count</code> state for the detail page. Show the received <code>habit.count</code> as it is."
+    },
+    {
+      "source": "3件とも詳細を開き、理由の取り違えがないか、長文が読めるかを確かめます。",
+      "translation": "Open the detail page of all three, and check that no reason is mixed up and that long text is readable."
+    },
+    {
+      "source": "Swiftの初期化時に値を受け取る形に対応します。Dartは<code>required</code> <code>this.habit</code>で必須引数と代入をまとめます。表示専用だから<code>StatelessWidget</code>を選び、更新を管理する<code>State</code>を余分に作りません。",
+      "translation": "This corresponds to receiving values at initialization in Swift. Dart combines the required parameter and the assignment in <code>required</code> <code>this.habit</code>. It is display only, so choose <code>StatelessWidget</code> and do not create an extra <code>State</code> to manage updates."
+    },
+    {
+      "source": "3件の名前・回数・理由が正しく表示された。",
+      "translation": "The name, count, and reason of all three habits are shown correctly."
+    },
+    {
+      "source": "STEP 18 · コマ11",
+      "translation": "STEP 18 · Session 11"
+    },
+    {
+      "source": "一覧と詳細を通して確かめる",
+      "translation": "Check the list and detail page end to end"
+    },
+    {
+      "source": "最後に一覧と詳細を通して動かします。説明を読めるだけでなく、変更したデータが操作中も一致することを確かめます。",
+      "translation": "Finally, run through the list and the detail page together. Beyond reading the explanation, confirm that the data you changed stays consistent while you operate the app."
+    },
+    {
+      "source": "一覧で初期3件と合計0を確認します。",
+      "translation": "On the list, confirm the three initial habits and a total of 0."
+    },
+    {
+      "source": "1件を5回まで押し、上限を確認して1つ戻します。",
+      "translation": "Press one habit up to 5 times, confirm the limit, then undo one."
+    },
+    {
+      "source": "詳しく見るで名前・4回・理由が合うことを確認します。",
+      "translation": "With 「詳しく見る」 (See details), confirm that the name, the count of 4, and the reason match."
+    },
+    {
+      "source": "戻って別のカードも操作し、合計と各回数の関係を確認します。",
+      "translation": "Go back, operate another card too, and confirm the relationship between the total and each count."
+    },
+    {
+      "source": "ホットリスタートで初期状態へ戻ることを確認します。",
+      "translation": "Confirm that a hot restart goes back to the initial state."
+    },
+    {
+      "source": "<code>flutter analyze</code>をプロジェクトのターミナルで実行し、指摘があれば最初の行から直します。実行中の<code>flutter run</code>とは別のターミナルを開いて構いません。解析は画面操作の確認を代わりに行うものではありません。",
+      "translation": "Run <code>flutter analyze</code> in the project's terminal, and if it reports anything, fix it starting from the first line. You may open a terminal separate from the one running <code>flutter run</code>. Analysis is not a substitute for checking the app by operating the screen."
+    },
+    {
+      "source": "範囲を守る条件はJavaと同じです。Flutterの画面が正しく見えていても、データ・上限・遷移が合うかは操作して確かめます。構文や型の静的解析と、画面の確認を分けます。",
+      "translation": "The condition that keeps the value in range is the same as in Java. Even if the Flutter screen looks right, whether the data, the limit, and the navigation agree is confirmed by operating the app. Keep static analysis of syntax and types separate from checking the screen."
+    },
+    {
+      "source": "一覧・詳細・境界・再起動を一続きで確認できた。",
+      "translation": "The list, the detail page, the limits, and a restart have been checked in one sequence."
+    },
+    {
+      "source": "STEP 19 · コマ11",
+      "translation": "STEP 19 · Session 11"
+    },
+    {
+      "source": "アレンジできる場所を説明する",
+      "translation": "Explain the places you can customize"
+    },
+    {
+      "source": "仕上げに、自分の題材で使いやすいスタンプ帳にします。変更する場所は、ここまでに扱った範囲から選びます。",
+      "translation": "To finish, make the stamp board easy to use with your own content. Choose the places to change from the range covered so far."
+    },
+    {
+      "source": "一覧の名前と詳細の理由。",
+      "translation": "The names on the list and the reasons on the detail page."
+    },
+    {
+      "source": "マーク数・回数の上限・達成の表示。",
+      "translation": "The number of marks, the count limit, and the achievement display."
+    },
+    {
+      "source": "<code>seedColor</code>と<code>StampMarks</code>の色",
+      "translation": "<code>seedColor</code> and the colors in <code>StampMarks</code>"
+    },
+    {
+      "source": "ボタンとスタンプの配色。",
+      "translation": "The colors of the buttons and the stamps."
+    },
+    {
+      "source": "<code>Text</code>の文章・<code>TextStyle</code>・余白",
+      "translation": "The <code>Text</code> wording, <code>TextStyle</code>, and spacing"
+    },
+    {
+      "source": "見出しや詳細の読みやすさ。",
+      "translation": "Readability of the heading and the detail page."
+    },
+    {
+      "source": "初期データを変えたらホットリスタートし、全件の詳細と上限・戻す操作を再確認します。「どの値を変え、画面のどこが変わったか」を説明してコマを終えます。次回の合流のため、自分の変更箇所を控えてください。",
+      "translation": "After changing the initial data, hot restart, and check again the detail page of every habit, the limit, and the undo operation. End the session by explaining \"which value you changed and what changed on the screen\". Note where you made changes so you can rejoin next time."
+    },
+    {
+      "source": "Web基礎のデータの項目を変更する目的と同じです。Flutterでは<code>Habit</code>の型に沿って値を渡し、その値から一覧と詳細を作ります。自分の題材でも表示と操作がそろうことを確かめましょう。",
+      "translation": "This has the same purpose as changing data fields in Web Basics. In Flutter, you pass values according to the <code>Habit</code> type, and build the list and the detail page from those values. Confirm that the display and the operations stay consistent with your own content too."
+    },
+    {
+      "source": "変更箇所と効果を説明でき、自分の題材でも一連の操作が動いた。",
+      "translation": "You can explain what you changed and its effect, and the whole sequence of operations works with your own content."
+    },
+    {
+      "source": "状態",
+      "translation": "What you see"
+    },
+    {
+      "source": "確認するところ",
+      "translation": "What to check"
+    },
+    {
+      "source": "flutterが見つからない",
+      "translation": "flutter is not found"
+    },
+    {
+      "source": "共通資料のSDK・<code>PATH</code>を確認し、Visual Studio Codeとターミナルを開き直す。",
+      "translation": "Check the SDK and <code>PATH</code> in the shared guide, then reopen Visual Studio Code and the terminal."
+    },
+    {
+      "source": "<code>pubspec.yaml</code>が見つからない",
+      "translation": "<code>pubspec.yaml</code> is not found"
+    },
+    {
+      "source": "<code>File &gt; Open Folder…</code>で<code>F01StampBoard</code>そのものを開く。親の<code>HybridApp</code>ではない。",
+      "translation": "Open <code>F01StampBoard</code> itself with <code>File &gt; Open Folder…</code>, not its parent <code>HybridApp</code>."
+    },
+    {
+      "source": "端末が表示されない",
+      "translation": "No device is shown"
+    },
+    {
+      "source": "<code>Flutter: Launch Emulator</code>で既存のiOS端末を起動し、<code>flutter devices</code>でIDを確認。",
+      "translation": "Start an existing iOS device with <code>Flutter: Launch Emulator</code>, then check its ID with <code>flutter devices</code>."
+    },
+    {
+      "source": "画面が変わらない",
+      "translation": "The screen does not change"
+    },
+    {
+      "source": "保存、実行中のプロジェクト、ホットリロードの結果を確認。初期値の変更はホットリスタート。",
+      "translation": "Check that you saved, which project is running, and the result of the hot reload. A change to an initial value needs a hot restart."
+    },
+    {
+      "source": "括弧のエラーが出た",
+      "translation": "A bracket error appears"
+    },
+    {
+      "source": "最初のエラーから確認。<code>child</code>は1つ、<code>children</code>はリスト。各STEPの全文で閉じ括弧を照合。",
+      "translation": "Start from the first error. <code>child</code> takes one widget; <code>children</code> takes a list. Compare the closing brackets with the full code of each STEP."
+    },
+    {
+      "source": "再起動すると0に戻った",
+      "translation": "The count went back to 0 after a restart"
+    },
+    {
+      "source": "この単元はメモリだけ。保存していないため正常。",
+      "translation": "This unit keeps data in memory only. Nothing is saved, so this is normal."
+    },
+    {
+      "source": "残り回数が負になり、1つ戻すが効かない",
+      "translation": "The remaining count is negative, and 「1つ戻す」 (Undo one) does nothing"
+    },
+    {
+      "source": "回数が目標を超えたまま<code>stampGoal</code>を減らし、ホットリロードした。ホットリスタートで0に戻す。",
+      "translation": "You lowered <code>stampGoal</code> while a count was above the goal, then hot reloaded. Hot restart to go back to 0."
+    },
+    {
+      "source": "学生用配布ZIPを展開し、<code>samples/F01StampBoard</code>をVisual Studio Codeの<code>File &gt; Open Folder…</code>で開きます。単体で受け取る場合は<a1>完成プロジェクトZIP</a1>を展開し、中の<code>F01StampBoard</code>を開きます。自分の制作フォルダと混ぜず、見比べるために使います。",
+      "translation": "Unzip the student distribution ZIP and open <code>samples/F01StampBoard</code> with <code>File &gt; Open Folder…</code> in Visual Studio Code. If you received it on its own, unzip the <a1>completed project ZIP</a1> and open the <code>F01StampBoard</code> inside. Keep it separate from your own work folder, and use it for comparison."
+    },
+    {
+      "source": "<code>Terminal &gt; New Terminal</code>で<code>flutter pub get</code>、<code>flutter analyze</code>を実行します。<code>Flutter: Launch Emulator</code>から既存iOSシミュレータを選び、<code>flutter devices</code>でIDを見て、<code>flutter run -d 端末ID</code>で実行します。端末IDは表示された値に置き換えます。",
+      "translation": "Run <code>flutter pub get</code> and <code>flutter analyze</code> from <code>Terminal &gt; New Terminal</code>. Choose an existing iOS simulator from <code>Flutter: Launch Emulator</code>, find the ID with <code>flutter devices</code>, and run <code>flutter run -d 端末ID</code> (端末ID = device ID). Replace 端末ID with the value that was shown."
+    },
+    {
+      "source": "JEC / ハイブリッドアプリ開発技法 · F01StampBoard",
+      "translation": "JEC / Hybrid App Development · F01StampBoard"
+    }
+  ]
+}
