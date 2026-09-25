@@ -16,11 +16,11 @@
     },
     {
       "source": "もとの教科書へ戻る",
-      "translation": "Return to the original textbook"
+      "translation": "Back to the textbook you came from"
     },
     {
       "source": "共通資料 · 授業内で行う準備",
-      "translation": "Shared resources · Setup done during class"
+      "translation": "Shared guide · Setup done during class"
     },
     {
       "source": "授業を始めるまでの準備",
@@ -100,11 +100,11 @@
     },
     {
       "source": "<code>docs/common/setup.html</code> をGoogle Chromeで開きます。今読んでいるページが、この共通資料です。",
-      "translation": "Open <code>docs/common/setup.html</code> in Google Chrome. The page you are reading now is this shared resource."
+      "translation": "Open <code>docs/common/setup.html</code> in Google Chrome. The page you are reading now is this shared guide."
     },
     {
       "source": "完成見本が配られたら、次の方法で開きます。共通資料だけの版には <code>samples</code> がなくても問題ありません。",
-      "translation": "When the completed samples are distributed, open them as follows. It is fine if a version with only the shared resources has no <code>samples</code>."
+      "translation": "When the completed samples are distributed, open them as follows. It is fine if a version with only the shared guide has no <code>samples</code>."
     },
     {
       "source": "配布された見本",
@@ -128,7 +128,7 @@
     },
     {
       "source": "Visual Studio Code の <code>File → Open Folder…</code> で、<code>samples</code> 内の指定されたプロジェクトフォルダを開きます。<code>pubspec.yaml</code> が入っている階層を選びます。",
-      "translation": "In Visual Studio Code, use <code>File → Open Folder…</code> to open the specified project folder inside <code>samples</code>. Select the level that contains <code>pubspec.yaml</code>."
+      "translation": "In Visual Studio Code, use <code>File → Open Folder…</code> to open the specified project folder inside <code>samples</code>. Select the folder that contains <code>pubspec.yaml</code>."
     },
     {
       "source": "Web基礎・Android・iOSの見本と同じく、自分の作品を分ける",
@@ -144,7 +144,7 @@
     },
     {
       "source": "先生が指定した版の教科書を開き、自分の作品と分けて置けた。",
-      "translation": "The textbook of the version your teacher specified is open, and it is kept separate from your own work."
+      "translation": "The textbook of the version your teacher specified is open, and the materials are kept separate from your own work."
     },
     {
       "source": "Google Chromeで <a1>Monacaの公式サイト</a1>を開き、<code>ログイン</code> から進みます。この授業は<strong>通常版MonacaのFreeプラン</strong>を使います。ログイン後の開発画面は <code>console.monaca.mobi</code> です。",
@@ -536,7 +536,7 @@
     },
     {
       "source": "ダウンロードが終わらない、確認メールが届かない、版が合わないときは、止まったSTEPと画面・出力を先生に見せてください。回線が遅い場合は先生が授業の進め方を調整します。家庭で終わらせる前提で先へ進める必要はありません。パスワードや確認メールのリンクは、教室の共有画面や提出物へ貼り付けません。",
-      "translation": "If a download does not finish, the confirmation email does not arrive, or the version does not match, show your teacher the STEP where you are stuck and your screen or output. If the connection is slow, your teacher will adjust how the class proceeds. You do not need to move ahead assuming you will finish at home. Do not paste passwords or confirmation-email links into the classroom's shared screen or your submissions."
+      "translation": "If a download does not finish, the confirmation email does not arrive, or the version does not match, show your teacher the STEP where you are stuck and your screen or output. If the connection is slow, your teacher will adjust how the class proceeds. You do not need to move ahead assuming you will finish at home. Do not paste passwords or confirmation-email links into the classroom's shared screen or your deliverables."
     },
     {
       "source": "質問の例：<strong>「STEP 5で、flutter --versionが3.41になりました」</strong>。表示された文字をそのまま伝えると、SDKの場所と版を一緒に確かめられます。",
@@ -544,7 +544,7 @@
     },
     {
       "source": "JEC / ハイブリッドアプリ開発技法 · 共通資料 · 2026-09-23",
-      "translation": "JEC / Hybrid App Development · Shared resources · 2026-09-23"
+      "translation": "JEC / Hybrid App Development · Shared guide · 2026-09-23"
     }
   ]
 }

@@ -160,7 +160,7 @@
     },
     {
       "source": "使うプロジェクトは <code>M01OshiList</code> です。各STEPの「全コード」は開いてコピーでき、各コマの最初には開始時のコードもあります。前から順に作る場合は、説明されたファイルを更新します。途中から合流する場合は、開始時のファイルをすべてそろえてから進みます。",
-      "translation": "The project you use is <code>M01OshiList</code>. You can open and copy the \"Full code\" of each STEP, and the start of each session also has the code as it is at that point. If you build from the start in order, update the files that each STEP explains. If you join partway through, first make all your files match the starting code, then continue."
+      "translation": "The project you use is <code>M01OshiList</code>. You can open and copy the \"Full code\" of each STEP, and the start of each session also has the starting code. If you build from the start in order, update the files that each STEP explains. If you join partway through, first make all your files match the starting code, then continue."
     },
     {
       "source": "コマ",
@@ -188,7 +188,7 @@
     },
     {
       "source": "先生が見本を使うと案内したら、<a1>M01OshiListの完成プロジェクトを開く</a1>へ進みます。通常版Monacaへログインした状態で、取り込むプロジェクトを確認します。自分の制作を始めるにはSTEP 00へ進みます。",
-      "translation": "If your teacher says to use the sample, go to <a1>Open the finished M01OshiList project</a1>. While logged in to standard Monaca, check the project you are about to import. To start building your own, go to STEP 00."
+      "translation": "If your teacher says to use the sample, go to <a1>Open the completed M01OshiList project</a1>. While logged in to standard Monaca, check the project you are about to import. To start building your own, go to STEP 00."
     },
     {
       "source": "完成見本の取り込みにも1枠を使います。Freeプランの3枠を確認し、URLを繰り返し開いて複数のコピーを作らないようにします。自分の作品は削除しません。配布ZIPの <code>samples/M01OshiList</code> はコードを読むための見本です。",
@@ -208,7 +208,7 @@
     },
     {
       "source": "<a1>共通資料のSTEP 1〜3</a1>で、教材の受け取り、通常版Monacaの登録・ログイン、空き枠の確認を行い、このページへ戻ります。初めての登録とダウンロードも授業内で行います。",
-      "translation": "In <a1>STEP 1–3 of the common material</a1>, receive the materials, register and log in to standard Monaca, check your free project slots, and then come back to this page. First-time registration and downloads are also done during class."
+      "translation": "In <a1>STEP 1–3 of the shared guide</a1>, receive the materials, register and log in to standard Monaca, check your free project slots, and then come back to this page. First-time registration and downloads are also done during class."
     },
     {
       "source": "Monacaのプロジェクト一覧から新規作成に進み、<code>最小限のテンプレート</code> を選びます。プロジェクト名を <code>M01OshiList</code> として作成し、開きます。既に自分の同名プロジェクトがあれば、その続きを開きます。",
@@ -276,7 +276,7 @@
     },
     {
       "source": "装飾前のカードに種類・名前・ひとことが表示された。",
-      "translation": "The unstyled card showed the type, the name, and the short comment."
+      "translation": "The type, the name, and the short comment are displayed on the unstyled card."
     },
     {
       "source": "STEP 02 · コマ1",
@@ -360,7 +360,7 @@
     },
     {
       "source": "3枚のカードが同じ形で並び、狭い幅でも読めた。",
-      "translation": "The three cards lined up with the same shape and stayed readable at a narrow width."
+      "translation": "The three cards are lined up with the same shape and are readable at a narrow width."
     },
     {
       "source": "STEP 04 · コマ1",
@@ -412,7 +412,7 @@
     },
     {
       "source": "このコマから合流する人：開始時の全コード",
-      "translation": "Joining from this session: full code at the start"
+      "translation": "Joining from this session: full starting code"
     },
     {
       "source": "同じM01OshiListを開き、各ファイルを次の内容にそろえて保存します。前のコマのアレンジを残したい人は、その文字や色を控えてから進みます。",
@@ -436,7 +436,7 @@
     },
     {
       "source": "CDNはライブラリをインターネット経由で読み込む配布先です。授業中にアクセスできる回線が必要です。URLの <code>@2.12.9</code> を消したり、別の版へ変えたりしません。",
-      "translation": "A CDN is a distribution site that loads a library over the internet. You need a network connection that works during class. Do not remove <code>@2.12.9</code> from the URL, and do not change it to another version."
+      "translation": "A CDN is a distribution site that you load a library from over the internet. You need a network connection that works during class. Do not remove <code>@2.12.9</code> from the URL, and do not change it to another version."
     },
     {
       "source": "Web基礎で自分のCSSを <code>link</code>、JavaScriptを <code>script</code> で読み込んだ書き方と同じです。今回はURLが外部ファイルを指します。AndroidやiOSでUIライブラリを使うように、画面部品の実装を借ります。自分の処理を後に読むのは、先にOnsen UIを使える状態にするためです。",
@@ -476,7 +476,7 @@
     },
     {
       "source": "ツールバーの下に3枚のカードが表示された。",
-      "translation": "The three cards were displayed below the toolbar."
+      "translation": "The three cards are displayed below the toolbar."
     },
     {
       "source": "STEP 07 · コマ2",
@@ -532,7 +532,7 @@
     },
     {
       "source": "一覧の上の <code>app-caption</code> は、第1コマでカードの種類の文字に使ったクラスです。種類は <code>list-item__subtitle</code> で出すようになったので、ここでは小見出しに使います。CSSの先頭にあった <code>body</code> の指定（余白・背景色・文字色・フォント）は外します。STEP 06で <code>ons-page</code> に入れてからは、画面の背景と文字にOnsen UIのページの指定が使われていて、<code>body</code> の指定は画面に出ていないためです。外しても、画面の色や文字は変わりません。",
-      "translation": "The <code>app-caption</code> above the list is the class you used for the type text on the cards in session 1. The type is now shown by <code>list-item__subtitle</code>, so here the class is used for the caption. The <code>body</code> rule at the top of the CSS (spacing, background color, text color, font) is removed. Since you moved into <code>ons-page</code> in STEP 06, the screen background and text use Onsen UI's page settings, so the <code>body</code> rule no longer shows on the screen. Removing it does not change the colors or text on the screen."
+      "translation": "The <code>app-caption</code> above the list is the class you used for the type text on the cards in session 1. The type is now shown by <code>list-item__subtitle</code>, so here the class is used for the caption. The <code>body</code> rule at the top of the CSS (spacing, background color, text color, font) is removed. Ever since the content was put inside <code>ons-page</code> in STEP 06, the screen background and text use Onsen UI's page settings, so the <code>body</code> rule no longer shows on the screen. Removing it does not change the colors or text on the screen."
     },
     {
       "source": "Web基礎の <code>ul</code> と <code>li</code> のように、一覧全体と1行を分けます。第1コマの <code>article</code> に付けた <code>oshi-card</code> を、ここでは <code>ons-list-item</code> に付け、既習のCSSでカードの形を再利用します。Androidのリストの行やiOSのテーブルのセルと同じ役割です。<code>tappable</code> はクリック処理そのものではありません。見た目とイベント処理を分ける点は、Webのボタンと <code>addEventListener</code> の関係と同じです。",
@@ -540,7 +540,7 @@
     },
     {
       "source": "3件がカード状の一覧になり、上に見出し、下に「まだ選択していません」が出た。カードのCSS、押す見た目、選択処理を区別できる。",
-      "translation": "The three items became a card-style list, with the heading above and 「まだ選択していません」 (Nothing selected yet) below. You can tell apart the card CSS, the pressed look, and the selection handling."
+      "translation": "The three items are displayed as a card-style list, with the heading above and 「まだ選択していません」 (Nothing selected yet) below. You can tell apart the card CSS, the pressed look, and the selection handling."
     },
     {
       "source": "STEP 08 · コマ2",
@@ -600,7 +600,7 @@
     },
     {
       "source": "Monacaのプレビューの端末選択で <code>iPhone 15</code> を選び、プレビューの <code>Reload</code> を押します。",
-      "translation": "In the device selector of the Monaca preview, choose <code>iPhone 15</code>, then press <code>Reload</code> in the preview."
+      "translation": "In the device selector of the Monaca preview, choose <code>iPhone 15</code>, then click <code>Reload</code> in the preview."
     },
     {
       "source": "ツールバーと一覧を確認します。",
@@ -608,7 +608,7 @@
     },
     {
       "source": "端末選択で <code>Pixel 8</code> を選び、もう一度 <code>Reload</code> を押します。同じ一覧で違いを確かめます。",
-      "translation": "In the device selector, choose <code>Pixel 8</code> and press <code>Reload</code> again. Check the differences in the same list."
+      "translation": "In the device selector, choose <code>Pixel 8</code> and click <code>Reload</code> again. Check the differences in the same list."
     },
     {
       "source": "端末を選ぶだけでは前の表示が残ることがあるので、毎回 <code>Reload</code> まで行います。この操作はプレビューの比較であり、実機を使った確認ではありません。STEP 08のコードによる強制指定と同時には使わず、強制指定をコメントへ戻してから試します。",
@@ -744,7 +744,7 @@
     },
     {
       "source": "配列の3件から一覧ができ、山かっこを含む名前も文字として表示された。",
-      "translation": "The list was built from the three items in the array, and a name with angle brackets was displayed as text."
+      "translation": "The list is built from the three items in the array, and a name with angle brackets is displayed as text."
     },
     {
       "source": "STEP 13 · コマ3",
@@ -848,7 +848,7 @@
     },
     {
       "source": "navigatorとtemplateへ移しても、一覧と選択が動いた。",
-      "translation": "After moving to navigator and template, the list and the selection still worked."
+      "translation": "After moving to navigator and template, the list and the selection still work."
     },
     {
       "source": "STEP 16 · コマ4",
@@ -932,7 +932,7 @@
     },
     {
       "source": "3件それぞれの名前・種類・理由が詳細へ渡り、改行も表示された。",
-      "translation": "The name, type, and reason of each of the three items were passed to the detail screen, and the line breaks were displayed too."
+      "translation": "The name, type, and reason of each of the three items are passed to the detail screen, and the line breaks are displayed too."
     },
     {
       "source": "STEP 18 · コマ4",
@@ -1016,7 +1016,7 @@
     },
     {
       "source": "3件を順に開き、それぞれの名前・種類・理由が正しいことを確かめます。戻ると一覧に選択した名前が残ります。",
-      "translation": "Open the three items in order and check that the name, type, and reason of each are correct. When you go back, the selected name remains in the list."
+      "translation": "Open the three items in order and check that the name, type, and reason of each are correct. When you go back, the selected name is still shown below the list."
     },
     {
       "source": "行を続けて押しても、戻る1回で一覧へ戻ることを確かめます。",
@@ -1024,7 +1024,7 @@
     },
     {
       "source": "先頭のOS強制指定がコメントになっていることを確認します。STEP 09と同じく、Monacaの端末選択で <code>iPhone 15</code>、<code>Pixel 8</code> を選び、それぞれ <code>Reload</code> を押して一覧・詳細・戻るを比べます。",
-      "translation": "Check that the forced OS setting at the top is a comment. As in STEP 09, choose <code>iPhone 15</code> and <code>Pixel 8</code> in the Monaca device selector, press <code>Reload</code> for each, and compare the list, the detail screen, and going back."
+      "translation": "Check that the forced OS setting at the top is a comment. As in STEP 09, choose <code>iPhone 15</code> and <code>Pixel 8</code> in the Monaca device selector, click <code>Reload</code> for each, and compare the list, the detail screen, and going back."
     },
     {
       "source": "長い名前と改行のある理由を試し、狭い幅でも読めることを確かめます。再読み込み後の選択は未選択へ戻ります。",
@@ -1124,7 +1124,7 @@
     },
     {
       "source": "<code>ons.platform.select</code> を <code>app.js</code> の先頭で実行しているか。画面内の戻るではなく、プレビューの <code>Reload</code> を押したか。端末選択で比べるときは、コードの指定をコメントに戻したか。",
-      "translation": "Is <code>ons.platform.select</code> run at the top of <code>app.js</code>? Did you press <code>Reload</code> in the preview, not the back button on the screen? When comparing with the device selector, did you turn the setting in the code back into a comment?"
+      "translation": "Is <code>ons.platform.select</code> run at the top of <code>app.js</code>? Did you click <code>Reload</code> in the preview, not the back button on the screen? When comparing with the device selector, did you turn the setting in the code back into a comment?"
     },
     {
       "source": "JEC / ハイブリッドアプリ開発技法 · M01OshiList",

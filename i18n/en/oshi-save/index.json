@@ -116,7 +116,7 @@
     },
     {
       "source": "好きなものノート：追加して、残そう。",
-      "translation": "Favorites notebook (好きなものノート): add entries and keep them"
+      "translation": "Favorites notebook: add entries and keep them"
     },
     {
       "source": "日常の中で見つけた好きなものと、好きな理由を画面から追加します。再読み込みしても自分の記録が戻る仕組みを作り、ソースにアレンジを残して公開URLを提出します。",
@@ -136,7 +136,7 @@
     },
     {
       "source": "完成見本の名前は <code>M02OshiSave</code> です。学生は自分の好きなものノートを同じ1プロジェクトで育てます。まだプロジェクトがない場合の作り方も、一覧・詳細の開始コードも、この本文にあります。",
-      "translation": "The completed sample is named <code>M02OshiSave</code>. Students grow their own favorites notebook in the same single project. How to create a project if you do not have one yet, and the starting code for the list and detail pages, are both in this text."
+      "translation": "The completed sample is named <code>M02OshiSave</code>. Students grow their own favorites notebook in the same single project. How to create a project if you do not have one yet, and the starting code for the list and detail screens, are both in this text."
     },
     {
       "source": "コマ",
@@ -176,7 +176,7 @@
     },
     {
       "source": "Google Chromeで通常版Monacaへログインし、自分の好きなものノートを開きます。続けて使っているプロジェクトは、名前が <code>M01OshiList</code> のままで構いません。今日のためにコピーを増やしたり、削除したりしません。",
-      "translation": "Log in to the standard edition of Monaca in Google Chrome and open your own favorites notebook. If you are continuing with the project you have been using, its name can stay <code>M01OshiList</code>. Do not create extra copies or delete anything for today."
+      "translation": "Log in to standard Monaca in Google Chrome and open your own favorites notebook. If you are continuing with the project you have been using, its name can stay <code>M01OshiList</code>. Do not create extra copies or delete anything for today."
     },
     {
       "source": "まだ自分の好きなものノートがない人だけ、ダッシュボードで新規作成し、<code>最小限のテンプレート</code> を選び、<code>M02OshiSave</code> と名付けます。登録や空き枠が不明なら、<a1>共通資料のSTEP 2〜3</a1>で確認して戻ります。",
@@ -228,7 +228,7 @@
     },
     {
       "source": "配列の件数だけ固定の行構造を作る。名前や種類は<code>textContent</code>へ入れ、文字をHTMLとして解釈しない。",
-      "translation": "Builds a fixed row structure, one row for each item in the array. Names and genres go into <code>textContent</code>, so the text is not interpreted as HTML."
+      "translation": "Builds a fixed row structure, one row for each item in the array. Names and types go into <code>textContent</code>, so the text is not interpreted as HTML."
     },
     {
       "source": "<code>pushPage</code>の<code>data</code>へ選んだデータを渡し、詳細の<code>page.data</code>で受け取る。現在のページと移動中の旗を調べ、連打でページを重ねない。",
@@ -284,7 +284,7 @@
     },
     {
       "source": "3ファイルをこのSTEPのコードへ更新します。HTMLに <code>add.html</code> の<code>template</code>を加え、名前・種類の <code>input</code> と、好きな理由の <code>textarea</code> を置きます。<code>label</code> の<code>for</code>と入力欄の<code>id</code>が対応します。",
-      "translation": "Update the three files to this STEP's code. In the HTML, add a <code>template</code> for <code>add.html</code>, and place an <code>input</code> each for the name and the genre and a <code>textarea</code> for the reason you like it. The <code>for</code> of each <code>label</code> matches the <code>id</code> of its input field."
+      "translation": "Update the three files to this STEP's code. In the HTML, add a <code>template</code> for <code>add.html</code>, and place an <code>input</code> each for the name and the type and a <code>textarea</code> for the reason you like it. The <code>for</code> of each <code>label</code> matches the <code>id</code> of its input field."
     },
     {
       "source": "CSSの <code>.app-input</code> は幅を100%にし、<code>box-sizing: border-box</code> で<code>padding</code>と枠をその幅の内側へ収めます。<code>font: inherit</code> で文字を周囲とそろえ、<code>focus</code>の<code>outline</code>で選択中の欄を見分けます。ほかに加わるクラスのうち、このSTEPの画面に当たる4つは次の表のとおりです。",
@@ -324,7 +324,7 @@
     },
     {
       "source": "<code>display: block</code>。<code>.app-label</code> は、STEP 00から詳細の <code>p</code> に使っている余白と文字の指定です。<code>label</code> は既定でインライン要素なので、そのままでは上下の <code>margin</code> が効きません。<code>label</code> に付いたときだけブロックにして、各欄の上に1行ずつ並べます。",
-      "translation": "<code>display: block</code>. <code>.app-label</code> is the spacing and text declaration that has been used for the <code>p</code> on the detail page since STEP 00. A <code>label</code> is an inline element by default, so as it is, its top and bottom <code>margin</code> has no effect. It is made a block only when attached to a <code>label</code>, so the labels line up one per line above each field."
+      "translation": "<code>display: block</code>. <code>.app-label</code> is the spacing and text declaration that has been used for the <code>p</code> on the detail screen since STEP 00. A <code>label</code> is an inline element by default, so as it is, its top and bottom <code>margin</code> has no effect. It is made a block only when attached to a <code>label</code>, so the labels line up one per line above each field."
     },
     {
       "source": "入力画面のボタンの下の注記",
@@ -340,11 +340,11 @@
     },
     {
       "source": "一覧の <code>btn_open_add</code> へ<code>openAddPage</code>を登録し、<code>pushPage(\"add.html\", ...)</code> で入力画面へ進みます。詳細と同じ移動中の旗を共有するため、片方を開いている最中にもう片方は開きません。",
-      "translation": "Register <code>openAddPage</code> on <code>btn_open_add</code> in the list, and go to the input screen with <code>pushPage(\"add.html\", ...)</code>. It shares the same navigating flag as the detail page, so while one is opening, the other does not open."
+      "translation": "Register <code>openAddPage</code> on <code>btn_open_add</code> in the list, and go to the input screen with <code>pushPage(\"add.html\", ...)</code>. It shares the same navigating flag as the detail screen, so while one is opening, the other does not open."
     },
     {
       "source": "この旗の名前は、STEP 00の <code>isOpeningDetail</code> から <code>isOpeningPage</code> に変えます。詳細を開くときだけでなく入力画面を開くときにも使うので、「詳細を開いている最中」ではなく「どちらかのページを開いている最中」と読める名前にするためです。宣言と<code>openOshiDetail</code>の中の3か所も、新しい名前にそろえます。",
-      "translation": "Rename this flag from <code>isOpeningDetail</code> in STEP 00 to <code>isOpeningPage</code>. It is now used not only when opening the detail page but also when opening the input screen, so the name should read as \"while either page is opening\" rather than \"while the detail page is opening\". Change the declaration and the 3 places inside <code>openOshiDetail</code> to the new name as well."
+      "translation": "Rename this flag from <code>isOpeningDetail</code> in STEP 00 to <code>isOpeningPage</code>. It is now used not only when opening the detail screen but also when opening the input screen, so the name should read as \"while either page is opening\" rather than \"while the detail screen is opening\". Change the declaration and the 3 places inside <code>openOshiDetail</code> to the new name as well."
     },
     {
       "source": "一覧のボタンの下の <code>txt_storage</code> には <code>この段階では、追加した内容は保存されません。</code>、入力画面のボタンの下の注記には <code>この段階では、追加した内容は再読み込みすると消えます。</code> と出します。追加した内容がまだ残らないことを、画面で先に伝えるためです。保存を作るSTEP 06で、どちらの文も書き換えます。",
@@ -368,7 +368,7 @@
     },
     {
       "source": "Web基礎の<code>input</code>・<code>textarea</code>・<code>label</code>をそのまま使います。Androidの<code>EditText</code>、iOSの<code>UITextField</code>・<code>UITextView</code>と同じ役割です。画面を開く処理は詳細への移動と同じ形で、渡すデータが要らないため<code>data</code>を省きます。<code>createInitialItems</code>は、Java／Swiftでデータの配列を関数から返す書き方と対応します。",
-      "translation": "You use <code>input</code>, <code>textarea</code>, and <code>label</code> from Web Basics as they are. They play the same role as <code>EditText</code> on Android and <code>UITextField</code> and <code>UITextView</code> on iOS. Opening the screen has the same form as navigating to the detail page, and <code>data</code> is omitted because no data needs to be passed. <code>createInitialItems</code> corresponds to returning an array of data from a function in Java or Swift."
+      "translation": "You use <code>input</code>, <code>textarea</code>, and <code>label</code> from Web Basics as they are. They play the same role as <code>EditText</code> on Android and <code>UITextField</code> and <code>UITextView</code> on iOS. Opening the screen has the same form as navigating to the detail screen, and <code>data</code> is omitted because no data needs to be passed. <code>createInitialItems</code> corresponds to returning an array of data from a function in Java or Swift."
     },
     {
       "source": "入力画面を開き、3つの欄へ入力して戻れた。追加ボタンがまだ押せない理由を説明できた。",
@@ -424,7 +424,7 @@
     },
     {
       "source": "JSの<code>addOshi</code>で、入力確認だけの行を、配列へ追加して一覧を描き直す処理へ替えます。<code>oshiItems.push({ name: name, genre: genre, comment: comment })</code> の左側はデータの項目名、右側は入力欄から読んだ変数です。",
-      "translation": "In <code>addOshi</code> in the JS, replace the line that only confirms the input with processing that adds to the array and redraws the list. In <code>oshiItems.push({ name: name, genre: genre, comment: comment })</code>, the left side of each pair is the data item name and the right side is the variable read from the input field."
+      "translation": "In <code>addOshi</code> in the JS, replace the line that only confirms the input with processing that adds to the array and redraws the list. In <code>oshiItems.push({ name: name, genre: genre, comment: comment })</code>, the left side of each pair is the data field name and the right side is the variable read from the input field."
     },
     {
       "source": "次に<code>renderOshiList</code>を呼びます。この関数は<code>innerHTML</code>で行を置き直した後に、<code>textContent</code>の設定とクリックの登録をやり直します。古い行に登録したイベントは、新しい行へ自動では移らないためです。",
@@ -432,7 +432,7 @@
     },
     {
       "source": "その次の行で、一覧の下の <code>txt_selected</code> に <code>追加したもの：</code> と追加した名前を出します。STEP 00から、詳細を開いたときに <code>選択中：</code> と名前を出している欄です。一覧へ戻ったときに、どれを追加したかを行を探さずに確かめられるようにするためです。",
-      "translation": "On the next line, show <code>追加したもの：</code> (Added:) followed by the added name in <code>txt_selected</code> under the list. Since STEP 00, this is the field that shows <code>選択中：</code> (Selected:) and the name when a detail page is opened. It lets you confirm which item was added when you return to the list, without searching the rows."
+      "translation": "On the next line, show <code>追加したもの：</code> (Added:) followed by the added name in <code>txt_selected</code> under the list. Since STEP 00, this is the field that shows <code>選択中：</code> (Selected:) and the name when the detail screen is opened. It lets you confirm which item was added when you return to the list, without searching the rows."
     },
     {
       "source": "最後に <code>popPage()</code> で入力画面を閉じます。一覧はその下に残っているので、新しい行が見えます。追加を始める直前にボタンを無効にしておくことで、戻る途中の連続操作でも同じ内容を二重に追加しません。",
@@ -444,7 +444,7 @@
     },
     {
       "source": "追加した行を押し、名前・種類・好きな理由が入力どおりか確かめます。好きな理由に改行を入れた場合も確認します。",
-      "translation": "Tap the added row and check that the name, genre, and reason match what you entered. Also check the case where the reason contains line breaks."
+      "translation": "Tap the added row and check that the name, type, and reason match what you entered. Also check the case where the reason contains line breaks."
     },
     {
       "source": "戻ってからプレビューを再読み込みします。配列はソースの初期データから作り直されるため、3件に戻ります。今日はこれで正解です。",
@@ -540,7 +540,7 @@
     },
     {
       "source": "<strong>JSONは、値を文字で表すための決まった形式</strong>です。JavaScriptの配列やオブジェクトそのものではありません。<code>JSON.stringify</code> は値をJSONの文字列にし、<code>JSON.parse</code> はJSONの文字列から値を復元します。今回の保存対象は文字列の3項目を持つオブジェクトの配列です。",
-      "translation": "<strong>JSON is a fixed format for representing values as text.</strong> It is not a JavaScript array or object itself. <code>JSON.stringify</code> turns a value into a JSON string, and <code>JSON.parse</code> restores a value from a JSON string. What you save this time is an array of objects with 3 string items."
+      "translation": "<strong>JSON is a fixed format for representing values as text.</strong> It is not a JavaScript array or object itself. <code>JSON.stringify</code> turns a value into a JSON string, and <code>JSON.parse</code> restores a value from a JSON string. What you save this time is an array of objects with 3 string fields."
     },
     {
       "source": "場面",
@@ -616,7 +616,7 @@
     },
     {
       "source": "<code>addOshi</code>では、<code>oshiItems.slice()</code> で配列の浅いコピー<code>nextItems</code>を作り、そこへ新しい1件を追加します。この処理では既存のオブジェクトの項目は変更せず、配列へ追加するだけなので、配列のコピーで足ります。",
-      "translation": "In <code>addOshi</code>, <code>oshiItems.slice()</code> makes a shallow copy of the array, <code>nextItems</code>, and the new item is added to it. This processing does not change the items of the existing objects; it only adds to the array, so a copy of the array is enough."
+      "translation": "In <code>addOshi</code>, <code>oshiItems.slice()</code> makes a shallow copy of the array, <code>nextItems</code>, and the new item is added to it. This processing does not change the fields of the existing objects; it only adds to the array, so a copy of the array is enough."
     },
     {
       "source": "<code>localStorage.setItem(STORAGE_KEY, JSON.stringify(nextItems))</code> が、同じブラウザの同じ保存領域へ文字列を保存する行です。<code>localStorage</code>は同期APIなので、次の行へ進む前にこの呼び出しが終わります。今回は<code>Promise</code>や<code>async</code> / <code>await</code>を使いません。",
@@ -704,7 +704,7 @@
     },
     {
       "source": "JSONとして読めることと、画面で使えることは別です。たとえば数値のJSONも<code>parse</code>できますが、今回欲しいのは文字列の項目を持つ配列です。<code>isValidItems</code>は次の順に確かめます。",
-      "translation": "Being readable as JSON and being usable on screen are different things. For example, a JSON number can also be handled by <code>parse</code>, but what you want here is an array with string items. <code>isValidItems</code> checks in the following order."
+      "translation": "Being readable as JSON and being usable on screen are different things. For example, a JSON number can also be handled by <code>parse</code>, but what you want here is an array whose items have string fields. <code>isValidItems</code> checks in the following order."
     },
     {
       "source": "<code>Array.isArray</code> で配列か確認します。",
@@ -928,7 +928,7 @@
     },
     {
       "source": "自分の題材が画面から伝わる。",
-      "translation": "Your own subject comes across from the screen."
+      "translation": "Your own topic comes across from the screen."
     },
     {
       "source": "入力画面を開き、迷わず入力できるか読む。",
@@ -960,7 +960,7 @@
     },
     {
       "source": "自分の題材に合わせた変更をソースへ保存し、初期状態から確認できた。",
-      "translation": "Changes matching your own subject are saved in the source and have been checked from the initial state."
+      "translation": "Changes matching your own topic are saved in the source and have been checked from the initial state."
     },
     {
       "source": "STEP 12 · コマ7",
@@ -976,7 +976,7 @@
     },
     {
       "source": "一覧の各行から詳細へ進み、名前・種類・理由が一致することを確認します。",
-      "translation": "Go from each row of the list to its details, and check that the name, genre, and reason match."
+      "translation": "Go from each row of the list to its details, and check that the name, type, and reason match."
     },
     {
       "source": "追加画面で空欄を試し、同じ画面に案内が出ることを確認します。",
@@ -1036,11 +1036,11 @@
     },
     {
       "source": "通常版MonacaのFreeプランではZIPを学生の提出物にしません。先生は公開URLから取り込み、初期データと操作を確認します。公開中の自分のプロジェクトは提出後に削除しません。",
-      "translation": "In the Free plan of the standard edition of Monaca, a ZIP is not used as the students' submission. The teacher imports from the import URL and checks the initial data and the operations. Do not delete your published project after submitting."
+      "translation": "In the Free plan of standard Monaca, a ZIP is not used as the students' submission. The teacher imports from the import URL and checks the initial data and the operations. Do not delete your published project after submitting."
     },
     {
       "source": "Flutter準備のタブへ戻り、取得が終わったか、SDKの版、<code>flutter doctor</code>で止まっている項目を確認します。終わっていない項目はその場で先生へ伝え、コマ8へ引き継ぎます。授業外で終わらせることを条件にはしません。",
-      "translation": "Go back to the Flutter preparation tab and check whether the download has finished, the SDK version, and any items where <code>flutter doctor</code> is stuck. Report unfinished items to your teacher on the spot, and carry them over to Session 8. Finishing outside class is not a requirement."
+      "translation": "Go back to the Flutter preparation tab and check whether the download has finished, the SDK version, and any items that are still stuck in <code>flutter doctor</code>. Report unfinished items to your teacher on the spot, and carry them over to Session 8. Finishing outside class is not a requirement."
     },
     {
       "source": "ソースを共有する提出と、端末に保存したデータを見せることを区別します。Android／iOSの実行環境を確認するときと同様に、準備済みの項目とまだ使えない項目を具体的に記録します。",
