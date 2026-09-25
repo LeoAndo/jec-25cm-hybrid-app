@@ -81,7 +81,7 @@
   <section id="step-4">
     <p class="step-meta">STEP 4</p><h2>Flutter 3.47.5を用意する</h2>
     <p>ここからは第7コマの授業内で始めるFlutterの準備です。Finderの <code>アプリケーション</code> に、<strong>Visual Studio Code・Xcode・Android Studio</strong> があることを確かめます。XcodeとAndroid Studioは、iOS・Androidの授業で使っているものを使います。見つからない場合は、先生へ知らせてください。</p>
-    <p>この授業のFlutter SDKは <strong>3.47.5</strong>、同梱されるDartは <strong>3.13.4</strong> にそろえます。学生のMacは全員Apple Siliconなので、<a href="https://docs.flutter.dev/install/archive">公式のFlutter SDK archive</a> で、macOS用の <code>Stable</code>、<code>3.47.5</code>、Architectureは <code>arm64</code> を選びます。</p>
+    <p>この授業のFlutter SDKは <strong>3.47.5</strong>、同梱されるDartは <strong>3.13.4</strong> にそろえます。学生のMacは全員Apple Siliconなので、<a href="https://docs.flutter.dev/install/archive">公式のFlutter SDK archive</a> で、macOS用の <code>Stable</code>、<code>3.47.5</code>、<code>Architecture</code> は <code>arm64</code> を選びます。</p>
     <h3>SDKの取得を始め、既存のiOS環境を確認する</h3>
     <p>SDKのダウンロードを開始したら、完了を待たずに、iOSの授業で使っているシミュレータを確認します。<strong>既存の環境が使えれば、新しいiOSランタイムのダウンロードは不要です。</strong>全員で最新のランタイムを取得する必要はありません。</p>
     <p>Terminalで新しいウィンドウを開き、次を実行します。利用可能なシミュレータを一覧表示する、Xcodeの確認用コマンドです。Flutter SDKの展開前でも実行できます。</p>
@@ -131,7 +131,7 @@ flutter --version</code></pre>
       <tr><td><code>flutter --version</code></td><td><code>Flutter 3.47.5</code> と <code>Dart 3.13.4</code> が表示される。</td></tr>
     </tbody></table>
     <div class="note"><p class="box-title">Android・iOSのSDK選択との比較</p><p>Android StudioやXcodeで使うSDKを選ぶのと同じく、Flutterも使う場所をそろえます。<code>PATH</code> はコマンドを探す場所と順番です。古いFlutterが表示されるときは、SDKを削除せず、まず <code>which flutter</code> の結果を確認します。</p></div>
-    <p><strong>授業期間中は <code>flutter upgrade</code> を実行しません。</strong>教材と同じ版で進めます。版やパスが合わなければ、その出力を先生に見せてください。PATH設定と再起動の手順は <a href="https://docs.flutter.dev/install/manual#add-flutter-to-your-path">Flutterの公式インストール手順</a>に基づいています。</p>
+    <p><strong>授業期間中は <code>flutter upgrade</code> を実行しません。</strong>教材と同じ版で進めます。版やパスが合わなければ、その出力を先生に見せてください。<code>PATH</code> の設定と再起動の手順は <a href="https://docs.flutter.dev/install/manual#add-flutter-to-your-path">Flutterの公式インストール手順</a>に基づいています。</p>
     <div class="check"><label><input type="checkbox" data-check="flutter-path"><span>新しいTerminalで、Flutter 3.47.5とDart 3.13.4を確認できた。</span></label></div>
   </section>
 
@@ -152,7 +152,7 @@ flutter --version</code></pre>
   <section id="step-7">
     <p class="step-meta">STEP 7</p><h2>iOSの実行環境とダウンロードを確認する</h2>
     <p>Flutterの初回実行には、STEP 4で確認した既存のiOSシミュレータを使います。ランタイムの追加が必要だった人は、ダウンロード用のTerminalを確認し、エラーで止まっておらず、取得が完了していることを確かめます。第7コマで終わらなかった場合は、第8コマの授業内でも確認を続けます。</p>
-    <p>Flutter SDKの展開とPATHの設定が済んだTerminalで、Flutter側のiOS用ファイルを取得します。これはiOSの授業で使ったランタイムとは別の、Flutter専用の資材です。必要なものが既に入っていれば、追加取得が省略されます。</p>
+    <p>Flutter SDKの展開と <code>PATH</code> の設定が済んだTerminalで、Flutter側のiOS用ファイルを取得します。これはiOSの授業で使ったランタイムとは別の、Flutter専用の資材です。必要なものが既に入っていれば、追加取得が省略されます。</p>
     <div class="code-head">Terminal · FlutterのiOS用ファイルを取得</div>
     <pre tabindex="0"><code>flutter precache --ios</code></pre>
     <p>取得が終わったら、環境の確認結果を表示します。</p>
@@ -169,19 +169,19 @@ flutter --version</code></pre>
     </tbody></table>
     <p>Flutter側のファイル、Gradle本体、Android SDKやビルド用の依存ファイルは、それぞれ必要になります。1種類のキャッシュをコピーしても、すべての取得が終わるわけではありません。</p>
     <p>Gradleのキャッシュは、プロジェクトが使う配布URLと一致している必要があります。<code>-bin.zip</code> と <code>-all.zip</code> は別です。授業でプロジェクトを作ったときに、<code>android/gradle/wrapper/gradle-wrapper.properties</code> の <code>distributionUrl</code> を、配布キャッシュと同じURLにそろえます。ここではまだプロジェクトを作らないため、ファイルの編集は行いません。仕組みは <a href="https://docs.gradle.org/current/userguide/gradle_wrapper.html#sec:using_wrapper">Gradle Wrapperの公式資料</a>で確認できます。</p>
-    <div class="check"><label><input type="checkbox" data-check="flutter-platform"><span>使うiOS環境とdoctorの結果を確認した。追加設定が必要な項目は先生に相談した。</span></label></div>
+    <div class="check"><label><input type="checkbox" data-check="flutter-platform"><span>使うiOS環境と <code>flutter doctor</code> の結果を確認した。追加設定が必要な項目は先生に相談した。</span></label></div>
   </section>
 
   <section id="ready">
     <h2>ここまでできたら、準備完了</h2>
     <table><thead><tr><th>始める授業</th><th>準備完了の目印</th></tr></thead><tbody>
       <tr><td>Monaca</td><td>先生が指定した教科書を開ける。通常版Monacaにログインでき、自分の作品を残したまま、必要なプロジェクトの空きを確保できている。</td></tr>
-      <tr><td>Flutter</td><td>TerminalとVisual Studio Codeが同じFlutter 3.47.5を使っている。Flutter拡張とiOSの実行環境を用意し、doctorの結果を確認できている。</td></tr>
+      <tr><td>Flutter</td><td>TerminalとVisual Studio Codeが同じFlutter 3.47.5を使っている。Flutter拡張とiOSの実行環境を用意し、<code>flutter doctor</code> の結果を確認できている。</td></tr>
     </tbody></table>
     <p>アプリの作成、コードの編集、Visual Studio Codeでのデバイス選択、実行は、その日の教科書で行います。準備中に実行用の項目が見つからなくても、別のプロジェクトを作る必要はありません。</p>
     <h3>当日、うまく進まないとき</h3>
     <p>ダウンロードが終わらない、確認メールが届かない、版が合わないときは、止まったSTEPと画面・出力を先生に見せてください。回線が遅い場合は先生が授業の進め方を調整します。家庭で終わらせる前提で先へ進める必要はありません。パスワードや確認メールのリンクは、教室の共有画面や提出物へ貼り付けません。</p>
-    <p>質問の例：<strong>「STEP 5で、flutter --versionが3.41になりました」</strong>。表示された文字をそのまま伝えると、SDKの場所と版を一緒に確かめられます。</p>
+    <p>質問の例：<strong>「STEP 5で、<code>flutter --version</code> が3.41になりました」</strong>。表示された文字をそのまま伝えると、SDKの場所と版を一緒に確かめられます。</p>
     <p class="next"><a href="../oshi-list/index.html" data-back>もとの教科書へ戻る</a></p>
   </section>
   <p class="footer">JEC / ハイブリッドアプリ開発技法 · 共通資料 · 2026-09-23</p>
