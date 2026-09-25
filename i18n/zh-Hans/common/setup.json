@@ -1,0 +1,550 @@
+{
+  "source": "docs/common/setup.html",
+  "language": "zh-Hans",
+  "entries": [
+    {
+      "source": "授業を始めるまでの準備 | ハイブリッドアプリ開発技法",
+      "translation": "上课前的准备 | 混合应用开发技术"
+    },
+    {
+      "source": "本文へ移動",
+      "translation": "跳转到正文"
+    },
+    {
+      "source": "JEC / ハイブリッドアプリ開発技法",
+      "translation": "JEC / 混合应用开发技术"
+    },
+    {
+      "source": "もとの教科書へ戻る",
+      "translation": "返回原来的课本"
+    },
+    {
+      "source": "共通資料 · 授業内で行う準備",
+      "translation": "通用资料 · 在课堂上完成的准备"
+    },
+    {
+      "source": "授業を始めるまでの準備",
+      "translation": "上课前的准备"
+    },
+    {
+      "source": "教材を受け取り、Monacaにログインできる状態と、Flutterの開発環境を使える状態にします。使うのはmacOSです。アプリの作成と実行は、その日の教科書で行います。",
+      "translation": "领取教材，做到能登录 Monaca，并能使用 Flutter 的开发环境。使用的是 macOS。创建和运行应用，在当天的课本中进行。"
+    },
+    {
+      "source": "Monaca クラウド IDE / Google Chrome",
+      "translation": "Monaca クラウド IDE（云端 IDE）/ Google Chrome"
+    },
+    {
+      "source": "準備とダウンロードも授業内で行う",
+      "translation": "准备和下载都在课堂上进行"
+    },
+    {
+      "source": "前半はMonaca、後半はFlutterを使います。STEP 1〜3はMonacaの準備です。Flutterの準備は、第7コマの冒頭にSTEP 4〜7を順に始め、ダウンロード待ちの間に先生の案内でMonacaの仕上げを進めます。第8コマでも準備の確認を続けます。家庭でのダウンロードを宿題にはしません。",
+      "translation": "前半使用 Monaca，后半使用 Flutter。STEP 1～3 是 Monaca 的准备。Flutter 的准备，在第7节课的开头依次开始 STEP 4～7，等待下载的期间，按老师的指引继续完成 Monaca 的收尾工作。第8节课也会继续确认准备情况。不会把在家下载作为作业。"
+    },
+    {
+      "source": "この資料の目次",
+      "translation": "本资料的目录"
+    },
+    {
+      "source": "教材を受け取る",
+      "translation": "领取教材"
+    },
+    {
+      "source": "通常版Monacaに登録する",
+      "translation": "注册标准版 Monaca"
+    },
+    {
+      "source": "プロジェクトの空きを確かめる",
+      "translation": "确认项目的空余名额"
+    },
+    {
+      "source": "Flutter 3.47.5を用意する",
+      "translation": "准备 Flutter 3.47.5"
+    },
+    {
+      "source": "使うFlutterの場所と版をそろえる",
+      "translation": "统一所用 Flutter 的位置和版本"
+    },
+    {
+      "source": "Visual Studio Codeを準備する",
+      "translation": "准备 Visual Studio Code"
+    },
+    {
+      "source": "iOSの実行環境とダウンロードを確認する",
+      "translation": "确认 iOS 运行环境和下载情况"
+    },
+    {
+      "source": "0 / 7 ステップ確認済み",
+      "translation": "已确认 0 / 7 个步骤"
+    },
+    {
+      "source": "準備の進み具合",
+      "translation": "准备的进度"
+    },
+    {
+      "source": "Google Classroomなどで先生が案内した<strong>その回のリリース</strong>を開き、<code>Assets</code> から学生用ZIPをダウンロードします。名前は <code>hybrid-app-student-materials-日付.zip</code> の形です。GitHubの <code>Source code (zip)</code> は授業用の配布ZIPではありません。",
+      "translation": "打开老师通过 Google Classroom 等方式告知的<strong>本次的发布版本（Release）</strong>，从 <code>Assets</code> 下载学生用 ZIP。文件名形如 <code>hybrid-app-student-materials-日付.zip</code>（日付 表示日期）。GitHub 的 <code>Source code (zip)</code> 不是上课用的分发 ZIP。"
+    },
+    {
+      "source": "FinderでダウンロードしたZIPをダブルクリックして展開します。既に同じ名前のフォルダになっていれば、そのフォルダを使います。",
+      "translation": "在 Finder 中双击下载的 ZIP，将其解压。如果已经是同名的文件夹，就使用那个文件夹。"
+    },
+    {
+      "source": "展開したフォルダを、見つけやすい場所に置きます。例えば <code>書類</code> の中です。",
+      "translation": "把解压出的文件夹放到容易找到的位置，例如放在 <code>書類</code>（文稿）里。"
+    },
+    {
+      "source": "中に <code>docs</code>、<code>はじめに.txt</code>、<code>VERSION.json</code> があることを確かめます。完成見本が同梱されている版には <code>samples</code> もあります。言語を選ぶ <code>index.html</code> がある版では、そこから教科書を開けます。",
+      "translation": "确认里面有 <code>docs</code>、<code>はじめに.txt</code>、<code>VERSION.json</code>。附带完成示例的版本还会有 <code>samples</code>。在带有用于选择语言的 <code>index.html</code> 的版本中，可以从那里打开课本。"
+    },
+    {
+      "source": "<code>docs/common/setup.html</code> をGoogle Chromeで開きます。今読んでいるページが、この共通資料です。",
+      "translation": "用 Google Chrome 打开 <code>docs/common/setup.html</code>。你现在正在读的页面，就是这份通用资料。"
+    },
+    {
+      "source": "完成見本が配られたら、次の方法で開きます。共通資料だけの版には <code>samples</code> がなくても問題ありません。",
+      "translation": "发放了完成示例时，按下面的方法打开。只有通用资料的版本没有 <code>samples</code> 也没有问题。"
+    },
+    {
+      "source": "配布された見本",
+      "translation": "发放的示例"
+    },
+    {
+      "source": "開き方",
+      "translation": "打开方法"
+    },
+    {
+      "source": "Monacaの完成プロジェクト",
+      "translation": "Monaca 的完成项目"
+    },
+    {
+      "source": "教科書や先生が案内する取り込み用URLを開きます。<code>samples</code> の中身は、コードを読み比べるための写しです。",
+      "translation": "打开课本或老师告知的导入链接。<code>samples</code> 里的内容，是用来对照阅读代码的副本。"
+    },
+    {
+      "source": "Flutterの完成プロジェクト",
+      "translation": "Flutter 的完成项目"
+    },
+    {
+      "source": "Visual Studio Code の <code>File → Open Folder…</code> で、<code>samples</code> 内の指定されたプロジェクトフォルダを開きます。<code>pubspec.yaml</code> が入っている階層を選びます。",
+      "translation": "在 Visual Studio Code 中通过 <code>File → Open Folder…</code>，打开 <code>samples</code> 里指定的项目文件夹。选择包含 <code>pubspec.yaml</code> 的那一层文件夹。"
+    },
+    {
+      "source": "Web基礎・Android・iOSの見本と同じく、自分の作品を分ける",
+      "translation": "和 Web 基础、Android 与 iOS 的示例一样，把自己的作品分开放"
+    },
+    {
+      "source": "先生の完成見本と、自分で作るプロジェクトは別のものです。自分の作品を配布フォルダの中へ保存すると、教材を入れ替えたときに混ざります。自作の保存先は、その日の教科書で決めます。",
+      "translation": "老师的完成示例和自己创建的项目是不同的东西。如果把自己的作品保存到发放的文件夹里，更换教材时就会混在一起。自己作品的保存位置，在当天的课本中决定。"
+    },
+    {
+      "source": "更新版は別フォルダに展開します。同じ日に配り直された版は名前が同じになるため、先生の案内を確かめてから入れ替えてください。自分の作品を上書きしません。質問するときは、フォルダ名の日付と <code>VERSION.json</code> の <code>version</code> を伝えます。",
+      "translation": "更新版解压到另一个文件夹。同一天重新发放的版本，名称会相同，所以请先确认老师的说明，再进行替换。不要覆盖自己的作品。提问时，请告知文件夹名中的日期和 <code>VERSION.json</code> 里的 <code>version</code>。"
+    },
+    {
+      "source": "先生が指定した版の教科書を開き、自分の作品と分けて置けた。",
+      "translation": "老师指定版本的课本已打开，并已与自己的作品分开存放。"
+    },
+    {
+      "source": "Google Chromeで <a1>Monacaの公式サイト</a1>を開き、<code>ログイン</code> から進みます。この授業は<strong>通常版MonacaのFreeプラン</strong>を使います。ログイン後の開発画面は <code>console.monaca.mobi</code> です。",
+      "translation": "用 Google Chrome 打开 <a1>Monaca 官方网站</a1>，从 <code>ログイン</code>（登录）进入。本课程使用<strong>标准版 Monaca 的 Free 方案</strong>。登录后的开发界面是 <code>console.monaca.mobi</code>。"
+    },
+    {
+      "source": "Monaca公式サイト右上のログインへの入口",
+      "translation": "Monaca 官方网站右上角的 ログイン（登录）入口"
+    },
+    {
+      "source": "公式サイト右上の <code>ログイン</code> から、通常版Monacaへ進みます。",
+      "translation": "从官方网站右上角的 <code>ログイン</code>（登录）进入标准版 Monaca。"
+    },
+    {
+      "source": "通常版のアカウントを既に持っていれば、そのアカウントでログインします。初めて使う人は、ログイン画面からアカウント作成へ進み、次の順に登録します。",
+      "translation": "如果已经有标准版的账户，就用该账户登录。第一次使用的人，从登录页面进入创建账户，按下面的顺序注册。"
+    },
+    {
+      "source": "受信できる自分のメールアドレスと、登録するパスワードを入力します。",
+      "translation": "输入自己能收到邮件的邮箱地址，以及要注册的密码。"
+    },
+    {
+      "source": "利用規約など画面の説明を確認し、必要な項目を入力して、<code>アカウント新規作成</code> を選びます。",
+      "translation": "确认使用条款等页面上的说明，填写必要的内容，然后选择 <code>アカウント新規作成</code>（新建账户）。"
+    },
+    {
+      "source": "入力したメールアドレスの受信箱を開き、Monacaからの確認メールにあるリンクを開きます。",
+      "translation": "打开所输入邮箱的收件箱，打开 Monaca 发来的确认邮件里的链接。"
+    },
+    {
+      "source": "登録を完了し、通常版Monacaへログインします。プロジェクトの一覧が見えれば、このSTEPは完了です。",
+      "translation": "完成注册，登录标准版 Monaca。能看到项目列表，这个 STEP 就完成了。"
+    },
+    {
+      "source": "メールアドレスとパスワードを入力し、アカウント新規作成を選ぶ画面",
+      "translation": "输入邮箱地址和密码，然后选择 アカウント新規作成（新建账户）的页面"
+    },
+    {
+      "source": "入力するのは自分のメールアドレスです。画像のメールアドレスは伏せてあります。",
+      "translation": "要输入的是自己的邮箱地址。图片中的邮箱地址已经隐去。"
+    },
+    {
+      "source": "Web基礎の編集環境との違い",
+      "translation": "与 Web 基础的编辑环境的区别"
+    },
+    {
+      "source": "Web基礎ではMacに置いたHTMLやCSSを編集しました。Monacaでは、ログインしたアカウントのプロジェクトを、Monaca クラウド IDEで編集します。アカウントを取り違えると、自分のプロジェクトが見つからなくなります。",
+      "translation": "在 Web 基础中，编辑的是放在 Mac 上的 HTML 和 CSS。在 Monaca 中，则是用 Monaca クラウド IDE（云端 IDE）编辑已登录账户里的项目。如果弄错了账户，就会找不到自己的项目。"
+    },
+    {
+      "source": "Monaca Educationのアカウントや <code>Monaca for Study</code> は、この授業では使いません。確認メールが届かなければ、迷惑メールのフォルダと入力したアドレスを確認し、解決しないときは先生へ知らせてください。確認メールについては <a1>Monacaの公式FAQ</a1>でも案内されています。",
+      "translation": "Monaca Education 的账户和 <code>Monaca for Study</code>，在本课程中都不使用。如果收不到确认邮件，请检查垃圾邮件文件夹和输入的地址；仍无法解决时，请告诉老师。关于确认邮件，<a1>Monaca 官方 FAQ</a1> 中也有说明。"
+    },
+    {
+      "source": "通常版Monacaへログインし、自分のプロジェクト一覧を開けた。",
+      "translation": "已登录标准版 Monaca，并打开了自己的项目列表。"
+    },
+    {
+      "source": "Freeプランでは、同時に持てるプロジェクトは<strong>3個まで</strong>です。登録直後は <code>はじめてのMonacaアプリ</code> が自動で1個作られるため、そのままなら空きは2個です。",
+      "translation": "在 Free 方案中，同时能拥有的项目<strong>最多3个</strong>。刚注册时会自动创建1个 <code>はじめてのMonacaアプリ</code>（第一个 Monaca 应用），所以保持原样的话，空余名额就是2个。"
+    },
+    {
+      "source": "プロジェクト一覧で、今あるプロジェクトの名前と個数を確かめます。",
+      "translation": "在项目列表中，确认现有项目的名称和个数。"
+    },
+    {
+      "source": "<code>はじめてのMonacaアプリ</code> があり、まだ自分で編集していなければ、授業で先生と確認してから削除し、空きを確保します。",
+      "translation": "如果有 <code>はじめてのMonacaアプリ</code>（第一个 Monaca 应用），而且自己还没有编辑过它，就在课上和老师确认后删除，腾出名额。"
+    },
+    {
+      "source": "自分で編集した作品がある場合は削除せず、一覧を先生に見せます。自動作成のものか分からない場合も、そのまま相談してください。",
+      "translation": "如果有自己编辑过的作品，不要删除，把列表给老师看。不确定是不是自动创建的时候，也直接找老师商量。"
+    },
+    {
+      "source": "Android Studio・Xcodeのプロジェクトとの違い",
+      "translation": "与 Android Studio 和 Xcode 的项目的区别"
+    },
+    {
+      "source": "Macのフォルダを増やすときとは違い、Monacaはアカウントの3枠を使います。完成見本を取り込んだときにも1枠を使うので、URLを何度も開く前に、今あるプロジェクトと空きを確かめます。",
+      "translation": "和在 Mac 上新增文件夹不同，Monaca 使用的是账户的3个名额。导入完成示例时也会占用1个名额，所以在反复打开链接之前，先确认现有的项目和空余名额。"
+    },
+    {
+      "source": "この授業では、1つのプロジェクトを何回かの授業で育てます。見本をすべて取り込んで3枠を埋める必要はありません。Freeプランでは作品をZIPへ書き出せないため、<strong>自分の作品を削除して空きを作ろうとしないでください。</strong>",
+      "translation": "在本课程中，一个项目会在好几节课里逐步完善。不需要把示例全部导入、占满3个名额。Free 方案无法把作品导出为 ZIP，所以<strong>请不要为了腾出名额而删除自己的作品。</strong>"
+    },
+    {
+      "source": "提出には、通常版Monacaで発行する取り込み用の公開URLを使います。このURLは、見る人のMonacaへプロジェクトを取り込むためのもので、完成アプリをWebで動かすURLではありません。公開と提出の操作は、提出を扱う授業で行います。",
+      "translation": "提交作业时，使用在标准版 Monaca 中公开项目后生成的导入链接。这个链接用于把项目导入到查看者的 Monaca 里，不是在 Web 上运行完成应用的链接。公开和提交的操作，在讲提交的那节课进行。"
+    },
+    {
+      "source": "プロジェクトの個数と空きを確認し、自分の作品を消さずに授業を始められる状態にした。",
+      "translation": "已确认项目的个数和空余名额，并且在不删除自己作品的情况下，已经可以开始上课。"
+    },
+    {
+      "source": "ここからは第7コマの授業内で始めるFlutterの準備です。Finderの <code>アプリケーション</code> に、<strong>Visual Studio Code・Xcode・Android Studio</strong> があることを確かめます。XcodeとAndroid Studioは、iOS・Androidの授業で使っているものを使います。見つからない場合は、先生へ知らせてください。",
+      "translation": "从这里开始，是在第7节课的课堂上开始的 Flutter 准备。确认 Finder 的 <code>アプリケーション</code>（应用程序）里有 <strong>Visual Studio Code、Xcode、Android Studio</strong>。Xcode 和 Android Studio，使用 iOS、Android 课程中正在使用的那些。找不到时，请告诉老师。"
+    },
+    {
+      "source": "この授業のFlutter SDKは <strong>3.47.5</strong>、同梱されるDartは <strong>3.13.4</strong> にそろえます。学生のMacは全員Apple Siliconなので、<a1>公式のFlutter SDK archive</a1> で、macOS用の <code>Stable</code>、<code>3.47.5</code>、Architectureは <code>arm64</code> を選びます。",
+      "translation": "本课程的 Flutter SDK 统一为 <strong>3.47.5</strong>，随附的 Dart 为 <strong>3.13.4</strong>。学生的 Mac 全都是 Apple Silicon，所以在<a1>官方的 Flutter SDK archive</a1> 中，选择 macOS 用的 <code>Stable</code>、<code>3.47.5</code>，Architecture 选 <code>arm64</code>。"
+    },
+    {
+      "source": "SDKの取得を始め、既存のiOS環境を確認する",
+      "translation": "开始获取 SDK，并确认现有的 iOS 环境"
+    },
+    {
+      "source": "SDKのダウンロードを開始したら、完了を待たずに、iOSの授業で使っているシミュレータを確認します。<strong>既存の環境が使えれば、新しいiOSランタイムのダウンロードは不要です。</strong>全員で最新のランタイムを取得する必要はありません。",
+      "translation": "开始下载 SDK 后，不必等它完成，先确认 iOS 课程中正在使用的模拟器。<strong>如果现有的环境可用，就不需要下载新的 iOS 运行时。</strong>不需要所有人都获取最新的运行时。"
+    },
+    {
+      "source": "Terminalで新しいウィンドウを開き、次を実行します。利用可能なシミュレータを一覧表示する、Xcodeの確認用コマンドです。Flutter SDKの展開前でも実行できます。",
+      "translation": "在 Terminal 中打开一个新窗口，执行下面的命令。这是 Xcode 的确认用命令，用来列出可用的模拟器。在解压 Flutter SDK 之前也可以执行。"
+    },
+    {
+      "source": "Terminal · 利用可能なシミュレータを確認",
+      "translation": "Terminal · 确认可用的模拟器"
+    },
+    {
+      "source": "<code>iOS</code> の見出しの下に、授業で使っているiPhoneの名前があるかを確かめます。<code>Shutdown</code> は停止中という意味で、ダウンロード不足を示すものではありません。名前があれば、その環境を使う準備を進めます。一覧が空、またはエラーになる場合は、出力を先生に見せてください。ランタイムが不足しているのか、Xcodeの設定やシミュレータの作成が必要なのかを一緒に確認します。コマンドの説明は <a1>AppleのXcodeコマンドラインツール資料</a1>と、Terminalの <code>xcrun simctl help list</code> で確認できます。",
+      "translation": "确认 <code>iOS</code> 标题下面是否有课程中使用的 iPhone 的名称。<code>Shutdown</code> 的意思是已关机，并不表示缺少下载。如果有名称，就继续准备使用该环境。如果列表为空或出错，请把输出给老师看。一起确认是缺少运行时，还是需要设置 Xcode 或创建模拟器。命令的说明可以在 <a1>Apple 的 Xcode 命令行工具资料</a1>和 Terminal 的 <code>xcrun simctl help list</code> 中查看。"
+    },
+    {
+      "source": "補足：iOS環境が見つからない・実行できないとき",
+      "translation": "补充：找不到 iOS 环境或无法运行时"
+    },
+    {
+      "source": "まずiOSの授業で使っているXcodeを開き、初回の追加処理が残っていないか先生と確認します。利用規約や管理者権限の入力で判断できない場合も、先生へ相談します。",
+      "translation": "先打开 iOS 课程中使用的 Xcode，和老师确认是否还有首次启动时的附加处理没有完成。遇到使用条款或管理员权限的输入而无法判断时，也请找老师商量。"
+    },
+    {
+      "source": "<strong>先生と確認して、ランタイムの追加が必要になった場合だけ</strong>、次のコマンドを使います。数GBの通信が発生することがあるため、授業内で開始します。既存の環境が使える人は実行しません。追加方法は <a1>AppleのXcode追加コンポーネントの資料</a1>にあります。",
+      "translation": "<strong>只有在和老师确认后、需要添加运行时的情况下</strong>，才使用下面的命令。因为可能产生数 GB 的下载，所以在课堂上开始。现有环境可用的人不执行。添加方法见 <a1>Apple 的 Xcode 附加组件资料</a1>。"
+    },
+    {
+      "source": "Terminal · 必要な場合だけiOSランタイムを取得",
+      "translation": "Terminal · 仅在需要时获取 iOS 运行时"
+    },
+    {
+      "source": "取得中のTerminalは閉じずに残し、完了をSTEP 7で確認します。",
+      "translation": "正在下载的 Terminal 窗口不要关闭，保留着，在 STEP 7 确认是否完成。"
+    },
+    {
+      "source": "SDKなどのダウンロードを待っている間は、先生の案内でMonacaの仕上げを進めます。SDKのダウンロードが終わったら、次の展開へ進みます。",
+      "translation": "等待 SDK 等下载的期间，按老师的指引继续完成 Monaca 的收尾工作。SDK 下载完成后，进入下面的解压步骤。"
+    },
+    {
+      "source": "SDKを置く場所は、版を区別できる新しいフォルダにします。以下は、これから作る保存先の例です。既存のSDKを移動したり上書きしたりしません。",
+      "translation": "放置 SDK 的位置，用一个能区分版本的新文件夹。下面是接下来要创建的保存位置的例子。不移动、也不覆盖已有的 SDK。"
+    },
+    {
+      "source": "Terminalで次のコマンドを実行し、保存先 <code>~/develop/flutter-3.47.5</code> を作ります。追加のダウンロードが動いている場合は、別のTerminalウィンドウを使います。",
+      "translation": "在 Terminal 中执行下面的命令，创建保存位置 <code>~/develop/flutter-3.47.5</code>。如果有附加的下载正在进行，就另开一个 Terminal 窗口。"
+    },
+    {
+      "source": "Terminal · SDKを置くフォルダを作る",
+      "translation": "Terminal · 创建放置 SDK 的文件夹"
+    },
+    {
+      "source": "Finderの <code>移動 → フォルダへ移動…</code> に <code>~/develop/flutter-3.47.5</code> を入力し、開きます。",
+      "translation": "在 Finder 的 <code>移動 → フォルダへ移動…</code>（前往 → 前往文件夹…）中输入 <code>~/develop/flutter-3.47.5</code>，然后打开。"
+    },
+    {
+      "source": "この中に、ダウンロードしたFlutter 3.47.5のZIPを置いてからダブルクリックし、展開します。既に <code>flutter</code> フォルダがある場合は上書きせず、先生と中身の版を確認します。",
+      "translation": "把下载好的 Flutter 3.47.5 的 ZIP 放到这个文件夹里，再双击解压。如果已经有 <code>flutter</code> 文件夹，不要覆盖，和老师确认里面的版本。"
+    },
+    {
+      "source": "<code>flutter</code> の中に <code>bin</code> があることを確かめます。この例のSDKの場所は <code>~/develop/flutter-3.47.5/flutter</code> です。",
+      "translation": "确认 <code>flutter</code> 里面有 <code>bin</code>。在这个例子中，SDK 的位置是 <code>~/develop/flutter-3.47.5/flutter</code>。"
+    },
+    {
+      "source": "Android SDKとの比較",
+      "translation": "与 Android SDK 的比较"
+    },
+    {
+      "source": "Androidの開発でAndroid SDKを使うのと同じく、Flutterの開発にはFlutter SDKが必要です。Visual Studio Codeを入れただけではSDKは入りません。DartはこのFlutter SDKに同梱されるため、別のDartを探して入れる必要はありません。",
+      "translation": "就像 Android 开发需要 Android SDK 一样，Flutter 开发也需要 Flutter SDK。只安装 Visual Studio Code 并不会装上 SDK。Dart 随附在这个 Flutter SDK 中，所以不需要另外找 Dart 来安装。"
+    },
+    {
+      "source": "<code>~/Downloads/flutter</code> などに別のFlutterがある人は、そのまま残します。ダウンロード先でZIPをそのまま展開せず、新しい保存先を先に分けるのは、既存のSDKと混ぜないためです。",
+      "translation": "在 <code>~/Downloads/flutter</code> 等位置有另一个 Flutter 的人，把它原样保留。不在下载位置直接解压 ZIP、而是先另建一个新的保存位置，是为了不和已有的 SDK 混在一起。"
+    },
+    {
+      "source": "自分のMacに合うFlutter 3.47.5を、既存SDKと別の場所へ展開した。",
+      "translation": "适合自己 Mac 的 Flutter 3.47.5 已解压到与已有 SDK 不同的位置。"
+    },
+    {
+      "source": "Terminalで <code>flutter</code> と入力したとき、今用意したSDKが選ばれるようにします。ここではmacOS標準のzshを使います。まず、Terminalで次の2行を実行し、設定ファイルをVisual Studio Codeで開きます。",
+      "translation": "要让在 Terminal 中输入 <code>flutter</code> 时，选中的是刚才准备好的 SDK。这里使用 macOS 默认的 zsh。首先在 Terminal 中执行下面2行，用 Visual Studio Code 打开配置文件。"
+    },
+    {
+      "source": "Terminal · 設定ファイルを開く",
+      "translation": "Terminal · 打开配置文件"
+    },
+    {
+      "source": "開いた <code>.zprofile</code> の末尾へ、次の1行を追加して保存します。既に同じ行があれば、重ねて追加しません。他の設定は残します。SDKを別の場所へ置いた場合は、<code>/bin</code> より前の部分を実際の場所へ合わせます。",
+      "translation": "在打开的 <code>.zprofile</code> 末尾添加下面这1行并保存。如果已经有相同的行，就不要重复添加。其他设置保持不变。如果 SDK 放在了别的位置，就把 <code>/bin</code> 之前的部分改成实际的位置。"
+    },
+    {
+      "source": ".zprofile · ファイルに追加する1行",
+      "translation": ".zprofile · 要添加到文件里的1行"
+    },
+    {
+      "source": "Visual Studio Codeを終了して開き直し、Terminalは新しいウィンドウを開きます。iOSランタイムの追加ダウンロードが動いている場合は、そのTerminalを開いたまま残します。新しいウィンドウで、次の2行を実行します。",
+      "translation": "退出 Visual Studio Code 再重新打开，Terminal 则打开一个新窗口。如果 iOS 运行时的附加下载正在进行，那个 Terminal 保持打开。在新窗口中执行下面2行。"
+    },
+    {
+      "source": "Terminal · 使われるSDKと版を確認",
+      "translation": "Terminal · 确认所使用的 SDK 和版本"
+    },
+    {
+      "source": "確かめる出力",
+      "translation": "要确认的输出"
+    },
+    {
+      "source": "この手順で期待する内容",
+      "translation": "本步骤期望的内容"
+    },
+    {
+      "source": "末尾が <code>/develop/flutter-3.47.5/flutter/bin/flutter</code> のパス。先頭のユーザ名は自分のものになります。",
+      "translation": "以 <code>/develop/flutter-3.47.5/flutter/bin/flutter</code> 结尾的路径。开头的用户名会是你自己的。"
+    },
+    {
+      "source": "<code>Flutter 3.47.5</code> と <code>Dart 3.13.4</code> が表示される。",
+      "translation": "显示 <code>Flutter 3.47.5</code> 和 <code>Dart 3.13.4</code>。"
+    },
+    {
+      "source": "Android・iOSのSDK選択との比較",
+      "translation": "与 Android 和 iOS 的 SDK 选择的比较"
+    },
+    {
+      "source": "Android StudioやXcodeで使うSDKを選ぶのと同じく、Flutterも使う場所をそろえます。<code>PATH</code> はコマンドを探す場所と順番です。古いFlutterが表示されるときは、SDKを削除せず、まず <code>which flutter</code> の結果を確認します。",
+      "translation": "就像在 Android Studio 和 Xcode 中选择所用的 SDK 一样，Flutter 也要统一使用的位置。<code>PATH</code> 是查找命令的位置和顺序。显示的是旧版 Flutter 时，不要删除 SDK，先确认 <code>which flutter</code> 的结果。"
+    },
+    {
+      "source": "<strong>授業期間中は <code>flutter upgrade</code> を実行しません。</strong>教材と同じ版で進めます。版やパスが合わなければ、その出力を先生に見せてください。PATH設定と再起動の手順は <a1>Flutterの公式インストール手順</a1>に基づいています。",
+      "translation": "<strong>在整个课程期间，都不要执行 <code>flutter upgrade</code>。</strong>用和教材相同的版本来进行。如果版本或路径不一致，请把那段输出给老师看。PATH 的设置和重启的步骤，依据的是 <a1>Flutter 官方的安装步骤</a1>。"
+    },
+    {
+      "source": "新しいTerminalで、Flutter 3.47.5とDart 3.13.4を確認できた。",
+      "translation": "在新的 Terminal 中，已确认显示 Flutter 3.47.5 和 Dart 3.13.4。"
+    },
+    {
+      "source": "Visual Studio Codeは<strong>英語UI</strong>で使います。英語表示でなければ、<kbd>⌘</kbd>＋<kbd>Shift</kbd>＋<kbd>P</kbd> でコマンドの一覧を開き、<code>Configure Display Language</code> を探します。<code>English</code> を選び、案内に従って再起動します。詳しくは <a1>公式の表示言語の変更手順</a1>で確認できます。",
+      "translation": "Visual Studio Code 使用<strong>英文界面</strong>。如果不是英文显示，按 <kbd>⌘</kbd>＋<kbd>Shift</kbd>＋<kbd>P</kbd> 打开命令列表，找到 <code>Configure Display Language</code>。选择 <code>English</code>，按提示重启。详细步骤可以在<a1>官方的显示语言更改步骤</a1>中查看。"
+    },
+    {
+      "source": "<a1>公式のFlutter拡張</a1>を開き、<code>Install</code> からVisual Studio Codeに入れます。Flutter拡張を入れると、Dart拡張も入ります。",
+      "translation": "打开<a1>官方的 Flutter 扩展</a1>，通过 <code>Install</code> 安装到 Visual Studio Code 中。安装 Flutter 扩展时，Dart 扩展也会一起安装。"
+    },
+    {
+      "source": "Visual Studio Code の <code>Extensions</code> で、<code>Flutter</code> と <code>Dart</code> が入っていることを確かめます。",
+      "translation": "在 Visual Studio Code 的 <code>Extensions</code> 中，确认 <code>Flutter</code> 和 <code>Dart</code> 都已安装。"
+    },
+    {
+      "source": "<code>View → Command Palette…</code> を開き、<code>Flutter: Run Flutter Doctor</code> を実行します。<code>Output</code> に表示された結果で、Flutterが <code>3.47.5</code> になっていることを確かめます。",
+      "translation": "打开 <code>View → Command Palette…</code>，执行 <code>Flutter: Run Flutter Doctor</code>。在 <code>Output</code> 中显示的结果里，确认 Flutter 是 <code>3.47.5</code>。"
+    },
+    {
+      "source": "Android Studio・Xcodeとの比較",
+      "translation": "与 Android Studio 和 Xcode 的比较"
+    },
+    {
+      "source": "Android StudioやXcodeでは、その言語の補完や実行機能がIDEに入っています。Visual Studio Codeでは、Flutter拡張がDartの補完やFlutterの操作を担当します。Terminalで選ばれるSDKと、拡張が使うSDKの版が同じかも確かめます。",
+      "translation": "在 Android Studio 和 Xcode 中，该语言的代码补全和运行功能都内置在 IDE 里。在 Visual Studio Code 中，则由 Flutter 扩展负责 Dart 的补全和 Flutter 的操作。也要确认 Terminal 中选中的 SDK 和扩展使用的 SDK 版本是否相同。"
+    },
+    {
+      "source": "Terminalでは3.47.5なのにVisual Studio Codeでは違う版になる場合は、Visual Studio Codeを完全に終了して開き直します。それでも違う場合は、以前のSDK設定が残っていることがあるので、両方の結果を先生に見せます。",
+      "translation": "如果 Terminal 中是 3.47.5，而 Visual Studio Code 中却是别的版本，就完全退出 Visual Studio Code 再重新打开。仍然不同时，可能是以前的 SDK 设置还留着，请把两边的结果都给老师看。"
+    },
+    {
+      "source": "デバイス選択は、Flutterプロジェクトを開くと表示されます。ここではまだ新しいプロジェクトを作らず、デバイス選択の項目も探しません。実際の選択と起動は、その日の教科書でプロジェクトを開いてから行います。",
+      "translation": "设备选择会在打开 Flutter 项目后显示。这里还不创建新项目，也不去找设备选择的那一项。实际的选择和启动，在当天的课本中打开项目之后进行。"
+    },
+    {
+      "source": "英語UIでFlutter・Dart拡張を使え、Visual Studio Code側もFlutter 3.47.5になった。",
+      "translation": "能在英文界面下使用 Flutter、Dart 扩展，Visual Studio Code 这边也已是 Flutter 3.47.5。"
+    },
+    {
+      "source": "Flutterの初回実行には、STEP 4で確認した既存のiOSシミュレータを使います。ランタイムの追加が必要だった人は、ダウンロード用のTerminalを確認し、エラーで止まっておらず、取得が完了していることを確かめます。第7コマで終わらなかった場合は、第8コマの授業内でも確認を続けます。",
+      "translation": "Flutter 的首次运行，使用在 STEP 4 确认过的现有 iOS 模拟器。需要添加运行时的人，检查用于下载的 Terminal，确认没有因出错而停止，并且已获取完成。第7节课没有完成的话，第8节课的课堂上也会继续确认。"
+    },
+    {
+      "source": "Flutter SDKの展開とPATHの設定が済んだTerminalで、Flutter側のiOS用ファイルを取得します。これはiOSの授業で使ったランタイムとは別の、Flutter専用の資材です。必要なものが既に入っていれば、追加取得が省略されます。",
+      "translation": "在已完成 Flutter SDK 解压和 PATH 设置的 Terminal 中，获取 Flutter 这边的 iOS 用文件。这是与 iOS 课程中用过的运行时不同的、Flutter 专用的资源。如果需要的文件已经存在，就会跳过额外的获取。"
+    },
+    {
+      "source": "Terminal · FlutterのiOS用ファイルを取得",
+      "translation": "Terminal · 获取 Flutter 的 iOS 用文件"
+    },
+    {
+      "source": "取得が終わったら、環境の確認結果を表示します。",
+      "translation": "获取完成后，显示环境的检查结果。"
+    },
+    {
+      "source": "Terminal · 開発環境の診断",
+      "translation": "Terminal · 开发环境的诊断"
+    },
+    {
+      "source": "<code>Flutter</code> と <code>Xcode</code> の項目を確認します。エラーや追加の設定が表示されたら、出力を先生に見せてください。Android側の準備は、Androidを使う授業の案内に合わせます。設定項目は <a1>Flutter公式のiOS環境設定</a1>でも確認できます。",
+      "translation": "确认 <code>Flutter</code> 和 <code>Xcode</code> 这两项。如果显示了错误或需要额外的设置，请把输出给老师看。Android 这边的准备，按使用 Android 的那节课的说明进行。设置项目也可以在 <a1>Flutter 官方的 iOS 环境设置</a1>中查看。"
+    },
+    {
+      "source": "Swiftの実行環境を使う",
+      "translation": "使用 Swift 的运行环境"
+    },
+    {
+      "source": "Flutterでも、iOS向けのビルドとシミュレータにはXcodeの環境を使います。iOSの授業で使っている環境を生かし、Flutter専用の資材を追加します。実際の起動とアプリの実行は、Flutterプロジェクトを作る授業で確認します。そのとき動かない場合も、すぐにランタイムを取得し直さず、先生と原因を確認します。",
+      "translation": "在 Flutter 中，面向 iOS 的构建和模拟器同样使用 Xcode 的环境。利用 iOS 课程中正在使用的环境，再添加 Flutter 专用的资源。实际的启动和应用的运行，在创建 Flutter 项目的那节课确认。那时如果运行不了，也不要马上重新获取运行时，先和老师确认原因。"
+    },
+    {
+      "source": "Android側で時間のかかる取得を分けて考える",
+      "translation": "把 Android 这边耗时的获取分开来考虑"
+    },
+    {
+      "source": "Androidでの実行とAPK作成は、後の授業で扱います。必要なものの取得や配布キャッシュの展開も、先生の案内に合わせて授業内で行います。",
+      "translation": "在 Android 上运行和生成 APK，在之后的课上处理。所需内容的获取和所发放缓存的解压，也按老师的指引在课堂上进行。"
+    },
+    {
+      "source": "取得するもの",
+      "translation": "要获取的内容"
+    },
+    {
+      "source": "この授業での準備",
+      "translation": "本课程中的准备"
+    },
+    {
+      "source": "FlutterのAndroid用ファイル",
+      "translation": "Flutter 的 Android 用文件"
+    },
+    {
+      "source": "iOS用とは別に必要になります。Androidを扱う授業で、先生の案内に合わせて用意します。",
+      "translation": "在 iOS 用文件之外，另外需要。在讲 Android 的那节课，按老师的指引准备。"
+    },
+    {
+      "source": "Gradle本体",
+      "translation": "Gradle 本体"
+    },
+    {
+      "source": "先生が用意する <code>gradle-9.3.1-bin</code> のキャッシュを授業内で受け取り、指示された場所へ展開・コピーします。保存先は通常 <code>~/.gradle/wrapper/dists/</code> の下です。フォルダ階層を変えず、既存の別の版は残します。",
+      "translation": "在课堂上领取老师准备的 <code>gradle-9.3.1-bin</code> 缓存，解压并复制到指定的位置。保存位置通常在 <code>~/.gradle/wrapper/dists/</code> 下。不要改变文件夹的层级，已有的其他版本保持原样。"
+    },
+    {
+      "source": "Android SDK・ビルド用の依存ファイル",
+      "translation": "Android SDK、构建用的依赖文件"
+    },
+    {
+      "source": "Gradle本体をコピーしてあっても、Android SDKやAndroid Gradle Pluginなどの追加取得が発生します。必要な版は、Androidを扱う授業で先生の案内に合わせます。",
+      "translation": "即使已经复制了 Gradle 本体，仍会发生 Android SDK、Android Gradle Plugin 等的额外获取。所需的版本，在讲 Android 的那节课按老师的指引确定。"
+    },
+    {
+      "source": "Flutter側のファイル、Gradle本体、Android SDKやビルド用の依存ファイルは、それぞれ必要になります。1種類のキャッシュをコピーしても、すべての取得が終わるわけではありません。",
+      "translation": "Flutter 这边的文件、Gradle 本体、Android SDK 和构建用的依赖文件，各自都需要。只复制一种缓存，并不代表所有的获取都已完成。"
+    },
+    {
+      "source": "Gradleのキャッシュは、プロジェクトが使う配布URLと一致している必要があります。<code>-bin.zip</code> と <code>-all.zip</code> は別です。授業でプロジェクトを作ったときに、<code>android/gradle/wrapper/gradle-wrapper.properties</code> の <code>distributionUrl</code> を、配布キャッシュと同じURLにそろえます。ここではまだプロジェクトを作らないため、ファイルの編集は行いません。仕組みは <a1>Gradle Wrapperの公式資料</a1>で確認できます。",
+      "translation": "Gradle 的缓存必须和项目使用的分发 URL 一致。<code>-bin.zip</code> 和 <code>-all.zip</code> 是不同的。在课上创建项目时，把 <code>android/gradle/wrapper/gradle-wrapper.properties</code> 里的 <code>distributionUrl</code> 改成和发放的缓存相同的 URL。这里还不创建项目，所以不编辑文件。其原理可以在 <a1>Gradle Wrapper 的官方资料</a1>中查看。"
+    },
+    {
+      "source": "使うiOS環境とdoctorの結果を確認した。追加設定が必要な項目は先生に相談した。",
+      "translation": "已确认要使用的 iOS 环境和 doctor 的结果。需要额外设置的项目已和老师商量过。"
+    },
+    {
+      "source": "ここまでできたら、準備完了",
+      "translation": "做到这里，准备就完成了"
+    },
+    {
+      "source": "始める授業",
+      "translation": "要开始的课程"
+    },
+    {
+      "source": "準備完了の目印",
+      "translation": "准备完成的标志"
+    },
+    {
+      "source": "先生が指定した教科書を開ける。通常版Monacaにログインでき、自分の作品を残したまま、必要なプロジェクトの空きを確保できている。",
+      "translation": "能打开老师指定的课本。能登录标准版 Monaca，并且在保留自己作品的同时，已确保所需的项目空余名额。"
+    },
+    {
+      "source": "TerminalとVisual Studio Codeが同じFlutter 3.47.5を使っている。Flutter拡張とiOSの実行環境を用意し、doctorの結果を確認できている。",
+      "translation": "Terminal 和 Visual Studio Code 使用的是同一个 Flutter 3.47.5。已准备好 Flutter 扩展和 iOS 运行环境，并确认了 doctor 的结果。"
+    },
+    {
+      "source": "アプリの作成、コードの編集、Visual Studio Codeでのデバイス選択、実行は、その日の教科書で行います。準備中に実行用の項目が見つからなくても、別のプロジェクトを作る必要はありません。",
+      "translation": "创建应用、编辑代码、在 Visual Studio Code 中选择设备、运行，都在当天的课本中进行。准备期间即使找不到用于运行的那一项，也不需要另外创建一个项目。"
+    },
+    {
+      "source": "当日、うまく進まないとき",
+      "translation": "当天进行不顺利时"
+    },
+    {
+      "source": "ダウンロードが終わらない、確認メールが届かない、版が合わないときは、止まったSTEPと画面・出力を先生に見せてください。回線が遅い場合は先生が授業の進め方を調整します。家庭で終わらせる前提で先へ進める必要はありません。パスワードや確認メールのリンクは、教室の共有画面や提出物へ貼り付けません。",
+      "translation": "下载不完、收不到确认邮件、版本不一致时，请把卡住的 STEP 以及屏幕上的显示、输出给老师看。网络慢时，老师会调整上课的进行方式。不需要以在家完成为前提继续往下进行。密码和确认邮件里的链接，不要贴到教室的共享屏幕或提交物里。"
+    },
+    {
+      "source": "質問の例：<strong>「STEP 5で、flutter --versionが3.41になりました」</strong>。表示された文字をそのまま伝えると、SDKの場所と版を一緒に確かめられます。",
+      "translation": "提问的例子：<strong>「STEP 5で、flutter --versionが3.41になりました」</strong>（在 STEP 5，flutter --version 变成了 3.41）。把显示的文字原样告诉老师，就能一起确认 SDK 的位置和版本。"
+    },
+    {
+      "source": "JEC / ハイブリッドアプリ開発技法 · 共通資料 · 2026-09-23",
+      "translation": "JEC / 混合应用开发技术 · 通用资料 · 2026-09-23"
+    }
+  ]
+}

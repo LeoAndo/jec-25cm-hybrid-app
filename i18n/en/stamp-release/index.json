@@ -1,0 +1,1130 @@
+{
+  "source": "docs/stamp-release/index.html",
+  "language": "en",
+  "entries": [
+    {
+      "source": "F02 スタンプ帳：入力・保存・APK提出 | ハイブリッドアプリ開発技法",
+      "translation": "F02 Stamp board: input, saving, and APK submission | Hybrid App Development"
+    },
+    {
+      "source": "本文へ移動",
+      "translation": "Skip to main content"
+    },
+    {
+      "source": "JEC / ハイブリッドアプリ開発技法",
+      "translation": "JEC / Hybrid App Development"
+    },
+    {
+      "source": "0 / 20 ステップ確認済み",
+      "translation": "0 / 20 steps checked"
+    },
+    {
+      "source": "単元の進み具合",
+      "translation": "Progress in this unit"
+    },
+    {
+      "source": "コマごとの目次",
+      "translation": "Table of contents by session"
+    },
+    {
+      "source": "コマ12 · STEP 00〜04",
+      "translation": "Session 12 · STEP 00–04"
+    },
+    {
+      "source": "00 一覧と詳細から再開する",
+      "translation": "00 Resume from the list and detail screens"
+    },
+    {
+      "source": "01 習慣を入力する画面を作る",
+      "translation": "01 Create a screen for entering a habit"
+    },
+    {
+      "source": "02 空欄を確かめる",
+      "translation": "02 Check for empty fields"
+    },
+    {
+      "source": "03 習慣を追加して戻る",
+      "translation": "03 Add the habit and go back"
+    },
+    {
+      "source": "04 入力の題材をアレンジする",
+      "translation": "04 Customize the input topic"
+    },
+    {
+      "source": "コマ13 · STEP 05〜09",
+      "translation": "Session 13 · STEP 05–09"
+    },
+    {
+      "source": "05 完了を待つ処理を読む",
+      "translation": "05 Read code that waits for completion"
+    },
+    {
+      "source": "06 文字列リストへ保存する",
+      "translation": "06 Save to a string list"
+    },
+    {
+      "source": "07 起動時に記録を復元する",
+      "translation": "07 Restore the records at startup"
+    },
+    {
+      "source": "08 初期化と失敗時の表示",
+      "translation": "08 Reset and failure messages"
+    },
+    {
+      "source": "09 保存を確かめてアレンジする",
+      "translation": "09 Check saving and customize"
+    },
+    {
+      "source": "コマ14 · STEP 10〜14",
+      "translation": "Session 14 · STEP 10–14"
+    },
+    {
+      "source": "10 Androidで初めて実行する",
+      "translation": "10 Run on Android for the first time"
+    },
+    {
+      "source": "11 提出形式のAPKを作る",
+      "translation": "11 Build the APK for submission"
+    },
+    {
+      "source": "12 生成したAPKをインストールする",
+      "translation": "12 Install the generated APK"
+    },
+    {
+      "source": "13 ソースと保存データを区別する",
+      "translation": "13 Distinguish the source from saved data"
+    },
+    {
+      "source": "14 配色を整えてAPKを作り直す",
+      "translation": "14 Adjust the colors and rebuild the APK"
+    },
+    {
+      "source": "コマ15 · STEP 15〜19",
+      "translation": "Session 15 · STEP 15–19"
+    },
+    {
+      "source": "15 完成確認の順番を決める",
+      "translation": "15 Decide the order of the final check"
+    },
+    {
+      "source": "16 自分の作品として仕上げる",
+      "translation": "16 Finish it as your own work"
+    },
+    {
+      "source": "17 最終APKを確認して提出する",
+      "translation": "17 Check the final APK and submit it"
+    },
+    {
+      "source": "18 変更箇所と動作を説明する",
+      "translation": "18 Explain your changes and how the app works"
+    },
+    {
+      "source": "19 アレンジできる場所を振り返る",
+      "translation": "19 Review the places you can customize"
+    },
+    {
+      "source": "困ったとき",
+      "translation": "Troubleshooting"
+    },
+    {
+      "source": "完成プロジェクトを開く",
+      "translation": "Open the completed project"
+    },
+    {
+      "source": "共通：はじめの準備",
+      "translation": "Shared: Getting ready for class"
+    },
+    {
+      "source": "コマ12〜15 · 各90分",
+      "translation": "Sessions 12–15 · 90 minutes each"
+    },
+    {
+      "source": "自分の習慣を、残して続けよう。",
+      "translation": "Keep a record of your habits, and keep going."
+    },
+    {
+      "source": "入力した習慣とスタンプを端末へ保存し、再起動後も続けられるアプリにします。保存の完了を待つ処理を読み、生成したAPKそのものを確認して提出しましょう。",
+      "translation": "Save the habits and stamps you enter on the device, so you can continue after a restart. Read the code that waits for saving to finish, then check the generated APK itself and submit it."
+    },
+    {
+      "source": "完成見本は<code>F02StampRelease</code>です。この教科書に開始コードと作成・実行手順を掲載しています。既に作っている自分のスタンプ帳から続けても構いません。Web基礎とJava／Swiftの知識を比べながら読みます。",
+      "translation": "The completed sample is <code>F02StampRelease</code>. This textbook includes the starting code and the steps to create and run it. You may also continue from the stamp board you have already made. Read it while comparing with what you know from Web Basics and Java / Swift."
+    },
+    {
+      "source": "STEP 00 · コマ12",
+      "translation": "STEP 00 · Session 12"
+    },
+    {
+      "source": "一覧と詳細から再開する",
+      "translation": "Resume from the list and detail screens"
+    },
+    {
+      "source": "Visual Studio Codeで、自分のスタンプ帳のフォルダを開きます。既に<code>F01StampBoard</code>として作っている場合は名前を変えず、その1本を育てて構いません。まだ無い場合はTerminalで次を実行し、生成した<code>F02StampRelease</code>を<code>File &gt; Open Folder…</code>で開きます。同名フォルダへ上書きしません。",
+      "translation": "In Visual Studio Code, open the folder of your own stamp board. If you already made it as <code>F01StampBoard</code>, keep the name and keep building that one project. If you do not have one yet, run the following in the Terminal and open the generated <code>F02StampRelease</code> with <code>File &gt; Open Folder…</code>. Do not overwrite an existing folder with the same name."
+    },
+    {
+      "source": "SDKはFlutter 3.47.5 / Dart 3.13.4です。不足分は<a1>共通の準備資料</a1>を授業中に確認します。既存のiOSランタイムを使い、<code>flutter upgrade</code>はしません。",
+      "translation": "The SDK is Flutter 3.47.5 / Dart 3.13.4. If anything is missing, check the <a1>shared guide</a1> during class. Use the iOS runtime you already have, and do not run <code>flutter upgrade</code>."
+    },
+    {
+      "source": "<code>lib/main.dart</code>を下の開始コードへそろえます。自分が変えた文字・色は先に控えます。<code>pubspec.yaml</code>の<code>dependencies</code>側のFlutter SDKは残し、<code>dev_dependencies</code>側に<code>flutter_test</code>のひな形がある場合はそのブロックだけ除きます。<code>test/</code>のひな形も生成されていた場合だけ除き、<code>flutter_lints</code>は残します。",
+      "translation": "Make <code>lib/main.dart</code> match the starting code below. First, note down any text or colors you changed yourself. Keep the Flutter SDK entry on the <code>dependencies</code> side of <code>pubspec.yaml</code>. If the <code>dev_dependencies</code> side has the <code>flutter_test</code> template, remove only that block. Also remove the <code>test/</code> template only if it was generated, and keep <code>flutter_lints</code>."
+    },
+    {
+      "source": "<code>Terminal &gt; New Terminal</code>で<code>flutter pub get</code>を実行し、<code>Flutter: Launch Emulator</code>で既存のiOSシミュレータを起動します。<code>flutter devices</code>でIDを読み、<code>flutter run -d 端末ID</code>で実行します。端末IDは表示された値へ置き換えます。",
+      "translation": "Run <code>flutter pub get</code> from <code>Terminal &gt; New Terminal</code>, and start your existing iOS simulator with <code>Flutter: Launch Emulator</code>. Read the ID with <code>flutter devices</code>, then run with <code>flutter run -d 端末ID</code> (端末ID = device ID). Replace 端末ID with the value shown."
+    },
+    {
+      "source": "コードを保存したら、<code>flutter run</code>が動いているターミナルで小文字の<code>r</code>を押すとホットリロードし、現在の<code>State</code>を保って画面を更新します。初期値や<code>initState</code>からやり直す場合は、大文字の<code>R</code>（<code>Shift + R</code>）でホットリスタートします。<code>q</code>は実行の終了です。以後、再起動による確認では<code>R</code>を使い、保存が未実装の段階では入力した習慣や回数が消えることも確かめます。",
+      "translation": "After you save the code, press lowercase <code>r</code> in the terminal where <code>flutter run</code> is running to hot reload: the screen updates while the current <code>State</code> is kept. To start again from the initial values and <code>initState</code>, hot restart with uppercase <code>R</code> (<code>Shift + R</code>). <code>q</code> quits the run. From here on, use <code>R</code> when you check by restarting, and also confirm that, while saving is not implemented yet, the habits and counts you entered disappear."
+    },
+    {
+      "source": "開始コード",
+      "translation": "Starting code"
+    },
+    {
+      "source": "役割",
+      "translation": "Role"
+    },
+    {
+      "source": "<code>runApp</code>から<code>MaterialApp</code>を起動し、<code>ThemeData</code>と最初の画面を指定。",
+      "translation": "Starts <code>MaterialApp</code> from <code>runApp</code>, and sets <code>ThemeData</code> and the first screen."
+    },
+    {
+      "source": "名前・理由・回数を保持。<code>required</code>は必須の名前付き引数、<code>final</code>は再代入しないフィールド。",
+      "translation": "Holds the name, reason, and count. <code>required</code> marks a required named argument; <code>final</code> marks a field that is never reassigned."
+    },
+    {
+      "source": "<code>StampBoardPage</code>の<code>State</code>",
+      "translation": "<code>State</code> of <code>StampBoardPage</code>"
+    },
+    {
+      "source": "<code>habits</code>を保持し、<code>setState</code>で回数の変更を通知。<code>build</code>が値から一覧・合計を作る。",
+      "translation": "Holds <code>habits</code> and notifies count changes with <code>setState</code>. <code>build</code> creates the list and the total from the values."
+    },
+    {
+      "source": "<code>count</code>を受け取り、<code>for</code>と条件演算子でマークを並べる表示専用Widget。",
+      "translation": "A display-only widget that receives <code>count</code> and lines up the marks with <code>for</code> and the conditional operator."
+    },
+    {
+      "source": "選んだ<code>Habit</code>を<code>HabitDetailPage</code>へ渡し、戻った後も一覧を保持。",
+      "translation": "Passes the selected <code>Habit</code> to <code>HabitDetailPage</code>, and keeps the list after returning."
+    },
+    {
+      "source": "<code>child</code>は1部品、<code>children</code>は部品のリストです。<code>Column</code>／<code>Row</code>で縦横、<code>ListView</code>でスクロール、<code>Wrap</code>で折り返しを指定します。<code>$</code>と波括弧は文字列補間、<code>() =&gt;</code>はコールバックの1式を返す書き方です。全件の一覧・詳細、0〜5の増減を確認します。再起動で0へ戻るのは、この段階では保存していないためです。",
+      "translation": "<code>child</code> is one widget; <code>children</code> is a list of widgets. <code>Column</code> / <code>Row</code> lay out vertically and horizontally, <code>ListView</code> scrolls, and <code>Wrap</code> wraps to the next line. <code>$</code> with curly braces is string interpolation, and <code>() =&gt;</code> is the way to write a callback that returns one expression. Check the list and detail of all items, and increasing and decreasing between 0 and 5. The counts return to 0 on restart because nothing is saved at this stage."
+    },
+    {
+      "source": "Javaでモデルと<code>View</code>を更新する目的に対し、Flutterでは<code>setState</code>で値の変更を通知し、その値からWidgetを返します。遷移はSwiftのNavigation Controllerと同じく画面を積み、引数でデータを渡します。",
+      "translation": "Where in Java you update the model and the <code>View</code>, in Flutter you notify the value change with <code>setState</code> and return widgets from that value. Navigation stacks screens and passes data through arguments, just like the Navigation Controller in Swift."
+    },
+    {
+      "source": "このSTEPの全コード（照合・合流用）",
+      "translation": "Full code for this STEP (to compare with yours, or to join from here)"
+    },
+    {
+      "source": "lib/main.dart · 全文",
+      "translation": "lib/main.dart · full file"
+    },
+    {
+      "source": "自分のプロジェクトで一覧・スタンプ・詳細の開始状態を確認できた。",
+      "translation": "The starting state of the list, stamps, and detail screen has been checked in your own project."
+    },
+    {
+      "source": "STEP 01 · コマ12",
+      "translation": "STEP 01 · Session 12"
+    },
+    {
+      "source": "習慣を入力する画面を作る",
+      "translation": "Create a screen for entering a habit"
+    },
+    {
+      "source": "一覧へ習慣を追加ボタン、移動先に<code>AddHabitPage</code>を置きます。入力内容とメッセージが変わるため、入力画面は<code>StatefulWidget</code>です。まだ追加処理を使わず、ボタンは無効にしておきます。",
+      "translation": "Put a 「習慣を追加」 (Add habit) button on the list screen, and <code>AddHabitPage</code> as its destination. The input screen is a <code>StatefulWidget</code>, because the input and the message change. Do not use the add process yet; keep the add button on the input screen disabled."
+    },
+    {
+      "source": "<code>TextField</code>へ<code>TextEditingController</code>を渡すと、入力値を<code>controller.text</code>から読めます。コントローラは<code>build</code>のたびに作らず<code>State</code>のフィールドに置き、画面が破棄される<code>dispose</code>で各<code>controller.dispose</code>を呼び、最後に<code>super.dispose</code>を呼びます。",
+      "translation": "When you pass a <code>TextEditingController</code> to a <code>TextField</code>, you can read the entered value from <code>controller.text</code>. Do not create the controllers on every <code>build</code>; keep them as fields of the <code>State</code>. In <code>dispose</code>, which runs when the screen is destroyed, call each <code>controller.dispose</code>, and call <code>super.dispose</code> last."
+    },
+    {
+      "source": "名前は<code>maxLength: 40</code>、理由は200文字。<code>InputDecoration</code>の<code>labelText</code>は欄の名前、<code>hintText</code>は入力例、<code>OutlineInputBorder</code>は枠です。理由は<code>minLines: 3</code>、<code>maxLines: 5</code>で複数行にします。<code>body</code>を<code>ListView</code>にして、キーボードで表示領域が狭くても下へ動かせる形にします。",
+      "translation": "The name uses <code>maxLength: 40</code>, and the reason 200 characters. In <code>InputDecoration</code>, <code>labelText</code> is the name of the field, <code>hintText</code> is an input example, and <code>OutlineInputBorder</code> is the frame. Make the reason multi-line with <code>minLines: 3</code> and <code>maxLines: 5</code>. Make <code>body</code> a <code>ListView</code>, so you can scroll down even when the keyboard makes the visible area small."
+    },
+    {
+      "source": "戻るボタンは<code>Navigator.pop</code>で入力画面を閉じます。<code>PopScope</code>の<code>canPop</code>は戻ることを許す指定で、今は<code>true</code>です。保存を入れる段階で、処理中の戻る操作を制御するために使います。入力して戻り、再び開くと新しい<code>State</code>で欄が空になることを確認します。",
+      "translation": "The back button closes the input screen with <code>Navigator.pop</code>. <code>canPop</code> of <code>PopScope</code> says whether going back is allowed; for now it is <code>true</code>. When you add saving, you will use it to control the back action while saving is in progress. Enter text, go back, and open the screen again: check that the fields are empty because it is a new <code>State</code>."
+    },
+    {
+      "source": "全コードには、後のSTEPで使う部分も先に入れてあります。空欄を確かめて<code>message</code>へ文を入れる<code>submit</code>はSTEP 02で、入力画面から一覧へ習慣を渡す<code>onSave</code>と、渡された習慣を一覧へ加える<code>addHabit</code>はSTEP 03で使います。<code>onSave</code>は<code>AddHabitPage</code>の必須の名前付き引数なので、一覧の<code>openAdd</code>は今から<code>addHabit</code>を渡します。追加するボタンの<code>onPressed</code>が<code>null</code>なので、このSTEPではどれも呼ばれません。<code>TextField</code>の<code>enabled: true</code>は入力を受け付ける指定です。<code>canPop</code>と同じく今は<code>true</code>で、保存を入れる段階で、保存中の入力を止めるために使います。",
+      "translation": "The full code already includes parts used in later STEPs. <code>submit</code>, which checks for empty fields and puts a sentence into <code>message</code>, is used in STEP 02. <code>onSave</code>, which passes the habit from the input screen to the list, and <code>addHabit</code>, which adds the passed habit to the list, are used in STEP 03. Because <code>onSave</code> is a required named argument of <code>AddHabitPage</code>, <code>openAdd</code> in the list passes <code>addHabit</code> from now on. The <code>onPressed</code> of the 「追加する」 (Add) button is <code>null</code>, so none of them is called in this STEP. <code>enabled: true</code> of <code>TextField</code> means the field accepts input. Like <code>canPop</code>, it is <code>true</code> for now; when you add saving, you will use it to stop input while saving."
+    },
+    {
+      "source": "Androidの<code>EditText</code>やiOSの<code>UITextField</code>から文字を読む場面に対応します。Flutterでは<code>controller</code>を<code>State</code>に保持し、画面が終わるときに解放します。入力欄を開き直しても残したい場合は別の場所へ保存が必要ですが、まだ行いません。",
+      "translation": "This corresponds to reading text from an <code>EditText</code> on Android or a <code>UITextField</code> on iOS. In Flutter, you keep the <code>controller</code> in the <code>State</code> and release it when the screen ends. If you want the input to remain when the fields are opened again, you need to save it somewhere else, but not yet."
+    },
+    {
+      "source": "2つの入力欄を開いて入力し、戻ることができた。",
+      "translation": "The two input fields have been opened and filled in, and you have gone back to the list."
+    },
+    {
+      "source": "STEP 02 · コマ12",
+      "translation": "STEP 02 · Session 12"
+    },
+    {
+      "source": "空欄を確かめる",
+      "translation": "Check for empty fields"
+    },
+    {
+      "source": "追加ボタンの<code>onPressed</code>へ<code>submit</code>を渡します。括弧を付けた<code>submit()</code>の実行結果ではなく、押したときに呼ぶ関数を渡します。",
+      "translation": "Pass <code>submit</code> to the <code>onPressed</code> of the add button. Pass the function to call when the button is pressed, not the result of running <code>submit()</code> with parentheses."
+    },
+    {
+      "source": "<code>submit</code>では2つの<code>controller.text</code>を<code>trim</code>して前後の空白を除き、どちらかの<code>isEmpty</code>が<code>true</code>ならメッセージを表示して<code>return</code>します。今回は入力を確認しましたという文までで、一覧への追加は次のSTEPです。",
+      "translation": "In <code>submit</code>, <code>trim</code> the two <code>controller.text</code> values to remove leading and trailing spaces. If either <code>isEmpty</code> is <code>true</code>, show a message and <code>return</code>. This time we stop at the 「入力を確認しました」 (Input confirmed) message; adding to the list is the next STEP."
+    },
+    {
+      "source": "両方を空にして追加するを押します。",
+      "translation": "Leave both fields empty and press 「追加する」 (Add)."
+    },
+    {
+      "source": "名前を空白だけにして、理由だけ入力して押します。",
+      "translation": "Enter only spaces for the name, enter only the reason, and press it."
+    },
+    {
+      "source": "両方を入力し、確認の文と名前が表示されることを確かめます。",
+      "translation": "Enter both, and check that the confirmation message and the name are shown."
+    },
+    {
+      "source": "エラーのたびに欄を消さず、直して再試行できるようにします。理由に改行を入れ、入力が保持されることも見ます。",
+      "translation": "Do not clear the fields on each error; let the user fix the input and try again. Also put a line break in the reason and check that the input is kept."
+    },
+    {
+      "source": "<code>trim</code>と空欄の判定はJavaの入力検証に対応します。Dartの<code>isEmpty</code>はプロパティとして読みます。結果はダイアログではなく同じ画面の<code>Text</code>へ出し、<code>setState</code>で変更を通知します。",
+      "translation": "<code>trim</code> and the empty check correspond to input validation in Java. In Dart, <code>isEmpty</code> is read as a property. The result goes into a <code>Text</code> on the same screen, not a dialog, and <code>setState</code> notifies the change."
+    },
+    {
+      "source": "空欄・空白だけ・正常入力の違いを確認できた。",
+      "translation": "The difference between empty, spaces-only, and valid input has been checked."
+    },
+    {
+      "source": "STEP 03 · コマ12",
+      "translation": "STEP 03 · Session 12"
+    },
+    {
+      "source": "習慣を追加して戻る",
+      "translation": "Add the habit and go back"
+    },
+    {
+      "source": "入力確認後に<code>Habit</code>を作り、<code>widget.onSave</code>へ渡します。<code>onSave</code>は親が入力画面へ渡した関数で、この段階は<code>void Function(Habit)</code>型です。「<code>Habit</code>を受け取り、結果の値を返さない処理」という意味です。",
+      "translation": "After checking the input, create a <code>Habit</code> and pass it to <code>widget.onSave</code>. <code>onSave</code> is the function the parent passed to the input screen; at this stage its type is <code>void Function(Habit)</code>. It means \"a process that receives a <code>Habit</code> and returns no result value\"."
+    },
+    {
+      "source": "親の<code>addHabit</code>では<code>setState</code>の中で<code>habits.add</code>を呼びます。入力画面は<code>Navigator.pop</code>で閉じ、下に残っている一覧を表示します。<code>widget</code>はこの<code>State</code>に対応する<code>AddHabitPage</code>の設定を読むためのプロパティです。",
+      "translation": "In the parent's <code>addHabit</code>, call <code>habits.add</code> inside <code>setState</code>. Close the input screen with <code>Navigator.pop</code>, which shows the list that remained underneath. <code>widget</code> is the property for reading the settings of the <code>AddHabitPage</code> that this <code>State</code> belongs to."
+    },
+    {
+      "source": "1件追加し、一覧が4件になったことを確認します。",
+      "translation": "Add one habit and check that the list now has 4 items."
+    },
+    {
+      "source": "追加したカードの「詳しく見る」を押し、名前と理由が詳細に一致するか確認します。",
+      "translation": "Press 「詳しく見る」 (See details) on the added card, and check that the name and reason match in the detail screen."
+    },
+    {
+      "source": "スタンプを押し、一覧・詳細の回数を確かめます。",
+      "translation": "Press 「スタンプを押す」 (Add a stamp) and check the count on the list and detail screens."
+    },
+    {
+      "source": "ホットリスタートし、追加した習慣が消えて初期3件へ戻ることを確認します。",
+      "translation": "Hot restart, and check that the added habit disappears and the initial 3 items return."
+    },
+    {
+      "source": "ソースを書き換えたのではなく実行中の<code>List</code>へ加えただけなので、再起動で消えるのはこのSTEPの正常動作です。",
+      "translation": "You did not change the source; you only added to the running <code>List</code>. So disappearing on restart is the correct behavior in this STEP."
+    },
+    {
+      "source": "Swiftのクロージャを画面へ渡す方法と対応します。Dartでは<code>Function</code>の前後で引数と戻り値の型を示します。親の<code>State</code>だけが一覧を持つため、入力画面へ別の一覧を重複して作りません。",
+      "translation": "This corresponds to passing a closure to a screen in Swift. In Dart, the argument and return types are written before and after <code>Function</code>. Only the parent's <code>State</code> holds the list, so do not create a duplicate list in the input screen."
+    },
+    {
+      "source": "追加した習慣を一覧・詳細で読め、再起動では消えることを説明できた。",
+      "translation": "The added habit can be read in the list and detail screens, and you can explain why it disappears on restart."
+    },
+    {
+      "source": "STEP 04 · コマ12",
+      "translation": "STEP 04 · Session 12"
+    },
+    {
+      "source": "入力の題材をアレンジする",
+      "translation": "Customize the input topic"
+    },
+    {
+      "source": "名前と理由の入力例、見出し、カードの初期データを自分の題材へ変えます。個人的な体験を開示する必要はなく、架空の習慣でも構いません。",
+      "translation": "Change the input examples for the name and reason, the headings, and the initial card data to your own topic. You do not need to reveal personal experiences; made-up habits are fine."
+    },
+    {
+      "source": "場所",
+      "translation": "Place"
+    },
+    {
+      "source": "変わること",
+      "translation": "What changes"
+    },
+    {
+      "source": "<code>InputDecoration</code>の<code>hintText</code>",
+      "translation": "<code>hintText</code> of <code>InputDecoration</code>"
+    },
+    {
+      "source": "入力前の記入例。",
+      "translation": "The example shown before input."
+    },
+    {
+      "source": "見出しの<code>Text</code>・余白",
+      "translation": "The heading <code>Text</code> and spacing"
+    },
+    {
+      "source": "何を入力するかの伝わり方と読みやすさ。",
+      "translation": "How clearly it tells what to enter, and readability."
+    },
+    {
+      "source": "<code>habits</code>の初期<code>Habit</code>",
+      "translation": "The initial <code>Habit</code> items in <code>habits</code>"
+    },
+    {
+      "source": "再起動したときの最初の習慣。",
+      "translation": "The first habits shown after a restart."
+    },
+    {
+      "source": "初期データはホットリスタートで確かめます。追加・空欄・詳細・戻るも試し、どこを変えたか控えて終えます。",
+      "translation": "Check the initial data with a hot restart. Also try adding, empty fields, the detail screen, and going back, then note down what you changed and finish."
+    },
+    {
+      "source": "HTMLの<code>placeholder</code>と同じ役割を<code>hintText</code>が持ちます。入力済みデータとソースの記入例の違いを、再起動時の表示で確認します。",
+      "translation": "<code>hintText</code> plays the same role as <code>placeholder</code> in HTML. Check the difference between the entered data and the example in the source by what is shown after a restart."
+    },
+    {
+      "source": "入力例と題材をアレンジし、動作が続いていることを確かめた。",
+      "translation": "The input examples and the topic have been customized, and the app still works."
+    },
+    {
+      "source": "STEP 05 · コマ13",
+      "translation": "STEP 05 · Session 13"
+    },
+    {
+      "source": "完了を待つ処理を読む",
+      "translation": "Read code that waits for completion"
+    },
+    {
+      "source": "このコマの開始コード",
+      "translation": "Starting code for this session"
+    },
+    {
+      "source": "途中から合流する場合は、自分が変えた文字・色・数値を控えてから<code>lib/main.dart</code>をそろえます。",
+      "translation": "If you are joining partway through, note the text, colors, and numbers you changed, then match <code>lib/main.dart</code> to this code."
+    },
+    {
+      "source": "Visual Studio Codeで同じスタンプ帳を開きます。開始状態は「入力で追加できるが、再起動で消える」です。今日は記録を端末へ残します。",
+      "translation": "Open the same stamp board in Visual Studio Code. The starting state is \"you can add by input, but it disappears on restart\". Today, you will keep the records on the device."
+    },
+    {
+      "source": "この単元の新概念は<strong>非同期処理と、その完了を待つ<code>async</code> / <code>await</code></strong>です。Dartの<code>Future</code>は、後で完了する処理の結果を表します。<code>Future&lt;bool&gt;</code>なら、完了後に<code>true</code>か<code>false</code>を受け取る形です。",
+      "translation": "The new concept in this unit is <strong>asynchronous processing (非同期処理), and <code>async</code> / <code>await</code>, which wait for it to complete</strong>. A <code>Future</code> in Dart represents the result of a process that completes later. With <code>Future&lt;bool&gt;</code>, you receive <code>true</code> or <code>false</code> after it completes."
+    },
+    {
+      "source": "<code>async</code>を付けた関数の中では<code>await</code>が使えます。<code>await</code>では、その処理の完了後に続きへ進みます。画面全体を同期的に止めて待つのではなく、待っている間も画面を表示できます。保存の完了前に「保存した」と表示したり、入力を消したりしない順番を作ります。",
+      "translation": "Inside a function marked <code>async</code>, you can use <code>await</code>. At <code>await</code>, the code continues after that process completes. Instead of stopping the whole screen synchronously to wait, the screen can still be shown while waiting. You will build an order that does not show \"saved\" or clear the input before saving is complete."
+    },
+    {
+      "source": "次は流れを読む抜粋で、このSTEPではまだ追加しません。次のSTEPでパッケージと全コードをそろえます。",
+      "translation": "The following is an excerpt for reading the flow; do not add it yet in this STEP. In the next STEP, you will add the package and the full code."
+    },
+    {
+      "source": "Javaの同期的な戻り値と比較し、今回は<code>Future</code>の完了を待って結果を得る点を新しく扱います。Java／Swiftの非同期APIを履修済みとは仮定しません。既知の順次処理から「完了後の続き」と「待機中の画面」を区別します。",
+      "translation": "Compared with a synchronous return value in Java, what is new here is waiting for the <code>Future</code> to complete to get the result. We do not assume you have learned the asynchronous APIs of Java / Swift. Starting from the sequential processing you already know, distinguish \"what continues after completion\" from \"the screen while waiting\"."
+    },
+    {
+      "source": "<code>Future</code>・<code>async</code>・<code>await</code>の役割と、保存後に進む順序を説明できた。",
+      "translation": "You can explain the roles of <code>Future</code>, <code>async</code>, and <code>await</code>, and the order of steps after saving."
+    },
+    {
+      "source": "STEP 06 · コマ13",
+      "translation": "STEP 06 · Session 13"
+    },
+    {
+      "source": "文字列リストへ保存する",
+      "translation": "Save to a string list"
+    },
+    {
+      "source": "まず<code>pubspec.yaml</code>の<code>dependencies</code>へ<code>shared_preferences: 2.5.5</code>を加えます。<code>dependencies</code>は既にあるので二重に作らず、Flutter SDKと同じ字下げで追加します。ほかの設定は残します。",
+      "translation": "First, add <code>shared_preferences: 2.5.5</code> to <code>dependencies</code> in <code>pubspec.yaml</code>. <code>dependencies</code> already exists, so do not create it twice; add the line with the same indentation as the Flutter SDK. Keep the other settings."
+    },
+    {
+      "source": "実行中のアプリを<code>q</code>で終了し、<code>flutter pub get</code>を実行します。新しいネイティブプラグインを加えたのでホットリロードだけで済ませず、全コードを更新して<code>flutter run -d 端末ID</code>で起動し直します。",
+      "translation": "Quit the running app with <code>q</code> and run <code>flutter pub get</code>. Because you added a new native plugin, do not rely on hot reload alone: update the full code and start again with <code>flutter run -d 端末ID</code> (端末ID = device ID)."
+    },
+    {
+      "source": "起動し直さずに<code>r</code>で反映すると、ターミナルにはエラーが出ませんが、スタンプを押しても習慣を追加しても「保存できませんでした。」で始まる文が出るだけで、保存できません。続けて<code>R</code>を押すと、画面全体が赤くなり<code>Bad state: The SharedPreferencesAsyncPlatform instance must be set.</code>と出ます。<code>r</code>と<code>R</code>はDartのコードを入れ替えるだけで、アプリのビルドをやり直しません。新しいプラグインは、ビルドし直したアプリにだけ組み込まれます。そのときは<code>q</code>で終了し、<code>flutter run -d 端末ID</code>で起動し直します。",
+      "translation": "If you apply the change with <code>r</code> without restarting, the terminal shows no error, but adding a stamp or adding a habit only shows a message that starts with 「保存できませんでした。」 (Could not save.), and nothing is saved. If you then press <code>R</code>, the whole screen turns red and shows <code>Bad state: The SharedPreferencesAsyncPlatform instance must be set.</code>. <code>r</code> and <code>R</code> only swap the Dart code; they do not rebuild the app. A new plugin is only included in a rebuilt app. In that case, quit with <code>q</code> and start again with <code>flutter run -d 端末ID</code> (端末ID = device ID)."
+    },
+    {
+      "source": "<code>import</code>でパッケージを読み込み、<code>State</code>に<code>SharedPreferencesAsync</code>を1つ持ちます。保存キー<code>storageKey</code>も1か所です。このAPIだけを使い、旧APIやキャッシュ付きAPIを混ぜません。",
+      "translation": "Load the package with <code>import</code>, and keep one <code>SharedPreferencesAsync</code> in the <code>State</code>. The storage key <code>storageKey</code> is also in one place. Use only this API; do not mix in the old API or the API with a cache."
+    },
+    {
+      "source": "名前・理由・回数を文字列リストにして保存します。1件は3要素で、2件なら6要素です。回数は<code>count.toString()</code>で文字列へ変えます。JSONは使いません。",
+      "translation": "Save the name, reason, and count as a string list. One item is 3 elements, so 2 items are 6 elements. Convert the count to a string with <code>count.toString()</code>. JSON is not used."
+    },
+    {
+      "source": "リストの位置",
+      "translation": "List position"
+    },
+    {
+      "source": "例",
+      "translation": "Example"
+    },
+    {
+      "source": "コードを15分読む / 理由の文 / 1",
+      "translation": "コードを15分読む (Read code for 15 minutes) / the reason text / 1"
+    },
+    {
+      "source": "外を10分歩く / 理由の文 / 0",
+      "translation": "外を10分歩く (Walk outside for 10 minutes) / the reason text / 0"
+    },
+    {
+      "source": "<code>saveHabits</code>は<code>await</code>で<code>setStringList</code>を待ち、成功してから<code>habits</code>を<code>nextHabits</code>へ更新します。<code>changeStamp</code>は新しい<code>Habit</code>を作り、表示中のオブジェクトを先に変更しません。追加は<code>List.of</code>で配列を複製して末尾へ加えます。既存の<code>Habit</code>の内容を書き換えない追加だけなら、リストのコピーで足ります。",
+      "translation": "<code>saveHabits</code> waits for <code>setStringList</code> with <code>await</code>, and only after success updates <code>habits</code> to <code>nextHabits</code>. <code>changeStamp</code> creates a new <code>Habit</code>; it does not change the displayed object first. Adding copies the array with <code>List.of</code> and appends to the end. If you only add, without rewriting the contents of existing <code>Habit</code> objects, a copy of the list is enough."
+    },
+    {
+      "source": "<code>isSaving</code>を<code>true</code>にしてボタンと入力欄を無効にし、待機中の文と<code>LinearProgressIndicator</code>を表示します。例外は<code>try</code> / <code>catch</code>で受け、失敗時は元の一覧を保ちます。<code>finally</code>は成功・失敗どちらでも待機状態を戻す場所です。",
+      "translation": "Set <code>isSaving</code> to <code>true</code> to disable the buttons and input fields, and show the waiting message and a <code>LinearProgressIndicator</code>. Catch exceptions with <code>try</code> / <code>catch</code>, and keep the original list on failure. <code>finally</code> is where the waiting state is turned off, on both success and failure."
+    },
+    {
+      "source": "<code>onSave</code>の型は<code>Future&lt;bool&gt; Function(Habit)</code>へ変わり、入力画面の<code>submit</code>も<code>async</code>になります。<code>await</code>で親の保存を待ち、成功したときだけ<code>pop</code>します。失敗なら入力を消しません。<code>await</code>の後は<code>mounted</code>を確認し、既に破棄された<code>State</code>へ<code>setState</code>や画面遷移を行わないようにします。保存中は戻るボタンと<code>PopScope</code>の<code>canPop</code>も無効にします。",
+      "translation": "The type of <code>onSave</code> changes to <code>Future&lt;bool&gt; Function(Habit)</code>, and <code>submit</code> in the input screen also becomes <code>async</code>. Wait for the parent's save with <code>await</code>, and <code>pop</code> only on success. On failure, do not clear the input. After <code>await</code>, check <code>mounted</code> so that you do not call <code>setState</code> or navigate on a <code>State</code> that has already been destroyed. While saving, also disable the back button and <code>canPop</code> of <code>PopScope</code>."
+    },
+    {
+      "source": "1件追加して「この端末に保存しました。」を確認します。このSTEPは保存だけで、起動時に読む処理はまだありません。再起動すると初期3件を表示する段階です。再起動した後の初期3件の画面でスタンプを押すか習慣を追加すると、保存内容は表示中の一覧で置き換わり、再起動の前に保存した習慣や回数は残りません。保存した内容をまだ読み込んでいない一覧を、そのまま保存するためです。次のSTEPで読み込めるのは、最後に保存した内容です。",
+      "translation": "Add one item and check 「この端末に保存しました。」 (Saved on this device.). This STEP only saves; there is no loading at startup yet. At this stage, a restart shows the initial 3 items. If you add a stamp or add a habit on that initial 3-item screen after the restart, the saved content is replaced by the list being shown, and the habits and counts saved before the restart are lost. This is because the list, which has not loaded the saved content yet, is saved as it is. What you can load in the next STEP is the content saved last."
+    },
+    {
+      "source": "キーを指定して少量のデータを端末内へ置く目的は<code>UserDefaults</code>やAndroidの<code>SharedPreferences</code>に対応します。Flutter側は<code>Future</code>の完了を<code>await</code>で待ちます。<code>try</code> / <code>catch</code> / <code>finally</code>はJavaの例外処理と同じ役割で、画面を更新する順序を保存の成功後へそろえます。",
+      "translation": "Putting a small amount of data on the device under a key corresponds to <code>UserDefaults</code> or <code>SharedPreferences</code> on Android. On the Flutter side, you wait for the <code>Future</code> to complete with <code>await</code>. <code>try</code> / <code>catch</code> / <code>finally</code> play the same role as exception handling in Java, and they line up the order so that the screen is updated after the save succeeds."
+    },
+    {
+      "source": "保存成功の文を確認し、失敗時に元の状態を保つ順序を説明できた。",
+      "translation": "The save-success message has been checked, and you can explain the order that keeps the original state on failure."
+    },
+    {
+      "source": "STEP 07 · コマ13",
+      "translation": "STEP 07 · Session 13"
+    },
+    {
+      "source": "起動時に記録を復元する",
+      "translation": "Restore the records at startup"
+    },
+    {
+      "source": "起動時の<code>initState</code>から<code>loadHabits</code>を呼びます。<code>initState</code>自体を<code>async</code>にはせず、別の<code>async</code>関数へ処理を分けます。読込中は<code>isLoading</code>を<code>true</code>、<code>canSave</code>を<code>false</code>にし、初期値で保存内容を上書きしないようにします。",
+      "translation": "Call <code>loadHabits</code> from <code>initState</code> at startup. Do not make <code>initState</code> itself <code>async</code>; move the work into a separate <code>async</code> function. While loading, set <code>isLoading</code> to <code>true</code> and <code>canSave</code> to <code>false</code>, so that the initial values do not overwrite the saved content."
+    },
+    {
+      "source": "<code>await preferences.getStringList(storageKey)</code>は未保存なら<code>null</code>です。その場合だけ<code>createInitialHabits</code>を使います。値があれば<code>decodeHabits</code>で3要素ずつ<code>Habit</code>へ戻します。空リストは正しい0件なので、初期3件へ勝手に置き換えません。",
+      "translation": "<code>await preferences.getStringList(storageKey)</code> is <code>null</code> when nothing has been saved. Only in that case, use <code>createInitialHabits</code>. If there is a value, <code>decodeHabits</code> turns every 3 elements back into a <code>Habit</code>. An empty list is a valid 0 items, so do not silently replace it with the initial 3 items."
+    },
+    {
+      "source": "要素数が3の倍数か、余りを求める%で確認します。",
+      "translation": "Check that the number of elements is a multiple of 3, using %, which gives the remainder."
+    },
+    {
+      "source": "名前と理由を読み、空白だけでないか確認します。",
+      "translation": "Read the name and reason, and check that they are not only spaces."
+    },
+    {
+      "source": "<code>int.tryParse</code>で回数を<code>int</code>へ戻します。変換できなければ<code>null</code>なので、0〜<code>stampGoal</code>の範囲と一緒に確認します。",
+      "translation": "Turn the count back into an <code>int</code> with <code>int.tryParse</code>. If it cannot be converted, the result is <code>null</code>, so check that together with the range 0 to <code>stampGoal</code>."
+    },
+    {
+      "source": "異常なら<code>FormatException</code>を投げます。<code>catch</code>で文を表示し、<code>canSave</code>を<code>false</code>のままにします。",
+      "translation": "If anything is wrong, throw a <code>FormatException</code>. Show a message in <code>catch</code>, and leave <code>canSave</code> as <code>false</code>."
+    },
+    {
+      "source": "不正な保存内容を「未保存」とは扱いません。元の保存キーへ自動で書き込まず、再読み込みと教員への確認を案内します。次のSTEPで本人が選ぶ初期化を作ります。",
+      "translation": "Invalid saved content is not treated as \"unsaved\". Do not write to the original storage key automatically; instead, guide the user to reload and to check with the teacher. In the next STEP, you will build a reset that the user chooses themselves."
+    },
+    {
+      "source": "新しい習慣を追加し、何回かスタンプを押します。",
+      "translation": "Add a new habit and add a stamp to it a few times."
+    },
+    {
+      "source": "アプリを終了して再起動するか、開発中はホットリスタートします。",
+      "translation": "Quit the app and start it again, or hot restart during development."
+    },
+    {
+      "source": "「保存した記録を読み込みました。」、追加した習慣、回数、詳細の理由を確認します。",
+      "translation": "Check 「保存した記録を読み込みました。」 (Loaded the saved records.), the added habit, the counts, and the reason in the detail screen."
+    },
+    {
+      "source": "未保存の<code>null</code>はSwiftの<code>nil</code>に対応します。Androidの<code>onCreate</code>やiOSの<code>viewDidLoad</code>で保存値を画面へ戻す目的と同じですが、今回は<code>initState</code>から非同期処理を呼びます。読めたことと、アプリで扱える値かの確認を分けます。",
+      "translation": "<code>null</code> for unsaved corresponds to <code>nil</code> in Swift. The purpose is the same as restoring saved values to the screen in <code>onCreate</code> on Android or <code>viewDidLoad</code> on iOS, but here the asynchronous process is called from <code>initState</code>. Separate the check that the data could be read from the check that the values are usable in the app."
+    },
+    {
+      "source": "追加した名前・理由・回数が再起動後にも戻った。",
+      "translation": "The added name, reason, and count come back after a restart."
+    },
+    {
+      "source": "STEP 08 · コマ13",
+      "translation": "STEP 08 · Session 13"
+    },
+    {
+      "source": "初期化と失敗時の表示",
+      "translation": "Reset and failure messages"
+    },
+    {
+      "source": "初期化ボタンと<code>resetHabits</code>を加えます。<code>showDialog&lt;bool&gt;</code>が返す<code>Future</code>を<code>await</code>し、やめるなら<code>false</code>、初期化するなら<code>true</code>を<code>Navigator.pop</code>で返します。ダイアログの外側などで閉じた場合は<code>null</code>なので、<code>confirmed != true</code>なら何もしません。",
+      "translation": "Add a reset button and <code>resetHabits</code>. <code>await</code> the <code>Future</code> returned by <code>showDialog&lt;bool&gt;</code>, and return <code>false</code> for 「やめる」 (Cancel) or <code>true</code> for 「初期化する」 (Reset) with <code>Navigator.pop</code>. If the dialog is closed in another way, such as tapping outside it, the result is <code>null</code>, so do nothing when <code>confirmed != true</code>."
+    },
+    {
+      "source": "削除するのは<code>preferences.remove(storageKey)</code>で指定したキー1個だけです。保存領域全体の<code>clear</code>は使いません。削除に成功してから初期の<code>Habit</code>配列へ戻し、保存を再び有効にします。削除に失敗したら元の一覧とエラーの文を残します。",
+      "translation": "Only the one key given to <code>preferences.remove(storageKey)</code> is deleted. <code>clear</code>, which empties the whole storage area, is not used. Only after the deletion succeeds, return to the initial <code>Habit</code> array and enable saving again. If the deletion fails, keep the original list and the error message."
+    },
+    {
+      "source": "自分が残す必要のない検証用の記録で、初期化を開いてやめるを押します。記録が残ることを確認します。",
+      "translation": "With test records you do not need to keep, open the reset dialog and press 「やめる」 (Cancel). Check that the records remain."
+    },
+    {
+      "source": "必要な内容は別に控えてから、もう一度開いて初期化するを押します。",
+      "translation": "After noting down anything you need, open it again and press 「初期化する」 (Reset)."
+    },
+    {
+      "source": "初期3件・回数0へ戻り、再起動しても初期値になることを確認します。",
+      "translation": "Check that it returns to the initial 3 items with count 0, and that the initial values remain after a restart."
+    },
+    {
+      "source": "通常の操作で保存・読込に失敗したら、表示された文を先生と確認します。学生の作品へ障害を起こすコードを入れる作業は行いません。",
+      "translation": "If saving or loading fails during normal use, check the displayed message with your teacher. We do not add code that deliberately causes failures in a student's work."
+    },
+    {
+      "source": "キー単位の削除は<code>UserDefaults</code>の<code>removeObject</code>や<code>SharedPreferences.Editor.remove</code>に対応します。今回は確認画面の返答も非同期に待ち、<code>true</code>のときだけ進みます。取消しや画面を閉じた場合と、削除の確定を区別します。",
+      "translation": "Deleting by key corresponds to <code>removeObject</code> of <code>UserDefaults</code> or <code>SharedPreferences.Editor.remove</code>. Here, the answer from the confirmation dialog is also awaited asynchronously, and the code continues only when it is <code>true</code>. Cancelling or closing the dialog is distinguished from confirming the deletion."
+    },
+    {
+      "source": "取消しでは記録が残り、確定後だけ初期の習慣へ戻った。",
+      "translation": "The records remain when the reset is cancelled, and the initial habits come back only after it is confirmed."
+    },
+    {
+      "source": "STEP 09 · コマ13",
+      "translation": "STEP 09 · Session 13"
+    },
+    {
+      "source": "保存を確かめてアレンジする",
+      "translation": "Check saving and customize"
+    },
+    {
+      "source": "入力→保存→詳細→再起動→復元を一続きで確かめます。次に<code>createInitialHabits</code>の名前と理由を自分の題材へ変えます。",
+      "translation": "Check input → save → detail → restart → restore in one sequence. Next, change the names and reasons in <code>createInitialHabits</code> to your own topic."
+    },
+    {
+      "source": "保存済みデータがあるとソースの初期値より優先されます。初期値のアレンジを確かめるときは、残す内容を控えてからアプリ内の初期化を使います。キーを変えて記録を見えなくする方法で済ませません。",
+      "translation": "When saved data exists, it takes priority over the initial values in the source. To check your customized initial values, note down what you want to keep, then use the reset inside the app. Do not just change the key to hide the records."
+    },
+    {
+      "source": "効果",
+      "translation": "Effect"
+    },
+    {
+      "source": "未保存・初期化後に出る題材。",
+      "translation": "The topic shown when nothing is saved and after a reset."
+    },
+    {
+      "source": "見出し、入力例、色、余白",
+      "translation": "Headings, input examples, colors, spacing"
+    },
+    {
+      "source": "使い方の伝わりやすさ。",
+      "translation": "How clearly the usage comes across."
+    },
+    {
+      "source": "このパッケージは少量の設定向けで、重要な記録の永続性を保証するためのデータベースではありません。この授業では習慣の練習用記録を扱い、必要な内容は別に控えます。",
+      "translation": "This package is for small settings; it is not a database that guarantees the persistence of important records. In this class, we handle practice records of habits, and anything you need is noted down separately."
+    },
+    {
+      "source": "既定値と保存済みの値の優先関係はSwiftの設定読込に対応します。今回は保存内容を検証してから表示します。ソースの変更がどの状態で見えるかを確認するのがアレンジの仕上げです。",
+      "translation": "The priority of saved values over default values corresponds to reading settings in Swift. Here, the saved content is validated before it is shown. Checking in which state your source changes become visible is the final part of customizing."
+    },
+    {
+      "source": "自分の題材が初期状態に表れ、保存・復元も引き続き動いた。",
+      "translation": "Your own topic appears in the initial state, and saving and restoring still work."
+    },
+    {
+      "source": "STEP 10 · コマ14",
+      "translation": "STEP 10 · Session 14"
+    },
+    {
+      "source": "Androidで初めて実行する",
+      "translation": "Run on Android for the first time"
+    },
+    {
+      "source": "Visual Studio Codeで保存できるスタンプ帳を開きます。今日はAndroidで初めて実行し、提出するAPKを作ります。初回のSDK・Gradle等の取得も授業時間内に行います。",
+      "translation": "Open the stamp board that can save in Visual Studio Code. Today, you will run it on Android for the first time and build the APK to submit. The first-time download of the SDK, Gradle, and so on is also done during class time."
+    },
+    {
+      "source": "<code>flutter doctor -v</code>で<code>Android toolchain</code>の項目を確認します。不足やライセンスの案内がある場合は先生と内容を確認します。",
+      "translation": "Check the <code>Android toolchain</code> item with <code>flutter doctor -v</code>. If something is missing or a license notice appears, check the content with your teacher."
+    },
+    {
+      "source": "Android Studioの<code>Tools &gt; Device Manager</code>に別科目で使うarm64のエミュレータがあれば利用します。まだ無ければ先生と端末・システムイメージを選び、授業内で取得します。",
+      "translation": "If <code>Tools &gt; Device Manager</code> in Android Studio has an arm64 emulator you use in another course, use it. If not, choose a device and system image with your teacher and download it during class."
+    },
+    {
+      "source": "Visual Studio Codeでプロジェクトを開いた状態から<code>Flutter: Launch Emulator</code>でAndroid端末を起動し、<code>flutter devices</code>でIDを読みます。",
+      "translation": "With the project open in Visual Studio Code, start the Android device with <code>Flutter: Launch Emulator</code>, and read its ID with <code>flutter devices</code>."
+    },
+    {
+      "source": "<code>android/gradle/wrapper/gradle-wrapper.properties</code>の<code>distributionUrl</code>を確認します。今回の空テンプレートはGradle 9.3.1です。<code>all.zip</code>の場合は、版を変えず<code>bin.zip</code>へそろえます。この1行だけを次の形にします。",
+      "translation": "Check <code>distributionUrl</code> in <code>android/gradle/wrapper/gradle-wrapper.properties</code>. The empty template used here is Gradle 9.3.1. If it is <code>all.zip</code>, change it to <code>bin.zip</code> without changing the version. Change only this one line to the following form."
+    },
+    {
+      "source": "教員から同じURLで取得したGradleキャッシュを受け取る場合は、配布された<code>gradle-9.3.1-bin</code>フォルダを<code>~/.gradle/wrapper/dists/</code>の下へ配置します。ハッシュ名の階層、展開済みディレクトリ、.zip.okを保ち、既存の別版を上書きしません。既に同じフォルダがある場合は先生へ確認します。<code>all.zip</code>のキャッシュとは共用できません。",
+      "translation": "If you receive a Gradle cache that the teacher downloaded from the same URL, place the distributed <code>gradle-9.3.1-bin</code> folder under <code>~/.gradle/wrapper/dists/</code>. Keep the hash-named directory level, the extracted directory, and .zip.ok, and do not overwrite an existing cache of another version. If the same folder already exists, check with your teacher. It cannot be shared with an <code>all.zip</code> cache."
+    },
+    {
+      "source": "キャッシュを受け取ってもAndroid SDK・NDK・AGP等の取得が残る場合があります。<code>flutter run -d Android端末ID</code>を実行し、ターミナルの取得状況を見ます。待機時間はコードと提出前チェックの確認に使い、途中で同じビルドを重ねて始めません。",
+      "translation": "Even after receiving the cache, downloads of the Android SDK, NDK, AGP, and so on may remain. Run <code>flutter run -d Android端末ID</code> (Android端末ID = Android device ID) and watch the download progress in the terminal. Use the waiting time to review the code and the pre-submission checks, and do not start the same build again in the middle."
+    },
+    {
+      "source": "同じDartソースからiOS用とAndroid用をビルドしますが、ネイティブ側の道具と依存関係は別です。既に知っているAndroid StudioのSDK・エミュレータを使い、Flutterがビルドと起動をつなぎます。",
+      "translation": "The same Dart source is built for iOS and for Android, but the native tools and dependencies are separate. You use the Android Studio SDK and emulator you already know, and Flutter connects the build and the launch."
+    },
+    {
+      "source": "Androidの端末IDを確認し、初回実行の状況を先生へ伝えられる。",
+      "translation": "The Android device ID has been checked, and you can tell the teacher how the first run went."
+    },
+    {
+      "source": "STEP 11 · コマ14",
+      "translation": "STEP 11 · Session 14"
+    },
+    {
+      "source": "提出形式のAPKを作る",
+      "translation": "Build the APK for submission"
+    },
+    {
+      "source": "Androidで一覧・追加・保存・詳細を確認したら、通常の<code>release</code> APKを作ります。最初にソースを保存し、<code>flutter analyze</code>で指摘がないか確認します。",
+      "translation": "After checking the list, adding, saving, and the detail screen on Android, build the normal <code>release</code> APK. First save the source, and check that <code>flutter analyze</code> reports nothing."
+    },
+    {
+      "source": "<code>flutter build apk</code>は既定で<code>release</code>です。今回は<code>--debug</code>や<code>--split-per-abi</code>を付けません。端末用の通常APKを1ファイルで提出します。署名鍵の作成やストア公開は扱わず、空テンプレートの<code>debug</code>鍵による署名設定を使います。",
+      "translation": "<code>flutter build apk</code> is <code>release</code> by default. This time, do not add <code>--debug</code> or <code>--split-per-abi</code>. Submit the normal APK for devices as one file. Creating a signing key and publishing to a store are not covered; use the signing setup with the <code>debug</code> key from the empty template."
+    },
+    {
+      "source": "成功すると<code>build/app/outputs/flutter-apk/app-release.apk</code>ができます。Finderでファイルの容量と更新日時を確認します。提出先の上限は100MB以上または制限なしですが、各自の最終APKでも容量を確認してください。",
+      "translation": "On success, <code>build/app/outputs/flutter-apk/app-release.apk</code> is created. Check the file size and modification time in Finder. The limit of the submission site is 100MB or more, or there is no limit, but check the size of your own final APK as well."
+    },
+    {
+      "source": "完成見本の実測は約48.7MBでした。この値は見本の結果で、学生の素材や変更後の容量を保証する値ではありません。APKが生成されただけでは提出前の動作確認は終わりません。",
+      "translation": "The measured size of the completed sample was about 48.7MB. This value is the result for the sample; it does not guarantee the size after your own assets and changes. Just generating the APK does not complete the pre-submission check of its behavior."
+    },
+    {
+      "source": "DartソースとAPKは、Androidのソースとビルド成果物の関係と同じです。普段の<code>flutter run</code>は開発用の実行なので、提出する<code>release</code> APKそのものを次のSTEPで確認します。",
+      "translation": "The Dart source and the APK have the same relationship as Android source and its build output. The usual <code>flutter run</code> is a development run, so in the next STEP you check the <code>release</code> APK itself that you will submit."
+    },
+    {
+      "source": "<code>app-release.apk</code>の生成場所・容量・更新日時を確認できた。",
+      "translation": "The location, size, and modification time of the generated <code>app-release.apk</code> have been checked."
+    },
+    {
+      "source": "STEP 12 · コマ14",
+      "translation": "STEP 12 · Session 14"
+    },
+    {
+      "source": "生成したAPKをインストールする",
+      "translation": "Install the generated APK"
+    },
+    {
+      "source": "生成したAPKをそのままAndroidエミュレータへ入れます。先に実行中の<code>flutter run</code>を<code>q</code>で終了し、<code>flutter devices</code>でAndroidのIDを確認します。下のAndroid端末IDは実際のIDに置き換えます。",
+      "translation": "Install the generated APK, as it is, on the Android emulator. First quit the running <code>flutter run</code> with <code>q</code>, and check the Android ID with <code>flutter devices</code>. Replace Android端末ID (Android device ID) below with the actual ID."
+    },
+    {
+      "source": "<code>use-application-binary</code>で指定したファイルを使うため、ここで別のソースを再ビルドする操作ではありません。<code>no-resident</code>は起動後にコマンドを終了する指定で、アプリは端末で操作できます。",
+      "translation": "Because <code>use-application-binary</code> uses the file you specify, this is not an operation that rebuilds a different source. <code>no-resident</code> ends the command after launch, and you can operate the app on the device."
+    },
+    {
+      "source": "初期画面または保存済みの記録が出ることを確認します。",
+      "translation": "Check that the initial screen or the saved records appear."
+    },
+    {
+      "source": "空欄では追加できず、正常入力なら一覧・詳細へ反映されることを確かめます。",
+      "translation": "Check that empty fields cannot be added, and that valid input appears in the list and detail screens."
+    },
+    {
+      "source": "スタンプの上限と1つ戻すを試します。",
+      "translation": "Try the stamp limit and 「1つ戻す」 (Undo one)."
+    },
+    {
+      "source": "Androidのアプリ情報からアプリを停止し、アイコンから起動し直して復元を確認します。バックグラウンドへ移すだけとは区別します。アプリ情報とアイコンに出るアプリの名前は、プロジェクト名の<code>f02_stamp_release</code>です（F01から続けている場合は<code>f01_stamp_board</code>）。",
+      "translation": "Force stop the app from the Android app info, start it again from the icon, and check that the records are restored. This is different from just moving it to the background. The app name shown in app info and under the icon is the project name <code>f02_stamp_release</code> (or <code>f01_stamp_board</code> if you continued from F01)."
+    },
+    {
+      "source": "初期化を開いてやめるを選び、記録が残ることを確認します。",
+      "translation": "Open the reset dialog, choose 「やめる」 (Cancel), and check that the records remain."
+    },
+    {
+      "source": "<code>release</code>実行ではホットリロードを使いません。直すときはソースを変更し、もう一度<code>build apk</code>から作り直します。",
+      "translation": "Hot reload is not used in a <code>release</code> run. To fix something, change the source and build again from <code>build apk</code>."
+    },
+    {
+      "source": "Androidのビルド成果物を端末へインストールして確認する方法に対応します。同じ名前のアプリが既にあれば、更新インストールで以前の保存値が残ることがあります。新規インストールの初期値と、更新後の保存値を区別します。",
+      "translation": "This corresponds to installing an Android build output on a device to check it. If an app with the same name already exists, an update install may keep the previous saved values. Distinguish the initial values of a fresh install from the saved values after an update."
+    },
+    {
+      "source": "生成したAPKそのもので追加・保存・詳細・復元を確認できた。",
+      "translation": "Adding, saving, the detail screen, and restoring have been checked with the generated APK itself."
+    },
+    {
+      "source": "STEP 13 · コマ14",
+      "translation": "STEP 13 · Session 14"
+    },
+    {
+      "source": "ソースと保存データを区別する",
+      "translation": "Distinguish the source from saved data"
+    },
+    {
+      "source": "APKに入るのはビルドされたアプリで、エミュレータへ入力した記録ではありません。教員が別の端末へ初めて入れたとき、学生の入力済みの4件目は出ません。",
+      "translation": "What goes into the APK is the built app, not the records you entered on the emulator. When the teacher installs it on a different device for the first time, the 4th item the student entered does not appear."
+    },
+    {
+      "source": "相手にも見せたい題材は<code>createInitialHabits</code>へ書きます。名前・理由、画面の見出し・入力例、配色など、ソースに残した変更がアレンジの対象です。保存済みデータで初期値が隠れている場合は、必要な記録を控えてアプリ内で初期化し、確認します。",
+      "translation": "Write the topic you want others to see in <code>createInitialHabits</code>. The changes left in the source, such as the names and reasons, the screen headings and input examples, and the colors, are what your customization covers. If saved data hides the initial values, note down the records you need, reset inside the app, and check."
+    },
+    {
+      "source": "iOSとAndroidでは同じ名前の記録を使っても保存領域は別です。片方で入力してももう片方へ自動では移りません。両方の画面で文字・余白・入力・戻るを比較し、見た目の違いと動作の一致を確かめます。",
+      "translation": "iOS and Android use separate storage areas, even with records of the same name. Input on one does not move to the other automatically. Compare the text, spacing, input, and back navigation on both screens, and check the differences in appearance and that the behavior matches."
+    },
+    {
+      "source": "ネイティブアプリでも、ソースの初期値と端末に保存した利用者データは別です。APKをコピーすることは、保存領域のバックアップを渡すことではありません。",
+      "translation": "In native apps too, the initial values in the source and the user data saved on the device are separate. Copying the APK is not handing over a backup of the storage area."
+    },
+    {
+      "source": "教員側に見せる内容をソースへ残す理由を説明できた。",
+      "translation": "You can explain why the content to show the teacher is kept in the source."
+    },
+    {
+      "source": "STEP 14 · コマ14",
+      "translation": "STEP 14 · Session 14"
+    },
+    {
+      "source": "配色を整えてAPKを作り直す",
+      "translation": "Adjust the colors and rebuild the APK"
+    },
+    {
+      "source": "配色・余白・題材を調整し、もう一度APKを作ります。ここでは新しい機能を追加せず、既に扱った場所を変えます。",
+      "translation": "Adjust the colors, spacing, and topic, and build the APK again. Do not add new features here; change the places already covered."
+    },
+    {
+      "source": "確認",
+      "translation": "Check"
+    },
+    {
+      "source": "<code>createInitialHabits</code>の<code>name</code>・<code>reason</code>",
+      "translation": "<code>name</code> and <code>reason</code> in <code>createInitialHabits</code>"
+    },
+    {
+      "source": "初期化後にも自分の題材が出る。",
+      "translation": "Your own topic appears even after a reset."
+    },
+    {
+      "source": "<code>ThemeData</code>と<code>StampMarks</code>の色",
+      "translation": "Colors of <code>ThemeData</code> and <code>StampMarks</code>"
+    },
+    {
+      "source": "背景と文字が読み分けられる。",
+      "translation": "The background and text are easy to tell apart."
+    },
+    {
+      "source": "<code>Text</code>と<code>Padding</code>・<code>SizedBox</code>",
+      "translation": "<code>Text</code> with <code>Padding</code> and <code>SizedBox</code>"
+    },
+    {
+      "source": "長い日本語や理由が読める。",
+      "translation": "Long Japanese text and reasons are readable."
+    },
+    {
+      "source": "ソース保存→<code>flutter analyze</code>→<code>flutter build apk</code>→実APKのインストールの順を繰り返します。直前に生成したファイルの更新日時を見て、古いAPKを確認していないか注意します。",
+      "translation": "Repeat the order: save the source → <code>flutter analyze</code> → <code>flutter build apk</code> → install the actual APK. Look at the modification time of the file you just generated, and make sure you are not checking an old APK."
+    },
+    {
+      "source": "CSSで指定したRGBと同じ色を、Flutterでは不透明度付きの<code>Color</code>へ書きます。保存や遷移を変えず、既存の表示の値でアレンジします。",
+      "translation": "The same RGB color you specify in CSS is written in Flutter as a <code>Color</code> with opacity. Customize with the existing display values, without changing saving or navigation."
+    },
+    {
+      "source": "変更後のAPKを作り直し、そのファイルで表示と操作を確認できた。",
+      "translation": "The APK has been rebuilt after your changes, and the display and operations have been checked with that file."
+    },
+    {
+      "source": "STEP 15 · コマ15",
+      "translation": "STEP 15 · Session 15"
+    },
+    {
+      "source": "完成確認の順番を決める",
+      "translation": "Decide the order of the final check"
+    },
+    {
+      "source": "Visual Studio Codeで自分のスタンプ帳を開きます。今日は新しい概念を追加せず、作品を仕上げて通常APKを提出します。アレンジ済みのコードがある場合は、合流用コードで上書きしません。",
+      "translation": "Open your own stamp board in Visual Studio Code. Today, you will not add new concepts; you will finish your work and submit the normal APK. If you already have customized code, do not overwrite it with the starting code for joining partway through."
+    },
+    {
+      "source": "確認順を決め、結果を短く控えます。必要な記録は初期化前に別に残します。",
+      "translation": "Decide the order of checks and note the results briefly. Keep any records you need separately before resetting."
+    },
+    {
+      "source": "初期の題材・名前・理由が自分の作品になっている。",
+      "translation": "The initial topic, names, and reasons are your own work."
+    },
+    {
+      "source": "空欄は止まり、正常な入力は追加できる。",
+      "translation": "Empty fields are rejected, and valid input can be added."
+    },
+    {
+      "source": "スタンプの0と上限、1つ戻すが正しい。",
+      "translation": "Stamps at 0 and at the limit, and 「1つ戻す」 (Undo one), work correctly."
+    },
+    {
+      "source": "詳細の名前・理由・回数が選んだ習慣と一致する。",
+      "translation": "The name, reason, and count in the detail screen match the selected habit."
+    },
+    {
+      "source": "終了・再起動で記録が戻る。",
+      "translation": "The records come back after quitting and restarting."
+    },
+    {
+      "source": "初期化を取り消すと記録が残る。",
+      "translation": "The records remain when the reset is cancelled."
+    },
+    {
+      "source": "最終APKの確認でも同じ順を使います。エラーを隠すために警告抑制を加えず、分からない項目は先生と原因を確認します。",
+      "translation": "Use the same order when checking the final APK. Do not add warning suppression to hide errors; for items you do not understand, find the cause with your teacher."
+    },
+    {
+      "source": "既習の条件分岐で守った範囲を、画面操作でも確かめます。コードの読み取り・静的解析・実行結果を対応させ、押せるかだけでなく値も見ます。",
+      "translation": "Also check, by operating the screen, the ranges you protected with the conditional branches you already know. Match reading the code, static analysis, and the run results, and look at the values, not only whether a button can be pressed."
+    },
+    {
+      "source": "提出前の確認順と、直す必要のある箇所を整理できた。",
+      "translation": "The pre-submission check order and the places that need fixing have been organized."
+    },
+    {
+      "source": "STEP 16 · コマ15",
+      "translation": "STEP 16 · Session 15"
+    },
+    {
+      "source": "自分の作品として仕上げる",
+      "translation": "Finish it as your own work"
+    },
+    {
+      "source": "自分の題材に合う名前・理由・見出し・入力例をそろえます。「何を続けたい人が使うアプリか」が初期画面から伝わるようにします。本人の私生活を公開する必要はありません。",
+      "translation": "Make the names, reasons, headings, and input examples fit your own topic. Make the initial screen tell \"who uses this app, and what they want to keep doing\". You do not need to make your private life public."
+    },
+    {
+      "source": "見た目を変えたら長い名前と改行のある理由でも確認します。目標回数を小さくする場合は、保存済みの回数が新しい上限を超えると読込の検査に通りません。必要な記録を控えてから旧版で初期化するか、変更後の画面で本人が初期化を選びます。",
+      "translation": "After changing the look, also check with a long name and a reason that contains line breaks. If you make the goal count smaller, saved counts above the new limit will not pass the loading check. Either note down the records you need and reset in the old version, or choose the reset yourself on the changed screen."
+    },
+    {
+      "source": "読込の検査は起動時だけなので、<code>r</code>（ホットリロード）で反映したときは行われず、回数がそのまま残ります。3回のまま目標を2にすると「3 / 2 回 · あと-1回」と出て、スタンプを押すは無効になります。1つ戻すは押せる表示ですが、<code>changeStamp</code>は目標を超える次の回数を受け付けません。この例のように目標を1回だけ超えているときは、押すと目標の2回に戻ります。2回以上超えているときは、押しても変わりません。目標を超えた回数が残ったまま<code>R</code>を押すと読込の検査に通らないので、上のとおり、必要な記録を控えてから初期化を選びます。",
+      "translation": "The loading check runs only at startup, so it does not run when you apply changes with <code>r</code> (hot reload), and the counts stay as they are. If the count is 3 and you change the goal to 2, the app shows 「3 / 2 回 · あと-1回」 (3 / 2 times · -1 to go), and 「スタンプを押す」 (Add a stamp) is disabled. 「1つ戻す」 (Undo one) looks pressable, but <code>changeStamp</code> does not accept a next count above the goal. When the count is only 1 above the goal, as in this example, pressing it returns to the goal of 2. When it is 2 or more above the goal, pressing it changes nothing. If you press <code>R</code> while a count above the goal remains, the loading check fails, so, as described above, note down the records you need and then choose the reset."
+    },
+    {
+      "source": "保存キー・3要素の並び・検証条件は、見た目のアレンジとは分けます。今回の提出前に新しい保存形式や機能を増やさず、学んだ範囲で仕上げます。",
+      "translation": "Keep the storage key, the order of the 3 elements, and the validation conditions separate from customizing the look. Before this submission, do not add a new storage format or features; finish within what you have learned."
+    },
+    {
+      "source": "見出しの文字や改行を変える目的はSwiftのラベルと同じです。保存の仕組みを触らずに、既存の<code>Text</code>や色で題材を伝えられます。",
+      "translation": "Changing the heading text or line breaks has the same purpose as a label in Swift. You can convey your topic with the existing <code>Text</code> and colors, without touching the saving mechanism."
+    },
+    {
+      "source": "初期画面から題材が伝わり、長い文字も読める形に整えた。",
+      "translation": "The initial screen conveys the topic, and long text has been made readable."
+    },
+    {
+      "source": "STEP 17 · コマ15",
+      "translation": "STEP 17 · Session 15"
+    },
+    {
+      "source": "最終APKを確認して提出する",
+      "translation": "Check the final APK and submit it"
+    },
+    {
+      "source": "ソースを保存し、<code>flutter analyze</code>の指摘を確認して、<code>flutter build apk</code>で最終APKを作ります。生成した<code>app-release.apk</code>そのものをSTEP 12のコマンドでAndroidへ入れ、STEP 15の順で確認します。",
+      "translation": "Save the source, check what <code>flutter analyze</code> reports, and build the final APK with <code>flutter build apk</code>. Install the generated <code>app-release.apk</code> itself on Android with the command from STEP 12, and check it in the order from STEP 15."
+    },
+    {
+      "source": "Finderで<code>build/app/outputs/flutter-apk/app-release.apk</code>の容量と更新日時を確認します。教員が案内する提出先へ、そのAPKファイルとアレンジの説明を提出します。提出先・締め切り・ファイル名の指定がまだない場合は、授業中に先生へ確認してください。",
+      "translation": "In Finder, check the size and modification time of <code>build/app/outputs/flutter-apk/app-release.apk</code>. Submit that APK file and a description of your customization to the submission site your teacher tells you about. If the submission site, deadline, or file name has not been given yet, ask your teacher during class."
+    },
+    {
+      "source": "ファイル名の指定がある場合は、確認済みAPKを別の提出用フォルダへコピーし、コピーの名前だけを指定に合わせます。拡張子.apkを保ちます。プロジェクトのZIP、<code>app-debug.apk</code>、ソースフォルダは今回の提出物ではありません。",
+      "translation": "If a file name is specified, copy the checked APK to a separate submission folder and rename only the copy to match. Keep the .apk extension. The project ZIP, <code>app-debug.apk</code>, and the source folder are not the deliverables this time."
+    },
+    {
+      "source": "提出後、提出先に表示されるファイル名・容量が手元のものに合うことを確かめます。提出先の機能で可能なら、提出したファイルを取り直して同じAPKか確認します。自分のソースは今後の修正用に残します。",
+      "translation": "After submitting, check that the file name and size shown on the submission site match the ones you have. If the submission site allows it, download the submitted file again and check that it is the same APK. Keep your source for future fixes."
+    },
+    {
+      "source": "Androidの提出物としてAPKを渡す経験と同じです。保存データではなくアプリ本体を渡すため、相手の初期状態で見えるアレンジを説明します。",
+      "translation": "This is the same as handing in an APK as an Android deliverable. Because you hand over the app itself, not the saved data, explain the customization that is visible in the recipient's initial state."
+    },
+    {
+      "source": "最終APKそのものを確認し、指定先へ提出したファイルを確かめた。",
+      "translation": "The final APK itself has been checked, and the file submitted to the specified place has been confirmed."
+    },
+    {
+      "source": "STEP 18 · コマ15",
+      "translation": "STEP 18 · Session 15"
+    },
+    {
+      "source": "変更箇所と動作を説明する",
+      "translation": "Explain your changes and how the app works"
+    },
+    {
+      "source": "提出したアプリを見ながら、次の内容を短く説明します。",
+      "translation": "While looking at the app you submitted, explain the following briefly."
+    },
+    {
+      "source": "どのような人が、何を記録するためのスタンプ帳か。",
+      "translation": "What kind of person the stamp board is for, and what it records."
+    },
+    {
+      "source": "どのファイルの、どの文字・色・初期データを変えたか。",
+      "translation": "Which text, colors, and initial data you changed, in which file."
+    },
+    {
+      "source": "<code>await</code>で保存完了を待つ前と後で、何を更新しているか。",
+      "translation": "What is updated before and after waiting for the save to complete with <code>await</code>."
+    },
+    {
+      "source": "再起動しても残る値と、APKへ入る値の違い。",
+      "translation": "The difference between values that remain after a restart and values that go into the APK."
+    },
+    {
+      "source": "説明に自分の入力済みデータだけを使わず、初期画面から伝わる変更を示します。バグを直した場合は、直した箇所と確認した操作も添えます。",
+      "translation": "Do not use only your own entered data in the explanation; show changes that come across from the initial screen. If you fixed a bug, also add where you fixed it and which operations you checked."
+    },
+    {
+      "source": "処理の順序を追う既習の読み方を使い、非同期では完了を<code>await</code>で待つことを説明します。待機中の表示・操作の抑制も、保存の順番に対応しています。",
+      "translation": "Using the way you already read code by following the order of processing, explain that in asynchronous code you wait for completion with <code>await</code>. The display while waiting and the disabling of operations also correspond to the order of saving."
+    },
+    {
+      "source": "自分の変更と、保存・表示の順序を説明できた。",
+      "translation": "You can explain your changes and the order of saving and display."
+    },
+    {
+      "source": "STEP 19 · コマ15",
+      "translation": "STEP 19 · Session 15"
+    },
+    {
+      "source": "アレンジできる場所を振り返る",
+      "translation": "Review the places you can customize"
+    },
+    {
+      "source": "最後に、既に扱ったアレンジの場所を振り返ります。<code>createInitialHabits</code>の題材、<code>Text</code>の案内、<code>ThemeData</code>の配色、<code>StampMarks</code>の色、<code>Padding</code>や<code>SizedBox</code>の余白を、自分の目的に合わせて変えられます。",
+      "translation": "Finally, review the places you can customize that have already been covered. You can change the topic in <code>createInitialHabits</code>, the guidance in <code>Text</code>, the colors in <code>ThemeData</code>, the colors of <code>StampMarks</code>, and the spacing of <code>Padding</code> and <code>SizedBox</code> to fit your own purpose."
+    },
+    {
+      "source": "追加で直す場合も、ソース保存→解析→APK作成→そのAPKの操作確認という順番を保ちます。提出後にファイルを差し替える場合は、教員の提出ルールに従い、どの変更を入れた版かを説明してください。",
+      "translation": "When you make further fixes, keep the order: save the source → analyze → build the APK → check operations on that APK. If you replace the file after submitting, follow the teacher's submission rules and explain which changes the new version contains."
+    },
+    {
+      "source": "いまある機能で、自分が選んだ習慣を入力し、できたことを残せる状態が完成です。どこを変えると何が変わるかを、自分のコードで示して授業を終えましょう。",
+      "translation": "The finished state is this: with the features you have now, you can enter the habits you chose and keep a record of what you did. Show in your own code what changes when you change each place, and finish the class."
+    },
+    {
+      "source": "データの項目を変える目的はWeb基礎と同じです。Dartでは型に沿って初期データを用意し、その上へ入力・保存・復元を組み合わせました。新しいAPIを追加せず、既存の値と表示を使ってアレンジできます。",
+      "translation": "Changing the data fields has the same purpose as in Web Basics. In Dart, you prepared the initial data according to the types, and combined input, saving, and restoring on top of it. You can customize with the existing values and display, without adding new APIs."
+    },
+    {
+      "source": "アレンジできる場所と確認の順を、自分のコードで説明できた。",
+      "translation": "You can explain the places you can customize and the order of checks, using your own code."
+    },
+    {
+      "source": "状態",
+      "translation": "What you see"
+    },
+    {
+      "source": "確認するところ",
+      "translation": "What to check"
+    },
+    {
+      "source": "パッケージが見つからない",
+      "translation": "The package is not found"
+    },
+    {
+      "source": "<code>pubspec.yaml</code>の<code>dependencies</code>へ<code>shared_preferences</code>を入れ、<code>flutter pub get</code>を実行。追加後はアプリを停止して再実行。",
+      "translation": "Add <code>shared_preferences</code> to <code>dependencies</code> in <code>pubspec.yaml</code> and run <code>flutter pub get</code>. After adding it, stop the app and run it again."
+    },
+    {
+      "source": "パッケージを加えた後、「保存できませんでした。」と出る。<code>R</code>で画面全体が赤くなる",
+      "translation": "After adding the package, 「保存できませんでした。」 (Could not save.) appears. The whole screen turns red with <code>R</code>"
+    },
+    {
+      "source": "起動し直さずに<code>r</code>・<code>R</code>で反映した。<code>q</code>で終了し、<code>flutter run -d 端末ID</code>で起動し直す。",
+      "translation": "You applied the change with <code>r</code> or <code>R</code> without restarting. Quit with <code>q</code> and start again with <code>flutter run -d 端末ID</code> (端末ID = device ID)."
+    },
+    {
+      "source": "保存しても起動後に消える",
+      "translation": "Saved data disappears after startup"
+    },
+    {
+      "source": "STEP 06は保存だけ、07から読み込み。06で再起動した後に押すか追加すると、前の保存は表示中の一覧で置き換わる。保存キーとアプリの実行先が同じか。",
+      "translation": "STEP 06 only saves; loading starts at 07. In 06, if you add a stamp or add a habit after a restart, the previous save is replaced by the list being shown. Check whether the storage key and the device the app runs on are the same."
+    },
+    {
+      "source": "読込エラーになる",
+      "translation": "A loading error appears"
+    },
+    {
+      "source": "元データを勝手に上書きせず、再読み込み。必要な記録を控えてから本人の判断で初期化。",
+      "translation": "Do not overwrite the original data on your own; reload. Note down the records you need, then reset by your own decision."
+    },
+    {
+      "source": "残り回数が負になる（あと-1回など）",
+      "translation": "The remaining count becomes negative (such as 「あと-1回」 (-1 to go))"
+    },
+    {
+      "source": "回数が目標を超えたまま<code>stampGoal</code>を減らし、<code>r</code>で反映した。1つ戻すが効くのは、目標を1回だけ超えているとき。<code>R</code>では読込エラーになるので、必要な記録を控えて初期化。",
+      "translation": "You reduced <code>stampGoal</code> while a count was above the goal, and applied it with <code>r</code>. 「1つ戻す」 (Undo one) only works when the count is 1 above the goal. <code>R</code> causes a loading error, so note down the records you need and reset."
+    },
+    {
+      "source": "初期値を変えても出ない",
+      "translation": "Changed initial values do not appear"
+    },
+    {
+      "source": "保存済みデータが優先。必要な記録を控えて初期化し、ソースの初期データを確認。",
+      "translation": "Saved data takes priority. Note down the records you need, reset, and check the initial data in the source."
+    },
+    {
+      "source": "Androidビルドが止まる",
+      "translation": "The Android build stops"
+    },
+    {
+      "source": "回線、SDK・ライセンス、Gradleの版・URL、取得中かエラーかを教員と切り分ける。授業中に不足分を準備。",
+      "translation": "With your teacher, narrow down whether it is the network, the SDK or licenses, the Gradle version or URL, and whether it is still downloading or an error. Prepare what is missing during class."
+    },
+    {
+      "source": "APKが大きい",
+      "translation": "The APK is large"
+    },
+    {
+      "source": "<code>debug</code>ではなく<code>flutter build apk</code>の通常<code>release</code>を使ったか。<code>app-release.apk</code>の容量を確認。",
+      "translation": "Did you use the normal <code>release</code> build of <code>flutter build apk</code>, not <code>debug</code>? Check the size of <code>app-release.apk</code>."
+    },
+    {
+      "source": "学生用配布ZIPを展開し、<code>samples/F02StampRelease</code>をVisual Studio Codeの<code>File &gt; Open Folder…</code>で開きます。単体なら<a1>完成プロジェクトZIP</a1>を展開して中の<code>F02StampRelease</code>を開きます。自分の制作フォルダへ上書きしません。",
+      "translation": "Extract the student distribution ZIP, and open <code>samples/F02StampRelease</code> with <code>File &gt; Open Folder…</code> in Visual Studio Code. If you received it on its own, extract the <a1>completed project ZIP</a1> and open the <code>F02StampRelease</code> inside it. Do not overwrite your own work folder."
+    },
+    {
+      "source": "<code>Terminal &gt; New Terminal</code>で<code>flutter pub get</code>と<code>flutter analyze</code>を実行します。<code>Flutter: Launch Emulator</code>で既存端末を起動し、<code>flutter devices</code>でIDを確認して<code>flutter run -d 端末ID</code>で実行します。APKの作成・実APKの確認は本文のSTEP 11〜12にあります。",
+      "translation": "Run <code>flutter pub get</code> and <code>flutter analyze</code> from <code>Terminal &gt; New Terminal</code>. Start your existing device with <code>Flutter: Launch Emulator</code>, check its ID with <code>flutter devices</code>, and run with <code>flutter run -d 端末ID</code> (端末ID = device ID). Building the APK and checking the actual APK are in STEP 11–12 of the main text."
+    },
+    {
+      "source": "JEC / ハイブリッドアプリ開発技法 · F02StampRelease",
+      "translation": "JEC / Hybrid App Development · F02StampRelease"
+    }
+  ]
+}
