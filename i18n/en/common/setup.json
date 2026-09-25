@@ -91,6 +91,10 @@
       "translation": "In Finder, double-click the downloaded ZIP to extract it. If it has already become a folder with the same name, use that folder."
     },
     {
+      "source": "展開したフォルダを、Finderの <code>書類</code>（<code>~/Documents</code>）の直下へ移します。この授業の教材の置き場所は <code>~/Documents/hybrid-app-student-materials-日付</code> です。教科書で「配布フォルダ」と書いてあるのは、このフォルダのことです。",
+      "translation": "In Finder, move the extracted folder directly into <code>書類</code> (Documents, <code>~/Documents</code>). The materials for this class go in <code>~/Documents/hybrid-app-student-materials-日付</code> (日付 = date). When the textbooks say \"distribution folder\" (配布フォルダ), they mean this folder."
+    },
+    {
       "source": "中に <code>docs</code>、<code>はじめに.txt</code>、<code>VERSION.json</code> があることを確かめます。完成見本が同梱されている版には <code>samples</code> もあります。言語を選ぶ <code>index.html</code> がある版では、そこから教科書を開けます。",
       "translation": "Check that it contains <code>docs</code>, <code>はじめに.txt</code>, and <code>VERSION.json</code>. Versions that include the completed samples also have <code>samples</code>. In versions that have an <code>index.html</code> for choosing a language, you can open the textbooks from there."
     },
@@ -115,8 +119,24 @@
       "translation": "Completed Monaca project"
     },
     {
+      "source": "<code>samples</code> の中の、教科書が指定するフォルダ（<code>samples/M01OshiList</code> など）をFinderで開き、コードを読み比べます。Monaca クラウド IDEは、Macのフォルダをそのまま開けません。Monacaで動かすときは、先生がZIPにして公開した取り込み用URL（教科書の「完成プロジェクトを開く」にあります）を開いて取り込みます。取り込むと、Freeプランの3枠のうち1枠を使います。URLがあっても、Freeプランの制限で取り込めない・開けないことがあります。そのときは先生に知らせ、<code>samples</code> のコードを読んで進めます。",
+      "translation": "In Finder, open the folder in <code>samples</code> that the textbook specifies (such as <code>samples/M01OshiList</code>), and read and compare the code. Monaca クラウド IDE cannot open a folder on your Mac directly. To run it in Monaca, open the import URL that your teacher made by zipping the project and publishing it (you can find it under \"Open the completed project\" in the textbook), and import it. Importing uses one of the three slots of the Free plan. Even with the URL, the limits of the Free plan may prevent you from importing or opening it. In that case, tell your teacher and continue by reading the code in <code>samples</code>."
+    },
+    {
       "source": "Flutterの完成プロジェクト",
       "translation": "Completed Flutter project"
+    },
+    {
+      "source": "<code>samples</code> の中の、教科書が指定するフォルダ（<code>samples/F01StampBoard</code> など）をFinderで開き、そのフォルダを Visual Studio Code の <code>File → Open Folder…</code> で開きます。<code>pubspec.yaml</code> が入っている階層を選びます。展開は済んでいるので、ZIPのダウンロードは要りません。",
+      "translation": "In Finder, open the folder in <code>samples</code> that the textbook specifies (such as <code>samples/F01StampBoard</code>), then open that folder with <code>File → Open Folder…</code> in Visual Studio Code. Choose the level that contains <code>pubspec.yaml</code>. The files are already extracted, so you do not need to download a ZIP."
+    },
+    {
+      "source": "更新版も <code>書類</code> の直下に、別のフォルダとして置きます。同じ日に配り直された版は名前が同じになるため、先生の案内を確かめてから入れ替えてください。自分で作るプロジェクトは、配布フォルダの中ではなく <code>~/Documents/HybridApp</code> に置きます（作り方は、その日の教科書にあります）。質問するときは、フォルダ名の日付と <code>VERSION.json</code> の <code>version</code> を伝えます。",
+      "translation": "Put an updated version directly into <code>書類</code> (Documents) as well, as a separate folder. A version redistributed on the same day has the same name, so check your teacher's instructions before replacing it. Put the projects you create yourself in <code>~/Documents/HybridApp</code>, not inside the distribution folder (how to create them is in that day's textbook). When asking a question, give the date in the folder name and the <code>version</code> in <code>VERSION.json</code>."
+    },
+    {
+      "source": "先生が指定した版を <code>書類</code> の直下に置き、教科書を開けた。",
+      "translation": "The version your teacher specified has been placed directly in <code>書類</code> (Documents), and the textbook can be opened."
     },
     {
       "source": "Google Chromeで <a1>Monacaの公式サイト</a1>を開き、<code>ログイン</code> から進みます。この授業は<strong>通常版MonacaのFreeプラン</strong>を使います。ログイン後の開発画面は <code>console.monaca.mobi</code> です。",

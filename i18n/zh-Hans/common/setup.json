@@ -91,6 +91,10 @@
       "translation": "在 Finder 中双击下载的 ZIP，将其解压。如果已经是同名的文件夹，就使用那个文件夹。"
     },
     {
+      "source": "展開したフォルダを、Finderの <code>書類</code>（<code>~/Documents</code>）の直下へ移します。この授業の教材の置き場所は <code>~/Documents/hybrid-app-student-materials-日付</code> です。教科書で「配布フォルダ」と書いてあるのは、このフォルダのことです。",
+      "translation": "在 Finder 中，把解压出的文件夹移到 <code>書類</code>（文稿，<code>~/Documents</code>）的第一层。本课程教材的存放位置是 <code>~/Documents/hybrid-app-student-materials-日付</code>（日付 表示日期）。课本中写的“分发文件夹”（配布フォルダ），指的就是这个文件夹。"
+    },
+    {
       "source": "中に <code>docs</code>、<code>はじめに.txt</code>、<code>VERSION.json</code> があることを確かめます。完成見本が同梱されている版には <code>samples</code> もあります。言語を選ぶ <code>index.html</code> がある版では、そこから教科書を開けます。",
       "translation": "确认里面有 <code>docs</code>、<code>はじめに.txt</code>、<code>VERSION.json</code>。附带完成示例的版本还会有 <code>samples</code>。在带有用于选择语言的 <code>index.html</code> 的版本中，可以从那里打开课本。"
     },
@@ -115,8 +119,24 @@
       "translation": "Monaca 的完成项目"
     },
     {
+      "source": "<code>samples</code> の中の、教科書が指定するフォルダ（<code>samples/M01OshiList</code> など）をFinderで開き、コードを読み比べます。Monaca クラウド IDEは、Macのフォルダをそのまま開けません。Monacaで動かすときは、先生がZIPにして公開した取り込み用URL（教科書の「完成プロジェクトを開く」にあります）を開いて取り込みます。取り込むと、Freeプランの3枠のうち1枠を使います。URLがあっても、Freeプランの制限で取り込めない・開けないことがあります。そのときは先生に知らせ、<code>samples</code> のコードを読んで進めます。",
+      "translation": "在 Finder 中打开 <code>samples</code> 里课本指定的文件夹（如 <code>samples/M01OshiList</code>），对照阅读代码。Monaca クラウド IDE 不能直接打开 Mac 上的文件夹。要在 Monaca 中运行时，打开老师把项目打包成 ZIP 后公开的导入链接（在课本的“打开完成项目”中），进行导入。导入会占用 Free 方案3个名额中的1个。即使有链接，也可能因为 Free 方案的限制而无法导入或无法打开。这时请告诉老师，并阅读 <code>samples</code> 中的代码继续学习。"
+    },
+    {
       "source": "Flutterの完成プロジェクト",
       "translation": "Flutter 的完成项目"
+    },
+    {
+      "source": "<code>samples</code> の中の、教科書が指定するフォルダ（<code>samples/F01StampBoard</code> など）をFinderで開き、そのフォルダを Visual Studio Code の <code>File → Open Folder…</code> で開きます。<code>pubspec.yaml</code> が入っている階層を選びます。展開は済んでいるので、ZIPのダウンロードは要りません。",
+      "translation": "在 Finder 中打开 <code>samples</code> 里课本指定的文件夹（如 <code>samples/F01StampBoard</code>），再用 Visual Studio Code 的 <code>File → Open Folder…</code> 打开这个文件夹。选择包含 <code>pubspec.yaml</code> 的那一层。文件已经解压好了，不需要下载 ZIP。"
+    },
+    {
+      "source": "更新版も <code>書類</code> の直下に、別のフォルダとして置きます。同じ日に配り直された版は名前が同じになるため、先生の案内を確かめてから入れ替えてください。自分で作るプロジェクトは、配布フォルダの中ではなく <code>~/Documents/HybridApp</code> に置きます（作り方は、その日の教科書にあります）。質問するときは、フォルダ名の日付と <code>VERSION.json</code> の <code>version</code> を伝えます。",
+      "translation": "更新版也作为另一个文件夹，放在 <code>書類</code>（文稿）的第一层。同一天重新发放的版本，名称会相同，所以请先确认老师的说明，再进行替换。自己创建的项目不要放在分发文件夹里，而是放在 <code>~/Documents/HybridApp</code> 中（创建方法在当天的课本里）。提问时，请告知文件夹名中的日期和 <code>VERSION.json</code> 里的 <code>version</code>。"
+    },
+    {
+      "source": "先生が指定した版を <code>書類</code> の直下に置き、教科書を開けた。",
+      "translation": "已把老师指定的版本放在 <code>書類</code>（文稿）的第一层，并能打开课本。"
     },
     {
       "source": "Google Chromeで <a1>Monacaの公式サイト</a1>を開き、<code>ログイン</code> から進みます。この授業は<strong>通常版MonacaのFreeプラン</strong>を使います。ログイン後の開発画面は <code>console.monaca.mobi</code> です。",

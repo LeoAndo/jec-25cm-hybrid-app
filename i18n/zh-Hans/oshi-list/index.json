@@ -187,6 +187,14 @@
       "translation": "向详情传值，并完成返回操作。"
     },
     {
+      "source": "先生が見本を使うと案内したら、配布フォルダの <code>~/Documents/hybrid-app-student-materials-日付/samples/M01OshiList</code> をFinderで開きます。<code>M01OshiList</code> の完成プロジェクトで、<code>www/index.html</code>・<code>www/css/style.css</code>・<code>www/js/app.js</code> を自分のコードと読み比べるために使います。自分の制作を始めるにはSTEP 00へ進みます。",
+      "translation": "老师说明要使用示例时，在 Finder 中打开分发文件夹中的 <code>~/Documents/hybrid-app-student-materials-日付/samples/M01OshiList</code>（日付 表示日期）。这是 <code>M01OshiList</code> 的完成项目，用来把 <code>www/index.html</code>、<code>www/css/style.css</code>、<code>www/js/app.js</code> 与自己的代码对照阅读。要开始自己的制作，请前往 STEP 00。"
+    },
+    {
+      "source": "Monaca クラウド IDEは、Macのフォルダをそのまま開けません。見本をMonacaで動かすときは、先生がZIPにして公開した<a1>M01OshiListの取り込み用URL</a1>を、通常版Monacaへログインした状態で開き、取り込みます。取り込みにもFreeプランの3枠のうち1枠を使うので、空きを確かめてからURLを1回だけ開き、自分の作品は削除しません。取り込み用URLがあっても、Freeプランの制限（プロジェクトの数や、対応するCordovaの版）で、取り込めない、または取り込んだ見本を開けないことがあります。そのときは無理に取り込まず、先生に知らせてください。見本のコードは配布フォルダの <code>samples</code> で読めるので、取り込めなくても授業は進められます。",
+      "translation": "Monaca クラウド IDE 不能直接打开 Mac 上的文件夹。要在 Monaca 中运行示例时，请在已登录标准版 Monaca 的状态下，打开老师把项目打包成 ZIP 后公开的<a1>M01OshiList 的导入链接</a1>，进行导入。导入也会占用 Free 方案3个名额中的1个，所以请先确认有空余名额，只打开一次链接，不要删除自己的作品。即使有导入链接，也可能因为 Free 方案的限制（项目数量、支持的 Cordova 版本）而无法导入，或者无法打开导入的示例。这时不要勉强导入，请告诉老师。示例的代码可以在分发文件夹的 <code>samples</code> 中阅读，所以即使无法导入，也能继续上课。"
+    },
+    {
       "source": "STEP 00 · コマ1",
       "translation": "STEP 00 · 第1节课"
     },
@@ -391,6 +399,10 @@
       "translation": "可以修改的地方"
     },
     {
+      "source": "カードの名前・種類・ひとこと、背景色、角丸の数値を変えられます。自分の好きなものと、その理由を自分の言葉で書きましょう。1か所変えるたびに保存・再読み込みをし、何が変わったかを確かめます。",
+      "translation": "可以改变卡片的名称、类别、一句话、背景色和圆角的数值。用自己的话写下自己喜欢的东西及其理由。每改1处就保存并重新加载，然后确认什么发生了变化。"
+    },
+    {
       "source": "STEP 05 · コマ2",
       "translation": "STEP 05 · 第2节课"
     },
@@ -553,6 +565,10 @@
     {
       "source": "<code>\"android\"</code> を <code>\"ios\"</code> へ書き換え、保存してプレビュー全体を再読み込みします。HTMLと自分のCSSは変更せず、同じ箇所を比べます。",
       "translation": "把 <code>\"android\"</code> 改写为 <code>\"ios\"</code>，保存后重新加载整个预览。不改变 HTML 和自己的 CSS，比较相同的位置。"
+    },
+    {
+      "source": "違いを1つ、共通する内容を1つ、見つけます。",
+      "translation": "找出1处不同点和1处相同点。"
     },
     {
       "source": "OSの指定はOnsen UIが画面を作る前に必要です。<code>app.js</code> の先頭で行い、後のイベント処理の中へ移しません。この指定は<strong>表示スタイルの比較</strong>であり、ブラウザをAndroidやiOSの実機に変える操作ではありません。",
@@ -1025,6 +1041,18 @@
     {
       "source": "公開URLで相手へ渡るのは、ソースに書いた配列・HTML・CSSです。今画面で選んでいる項目は渡りません。この単元には保存機能もありません。",
       "translation": "通过导入链接交给对方的，是写在源代码中的数组、HTML 和 CSS。现在页面上选中的项目不会交过去。本单元也没有保存功能。"
+    },
+    {
+      "source": "Web基礎で作ったHTML・CSS・JavaScriptの役割分担は、完成版でも同じです。画面間の移動と値の受け渡しはAndroid・iOSの経験と対応します。今回の新しい考え方は、OS別の見た目を共通のHTMLへ適用するauto-stylingです。自分で変えた内容と、OSによる違いを分けて確かめましょう。",
+      "translation": "在 Web 基础中做过的 HTML、CSS、JavaScript 的分工，在完成版中也是一样的。页面之间的跳转和值的传递，与 Android、iOS 的经验对应。这次的新思路是把各 OS 的外观应用到共通 HTML 上的 auto-styling。请把自己改变的内容和因 OS 而产生的差别分开确认。"
+    },
+    {
+      "source": "一覧・詳細・戻る・連続クリック・OSによる差を確認し、自分の変更箇所を記録した。",
+      "translation": "已确认列表、详情、返回、连续点击和 OS 造成的差别，并记录了自己修改的地方。"
+    },
+    {
+      "source": "<code>oshiItems</code> の名前・種類・理由・件数、HTMLの見出し、CSSの色・余白・文字サイズを変えられます。自分の好きなものと、その理由を自分の言葉で書きます。次に1か所だけ見た目を変え、どのファイルの何を変え、どの画面へ反映されたかを確かめてください。",
+      "translation": "可以改变 <code>oshiItems</code> 的名称、类别、理由、条数，HTML 的标题，以及 CSS 的颜色、边距、文字大小。用自己的话写下自己喜欢的东西及其理由。然后只改1处外观，确认改了哪个文件的什么，反映到了哪个页面上。"
     },
     {
       "source": "見えること",

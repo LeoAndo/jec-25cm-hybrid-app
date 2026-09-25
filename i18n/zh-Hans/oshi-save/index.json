@@ -95,6 +95,10 @@
       "translation": "13 确认提交与准备情况"
     },
     {
+      "source": "14 アレンジ箇所を確かめる",
+      "translation": "14 确认修改的地方"
+    },
+    {
       "source": "困ったとき",
       "translation": "遇到问题时"
     },
@@ -153,6 +157,14 @@
     {
       "source": "授業内でFlutter準備を開始し、待ち時間に好きなものノートをアレンジ・確認・提出する。",
       "translation": "在课堂上开始准备 Flutter，利用等待时间修改、确认并提交喜爱笔记。"
+    },
+    {
+      "source": "配布フォルダの <code>~/Documents/hybrid-app-student-materials-日付/samples/M02OshiSave</code> をFinderで開きます。<code>M02OshiSave</code> の完成見本で、自分のコードと読み比べるために使います。自分の作品を見本で上書きしません。自分の制作を始める人は、STEP 00へ進みます。",
+      "translation": "在 Finder 中打开分发文件夹中的 <code>~/Documents/hybrid-app-student-materials-日付/samples/M02OshiSave</code>（日付 表示日期）。这是 <code>M02OshiSave</code> 的完成示例，用于与自己的代码对照阅读。不要用示例覆盖自己的作品。要开始自己制作的人，请进入 STEP 00。"
+    },
+    {
+      "source": "Monaca クラウド IDEは、Macのフォルダをそのまま開けません。見本をMonacaで動かすときは、先生がZIPにして公開した<a1>M02OshiSaveの取り込み用URL</a1>を開いて取り込みます。これはアプリを動かすURLではなく、完成見本のソースを自分のMonacaへ取り込むURLで、Freeプランの3枠のうち1枠を使います。空きを確かめてから1回だけ開きます。取り込み用URLがあっても、Freeプランの制限（プロジェクトの数や、対応するCordovaの版）で、取り込めない、または取り込んだ見本を開けないことがあります。そのときは無理に取り込まず、先生に知らせてください。見本のコードは配布フォルダの <code>samples</code> で読めるので、取り込めなくても授業は進められます。",
+      "translation": "Monaca クラウド IDE 不能直接打开 Mac 上的文件夹。要在 Monaca 中运行示例时，打开老师把项目打包成 ZIP 后公开的<a1>M02OshiSave 的导入链接</a1>，进行导入。这不是运行应用的链接，而是把完成示例的源代码导入自己的 Monaca 的链接，会占用 Free 方案3个名额中的1个。请先确认有空余名额，再只打开一次。即使有导入链接，也可能因为 Free 方案的限制（项目数量、支持的 Cordova 版本）而无法导入，或者无法打开导入的示例。这时不要勉强导入，请告诉老师。示例的代码可以在分发文件夹的 <code>samples</code> 中阅读，所以即使无法导入，也能继续上课。"
     },
     {
       "source": "STEP 00 · コマ5",
@@ -359,6 +371,10 @@
       "translation": "直接使用 Web 基础中的 <code>input</code>、<code>textarea</code>、<code>label</code>。它们的作用与 Android 的 <code>EditText</code>、iOS 的 <code>UITextField</code>、<code>UITextView</code> 相同。打开页面的处理与跳转到详情的形式相同，因为不需要传递数据，所以省略了 <code>data</code>。<code>createInitialItems</code> 对应 Java／Swift 中由函数返回数据数组的写法。"
     },
     {
+      "source": "入力画面を開き、3つの欄へ入力して戻れた。追加ボタンがまだ押せないことを確認した。",
+      "translation": "已打开输入页面，在3个输入框中输入并返回。已确认添加按钮目前还不能点击。"
+    },
+    {
       "source": "STEP 02 · コマ5",
       "translation": "STEP 02 · 第5节课"
     },
@@ -499,6 +515,10 @@
       "translation": "沿用 Web 基础中的分工：HTML 负责结构和输入示例，CSS 负责装饰，JavaScript 负责数据和动作。通过重新加载后的结果，分辨在页面上输入的值与源代码初始数据的区别。"
     },
     {
+      "source": "アレンジした場所が画面に現れ、追加・詳細・戻るが引き続き動いた。",
+      "translation": "修改的地方已出现在页面上，添加、详情、返回仍然正常工作。"
+    },
+    {
       "source": "STEP 05 · コマ6",
       "translation": "STEP 05 · 第6节课"
     },
@@ -579,6 +599,10 @@
       "translation": "在 Java 或 Swift 中直接把数组、数据对象用于页面时，与保存字符串时，类型是不同的。作为连接这一差异的表示形式，这次新学习 JSON。不是重新学习数组的操作本身，而是确认“数组→JSON 字符串→数组”这个转换的方向。"
     },
     {
+      "source": "JSONの文字列と配列を区別し、<code>stringify</code>と<code>parse</code>の向きを確認した。",
+      "translation": "已区分 JSON 字符串和数组，并确认了 <code>stringify</code> 与 <code>parse</code> 的方向。"
+    },
+    {
       "source": "STEP 06 · コマ6",
       "translation": "STEP 06 · 第6节课"
     },
@@ -657,6 +681,10 @@
     {
       "source": "キーと値で保存する目的はAndroidの<code>SharedPreferences</code>やiOSの<code>UserDefaults</code>と同じです。<code>localStorage</code>の値は文字列に限るためJSONへ変換します。<code>slice</code>はJavaで<code>ArrayList</code>を複製したり、Swiftで配列の別の値を作ったりする操作と比較できます。<code>try</code> / <code>catch</code>はJavaの例外処理、Swiftの<code>do</code> / <code>catch</code>に対応し、今回は失敗後に表示中のデータを更新しない順序が要点です。<code>canSave</code>でボタンの <code>disabled</code> を切り替えるのは、Androidの<code>setEnabled(false)</code>やiOSの<code>isEnabled = false</code>で、条件がそろうまで操作を受け付けないのと同じです。",
       "translation": "用键和值保存的目的，与 Android 的 <code>SharedPreferences</code>、iOS 的 <code>UserDefaults</code> 相同。<code>localStorage</code> 的值只能是字符串，所以要转换为 JSON。<code>slice</code> 可以与 Java 中复制 <code>ArrayList</code>、Swift 中生成数组的另一个值的操作相比较。<code>try</code> / <code>catch</code> 对应 Java 的异常处理、Swift 的 <code>do</code> / <code>catch</code>，这次的要点是失败后不更新正在显示的数据这一顺序。用 <code>canSave</code> 切换按钮的 <code>disabled</code>，与 Android 的 <code>setEnabled(false)</code>、iOS 的 <code>isEnabled = false</code> 一样，在条件满足之前不接受操作。"
+    },
+    {
+      "source": "保存成功の文を確認し、コピー・保存・表示更新の順番を確かめた。",
+      "translation": "已确认保存成功的文字，并确认了复制、保存、更新显示的顺序。"
     },
     {
       "source": "STEP 07 · コマ6",
@@ -815,8 +843,16 @@
       "translation": "较长的日语和换行也能正常阅读。"
     },
     {
+      "source": "保存キーは変えず、まず文字や色を変えましょう。保存して再読み込みし、どの変更がソースに残り、どの内容がブラウザだけに残るかを確かめます。",
+      "translation": "不要改保存键，先从文字和颜色改起。保存并重新加载，然后确认哪些改动留在源代码中，哪些内容只留在浏览器中。"
+    },
+    {
       "source": "ネイティブアプリでも、コードに書いた既定値より保存済みの設定を優先することがあります。同じ区別を、<code>createInitialItems</code>と<code>getItem</code>のどちらが最終的な<code>oshiItems</code>になるかで追います。アレンジは既習のデータと装飾の変更だけで行います。",
       "translation": "在原生应用中，有时也会优先使用已保存的设置，而不是代码中写的默认值。通过 <code>createInitialItems</code> 和 <code>getItem</code> 哪一个最终成为 <code>oshiItems</code>，来理解同样的区别。修改只限于已学过的数据和装饰的改动。"
+    },
+    {
+      "source": "保存・復元の一連の操作ができ、ソースのアレンジと入力データの保存先を確かめた。",
+      "translation": "能够完成保存与恢复的一整套操作，并确认了源代码的修改与输入数据的保存位置。"
     },
     {
       "source": "STEP 10 · コマ7",
@@ -987,6 +1023,10 @@
       "translation": "确认提交与准备情况"
     },
     {
+      "source": "先生が授業中に案内する提出先・締め切りを確認し、自分の好きなものノートで発行した公開URLを提出します。まだ案内がない場合は、URLを控えて先生へ確認します。",
+      "translation": "确认老师在课堂上告知的提交处和截止时间，提交为自己的喜爱笔记生成的导入链接。如果还没有通知，就先记下链接，向老师确认。"
+    },
+    {
       "source": "通常版MonacaのFreeプランではZIPを学生の提出物にしません。先生は公開URLから取り込み、初期データと操作を確認します。公開中の自分のプロジェクトは提出後に削除しません。",
       "translation": "在标准版 Monaca 的 Free 方案中，不以 ZIP 作为学生的提交物。老师通过导入链接导入，确认初始数据和操作。正在公开的自己的项目，提交后不要删除。"
     },
@@ -999,8 +1039,20 @@
       "translation": "区分共享源代码的提交，与展示保存在设备上的数据。与确认 Android／iOS 运行环境时一样，具体记录已准备好的项目和还不能使用的项目。"
     },
     {
+      "source": "指定先へ自分の公開URLを提出し、Flutter準備の状態も先生へ伝えた。",
+      "translation": "已向指定的提交处提交自己的导入链接，并向老师说明了 Flutter 的准备状态。"
+    },
+    {
       "source": "STEP 14 · コマ7",
       "translation": "STEP 14 · 第7节课"
+    },
+    {
+      "source": "アレンジできる場所を確かめる",
+      "translation": "确认可以修改的地方"
+    },
+    {
+      "source": "最後に提出したソースを見ながら、次の3点を確かめます。",
+      "translation": "最后，一边看提交的源代码，一边确认下面3点。"
     },
     {
       "source": "どのファイルの、どの文字・色・初期データを変更したか。",
@@ -1021,6 +1073,14 @@
     {
       "source": "全コードは見本との比較用です。自分の変更を消して見本に戻す必要はありません。動かなくなった部分や、変更した場所と結果の関係を確かめるために使います。",
       "translation": "完整代码用于与示例比较。不需要删掉自己的改动恢复成示例。它用来确认不能运行的部分，以及改动的地方与结果之间的关系。"
+    },
+    {
+      "source": "HTML・CSS・JavaScriptの役割分担はWeb基礎と同じで、変更した場所はファイルの種類から見つけられます。保存があるアプリでは、ソースの初期値と保存値の両方を見ます。<code>SharedPreferences</code>／<code>UserDefaults</code>を使うアプリで、コードに書いた初期値と端末に残る保存値が別にあるのと同じです。",
+      "translation": "HTML、CSS、JavaScript 的分工与 Web 基础相同，可以根据文件的种类找到改动的位置。有保存功能的应用，要同时看源代码的初始值和保存的值。这与使用 <code>SharedPreferences</code>／<code>UserDefaults</code> 的应用中，写在代码里的初始值和留在设备上的保存值是分开的一样。"
+    },
+    {
+      "source": "自分の変更箇所が画面に現れ、初期状態からも伝わる作品にできた。",
+      "translation": "自己修改的地方已出现在页面上，作品从初始状态也能传达出主题。"
     },
     {
       "source": "見えること",
