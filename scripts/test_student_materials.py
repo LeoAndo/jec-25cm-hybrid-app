@@ -223,6 +223,7 @@ class PackageStudentMaterialsTest(unittest.TestCase):
         self.assertIn("  M02 TapCounter：docs/tap-counter/index.html", instructions)
         self.assertIn("  F01 HelloFlutter：docs/hello-flutter/index.html", instructions)
         self.assertIn("Visual Studio Code", instructions)
+        self.assertIn(f"できたフォルダ {FIXTURE_STEM} を ~/Documents（書類）の直下に置きます", instructions)
         self.assertIn("取り込み用のURL", instructions)
         for word in ("Kotlin", "IntelliJ IDEA", "Android Studio"):
             self.assertNotIn(word, instructions)
@@ -541,6 +542,7 @@ class StudentReleaseTest(unittest.TestCase):
         self.assertIn("- `F01 HelloFlutter：docs/hello-flutter/index.html`", text)
         # 「File > Open Folder…」の例は、先頭のMonacaの見本ではなく、最初のFlutterの見本にする。
         self.assertIn("「File > Open Folder…」で `samples/F01HelloFlutter`", text)
+        self.assertIn(f"できたフォルダ `{self.metadata['asset'].removesuffix('.zip')}` を `~/Documents`（書類）の直下に置きます", text)
         self.assertIn("取り込み用のURL", text)
         for word in ("Kotlin", "IntelliJ IDEA", "Android Studio"):
             self.assertNotIn(word, text)

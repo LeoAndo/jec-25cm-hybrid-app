@@ -197,7 +197,7 @@ def prepare(repo, metadata):
     body = (
         f"# ハイブリッドアプリ開発技法 教材 {version}\n\n"
         "## ダウンロードと開き方\n\n"
-        f"1. Assetsの **{asset}** をダウンロードして展開します。\n"
+        f"1. Assetsの **{asset}** をダウンロードして展開し、できたフォルダ `{asset.removesuffix('.zip')}` を `~/Documents`（書類）の直下に置きます。\n"
         "2. `docs/common/setup.html` をブラウザで開きます。第1コマにSTEP 1〜3、第7コマにSTEP 4〜7を開始し、第8コマでも確認を続けます。\n"
         "   Flutterのダウンロードも授業時間内に行います。Flutterの初回実行は単元の教科書で行います。\n"
         "3. 授業で使う単元の教科書をブラウザで開きます。\n\n"
@@ -206,7 +206,7 @@ def prepare(repo, metadata):
         f"   Flutterの単元は、Visual Studio Code の「File > Open Folder…」で `{sample_example(projects)}` のように選ぶだけで開けます。\n"
         "   Monacaの単元は、教科書に載っている取り込み用のURLからMonacaへ取り込みます。\n"
         "   `samples` フォルダの中身は、コードを読み比べるための写しです。\n\n"
-        "教材を更新するときは別フォルダに展開し、自分で作ったプロジェクトを上書きしないでください。\n"
+        "教材を更新するときは `~/Documents` の直下に別のフォルダとして展開し、自分で作ったプロジェクト（`~/Documents/HybridApp` の中）を上書きしないでください。\n"
         "授業中は先生が指定した版を使ってください。\n\n"
         f"{localized_download_guidance(report, asset)}"
         f"## 学生向けの補足\n\n{student_notes or '対象単元・作業のやり直しの要否は、先生の案内を確認してください。'}\n\n"
