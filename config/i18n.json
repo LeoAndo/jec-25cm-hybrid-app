@@ -6,7 +6,7 @@
     {
       "code": "en",
       "name": "English",
-      "distribute": false,
+      "distribute": true,
       "ui": {
         "copy": "Copy",
         "copy_label": "Copy the code for {title}",
@@ -25,7 +25,7 @@
     {
       "code": "zh-Hans",
       "name": "简体中文",
-      "distribute": false,
+      "distribute": true,
       "han": true,
       "ui": {
         "copy": "复制",

@@ -84,13 +84,14 @@
 | 好きなものノート | favorites notebook | M01・M02の題材。画面の題名 「好きなものノート」 は日本語のまま残し (Favorites Notebook) を添える |
 | 好きなもの | favorite | |
 | 名前・種類・好きな理由 | name / type / reason | 画面の項目名。コードのプロパティ `name`・`genre`・`comment` は原文のまま |
+| 項目（オブジェクトの） | field | M02の保存データの「文字列の3項目」「項目名」。配列の1件を指す item と区別する |
 | ひとこと | short comment | M01の第1コマのカードの文 |
-| 一覧／詳細 | list / detail screen | |
+| 一覧／詳細 | list / detail screen | 「詳細」は detail screen にそろえる（detail page とは書かない）。Onsen UI のページそのもの（`detail.html` の template、`page.data`）を指すときだけ page |
 | 行 | row | 一覧の1行 |
 | 右端の目印（＞） | marker (＞) at the right edge | Onsen UI の chevron |
 | 端末選択 | device selector | プレビューの iPhone 15／Pixel 8 |
 | OSの強制指定 | forced OS setting | `ons.platform.select` |
-| 押す／クリック | tap / click | 端末の操作は tap、マウスは click |
+| 押す／クリック | tap / click | 端末の操作は tap、マウスは click。Monacaのプレビューの `Reload` はマウスの操作なので click。F01・F02で「押す」が「スタンプを押す」の略のときは add a stamp と書く（press a habit とは書かない） |
 | 初期化 | reset | 画面の「初期の内容に戻す」は日本語のまま残し (Restore initial contents) を添える |
 | 確認欄（初期化の確認欄） | confirmation panel | M02の初期化のパネル |
 | 確認欄（STEPの確認欄） | check box | 各STEPの末尾のチェック |
