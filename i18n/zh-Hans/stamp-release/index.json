@@ -1,0 +1,1130 @@
+{
+  "source": "docs/stamp-release/index.html",
+  "language": "zh-Hans",
+  "entries": [
+    {
+      "source": "F02 スタンプ帳：入力・保存・APK提出 | ハイブリッドアプリ開発技法",
+      "translation": "F02 印章簿：输入、保存、提交 APK | 混合应用开发技术"
+    },
+    {
+      "source": "本文へ移動",
+      "translation": "跳转到正文"
+    },
+    {
+      "source": "JEC / ハイブリッドアプリ開発技法",
+      "translation": "JEC / 混合应用开发技术"
+    },
+    {
+      "source": "0 / 20 ステップ確認済み",
+      "translation": "已确认 0 / 20 个步骤"
+    },
+    {
+      "source": "単元の進み具合",
+      "translation": "单元进度"
+    },
+    {
+      "source": "コマごとの目次",
+      "translation": "各节课的目录"
+    },
+    {
+      "source": "コマ12 · STEP 00〜04",
+      "translation": "第12节课 · STEP 00～04"
+    },
+    {
+      "source": "00 一覧と詳細から再開する",
+      "translation": "00 从列表和详情继续"
+    },
+    {
+      "source": "01 習慣を入力する画面を作る",
+      "translation": "01 制作输入习惯的页面"
+    },
+    {
+      "source": "02 空欄を確かめる",
+      "translation": "02 检查留空"
+    },
+    {
+      "source": "03 習慣を追加して戻る",
+      "translation": "03 添加习惯并返回"
+    },
+    {
+      "source": "04 入力の題材をアレンジする",
+      "translation": "04 修改输入的主题"
+    },
+    {
+      "source": "コマ13 · STEP 05〜09",
+      "translation": "第13节课 · STEP 05～09"
+    },
+    {
+      "source": "05 完了を待つ処理を読む",
+      "translation": "05 阅读等待完成的处理"
+    },
+    {
+      "source": "06 文字列リストへ保存する",
+      "translation": "06 保存为字符串列表"
+    },
+    {
+      "source": "07 起動時に記録を復元する",
+      "translation": "07 启动时恢复记录"
+    },
+    {
+      "source": "08 初期化と失敗時の表示",
+      "translation": "08 重置与失败时的显示"
+    },
+    {
+      "source": "09 保存を確かめてアレンジする",
+      "translation": "09 确认保存并修改"
+    },
+    {
+      "source": "コマ14 · STEP 10〜14",
+      "translation": "第14节课 · STEP 10～14"
+    },
+    {
+      "source": "10 Androidで初めて実行する",
+      "translation": "10 第一次在 Android 上运行"
+    },
+    {
+      "source": "11 提出形式のAPKを作る",
+      "translation": "11 制作提交用的 APK"
+    },
+    {
+      "source": "12 生成したAPKをインストールする",
+      "translation": "12 安装生成的 APK"
+    },
+    {
+      "source": "13 ソースと保存データを区別する",
+      "translation": "13 区分源码和保存的数据"
+    },
+    {
+      "source": "14 配色を整えてAPKを作り直す",
+      "translation": "14 调整配色并重新生成 APK"
+    },
+    {
+      "source": "コマ15 · STEP 15〜19",
+      "translation": "第15节课 · STEP 15～19"
+    },
+    {
+      "source": "15 完成確認の順番を決める",
+      "translation": "15 确定完成检查的顺序"
+    },
+    {
+      "source": "16 自分の作品として仕上げる",
+      "translation": "16 完成为自己的作品"
+    },
+    {
+      "source": "17 最終APKを確認して提出する",
+      "translation": "17 确认最终 APK 并提交"
+    },
+    {
+      "source": "18 変更箇所と動作を説明する",
+      "translation": "18 说明修改之处和运行情况"
+    },
+    {
+      "source": "19 アレンジできる場所を振り返る",
+      "translation": "19 回顾可以修改的地方"
+    },
+    {
+      "source": "困ったとき",
+      "translation": "遇到问题时"
+    },
+    {
+      "source": "完成プロジェクトを開く",
+      "translation": "打开完成项目"
+    },
+    {
+      "source": "共通：はじめの準備",
+      "translation": "通用：上课前的准备"
+    },
+    {
+      "source": "コマ12〜15 · 各90分",
+      "translation": "第12～15节课 · 每节90分钟"
+    },
+    {
+      "source": "自分の習慣を、残して続けよう。",
+      "translation": "把自己的习惯记下来，坚持下去。"
+    },
+    {
+      "source": "入力した習慣とスタンプを端末へ保存し、再起動後も続けられるアプリにします。保存の完了を待つ処理を読み、生成したAPKそのものを確認して提出しましょう。",
+      "translation": "把输入的习惯和印章保存到设备上，做成重新启动后也能继续使用的应用。阅读等待保存完成的处理，确认生成的 APK 本身，然后提交。"
+    },
+    {
+      "source": "完成見本は<code>F02StampRelease</code>です。この教科書に開始コードと作成・実行手順を掲載しています。既に作っている自分のスタンプ帳から続けても構いません。Web基礎とJava／Swiftの知識を比べながら読みます。",
+      "translation": "完成示例是 <code>F02StampRelease</code>。本课本中登载了起始代码，以及创建和运行的步骤。也可以从自己已经做好的印章簿继续。阅读时请对照 Web 基础和 Java/Swift 的知识。"
+    },
+    {
+      "source": "STEP 00 · コマ12",
+      "translation": "STEP 00 · 第12节课"
+    },
+    {
+      "source": "一覧と詳細から再開する",
+      "translation": "从列表和详情继续"
+    },
+    {
+      "source": "Visual Studio Codeで、自分のスタンプ帳のフォルダを開きます。既に<code>F01StampBoard</code>として作っている場合は名前を変えず、その1本を育てて構いません。まだ無い場合はTerminalで次を実行し、生成した<code>F02StampRelease</code>を<code>File &gt; Open Folder…</code>で開きます。同名フォルダへ上書きしません。",
+      "translation": "在 Visual Studio Code 中打开自己的印章簿文件夹。如果已经以 <code>F01StampBoard</code> 的名字做好了，不用改名，继续在那一个项目上开发即可。如果还没有，在 Terminal 中运行下面的命令，然后用 <code>File &gt; Open Folder…</code> 打开生成的 <code>F02StampRelease</code>。不要覆盖同名文件夹。"
+    },
+    {
+      "source": "SDKはFlutter 3.47.5 / Dart 3.13.4です。不足分は<a1>共通の準備資料</a1>を授業中に確認します。既存のiOSランタイムを使い、<code>flutter upgrade</code>はしません。",
+      "translation": "SDK 是 Flutter 3.47.5 / Dart 3.13.4。缺少的部分在课堂上参照<a1>通用的准备资料</a1>确认。使用已有的 iOS 运行时，不要执行 <code>flutter upgrade</code>。"
+    },
+    {
+      "source": "<code>lib/main.dart</code>を下の開始コードへそろえます。自分が変えた文字・色は先に控えます。<code>pubspec.yaml</code>の<code>dependencies</code>側のFlutter SDKは残し、<code>dev_dependencies</code>側に<code>flutter_test</code>のひな形がある場合はそのブロックだけ除きます。<code>test/</code>のひな形も生成されていた場合だけ除き、<code>flutter_lints</code>は残します。",
+      "translation": "把 <code>lib/main.dart</code> 改成下面的起始代码。先记下自己改过的文字和颜色。保留 <code>pubspec.yaml</code> 中 <code>dependencies</code> 一侧的 Flutter SDK；如果 <code>dev_dependencies</code> 一侧有 <code>flutter_test</code> 的模板，只删除那一块。只有在也生成了 <code>test/</code> 的模板时才删除它，<code>flutter_lints</code> 保留。"
+    },
+    {
+      "source": "<code>Terminal &gt; New Terminal</code>で<code>flutter pub get</code>を実行し、<code>Flutter: Launch Emulator</code>で既存のiOSシミュレータを起動します。<code>flutter devices</code>でIDを読み、<code>flutter run -d 端末ID</code>で実行します。端末IDは表示された値へ置き換えます。",
+      "translation": "用 <code>Terminal &gt; New Terminal</code> 运行 <code>flutter pub get</code>，再用 <code>Flutter: Launch Emulator</code> 启动已有的 iOS 模拟器。用 <code>flutter devices</code> 查看 ID，然后用 <code>flutter run -d 端末ID</code> 运行。把 端末ID（设备 ID）替换成显示出来的值。"
+    },
+    {
+      "source": "コードを保存したら、<code>flutter run</code>が動いているターミナルで小文字の<code>r</code>を押すとホットリロードし、現在の<code>State</code>を保って画面を更新します。初期値や<code>initState</code>からやり直す場合は、大文字の<code>R</code>（<code>Shift + R</code>）でホットリスタートします。<code>q</code>は実行の終了です。以後、再起動による確認では<code>R</code>を使い、保存が未実装の段階では入力した習慣や回数が消えることも確かめます。",
+      "translation": "保存代码后，在运行着 <code>flutter run</code> 的终端里按小写的 <code>r</code>，就会热重载，在保留当前 <code>State</code> 的同时更新页面。要从初始值或 <code>initState</code> 重新开始时，按大写的 <code>R</code>（<code>Shift + R</code>）热重启。<code>q</code> 是结束运行。此后，通过重新启动来确认时都用 <code>R</code>；在还没有实现保存的阶段，也要确认输入的习惯和次数会消失。"
+    },
+    {
+      "source": "開始コード",
+      "translation": "起始代码"
+    },
+    {
+      "source": "役割",
+      "translation": "作用"
+    },
+    {
+      "source": "<code>runApp</code>から<code>MaterialApp</code>を起動し、<code>ThemeData</code>と最初の画面を指定。",
+      "translation": "从 <code>runApp</code> 启动 <code>MaterialApp</code>，指定 <code>ThemeData</code> 和第一个页面。"
+    },
+    {
+      "source": "名前・理由・回数を保持。<code>required</code>は必須の名前付き引数、<code>final</code>は再代入しないフィールド。",
+      "translation": "保存名称、理由、次数。<code>required</code> 是必需的命名参数，<code>final</code> 是不重新赋值的字段。"
+    },
+    {
+      "source": "<code>StampBoardPage</code>の<code>State</code>",
+      "translation": "<code>StampBoardPage</code> 的 <code>State</code>"
+    },
+    {
+      "source": "<code>habits</code>を保持し、<code>setState</code>で回数の変更を通知。<code>build</code>が値から一覧・合計を作る。",
+      "translation": "保存 <code>habits</code>，用 <code>setState</code> 通知次数的变化。<code>build</code> 根据值生成列表和合计。"
+    },
+    {
+      "source": "<code>count</code>を受け取り、<code>for</code>と条件演算子でマークを並べる表示専用Widget。",
+      "translation": "接收 <code>count</code>，用 <code>for</code> 和条件运算符排列标记的纯显示 Widget。"
+    },
+    {
+      "source": "選んだ<code>Habit</code>を<code>HabitDetailPage</code>へ渡し、戻った後も一覧を保持。",
+      "translation": "把选中的 <code>Habit</code> 传给 <code>HabitDetailPage</code>，返回后列表仍然保留。"
+    },
+    {
+      "source": "<code>child</code>は1部品、<code>children</code>は部品のリストです。<code>Column</code>／<code>Row</code>で縦横、<code>ListView</code>でスクロール、<code>Wrap</code>で折り返しを指定します。<code>$</code>と波括弧は文字列補間、<code>() =&gt;</code>はコールバックの1式を返す書き方です。全件の一覧・詳細、0〜5の増減を確認します。再起動で0へ戻るのは、この段階では保存していないためです。",
+      "translation": "<code>child</code> 是1个部件，<code>children</code> 是部件的列表。用 <code>Column</code>/<code>Row</code> 指定纵向和横向的排列，用 <code>ListView</code> 指定滚动，用 <code>Wrap</code> 指定换行。<code>$</code> 和花括号是字符串插值，<code>() =&gt;</code> 是返回1个表达式的回调写法。确认全部条目的列表和详情，以及0～5的增减。重新启动后回到0，是因为这个阶段还没有保存。"
+    },
+    {
+      "source": "Javaでモデルと<code>View</code>を更新する目的に対し、Flutterでは<code>setState</code>で値の変更を通知し、その値からWidgetを返します。遷移はSwiftのNavigation Controllerと同じく画面を積み、引数でデータを渡します。",
+      "translation": "相对于 Java 中更新模型和 <code>View</code> 的做法，Flutter 中用 <code>setState</code> 通知值的变化，再根据该值返回 Widget。跳转和 Swift 的 Navigation Controller 一样，把页面叠加上去，用参数传递数据。"
+    },
+    {
+      "source": "このSTEPの全コード（照合・合流用）",
+      "translation": "本 STEP 的完整代码（用于核对与中途加入）"
+    },
+    {
+      "source": "lib/main.dart · 全文",
+      "translation": "lib/main.dart · 完整代码"
+    },
+    {
+      "source": "自分のプロジェクトで一覧・スタンプ・詳細の開始状態を確認できた。",
+      "translation": "已在自己的项目中确认了列表、印章、详情的起始状态。"
+    },
+    {
+      "source": "STEP 01 · コマ12",
+      "translation": "STEP 01 · 第12节课"
+    },
+    {
+      "source": "習慣を入力する画面を作る",
+      "translation": "制作输入习惯的页面"
+    },
+    {
+      "source": "一覧へ習慣を追加ボタン、移動先に<code>AddHabitPage</code>を置きます。入力内容とメッセージが変わるため、入力画面は<code>StatefulWidget</code>です。まだ追加処理を使わず、ボタンは無効にしておきます。",
+      "translation": "在列表中放一个「習慣を追加」（添加习惯）按钮，并把 <code>AddHabitPage</code> 作为跳转目标。因为输入内容和消息会变化，输入页面是 <code>StatefulWidget</code>。先不使用添加处理，把按钮设为禁用。"
+    },
+    {
+      "source": "<code>TextField</code>へ<code>TextEditingController</code>を渡すと、入力値を<code>controller.text</code>から読めます。コントローラは<code>build</code>のたびに作らず<code>State</code>のフィールドに置き、画面が破棄される<code>dispose</code>で各<code>controller.dispose</code>を呼び、最後に<code>super.dispose</code>を呼びます。",
+      "translation": "把 <code>TextEditingController</code> 传给 <code>TextField</code>，就能从 <code>controller.text</code> 读取输入值。控制器不要在每次 <code>build</code> 时创建，而是放在 <code>State</code> 的字段里；在页面被销毁的 <code>dispose</code> 中调用各个 <code>controller.dispose</code>，最后调用 <code>super.dispose</code>。"
+    },
+    {
+      "source": "名前は<code>maxLength: 40</code>、理由は200文字。<code>InputDecoration</code>の<code>labelText</code>は欄の名前、<code>hintText</code>は入力例、<code>OutlineInputBorder</code>は枠です。理由は<code>minLines: 3</code>、<code>maxLines: 5</code>で複数行にします。<code>body</code>を<code>ListView</code>にして、キーボードで表示領域が狭くても下へ動かせる形にします。",
+      "translation": "名称是 <code>maxLength: 40</code>，理由是200个字。<code>InputDecoration</code> 的 <code>labelText</code> 是输入框的名称，<code>hintText</code> 是输入示例，<code>OutlineInputBorder</code> 是边框。理由用 <code>minLines: 3</code>、<code>maxLines: 5</code> 设为多行。把 <code>body</code> 设为 <code>ListView</code>，这样即使键盘让显示区域变窄，也能向下滚动。"
+    },
+    {
+      "source": "戻るボタンは<code>Navigator.pop</code>で入力画面を閉じます。<code>PopScope</code>の<code>canPop</code>は戻ることを許す指定で、今は<code>true</code>です。保存を入れる段階で、処理中の戻る操作を制御するために使います。入力して戻り、再び開くと新しい<code>State</code>で欄が空になることを確認します。",
+      "translation": "返回按钮用 <code>Navigator.pop</code> 关闭输入页面。<code>PopScope</code> 的 <code>canPop</code> 是允许返回的设置，现在是 <code>true</code>。在加入保存的阶段，它用来控制处理过程中的返回操作。输入后返回，再次打开时会是新的 <code>State</code>，请确认输入框变为空。"
+    },
+    {
+      "source": "全コードには、後のSTEPで使う部分も先に入れてあります。空欄を確かめて<code>message</code>へ文を入れる<code>submit</code>はSTEP 02で、入力画面から一覧へ習慣を渡す<code>onSave</code>と、渡された習慣を一覧へ加える<code>addHabit</code>はSTEP 03で使います。<code>onSave</code>は<code>AddHabitPage</code>の必須の名前付き引数なので、一覧の<code>openAdd</code>は今から<code>addHabit</code>を渡します。追加するボタンの<code>onPressed</code>が<code>null</code>なので、このSTEPではどれも呼ばれません。<code>TextField</code>の<code>enabled: true</code>は入力を受け付ける指定です。<code>canPop</code>と同じく今は<code>true</code>で、保存を入れる段階で、保存中の入力を止めるために使います。",
+      "translation": "完整代码里已经先放入了后面 STEP 要用的部分。检查留空并把文字放进 <code>message</code> 的 <code>submit</code> 在 STEP 02 使用；把习惯从输入页面传给列表的 <code>onSave</code>，以及把收到的习惯加进列表的 <code>addHabit</code> 在 STEP 03 使用。<code>onSave</code> 是 <code>AddHabitPage</code> 的必需命名参数，所以列表的 <code>openAdd</code> 现在就传入 <code>addHabit</code>。「追加する」（添加）按钮的 <code>onPressed</code> 是 <code>null</code>，所以在这个 STEP 里它们都不会被调用。<code>TextField</code> 的 <code>enabled: true</code> 是接受输入的设置。和 <code>canPop</code> 一样，现在是 <code>true</code>，在加入保存的阶段，用来在保存过程中停止输入。"
+    },
+    {
+      "source": "Androidの<code>EditText</code>やiOSの<code>UITextField</code>から文字を読む場面に対応します。Flutterでは<code>controller</code>を<code>State</code>に保持し、画面が終わるときに解放します。入力欄を開き直しても残したい場合は別の場所へ保存が必要ですが、まだ行いません。",
+      "translation": "对应于从 Android 的 <code>EditText</code> 或 iOS 的 <code>UITextField</code> 读取文字的场景。在 Flutter 中，把 <code>controller</code> 保存在 <code>State</code> 里，页面结束时释放。如果希望重新打开输入框后内容仍然保留，就需要保存到别的地方，但现在还不做。"
+    },
+    {
+      "source": "2つの入力欄を開いて入力し、戻ることができた。",
+      "translation": "已打开2个输入框并输入，然后返回。"
+    },
+    {
+      "source": "STEP 02 · コマ12",
+      "translation": "STEP 02 · 第12节课"
+    },
+    {
+      "source": "空欄を確かめる",
+      "translation": "检查留空"
+    },
+    {
+      "source": "追加ボタンの<code>onPressed</code>へ<code>submit</code>を渡します。括弧を付けた<code>submit()</code>の実行結果ではなく、押したときに呼ぶ関数を渡します。",
+      "translation": "把 <code>submit</code> 传给添加按钮的 <code>onPressed</code>。传的不是带括号的 <code>submit()</code> 的执行结果，而是按下时要调用的函数。"
+    },
+    {
+      "source": "<code>submit</code>では2つの<code>controller.text</code>を<code>trim</code>して前後の空白を除き、どちらかの<code>isEmpty</code>が<code>true</code>ならメッセージを表示して<code>return</code>します。今回は入力を確認しましたという文までで、一覧への追加は次のSTEPです。",
+      "translation": "在 <code>submit</code> 中，对2个 <code>controller.text</code> 执行 <code>trim</code> 去掉首尾的空格，只要其中一个的 <code>isEmpty</code> 是 <code>true</code>，就显示消息并 <code>return</code>。这次只做到显示「入力を確認しました」（已确认输入）这句话，添加到列表放在下一个 STEP。"
+    },
+    {
+      "source": "両方を空にして追加するを押します。",
+      "translation": "两项都留空，点击「追加する」（添加）。"
+    },
+    {
+      "source": "名前を空白だけにして、理由だけ入力して押します。",
+      "translation": "名称只输入空格，只填写理由，然后点击。"
+    },
+    {
+      "source": "両方を入力し、確認の文と名前が表示されることを確かめます。",
+      "translation": "两项都输入，确认显示出确认的文字和名称。"
+    },
+    {
+      "source": "エラーのたびに欄を消さず、直して再試行できるようにします。理由に改行を入れ、入力が保持されることも見ます。",
+      "translation": "每次出错时不清空输入框，让用户可以修改后重试。在理由中输入换行，也看看输入是否保留。"
+    },
+    {
+      "source": "<code>trim</code>と空欄の判定はJavaの入力検証に対応します。Dartの<code>isEmpty</code>はプロパティとして読みます。結果はダイアログではなく同じ画面の<code>Text</code>へ出し、<code>setState</code>で変更を通知します。",
+      "translation": "<code>trim</code> 和留空的判断对应于 Java 的输入校验。Dart 的 <code>isEmpty</code> 作为属性读取。结果不用对话框，而是显示在同一页面的 <code>Text</code> 中，用 <code>setState</code> 通知变化。"
+    },
+    {
+      "source": "空欄・空白だけ・正常入力の違いを確認できた。",
+      "translation": "已确认留空、只有空格、正常输入三者的区别。"
+    },
+    {
+      "source": "STEP 03 · コマ12",
+      "translation": "STEP 03 · 第12节课"
+    },
+    {
+      "source": "習慣を追加して戻る",
+      "translation": "添加习惯并返回"
+    },
+    {
+      "source": "入力確認後に<code>Habit</code>を作り、<code>widget.onSave</code>へ渡します。<code>onSave</code>は親が入力画面へ渡した関数で、この段階は<code>void Function(Habit)</code>型です。「<code>Habit</code>を受け取り、結果の値を返さない処理」という意味です。",
+      "translation": "确认输入后创建 <code>Habit</code>，传给 <code>widget.onSave</code>。<code>onSave</code> 是父页面传给输入页面的函数，在这个阶段是 <code>void Function(Habit)</code> 类型。意思是“接收 <code>Habit</code>、不返回结果值的处理”。"
+    },
+    {
+      "source": "親の<code>addHabit</code>では<code>setState</code>の中で<code>habits.add</code>を呼びます。入力画面は<code>Navigator.pop</code>で閉じ、下に残っている一覧を表示します。<code>widget</code>はこの<code>State</code>に対応する<code>AddHabitPage</code>の設定を読むためのプロパティです。",
+      "translation": "父页面的 <code>addHabit</code> 在 <code>setState</code> 中调用 <code>habits.add</code>。输入页面用 <code>Navigator.pop</code> 关闭，显示留在下面的列表。<code>widget</code> 是用来读取与这个 <code>State</code> 对应的 <code>AddHabitPage</code> 设置的属性。"
+    },
+    {
+      "source": "1件追加し、一覧が4件になったことを確認します。",
+      "translation": "添加1条，确认列表变成4条。"
+    },
+    {
+      "source": "追加したカードの「詳しく見る」を押し、名前と理由が詳細に一致するか確認します。",
+      "translation": "点击新添加卡片上的「詳しく見る」（查看详情），确认名称和理由与详情一致。"
+    },
+    {
+      "source": "スタンプを押し、一覧・詳細の回数を確かめます。",
+      "translation": "盖印章，确认列表和详情中的次数。"
+    },
+    {
+      "source": "ホットリスタートし、追加した習慣が消えて初期3件へ戻ることを確認します。",
+      "translation": "热重启，确认添加的习惯消失，回到初始的3条。"
+    },
+    {
+      "source": "ソースを書き換えたのではなく実行中の<code>List</code>へ加えただけなので、再起動で消えるのはこのSTEPの正常動作です。",
+      "translation": "因为不是改写了源码，而只是加进了运行中的 <code>List</code>，所以重新启动后消失是这个 STEP 的正常行为。"
+    },
+    {
+      "source": "Swiftのクロージャを画面へ渡す方法と対応します。Dartでは<code>Function</code>の前後で引数と戻り値の型を示します。親の<code>State</code>だけが一覧を持つため、入力画面へ別の一覧を重複して作りません。",
+      "translation": "对应于 Swift 中把闭包传给页面的方法。在 Dart 中，在 <code>Function</code> 的前后标明参数和返回值的类型。只有父页面的 <code>State</code> 持有列表，所以不在输入页面重复创建另一个列表。"
+    },
+    {
+      "source": "追加した習慣を一覧・詳細で読め、再起動では消えることを説明できた。",
+      "translation": "能够在列表和详情中看到添加的习惯，并能说明重新启动后它会消失。"
+    },
+    {
+      "source": "STEP 04 · コマ12",
+      "translation": "STEP 04 · 第12节课"
+    },
+    {
+      "source": "入力の題材をアレンジする",
+      "translation": "修改输入的主题"
+    },
+    {
+      "source": "名前と理由の入力例、見出し、カードの初期データを自分の題材へ変えます。個人的な体験を開示する必要はなく、架空の習慣でも構いません。",
+      "translation": "把名称和理由的输入示例、标题、卡片的初始数据改成自己的主题。不需要公开个人经历，虚构的习惯也可以。"
+    },
+    {
+      "source": "場所",
+      "translation": "位置"
+    },
+    {
+      "source": "変わること",
+      "translation": "会变化的内容"
+    },
+    {
+      "source": "<code>InputDecoration</code>の<code>hintText</code>",
+      "translation": "<code>InputDecoration</code> 的 <code>hintText</code>"
+    },
+    {
+      "source": "入力前の記入例。",
+      "translation": "输入前显示的填写示例。"
+    },
+    {
+      "source": "見出しの<code>Text</code>・余白",
+      "translation": "标题的 <code>Text</code>、留白"
+    },
+    {
+      "source": "何を入力するかの伝わり方と読みやすさ。",
+      "translation": "能否让人明白要输入什么，以及是否易读。"
+    },
+    {
+      "source": "<code>habits</code>の初期<code>Habit</code>",
+      "translation": "<code>habits</code> 的初始 <code>Habit</code>"
+    },
+    {
+      "source": "再起動したときの最初の習慣。",
+      "translation": "重新启动时最初显示的习惯。"
+    },
+    {
+      "source": "初期データはホットリスタートで確かめます。追加・空欄・詳細・戻るも試し、どこを変えたか控えて終えます。",
+      "translation": "初始数据用热重启来确认。也试试添加、留空、详情、返回，记下改了哪里后结束。"
+    },
+    {
+      "source": "HTMLの<code>placeholder</code>と同じ役割を<code>hintText</code>が持ちます。入力済みデータとソースの記入例の違いを、再起動時の表示で確認します。",
+      "translation": "<code>hintText</code> 的作用和 HTML 的 <code>placeholder</code> 相同。通过重新启动时的显示，确认已输入的数据和源码中填写示例的区别。"
+    },
+    {
+      "source": "入力例と題材をアレンジし、動作が続いていることを確かめた。",
+      "translation": "已修改输入示例和主题，并确认功能仍然正常。"
+    },
+    {
+      "source": "STEP 05 · コマ13",
+      "translation": "STEP 05 · 第13节课"
+    },
+    {
+      "source": "完了を待つ処理を読む",
+      "translation": "阅读等待完成的处理"
+    },
+    {
+      "source": "このコマの開始コード",
+      "translation": "本节课的起始代码"
+    },
+    {
+      "source": "途中から合流する場合は、自分が変えた文字・色・数値を控えてから<code>lib/main.dart</code>をそろえます。",
+      "translation": "如果是中途跟进，先记下自己改过的文字、颜色和数值，再把 <code>lib/main.dart</code> 改成与这份代码一致。"
+    },
+    {
+      "source": "Visual Studio Codeで同じスタンプ帳を開きます。開始状態は「入力で追加できるが、再起動で消える」です。今日は記録を端末へ残します。",
+      "translation": "在 Visual Studio Code 中打开同一个印章簿。起始状态是“可以通过输入添加，但重新启动后会消失”。今天把记录留在设备上。"
+    },
+    {
+      "source": "この単元の新概念は<strong>非同期処理と、その完了を待つ<code>async</code> / <code>await</code></strong>です。Dartの<code>Future</code>は、後で完了する処理の結果を表します。<code>Future&lt;bool&gt;</code>なら、完了後に<code>true</code>か<code>false</code>を受け取る形です。",
+      "translation": "本单元的新概念是<strong>异步处理（非同期処理），以及等待它完成的 <code>async</code> / <code>await</code></strong>。Dart 的 <code>Future</code> 表示稍后才完成的处理的结果。如果是 <code>Future&lt;bool&gt;</code>，就是完成后收到 <code>true</code> 或 <code>false</code> 的形式。"
+    },
+    {
+      "source": "<code>async</code>を付けた関数の中では<code>await</code>が使えます。<code>await</code>では、その処理の完了後に続きへ進みます。画面全体を同期的に止めて待つのではなく、待っている間も画面を表示できます。保存の完了前に「保存した」と表示したり、入力を消したりしない順番を作ります。",
+      "translation": "在加了 <code>async</code> 的函数里可以使用 <code>await</code>。<code>await</code> 会在该处理完成后再继续往下执行。不是同步地让整个页面停下来等待，而是在等待期间页面仍然可以显示。这样就能做到在保存完成之前，既不显示“已保存”，也不清空输入。"
+    },
+    {
+      "source": "次は流れを読む抜粋で、このSTEPではまだ追加しません。次のSTEPでパッケージと全コードをそろえます。",
+      "translation": "下面是用来阅读流程的节选，在这个 STEP 里还不添加。下一个 STEP 再统一包和完整代码。"
+    },
+    {
+      "source": "Javaの同期的な戻り値と比較し、今回は<code>Future</code>の完了を待って結果を得る点を新しく扱います。Java／Swiftの非同期APIを履修済みとは仮定しません。既知の順次処理から「完了後の続き」と「待機中の画面」を区別します。",
+      "translation": "与 Java 的同步返回值相比，这次新学的是等待 <code>Future</code> 完成后取得结果这一点。不假定已经学过 Java/Swift 的异步 API。从已知的顺序处理出发，区分“完成后的后续”和“等待中的页面”。"
+    },
+    {
+      "source": "<code>Future</code>・<code>async</code>・<code>await</code>の役割と、保存後に進む順序を説明できた。",
+      "translation": "能够说明 <code>Future</code>、<code>async</code>、<code>await</code> 的作用，以及保存后继续执行的顺序。"
+    },
+    {
+      "source": "STEP 06 · コマ13",
+      "translation": "STEP 06 · 第13节课"
+    },
+    {
+      "source": "文字列リストへ保存する",
+      "translation": "保存为字符串列表"
+    },
+    {
+      "source": "まず<code>pubspec.yaml</code>の<code>dependencies</code>へ<code>shared_preferences: 2.5.5</code>を加えます。<code>dependencies</code>は既にあるので二重に作らず、Flutter SDKと同じ字下げで追加します。ほかの設定は残します。",
+      "translation": "首先在 <code>pubspec.yaml</code> 的 <code>dependencies</code> 中加入 <code>shared_preferences: 2.5.5</code>。<code>dependencies</code> 已经存在，不要重复创建，用和 Flutter SDK 相同的缩进添加。其他设置保留。"
+    },
+    {
+      "source": "実行中のアプリを<code>q</code>で終了し、<code>flutter pub get</code>を実行します。新しいネイティブプラグインを加えたのでホットリロードだけで済ませず、全コードを更新して<code>flutter run -d 端末ID</code>で起動し直します。",
+      "translation": "用 <code>q</code> 结束运行中的应用，运行 <code>flutter pub get</code>。因为加入了新的原生插件，不能只靠热重载，要更新完整代码后用 <code>flutter run -d 端末ID</code> 重新启动。"
+    },
+    {
+      "source": "起動し直さずに<code>r</code>で反映すると、ターミナルにはエラーが出ませんが、スタンプを押しても習慣を追加しても「保存できませんでした。」で始まる文が出るだけで、保存できません。続けて<code>R</code>を押すと、画面全体が赤くなり<code>Bad state: The SharedPreferencesAsyncPlatform instance must be set.</code>と出ます。<code>r</code>と<code>R</code>はDartのコードを入れ替えるだけで、アプリのビルドをやり直しません。新しいプラグインは、ビルドし直したアプリにだけ組み込まれます。そのときは<code>q</code>で終了し、<code>flutter run -d 端末ID</code>で起動し直します。",
+      "translation": "如果不重新启动，只用 <code>r</code> 反映更改，终端里不会报错，但无论盖印章还是添加习惯，都只会显示以「保存できませんでした。」（保存失败）开头的文字，无法保存。接着按 <code>R</code>，整个屏幕会变红，并显示 <code>Bad state: The SharedPreferencesAsyncPlatform instance must be set.</code>。<code>r</code> 和 <code>R</code> 只是替换 Dart 代码，不会重新构建应用。新插件只会被组装进重新构建的应用里。这时用 <code>q</code> 结束，再用 <code>flutter run -d 端末ID</code> 重新启动。"
+    },
+    {
+      "source": "<code>import</code>でパッケージを読み込み、<code>State</code>に<code>SharedPreferencesAsync</code>を1つ持ちます。保存キー<code>storageKey</code>も1か所です。このAPIだけを使い、旧APIやキャッシュ付きAPIを混ぜません。",
+      "translation": "用 <code>import</code> 读入包，在 <code>State</code> 里持有1个 <code>SharedPreferencesAsync</code>。保存键 <code>storageKey</code> 也只在1处。只使用这个 API，不混用旧 API 和带缓存的 API。"
+    },
+    {
+      "source": "名前・理由・回数を文字列リストにして保存します。1件は3要素で、2件なら6要素です。回数は<code>count.toString()</code>で文字列へ変えます。JSONは使いません。",
+      "translation": "把名称、理由、次数做成字符串列表来保存。1条是3个元素，2条就是6个元素。次数用 <code>count.toString()</code> 转成字符串。不使用 JSON。"
+    },
+    {
+      "source": "リストの位置",
+      "translation": "列表中的位置"
+    },
+    {
+      "source": "例",
+      "translation": "示例"
+    },
+    {
+      "source": "コードを15分読む / 理由の文 / 1",
+      "translation": "コードを15分読む（读15分钟代码）/ 理由的文字 / 1"
+    },
+    {
+      "source": "外を10分歩く / 理由の文 / 0",
+      "translation": "外を10分歩く（到外面走10分钟）/ 理由的文字 / 0"
+    },
+    {
+      "source": "<code>saveHabits</code>は<code>await</code>で<code>setStringList</code>を待ち、成功してから<code>habits</code>を<code>nextHabits</code>へ更新します。<code>changeStamp</code>は新しい<code>Habit</code>を作り、表示中のオブジェクトを先に変更しません。追加は<code>List.of</code>で配列を複製して末尾へ加えます。既存の<code>Habit</code>の内容を書き換えない追加だけなら、リストのコピーで足ります。",
+      "translation": "<code>saveHabits</code> 用 <code>await</code> 等待 <code>setStringList</code>，成功后才把 <code>habits</code> 更新为 <code>nextHabits</code>。<code>changeStamp</code> 创建新的 <code>Habit</code>，不先修改正在显示的对象。添加时用 <code>List.of</code> 复制数组，再加到末尾。如果只是添加、不改写已有 <code>Habit</code> 的内容，复制列表就足够了。"
+    },
+    {
+      "source": "<code>isSaving</code>を<code>true</code>にしてボタンと入力欄を無効にし、待機中の文と<code>LinearProgressIndicator</code>を表示します。例外は<code>try</code> / <code>catch</code>で受け、失敗時は元の一覧を保ちます。<code>finally</code>は成功・失敗どちらでも待機状態を戻す場所です。",
+      "translation": "把 <code>isSaving</code> 设为 <code>true</code>，禁用按钮和输入框，显示等待中的文字和 <code>LinearProgressIndicator</code>。异常用 <code>try</code> / <code>catch</code> 接住，失败时保持原来的列表。<code>finally</code> 是无论成功还是失败都用来解除等待状态的地方。"
+    },
+    {
+      "source": "<code>onSave</code>の型は<code>Future&lt;bool&gt; Function(Habit)</code>へ変わり、入力画面の<code>submit</code>も<code>async</code>になります。<code>await</code>で親の保存を待ち、成功したときだけ<code>pop</code>します。失敗なら入力を消しません。<code>await</code>の後は<code>mounted</code>を確認し、既に破棄された<code>State</code>へ<code>setState</code>や画面遷移を行わないようにします。保存中は戻るボタンと<code>PopScope</code>の<code>canPop</code>も無効にします。",
+      "translation": "<code>onSave</code> 的类型变为 <code>Future&lt;bool&gt; Function(Habit)</code>，输入页面的 <code>submit</code> 也变成 <code>async</code>。用 <code>await</code> 等待父页面的保存，只在成功时 <code>pop</code>。失败时不清空输入。<code>await</code> 之后要确认 <code>mounted</code>，避免对已经销毁的 <code>State</code> 执行 <code>setState</code> 或页面跳转。保存过程中，返回按钮和 <code>PopScope</code> 的 <code>canPop</code> 也设为禁用。"
+    },
+    {
+      "source": "1件追加して「この端末に保存しました。」を確認します。このSTEPは保存だけで、起動時に読む処理はまだありません。再起動すると初期3件を表示する段階です。再起動した後の初期3件の画面でスタンプを押すか習慣を追加すると、保存内容は表示中の一覧で置き換わり、再起動の前に保存した習慣や回数は残りません。保存した内容をまだ読み込んでいない一覧を、そのまま保存するためです。次のSTEPで読み込めるのは、最後に保存した内容です。",
+      "translation": "添加1条，确认显示「この端末に保存しました。」（已保存到本设备）。这个 STEP 只有保存，还没有启动时读取的处理。现在的阶段是重新启动后显示初始的3条。如果在重新启动后的初始3条页面上盖印章或添加习惯，保存的内容会被正在显示的列表替换，重新启动前保存的习惯和次数就不会保留。这是因为把还没有读取保存内容的列表直接保存了。下一个 STEP 能读到的，是最后一次保存的内容。"
+    },
+    {
+      "source": "キーを指定して少量のデータを端末内へ置く目的は<code>UserDefaults</code>やAndroidの<code>SharedPreferences</code>に対応します。Flutter側は<code>Future</code>の完了を<code>await</code>で待ちます。<code>try</code> / <code>catch</code> / <code>finally</code>はJavaの例外処理と同じ役割で、画面を更新する順序を保存の成功後へそろえます。",
+      "translation": "指定键、把少量数据存放在设备内的目的，对应于 <code>UserDefaults</code> 和 Android 的 <code>SharedPreferences</code>。Flutter 这边用 <code>await</code> 等待 <code>Future</code> 完成。<code>try</code> / <code>catch</code> / <code>finally</code> 的作用和 Java 的异常处理相同，把更新页面的顺序安排在保存成功之后。"
+    },
+    {
+      "source": "保存成功の文を確認し、失敗時に元の状態を保つ順序を説明できた。",
+      "translation": "已确认保存成功的文字，并能说明失败时保持原状态的顺序。"
+    },
+    {
+      "source": "STEP 07 · コマ13",
+      "translation": "STEP 07 · 第13节课"
+    },
+    {
+      "source": "起動時に記録を復元する",
+      "translation": "启动时恢复记录"
+    },
+    {
+      "source": "起動時の<code>initState</code>から<code>loadHabits</code>を呼びます。<code>initState</code>自体を<code>async</code>にはせず、別の<code>async</code>関数へ処理を分けます。読込中は<code>isLoading</code>を<code>true</code>、<code>canSave</code>を<code>false</code>にし、初期値で保存内容を上書きしないようにします。",
+      "translation": "启动时从 <code>initState</code> 调用 <code>loadHabits</code>。不把 <code>initState</code> 本身设为 <code>async</code>，而是把处理分到另一个 <code>async</code> 函数里。读取过程中把 <code>isLoading</code> 设为 <code>true</code>、<code>canSave</code> 设为 <code>false</code>，避免用初始值覆盖保存的内容。"
+    },
+    {
+      "source": "<code>await preferences.getStringList(storageKey)</code>は未保存なら<code>null</code>です。その場合だけ<code>createInitialHabits</code>を使います。値があれば<code>decodeHabits</code>で3要素ずつ<code>Habit</code>へ戻します。空リストは正しい0件なので、初期3件へ勝手に置き換えません。",
+      "translation": "<code>await preferences.getStringList(storageKey)</code> 在未保存时是 <code>null</code>。只有这种情况才使用 <code>createInitialHabits</code>。有值时用 <code>decodeHabits</code> 每3个元素还原成一个 <code>Habit</code>。空列表是正确的0条，不要擅自替换成初始的3条。"
+    },
+    {
+      "source": "要素数が3の倍数か、余りを求める%で確認します。",
+      "translation": "用求余数的 % 确认元素个数是否为3的倍数。"
+    },
+    {
+      "source": "名前と理由を読み、空白だけでないか確認します。",
+      "translation": "读取名称和理由，确认不是只有空格。"
+    },
+    {
+      "source": "<code>int.tryParse</code>で回数を<code>int</code>へ戻します。変換できなければ<code>null</code>なので、0〜<code>stampGoal</code>の範囲と一緒に確認します。",
+      "translation": "用 <code>int.tryParse</code> 把次数还原为 <code>int</code>。无法转换时是 <code>null</code>，所以和0～<code>stampGoal</code> 的范围一起确认。"
+    },
+    {
+      "source": "異常なら<code>FormatException</code>を投げます。<code>catch</code>で文を表示し、<code>canSave</code>を<code>false</code>のままにします。",
+      "translation": "有异常时抛出 <code>FormatException</code>。在 <code>catch</code> 中显示文字，并让 <code>canSave</code> 保持 <code>false</code>。"
+    },
+    {
+      "source": "不正な保存内容を「未保存」とは扱いません。元の保存キーへ自動で書き込まず、再読み込みと教員への確認を案内します。次のSTEPで本人が選ぶ初期化を作ります。",
+      "translation": "不把无效的保存内容当作“未保存”处理。不自动写入原来的保存键，而是提示重新读取并向老师确认。下一个 STEP 制作由本人选择的重置。"
+    },
+    {
+      "source": "新しい習慣を追加し、何回かスタンプを押します。",
+      "translation": "添加新习惯，盖几次印章。"
+    },
+    {
+      "source": "アプリを終了して再起動するか、開発中はホットリスタートします。",
+      "translation": "结束应用后重新启动，或者在开发中热重启。"
+    },
+    {
+      "source": "「保存した記録を読み込みました。」、追加した習慣、回数、詳細の理由を確認します。",
+      "translation": "确认「保存した記録を読み込みました。」（已读取保存的记录）、添加的习惯、次数，以及详情中的理由。"
+    },
+    {
+      "source": "未保存の<code>null</code>はSwiftの<code>nil</code>に対応します。Androidの<code>onCreate</code>やiOSの<code>viewDidLoad</code>で保存値を画面へ戻す目的と同じですが、今回は<code>initState</code>から非同期処理を呼びます。読めたことと、アプリで扱える値かの確認を分けます。",
+      "translation": "未保存时的 <code>null</code> 对应于 Swift 的 <code>nil</code>。目的和在 Android 的 <code>onCreate</code> 或 iOS 的 <code>viewDidLoad</code> 中把保存值恢复到页面相同，但这次是从 <code>initState</code> 调用异步处理。把“读到了”和“是不是应用能处理的值”分开确认。"
+    },
+    {
+      "source": "追加した名前・理由・回数が再起動後にも戻った。",
+      "translation": "添加的名称、理由、次数在重新启动后也恢复了。"
+    },
+    {
+      "source": "STEP 08 · コマ13",
+      "translation": "STEP 08 · 第13节课"
+    },
+    {
+      "source": "初期化と失敗時の表示",
+      "translation": "重置与失败时的显示"
+    },
+    {
+      "source": "初期化ボタンと<code>resetHabits</code>を加えます。<code>showDialog&lt;bool&gt;</code>が返す<code>Future</code>を<code>await</code>し、やめるなら<code>false</code>、初期化するなら<code>true</code>を<code>Navigator.pop</code>で返します。ダイアログの外側などで閉じた場合は<code>null</code>なので、<code>confirmed != true</code>なら何もしません。",
+      "translation": "加入重置按钮和 <code>resetHabits</code>。用 <code>await</code> 等待 <code>showDialog&lt;bool&gt;</code> 返回的 <code>Future</code>，「やめる」（取消）时用 <code>Navigator.pop</code> 返回 <code>false</code>，「初期化する」（重置）时返回 <code>true</code>。在对话框外侧等处关闭时是 <code>null</code>，所以 <code>confirmed != true</code> 时什么都不做。"
+    },
+    {
+      "source": "削除するのは<code>preferences.remove(storageKey)</code>で指定したキー1個だけです。保存領域全体の<code>clear</code>は使いません。削除に成功してから初期の<code>Habit</code>配列へ戻し、保存を再び有効にします。削除に失敗したら元の一覧とエラーの文を残します。",
+      "translation": "删除的只有用 <code>preferences.remove(storageKey)</code> 指定的那1个键。不使用清空整个保存区域的 <code>clear</code>。删除成功后再恢复成初始的 <code>Habit</code> 数组，并重新启用保存。删除失败时，保留原来的列表和错误文字。"
+    },
+    {
+      "source": "自分が残す必要のない検証用の記録で、初期化を開いてやめるを押します。記録が残ることを確認します。",
+      "translation": "用自己不需要保留的测试用记录，打开重置对话框，点击「やめる」（取消）。确认记录仍然保留。"
+    },
+    {
+      "source": "必要な内容は別に控えてから、もう一度開いて初期化するを押します。",
+      "translation": "把需要的内容另外记下后，再次打开，点击「初期化する」（重置）。"
+    },
+    {
+      "source": "初期3件・回数0へ戻り、再起動しても初期値になることを確認します。",
+      "translation": "确认回到初始的3条、次数为0，并且重新启动后仍是初始值。"
+    },
+    {
+      "source": "通常の操作で保存・読込に失敗したら、表示された文を先生と確認します。学生の作品へ障害を起こすコードを入れる作業は行いません。",
+      "translation": "如果在正常操作中保存或读取失败，请和老师一起确认显示出来的文字。不做往学生作品里加入引发故障的代码这样的操作。"
+    },
+    {
+      "source": "キー単位の削除は<code>UserDefaults</code>の<code>removeObject</code>や<code>SharedPreferences.Editor.remove</code>に対応します。今回は確認画面の返答も非同期に待ち、<code>true</code>のときだけ進みます。取消しや画面を閉じた場合と、削除の確定を区別します。",
+      "translation": "按键删除对应于 <code>UserDefaults</code> 的 <code>removeObject</code> 和 <code>SharedPreferences.Editor.remove</code>。这次连确认对话框的回答也异步等待，只在 <code>true</code> 时继续。把取消或关闭对话框的情况，与确认删除区分开。"
+    },
+    {
+      "source": "取消しでは記録が残り、確定後だけ初期の習慣へ戻った。",
+      "translation": "取消时记录仍然保留，只有确认后才回到了初始的习惯。"
+    },
+    {
+      "source": "STEP 09 · コマ13",
+      "translation": "STEP 09 · 第13节课"
+    },
+    {
+      "source": "保存を確かめてアレンジする",
+      "translation": "确认保存并进行修改"
+    },
+    {
+      "source": "入力→保存→詳細→再起動→復元を一続きで確かめます。次に<code>createInitialHabits</code>の名前と理由を自分の題材へ変えます。",
+      "translation": "把输入→保存→详情→重新启动→恢复连起来确认一遍。然后把 <code>createInitialHabits</code> 中的名称和理由改成自己的主题。"
+    },
+    {
+      "source": "保存済みデータがあるとソースの初期値より優先されます。初期値のアレンジを確かめるときは、残す内容を控えてからアプリ内の初期化を使います。キーを変えて記録を見えなくする方法で済ませません。",
+      "translation": "有已保存的数据时，它比源码中的初始值优先。要确认初始值的修改时，先记下要保留的内容，再使用应用内的重置。不要用改键让记录看不见的方法来应付。"
+    },
+    {
+      "source": "効果",
+      "translation": "效果"
+    },
+    {
+      "source": "未保存・初期化後に出る題材。",
+      "translation": "未保存或重置后显示的主题。"
+    },
+    {
+      "source": "見出し、入力例、色、余白",
+      "translation": "标题、输入示例、颜色、留白"
+    },
+    {
+      "source": "使い方の伝わりやすさ。",
+      "translation": "用法是否容易理解。"
+    },
+    {
+      "source": "このパッケージは少量の設定向けで、重要な記録の永続性を保証するためのデータベースではありません。この授業では習慣の練習用記録を扱い、必要な内容は別に控えます。",
+      "translation": "这个包面向少量的设置数据，不是用来保证重要记录持久性的数据库。本课处理的是习惯的练习记录，需要的内容另外记下。"
+    },
+    {
+      "source": "既定値と保存済みの値の優先関係はSwiftの設定読込に対応します。今回は保存内容を検証してから表示します。ソースの変更がどの状態で見えるかを確認するのがアレンジの仕上げです。",
+      "translation": "默认值和已保存值的优先关系，对应于 Swift 中读取设置的做法。这次是先校验保存内容再显示。确认源码的修改在哪种状态下能看到，是修改的收尾工作。"
+    },
+    {
+      "source": "自分の題材が初期状態に表れ、保存・復元も引き続き動いた。",
+      "translation": "自己的主题出现在初始状态中，保存和恢复也继续正常工作。"
+    },
+    {
+      "source": "STEP 10 · コマ14",
+      "translation": "STEP 10 · 第14节课"
+    },
+    {
+      "source": "Androidで初めて実行する",
+      "translation": "第一次在 Android 上运行"
+    },
+    {
+      "source": "Visual Studio Codeで保存できるスタンプ帳を開きます。今日はAndroidで初めて実行し、提出するAPKを作ります。初回のSDK・Gradle等の取得も授業時間内に行います。",
+      "translation": "在 Visual Studio Code 中打开可以保存的印章簿。今天第一次在 Android 上运行，并制作要提交的 APK。首次下载 SDK、Gradle 等也在课堂时间内进行。"
+    },
+    {
+      "source": "<code>flutter doctor -v</code>で<code>Android toolchain</code>の項目を確認します。不足やライセンスの案内がある場合は先生と内容を確認します。",
+      "translation": "用 <code>flutter doctor -v</code> 确认 <code>Android toolchain</code> 一项。如果有缺少的内容或许可协议的提示，和老师一起确认内容。"
+    },
+    {
+      "source": "Android Studioの<code>Tools &gt; Device Manager</code>に別科目で使うarm64のエミュレータがあれば利用します。まだ無ければ先生と端末・システムイメージを選び、授業内で取得します。",
+      "translation": "如果 Android Studio 的 <code>Tools &gt; Device Manager</code> 里已经有其他课程用的 arm64 模拟器，就直接使用。如果还没有，和老师一起选择设备和系统镜像，在课堂内下载。"
+    },
+    {
+      "source": "Visual Studio Codeでプロジェクトを開いた状態から<code>Flutter: Launch Emulator</code>でAndroid端末を起動し、<code>flutter devices</code>でIDを読みます。",
+      "translation": "在 Visual Studio Code 中打开项目的状态下，用 <code>Flutter: Launch Emulator</code> 启动 Android 设备，再用 <code>flutter devices</code> 查看 ID。"
+    },
+    {
+      "source": "<code>android/gradle/wrapper/gradle-wrapper.properties</code>の<code>distributionUrl</code>を確認します。今回の空テンプレートはGradle 9.3.1です。<code>all.zip</code>の場合は、版を変えず<code>bin.zip</code>へそろえます。この1行だけを次の形にします。",
+      "translation": "确认 <code>android/gradle/wrapper/gradle-wrapper.properties</code> 中的 <code>distributionUrl</code>。这次的空模板是 Gradle 9.3.1。如果是 <code>all.zip</code>，不改版本，统一改成 <code>bin.zip</code>。只把这一行改成下面的形式。"
+    },
+    {
+      "source": "教員から同じURLで取得したGradleキャッシュを受け取る場合は、配布された<code>gradle-9.3.1-bin</code>フォルダを<code>~/.gradle/wrapper/dists/</code>の下へ配置します。ハッシュ名の階層、展開済みディレクトリ、.zip.okを保ち、既存の別版を上書きしません。既に同じフォルダがある場合は先生へ確認します。<code>all.zip</code>のキャッシュとは共用できません。",
+      "translation": "如果从老师那里拿到用同一 URL 下载的 Gradle 缓存，把分发的 <code>gradle-9.3.1-bin</code> 文件夹放到 <code>~/.gradle/wrapper/dists/</code> 下面。保持哈希名的目录层级、已解压的目录和 .zip.ok，不要覆盖已有的其他版本。如果已经有同名文件夹，向老师确认。不能和 <code>all.zip</code> 的缓存共用。"
+    },
+    {
+      "source": "キャッシュを受け取ってもAndroid SDK・NDK・AGP等の取得が残る場合があります。<code>flutter run -d Android端末ID</code>を実行し、ターミナルの取得状況を見ます。待機時間はコードと提出前チェックの確認に使い、途中で同じビルドを重ねて始めません。",
+      "translation": "即使拿到了缓存，也可能还需要下载 Android SDK、NDK、AGP 等。运行 <code>flutter run -d Android端末ID</code>，观察终端里的下载情况。等待时间用来确认代码和提交前的检查项目，不要在中途重复启动同一个构建。"
+    },
+    {
+      "source": "同じDartソースからiOS用とAndroid用をビルドしますが、ネイティブ側の道具と依存関係は別です。既に知っているAndroid StudioのSDK・エミュレータを使い、Flutterがビルドと起動をつなぎます。",
+      "translation": "iOS 版和 Android 版从同一份 Dart 源码构建，但原生一侧的工具和依赖是分开的。使用已经熟悉的 Android Studio 的 SDK 和模拟器，由 Flutter 衔接构建和启动。"
+    },
+    {
+      "source": "Androidの端末IDを確認し、初回実行の状況を先生へ伝えられる。",
+      "translation": "已确认 Android 的设备 ID，并能向老师说明首次运行的情况。"
+    },
+    {
+      "source": "STEP 11 · コマ14",
+      "translation": "STEP 11 · 第14节课"
+    },
+    {
+      "source": "提出形式のAPKを作る",
+      "translation": "制作提交用的 APK"
+    },
+    {
+      "source": "Androidで一覧・追加・保存・詳細を確認したら、通常の<code>release</code> APKを作ります。最初にソースを保存し、<code>flutter analyze</code>で指摘がないか確認します。",
+      "translation": "在 Android 上确认了列表、添加、保存、详情之后，制作普通的 <code>release</code> APK。首先保存源码，用 <code>flutter analyze</code> 确认没有问题。"
+    },
+    {
+      "source": "<code>flutter build apk</code>は既定で<code>release</code>です。今回は<code>--debug</code>や<code>--split-per-abi</code>を付けません。端末用の通常APKを1ファイルで提出します。署名鍵の作成やストア公開は扱わず、空テンプレートの<code>debug</code>鍵による署名設定を使います。",
+      "translation": "<code>flutter build apk</code> 默认就是 <code>release</code>。这次不加 <code>--debug</code> 或 <code>--split-per-abi</code>。以1个文件提交设备用的普通 APK。不涉及创建签名密钥和发布到应用商店，使用空模板中用 <code>debug</code> 密钥签名的设置。"
+    },
+    {
+      "source": "成功すると<code>build/app/outputs/flutter-apk/app-release.apk</code>ができます。Finderでファイルの容量と更新日時を確認します。提出先の上限は100MB以上または制限なしですが、各自の最終APKでも容量を確認してください。",
+      "translation": "成功后会生成 <code>build/app/outputs/flutter-apk/app-release.apk</code>。在 Finder 中确认文件的大小和修改时间。提交处的上限是100MB以上或没有限制，但各自的最终 APK 也请确认大小。"
+    },
+    {
+      "source": "完成見本の実測は約48.7MBでした。この値は見本の結果で、学生の素材や変更後の容量を保証する値ではありません。APKが生成されただけでは提出前の動作確認は終わりません。",
+      "translation": "完成示例的实测约为48.7MB。这个值是示例的结果，不保证学生的素材或修改后的大小。只是生成了 APK，并不等于完成了提交前的运行确认。"
+    },
+    {
+      "source": "DartソースとAPKは、Androidのソースとビルド成果物の関係と同じです。普段の<code>flutter run</code>は開発用の実行なので、提出する<code>release</code> APKそのものを次のSTEPで確認します。",
+      "translation": "Dart 源码和 APK 的关系，与 Android 的源码和构建产物的关系相同。平时的 <code>flutter run</code> 是开发用的运行，所以要提交的 <code>release</code> APK 本身在下一个 STEP 确认。"
+    },
+    {
+      "source": "<code>app-release.apk</code>の生成場所・容量・更新日時を確認できた。",
+      "translation": "已确认 <code>app-release.apk</code> 的生成位置、大小和修改时间。"
+    },
+    {
+      "source": "STEP 12 · コマ14",
+      "translation": "STEP 12 · 第14节课"
+    },
+    {
+      "source": "生成したAPKをインストールする",
+      "translation": "安装生成的 APK"
+    },
+    {
+      "source": "生成したAPKをそのままAndroidエミュレータへ入れます。先に実行中の<code>flutter run</code>を<code>q</code>で終了し、<code>flutter devices</code>でAndroidのIDを確認します。下のAndroid端末IDは実際のIDに置き換えます。",
+      "translation": "把生成的 APK 直接安装到 Android 模拟器上。先用 <code>q</code> 结束运行中的 <code>flutter run</code>，再用 <code>flutter devices</code> 确认 Android 的 ID。把下面的 Android端末ID（Android 设备 ID）替换成实际的 ID。"
+    },
+    {
+      "source": "<code>use-application-binary</code>で指定したファイルを使うため、ここで別のソースを再ビルドする操作ではありません。<code>no-resident</code>は起動後にコマンドを終了する指定で、アプリは端末で操作できます。",
+      "translation": "因为使用的是用 <code>use-application-binary</code> 指定的文件，这里不是重新构建其他源码的操作。<code>no-resident</code> 是启动后就结束命令的设置，应用可以在设备上操作。"
+    },
+    {
+      "source": "初期画面または保存済みの記録が出ることを確認します。",
+      "translation": "确认显示出初始页面或已保存的记录。"
+    },
+    {
+      "source": "空欄では追加できず、正常入力なら一覧・詳細へ反映されることを確かめます。",
+      "translation": "确认留空时不能添加，正常输入时会反映到列表和详情。"
+    },
+    {
+      "source": "スタンプの上限と1つ戻すを試します。",
+      "translation": "试试印章的上限和「1つ戻す」（撤销一个）。"
+    },
+    {
+      "source": "Androidのアプリ情報からアプリを停止し、アイコンから起動し直して復元を確認します。バックグラウンドへ移すだけとは区別します。アプリ情報とアイコンに出るアプリの名前は、プロジェクト名の<code>f02_stamp_release</code>です（F01から続けている場合は<code>f01_stamp_board</code>）。",
+      "translation": "从 Android 的应用信息中停止应用，再从图标重新启动，确认恢复。这和只是移到后台不同。应用信息和图标上显示的应用名称是项目名 <code>f02_stamp_release</code>（从 F01 继续的话是 <code>f01_stamp_board</code>）。"
+    },
+    {
+      "source": "初期化を開いてやめるを選び、記録が残ることを確認します。",
+      "translation": "打开重置对话框，选择「やめる」（取消），确认记录仍然保留。"
+    },
+    {
+      "source": "<code>release</code>実行ではホットリロードを使いません。直すときはソースを変更し、もう一度<code>build apk</code>から作り直します。",
+      "translation": "<code>release</code> 运行时不使用热重载。要修改时，修改源码，再从 <code>build apk</code> 重新生成。"
+    },
+    {
+      "source": "Androidのビルド成果物を端末へインストールして確認する方法に対応します。同じ名前のアプリが既にあれば、更新インストールで以前の保存値が残ることがあります。新規インストールの初期値と、更新後の保存値を区別します。",
+      "translation": "对应于把 Android 的构建产物安装到设备上进行确认的方法。如果已经有同名应用，覆盖安装后以前的保存值可能会保留。把全新安装的初始值和更新后的保存值区分开。"
+    },
+    {
+      "source": "生成したAPKそのもので追加・保存・詳細・復元を確認できた。",
+      "translation": "已用生成的 APK 本身确认了添加、保存、详情、恢复。"
+    },
+    {
+      "source": "STEP 13 · コマ14",
+      "translation": "STEP 13 · 第14节课"
+    },
+    {
+      "source": "ソースと保存データを区別する",
+      "translation": "区分源码和保存的数据"
+    },
+    {
+      "source": "APKに入るのはビルドされたアプリで、エミュレータへ入力した記録ではありません。教員が別の端末へ初めて入れたとき、学生の入力済みの4件目は出ません。",
+      "translation": "放进 APK 的是构建好的应用，而不是在模拟器里输入的记录。老师第一次安装到另一台设备上时，不会出现学生已输入的第4条。"
+    },
+    {
+      "source": "相手にも見せたい題材は<code>createInitialHabits</code>へ書きます。名前・理由、画面の見出し・入力例、配色など、ソースに残した変更がアレンジの対象です。保存済みデータで初期値が隠れている場合は、必要な記録を控えてアプリ内で初期化し、確認します。",
+      "translation": "想让对方也看到的主题，写到 <code>createInitialHabits</code> 里。名称、理由、页面标题、输入示例、配色等留在源码里的修改，才是修改的对象。如果已保存的数据挡住了初始值，先记下需要的记录，在应用内重置后再确认。"
+    },
+    {
+      "source": "iOSとAndroidでは同じ名前の記録を使っても保存領域は別です。片方で入力してももう片方へ自動では移りません。両方の画面で文字・余白・入力・戻るを比較し、見た目の違いと動作の一致を確かめます。",
+      "translation": "iOS 和 Android 即使使用同名的记录，保存区域也是分开的。在一边输入，不会自动转移到另一边。在两边的页面上比较文字、留白、输入、返回，确认外观的差异和行为的一致。"
+    },
+    {
+      "source": "ネイティブアプリでも、ソースの初期値と端末に保存した利用者データは別です。APKをコピーすることは、保存領域のバックアップを渡すことではありません。",
+      "translation": "原生应用也一样，源码中的初始值和保存在设备上的用户数据是分开的。复制 APK 并不是交出保存区域的备份。"
+    },
+    {
+      "source": "教員側に見せる内容をソースへ残す理由を説明できた。",
+      "translation": "能够说明为什么要把给老师看的内容留在源码里。"
+    },
+    {
+      "source": "STEP 14 · コマ14",
+      "translation": "STEP 14 · 第14节课"
+    },
+    {
+      "source": "配色を整えてAPKを作り直す",
+      "translation": "调整配色并重新生成 APK"
+    },
+    {
+      "source": "配色・余白・題材を調整し、もう一度APKを作ります。ここでは新しい機能を追加せず、既に扱った場所を変えます。",
+      "translation": "调整配色、留白、主题，再生成一次 APK。这里不添加新功能，只改已经处理过的地方。"
+    },
+    {
+      "source": "確認",
+      "translation": "确认"
+    },
+    {
+      "source": "<code>createInitialHabits</code>の<code>name</code>・<code>reason</code>",
+      "translation": "<code>createInitialHabits</code> 的 <code>name</code>、<code>reason</code>"
+    },
+    {
+      "source": "初期化後にも自分の題材が出る。",
+      "translation": "重置后也会显示自己的主题。"
+    },
+    {
+      "source": "<code>ThemeData</code>と<code>StampMarks</code>の色",
+      "translation": "<code>ThemeData</code> 和 <code>StampMarks</code> 的颜色"
+    },
+    {
+      "source": "背景と文字が読み分けられる。",
+      "translation": "背景和文字能分辨清楚。"
+    },
+    {
+      "source": "<code>Text</code>と<code>Padding</code>・<code>SizedBox</code>",
+      "translation": "<code>Text</code> 与 <code>Padding</code>、<code>SizedBox</code>"
+    },
+    {
+      "source": "長い日本語や理由が読める。",
+      "translation": "较长的日语和理由能读清楚。"
+    },
+    {
+      "source": "ソース保存→<code>flutter analyze</code>→<code>flutter build apk</code>→実APKのインストールの順を繰り返します。直前に生成したファイルの更新日時を見て、古いAPKを確認していないか注意します。",
+      "translation": "按保存源码→<code>flutter analyze</code>→<code>flutter build apk</code>→安装实际 APK 的顺序反复进行。查看刚生成的文件的修改时间，注意不要确认到旧的 APK。"
+    },
+    {
+      "source": "CSSで指定したRGBと同じ色を、Flutterでは不透明度付きの<code>Color</code>へ書きます。保存や遷移を変えず、既存の表示の値でアレンジします。",
+      "translation": "CSS 中指定的 RGB 颜色，在 Flutter 中写成带不透明度的 <code>Color</code>。不改保存和跳转，只用已有的显示值来修改。"
+    },
+    {
+      "source": "変更後のAPKを作り直し、そのファイルで表示と操作を確認できた。",
+      "translation": "已重新生成修改后的 APK，并用该文件确认了显示和操作。"
+    },
+    {
+      "source": "STEP 15 · コマ15",
+      "translation": "STEP 15 · 第15节课"
+    },
+    {
+      "source": "完成確認の順番を決める",
+      "translation": "确定完成检查的顺序"
+    },
+    {
+      "source": "Visual Studio Codeで自分のスタンプ帳を開きます。今日は新しい概念を追加せず、作品を仕上げて通常APKを提出します。アレンジ済みのコードがある場合は、合流用コードで上書きしません。",
+      "translation": "在 Visual Studio Code 中打开自己的印章簿。今天不添加新概念，完成作品并提交普通 APK。如果已经有修改过的代码，不要用中途加入用的代码覆盖它。"
+    },
+    {
+      "source": "確認順を決め、結果を短く控えます。必要な記録は初期化前に別に残します。",
+      "translation": "确定检查顺序，简短记下结果。需要的记录在重置前另外保存。"
+    },
+    {
+      "source": "初期の題材・名前・理由が自分の作品になっている。",
+      "translation": "初始的主题、名称、理由已经是自己的作品。"
+    },
+    {
+      "source": "空欄は止まり、正常な入力は追加できる。",
+      "translation": "留空时会被拦下，正常输入可以添加。"
+    },
+    {
+      "source": "スタンプの0と上限、1つ戻すが正しい。",
+      "translation": "印章的0和上限、「1つ戻す」（撤销一个）都正确。"
+    },
+    {
+      "source": "詳細の名前・理由・回数が選んだ習慣と一致する。",
+      "translation": "详情中的名称、理由、次数与所选习惯一致。"
+    },
+    {
+      "source": "終了・再起動で記録が戻る。",
+      "translation": "结束并重新启动后记录会恢复。"
+    },
+    {
+      "source": "初期化を取り消すと記録が残る。",
+      "translation": "取消重置后记录仍然保留。"
+    },
+    {
+      "source": "最終APKの確認でも同じ順を使います。エラーを隠すために警告抑制を加えず、分からない項目は先生と原因を確認します。",
+      "translation": "最终 APK 的确认也用同样的顺序。不为了掩盖错误而加入抑制警告的写法，不明白的项目和老师一起查找原因。"
+    },
+    {
+      "source": "既習の条件分岐で守った範囲を、画面操作でも確かめます。コードの読み取り・静的解析・実行結果を対応させ、押せるかだけでなく値も見ます。",
+      "translation": "用已学过的条件分支保护的范围，也在页面操作中确认。把阅读代码、静态分析、运行结果对应起来，不只看能不能按，也看值。"
+    },
+    {
+      "source": "提出前の確認順と、直す必要のある箇所を整理できた。",
+      "translation": "已整理好提交前的检查顺序和需要修改的地方。"
+    },
+    {
+      "source": "STEP 16 · コマ15",
+      "translation": "STEP 16 · 第15节课"
+    },
+    {
+      "source": "自分の作品として仕上げる",
+      "translation": "完成为自己的作品"
+    },
+    {
+      "source": "自分の題材に合う名前・理由・見出し・入力例をそろえます。「何を続けたい人が使うアプリか」が初期画面から伝わるようにします。本人の私生活を公開する必要はありません。",
+      "translation": "把名称、理由、标题、输入示例统一成适合自己主题的内容。让人从初始页面就能看出“这是给想坚持什么的人用的应用”。不需要公开本人的私生活。"
+    },
+    {
+      "source": "見た目を変えたら長い名前と改行のある理由でも確認します。目標回数を小さくする場合は、保存済みの回数が新しい上限を超えると読込の検査に通りません。必要な記録を控えてから旧版で初期化するか、変更後の画面で本人が初期化を選びます。",
+      "translation": "改了外观后，也要用较长的名称和带换行的理由确认。如果把目标次数改小，已保存的次数超过新上限时就通不过读取校验。先记下需要的记录，然后在旧版本中重置，或者在修改后的页面上由本人选择重置。"
+    },
+    {
+      "source": "読込の検査は起動時だけなので、<code>r</code>（ホットリロード）で反映したときは行われず、回数がそのまま残ります。3回のまま目標を2にすると「3 / 2 回 · あと-1回」と出て、スタンプを押すは無効になります。1つ戻すは押せる表示ですが、<code>changeStamp</code>は目標を超える次の回数を受け付けません。この例のように目標を1回だけ超えているときは、押すと目標の2回に戻ります。2回以上超えているときは、押しても変わりません。目標を超えた回数が残ったまま<code>R</code>を押すと読込の検査に通らないので、上のとおり、必要な記録を控えてから初期化を選びます。",
+      "translation": "读取校验只在启动时进行，用 <code>r</code>（热重载）反映更改时不会执行，次数会原样保留。次数还是3次时把目标改成2，会显示「3 / 2 回 · あと-1回」（3 / 2 次 · 还差 -1 次），「スタンプを押す」（盖印章）变为禁用。「1つ戻す」（撤销一个）显示为可以按，但 <code>changeStamp</code> 不接受超过目标的下一个次数。像这个例子一样只超过目标1次时，按下后会回到目标的2次。超过2次及以上时，按了也不会变。在超过目标的次数还保留的状态下按 <code>R</code>，会通不过读取校验，所以如上所述，先记下需要的记录，再选择重置。"
+    },
+    {
+      "source": "保存キー・3要素の並び・検証条件は、見た目のアレンジとは分けます。今回の提出前に新しい保存形式や機能を増やさず、学んだ範囲で仕上げます。",
+      "translation": "保存键、3个元素的顺序、校验条件，与外观的修改分开。这次提交前不增加新的保存格式或功能，在学过的范围内完成。"
+    },
+    {
+      "source": "見出しの文字や改行を変える目的はSwiftのラベルと同じです。保存の仕組みを触らずに、既存の<code>Text</code>や色で題材を伝えられます。",
+      "translation": "修改标题文字和换行的目的与 Swift 的标签相同。不动保存机制，用已有的 <code>Text</code> 和颜色就能传达主题。"
+    },
+    {
+      "source": "初期画面から題材が伝わり、長い文字も読める形に整えた。",
+      "translation": "已整理成从初始页面就能看出主题、较长的文字也能读清楚的形式。"
+    },
+    {
+      "source": "STEP 17 · コマ15",
+      "translation": "STEP 17 · 第15节课"
+    },
+    {
+      "source": "最終APKを確認して提出する",
+      "translation": "确认最终 APK 并提交"
+    },
+    {
+      "source": "ソースを保存し、<code>flutter analyze</code>の指摘を確認して、<code>flutter build apk</code>で最終APKを作ります。生成した<code>app-release.apk</code>そのものをSTEP 12のコマンドでAndroidへ入れ、STEP 15の順で確認します。",
+      "translation": "保存源码，确认 <code>flutter analyze</code> 的提示，然后用 <code>flutter build apk</code> 生成最终 APK。用 STEP 12 的命令把生成的 <code>app-release.apk</code> 本身安装到 Android 上，按 STEP 15 的顺序确认。"
+    },
+    {
+      "source": "Finderで<code>build/app/outputs/flutter-apk/app-release.apk</code>の容量と更新日時を確認します。教員が案内する提出先へ、そのAPKファイルとアレンジの説明を提出します。提出先・締め切り・ファイル名の指定がまだない場合は、授業中に先生へ確認してください。",
+      "translation": "在 Finder 中确认 <code>build/app/outputs/flutter-apk/app-release.apk</code> 的大小和修改时间。把该 APK 文件和修改的说明提交到老师指定的提交处。如果还没有指定提交处、截止日期和文件名，请在课堂上向老师确认。"
+    },
+    {
+      "source": "ファイル名の指定がある場合は、確認済みAPKを別の提出用フォルダへコピーし、コピーの名前だけを指定に合わせます。拡張子.apkを保ちます。プロジェクトのZIP、<code>app-debug.apk</code>、ソースフォルダは今回の提出物ではありません。",
+      "translation": "如果指定了文件名，把确认过的 APK 复制到另一个提交用的文件夹，只把副本的名称改成指定的名称。保留扩展名 .apk。项目的 ZIP、<code>app-debug.apk</code>、源码文件夹都不是这次的提交物。"
+    },
+    {
+      "source": "提出後、提出先に表示されるファイル名・容量が手元のものに合うことを確かめます。提出先の機能で可能なら、提出したファイルを取り直して同じAPKか確認します。自分のソースは今後の修正用に残します。",
+      "translation": "提交后，确认提交处显示的文件名和大小与自己手上的一致。如果提交处的功能允许，重新下载提交的文件，确认是同一个 APK。自己的源码保留下来，供以后修改用。"
+    },
+    {
+      "source": "Androidの提出物としてAPKを渡す経験と同じです。保存データではなくアプリ本体を渡すため、相手の初期状態で見えるアレンジを説明します。",
+      "translation": "这和作为 Android 的提交物交出 APK 的经验相同。因为交出的是应用本身而不是保存的数据，所以要说明在对方的初始状态下能看到的修改。"
+    },
+    {
+      "source": "最終APKそのものを確認し、指定先へ提出したファイルを確かめた。",
+      "translation": "已确认最终 APK 本身，并核对了提交到指定处的文件。"
+    },
+    {
+      "source": "STEP 18 · コマ15",
+      "translation": "STEP 18 · 第15节课"
+    },
+    {
+      "source": "変更箇所と動作を説明する",
+      "translation": "说明修改之处和运行情况"
+    },
+    {
+      "source": "提出したアプリを見ながら、次の内容を短く説明します。",
+      "translation": "一边看提交的应用，一边简短说明下面的内容。"
+    },
+    {
+      "source": "どのような人が、何を記録するためのスタンプ帳か。",
+      "translation": "这是给什么样的人、用来记录什么的印章簿。"
+    },
+    {
+      "source": "どのファイルの、どの文字・色・初期データを変えたか。",
+      "translation": "改了哪个文件里的哪些文字、颜色、初始数据。"
+    },
+    {
+      "source": "<code>await</code>で保存完了を待つ前と後で、何を更新しているか。",
+      "translation": "用 <code>await</code> 等待保存完成之前和之后，各更新了什么。"
+    },
+    {
+      "source": "再起動しても残る値と、APKへ入る値の違い。",
+      "translation": "重新启动后仍保留的值，和放进 APK 的值有什么区别。"
+    },
+    {
+      "source": "説明に自分の入力済みデータだけを使わず、初期画面から伝わる変更を示します。バグを直した場合は、直した箇所と確認した操作も添えます。",
+      "translation": "说明时不要只用自己已输入的数据，要展示从初始页面就能看出的修改。如果修复了 bug，也附上修复的地方和确认过的操作。"
+    },
+    {
+      "source": "処理の順序を追う既習の読み方を使い、非同期では完了を<code>await</code>で待つことを説明します。待機中の表示・操作の抑制も、保存の順番に対応しています。",
+      "translation": "用已学过的追踪处理顺序的读法，说明异步时用 <code>await</code> 等待完成。等待中的显示和对操作的限制，也对应于保存的顺序。"
+    },
+    {
+      "source": "自分の変更と、保存・表示の順序を説明できた。",
+      "translation": "能够说明自己的修改，以及保存和显示的顺序。"
+    },
+    {
+      "source": "STEP 19 · コマ15",
+      "translation": "STEP 19 · 第15节课"
+    },
+    {
+      "source": "アレンジできる場所を振り返る",
+      "translation": "回顾可以修改的地方"
+    },
+    {
+      "source": "最後に、既に扱ったアレンジの場所を振り返ります。<code>createInitialHabits</code>の題材、<code>Text</code>の案内、<code>ThemeData</code>の配色、<code>StampMarks</code>の色、<code>Padding</code>や<code>SizedBox</code>の余白を、自分の目的に合わせて変えられます。",
+      "translation": "最后，回顾已经处理过的可修改之处。<code>createInitialHabits</code> 的主题、<code>Text</code> 的提示文字、<code>ThemeData</code> 的配色、<code>StampMarks</code> 的颜色、<code>Padding</code> 和 <code>SizedBox</code> 的留白，都可以按自己的目的修改。"
+    },
+    {
+      "source": "追加で直す場合も、ソース保存→解析→APK作成→そのAPKの操作確認という順番を保ちます。提出後にファイルを差し替える場合は、教員の提出ルールに従い、どの変更を入れた版かを説明してください。",
+      "translation": "追加修改时，也保持保存源码→分析→生成 APK→用该 APK 确认操作的顺序。提交后要替换文件时，请遵守老师的提交规则，并说明这是加入了哪些修改的版本。"
+    },
+    {
+      "source": "いまある機能で、自分が選んだ習慣を入力し、できたことを残せる状態が完成です。どこを変えると何が変わるかを、自分のコードで示して授業を終えましょう。",
+      "translation": "用现有的功能，能够输入自己选择的习惯并把做到的事记下来，就算完成了。用自己的代码展示改哪里会变什么，来结束这门课吧。"
+    },
+    {
+      "source": "データの項目を変える目的はWeb基礎と同じです。Dartでは型に沿って初期データを用意し、その上へ入力・保存・復元を組み合わせました。新しいAPIを追加せず、既存の値と表示を使ってアレンジできます。",
+      "translation": "修改数据项目的目的与 Web 基础相同。在 Dart 中按类型准备初始数据，并在此之上组合了输入、保存、恢复。不添加新的 API，用已有的值和显示就能修改。"
+    },
+    {
+      "source": "アレンジできる場所と確認の順を、自分のコードで説明できた。",
+      "translation": "能够用自己的代码说明可以修改的地方和确认的顺序。"
+    },
+    {
+      "source": "状態",
+      "translation": "状况"
+    },
+    {
+      "source": "確認するところ",
+      "translation": "检查的地方"
+    },
+    {
+      "source": "パッケージが見つからない",
+      "translation": "找不到包"
+    },
+    {
+      "source": "<code>pubspec.yaml</code>の<code>dependencies</code>へ<code>shared_preferences</code>を入れ、<code>flutter pub get</code>を実行。追加後はアプリを停止して再実行。",
+      "translation": "在 <code>pubspec.yaml</code> 的 <code>dependencies</code> 中加入 <code>shared_preferences</code>，运行 <code>flutter pub get</code>。添加后停止应用并重新运行。"
+    },
+    {
+      "source": "パッケージを加えた後、「保存できませんでした。」と出る。<code>R</code>で画面全体が赤くなる",
+      "translation": "添加包之后，显示「保存できませんでした。」（保存失败）。按 <code>R</code> 后整个屏幕变红"
+    },
+    {
+      "source": "起動し直さずに<code>r</code>・<code>R</code>で反映した。<code>q</code>で終了し、<code>flutter run -d 端末ID</code>で起動し直す。",
+      "translation": "没有重新启动，只用 <code>r</code>、<code>R</code> 反映了更改。用 <code>q</code> 结束，再用 <code>flutter run -d 端末ID</code> 重新启动。"
+    },
+    {
+      "source": "保存しても起動後に消える",
+      "translation": "保存后启动时消失"
+    },
+    {
+      "source": "STEP 06は保存だけ、07から読み込み。06で再起動した後に押すか追加すると、前の保存は表示中の一覧で置き換わる。保存キーとアプリの実行先が同じか。",
+      "translation": "STEP 06 只有保存，从 07 开始读取。在 06 重新启动后盖印章或添加，之前的保存会被正在显示的列表替换。保存键和运行应用的设备是否相同。"
+    },
+    {
+      "source": "読込エラーになる",
+      "translation": "出现读取错误"
+    },
+    {
+      "source": "元データを勝手に上書きせず、再読み込み。必要な記録を控えてから本人の判断で初期化。",
+      "translation": "不擅自覆盖原数据，先重新读取。记下需要的记录后，由本人判断是否重置。"
+    },
+    {
+      "source": "残り回数が負になる（あと-1回など）",
+      "translation": "剩余次数变成负数（例如「あと-1回」，即还差 -1 次）"
+    },
+    {
+      "source": "回数が目標を超えたまま<code>stampGoal</code>を減らし、<code>r</code>で反映した。1つ戻すが効くのは、目標を1回だけ超えているとき。<code>R</code>では読込エラーになるので、必要な記録を控えて初期化。",
+      "translation": "在次数超过目标的状态下减小了 <code>stampGoal</code>，并用 <code>r</code> 反映了更改。「1つ戻す」（撤销一个）只在超过目标1次时有效。按 <code>R</code> 会出现读取错误，所以记下需要的记录后重置。"
+    },
+    {
+      "source": "初期値を変えても出ない",
+      "translation": "改了初始值也不显示"
+    },
+    {
+      "source": "保存済みデータが優先。必要な記録を控えて初期化し、ソースの初期データを確認。",
+      "translation": "已保存的数据优先。记下需要的记录后重置，再确认源码中的初始数据。"
+    },
+    {
+      "source": "Androidビルドが止まる",
+      "translation": "Android 构建停住"
+    },
+    {
+      "source": "回線、SDK・ライセンス、Gradleの版・URL、取得中かエラーかを教員と切り分ける。授業中に不足分を準備。",
+      "translation": "和老师一起排查：网络、SDK 和许可协议、Gradle 的版本和 URL，以及是在下载中还是出错了。在课堂上准备缺少的部分。"
+    },
+    {
+      "source": "APKが大きい",
+      "translation": "APK 太大"
+    },
+    {
+      "source": "<code>debug</code>ではなく<code>flutter build apk</code>の通常<code>release</code>を使ったか。<code>app-release.apk</code>の容量を確認。",
+      "translation": "是否用的是 <code>flutter build apk</code> 的普通 <code>release</code>，而不是 <code>debug</code>。确认 <code>app-release.apk</code> 的大小。"
+    },
+    {
+      "source": "学生用配布ZIPを展開し、<code>samples/F02StampRelease</code>をVisual Studio Codeの<code>File &gt; Open Folder…</code>で開きます。単体なら<a1>完成プロジェクトZIP</a1>を展開して中の<code>F02StampRelease</code>を開きます。自分の制作フォルダへ上書きしません。",
+      "translation": "解压学生用分发 ZIP，用 Visual Studio Code 的 <code>File &gt; Open Folder…</code> 打开 <code>samples/F02StampRelease</code>。如果是单独的文件，解压<a1>完成项目 ZIP</a1>，打开里面的 <code>F02StampRelease</code>。不要覆盖自己的制作文件夹。"
+    },
+    {
+      "source": "<code>Terminal &gt; New Terminal</code>で<code>flutter pub get</code>と<code>flutter analyze</code>を実行します。<code>Flutter: Launch Emulator</code>で既存端末を起動し、<code>flutter devices</code>でIDを確認して<code>flutter run -d 端末ID</code>で実行します。APKの作成・実APKの確認は本文のSTEP 11〜12にあります。",
+      "translation": "用 <code>Terminal &gt; New Terminal</code> 运行 <code>flutter pub get</code> 和 <code>flutter analyze</code>。用 <code>Flutter: Launch Emulator</code> 启动已有的设备，用 <code>flutter devices</code> 确认 ID，再用 <code>flutter run -d 端末ID</code> 运行。APK 的生成和实际 APK 的确认在正文的 STEP 11～12。"
+    },
+    {
+      "source": "JEC / ハイブリッドアプリ開発技法 · F02StampRelease",
+      "translation": "JEC / 混合应用开发技术 · F02StampRelease"
+    }
+  ]
+}
