@@ -120,7 +120,7 @@
     },
     {
       "source": "19 アレンジできる場所を確かめる",
-      "translation": "19 确认可以修改的位置"
+      "translation": "19 确认可以修改的地方"
     },
     {
       "source": "困ったとき",
@@ -548,7 +548,7 @@
     },
     {
       "source": "操作で変わる<code>habits</code>を<code>State</code>へ移します。<code>StampBoardPage</code>は<code>StatefulWidget</code>となり、<code>createState</code>が<code>_StampBoardPageState</code>を作ります。Widgetは画面の設定、<code>State</code>は操作によって変わる値を保持します。名前の先頭のアンダースコアはDartのライブラリ内で使う名前という指定です。",
-      "translation": "把会随操作变化的 <code>habits</code> 移到 <code>State</code> 中。<code>StampBoardPage</code> 变为 <code>StatefulWidget</code>，由 <code>createState</code> 创建 <code>_StampBoardPageState</code>。Widget 是界面的配置，<code>State</code> 保存随操作变化的值。名称开头的下划线表示这是只在 Dart 库内部使用的名称。"
+      "translation": "把会随操作变化的 <code>habits</code> 移到 <code>State</code> 中。<code>StampBoardPage</code> 变为 <code>StatefulWidget</code>，由 <code>createState</code> 创建 <code>_StampBoardPageState</code>。Widget 是界面的配置，<code>State</code> 持有随操作变化的值。名称开头的下划线表示这是只在 Dart 库内部使用的名称。"
     },
     {
       "source": "ボタンの<code>onPressed</code>へ<code>() =&gt; changeStamp(habit, 1)</code>を渡します。これは引数のない関数で、押したときに<code>changeStamp</code>を呼びます。関数の呼出結果をその場で渡す書き方と区別してください。Dartのアローは1つの式を返す省略形です。",
