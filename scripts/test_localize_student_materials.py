@@ -977,7 +977,7 @@ def fixes_a_side(name, value):
         return right != left
     if name == "border-radius":
         # 「横の半径 / 縦の半径」の形は、それぞれの側で左右の角をそろえる。
-        for radii in value.split("/"):
+        for radii in radius_groups(value):
             top_left, top_right, bottom_right, bottom_left = four_values(values_of(radii))
             if top_left != top_right or bottom_left != bottom_right:
                 return True
@@ -986,14 +986,24 @@ def fixes_a_side(name, value):
 
 def values_of(value):
     """値を空白で区切る。calc(1rem + 2px) や var(--x, 0) のように、かっこの中の空白では区切らない。"""
-    values, depth = [""], 0
+    return [each for each in split_outside_parentheses(value, str.isspace) if each]
+
+
+def radius_groups(value):
+    """border-radius の値を「横の半径 / 縦の半径」に分ける。calc(10px / 2) のような、かっこの中の / では分けない。"""
+    return split_outside_parentheses(value, "/".__eq__)
+
+
+def split_outside_parentheses(value, is_separator):
+    """value を、かっこの外にある区切り文字（is_separator が真になる文字）で分ける。"""
+    parts, depth = [""], 0
     for character in value:
         depth += (character == "(") - (character == ")")
-        if character.isspace() and depth == 0:
-            values.append("")
+        if depth == 0 and is_separator(character):
+            parts.append("")
         else:
-            values[-1] += character
-    return [each for each in values if each]
+            parts[-1] += character
+    return parts
 
 
 def four_values(values):
@@ -1043,6 +1053,8 @@ class TextbookCssTest(unittest.TestCase):
             ".a{border-radius:9px 0}": "border-radius: 9px 0",
             ".a{border-radius:9px 0 0}": "border-radius: 9px 0 0",
             ".a{border-radius:9px 9px 0 0 / 5px 0 0 5px}": "border-radius: 9px 9px 0 0 / 5px 0 0 5px",
+            ".a{border-radius:calc(10px / 2) 0 0 0}": "border-radius: calc(10px / 2) 0 0 0",
+            ".a{border-radius:calc(8px / 2) 0 / 4px}": "border-radius: calc(8px / 2) 0 / 4px",
             ".a{background:url(x.png) left top no-repeat}": "background: url(x.png) left top no-repeat",
             ".a{background:linear-gradient(to right, red, blue)}": "background: linear-gradient(to right, red, blue)",
             ".a{margin:0 1rem 0 0 !important}": "margin: 0 1rem 0 0",
@@ -1066,6 +1078,8 @@ class TextbookCssTest(unittest.TestCase):
             "padding: 0 1rem 0 1rem", "margin: 0 calc(1rem + 2px) 0 calc(1rem + 2px)", "padding: 0 var(--x, 0) 0 var(--x, 0)",
             "border-radius: 0 0 9px 9px", "border-radius: 9px 9px 0 0", "border-radius: 9px", "border-radius: 9px 9px",
             "border-radius: 9px 9px 9px", "border-radius: 9px 9px 0 0 / 5px 5px 0 0", "border-radius: 9px/5px",
+            "border-radius: calc(10px / 2)", "border-radius: calc(10px / 2) calc(10px / 2) 0 0",
+            "border-radius: calc(8px / 2) / calc(4px / 2)", "border-radius: 9px 9px 0 0 / calc(10px / 2) calc(10px / 2) 0 0",
             "border-width: 0 1px 2px 1px", "border-style: solid", "inset: 0", "clip-path: inset(50%)",
             "scroll-padding-top: calc(var(--language-nav-height, 0px) + 1.5rem)",
             "justify-content: flex-end", "justify-content: space-between", "text-align: start", "text-align: center",
