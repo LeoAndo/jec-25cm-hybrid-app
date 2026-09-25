@@ -1040,7 +1040,7 @@
     },
     {
       "source": "Flutter準備のタブへ戻り、取得が終わったか、SDKの版、<code>flutter doctor</code>で止まっている項目を確認します。終わっていない項目はその場で先生へ伝え、コマ8へ引き継ぎます。授業外で終わらせることを条件にはしません。",
-      "translation": "Go back to the Flutter preparation tab and check whether the download has finished, the SDK version, and any items that are still stuck in <code>flutter doctor</code>. Report unfinished items to your teacher on the spot, and carry them over to Session 8. Finishing outside class is not a requirement."
+      "translation": "Go back to the Flutter preparation tab and check whether the download has finished, the SDK version, and any unresolved items that <code>flutter doctor</code> still reports. Report unfinished items to your teacher on the spot, and carry them over to Session 8. Finishing outside class is not a requirement."
     },
     {
       "source": "ソースを共有する提出と、端末に保存したデータを見せることを区別します。Android／iOSの実行環境を確認するときと同様に、準備済みの項目とまだ使えない項目を具体的に記録します。",

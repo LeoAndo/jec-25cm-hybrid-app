@@ -1072,7 +1072,7 @@
     },
     {
       "source": "STEP 06は保存だけ、07から読み込み。06で再起動した後に押すか追加すると、前の保存は表示中の一覧で置き換わる。保存キーとアプリの実行先が同じか。",
-      "translation": "STEP 06 only saves; loading starts at 07. In 06, if you add a stamp or add a habit after a restart, the previous save is replaced by the list being shown. Check whether the storage key and the device the app runs on are the same."
+      "translation": "STEP 06 only saves; loading starts at 07. In 06, if you add a stamp or add a habit after a restart, the previous save is replaced by the list being shown. Check that the app uses the same storage key and runs on the same device as when the data was saved."
     },
     {
       "source": "読込エラーになる",
