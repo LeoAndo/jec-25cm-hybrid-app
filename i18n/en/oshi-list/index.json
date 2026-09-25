@@ -4,7 +4,7 @@
   "entries": [
     {
       "source": "M01 好きなものノート：一覧と詳細 | ハイブリッドアプリ開発技法",
-      "translation": "M01 Favorites Notebook: list and detail | Hybrid App Development"
+      "translation": "M01 Favorites notebook: list and detail | Hybrid App Development"
     },
     {
       "source": "本文へ移動",
@@ -140,7 +140,7 @@
     },
     {
       "source": "好きなものノート：一覧から詳細へ",
-      "translation": "Favorites Notebook: from the list to the detail screen"
+      "translation": "Favorites notebook: from the list to the detail screen"
     },
     {
       "source": "日常の中で見つけた好きなものをカードに並べ、好きな理由を開いて読めるアプリを作ります。静的なカードから始め、Onsen UIの一覧、配列、詳細画面へ進みます。",
