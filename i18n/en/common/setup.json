@@ -1,0 +1,550 @@
+{
+  "source": "docs/common/setup.html",
+  "language": "en",
+  "entries": [
+    {
+      "source": "授業を始めるまでの準備 | ハイブリッドアプリ開発技法",
+      "translation": "Getting ready for class | Hybrid App Development"
+    },
+    {
+      "source": "本文へ移動",
+      "translation": "Skip to main content"
+    },
+    {
+      "source": "JEC / ハイブリッドアプリ開発技法",
+      "translation": "JEC / Hybrid App Development"
+    },
+    {
+      "source": "もとの教科書へ戻る",
+      "translation": "Return to the original textbook"
+    },
+    {
+      "source": "共通資料 · 授業内で行う準備",
+      "translation": "Shared resources · Setup done during class"
+    },
+    {
+      "source": "授業を始めるまでの準備",
+      "translation": "Getting ready for class"
+    },
+    {
+      "source": "教材を受け取り、Monacaにログインできる状態と、Flutterの開発環境を使える状態にします。使うのはmacOSです。アプリの作成と実行は、その日の教科書で行います。",
+      "translation": "Get the materials, and get to the point where you can log in to Monaca and use the Flutter development environment. You will use macOS. Creating and running apps is done in the textbook for that day."
+    },
+    {
+      "source": "Monaca クラウド IDE / Google Chrome",
+      "translation": "Monaca クラウド IDE (cloud IDE) / Google Chrome"
+    },
+    {
+      "source": "準備とダウンロードも授業内で行う",
+      "translation": "Setup and downloads are also done during class"
+    },
+    {
+      "source": "前半はMonaca、後半はFlutterを使います。STEP 1〜3はMonacaの準備です。Flutterの準備は、第7コマの冒頭にSTEP 4〜7を順に始め、ダウンロード待ちの間に先生の案内でMonacaの仕上げを進めます。第8コマでも準備の確認を続けます。家庭でのダウンロードを宿題にはしません。",
+      "translation": "The first half of the course uses Monaca and the second half uses Flutter. STEP 1–3 are the Monaca setup. For the Flutter setup, start STEP 4–7 in order at the beginning of session 7, and while waiting for downloads, finish your Monaca work as your teacher directs. Setup checks continue in session 8 as well. Downloading at home is not assigned as homework."
+    },
+    {
+      "source": "この資料の目次",
+      "translation": "Table of contents"
+    },
+    {
+      "source": "教材を受け取る",
+      "translation": "Get the materials"
+    },
+    {
+      "source": "通常版Monacaに登録する",
+      "translation": "Sign up for standard Monaca"
+    },
+    {
+      "source": "プロジェクトの空きを確かめる",
+      "translation": "Check your free project slots"
+    },
+    {
+      "source": "Flutter 3.47.5を用意する",
+      "translation": "Set up Flutter 3.47.5"
+    },
+    {
+      "source": "使うFlutterの場所と版をそろえる",
+      "translation": "Set the Flutter location and version to use"
+    },
+    {
+      "source": "Visual Studio Codeを準備する",
+      "translation": "Prepare Visual Studio Code"
+    },
+    {
+      "source": "iOSの実行環境とダウンロードを確認する",
+      "translation": "Check the iOS run environment and downloads"
+    },
+    {
+      "source": "0 / 7 ステップ確認済み",
+      "translation": "0 / 7 steps checked"
+    },
+    {
+      "source": "準備の進み具合",
+      "translation": "Setup progress"
+    },
+    {
+      "source": "Google Classroomなどで先生が案内した<strong>その回のリリース</strong>を開き、<code>Assets</code> から学生用ZIPをダウンロードします。名前は <code>hybrid-app-student-materials-日付.zip</code> の形です。GitHubの <code>Source code (zip)</code> は授業用の配布ZIPではありません。",
+      "translation": "Open <strong>the release for that session</strong> that your teacher announced on Google Classroom or elsewhere, and download the student ZIP from <code>Assets</code>. Its name has the form <code>hybrid-app-student-materials-日付.zip</code> (日付 = date). GitHub's <code>Source code (zip)</code> is not the distribution ZIP for class."
+    },
+    {
+      "source": "FinderでダウンロードしたZIPをダブルクリックして展開します。既に同じ名前のフォルダになっていれば、そのフォルダを使います。",
+      "translation": "In Finder, double-click the downloaded ZIP to extract it. If it has already become a folder with the same name, use that folder."
+    },
+    {
+      "source": "展開したフォルダを、見つけやすい場所に置きます。例えば <code>書類</code> の中です。",
+      "translation": "Put the extracted folder somewhere easy to find, for example inside <code>書類</code> (Documents)."
+    },
+    {
+      "source": "中に <code>docs</code>、<code>はじめに.txt</code>、<code>VERSION.json</code> があることを確かめます。完成見本が同梱されている版には <code>samples</code> もあります。言語を選ぶ <code>index.html</code> がある版では、そこから教科書を開けます。",
+      "translation": "Check that it contains <code>docs</code>, <code>はじめに.txt</code>, and <code>VERSION.json</code>. Versions that include the completed samples also have <code>samples</code>. In versions that have an <code>index.html</code> for choosing a language, you can open the textbooks from there."
+    },
+    {
+      "source": "<code>docs/common/setup.html</code> をGoogle Chromeで開きます。今読んでいるページが、この共通資料です。",
+      "translation": "Open <code>docs/common/setup.html</code> in Google Chrome. The page you are reading now is this shared resource."
+    },
+    {
+      "source": "完成見本が配られたら、次の方法で開きます。共通資料だけの版には <code>samples</code> がなくても問題ありません。",
+      "translation": "When the completed samples are distributed, open them as follows. It is fine if a version with only the shared resources has no <code>samples</code>."
+    },
+    {
+      "source": "配布された見本",
+      "translation": "Distributed sample"
+    },
+    {
+      "source": "開き方",
+      "translation": "How to open it"
+    },
+    {
+      "source": "Monacaの完成プロジェクト",
+      "translation": "Completed Monaca project"
+    },
+    {
+      "source": "教科書や先生が案内する取り込み用URLを開きます。<code>samples</code> の中身は、コードを読み比べるための写しです。",
+      "translation": "Open the import URL given in the textbook or by your teacher. The contents of <code>samples</code> are a copy for reading and comparing the code."
+    },
+    {
+      "source": "Flutterの完成プロジェクト",
+      "translation": "Completed Flutter project"
+    },
+    {
+      "source": "Visual Studio Code の <code>File → Open Folder…</code> で、<code>samples</code> 内の指定されたプロジェクトフォルダを開きます。<code>pubspec.yaml</code> が入っている階層を選びます。",
+      "translation": "In Visual Studio Code, use <code>File → Open Folder…</code> to open the specified project folder inside <code>samples</code>. Select the level that contains <code>pubspec.yaml</code>."
+    },
+    {
+      "source": "Web基礎・Android・iOSの見本と同じく、自分の作品を分ける",
+      "translation": "As with the Web Basics, Android, and iOS samples, keep your own work separate"
+    },
+    {
+      "source": "先生の完成見本と、自分で作るプロジェクトは別のものです。自分の作品を配布フォルダの中へ保存すると、教材を入れ替えたときに混ざります。自作の保存先は、その日の教科書で決めます。",
+      "translation": "Your teacher's completed samples and the projects you create yourself are separate things. If you save your own work inside the distributed folder, it gets mixed up when the materials are replaced. The save location for your own work is decided in the textbook for that day."
+    },
+    {
+      "source": "更新版は別フォルダに展開します。同じ日に配り直された版は名前が同じになるため、先生の案内を確かめてから入れ替えてください。自分の作品を上書きしません。質問するときは、フォルダ名の日付と <code>VERSION.json</code> の <code>version</code> を伝えます。",
+      "translation": "Extract an updated version into a separate folder. A version redistributed on the same day has the same name, so check your teacher's instructions before replacing it. Do not overwrite your own work. When asking a question, give the date in the folder name and the <code>version</code> in <code>VERSION.json</code>."
+    },
+    {
+      "source": "先生が指定した版の教科書を開き、自分の作品と分けて置けた。",
+      "translation": "The textbook of the version your teacher specified is open, and it is kept separate from your own work."
+    },
+    {
+      "source": "Google Chromeで <a1>Monacaの公式サイト</a1>を開き、<code>ログイン</code> から進みます。この授業は<strong>通常版MonacaのFreeプラン</strong>を使います。ログイン後の開発画面は <code>console.monaca.mobi</code> です。",
+      "translation": "Open <a1>the official Monaca website</a1> in Google Chrome and continue from <code>ログイン</code> (Log in). This course uses <strong>the Free plan of standard Monaca</strong>. After you log in, the development screen is <code>console.monaca.mobi</code>."
+    },
+    {
+      "source": "Monaca公式サイト右上のログインへの入口",
+      "translation": "The ログイン (Log in) entry at the top right of the official Monaca website"
+    },
+    {
+      "source": "公式サイト右上の <code>ログイン</code> から、通常版Monacaへ進みます。",
+      "translation": "Go to standard Monaca from <code>ログイン</code> (Log in) at the top right of the official website."
+    },
+    {
+      "source": "通常版のアカウントを既に持っていれば、そのアカウントでログインします。初めて使う人は、ログイン画面からアカウント作成へ進み、次の順に登録します。",
+      "translation": "If you already have a standard Monaca account, log in with it. If you are using Monaca for the first time, go from the login screen to account creation and sign up in the following order."
+    },
+    {
+      "source": "受信できる自分のメールアドレスと、登録するパスワードを入力します。",
+      "translation": "Enter an email address of your own that you can receive mail at, and the password to register."
+    },
+    {
+      "source": "利用規約など画面の説明を確認し、必要な項目を入力して、<code>アカウント新規作成</code> を選びます。",
+      "translation": "Read the terms of service and the other information on the screen, fill in the required fields, and choose <code>アカウント新規作成</code> (Create a new account)."
+    },
+    {
+      "source": "入力したメールアドレスの受信箱を開き、Monacaからの確認メールにあるリンクを開きます。",
+      "translation": "Open the inbox of the email address you entered, and open the link in the confirmation email from Monaca."
+    },
+    {
+      "source": "登録を完了し、通常版Monacaへログインします。プロジェクトの一覧が見えれば、このSTEPは完了です。",
+      "translation": "Complete the registration and log in to standard Monaca. If you can see the project list, this STEP is done."
+    },
+    {
+      "source": "メールアドレスとパスワードを入力し、アカウント新規作成を選ぶ画面",
+      "translation": "The screen where you enter an email address and password and choose アカウント新規作成 (Create a new account)"
+    },
+    {
+      "source": "入力するのは自分のメールアドレスです。画像のメールアドレスは伏せてあります。",
+      "translation": "Enter your own email address. The email address in the image is hidden."
+    },
+    {
+      "source": "Web基礎の編集環境との違い",
+      "translation": "Differences from the editing environment in Web Basics"
+    },
+    {
+      "source": "Web基礎ではMacに置いたHTMLやCSSを編集しました。Monacaでは、ログインしたアカウントのプロジェクトを、Monaca クラウド IDEで編集します。アカウントを取り違えると、自分のプロジェクトが見つからなくなります。",
+      "translation": "In Web Basics, you edited HTML and CSS stored on your Mac. In Monaca, you edit the projects of the account you are logged in to, in the Monaca クラウド IDE (cloud IDE). If you mix up accounts, you will not be able to find your own projects."
+    },
+    {
+      "source": "Monaca Educationのアカウントや <code>Monaca for Study</code> は、この授業では使いません。確認メールが届かなければ、迷惑メールのフォルダと入力したアドレスを確認し、解決しないときは先生へ知らせてください。確認メールについては <a1>Monacaの公式FAQ</a1>でも案内されています。",
+      "translation": "Monaca Education accounts and <code>Monaca for Study</code> are not used in this course. If the confirmation email does not arrive, check your spam folder and the address you entered, and tell your teacher if that does not solve it. <a1>The official Monaca FAQ</a1> also explains the confirmation email."
+    },
+    {
+      "source": "通常版Monacaへログインし、自分のプロジェクト一覧を開けた。",
+      "translation": "You are logged in to standard Monaca, and your own project list is open."
+    },
+    {
+      "source": "Freeプランでは、同時に持てるプロジェクトは<strong>3個まで</strong>です。登録直後は <code>はじめてのMonacaアプリ</code> が自動で1個作られるため、そのままなら空きは2個です。",
+      "translation": "On the Free plan, you can have <strong>up to 3</strong> projects at the same time. Right after you sign up, one project named <code>はじめてのMonacaアプリ</code> (My first Monaca app) is created automatically, so if you leave it as it is, 2 slots are free."
+    },
+    {
+      "source": "プロジェクト一覧で、今あるプロジェクトの名前と個数を確かめます。",
+      "translation": "In the project list, check the names and the number of the projects you currently have."
+    },
+    {
+      "source": "<code>はじめてのMonacaアプリ</code> があり、まだ自分で編集していなければ、授業で先生と確認してから削除し、空きを確保します。",
+      "translation": "If <code>はじめてのMonacaアプリ</code> (My first Monaca app) exists and you have not edited it yourself, confirm with your teacher in class, then delete it to free up a slot."
+    },
+    {
+      "source": "自分で編集した作品がある場合は削除せず、一覧を先生に見せます。自動作成のものか分からない場合も、そのまま相談してください。",
+      "translation": "If you have work you edited yourself, do not delete it; show the list to your teacher. If you are not sure whether a project was created automatically, leave it as it is and ask."
+    },
+    {
+      "source": "Android Studio・Xcodeのプロジェクトとの違い",
+      "translation": "Differences from Android Studio and Xcode projects"
+    },
+    {
+      "source": "Macのフォルダを増やすときとは違い、Monacaはアカウントの3枠を使います。完成見本を取り込んだときにも1枠を使うので、URLを何度も開く前に、今あるプロジェクトと空きを確かめます。",
+      "translation": "Unlike adding folders on your Mac, Monaca uses the 3 slots of your account. Importing a completed sample also uses 1 slot, so check your current projects and free slots before opening a URL many times."
+    },
+    {
+      "source": "この授業では、1つのプロジェクトを何回かの授業で育てます。見本をすべて取り込んで3枠を埋める必要はありません。Freeプランでは作品をZIPへ書き出せないため、<strong>自分の作品を削除して空きを作ろうとしないでください。</strong>",
+      "translation": "In this course, you build up one project over several classes. You do not need to import every sample and fill all 3 slots. The Free plan cannot export your work as a ZIP, so <strong>do not delete your own work to free up a slot.</strong>"
+    },
+    {
+      "source": "提出には、通常版Monacaで発行する取り込み用の公開URLを使います。このURLは、見る人のMonacaへプロジェクトを取り込むためのもので、完成アプリをWebで動かすURLではありません。公開と提出の操作は、提出を扱う授業で行います。",
+      "translation": "For submission, you use the import URL that standard Monaca issues when you publish your project. This URL imports the project into the viewer's Monaca; it is not a URL that runs the finished app on the web. You will do the publishing and submission steps in the class that covers submission."
+    },
+    {
+      "source": "プロジェクトの個数と空きを確認し、自分の作品を消さずに授業を始められる状態にした。",
+      "translation": "The number of projects and the free slots have been checked, and you are ready to start class without deleting your own work."
+    },
+    {
+      "source": "ここからは第7コマの授業内で始めるFlutterの準備です。Finderの <code>アプリケーション</code> に、<strong>Visual Studio Code・Xcode・Android Studio</strong> があることを確かめます。XcodeとAndroid Studioは、iOS・Androidの授業で使っているものを使います。見つからない場合は、先生へ知らせてください。",
+      "translation": "From here on is the Flutter setup, which you start during session 7. Check that <strong>Visual Studio Code, Xcode, and Android Studio</strong> are in <code>アプリケーション</code> (Applications) in Finder. For Xcode and Android Studio, use the ones you use in your iOS and Android classes. If you cannot find them, tell your teacher."
+    },
+    {
+      "source": "この授業のFlutter SDKは <strong>3.47.5</strong>、同梱されるDartは <strong>3.13.4</strong> にそろえます。学生のMacは全員Apple Siliconなので、<a1>公式のFlutter SDK archive</a1> で、macOS用の <code>Stable</code>、<code>3.47.5</code>、Architectureは <code>arm64</code> を選びます。",
+      "translation": "In this course, everyone uses Flutter SDK <strong>3.47.5</strong>, with the bundled Dart <strong>3.13.4</strong>. All students' Macs are Apple Silicon, so in <a1>the official Flutter SDK archive</a1>, choose <code>Stable</code> for macOS, <code>3.47.5</code>, and <code>arm64</code> as the Architecture."
+    },
+    {
+      "source": "SDKの取得を始め、既存のiOS環境を確認する",
+      "translation": "Start downloading the SDK and check your existing iOS environment"
+    },
+    {
+      "source": "SDKのダウンロードを開始したら、完了を待たずに、iOSの授業で使っているシミュレータを確認します。<strong>既存の環境が使えれば、新しいiOSランタイムのダウンロードは不要です。</strong>全員で最新のランタイムを取得する必要はありません。",
+      "translation": "Once the SDK download has started, do not wait for it to finish; check the simulator you use in your iOS class. <strong>If your existing environment works, you do not need to download a new iOS runtime.</strong> Not everyone needs to download the latest runtime."
+    },
+    {
+      "source": "Terminalで新しいウィンドウを開き、次を実行します。利用可能なシミュレータを一覧表示する、Xcodeの確認用コマンドです。Flutter SDKの展開前でも実行できます。",
+      "translation": "Open a new window in Terminal and run the following. It is an Xcode command for checking, and it lists the available simulators. You can run it even before extracting the Flutter SDK."
+    },
+    {
+      "source": "Terminal · 利用可能なシミュレータを確認",
+      "translation": "Terminal · Check the available simulators"
+    },
+    {
+      "source": "<code>iOS</code> の見出しの下に、授業で使っているiPhoneの名前があるかを確かめます。<code>Shutdown</code> は停止中という意味で、ダウンロード不足を示すものではありません。名前があれば、その環境を使う準備を進めます。一覧が空、またはエラーになる場合は、出力を先生に見せてください。ランタイムが不足しているのか、Xcodeの設定やシミュレータの作成が必要なのかを一緒に確認します。コマンドの説明は <a1>AppleのXcodeコマンドラインツール資料</a1>と、Terminalの <code>xcrun simctl help list</code> で確認できます。",
+      "translation": "Check whether the name of the iPhone you use in class appears under the <code>iOS</code> heading. <code>Shutdown</code> means the simulator is stopped; it does not mean a download is missing. If the name is there, continue preparing to use that environment. If the list is empty or you get an error, show the output to your teacher. Together, you will check whether a runtime is missing, or whether Xcode settings or a new simulator are needed. The command is explained in <a1>Apple's Xcode command-line tool documentation</a1> and in <code>xcrun simctl help list</code> in Terminal."
+    },
+    {
+      "source": "補足：iOS環境が見つからない・実行できないとき",
+      "translation": "Note: If the iOS environment cannot be found or does not run"
+    },
+    {
+      "source": "まずiOSの授業で使っているXcodeを開き、初回の追加処理が残っていないか先生と確認します。利用規約や管理者権限の入力で判断できない場合も、先生へ相談します。",
+      "translation": "First, open the Xcode you use in your iOS class, and check with your teacher whether any first-launch additional setup is still pending. If you cannot decide what to do at a license agreement or an administrator permission prompt, also ask your teacher."
+    },
+    {
+      "source": "<strong>先生と確認して、ランタイムの追加が必要になった場合だけ</strong>、次のコマンドを使います。数GBの通信が発生することがあるため、授業内で開始します。既存の環境が使える人は実行しません。追加方法は <a1>AppleのXcode追加コンポーネントの資料</a1>にあります。",
+      "translation": "<strong>Only if you have checked with your teacher and need to add a runtime</strong>, use the following command. It can download several GB, so start it during class. Do not run it if your existing environment works. How to add components is described in <a1>Apple's documentation on additional Xcode components</a1>."
+    },
+    {
+      "source": "Terminal · 必要な場合だけiOSランタイムを取得",
+      "translation": "Terminal · Download the iOS runtime only if needed"
+    },
+    {
+      "source": "取得中のTerminalは閉じずに残し、完了をSTEP 7で確認します。",
+      "translation": "Leave the Terminal window that is downloading open, and check in STEP 7 that it has finished."
+    },
+    {
+      "source": "SDKなどのダウンロードを待っている間は、先生の案内でMonacaの仕上げを進めます。SDKのダウンロードが終わったら、次の展開へ進みます。",
+      "translation": "While waiting for the SDK and other downloads, finish your Monaca work as your teacher directs. When the SDK download has finished, go on to the extraction below."
+    },
+    {
+      "source": "SDKを置く場所は、版を区別できる新しいフォルダにします。以下は、これから作る保存先の例です。既存のSDKを移動したり上書きしたりしません。",
+      "translation": "Put the SDK in a new folder whose name identifies the version. Below is an example of the save location you are about to create. Do not move or overwrite an existing SDK."
+    },
+    {
+      "source": "Terminalで次のコマンドを実行し、保存先 <code>~/develop/flutter-3.47.5</code> を作ります。追加のダウンロードが動いている場合は、別のTerminalウィンドウを使います。",
+      "translation": "Run the following command in Terminal to create the save location <code>~/develop/flutter-3.47.5</code>. If an additional download is running, use a separate Terminal window."
+    },
+    {
+      "source": "Terminal · SDKを置くフォルダを作る",
+      "translation": "Terminal · Create the folder for the SDK"
+    },
+    {
+      "source": "Finderの <code>移動 → フォルダへ移動…</code> に <code>~/develop/flutter-3.47.5</code> を入力し、開きます。",
+      "translation": "In Finder, choose <code>移動 → フォルダへ移動…</code> (Go → Go to Folder…), enter <code>~/develop/flutter-3.47.5</code>, and open it."
+    },
+    {
+      "source": "この中に、ダウンロードしたFlutter 3.47.5のZIPを置いてからダブルクリックし、展開します。既に <code>flutter</code> フォルダがある場合は上書きせず、先生と中身の版を確認します。",
+      "translation": "Put the downloaded Flutter 3.47.5 ZIP in this folder, then double-click it to extract it. If a <code>flutter</code> folder already exists, do not overwrite it; check its version with your teacher."
+    },
+    {
+      "source": "<code>flutter</code> の中に <code>bin</code> があることを確かめます。この例のSDKの場所は <code>~/develop/flutter-3.47.5/flutter</code> です。",
+      "translation": "Check that <code>flutter</code> contains <code>bin</code>. In this example, the SDK location is <code>~/develop/flutter-3.47.5/flutter</code>."
+    },
+    {
+      "source": "Android SDKとの比較",
+      "translation": "Comparison with the Android SDK"
+    },
+    {
+      "source": "Androidの開発でAndroid SDKを使うのと同じく、Flutterの開発にはFlutter SDKが必要です。Visual Studio Codeを入れただけではSDKは入りません。DartはこのFlutter SDKに同梱されるため、別のDartを探して入れる必要はありません。",
+      "translation": "Just as Android development uses the Android SDK, Flutter development needs the Flutter SDK. Installing Visual Studio Code alone does not install the SDK. Dart is bundled with this Flutter SDK, so you do not need to find and install a separate Dart."
+    },
+    {
+      "source": "<code>~/Downloads/flutter</code> などに別のFlutterがある人は、そのまま残します。ダウンロード先でZIPをそのまま展開せず、新しい保存先を先に分けるのは、既存のSDKと混ぜないためです。",
+      "translation": "If you have another Flutter in a place such as <code>~/Downloads/flutter</code>, leave it as it is. You create a separate new save location first, instead of extracting the ZIP in the download folder, so that it does not get mixed with an existing SDK."
+    },
+    {
+      "source": "自分のMacに合うFlutter 3.47.5を、既存SDKと別の場所へ展開した。",
+      "translation": "Flutter 3.47.5 for your Mac has been extracted to a location separate from any existing SDK."
+    },
+    {
+      "source": "Terminalで <code>flutter</code> と入力したとき、今用意したSDKが選ばれるようにします。ここではmacOS標準のzshを使います。まず、Terminalで次の2行を実行し、設定ファイルをVisual Studio Codeで開きます。",
+      "translation": "Make sure that when you type <code>flutter</code> in Terminal, the SDK you just set up is the one used. Here we use zsh, the macOS default shell. First, run the following two lines in Terminal to open the configuration file in Visual Studio Code."
+    },
+    {
+      "source": "Terminal · 設定ファイルを開く",
+      "translation": "Terminal · Open the configuration file"
+    },
+    {
+      "source": "開いた <code>.zprofile</code> の末尾へ、次の1行を追加して保存します。既に同じ行があれば、重ねて追加しません。他の設定は残します。SDKを別の場所へ置いた場合は、<code>/bin</code> より前の部分を実際の場所へ合わせます。",
+      "translation": "Add the following line to the end of the <code>.zprofile</code> that opened, and save the file. If the same line is already there, do not add it again. Keep the other settings. If you put the SDK somewhere else, change the part before <code>/bin</code> to the actual location."
+    },
+    {
+      "source": ".zprofile · ファイルに追加する1行",
+      "translation": ".zprofile · The one line to add to the file"
+    },
+    {
+      "source": "Visual Studio Codeを終了して開き直し、Terminalは新しいウィンドウを開きます。iOSランタイムの追加ダウンロードが動いている場合は、そのTerminalを開いたまま残します。新しいウィンドウで、次の2行を実行します。",
+      "translation": "Quit Visual Studio Code and open it again, and open a new window in Terminal. If the additional iOS runtime download is running, leave that Terminal window open. In the new window, run the following two lines."
+    },
+    {
+      "source": "Terminal · 使われるSDKと版を確認",
+      "translation": "Terminal · Check which SDK and version are used"
+    },
+    {
+      "source": "確かめる出力",
+      "translation": "Output to check"
+    },
+    {
+      "source": "この手順で期待する内容",
+      "translation": "What to expect after these steps"
+    },
+    {
+      "source": "末尾が <code>/develop/flutter-3.47.5/flutter/bin/flutter</code> のパス。先頭のユーザ名は自分のものになります。",
+      "translation": "A path ending in <code>/develop/flutter-3.47.5/flutter/bin/flutter</code>. The user name at the start is your own."
+    },
+    {
+      "source": "<code>Flutter 3.47.5</code> と <code>Dart 3.13.4</code> が表示される。",
+      "translation": "<code>Flutter 3.47.5</code> and <code>Dart 3.13.4</code> are shown."
+    },
+    {
+      "source": "Android・iOSのSDK選択との比較",
+      "translation": "Comparison with choosing the SDK for Android and iOS"
+    },
+    {
+      "source": "Android StudioやXcodeで使うSDKを選ぶのと同じく、Flutterも使う場所をそろえます。<code>PATH</code> はコマンドを探す場所と順番です。古いFlutterが表示されるときは、SDKを削除せず、まず <code>which flutter</code> の結果を確認します。",
+      "translation": "Just as you choose which SDK Android Studio or Xcode uses, you also set which Flutter location is used. <code>PATH</code> is the list of places where commands are looked for, and their order. If an old Flutter is shown, do not delete any SDK; first check the result of <code>which flutter</code>."
+    },
+    {
+      "source": "<strong>授業期間中は <code>flutter upgrade</code> を実行しません。</strong>教材と同じ版で進めます。版やパスが合わなければ、その出力を先生に見せてください。PATH設定と再起動の手順は <a1>Flutterの公式インストール手順</a1>に基づいています。",
+      "translation": "<strong>Do not run <code>flutter upgrade</code> during the course.</strong> Keep using the same version as the materials. If the version or path does not match, show the output to your teacher. The PATH setup and restart steps are based on <a1>Flutter's official installation instructions</a1>."
+    },
+    {
+      "source": "新しいTerminalで、Flutter 3.47.5とDart 3.13.4を確認できた。",
+      "translation": "A new Terminal window shows Flutter 3.47.5 and Dart 3.13.4."
+    },
+    {
+      "source": "Visual Studio Codeは<strong>英語UI</strong>で使います。英語表示でなければ、<kbd>⌘</kbd>＋<kbd>Shift</kbd>＋<kbd>P</kbd> でコマンドの一覧を開き、<code>Configure Display Language</code> を探します。<code>English</code> を選び、案内に従って再起動します。詳しくは <a1>公式の表示言語の変更手順</a1>で確認できます。",
+      "translation": "Use Visual Studio Code with the <strong>English UI</strong>. If it is not in English, press <kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> to open the command list and look for <code>Configure Display Language</code>. Choose <code>English</code> and restart as prompted. For details, see <a1>the official instructions for changing the display language</a1>."
+    },
+    {
+      "source": "<a1>公式のFlutter拡張</a1>を開き、<code>Install</code> からVisual Studio Codeに入れます。Flutter拡張を入れると、Dart拡張も入ります。",
+      "translation": "Open <a1>the official Flutter extension</a1> and install it into Visual Studio Code from <code>Install</code>. Installing the Flutter extension also installs the Dart extension."
+    },
+    {
+      "source": "Visual Studio Code の <code>Extensions</code> で、<code>Flutter</code> と <code>Dart</code> が入っていることを確かめます。",
+      "translation": "In <code>Extensions</code> in Visual Studio Code, check that <code>Flutter</code> and <code>Dart</code> are installed."
+    },
+    {
+      "source": "<code>View → Command Palette…</code> を開き、<code>Flutter: Run Flutter Doctor</code> を実行します。<code>Output</code> に表示された結果で、Flutterが <code>3.47.5</code> になっていることを確かめます。",
+      "translation": "Open <code>View → Command Palette…</code> and run <code>Flutter: Run Flutter Doctor</code>. In the result shown in <code>Output</code>, check that Flutter is <code>3.47.5</code>."
+    },
+    {
+      "source": "Android Studio・Xcodeとの比較",
+      "translation": "Comparison with Android Studio and Xcode"
+    },
+    {
+      "source": "Android StudioやXcodeでは、その言語の補完や実行機能がIDEに入っています。Visual Studio Codeでは、Flutter拡張がDartの補完やFlutterの操作を担当します。Terminalで選ばれるSDKと、拡張が使うSDKの版が同じかも確かめます。",
+      "translation": "In Android Studio and Xcode, code completion and run features for the language are built into the IDE. In Visual Studio Code, the Flutter extension handles Dart completion and Flutter operations. Also check that the SDK chosen in Terminal and the SDK used by the extension are the same version."
+    },
+    {
+      "source": "Terminalでは3.47.5なのにVisual Studio Codeでは違う版になる場合は、Visual Studio Codeを完全に終了して開き直します。それでも違う場合は、以前のSDK設定が残っていることがあるので、両方の結果を先生に見せます。",
+      "translation": "If Terminal shows 3.47.5 but Visual Studio Code shows a different version, quit Visual Studio Code completely and open it again. If it is still different, an old SDK setting may remain, so show both results to your teacher."
+    },
+    {
+      "source": "デバイス選択は、Flutterプロジェクトを開くと表示されます。ここではまだ新しいプロジェクトを作らず、デバイス選択の項目も探しません。実際の選択と起動は、その日の教科書でプロジェクトを開いてから行います。",
+      "translation": "Device selection appears once you open a Flutter project. Do not create a new project yet, and do not look for the device selection item here. You will actually select and launch a device after opening a project in the textbook for that day."
+    },
+    {
+      "source": "英語UIでFlutter・Dart拡張を使え、Visual Studio Code側もFlutter 3.47.5になった。",
+      "translation": "The Flutter and Dart extensions work in the English UI, and Visual Studio Code also uses Flutter 3.47.5."
+    },
+    {
+      "source": "Flutterの初回実行には、STEP 4で確認した既存のiOSシミュレータを使います。ランタイムの追加が必要だった人は、ダウンロード用のTerminalを確認し、エラーで止まっておらず、取得が完了していることを確かめます。第7コマで終わらなかった場合は、第8コマの授業内でも確認を続けます。",
+      "translation": "For your first Flutter run, use the existing iOS simulator you checked in STEP 4. If you needed to add a runtime, look at the Terminal window used for the download and make sure it has not stopped with an error and the download has finished. If it did not finish in session 7, checking continues during session 8."
+    },
+    {
+      "source": "Flutter SDKの展開とPATHの設定が済んだTerminalで、Flutter側のiOS用ファイルを取得します。これはiOSの授業で使ったランタイムとは別の、Flutter専用の資材です。必要なものが既に入っていれば、追加取得が省略されます。",
+      "translation": "In a Terminal window where the Flutter SDK has been extracted and PATH has been set, download Flutter's files for iOS. These are files used only by Flutter, separate from the runtime you used in your iOS class. If what is needed is already installed, the extra download is skipped."
+    },
+    {
+      "source": "Terminal · FlutterのiOS用ファイルを取得",
+      "translation": "Terminal · Download Flutter's files for iOS"
+    },
+    {
+      "source": "取得が終わったら、環境の確認結果を表示します。",
+      "translation": "When the download has finished, display the environment check results."
+    },
+    {
+      "source": "Terminal · 開発環境の診断",
+      "translation": "Terminal · Diagnose the development environment"
+    },
+    {
+      "source": "<code>Flutter</code> と <code>Xcode</code> の項目を確認します。エラーや追加の設定が表示されたら、出力を先生に見せてください。Android側の準備は、Androidを使う授業の案内に合わせます。設定項目は <a1>Flutter公式のiOS環境設定</a1>でも確認できます。",
+      "translation": "Check the <code>Flutter</code> and <code>Xcode</code> items. If errors or additional settings are shown, show the output to your teacher. The Android setup follows the instructions in the class that uses Android. The settings are also described in <a1>Flutter's official iOS setup guide</a1>."
+    },
+    {
+      "source": "Swiftの実行環境を使う",
+      "translation": "Using the environment you run Swift apps in"
+    },
+    {
+      "source": "Flutterでも、iOS向けのビルドとシミュレータにはXcodeの環境を使います。iOSの授業で使っている環境を生かし、Flutter専用の資材を追加します。実際の起動とアプリの実行は、Flutterプロジェクトを作る授業で確認します。そのとき動かない場合も、すぐにランタイムを取得し直さず、先生と原因を確認します。",
+      "translation": "Flutter also uses the Xcode environment for iOS builds and the simulator. You reuse the environment from your iOS class and add the files used only by Flutter. You will check the actual launch and app run in the class where you create a Flutter project. If it does not work then, do not immediately download the runtime again; find the cause with your teacher."
+    },
+    {
+      "source": "Android側で時間のかかる取得を分けて考える",
+      "translation": "Treat the time-consuming Android downloads separately"
+    },
+    {
+      "source": "Androidでの実行とAPK作成は、後の授業で扱います。必要なものの取得や配布キャッシュの展開も、先生の案内に合わせて授業内で行います。",
+      "translation": "Running on Android and creating an APK are covered in a later class. Downloading what is needed and extracting the distributed cache are also done during class, following your teacher's instructions."
+    },
+    {
+      "source": "取得するもの",
+      "translation": "What to download"
+    },
+    {
+      "source": "この授業での準備",
+      "translation": "Preparation in this course"
+    },
+    {
+      "source": "FlutterのAndroid用ファイル",
+      "translation": "Flutter's files for Android"
+    },
+    {
+      "source": "iOS用とは別に必要になります。Androidを扱う授業で、先生の案内に合わせて用意します。",
+      "translation": "Needed separately from the iOS files. You prepare them in the class that covers Android, following your teacher's instructions."
+    },
+    {
+      "source": "Gradle本体",
+      "translation": "Gradle itself"
+    },
+    {
+      "source": "先生が用意する <code>gradle-9.3.1-bin</code> のキャッシュを授業内で受け取り、指示された場所へ展開・コピーします。保存先は通常 <code>~/.gradle/wrapper/dists/</code> の下です。フォルダ階層を変えず、既存の別の版は残します。",
+      "translation": "Receive the <code>gradle-9.3.1-bin</code> cache prepared by your teacher during class, and extract or copy it to the location you are told. The save location is usually under <code>~/.gradle/wrapper/dists/</code>. Do not change the folder structure, and keep any other existing versions."
+    },
+    {
+      "source": "Android SDK・ビルド用の依存ファイル",
+      "translation": "Android SDK and build dependencies"
+    },
+    {
+      "source": "Gradle本体をコピーしてあっても、Android SDKやAndroid Gradle Pluginなどの追加取得が発生します。必要な版は、Androidを扱う授業で先生の案内に合わせます。",
+      "translation": "Even if Gradle itself has been copied, additional downloads such as the Android SDK and the Android Gradle Plugin still occur. The versions needed follow your teacher's instructions in the class that covers Android."
+    },
+    {
+      "source": "Flutter側のファイル、Gradle本体、Android SDKやビルド用の依存ファイルは、それぞれ必要になります。1種類のキャッシュをコピーしても、すべての取得が終わるわけではありません。",
+      "translation": "Flutter's files, Gradle itself, and the Android SDK and build dependencies are each needed. Copying one kind of cache does not mean all downloads are finished."
+    },
+    {
+      "source": "Gradleのキャッシュは、プロジェクトが使う配布URLと一致している必要があります。<code>-bin.zip</code> と <code>-all.zip</code> は別です。授業でプロジェクトを作ったときに、<code>android/gradle/wrapper/gradle-wrapper.properties</code> の <code>distributionUrl</code> を、配布キャッシュと同じURLにそろえます。ここではまだプロジェクトを作らないため、ファイルの編集は行いません。仕組みは <a1>Gradle Wrapperの公式資料</a1>で確認できます。",
+      "translation": "The Gradle cache must match the distribution URL the project uses. <code>-bin.zip</code> and <code>-all.zip</code> are different. When you create a project in class, set <code>distributionUrl</code> in <code>android/gradle/wrapper/gradle-wrapper.properties</code> to the same URL as the distributed cache. You do not create a project here yet, so you do not edit any file now. How this works is explained in <a1>the official Gradle Wrapper documentation</a1>."
+    },
+    {
+      "source": "使うiOS環境とdoctorの結果を確認した。追加設定が必要な項目は先生に相談した。",
+      "translation": "The iOS environment you will use and the doctor results have been checked. Any items that need extra setup have been discussed with your teacher."
+    },
+    {
+      "source": "ここまでできたら、準備完了",
+      "translation": "Once you have done all this, setup is complete"
+    },
+    {
+      "source": "始める授業",
+      "translation": "Class to start"
+    },
+    {
+      "source": "準備完了の目印",
+      "translation": "Signs that setup is complete"
+    },
+    {
+      "source": "先生が指定した教科書を開ける。通常版Monacaにログインでき、自分の作品を残したまま、必要なプロジェクトの空きを確保できている。",
+      "translation": "You can open the textbook your teacher specified. You can log in to standard Monaca, and you have the free project slots you need while keeping your own work."
+    },
+    {
+      "source": "TerminalとVisual Studio Codeが同じFlutter 3.47.5を使っている。Flutter拡張とiOSの実行環境を用意し、doctorの結果を確認できている。",
+      "translation": "Terminal and Visual Studio Code use the same Flutter 3.47.5. The Flutter extension and the iOS run environment are ready, and the doctor results have been checked."
+    },
+    {
+      "source": "アプリの作成、コードの編集、Visual Studio Codeでのデバイス選択、実行は、その日の教科書で行います。準備中に実行用の項目が見つからなくても、別のプロジェクトを作る必要はありません。",
+      "translation": "Creating apps, editing code, selecting a device in Visual Studio Code, and running are done in the textbook for that day. Even if you cannot find the run-related items during setup, you do not need to create a separate project."
+    },
+    {
+      "source": "当日、うまく進まないとき",
+      "translation": "If things do not go well on the day"
+    },
+    {
+      "source": "ダウンロードが終わらない、確認メールが届かない、版が合わないときは、止まったSTEPと画面・出力を先生に見せてください。回線が遅い場合は先生が授業の進め方を調整します。家庭で終わらせる前提で先へ進める必要はありません。パスワードや確認メールのリンクは、教室の共有画面や提出物へ貼り付けません。",
+      "translation": "If a download does not finish, the confirmation email does not arrive, or the version does not match, show your teacher the STEP where you are stuck and your screen or output. If the connection is slow, your teacher will adjust how the class proceeds. You do not need to move ahead assuming you will finish at home. Do not paste passwords or confirmation-email links into the classroom's shared screen or your submissions."
+    },
+    {
+      "source": "質問の例：<strong>「STEP 5で、flutter --versionが3.41になりました」</strong>。表示された文字をそのまま伝えると、SDKの場所と版を一緒に確かめられます。",
+      "translation": "Example question: <strong>「STEP 5で、flutter --versionが3.41になりました」</strong> (In STEP 5, flutter --version showed 3.41). If you report the exact text shown, your teacher can check the SDK location and version with you."
+    },
+    {
+      "source": "JEC / ハイブリッドアプリ開発技法 · 共通資料 · 2026-09-23",
+      "translation": "JEC / Hybrid App Development · Shared resources · 2026-09-23"
+    }
+  ]
+}
