@@ -1,0 +1,1134 @@
+{
+  "source": "docs/oshi-list/index.html",
+  "language": "en",
+  "entries": [
+    {
+      "source": "M01 好きなものノート：一覧と詳細 | ハイブリッドアプリ開発技法",
+      "translation": "M01 Favorites Notebook: list and detail | Hybrid App Development"
+    },
+    {
+      "source": "本文へ移動",
+      "translation": "Skip to main content"
+    },
+    {
+      "source": "JEC / ハイブリッドアプリ開発技法",
+      "translation": "JEC / Hybrid App Development"
+    },
+    {
+      "source": "0 / 20 ステップ確認済み",
+      "translation": "0 / 20 steps checked"
+    },
+    {
+      "source": "単元の進み具合",
+      "translation": "Progress in this unit"
+    },
+    {
+      "source": "コマごとの目次",
+      "translation": "Table of contents by session"
+    },
+    {
+      "source": "コマ1 · STEP 00〜04",
+      "translation": "Session 1 · STEP 00–04"
+    },
+    {
+      "source": "00 準備とプロジェクト",
+      "translation": "00 Preparation and project"
+    },
+    {
+      "source": "01 1枚のカード",
+      "translation": "01 One card"
+    },
+    {
+      "source": "02 余白と色",
+      "translation": "02 Spacing and color"
+    },
+    {
+      "source": "03 カードを3枚に",
+      "translation": "03 Three cards"
+    },
+    {
+      "source": "04 確認とアレンジ",
+      "translation": "04 Check and customize"
+    },
+    {
+      "source": "コマ2 · STEP 05〜09",
+      "translation": "Session 2 · STEP 05–09"
+    },
+    {
+      "source": "05 Onsen UIの読み込み",
+      "translation": "05 Loading Onsen UI"
+    },
+    {
+      "source": "06 ページとツールバー",
+      "translation": "06 Page and toolbar"
+    },
+    {
+      "source": "07 静的な一覧",
+      "translation": "07 Static list"
+    },
+    {
+      "source": "08 auto-stylingの比較",
+      "translation": "08 Comparing auto-styling"
+    },
+    {
+      "source": "09 自動へ戻してアレンジ",
+      "translation": "09 Back to automatic and customize"
+    },
+    {
+      "source": "コマ3 · STEP 10〜14",
+      "translation": "Session 3 · STEP 10–14"
+    },
+    {
+      "source": "10 initと処理の順序",
+      "translation": "10 init and the order of processing"
+    },
+    {
+      "source": "11 配列のデータ",
+      "translation": "11 Data in an array"
+    },
+    {
+      "source": "12 一覧とtextContent",
+      "translation": "12 List and textContent"
+    },
+    {
+      "source": "13 クリックと選択",
+      "translation": "13 Click and selection"
+    },
+    {
+      "source": "14 確認とアレンジ",
+      "translation": "14 Check and customize"
+    },
+    {
+      "source": "コマ4 · STEP 15〜19",
+      "translation": "Session 4 · STEP 15–19"
+    },
+    {
+      "source": "15 navigatorとtemplate",
+      "translation": "15 navigator and template"
+    },
+    {
+      "source": "16 詳細を開く・戻る",
+      "translation": "16 Open the detail and go back"
+    },
+    {
+      "source": "17 詳細へ値を渡す",
+      "translation": "17 Pass values to the detail screen"
+    },
+    {
+      "source": "18 連続クリックへの対応",
+      "translation": "18 Handling repeated clicks"
+    },
+    {
+      "source": "19 完成とアレンジ",
+      "translation": "19 Finish and customize"
+    },
+    {
+      "source": "困ったとき",
+      "translation": "Troubleshooting"
+    },
+    {
+      "source": "完成プロジェクトを開く",
+      "translation": "Open the completed project"
+    },
+    {
+      "source": "共通：はじめの準備",
+      "translation": "Shared: Getting ready for class"
+    },
+    {
+      "source": "コマ1〜4 · 各90分",
+      "translation": "Sessions 1–4 · 90 minutes each"
+    },
+    {
+      "source": "好きなものノート：一覧から詳細へ",
+      "translation": "Favorites Notebook: from the list to the detail screen"
+    },
+    {
+      "source": "日常の中で見つけた好きなものをカードに並べ、好きな理由を開いて読めるアプリを作ります。静的なカードから始め、Onsen UIの一覧、配列、詳細画面へ進みます。",
+      "translation": "You will build an app that lines up the things you like in everyday life as cards, and lets you open each one to read why you like it. You start with static cards, then move on to an Onsen UI list, an array, and a detail screen."
+    },
+    {
+      "source": "Monaca クラウド IDE / Google Chrome",
+      "translation": "Monaca クラウド IDE (cloud IDE) / Google Chrome"
+    },
+    {
+      "source": "この単元で分かること",
+      "translation": "What you will learn in this unit"
+    },
+    {
+      "source": "新しい考え方は <strong>auto-styling</strong> です。1つのHTMLから、OSに合った部品の見た目が選ばれる仕組みを確かめます。配列・イベント・画面の切り替えは、Web基礎・Android・iOSと比べて書き方を読みます。",
+      "translation": "The new idea is <strong>auto-styling</strong>. You will see how, from one HTML file, the look of each component is chosen to match the OS. For arrays, events, and switching screens, you read the code while comparing it with Web Basics, Android, and iOS."
+    },
+    {
+      "source": "使うプロジェクトは <code>M01OshiList</code> です。各STEPの「全コード」は開いてコピーでき、各コマの最初には開始時のコードもあります。前から順に作る場合は、説明されたファイルを更新します。途中から合流する場合は、開始時のファイルをすべてそろえてから進みます。",
+      "translation": "The project you use is <code>M01OshiList</code>. You can open and copy the \"Full code\" of each STEP, and the start of each session also has the code as it is at that point. If you build from the start in order, update the files that each STEP explains. If you join partway through, first make all your files match the starting code, then continue."
+    },
+    {
+      "source": "コマ",
+      "translation": "Session"
+    },
+    {
+      "source": "この回の到達点",
+      "translation": "Goal for this session"
+    },
+    {
+      "source": "通常版Monacaで静的なカードを表示する。",
+      "translation": "Display static cards in standard Monaca."
+    },
+    {
+      "source": "Onsen UIの一覧とauto-stylingを確認する。",
+      "translation": "Check the Onsen UI list and auto-styling."
+    },
+    {
+      "source": "配列から一覧を作り、押した名前を表示する。",
+      "translation": "Build the list from an array and display the name you tapped."
+    },
+    {
+      "source": "詳細へ値を渡し、戻る操作まで完成させる。",
+      "translation": "Pass values to the detail screen and finish the app, including going back."
+    },
+    {
+      "source": "先生が見本を使うと案内したら、<a1>M01OshiListの完成プロジェクトを開く</a1>へ進みます。通常版Monacaへログインした状態で、取り込むプロジェクトを確認します。自分の制作を始めるにはSTEP 00へ進みます。",
+      "translation": "If your teacher says to use the sample, go to <a1>Open the finished M01OshiList project</a1>. While logged in to standard Monaca, check the project you are about to import. To start building your own, go to STEP 00."
+    },
+    {
+      "source": "完成見本の取り込みにも1枠を使います。Freeプランの3枠を確認し、URLを繰り返し開いて複数のコピーを作らないようにします。自分の作品は削除しません。配布ZIPの <code>samples/M01OshiList</code> はコードを読むための見本です。",
+      "translation": "Importing the completed sample also uses one project slot. Check the three slots of the Free plan, and do not open the URL repeatedly, so that you do not create several copies. Do not delete your own work. The <code>samples/M01OshiList</code> folder in the distributed ZIP is a sample for reading the code."
+    },
+    {
+      "source": "STEP 00 · コマ1",
+      "translation": "STEP 00 · Session 1"
+    },
+    {
+      "source": "授業の準備と、自分のプロジェクト",
+      "translation": "Getting ready for class, and your own project"
+    },
+    {
+      "source": "この単元では <code>M01OshiList</code> という1つのプロジェクトを4コマかけて育てます。Google ChromeでMonaca クラウド IDEを使います。今日は静的なカードまで作ります。この教科書では、好きな音楽、食べ物、場所など、身近なものを集め、好きな理由を読み返せるようにします。自分の好きなものと好きな理由を、自分の言葉でカードにしましょう。M01では、コードに書いた好きなものを集めて読むところまで作ります。画面から入力する機能や、入力した内容を保存する機能はまだ付けません。",
+      "translation": "In this unit, you grow one project, <code>M01OshiList</code>, over four sessions. You use the Monaca クラウド IDE in Google Chrome. Today you build up to static cards. In this textbook, you collect familiar things you like, such as music, food, and places, so that you can read back why you like them. Put your own favorites and your own reasons on the cards, in your own words. In M01, you build up to the point where you collect the favorites written in the code and read them. Entering items from the screen and saving what you entered are not added yet."
+    },
+    {
+      "source": "<a1>共通資料のSTEP 1〜3</a1>で、教材の受け取り、通常版Monacaの登録・ログイン、空き枠の確認を行い、このページへ戻ります。初めての登録とダウンロードも授業内で行います。",
+      "translation": "In <a1>STEP 1–3 of the common material</a1>, receive the materials, register and log in to standard Monaca, check your free project slots, and then come back to this page. First-time registration and downloads are also done during class."
+    },
+    {
+      "source": "Monacaのプロジェクト一覧から新規作成に進み、<code>最小限のテンプレート</code> を選びます。プロジェクト名を <code>M01OshiList</code> として作成し、開きます。既に自分の同名プロジェクトがあれば、その続きを開きます。",
+      "translation": "From the Monaca project list, go to create a new project and choose <code>最小限のテンプレート</code> (Minimal template). Create it with the project name <code>M01OshiList</code> and open it. If you already have your own project with this name, open that one and continue."
+    },
+    {
+      "source": "ファイル一覧で <code>www/index.html</code> と <code>www/css/style.css</code> を探します。<code>components</code>、<code>res</code>、設定ファイルはそのまま使います。",
+      "translation": "In the file list, find <code>www/index.html</code> and <code>www/css/style.css</code>. Leave <code>components</code>, <code>res</code>, and the configuration files as they are."
+    },
+    {
+      "source": "下の全コードを開き、2ファイルの内容をそれぞれ置き換えて保存します。プレビューを再読み込みし、<strong>好きなものノートを作ります。</strong>を確認します。",
+      "translation": "Open the full code below, replace the contents of the two files, and save. Reload the preview and check that <strong>好きなものノートを作ります。</strong> (We will make a favorites notebook.) is shown."
+    },
+    {
+      "source": "以後、本文のパスはプロジェクト内の位置です。「全コード」は指定ファイルの中身をすべて置き換えるためのものです。先に比較と説明を読み、貼り付けた後は確認欄の操作まで行いましょう。",
+      "translation": "From here on, paths in the text are locations inside the project. The \"Full code\" is meant to replace the whole contents of the named file. Read the comparison and the explanation first, and after pasting, go on to the check box at the end and do what it describes."
+    },
+    {
+      "source": "既知の技術と比べる",
+      "translation": "Compare with what you already know"
+    },
+    {
+      "source": "Web基礎でHTMLとCSSを別ファイルに置いたときと同じです。今回はファイルの置き場所がMacのフォルダからMonacaのプロジェクトへ変わります。Android StudioやXcodeで1つのプロジェクトを開くように、4コマとも同じ <code>M01OshiList</code> を開きます。",
+      "translation": "This is the same as putting HTML and CSS in separate files in Web Basics. This time, the files live in a Monaca project instead of a folder on your Mac. Just as you open one project in Android Studio or Xcode, you open the same <code>M01OshiList</code> in all four sessions."
+    },
+    {
+      "source": "このSTEPの全コード（照合・合流用）",
+      "translation": "Full code for this STEP (to compare with yours, or to join from here)"
+    },
+    {
+      "source": "www/index.html · 全文",
+      "translation": "www/index.html · full file"
+    },
+    {
+      "source": "www/css/style.css · 全文",
+      "translation": "www/css/style.css · full file"
+    },
+    {
+      "source": "通常版Monacaで自分のM01OshiListを開き、準備用の文字を表示できた。",
+      "translation": "Your own M01OshiList has been opened in standard Monaca, and the preparation text is displayed."
+    },
+    {
+      "source": "STEP 01 · コマ1",
+      "translation": "STEP 01 · Session 1"
+    },
+    {
+      "source": "HTMLで1枚のカードを作る",
+      "translation": "Make one card in HTML"
+    },
+    {
+      "source": "<code>www/index.html</code> を、このSTEPの全文に置き換えます。まず <code>body</code> の中を読みます。<code>main</code> は画面の主な内容、<code>article</code> は1件のカードです。カードには種類・名前・ひとことを置きます。",
+      "translation": "Replace <code>www/index.html</code> with the full file for this STEP. First read the inside of <code>body</code>. <code>main</code> is the main content of the screen, and <code>article</code> is one card. Each card holds a type, a name, and a short comment."
+    },
+    {
+      "source": "<code>class</code> 属性は、次のSTEPでCSSを対応させるための名前です。この時点では装飾がなくても正解です。保存してプレビューを再読み込みし、音楽・好きな音楽・ひとことがこの順に並ぶことを確かめます。",
+      "translation": "The <code>class</code> attribute is a name that the CSS in the next STEP will match. At this point, it is correct even without any styling. Save, reload the preview, and check that 音楽 (Music), 好きな音楽 (My favorite music), and the short comment appear in this order."
+    },
+    {
+      "source": "<code>head</code> の読み込みと設定は残します。最小限のテンプレートが持つ <code>components/loader.js</code> などは、この単元で中身を書き換えるファイルではありません。",
+      "translation": "Keep the loading and settings in <code>head</code>. Files that come with the 最小限のテンプレート (Minimal template), such as <code>components/loader.js</code>, are not files you edit in this unit."
+    },
+    {
+      "source": "Web基礎の <code>h1</code>・<code>p</code> を組み合わせたページと同じ書き方です。AndroidやiOSでラベルを3つ置く代わりに、HTMLではタグの並びで文章の構造を表します。まだクリックの処理は付けません。",
+      "translation": "This is written the same way as a page that combines <code>h1</code> and <code>p</code> in Web Basics. Instead of placing three labels as in Android or iOS, in HTML the sequence of tags expresses the structure of the text. No click handling is added yet."
+    },
+    {
+      "source": "装飾前のカードに種類・名前・ひとことが表示された。",
+      "translation": "The unstyled card showed the type, the name, and the short comment."
+    },
+    {
+      "source": "STEP 02 · コマ1",
+      "translation": "STEP 02 · Session 1"
+    },
+    {
+      "source": "CSSでカードの余白と色を整える",
+      "translation": "Adjust the card's spacing and color with CSS"
+    },
+    {
+      "source": "<code>www/css/style.css</code> を全文に置き換えます。HTMLはSTEP 01のままです。<code>.oshi-card</code> はカード全体、<code>.oshi-name</code> は名前に適用されます。",
+      "translation": "Replace <code>www/css/style.css</code> with the full file. The HTML stays as in STEP 01. <code>.oshi-card</code> applies to the whole card, and <code>.oshi-name</code> to the name."
+    },
+    {
+      "source": "書く場所",
+      "translation": "What you write"
+    },
+    {
+      "source": "画面での変化",
+      "translation": "Change on the screen"
+    },
+    {
+      "source": "枠の内側に空間ができる。",
+      "translation": "Adds space inside the border."
+    },
+    {
+      "source": "カードの下側に空間ができる。",
+      "translation": "Adds space below the card."
+    },
+    {
+      "source": "枠の角が丸くなる。",
+      "translation": "Rounds the corners of the border."
+    },
+    {
+      "source": "長い名前を折り返して表示できる。",
+      "translation": "Lets long names wrap onto the next line."
+    },
+    {
+      "source": "保存して、カードの白と背景の薄い色、枠、余白を見分けます。CSSが反映されないときは、HTMLの <code>css/style.css</code> というパスと、ファイルを保存したかを確認します。",
+      "translation": "Save, then tell apart the white of the card, the light color of the background, the border, and the spacing. If the CSS is not applied, check the path <code>css/style.css</code> in the HTML and whether you saved the file."
+    },
+    {
+      "source": "Web基礎のクラスセレクタをそのまま使います。HTMLの <code>class=\"oshi-card\"</code> とCSSの <code>.oshi-card</code> は同じ名前で対応します。Androidのレイアウトで余白を設定するのと同じ目的ですが、Webでは外側が <code>margin</code>、内側が <code>padding</code> です。",
+      "translation": "You use the class selectors from Web Basics as they are. <code>class=\"oshi-card\"</code> in the HTML and <code>.oshi-card</code> in the CSS match by the same name. The purpose is the same as setting margins in an Android layout, but on the Web the outside is <code>margin</code> and the inside is <code>padding</code>."
+    },
+    {
+      "source": "背景・カード・内側の余白を見分けられた。",
+      "translation": "You can tell apart the background, the card, and the inner spacing."
+    },
+    {
+      "source": "STEP 03 · コマ1",
+      "translation": "STEP 03 · Session 1"
+    },
+    {
+      "source": "同じ構造のカードを3枚にする",
+      "translation": "Make three cards with the same structure"
+    },
+    {
+      "source": "<code>www/index.html</code> の全文を更新します。1つ目と同じ <code>article</code> を2つ増やし、名前と種類を変えています。CSSは共通なので、3枚とも同じ形になります。",
+      "translation": "Update the full file <code>www/index.html</code>. Two more <code>article</code> elements like the first one are added, with different names and types. The CSS is shared, so all three cards get the same shape."
+    },
+    {
+      "source": "プレビューで3件あることと、音楽・食べ物・場所の順になっていることを確かめます。",
+      "translation": "In the preview, check that there are three items, in the order 音楽 (Music), 食べ物 (Food), 場所 (Place)."
+    },
+    {
+      "source": "画面の幅を狭くして、名前がカードの外へはみ出さず、縦に読めることを確かめます。",
+      "translation": "Make the screen narrower and check that the names do not overflow the cards and can be read top to bottom."
+    },
+    {
+      "source": "3枚目だけ違う形なら、<code>article</code> の開始・終了タグ、<code>class</code> の名前を見比べます。",
+      "translation": "If only the third card looks different, compare the opening and closing tags of <code>article</code> and the <code>class</code> names."
+    },
+    {
+      "source": "同じHTMLを増やす方式は、3件なら見通せます。件数が増えると書き換える場所も増えるので、第3コマでは配列を使ってこの繰り返しをまとめます。",
+      "translation": "Copying the same HTML is easy to follow with three items. As the number of items grows, so does the number of places to edit, so in session 3 you use an array to handle this repetition."
+    },
+    {
+      "source": "Web基礎で同じクラスを複数の要素へ付けたときと同じです。JavaやSwiftのループなら同じ処理を繰り返せますが、今日はHTMLに3件を直接書き、表示の構造を先に確かめます。",
+      "translation": "This is the same as giving the same class to several elements in Web Basics. A loop in Java or Swift could repeat the same work, but today you write the three items directly in HTML and check the display structure first."
+    },
+    {
+      "source": "3枚のカードが同じ形で並び、狭い幅でも読めた。",
+      "translation": "The three cards lined up with the same shape and stayed readable at a narrow width."
+    },
+    {
+      "source": "STEP 04 · コマ1",
+      "translation": "STEP 04 · Session 1"
+    },
+    {
+      "source": "第1コマの確認とアレンジ",
+      "translation": "Session 1 check and customization"
+    },
+    {
+      "source": "下の全コードが第1コマ終了時の基準です。自分の内容に変える前に、3枚が表示されることを確かめます。カードはまだ押しても何も起きません。",
+      "translation": "The full code below is the reference at the end of session 1. Before changing it to your own content, check that the three cards are displayed. Tapping a card does nothing yet."
+    },
+    {
+      "source": "自分の好きなものを1つ選び、1枚目の名前・種類・好きな理由を自分の言葉へ変えます。",
+      "translation": "Choose one thing you like, and change the name, type, and reason on the first card to your own words."
+    },
+    {
+      "source": "<code>.app-caption</code> の <code>color</code> を変え、種類の文字だけが変化することを確かめます。",
+      "translation": "Change the <code>color</code> of <code>.app-caption</code> and check that only the type text changes."
+    },
+    {
+      "source": "画面を再読み込みし、書いたHTMLの内容が残っていることを確かめます。次回も同じプロジェクトを開きます。",
+      "translation": "Reload the screen and check that the HTML you wrote is still there. Next time, open the same project again."
+    },
+    {
+      "source": "Web基礎と同じく、画面に表示する文章はHTML、色はCSSで変えます。同じクラスの色を1か所直すと、3枚全部の種類へ反映されます。複数の画面部品へ同じ見た目の設定を適用する考え方はAndroid・iOSでも共通です。",
+      "translation": "As in Web Basics, you change the text on the screen in HTML and the colors in CSS. Fixing the color of a class in one place applies to the type on all three cards. Applying the same appearance settings to several UI components is a shared idea in Android and iOS too."
+    },
+    {
+      "source": "自分の題材と色を試し、同じプロジェクトで次回へ進める。",
+      "translation": "Your own topic and colors have been tried, and you can continue in the same project next time."
+    },
+    {
+      "source": "アレンジできる場所",
+      "translation": "Where you can customize"
+    },
+    {
+      "source": "カードの名前・種類・ひとこと、背景色、角丸の数値を変えられます。自分の好きなものと、その理由を自分の言葉で書きましょう。1か所変えるたびに保存・再読み込みをし、何が変わったかを説明します。",
+      "translation": "You can change the name, type, and short comment of each card, the background color, and the corner radius value. Write your own favorites and your reasons in your own words. Each time you change one thing, save, reload, and explain what changed."
+    },
+    {
+      "source": "STEP 05 · コマ2",
+      "translation": "STEP 05 · Session 2"
+    },
+    {
+      "source": "Onsen UIを同じ版で読み込む",
+      "translation": "Load Onsen UI files of the same version"
+    },
+    {
+      "source": "このコマから合流する人：開始時の全コード",
+      "translation": "Joining from this session: full code at the start"
+    },
+    {
+      "source": "同じM01OshiListを開き、各ファイルを次の内容にそろえて保存します。前のコマのアレンジを残したい人は、その文字や色を控えてから進みます。",
+      "translation": "Open the same M01OshiList, make each file match the contents below, and save. If you want to keep your customizations from the previous session, note down those texts and colors before you continue."
+    },
+    {
+      "source": "第2コマでは、同じHTMLからOSに合った見た目を作る <strong>auto-styling</strong> を確かめます。使うのは <strong>Onsen UI 2.12.9</strong> です。Onsen UIはHTMLに画面部品を加えるUIライブラリで、この授業では素のJavaScriptから操作します。",
+      "translation": "In session 2, you check <strong>auto-styling</strong>, which builds an OS-matched look from the same HTML. You use <strong>Onsen UI 2.12.9</strong>. Onsen UI is a UI library that adds UI components to HTML, and in this course you control it from plain JavaScript."
+    },
+    {
+      "source": "<code>www</code> の中に <code>js</code> フォルダを作り、その中に <code>app.js</code> を作ります。既にあれば再利用します。",
+      "translation": "Create a <code>js</code> folder inside <code>www</code>, and create <code>app.js</code> inside it. If they already exist, reuse them."
+    },
+    {
+      "source": "このSTEPの3ファイルを全文どおりに保存します。HTMLではOnsen UIのCSS2本とJavaScript1本を、版番号付きのURLで読み込んでいます。",
+      "translation": "Save the three files of this STEP exactly as in the full code. The HTML loads two Onsen UI CSS files and one JavaScript file from URLs that include the version number."
+    },
+    {
+      "source": "自分の <code>js/app.js</code> はOnsen UIのJavaScriptより後に読み込みます。まずはコメントだけなので、カードの形は前のコマとほぼ同じです。ただし、Onsen UIのCSSを読み込むと、ページ全体はスクロールしなくなります。プレビューの高さが低いと、下のカードが切れて見えることがあります。次のSTEPでカードを <code>ons-page</code> に入れると、ページの中でスクロールできるようになります。",
+      "translation": "Your own <code>js/app.js</code> is loaded after the Onsen UI JavaScript. For now it contains only a comment, so the cards look almost the same as in the previous session. However, once the Onsen UI CSS is loaded, the page as a whole no longer scrolls. If the preview is not tall enough, the lower cards may look cut off. In the next STEP, you put the cards inside <code>ons-page</code>, and then you can scroll inside the page."
+    },
+    {
+      "source": "CDNはライブラリをインターネット経由で読み込む配布先です。授業中にアクセスできる回線が必要です。URLの <code>@2.12.9</code> を消したり、別の版へ変えたりしません。",
+      "translation": "A CDN is a distribution site that loads a library over the internet. You need a network connection that works during class. Do not remove <code>@2.12.9</code> from the URL, and do not change it to another version."
+    },
+    {
+      "source": "Web基礎で自分のCSSを <code>link</code>、JavaScriptを <code>script</code> で読み込んだ書き方と同じです。今回はURLが外部ファイルを指します。AndroidやiOSでUIライブラリを使うように、画面部品の実装を借ります。自分の処理を後に読むのは、先にOnsen UIを使える状態にするためです。",
+      "translation": "This is the same way you loaded your own CSS with <code>link</code> and JavaScript with <code>script</code> in Web Basics. This time the URL points to external files. As when you use a UI library in Android or iOS, you borrow the implementation of the UI components. Your own code is loaded later so that Onsen UI is ready to use first."
+    },
+    {
+      "source": "www/js/app.js · 全文",
+      "translation": "www/js/app.js · full file"
+    },
+    {
+      "source": "版番号付きの3本の読み込みと、自分のapp.jsの位置を確認した。",
+      "translation": "The three loads with version numbers and the position of your own app.js have been checked."
+    },
+    {
+      "source": "STEP 06 · コマ2",
+      "translation": "STEP 06 · Session 2"
+    },
+    {
+      "source": "ページとツールバーをOnsen UIへ置き換える",
+      "translation": "Replace the page and toolbar with Onsen UI"
+    },
+    {
+      "source": "<code>www/index.html</code> を全文に置き換えます。<code>body</code> の中を <code>ons-page</code> で囲み、その先頭に <code>ons-toolbar</code> を置きます。カードはまだ前のコマのHTMLです。",
+      "translation": "Replace <code>www/index.html</code> with the full file. Wrap the inside of <code>body</code> in <code>ons-page</code>, and put <code>ons-toolbar</code> at its top. The cards are still the HTML from the previous session."
+    },
+    {
+      "source": "<code>ons-</code> で始まるタグはOnsen UIが提供する画面部品です。ブラウザの標準タグだけではなく、STEP 05で読み込んだJavaScriptとCSSが表示を整えています。ツールバーの <code>class=\"center\"</code> は、Onsen UIが決めた領域名です。文字が常に画面の厳密な中央にあるという意味ではありません。",
+      "translation": "Tags that start with <code>ons-</code> are UI components provided by Onsen UI. They are not just standard browser tags: the JavaScript and CSS you loaded in STEP 05 shape how they are displayed. The toolbar's <code>class=\"center\"</code> is an area name defined by Onsen UI. It does not mean that the text is always at the exact center of the screen."
+    },
+    {
+      "source": "保存して再読み込みし、上部のツールバーに「好きなものノート」が出ていることを確認します。カードはツールバーの下に表示されます。タグ名がそのまま文字になったら、全角の記号や閉じタグの不足を確認します。",
+      "translation": "Save and reload, and check that 「好きなものノート」 (Favorites Notebook) appears in the toolbar at the top. The cards are shown below the toolbar. If a tag name appears as plain text, check for full-width symbols and missing closing tags."
+    },
+    {
+      "source": "Web基礎の <code>div</code> にCSSを付けて領域を作る代わりに、<code>ons-page</code> と <code>ons-toolbar</code> という部品を使います。AndroidのToolbar、iOSのナビゲーションバーと、画面の題名を置く役割は対応します。今回はHTMLで同じ部品の役割を指定します。",
+      "translation": "Instead of making areas with a <code>div</code> plus CSS as in Web Basics, you use the <code>ons-page</code> and <code>ons-toolbar</code> components. Their role of holding the screen title matches the Android Toolbar and the iOS navigation bar. This time you specify the same component roles in HTML."
+    },
+    {
+      "source": "ツールバーの下に3枚のカードが表示された。",
+      "translation": "The three cards were displayed below the toolbar."
+    },
+    {
+      "source": "STEP 07 · コマ2",
+      "translation": "STEP 07 · Session 2"
+    },
+    {
+      "source": "カードをOnsen UIの一覧へ置き換える",
+      "translation": "Replace the cards with an Onsen UI list"
+    },
+    {
+      "source": "このSTEPのHTMLとCSSを全文に置き換えます。JavaScriptはコメントだけのままです。カード用のHTMLをOnsen UIの部品へ置き換え、<code>ons-list</code> の中へ3個の <code>ons-list-item</code> を置きます。それぞれに <code>class=\"oshi-card\"</code> を付け、第1コマで使ったカードの見た目を引き継ぎます。一覧の上の見出しと、一覧の下の「まだ選択していません」の文も、このSTEPで加わります。",
+      "translation": "Replace the HTML and CSS with the full files for this STEP. The JavaScript still contains only a comment. The card HTML is replaced with Onsen UI components: three <code>ons-list-item</code> elements inside <code>ons-list</code>. Each gets <code>class=\"oshi-card\"</code>, so the card look from session 1 carries over. The heading above the list and the text 「まだ選択していません」 (Nothing selected yet) below the list are also added in this STEP."
+    },
+    {
+      "source": "部品・指定",
+      "translation": "Component / setting"
+    },
+    {
+      "source": "役割",
+      "translation": "Role"
+    },
+    {
+      "source": "一覧全体。",
+      "translation": "The whole list."
+    },
+    {
+      "source": "一覧の1行。",
+      "translation": "One row of the list."
+    },
+    {
+      "source": "押したときの見た目を付ける。",
+      "translation": "Adds the pressed look when tapped."
+    },
+    {
+      "source": "行の右端に目印（＞）を付ける。",
+      "translation": "Adds a marker (＞) at the right edge of the row."
+    },
+    {
+      "source": "主な文字と補足の文字。Onsen UIが用意するクラス名。",
+      "translation": "The main text and the secondary text. Class names provided by Onsen UI."
+    },
+    {
+      "source": "一覧の上の小見出し・見出し・説明文。アプリ名はツールバーに出ているので、ここでは何を記録するノートかを示す。",
+      "translation": "The caption, heading, and description above the list. The app name is already in the toolbar, so here they show what kind of notebook this is."
+    },
+    {
+      "source": "押した名前を出す欄。このSTEPでは最初の文「まだ選択していません」だけを出し、書き換える処理は第3コマで書く。",
+      "translation": "The field that shows the name you tapped. In this STEP it only shows the initial text 「まだ選択していません」 (Nothing selected yet); the code that updates it is written in session 3."
+    },
+    {
+      "source": "<code>oshi-card</code> は、好きなものを1枚ずつ区切るための自分のクラスです。第1コマと同じ <code>border</code>・<code>border-radius</code> で、枠と角丸を付けます。一覧は、左右に余白のある <code>app-section</code> の外に置くので、<code>margin</code> を左右16px・下12pxに変え、<code>width: auto</code> で画面の幅に収めます。カードの内側の余白は <code>ons-list-item</code> が持つ余白を使うので、<code>padding</code> の指定は外します。一覧の1行としての役割はOnsen UI、カードの外枠は自分のCSSが担当します。<code>#list_oshi</code> と <code>.oshi-card .list-item__center</code> では、標準の区切り線を消してカードの外枠だけを見せます。後者は、カードの中にある中央領域だけを指定するCSSの子孫セレクタです。後者では右の余白も30px空けます。長い名前を折り返したときに、行の終わりが右端の目印「＞」と重ならないようにするためです（Onsen UIが目印の横に空ける幅と同じ値です）。ツールバーや押したときの反応など、OSによる部品の違いは引き続き比べられます。<code>oshi-name</code>・<code>oshi-genre</code> は自分のCSSで折り返しを指定するために加えた名前です。保存・再読み込みをして、名前と種類が各行に表示されることを確かめます。好きな理由は一覧に出さず、第4コマで作る詳細画面に出します。押した見た目は付きますが、選択の処理は第3コマで書きます。",
+      "translation": "<code>oshi-card</code> is your own class that separates the favorites one card at a time. It adds the border and rounded corners with the same <code>border</code> and <code>border-radius</code> as in session 1. The list sits outside <code>app-section</code>, which has side spacing, so <code>margin</code> is changed to 16px on the left and right and 12px at the bottom, and <code>width: auto</code> fits it to the screen width. The inner spacing of the card comes from the spacing that <code>ons-list-item</code> already has, so the <code>padding</code> setting is removed. Onsen UI takes care of the row's role in the list, and your own CSS takes care of the card's outer frame. <code>#list_oshi</code> and <code>.oshi-card .list-item__center</code> remove the standard divider lines so that only the card frame is visible. The latter is a CSS descendant selector that targets only the center area inside the card. The latter also leaves 30px of space on the right. This keeps the end of a wrapped long name from overlapping the marker 「＞」 at the right edge (it is the same width that Onsen UI leaves beside the marker). You can still compare component differences between OSes, such as the toolbar and the pressed look. <code>oshi-name</code> and <code>oshi-genre</code> are names added so that your own CSS can set the wrapping. Save and reload, and check that the name and type are displayed on each row. The reason is not shown in the list; it goes on the detail screen you build in session 4. The pressed look is there, but the selection handling is written in session 3."
+    },
+    {
+      "source": "一覧の上の <code>app-caption</code> は、第1コマでカードの種類の文字に使ったクラスです。種類は <code>list-item__subtitle</code> で出すようになったので、ここでは小見出しに使います。CSSの先頭にあった <code>body</code> の指定（余白・背景色・文字色・フォント）は外します。STEP 06で <code>ons-page</code> に入れてからは、画面の背景と文字にOnsen UIのページの指定が使われていて、<code>body</code> の指定は画面に出ていないためです。外しても、画面の色や文字は変わりません。",
+      "translation": "The <code>app-caption</code> above the list is the class you used for the type text on the cards in session 1. The type is now shown by <code>list-item__subtitle</code>, so here the class is used for the caption. The <code>body</code> rule at the top of the CSS (spacing, background color, text color, font) is removed. Since you moved into <code>ons-page</code> in STEP 06, the screen background and text use Onsen UI's page settings, so the <code>body</code> rule no longer shows on the screen. Removing it does not change the colors or text on the screen."
+    },
+    {
+      "source": "Web基礎の <code>ul</code> と <code>li</code> のように、一覧全体と1行を分けます。第1コマの <code>article</code> に付けた <code>oshi-card</code> を、ここでは <code>ons-list-item</code> に付け、既習のCSSでカードの形を再利用します。Androidのリストの行やiOSのテーブルのセルと同じ役割です。<code>tappable</code> はクリック処理そのものではありません。見た目とイベント処理を分ける点は、Webのボタンと <code>addEventListener</code> の関係と同じです。",
+      "translation": "Like <code>ul</code> and <code>li</code> in Web Basics, the whole list and a single row are separate. The <code>oshi-card</code> you gave to <code>article</code> in session 1 is now given to <code>ons-list-item</code>, so you reuse the card shape with the CSS you already know. It plays the same role as a list row in Android or a table cell in iOS. <code>tappable</code> is not the click handling itself. Separating the look from the event handling is the same as the relationship between a Web button and <code>addEventListener</code>."
+    },
+    {
+      "source": "3件がカード状の一覧になり、上に見出し、下に「まだ選択していません」が出た。カードのCSS、押す見た目、選択処理を区別できる。",
+      "translation": "The three items became a card-style list, with the heading above and 「まだ選択していません」 (Nothing selected yet) below. You can tell apart the card CSS, the pressed look, and the selection handling."
+    },
+    {
+      "source": "STEP 08 · コマ2",
+      "translation": "STEP 08 · Session 2"
+    },
+    {
+      "source": "同じHTMLでiOSとAndroidの見た目を比べる",
+      "translation": "Compare the iOS and Android looks with the same HTML"
+    },
+    {
+      "source": "この単元の新概念は <strong>auto-styling</strong> です。Onsen UIは実行環境に応じ、同じ <code>ons-toolbar</code> や <code>ons-list-item</code> をiOS向け・Android向けの見た目へ切り替えます。自分でOSごとに2組の画面を作る必要はありません。",
+      "translation": "The new concept of this unit is <strong>auto-styling</strong>. Depending on the runtime environment, Onsen UI switches the same <code>ons-toolbar</code> and <code>ons-list-item</code> to an iOS look or an Android look. You do not need to build two sets of screens, one for each OS."
+    },
+    {
+      "source": "<code>www/js/app.js</code> を、このSTEPの全文に置き換えます。先頭の <code>ons.platform.select(\"android\");</code> が有効になっています。保存して<strong>プレビュー全体を再読み込み</strong>します。",
+      "translation": "Replace <code>www/js/app.js</code> with the full file for this STEP. The line <code>ons.platform.select(\"android\");</code> at the top is active. Save and <strong>reload the whole preview</strong>."
+    },
+    {
+      "source": "ツールバーの高さ・題名の位置、行を押した反応、右端の目印を見ます。右端の目印「＞」は、iOS向けとAndroid向けのどちらにも出ます。",
+      "translation": "Look at the toolbar height and the title position, the response when you tap a row, and the marker at the right edge. The marker 「＞」 at the right edge appears in both the iOS look and the Android look."
+    },
+    {
+      "source": "<code>\"android\"</code> を <code>\"ios\"</code> へ書き換え、保存してプレビュー全体を再読み込みします。HTMLと自分のCSSは変更せず、同じ箇所を比べます。",
+      "translation": "Change <code>\"android\"</code> to <code>\"ios\"</code>, save, and reload the whole preview. Do not change the HTML or your own CSS; compare the same places."
+    },
+    {
+      "source": "違いを1つ、共通する内容を1つ、言葉で説明します。",
+      "translation": "Describe in words one difference and one thing that is the same."
+    },
+    {
+      "source": "OSの指定はOnsen UIが画面を作る前に必要です。<code>app.js</code> の先頭で行い、後のイベント処理の中へ移しません。この指定は<strong>表示スタイルの比較</strong>であり、ブラウザをAndroidやiOSの実機に変える操作ではありません。",
+      "translation": "The OS setting must come before Onsen UI builds the screen. Do it at the top of <code>app.js</code>, and do not move it into the event handling that comes later. This setting is <strong>a comparison of display styles</strong>; it does not turn the browser into a real Android or iOS device."
+    },
+    {
+      "source": "Web基礎では、CSSを自分で書き換えると見た目が変わりました。ここではHTMLを変えず、Onsen UIがOSに合った部品の見た目を選びます。Androidで作ったツールバーとiOSで作ったナビゲーションバーには違いがありました。その違いを、共通のHTMLへライブラリが適用する仕組みがauto-stylingです。",
+      "translation": "In Web Basics, the look changed when you edited the CSS yourself. Here the HTML stays the same, and Onsen UI chooses the component look that matches the OS. The toolbar you made in Android and the navigation bar you made in iOS looked different. Auto-styling is the mechanism by which the library applies that difference to shared HTML."
+    },
+    {
+      "source": "同じHTMLのままiOS向けとAndroid向けの差を確認した。",
+      "translation": "The difference between the iOS look and the Android look has been checked with the same HTML."
+    },
+    {
+      "source": "STEP 09 · コマ2",
+      "translation": "STEP 09 · Session 2"
+    },
+    {
+      "source": "自動のスタイルへ戻してアレンジする",
+      "translation": "Go back to automatic styling and customize"
+    },
+    {
+      "source": "<code>app.js</code> の指定行の先頭へ <code>//</code> を付け、このSTEPの全文と同じコメントに戻します。保存してプレビュー全体を再読み込みします。これで特定のOSを強制せず、実行環境に応じてスタイルが選ばれます。",
+      "translation": "Add <code>//</code> at the start of the setting line in <code>app.js</code>, turning it back into the same comment as in the full code for this STEP. Save and reload the whole preview. Now no particular OS is forced, and the style is chosen according to the runtime environment."
+    },
+    {
+      "source": "Monacaのプレビューでも、端末を選んで見た目を比べられます。<code>app.js</code> の強制指定がコメントになっていることを確かめ、次の順に操作します。",
+      "translation": "In the Monaca preview, you can also choose a device and compare the look. Make sure the forced setting in <code>app.js</code> is now a comment, then follow these steps in order."
+    },
+    {
+      "source": "Monacaのプレビューの端末選択で <code>iPhone 15</code> を選び、プレビューの <code>Reload</code> を押します。",
+      "translation": "In the device selector of the Monaca preview, choose <code>iPhone 15</code>, then press <code>Reload</code> in the preview."
+    },
+    {
+      "source": "ツールバーと一覧を確認します。",
+      "translation": "Check the toolbar and the list."
+    },
+    {
+      "source": "端末選択で <code>Pixel 8</code> を選び、もう一度 <code>Reload</code> を押します。同じ一覧で違いを確かめます。",
+      "translation": "In the device selector, choose <code>Pixel 8</code> and press <code>Reload</code> again. Check the differences in the same list."
+    },
+    {
+      "source": "端末を選ぶだけでは前の表示が残ることがあるので、毎回 <code>Reload</code> まで行います。この操作はプレビューの比較であり、実機を使った確認ではありません。STEP 08のコードによる強制指定と同時には使わず、強制指定をコメントへ戻してから試します。",
+      "translation": "Just choosing a device may leave the previous display on the screen, so go as far as <code>Reload</code> every time. This is a comparison in the preview, not a check on a real device. Do not use it together with the forced setting in the code from STEP 08; turn the forced setting back into a comment first, then try."
+    },
+    {
+      "source": "CSSの <code>.app-caption</code> の色や、HTMLに直接書いた3件の名前を変えます。Onsen UIのクラス名はそのままにし、自分のクラスの値から試しましょう。",
+      "translation": "Change the color of <code>.app-caption</code> in the CSS, or the three names written directly in the HTML. Leave the Onsen UI class names as they are, and start with the values of your own classes."
+    },
+    {
+      "source": "Web基礎のJavaScriptと同じく、<code>//</code> 以降は実行されないコメントです。CSSの色を変える操作は自分で決める見た目、OSの自動選択はOnsen UIが決める見た目です。どちらによる変化なのかを、1回に1か所ずつ変えて確かめます。",
+      "translation": "As in the JavaScript of Web Basics, everything after <code>//</code> is a comment and is not executed. Changing a color in the CSS is a look that you decide; the automatic OS selection is a look that Onsen UI decides. To see which one caused a change, change only one thing at a time."
+    },
+    {
+      "source": "OSの強制指定をコメントへ戻し、文字と色のアレンジを確認した。",
+      "translation": "The forced OS setting has been turned back into a comment, and your text and color changes have been checked."
+    },
+    {
+      "source": "名前・種類、冒頭の説明、<code>.app-caption</code> の色、<code>.app-section</code> の余白を変えられます。自分の好きなものが伝わる名前と種類を考えましょう。auto-stylingの違いを確かめるときは自分のCSSを固定し、OS指定だけを切り替えます。",
+      "translation": "You can change the names and types, the introduction text, the color of <code>.app-caption</code>, and the spacing of <code>.app-section</code>. Think of names and types that show what you like. When checking auto-styling differences, keep your own CSS fixed and switch only the OS setting."
+    },
+    {
+      "source": "STEP 10 · コマ3",
+      "translation": "STEP 10 · Session 3"
+    },
+    {
+      "source": "ページができた時点で処理する",
+      "translation": "Run code once the page is ready"
+    },
+    {
+      "source": "第3コマでは、配列に書いたデータから一覧を作り、押した名前を表示します。まず、このSTEPの <code>www/js/app.js</code> に置き換えます。HTMLとCSSは開始時のままです。",
+      "translation": "In session 3, you build the list from data written in an array and display the name you tapped. First, replace <code>www/js/app.js</code> with the version for this STEP. The HTML and CSS stay as they were at the start."
+    },
+    {
+      "source": "<code>document.addEventListener(\"init\", function(event) { ... });</code> は、Onsen UIのページが初期化されたときに処理を行います。<code>event.target</code> は、そのとき初期化された <code>ons-page</code> です。<code>page.id</code> が <code>page_list</code> のときだけ、一覧用の処理をします。",
+      "translation": "<code>document.addEventListener(\"init\", function(event) { ... });</code> runs code when an Onsen UI page has been initialized. <code>event.target</code> is the <code>ons-page</code> that was initialized at that moment. Only when <code>page.id</code> is <code>page_list</code> does it run the code for the list."
+    },
+    {
+      "source": "保存・再読み込みすると、一覧の下が「一覧を準備しました」になります。<code>getElementById</code> は画面に要素ができてから使う必要があります。HTMLの <code>head</code> で読む <code>app.js</code> では、先にイベントを登録し、実際の要素を使う処理を <code>init</code> の中へ置きます。",
+      "translation": "After you save and reload, the text below the list becomes 「一覧を準備しました」 (List ready). <code>getElementById</code> must be used only after the element exists on the screen. In <code>app.js</code>, which is loaded in the HTML <code>head</code>, you register the event first and put the code that uses actual elements inside <code>init</code>."
+    },
+    {
+      "source": "Web基礎で <code>click</code> が起きたときの関数を登録したのと同じ <code>addEventListener</code> です。今回は操作の通知ではなく、Onsen UIのページ準備の通知を受け取ります。Androidでビューを用意してから部品を参照する、iOSで <code>viewDidLoad</code> からビューを設定する順序と対応します。通知の名前と対象が違うため、ページの <code>id</code> も確かめます。",
+      "translation": "This is the same <code>addEventListener</code> you used in Web Basics to register a function for when <code>click</code> happens. This time you receive Onsen UI's notification that a page is ready, not a notification of a user action. It matches the order in Android where you set up the view before referring to its components, and in iOS where you configure the view from <code>viewDidLoad</code>. Because the notification's name and target are different, you also check the page's <code>id</code>."
+    },
+    {
+      "source": "initで一覧ページを判定し、画面の文字を変更できた。",
+      "translation": "The list page is detected in init, and the text on the screen has been changed."
+    },
+    {
+      "source": "STEP 11 · コマ3",
+      "translation": "STEP 11 · Session 3"
+    },
+    {
+      "source": "3件のデータを配列へまとめる",
+      "translation": "Put the three items of data into an array"
+    },
+    {
+      "source": "<code>www/js/app.js</code> を全文に置き換えます。<code>oshiItems</code> は3件の配列です。1件は <code>name</code>・<code>genre</code>・<code>comment</code> を持つオブジェクトにします。配列とオブジェクトはWeb基礎の書き方です。",
+      "translation": "Replace <code>www/js/app.js</code> with the full file. <code>oshiItems</code> is an array of three items. Each item is an object with <code>name</code>, <code>genre</code>, and <code>comment</code>. Arrays and objects are written as in Web Basics."
+    },
+    {
+      "source": "コード",
+      "translation": "Code"
+    },
+    {
+      "source": "読み方",
+      "translation": "How to read it"
+    },
+    {
+      "source": "0番目の名前。",
+      "translation": "The name of item 0."
+    },
+    {
+      "source": "配列にある件数。",
+      "translation": "The number of items in the array."
+    },
+    {
+      "source": "<code>comment</code> 内の <code>\\n</code>",
+      "translation": "<code>\\n</code> inside <code>comment</code>"
+    },
+    {
+      "source": "文字列内の改行。この理由文は第4コマで表示する。",
+      "translation": "A line break inside a string. This reason text is displayed in session 4."
+    },
+    {
+      "source": "保存・再読み込みして、一覧の下に「登録件数：3」が出ることを確認します。いまはHTMLにも同じ名前があります。まだ配列から一覧を作っていないため、配列だけ変更しても一覧の名前は変わりません。次のSTEPでデータの置き場所を配列へそろえます。",
+      "translation": "Save and reload, and check that 「登録件数：3」 (Number of items: 3) appears below the list. Right now the same names are also in the HTML. The list is not built from the array yet, so changing only the array does not change the names in the list. In the next STEP, you move the data to one place: the array."
+    },
+    {
+      "source": "JavaやSwiftでも、1件分の値をまとめたデータを配列で持ちました。JavaScriptでは <code>{ name: \"…\", genre: \"…\" }</code> のようにプロパティ名と値を書き、<code>.name</code> で参照します。Javaの配列の <code>length</code> と同じ目的で件数を読みます。ここで別の保存形式への変換は行いません。",
+      "translation": "In Java and Swift, you also kept data that groups the values of one item in an array. In JavaScript, you write property names and values like <code>{ name: \"…\", genre: \"…\" }</code> and refer to them with <code>.name</code>. You read the number of items for the same purpose as <code>length</code> of a Java array. No conversion to another storage format is done here."
+    },
+    {
+      "source": "配列の件数を画面へ表示し、1件のname・genre・commentを読み取れた。",
+      "translation": "The number of items in the array is displayed on the screen, and the name, genre, and comment of one item have been read."
+    },
+    {
+      "source": "STEP 12 · コマ3",
+      "translation": "STEP 12 · Session 3"
+    },
+    {
+      "source": "配列から行を作り、文字を入れる",
+      "translation": "Build rows from the array and fill in the text"
+    },
+    {
+      "source": "このSTEPのHTMLとJavaScriptを全文に置き換えます。CSSは変わりません。HTMLの <code>ons-list</code> は空になり、JavaScriptの <code>renderOshiList</code> が一覧を組み立てます。",
+      "translation": "Replace the HTML and JavaScript with the full files for this STEP. The CSS does not change. <code>ons-list</code> in the HTML becomes empty, and <code>renderOshiList</code> in the JavaScript builds the list."
+    },
+    {
+      "source": "<code>createOshiRowHtml(index)</code> を読みます。カード用の <code>class=\"oshi-card\"</code> を含む1行分のタグを文字列で返し、番号を足して <code>item_oshi_0</code>・<code>txt_name_0</code> のように重複しないidを作ります。",
+      "translation": "Read <code>createOshiRowHtml(index)</code>. It returns the tags for one row as a string, including <code>class=\"oshi-card\"</code> for the card, and adds the number to make unique ids such as <code>item_oshi_0</code> and <code>txt_name_0</code>."
+    },
+    {
+      "source": "1回目の <code>for</code> で、行のHTMLを <code>html</code> にまとめます。ループ後に1回だけ <code>listOshi.innerHTML = html;</code> として全行を置きます。",
+      "translation": "The first <code>for</code> collects the HTML of the rows into <code>html</code>. After the loop, <code>listOshi.innerHTML = html;</code> runs once to place all the rows."
+    },
+    {
+      "source": "2回目の <code>for</code> で、配置した各行の名前・種類を <code>textContent</code> へ代入します。",
+      "translation": "The second <code>for</code> assigns the name and type of each placed row to <code>textContent</code>."
+    },
+    {
+      "source": "保存・再読み込みして3件の表示を確認し、配列の1件目の名前を一時的に <code>&lt;好きなもの&gt;</code> に変えます。山かっこを含む文字がそのまま表示されたら、元へ戻します。",
+      "translation": "Save and reload, check that the three items are displayed, then temporarily change the name of the first item in the array to <code>&lt;好きなもの&gt;</code>. If the text, angle brackets included, is displayed as is, change it back."
+    },
+    {
+      "source": "タグを作る文字列には自分で決めた固定の構造と番号だけを入れます。名前を <code>innerHTML</code> の文字列へ混ぜません。データを文字として表示する場所には <code>textContent</code> を使います。",
+      "translation": "The string that builds the tags contains only the fixed structure you decided on and the number. Do not mix the names into the <code>innerHTML</code> string. Where data is displayed as text, use <code>textContent</code>."
+    },
+    {
+      "source": "Web基礎の <code>for</code>、文字列の <code>+</code>、関数の戻り値を組み合わせます。Androidの <code>TextView.setText</code> やiOSの <code>UILabel.text</code> と同じように、文字は文字用のプロパティへ渡します。<code>innerHTML</code> はタグとして解釈されるので役割が異なります。行の構造とデータの表示を分ける理由がここにあります。",
+      "translation": "You combine <code>for</code>, string <code>+</code>, and function return values from Web Basics. As with <code>TextView.setText</code> in Android and <code>UILabel.text</code> in iOS, you pass text to a property meant for text. <code>innerHTML</code> is interpreted as tags, so its role is different. This is why the row structure and the data display are kept separate."
+    },
+    {
+      "source": "配列の3件から一覧ができ、山かっこを含む名前も文字として表示された。",
+      "translation": "The list was built from the three items in the array, and a name with angle brackets was displayed as text."
+    },
+    {
+      "source": "STEP 13 · コマ3",
+      "translation": "STEP 13 · Session 3"
+    },
+    {
+      "source": "押した行の名前を表示する",
+      "translation": "Display the name of the row you tapped"
+    },
+    {
+      "source": "<code>www/js/app.js</code> を全文に置き換えます。2回目の <code>for</code> の末尾へ、各行の <code>click</code> イベントが増えました。押された行に対応する <code>oshiItems[i]</code> を、<code>selectOshi</code> へ渡します。",
+      "translation": "Replace <code>www/js/app.js</code> with the full file. At the end of the second <code>for</code>, a <code>click</code> event for each row has been added. It passes the <code>oshiItems[i]</code> that matches the tapped row to <code>selectOshi</code>."
+    },
+    {
+      "source": "<code>for (let i = 0; ...)</code> の <code>let</code> により、登録した関数はその回の番号を使えます。3つの行に同じ0番のデータを渡さず、各回の <code>i</code> で選ぶ点を確認します。",
+      "translation": "Thanks to <code>let</code> in <code>for (let i = 0; ...)</code>, each registered function can use the number from its own iteration. Check that the three rows do not all pass the same item 0, but pick the item by the <code>i</code> of each iteration."
+    },
+    {
+      "source": "保存・再読み込みして、3件を順に1回ずつ押します。一覧の下が「選択中：押した名前」に変われば成功です。画面遷移はまだありません。文字だけを変えられることを先に確かめます。",
+      "translation": "Save and reload, then tap the three items one at a time, in order. It works if the text below the list changes to 「選択中：」 (Selected:) followed by the name you tapped. There is no screen navigation yet. First check that you can change just the text."
+    },
+    {
+      "source": "イベントを付けるのは <code>innerHTML = html</code> の後です。行を置き直すと前の行に登録したイベントも失われるため、全行の配置を終えてから登録します。",
+      "translation": "The events are attached after <code>innerHTML = html</code>. Replacing the rows also loses the events registered on the previous rows, so you register them after all the rows have been placed."
+    },
+    {
+      "source": "Web基礎の <code>btn.addEventListener(\"click\", function() { ... });</code> と同じです。AndroidのクリックリスナーやiOSのボタンのアクションのように、押されたときに行う処理を登録します。今回は1個のボタンではなく、番号の違う各行へ同じ形の処理を登録し、その行のデータを引数で渡します。",
+      "translation": "This is the same as <code>btn.addEventListener(\"click\", function() { ... });</code> in Web Basics. Like a click listener in Android or a button action in iOS, you register the code to run when it is tapped. This time it is not one button: you register the same kind of handler on each row, each with a different number, and pass that row's data as an argument."
+    },
+    {
+      "source": "どの行を押しても、その行の名前が選択中として表示された。",
+      "translation": "Whichever row you tap, its name is displayed as the selected one."
+    },
+    {
+      "source": "STEP 14 · コマ3",
+      "translation": "STEP 14 · Session 3"
+    },
+    {
+      "source": "データと表示の役割を確かめる",
+      "translation": "Check the roles of data and display"
+    },
+    {
+      "source": "第3コマの基準コードです。HTMLは一覧を置く場所、CSSは見た目、JavaScriptの配列は内容、関数は行の作成と選択を担当しています。",
+      "translation": "This is the reference code for session 3. The HTML is where the list goes, the CSS is the look, the JavaScript array is the content, and the functions handle building the rows and the selection."
+    },
+    {
+      "source": "配列の2件目の名前と種類を書き換え、再読み込みします。一覧と選択中の両方へ同じ変更が出ることを確認します。",
+      "translation": "Change the name and type of the second item in the array and reload. Check that the same change appears both in the list and in the selected text."
+    },
+    {
+      "source": "1件を複製して末尾へ加え、件数が4件になることを試します。オブジェクトの間のカンマに注意します。確認後は3件へ戻しても、自分の内容を残しても構いません。",
+      "translation": "Copy one item, add it at the end, and see that the count becomes four. Watch the commas between the objects. After checking, you may go back to three items or keep your own content."
+    },
+    {
+      "source": "行を押した後でプレビューを再読み込みします。「まだ選択していません」へ戻ることを確認します。",
+      "translation": "After tapping a row, reload the preview. Check that the text goes back to 「まだ選択していません」 (Nothing selected yet)."
+    },
+    {
+      "source": "ソースに書いた配列は残りますが、今選んでいる項目は再読み込みでリセットされます。この単元には選択結果や入力内容の保存機能はありません。",
+      "translation": "The array written in the source stays, but the currently selected item is reset by a reload. This unit has no feature for saving the selection or any input."
+    },
+    {
+      "source": "Java・Swiftの配列と同じく、件数はデータの数で決まります。HTMLを4行へ手作業で増やさず、<code>oshiItems.length</code> の回数だけ作るため、配列の変更が一覧へ反映されます。実行中の変数と保存済みのソースが別である点も、これまで作ったアプリと同じです。",
+      "translation": "As with arrays in Java and Swift, the count is decided by the number of data items. You do not add a fourth row to the HTML by hand; the rows are built <code>oshiItems.length</code> times, so a change in the array shows up in the list. Variables at runtime and the saved source are separate things, just as in the apps you have built before."
+    },
+    {
+      "source": "配列の変更が一覧と選択に反映され、再読み込みで選択が戻ることを確認した。",
+      "translation": "Changes to the array appear in the list and the selection, and a reload resets the selection."
+    },
+    {
+      "source": "<code>oshiItems</code> の名前・種類・件数、選択中の接頭辞、文字色を変えられます。自分の好きなものと、その理由を配列へ自分の言葉で書きましょう。長い名前や山かっこを含む名前を試し、画面幅を狭くしても内容を読めるか確かめましょう。",
+      "translation": "You can change the names, types, and number of items in <code>oshiItems</code>, the prefix of the selected text, and the text color. Write your own favorites and reasons in the array, in your own words. Try long names and names with angle brackets, and check that the content is still readable when the screen is narrow."
+    },
+    {
+      "source": "STEP 15 · コマ4",
+      "translation": "STEP 15 · Session 4"
+    },
+    {
+      "source": "一覧をnavigatorが管理するページにする",
+      "translation": "Make the list a page managed by the navigator"
+    },
+    {
+      "source": "第4コマでは一覧から詳細を開き、戻れるようにします。まず、このSTEPの <code>www/index.html</code> へ置き換えます。CSSとJavaScriptは開始時のままです。",
+      "translation": "In session 4, you open the detail screen from the list and make it possible to go back. First, replace <code>www/index.html</code> with the version for this STEP. The CSS and JavaScript stay as they were at the start."
+    },
+    {
+      "source": "<code>ons-navigator</code> は複数のページを重ねて管理する部品です。<code>page=\"list.html\"</code> に、最初に出すページを指定します。この <code>list.html</code> は別ファイルではなく、同じHTML内の <code>template id=\"list.html\"</code> の名前です。",
+      "translation": "<code>ons-navigator</code> is a component that manages several pages as a stack. <code>page=\"list.html\"</code> specifies the page to show first. This <code>list.html</code> is not a separate file; it is the name of <code>template id=\"list.html\"</code> in the same HTML."
+    },
+    {
+      "source": "<code>template</code> の中身は、書いた場所で直ちに表示されるのではなく、必要なときに使うHTMLのひな形です。中には1個の <code>ons-page</code> を置きます。navigatorが一覧ページを作ると <code>init</code> が通知され、第3コマと同じ関数が行を作ります。",
+      "translation": "The contents of <code>template</code> are not displayed right where they are written; they are an HTML template used when needed. Inside it, put one <code>ons-page</code>. When the navigator creates the list page, <code>init</code> is fired, and the same function as in session 3 builds the rows."
+    },
+    {
+      "source": "保存・再読み込みし、3件と選択表示が前と同じように動くことを確かめます。画面に変化がなくても、いまは管理の仕方を切り替えた段階なので正解です。",
+      "translation": "Save and reload, and check that the three items and the selected text work as before. Even if nothing on the screen changes, that is correct: at this point you have only switched how the page is managed."
+    },
+    {
+      "source": "Androidで画面のレイアウトを用意して必要なときに表示する、iOSでビューコントローラをナビゲーションコントローラへ積む考え方と対応します。Web基礎の別ページへのリンクではなく、同じHTML内のひな形をnavigatorが画面として管理します。要素を使う処理は、ひな形が実際に配置された後の <code>init</code> に置きます。",
+      "translation": "This matches preparing a screen layout in Android and showing it when needed, and pushing a view controller onto a navigation controller in iOS. Rather than a link to another page as in Web Basics, the navigator manages templates inside the same HTML as screens. Code that uses elements goes in <code>init</code>, which runs after the template has actually been placed."
+    },
+    {
+      "source": "navigatorとtemplateへ移しても、一覧と選択が動いた。",
+      "translation": "After moving to navigator and template, the list and the selection still worked."
+    },
+    {
+      "source": "STEP 16 · コマ4",
+      "translation": "STEP 16 · Session 4"
+    },
+    {
+      "source": "詳細画面を開き、戻る",
+      "translation": "Open the detail screen and go back"
+    },
+    {
+      "source": "このSTEPの3ファイルを全文に置き換えます。HTMLに <code>template id=\"detail.html\"</code> を増やし、詳細のツールバーに <code>ons-back-button</code> を置きます。CSSには理由文用の余白と改行表示を追加します。",
+      "translation": "Replace the three files with the full files for this STEP. <code>template id=\"detail.html\"</code> is added to the HTML, with <code>ons-back-button</code> in the detail toolbar. The CSS gets spacing and line-break display for the reason text."
+    },
+    {
+      "source": "JavaScriptでは、クリックしたときに呼ぶ関数を <code>selectOshi</code> から <code>openOshiDetail</code> へ変え、<code>navApp.pushPage(\"detail.html\");</code> で詳細を重ねます。今回は名前や理由を詳細へまだ渡さないため、どの行を押しても「詳細画面の見本」が出ます。",
+      "translation": "In the JavaScript, the function called on click changes from <code>selectOshi</code> to <code>openOshiDetail</code>, and <code>navApp.pushPage(\"detail.html\");</code> pushes the detail screen on top. The name and reason are not passed to the detail screen yet, so whichever row you tap, 「詳細画面の見本」 (Sample detail screen) appears."
+    },
+    {
+      "source": "一覧の1件を1回押し、詳細の見本を表示します。",
+      "translation": "Tap one item in the list once to display the sample detail screen."
+    },
+    {
+      "source": "詳細の左上にある戻るボタンを1回押し、一覧へ戻ります。ブラウザ自体の戻るボタンは使いません。",
+      "translation": "Tap the back button at the top left of the detail screen once to return to the list. Do not use the browser's own back button."
+    },
+    {
+      "source": "別の行でも、詳細を開く・戻るを確かめます。このSTEPでは連打せず、画面の動きが終わってから操作します。",
+      "translation": "Check opening the detail screen and going back with other rows too. In this STEP, do not tap repeatedly; wait until the screen animation finishes before the next action."
+    },
+    {
+      "source": "<code>ons-back-button</code> は、そのページを管理するnavigatorの前のページへ戻す部品です。自分でクリック処理を追加しなくても動きます。ページの切り替わり方もOSのスタイルで変わるので、常に同じ方向へスライドするとは限りません。ボタンの見た目もOSのスタイルで変わります。iOS向けでは、HTMLに書いた文字を添えて「＜ 戻る」と表示されます。Android向けでは左向きの矢印「←」だけになり、「戻る」の文字は表示されません。どちらも同じ <code>ons-back-button</code> で、押したときの動きは同じです。",
+      "translation": "<code>ons-back-button</code> is a component that goes back to the previous page of the navigator that manages its page. It works without any click handling of your own. The way pages switch also depends on the OS style, so they do not always slide in the same direction. The look of the button depends on the OS style too. In the iOS look, it is displayed as 「＜ 戻る」 (&lt; Back), with the text written in the HTML. In the Android look, it becomes only a left-pointing arrow 「←」, and the text 「戻る」 (Back) is not displayed. Both are the same <code>ons-back-button</code>, and they behave the same when tapped."
+    },
+    {
+      "source": "iOSのナビゲーションコントローラで次の画面をpushし、戻る操作でpopする構造と同じです。Androidで次の画面へ進んで戻る場合と同様、一覧を消して作り直す操作ではありません。Onsen UIでは <code>pushPage</code> で積み、<code>ons-back-button</code> に戻る操作を任せます。見た目も、iOSのナビゲーションバーの文字つきの戻るボタンと、Androidのツールバーの矢印だけの戻るボタンに合わせて、Onsen UIが描き分けます。",
+      "translation": "This is the same structure as pushing the next screen with an iOS navigation controller and popping it when going back. As when you move to the next screen and come back in Android, it does not destroy the list and rebuild it. In Onsen UI, you push with <code>pushPage</code> and leave going back to <code>ons-back-button</code>. Onsen UI also draws the look to match the back button with text in the iOS navigation bar and the arrow-only back button in the Android toolbar."
+    },
+    {
+      "source": "詳細の見本を開き、画面内の戻るボタンで一覧へ戻れた。",
+      "translation": "The sample detail screen has been opened, and you have returned to the list with the back button on the screen."
+    },
+    {
+      "source": "STEP 17 · コマ4",
+      "translation": "STEP 17 · Session 4"
+    },
+    {
+      "source": "押した項目を詳細へ渡す",
+      "translation": "Pass the tapped item to the detail screen"
+    },
+    {
+      "source": "<code>www/index.html</code> と <code>www/js/app.js</code> を全文に置き換えます。CSSは変わりません。詳細の名前・種類・理由はHTMLでは空にし、受け取ったデータを後から入れます。",
+      "translation": "Replace <code>www/index.html</code> and <code>www/js/app.js</code> with the full files. The CSS does not change. The name, type, and reason on the detail screen are left empty in the HTML, and the received data is filled in later."
+    },
+    {
+      "source": "<code>pushPage</code> の2番目の引数に <code>{ data: { oshi: oshi } }</code> を渡します。左側の <code>oshi</code> は受け渡す項目の名前、右側の <code>oshi</code> は関数の引数で受け取った好きなもの1件です。",
+      "translation": "Pass <code>{ data: { oshi: oshi } }</code> as the second argument of <code>pushPage</code>. The <code>oshi</code> on the left is the name of the item being passed, and the <code>oshi</code> on the right is the one favorite received as the function's argument."
+    },
+    {
+      "source": "詳細ページの <code>init</code> では、<code>const oshi = page.data.oshi;</code> でその1件を取り出します。その後、<code>txt_detail_name</code>・<code>txt_detail_genre</code>・<code>txt_detail_comment</code> の <code>textContent</code> を設定します。",
+      "translation": "In the <code>init</code> of the detail page, <code>const oshi = page.data.oshi;</code> takes out that one item. Then it sets the <code>textContent</code> of <code>txt_detail_name</code>, <code>txt_detail_genre</code>, and <code>txt_detail_comment</code>."
+    },
+    {
+      "source": "1件目を押し、名前・種類・理由が配列の1件目と一致することを確かめます。",
+      "translation": "Tap the first item and check that the name, type, and reason match the first item in the array."
+    },
+    {
+      "source": "戻って2件目、3件目でも確かめます。",
+      "translation": "Go back and check the second and third items too."
+    },
+    {
+      "source": "理由の <code>\\n</code> が改行になっていることを見ます。CSSの <code>white-space: pre-wrap</code> が、改行を保ちながら折り返します。",
+      "translation": "See that the <code>\\n</code> in the reason has become a line break. <code>white-space: pre-wrap</code> in the CSS wraps the text while keeping the line breaks."
+    },
+    {
+      "source": "このSTEPも画面の動きが終わってから次を押します。画面の切り替えの途中に届いた2回目の操作は、Onsen UIのnavigatorが受け付けないので、続けて押しても詳細は重なりません。次のSTEPでは、この仕組みに任せきりにせず、アプリの側でも開く途中かどうかを記録します。",
+      "translation": "In this STEP too, wait for the screen animation to finish before the next tap. The Onsen UI navigator does not accept a second action that arrives while the screen is switching, so tapping again does not stack another detail screen. In the next STEP, instead of relying only on this behavior, the app itself also records whether a detail screen is being opened."
+    },
+    {
+      "source": "Androidで次の画面へ値を渡す、iOSで遷移先に表示用の値を渡す目的と同じです。Onsen UIではnavigatorの <code>data</code> を渡し、作られたページの <code>page.data</code> から受け取ります。ここで渡すのは実行中のJavaScriptオブジェクトで、ファイルへ保存したり文字列へ変換したりしているわけではありません。",
+      "translation": "The purpose is the same as passing values to the next screen in Android, or passing values for display to the destination in iOS. In Onsen UI, you pass the navigator's <code>data</code> and receive it from <code>page.data</code> of the created page. What is passed here is a JavaScript object at runtime; it is not saved to a file or converted to a string."
+    },
+    {
+      "source": "3件それぞれの名前・種類・理由が詳細へ渡り、改行も表示された。",
+      "translation": "The name, type, and reason of each of the three items were passed to the detail screen, and the line breaks were displayed too."
+    },
+    {
+      "source": "STEP 18 · コマ4",
+      "translation": "STEP 18 · Session 4"
+    },
+    {
+      "source": "連続して押されても詳細を重ねない",
+      "translation": "Do not stack detail screens on repeated taps"
+    },
+    {
+      "source": "<code>www/js/app.js</code> を全文に置き換えます。完成版では <code>isOpeningDetail</code> という真偽値と、navigatorの現在のページを使って、詳細を重ねて開くことを防ぎます。Onsen UIのnavigatorも、切り替えの途中に届いた2回目の <code>pushPage</code> は受け付けませんが、断られた呼び出しはエラーになります。アプリの側で開く途中かどうかを記録しておけば、2回目の呼び出しそのものをしないで済みます。",
+      "translation": "Replace <code>www/js/app.js</code> with the full file. The finished version uses a boolean named <code>isOpeningDetail</code> and the navigator's current page to prevent opening detail screens on top of each other. The Onsen UI navigator also refuses a second <code>pushPage</code> that arrives during a transition, but a refused call becomes an error. If the app records whether it is in the middle of opening, it can avoid making the second call at all."
+    },
+    {
+      "source": "場所",
+      "translation": "Place"
+    },
+    {
+      "source": "意味",
+      "translation": "Meaning"
+    },
+    {
+      "source": "まだ詳細を開く途中ではない。",
+      "translation": "Not in the middle of opening a detail screen yet."
+    },
+    {
+      "source": "開いている途中、または一覧が一番上でなければ処理を抜ける。",
+      "translation": "If a detail screen is being opened, or the list is not on top, leave the function."
+    },
+    {
+      "source": "次のクリックが来る前に、開く途中だと記録する。",
+      "translation": "Records that opening is in progress, before the next click arrives."
+    },
+    {
+      "source": "ページを開く処理が終わったときに実行される関数。ここで真偽値をfalseへ戻す。",
+      "translation": "A function that runs when the page has finished opening. Here the boolean is set back to false."
+    },
+    {
+      "source": "<code>||</code> は「どちらか」、<code>!==</code> は「等しくない」、<code>return</code> はこの関数をそこで終える、というWeb基礎の書き方です。開き終わって真偽値がfalseになっても、詳細が一番上ならもう一度開きません。",
+      "translation": "<code>||</code> means \"either\", <code>!==</code> means \"not equal\", and <code>return</code> ends the function right there; all of these are from Web Basics. Even after opening has finished and the boolean is false again, it does not open again while the detail screen is on top."
+    },
+    {
+      "source": "保存して再読み込みし、同じ行を続けて2回押します。",
+      "translation": "Save and reload, then tap the same row twice in a row."
+    },
+    {
+      "source": "詳細の左上の戻るボタンを1回押します。一覧に戻れば、詳細は重なっていません。",
+      "translation": "Tap the back button at the top left of the detail screen once. If you return to the list, the detail screens were not stacked."
+    },
+    {
+      "source": "別の行を押し、別の詳細も開けることを確かめます。",
+      "translation": "Tap another row and check that you can open another detail screen too."
+    },
+    {
+      "source": "画面の見た目は、STEP 17のときと同じです。ここでは、処理を足したあとも、今までどおり詳細が1枚だけ開き、戻れることを確かめます。",
+      "translation": "The screen looks the same as in STEP 17. Here you check that, even after adding the code, only one detail screen opens as before and you can go back."
+    },
+    {
+      "source": "Web基礎でクリック後の処理を関数として登録したのと同じく、<code>callback</code> へ「終わったら行う関数」を渡します。Androidのアニメーション終了の通知やiOSの完了ハンドラと対応します。最初に真偽値を変え、完了通知で戻すことで、画面の切り替えを待つ間だけ次の開始を止めます。",
+      "translation": "Just as you registered a function to run after a click in Web Basics, you pass a \"function to run when finished\" to <code>callback</code>. It matches the animation-end notification in Android and the completion handler in iOS. By changing the boolean first and resetting it on the completion notification, you block the next opening only while waiting for the screen transition."
+    },
+    {
+      "source": "続けて2回押しても、戻る1回で一覧になり、次の項目も開けた。",
+      "translation": "Even after tapping twice in a row, one back tap returns to the list, and the next item can be opened."
+    },
+    {
+      "source": "STEP 19 · コマ4",
+      "translation": "STEP 19 · Session 4"
+    },
+    {
+      "source": "完成版を確認し、自分の好きなものノートにする",
+      "translation": "Check the finished version and make it your own favorites notebook"
+    },
+    {
+      "source": "下の3ファイルは <code>M01OshiList</code> の完成版です。コードをそろえたら、順番に確認します。自分のアレンジを残す場合は、データや色の違いと、処理の違いを分けて見比べます。",
+      "translation": "The three files below are the finished version of <code>M01OshiList</code>. Once your code matches, check the items in order. If you keep your own customizations, compare differences in data and colors separately from differences in the code logic."
+    },
+    {
+      "source": "再読み込み直後は3件と「まだ選択していません」が見えます。",
+      "translation": "Right after a reload, you see the three items and 「まだ選択していません」 (Nothing selected yet)."
+    },
+    {
+      "source": "3件を順に開き、それぞれの名前・種類・理由が正しいことを確かめます。戻ると一覧に選択した名前が残ります。",
+      "translation": "Open the three items in order and check that the name, type, and reason of each are correct. When you go back, the selected name remains in the list."
+    },
+    {
+      "source": "行を続けて押しても、戻る1回で一覧へ戻ることを確かめます。",
+      "translation": "Check that even if you tap a row repeatedly, one back tap returns you to the list."
+    },
+    {
+      "source": "先頭のOS強制指定がコメントになっていることを確認します。STEP 09と同じく、Monacaの端末選択で <code>iPhone 15</code>、<code>Pixel 8</code> を選び、それぞれ <code>Reload</code> を押して一覧・詳細・戻るを比べます。",
+      "translation": "Check that the forced OS setting at the top is a comment. As in STEP 09, choose <code>iPhone 15</code> and <code>Pixel 8</code> in the Monaca device selector, press <code>Reload</code> for each, and compare the list, the detail screen, and going back."
+    },
+    {
+      "source": "長い名前と改行のある理由を試し、狭い幅でも読めることを確かめます。再読み込み後の選択は未選択へ戻ります。",
+      "translation": "Try a long name and a reason with line breaks, and check that they are readable at a narrow width. After a reload, the selection goes back to nothing selected."
+    },
+    {
+      "source": "アレンジ箇所を記録する",
+      "translation": "Record what you customized"
+    },
+    {
+      "source": "この単元は、変更したファイル・箇所と、画面での変化を記録して終えます。公開URLでの提出は、先生が案内するMonaca系の提出回に行います。自分のプロジェクトは残しておきます。",
+      "translation": "This unit ends with you recording which files and places you changed and how the screen changed. Submission by import URL takes place in the Monaca submission session that your teacher announces. Keep your own project."
+    },
+    {
+      "source": "公開URLで相手へ渡るのは、ソースに書いた配列・HTML・CSSです。今画面で選んでいる項目は渡りません。この単元には保存機能もありません。",
+      "translation": "What the import URL hands over to the other person is the array, HTML, and CSS written in the source. The item currently selected on the screen is not passed on. This unit also has no save feature."
+    },
+    {
+      "source": "Web基礎で作ったHTML・CSS・JavaScriptの役割分担は、完成版でも同じです。画面間の移動と値の受け渡しはAndroid・iOSの経験と対応します。今回の新しい考え方は、OS別の見た目を共通のHTMLへ適用するauto-stylingです。自分で変えた内容と、OSによる違いを分けて説明しましょう。",
+      "translation": "The division of roles among HTML, CSS, and JavaScript from Web Basics is the same in the finished version. Moving between screens and passing values match your experience in Android and iOS. The new idea this time is auto-styling, which applies an OS-specific look to shared HTML. Explain what you changed yourself separately from the differences caused by the OS."
+    },
+    {
+      "source": "一覧・詳細・戻る・連続クリック・OSによる差を確認し、自分の変更箇所を説明できる。",
+      "translation": "The list, the detail screen, going back, repeated clicks, and the differences by OS have been checked, and you can explain what you changed."
+    },
+    {
+      "source": "<code>oshiItems</code> の名前・種類・理由・件数、HTMLの見出し、CSSの色・余白・文字サイズを変えられます。自分の好きなものと、その理由を自分の言葉で書きます。次に1か所だけ見た目を変え、どのファイルの何を変え、どの画面へ反映されたかを説明してください。",
+      "translation": "You can change the names, types, reasons, and number of items in <code>oshiItems</code>, the headings in the HTML, and the colors, spacing, and font sizes in the CSS. Write your own favorites and reasons in your own words. Then change just one thing in the look, and explain what you changed in which file and on which screen it appeared."
+    },
+    {
+      "source": "見えること",
+      "translation": "What you see"
+    },
+    {
+      "source": "確認すること",
+      "translation": "What to check"
+    },
+    {
+      "source": "装飾のない縦並びになる",
+      "translation": "Everything is stacked vertically with no styling"
+    },
+    {
+      "source": "<code>index.html</code> の Onsen UI のCDNの版とパス、<code>css/style.css</code> のパスを確認。保存してからプレビューを再読み込みしたか。回線が <code>unpkg.com</code> へつながるか。",
+      "translation": "Check the version and path of the Onsen UI CDN in <code>index.html</code>, and the path <code>css/style.css</code>. Did you reload the preview after saving? Can your network reach <code>unpkg.com</code>?"
+    },
+    {
+      "source": "<code>app.js</code> が動かない",
+      "translation": "<code>app.js</code> does not run"
+    },
+    {
+      "source": "置き場所が <code>www/js/app.js</code> か。<code>index.html</code> の <code>script</code> が Onsen UI より後にあるか。ファイルを保存したか。",
+      "translation": "Is it located at <code>www/js/app.js</code>? Is the <code>script</code> in <code>index.html</code> after Onsen UI? Did you save the file?"
+    },
+    {
+      "source": "一覧が空になる",
+      "translation": "The list is empty"
+    },
+    {
+      "source": "<code>page_list</code>・<code>list_oshi</code> の <code>id</code> の綴り。配列のカンマと引用符。<code>init</code> の中から <code>renderOshiList</code> を呼んでいるか。",
+      "translation": "The spelling of the <code>id</code> values <code>page_list</code> and <code>list_oshi</code>. Commas and quotation marks in the array. Is <code>renderOshiList</code> called from inside <code>init</code>?"
+    },
+    {
+      "source": "どの行も同じ項目になる",
+      "translation": "Every row shows the same item"
+    },
+    {
+      "source": "繰り返しが <code>for (let i = 0; …)</code> になっているか。固定の <code>0</code> ではなく <code>oshiItems[i]</code> を渡しているか。",
+      "translation": "Is the loop written as <code>for (let i = 0; …)</code>? Are you passing <code>oshiItems[i]</code>, not a fixed <code>0</code>?"
+    },
+    {
+      "source": "押しても反応しない",
+      "translation": "Nothing happens when tapped"
+    },
+    {
+      "source": "<code>innerHTML</code> で行を作った後に <code>addEventListener</code> を登録しているか。<code>tappable</code> だけでは処理は付かない。",
+      "translation": "Is <code>addEventListener</code> registered after the rows are built with <code>innerHTML</code>? <code>tappable</code> alone adds no handling."
+    },
+    {
+      "source": "<code>template</code> を足したら画面が空白になる",
+      "translation": "The screen goes blank after adding <code>template</code>"
+    },
+    {
+      "source": "<code>ons-navigator</code> の <code>page</code> と <code>template</code> の <code>id</code> の綴り。<code>template</code> の中に <code>ons-page</code> が1つあるか。要素を <code>init</code> より前に取得していないか。",
+      "translation": "The spelling of <code>page</code> on <code>ons-navigator</code> and <code>id</code> on <code>template</code>. Is there exactly one <code>ons-page</code> inside <code>template</code>? Are you getting elements before <code>init</code>?"
+    },
+    {
+      "source": "詳細が空になる",
+      "translation": "The detail screen is empty"
+    },
+    {
+      "source": "<code>pushPage</code> の <code>data</code> の <code>oshi</code> と、<code>page.data.oshi</code>、表示用の3つの <code>id</code> を照合する。",
+      "translation": "Compare <code>oshi</code> in the <code>data</code> of <code>pushPage</code>, <code>page.data.oshi</code>, and the three <code>id</code> values used for display."
+    },
+    {
+      "source": "OS指定を変えても見た目が変わらない",
+      "translation": "The look does not change after changing the OS setting"
+    },
+    {
+      "source": "<code>ons.platform.select</code> を <code>app.js</code> の先頭で実行しているか。画面内の戻るではなく、プレビューの <code>Reload</code> を押したか。端末選択で比べるときは、コードの指定をコメントに戻したか。",
+      "translation": "Is <code>ons.platform.select</code> run at the top of <code>app.js</code>? Did you press <code>Reload</code> in the preview, not the back button on the screen? When comparing with the device selector, did you turn the setting in the code back into a comment?"
+    },
+    {
+      "source": "JEC / ハイブリッドアプリ開発技法 · M01OshiList",
+      "translation": "JEC / Hybrid App Development · M01OshiList"
+    }
+  ]
+}
