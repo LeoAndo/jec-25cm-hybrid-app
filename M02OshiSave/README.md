@@ -65,10 +65,12 @@ Onsen UIはCDNから2.12.9を固定して読み込みます。テンプレート
 
 2026-09-25、PR #65（#46）で変えた`www/css/style.css`（一覧の行の右の余白30px）と、PR #89（#83）で理由のコメント2行を戻した`www/js/app.js`を公開用のMonacaプロジェクトへ保存し直し、`index.html`・`style.css`・`app.js`・`config.xml`・`package.json`のエディター上の全文が`main`（332011a）と一致することをSHA-256で照合しました（issue #94）。公開URLは作り直していません。同日、この公開URLから空きの1枠へ新しく取り込んだコピーのクラウド IDEで、`index.html`・`style.css`（`padding-right: 30px`を含む）・`app.js`の全文が`main`（332011a）と一致することをSHA-256で照合し、公開URLが保存後の最新の内容を取り込ませることを確かめました。同日、この取り込んだコピーのプレビュー（プレビューのアプリを単体で開き、幅を390pxにして計測）で、初期の3件に60文字（入力欄の上限）の名前を1件足して保存し、再読み込み後に「4件の保存内容を読み込みました。」と4件の一覧が出ることを確かめました。60文字の名前は4行に折り返し、名前の右端から右端の目印（＞）の左端までの間は、iOS向けの見た目で約13px、Android向けの見た目（`?platform=android`）で約11px空いていて、重なりませんでした。全行の`padding-right`は30pxでした。確認用のデータは消しています。取り込んだコピーは確認後にオーナーが削除します。
 
+2026-09-25の夕方、公開用のMonacaプロジェクトをすべて削除したため、前の取り込み用URLは使えなくなりました（「Project Not Found」）。`main`（8b1132b）の完成プロジェクトZIPを`config.xml`が直下の形にして、通常版Monacaの「インポート → ZIPファイル」で取り込み直し、「プロジェクト → 公開…」で新しい取り込み用URLを発行しました（issue #132）。新しいURLの取り込みページに、プロジェクト名とインポート操作が表示されることを確かめています。
+
 2026-09-24、ローカルChromeの390px幅で初期表示、空入力の案内、HTML記号・改行を含む追加、再読み込み後の復元、詳細と戻る、初期化の確認・中止を確認しました。検証用コピーで、不正なJSON・不正な項目構造からの読込失敗、空配列の復元、保存失敗時の入力保持と元の一覧の維持も確認しました。完成アプリのUnit Testは作りません。
 
 同日、コミット`68a5925`の配布用ZIPを通常版Monacaの「URLを指定してインポート」で取り込みました。クラウドのiPhone 15・Pixel 8プレビューで初期表示、空入力の案内、追加・保存、再読み込み後の復元、詳細と戻るを確認しました。iPhone表示では理由の改行と初期化の取消し、Pixel表示では初期化の確定と再読み込み後の初期3件も確認しました。端末の切替えは同じプレビューオリジンでの表示確認であり、異なる端末間の同期を確認したものではありません。
 
-[取り込み用の公開URL](https://monaca.mobi/ja/directimport?pid=6ab5042ee78885db0a1a0da2)を発行し、リンク先に`M02OshiSave`とインポート操作が表示されることを確認しました。公開中の完成見本はM01・M02の2本で、採点用に1枠を残しています。公開URLから別プロジェクトへの再取り込みは、題材変更後の版で確認しました（上記）。公開したアプリのHTML・CSS・JavaScriptはこのフォルダと同一で、この検証記録は公開後に追記しています。
+[取り込み用の公開URL](https://monaca.mobi/ja/directimport?pid=6ab62caae788858e561a0da3)を発行し、リンク先に`M02OshiSave`とインポート操作が表示されることを確認しました。公開中の完成見本はM01・M02の2本で、採点用に1枠を残しています。このURLは2026-09-25に取り込み直したプロジェクトで発行し直したものです（上記）。取り込み直したアプリのHTML・CSS・JavaScriptはこのフォルダと同一で、この検証記録は公開後に追記しています。
 
 参考：[Web Storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)、[JSON.parse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)、[Onsen UI navigator](https://onsen.io/v2/api/js/ons-navigator.html)。

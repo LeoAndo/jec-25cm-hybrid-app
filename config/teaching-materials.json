@@ -437,7 +437,7 @@
         }
       ],
       "archive": "docs/oshi-list/downloads/M01OshiList.zip",
-      "import_url": "https://monaca.mobi/ja/directimport?pid=6ab3e25de78885da2c0a0ae6"
+      "import_url": "https://monaca.mobi/ja/directimport?pid=6ab62c99e7888517430a0ae6"
     },
     {
       "name": "M02OshiSave",
@@ -739,7 +739,7 @@
         }
       ],
       "archive": "docs/oshi-save/downloads/M02OshiSave.zip",
-      "import_url": "https://monaca.mobi/ja/directimport?pid=6ab5042ee78885db0a1a0da2"
+      "import_url": "https://monaca.mobi/ja/directimport?pid=6ab62caae788858e561a0da3"
     },
     {
       "name": "F01StampBoard",
