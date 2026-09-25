@@ -223,7 +223,10 @@ class PackageStudentMaterialsTest(unittest.TestCase):
         self.assertIn("  M02 TapCounter：docs/tap-counter/index.html", instructions)
         self.assertIn("  F01 HelloFlutter：docs/hello-flutter/index.html", instructions)
         self.assertIn("Visual Studio Code", instructions)
-        self.assertIn("取り込み用のURL", instructions)
+        self.assertIn(f"できたフォルダ {FIXTURE_STEM} を ~/Documents（書類）の直下に置きます", instructions)
+        # Monacaの見本は samples で読み比べ、動かすときは同じ内容のZIPを取り込む。取り込み用URLは案内しない（#135）。
+        self.assertIn("docs/hello-monaca/downloads/M01HelloMonaca.zip のような同じ内容のZIP", instructions)
+        self.assertNotIn("取り込み用のURL", instructions)
         for word in ("Kotlin", "IntelliJ IDEA", "Android Studio"):
             self.assertNotIn(word, instructions)
 
@@ -239,6 +242,11 @@ class PackageStudentMaterialsTest(unittest.TestCase):
         """Flutterの単元がまだないうちは、例のフォルダ名を決めつけない。"""
         self.assertEqual(packager.sample_example(FIXTURE_PROJECTS[:2]), "samples/<プロジェクト名>")
         self.assertEqual(packager.sample_example(FIXTURE_PROJECTS), "samples/F01HelloFlutter")
+
+    def test_monaca_zip_example_without_monaca_unit(self):
+        """Monacaの単元がないうちは、取り込むZIPの例を決めつけない。"""
+        self.assertEqual(packager.monaca_zip_example(FIXTURE_PROJECTS[2:]), "docs/<スラッグ>/downloads/<プロジェクト名>.zip")
+        self.assertEqual(packager.monaca_zip_example(FIXTURE_PROJECTS), "docs/hello-monaca/downloads/M01HelloMonaca.zip")
 
     def test_added_unit_appears_without_touching_the_script(self):
         """単元を設定に足すだけで、配布物の案内にも見本にも反映される。"""
@@ -541,7 +549,9 @@ class StudentReleaseTest(unittest.TestCase):
         self.assertIn("- `F01 HelloFlutter：docs/hello-flutter/index.html`", text)
         # 「File > Open Folder…」の例は、先頭のMonacaの見本ではなく、最初のFlutterの見本にする。
         self.assertIn("「File > Open Folder…」で `samples/F01HelloFlutter`", text)
-        self.assertIn("取り込み用のURL", text)
+        self.assertIn(f"できたフォルダ `{self.metadata['asset'].removesuffix('.zip')}` を `~/Documents`（書類）の直下に置きます", text)
+        self.assertIn("`docs/hello-monaca/downloads/M01HelloMonaca.zip` のような同じ内容のZIP", text)
+        self.assertNotIn("取り込み用のURL", text)
         for word in ("Kotlin", "IntelliJ IDEA", "Android Studio"):
             self.assertNotIn(word, text)
 
@@ -553,6 +563,7 @@ class StudentReleaseTest(unittest.TestCase):
         text = (self.dist / "release-notes.md").read_text(encoding="utf-8")
         self.assertIn("   - （教科書はまだありません）", text)
         self.assertIn("`samples/<プロジェクト名>`", text)
+        self.assertIn("`docs/<スラッグ>/downloads/<プロジェクト名>.zip`", text)
         self.assertIn("見本）を含む版には、`samples` フォルダがあります", text)
         self.assertNotIn("見本）は、`samples` フォルダに入っています", text)
 

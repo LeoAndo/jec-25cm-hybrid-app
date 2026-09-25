@@ -48,6 +48,18 @@ def sample_example(projects):
     return f"samples/{roots[0]}" if roots else "samples/<プロジェクト名>"
 
 
+def monaca_zip_example(projects):
+    """はじめに.txt の「Monacaへ取り込むZIP」の例に挙げる、Monacaの完成プロジェクトZIP。
+
+    Monaca クラウド IDEはMacのフォルダを開けないので、見本を動かすときは samples/ ではなく、
+    教科書の downloads にある同じ内容のZIPをダッシュボードの「インポート」で取り込む。
+    教員が公開して発行する取り込み用のURLは、2026-09-25 にリンク切れ（Project Not Found）が
+    見つかったので、案内には使わない（#135）。
+    """
+    archives = [project["archive"] for project in projects if project.get("kind") == "monaca"]
+    return archives[0] if archives else "docs/<スラッグ>/downloads/<プロジェクト名>.zip"
+
+
 def unit_list(projects):
     """リリースノートに載せる単元一覧を作る。"""
     lines = []
@@ -197,16 +209,17 @@ def prepare(repo, metadata):
     body = (
         f"# ハイブリッドアプリ開発技法 教材 {version}\n\n"
         "## ダウンロードと開き方\n\n"
-        f"1. Assetsの **{asset}** をダウンロードして展開します。\n"
+        f"1. Assetsの **{asset}** をダウンロードして展開し、できたフォルダ `{asset.removesuffix('.zip')}` を `~/Documents`（書類）の直下に置きます。\n"
         "2. `docs/common/setup.html` をブラウザで開きます。第1コマにSTEP 1〜3、第7コマにSTEP 4〜7を開始し、第8コマでも確認を続けます。\n"
         "   Flutterのダウンロードも授業時間内に行います。Flutterの初回実行は単元の教科書で行います。\n"
         "3. 授業で使う単元の教科書をブラウザで開きます。\n\n"
         f"{unit_list(projects)}\n\n"
         "4. 完成プロジェクト（先生が作った見本）を含む版には、`samples` フォルダがあります。\n"
         f"   Flutterの単元は、Visual Studio Code の「File > Open Folder…」で `{sample_example(projects)}` のように選ぶだけで開けます。\n"
-        "   Monacaの単元は、教科書に載っている取り込み用のURLからMonacaへ取り込みます。\n"
+        "   Monacaの単元は、`samples` の中のフォルダでコードを読み比べます。Monaca クラウド IDEで動かすときは、\n"
+        f"   `{monaca_zip_example(projects)}` のような同じ内容のZIPを、ダッシュボードの「インポート」で取り込みます。\n"
         "   `samples` フォルダの中身は、コードを読み比べるための写しです。\n\n"
-        "教材を更新するときは別フォルダに展開し、自分で作ったプロジェクトを上書きしないでください。\n"
+        "教材を更新するときは `~/Documents` の直下に別のフォルダとして展開し、自分で作ったプロジェクト（`~/Documents/HybridApp` の中）を上書きしないでください。\n"
         "授業中は先生が指定した版を使ってください。\n\n"
         f"{localized_download_guidance(report, asset)}"
         f"## 学生向けの補足\n\n{student_notes or '対象単元・作業のやり直しの要否は、先生の案内を確認してください。'}\n\n"

@@ -58,11 +58,24 @@ def archive_targets(projects):
 def sample_example(projects):
     """はじめに.txt の「File > Open Folder…」の例に挙げる見本。
 
-    フォルダーを開いて使うのはFlutterの単元の見本だけ（Monacaの見本は取り込み用のURLから取り込む）。
+    フォルダーを開いて使うのはFlutterの単元の見本だけ（Monacaの見本はコードを読み比べる写しで、
+    Monaca クラウド IDEで動かすときは同じ内容のZIPを取り込む）。
     projects の先頭はMonacaの単元なので、先頭を挙げるとFlutterの案内にMonacaの見本が出てしまう。
     """
     roots = [project["root"] for project in projects if project.get("kind") == "flutter"]
     return f"samples/{roots[0]}" if roots else "samples/<プロジェクト名>"
+
+
+def monaca_zip_example(projects):
+    """はじめに.txt の「Monacaへ取り込むZIP」の例に挙げる、Monacaの完成プロジェクトZIP。
+
+    Monaca クラウド IDEはMacのフォルダを開けないので、見本を動かすときは samples/ ではなく、
+    教科書の downloads にある同じ内容のZIPをダッシュボードの「インポート」で取り込む。
+    教員が公開して発行する取り込み用のURLは、2026-09-25 にリンク切れ（Project Not Found）が
+    見つかったので、案内には使わない（#135）。
+    """
+    archives = [project["archive"] for project in projects if project.get("kind") == "monaca"]
+    return archives[0] if archives else "docs/<スラッグ>/downloads/<プロジェクト名>.zip"
 
 
 class LocalLinks(HTMLParser):
@@ -209,7 +222,8 @@ def build(output_dir):
 
     # 完成プロジェクトを、展開済みの見本として samples/ にも収録する。Flutterの単元は、学生がダウンロードも
     # 展開もせず、Visual Studio Code の「File > Open Folder…」で選ぶだけになる。Monacaの単元の見本は、
-    # 取り込み用のURLから取り込むので、samples/ の中身はコードを読み比べるための写しになる。
+    # Monaca クラウド IDEがMacのフォルダを開けないので、samples/ の中身はコードを読み比べるための写しになり、
+    # 動かすときは docs/<スラッグ>/downloads/ にある同じ内容のZIPを取り込む。
     # 中身は配布物に入れるZIPと同じなので、新たにcommitするファイルはない。
     # リンク検査のあとで足すので、検査の対象は教科書と多言語の入口で、samples の中は検査しない。
     executables = set()
@@ -236,7 +250,7 @@ def build(output_dir):
     files["はじめに.txt"] = (
         "ハイブリッドアプリ開発技法 学生用教材\n\n"
         f"教材の版：{version}\n\n"
-        "1. ZIPを展開します。\n"
+        f"1. ZIPを展開し、できたフォルダ {stem} を ~/Documents（書類）の直下に置きます。\n"
         "2. docs/common/setup.html をブラウザで開きます。第1コマにSTEP 1〜3、第7コマにSTEP 4〜7を進めます。\n"
         "   教材の置き場所とMonacaアカウントを準備し、Flutterのダウンロードも授業時間内に行います。\n"
         "   Flutterの初回実行は単元の教科書で行います。準備済みの項目は確認してから次へ進みます。\n"
@@ -244,11 +258,12 @@ def build(output_dir):
         f"{unit_lines}"
         "4. 完成プロジェクト（先生が作った見本）を含む版には、samples フォルダがあります。\n"
         f"   Flutterの単元は、Visual Studio Code の「File > Open Folder…」で {sample_example(projects)} のように選ぶだけで開けます。\n"
-        "   Monacaの単元は、教科書に載っている取り込み用のURLからMonacaへ取り込みます。\n"
+        "   Monacaの単元は、samples の中のフォルダでコードを読み比べます。Monaca クラウド IDEで動かすときは、\n"
+        f"   {monaca_zip_example(projects)} のような同じ内容のZIPを、ダッシュボードの「インポート」で取り込みます。\n"
         "   samples フォルダの中身は、コードを読み比べるための写しです。\n\n"
         "教科書はオフラインで利用できます。Monacaはブラウザから使うサービスなので、ネット接続が必要です。\n"
         "Flutterの準備とビルドにもネット接続が必要です。\n"
-        "教材を更新するときは別のフォルダに展開し、自分で作ったプロジェクトを上書きしないでください。\n"
+        "教材を更新するときは ~/Documents の直下に別のフォルダとして展開し、自分で作ったプロジェクト（~/Documents/HybridApp の中）を上書きしないでください。\n"
         "授業中は先生が指定した版を使ってください。質問時には教材の版とSTEP番号を伝えてください。\n"
     ).encode()
 

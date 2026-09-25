@@ -164,7 +164,7 @@ description: Add a new teaching unit to this hybrid app course repository - a Mo
   ```
 
   ZIPはGitで管理しているファイルから作るので、新しいファイルは先に `git add` する。
-- **「完成プロジェクトを開く」（`#sample-project`）の書き方は系統で違う。** Monaca系は取り込み用URL（`import_url`。まだ無ければ、教員が案内すると書く）、Flutter系は配布ZIPの `samples/<単元名>` を Visual Studio Code で開く手順。
+- **「完成プロジェクトを開く」（`#sample-project`）は、どちらの系統も配布フォルダ `~/Documents/hybrid-app-student-materials-日付/samples/<単元名>` をFinderで開くところから書く**（2026-09-25 先生レビュー、#135）。Monaca系は、そのフォルダでコードを読み比べ、Monaca クラウド IDEで動かすときは `docs/<スラッグ>/downloads/<単元名>.zip` をダッシュボードの「インポート」で取り込む、と書く。教員が公開して発行する取り込み用URL（`import_url`）は、リンク切れが見つかったので載せない（載せるなら、実際に発行して開けることを確かめたURLだけ）。Flutter系は、そのフォルダを Visual Studio Code の `File > Open Folder…` で開く手順にし、ZIPのダウンロードリンクは置かない。
 - `docs/<スラッグ>/images/` は、**その教科書で実際に使うスクリーンショットがあるときだけ**作る。Monaca系はMonaca クラウド IDEのプレビュー、Flutter系はシミュレータ／エミュレータで撮る。「ここに画像を入れる」のようなプレースホルダは置かない。`<img>` には実寸の `width` と `height` を書く。
 - コードのスニペットは、`<pre id="code-…"><code>` に置き、**ソースからHTMLエスケープして差し込む**。configの `snippets` がバイト単位で照合するので、手で写して直さない。
 
