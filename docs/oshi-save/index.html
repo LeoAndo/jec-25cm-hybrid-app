@@ -268,7 +268,9 @@ function openOshiDetail(oshi) {
 <div class="check"><label><input type="checkbox" data-check="oshi-save-00"><span>自分の1プロジェクトで3件の一覧・詳細・戻るを確認し、HTMLとJSの対応を追えた。</span></label></div></section>
 <section id="step-1"><p class="step-meta">STEP 01 · コマ5</p><h2>入力画面を作る</h2>
 <p>3ファイルをこのSTEPのコードへ更新します。HTMLに <code>add.html</code> のtemplateを加え、名前・種類の <code>input</code> と、好きな理由の <code>textarea</code> を置きます。<code>label</code> のforと入力欄のidが対応します。</p>
-<p>CSSの <code>.app-input</code> は幅を100%にし、<code>box-sizing: border-box</code> でpaddingと枠をその幅の内側へ収めます。<code>font: inherit</code> で文字を周囲とそろえ、focusのoutlineで選択中の欄を見分けます。reset用のクラスは後の確認表示で使います。</p>
+<p>CSSの <code>.app-input</code> は幅を100%にし、<code>box-sizing: border-box</code> でpaddingと枠をその幅の内側へ収めます。<code>font: inherit</code> で文字を周囲とそろえ、focusのoutlineで選択中の欄を見分けます。ほかに加わるクラスのうち、このSTEPの画面に当たる4つは次の表のとおりです。</p>
+<table><thead><tr><th>クラス</th><th>当たる要素</th><th>指定と理由</th></tr></thead><tbody><tr><td><code>.app-action</code></td><td>一覧の <code>btn_open_add</code></td><td><code>margin-top: 16px</code>。説明文の <code>.app-description</code> は <code>margin: 0</code> なので、その直下に置くボタンの上を空けて、文とボタンを離します。</td></tr><tr><td><code>.app-message</code></td><td>一覧の <code>txt_storage</code> と、入力画面の <code>txt_add_message</code></td><td>上下に12pxの余白、<code>.app-caption</code> と同じ文字色、<code>overflow-wrap: anywhere</code>。JavaScriptから文を入れる案内用の段落で、長い文でも画面の幅で折り返します。<code>txt_add_message</code> はこのSTEPでは空で、STEP 02から文を出します。</td></tr><tr><td><code>label.app-label</code></td><td>入力画面の3つの <code>label</code></td><td><code>display: block</code>。<code>.app-label</code> は、STEP 00から詳細の <code>p</code> に使っている余白と文字の指定です。<code>label</code> は既定でインライン要素なので、そのままでは上下の <code>margin</code> が効きません。<code>label</code> に付いたときだけブロックにして、各欄の上に1行ずつ並べます。</td></tr><tr><td><code>.app-note</code></td><td>入力画面のボタンの下の注記</td><td><code>.app-description</code> と同じ文字色で、文字の大きさは13px。補足の注記を、ボタンや案内文より控えめに見せます。</td></tr></tbody></table>
+<p><code>.reset-section</code>・<code>#panel_reset ons-button</code>・<code>.is-hidden</code> の3つは、STEP 08で足す初期化の確認欄のための指定です。このSTEPのHTMLには、まだ当たる要素がありません。</p>
 <p>一覧の <code>btn_open_add</code> へopenAddPageを登録し、<code>pushPage("add.html", ...)</code> で入力画面へ進みます。詳細と同じ移動中の旗を共有するため、片方を開いている最中にもう片方は開きません。</p>
 <p>この旗の名前は、STEP 00の <code>isOpeningDetail</code> から <code>isOpeningPage</code> に変えます。詳細を開くときだけでなく入力画面を開くときにも使うので、「詳細を開いている最中」ではなく「どちらかのページを開いている最中」と読める名前にするためです。宣言とopenOshiDetailの中の3か所も、新しい名前にそろえます。</p>
 <p>一覧のボタンの下の <code>txt_storage</code> には <code>この段階では、追加した内容は保存されません。</code>、入力画面のボタンの下の注記には <code>この段階では、追加した内容は再読み込みすると消えます。</code> と出します。追加した内容がまだ残らないことを、画面で先に伝えるためです。保存を作るSTEP 06で、どちらの文も書き換えます。</p>
@@ -2748,7 +2750,7 @@ function isValidItems(items) {
 }</code></pre></details>
 <div class="check"><label><input type="checkbox" data-check="oshi-save-07"><span>追加した内容を再読み込み後にも一覧・詳細で読め、null・不正データ・空配列の扱いを区別できた。</span></label></div></section>
 <section id="step-8"><p class="step-meta">STEP 08 · コマ6</p><h2>初期化の確認と失敗への対応</h2>
-<p>HTMLに初期化ボタンと確認欄、JSにそのイベントとresetOshiItemsを加えます。<code>初期の内容に戻す</code> を押すと、is-hiddenをremoveして確認欄を見せます。<code>やめる</code> ではクラスをaddし、欄を閉じるだけです。</p>
+<p>HTMLに初期化ボタンと確認欄、JSにそのイベントとresetOshiItemsを加えます。<code>初期の内容に戻す</code> を押すと、is-hiddenをremoveして確認欄を見せます。<code>やめる</code> ではクラスをaddし、欄を閉じるだけです。確認欄を囲む <code>reset-section</code> は上に区切りの線を引き、<code>#panel_reset ons-button</code> は確認欄の2つのボタンの上を12px空けます。この2つと <code>is-hidden</code> はSTEP 01のCSSに入れてあり、このSTEPのHTMLで初めて要素に当たります。</p>
 <p>実際の削除は <code>削除して初期の内容に戻す</code> を押した場合だけです。<code>localStorage.removeItem(STORAGE_KEY)</code> で、このアプリのキー1つだけを削除します。保存領域全体を空にするclearは使いません。</p>
 <p>削除に成功したらcreateInitialItemsで新しい初期配列を作り、canSaveをtrueへ戻し、一覧と文を更新します。削除に失敗したら画面の配列も変更せず、削除できなかったと表示します。初期化が終わると、以前入力した内容は戻せません。</p>
 <ol><li>検証用に追加したデータを使い、初期化の確認欄を開いて <code>やめる</code> を押します。件数が変わらないことを確認します。</li><li>残す必要のある内容は控えてから、もう一度確認欄を開き、削除するボタンを押します。</li><li>一覧がソースの初期データに戻り、再読み込みしてもその初期データになることを確かめます。</li></ol>
