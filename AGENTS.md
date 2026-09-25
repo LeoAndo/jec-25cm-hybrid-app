@@ -411,13 +411,13 @@ READMEの「完成コードの書き方（全単元共通）」を、系統ご�
 - **`docs/assets/textbook.css` には、左右を決め打ちした指定を書かない。** `border-left`・`padding-left`・`left:`・`text-align: left` などの代わりに、論理プロパティ（`border-inline-start`・`padding-inline-start`・`inset-inline-start`・`text-align: start`）を使う。日本語のページでは同じ見た目になり、アラビア語のページでは左右が入れ替わる。`scripts/test_localize_student_materials.py` が検査する。右から左のページだけに当てる指定は `[dir="rtl"]` で絞る（`code` に `unicode-bidi: isolate` を当てると、日本語のページでも行の折り返す位置が変わるため）。
 - **モンゴル語は、モンゴル国のキリル文字（`mn`、横書き）で加えた（2026-09-25 オーナー確認）。** 学生本人に読む文字を確かめた結果（[issue #40](https://github.com/LeoAndo/jec-25cm-hybrid-app/issues/40)）。伝統的モンゴル文字（縦書き、`mn-Mong`）には対応しない。
 
-- **いまは `config/i18n.json` の全言語が `distribute: false`。** 翻訳が1文もないため、`true` にすると公開ゲート（`localize-student-materials.py status --require-complete`）で止まる。
+- **いまは `config/i18n.json` の `en` と `zh-Hans` だけが `distribute: true`（2026-09-25 オーナー決定）。** 2026-09-28 の授業開始に合わせて、日本語・英語・中国語（簡体）の3言語で初版を配布する。ほかの7言語は `false` のままで、後期の授業が始まってから1言語ずつ段階的に進める。`false` の言語を未翻訳が残ったまま `true` にすると、公開ゲート（`localize-student-materials.py status --require-complete`）で止まる。
 - **`true` に上げてよいのは、次の2つが両方終わった言語だけ。**
   1. その言語の未翻訳が0件になっている（`python3 scripts/localize-student-materials.py status`）。
   2. 翻訳したのとは別のAIが、その言語の全文を原文と1回照合し終えている（前に照合したページも含める）。**照合は、翻訳と同じセッション・同じPRの中のsubagentが行ってもよい**（オーナーの判断、2026-09-24）。照合の担当は、訳した担当とは別のモデルにする。自分で訳して自分で照合しない。
-- **`true` に上げるのは、1PRにつき1言語。** `distribute` を上げるPRは共有ファイル（`config/`）を触るので `area:shared` になる（§4）。
+- **`true` に上げるのは、1PRにつき1言語。** `distribute` を上げるPRは共有ファイル（`config/`）を触るので `area:shared` になる（§4）。初版の `en` と `zh-Hans` だけは、授業開始に間に合わせるため、オーナーの判断で1本のPRにまとめて上げた（2026-09-25）。
 - **照合は、学生の手に渡る前に1回だけ行う（2026-09-25 オーナー決定、[issue #87](https://github.com/LeoAndo/jec-25cm-hybrid-app/issues/87)）。** 訳すたびには照合しない。基準は、きれいな訳文ではなく、学生が操作を間違えないことに置く（配布する翻訳ページには日本語版が正という注記と、日本語版へのリンクが付く。コード・キー・正式表記・タグの数は `check` が検査する）。同じ学生が受ける Kotlin演習（jec-25cm-kotlin）と同じ決まりにしてある（[jec-25cm-kotlin #100](https://github.com/LeoAndo/jec-25cm-kotlin/issues/100)）。
-  - `distribute: false` の言語の翻訳PRでは、照合しない。`check` と確認用ページの目視までにする。全言語が `false` のいまは、どの翻訳PRもこれに当たる。
+  - `distribute: false` の言語の翻訳PRでは、照合しない。`check` と確認用ページの目視までにする。`en`・`zh-Hans` 以外の7言語の翻訳PRは、いまはどれもこれに当たる。
   - `distribute` を `true` に上げるときに、その言語の全文を1回照合する（上の2）。
   - `distribute: true` の言語の差分翻訳は、訳した文が50文以上のときだけ照合する（下の手順4）。
   - 照合し直すのは、照合のあとで意味が変わる修正をした文だけ。記号・大文字と小文字・言い回しのそろえでは照合し直さない。
