@@ -211,6 +211,14 @@
       "translation": "The HTML <code>head</code>"
     },
     {
+      "source": "標準の<code>loader.js</code>、Onsen UI 2.12.9のCSS・JavaScript、自作CSS・<code>app.js</code>を読み込む。自作JSはOnsen UIより後。",
+      "translation": "Loads the standard <code>loader.js</code>, the CSS and JavaScript of Onsen UI 2.12.9, your own CSS, and <code>app.js</code>. Your own JS comes after Onsen UI."
+    },
+    {
+      "source": "<code>ons-navigator</code>が<code>list.html</code>を実体化する。<code>template</code>は配置前のひな形で、詳細へ進んだときに<code>detail.html</code>の要素が作られる。",
+      "translation": "<code>ons-navigator</code> instantiates <code>list.html</code>. A <code>template</code> is a blueprint that is not placed yet; the elements of <code>detail.html</code> are created when you go to the detail page."
+    },
+    {
       "source": "<code>init</code>のリスナー",
       "translation": "The <code>init</code> listener"
     },

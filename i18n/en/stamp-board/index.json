@@ -547,6 +547,10 @@
       "translation": "Add stamps with setState"
     },
     {
+      "source": "操作で変わる<code>habits</code>を<code>State</code>へ移します。<code>StampBoardPage</code>は<code>StatefulWidget</code>となり、<code>createState</code>が<code>_StampBoardPageState</code>を作ります。Widgetは画面の設定、<code>State</code>は操作によって変わる値を保持します。名前の先頭のアンダースコアはDartのライブラリ内で使う名前という指定です。",
+      "translation": "Move <code>habits</code>, which changes through operations, into <code>State</code>. <code>StampBoardPage</code> becomes a <code>StatefulWidget</code>, and <code>createState</code> creates <code>_StampBoardPageState</code>. The widget holds the screen settings, and <code>State</code> holds the values that change through operations. The underscore at the start of the name declares it as a name used only inside the Dart library."
+    },
+    {
       "source": "ボタンの<code>onPressed</code>へ<code>() =&gt; changeStamp(habit, 1)</code>を渡します。これは引数のない関数で、押したときに<code>changeStamp</code>を呼びます。関数の呼出結果をその場で渡す書き方と区別してください。Dartのアローは1つの式を返す省略形です。",
       "translation": "Pass <code>() =&gt; changeStamp(habit, 1)</code> to the button's <code>onPressed</code>. This is a function with no parameters that calls <code>changeStamp</code> when the button is pressed. Distinguish it from writing that passes the result of calling the function on the spot. Dart's arrow is shorthand for returning a single expression."
     },

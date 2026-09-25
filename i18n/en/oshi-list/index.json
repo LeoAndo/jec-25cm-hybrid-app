@@ -247,6 +247,10 @@
       "translation": "www/css/style.css · full file"
     },
     {
+      "source": "通常版Monacaで自分の <code>M01OshiList</code> を開き、準備用の文字を表示できた。",
+      "translation": "Your own <code>M01OshiList</code> has been opened in standard Monaca, and the preparation text is displayed."
+    },
+    {
       "source": "STEP 01 · コマ1",
       "translation": "STEP 01 · Session 1"
     },
@@ -411,6 +415,10 @@
       "translation": "Joining from this session: full starting code"
     },
     {
+      "source": "同じ <code>M01OshiList</code> を開き、各ファイルを次の内容にそろえて保存します。前のコマのアレンジを残したい人は、その文字や色を控えてから進みます。",
+      "translation": "Open the same <code>M01OshiList</code>, make each file match the contents below, and save. If you want to keep your customizations from the previous session, note down those texts and colors before you continue."
+    },
+    {
       "source": "第2コマでは、同じHTMLからOSに合った見た目を作る <strong>auto-styling</strong> を確かめます。使うのは <strong>Onsen UI 2.12.9</strong> です。Onsen UIはHTMLに画面部品を加えるUIライブラリで、この授業では素のJavaScriptから操作します。",
       "translation": "In session 2, you check <strong>auto-styling</strong>, which builds an OS-matched look from the same HTML. You use <strong>Onsen UI 2.12.9</strong>. Onsen UI is a UI library that adds UI components to HTML, and in this course you control it from plain JavaScript."
     },
@@ -439,6 +447,10 @@
       "translation": "www/js/app.js · full file"
     },
     {
+      "source": "版番号付きの3本の読み込みと、自分の <code>app.js</code> の位置を確認した。",
+      "translation": "The three loads with version numbers and the position of your own <code>app.js</code> have been checked."
+    },
+    {
       "source": "STEP 06 · コマ2",
       "translation": "STEP 06 · Session 2"
     },
@@ -457,6 +469,10 @@
     {
       "source": "保存して再読み込みし、上部のツールバーに「好きなものノート」が出ていることを確認します。カードはツールバーの下に表示されます。タグ名がそのまま文字になったら、全角の記号や閉じタグの不足を確認します。",
       "translation": "Save and reload, and check that 「好きなものノート」 (Favorites Notebook) appears in the toolbar at the top. The cards are shown below the toolbar. If a tag name appears as plain text, check for full-width symbols and missing closing tags."
+    },
+    {
+      "source": "Web基礎の <code>div</code> にCSSを付けて領域を作る代わりに、<code>ons-page</code> と <code>ons-toolbar</code> という部品を使います。Androidの <code>Toolbar</code>、iOSのナビゲーションバーと、画面の題名を置く役割は対応します。今回はHTMLで同じ部品の役割を指定します。",
+      "translation": "Instead of making areas with a <code>div</code> plus CSS as in Web Basics, you use the <code>ons-page</code> and <code>ons-toolbar</code> components. Their role of holding the screen title matches the Android <code>Toolbar</code> and the iOS navigation bar. This time you specify the same component roles in HTML."
     },
     {
       "source": "ツールバーの下に3枚のカードが表示された。",
@@ -639,6 +655,10 @@
       "translation": "This is the same <code>addEventListener</code> you used in Web Basics to register a function for when <code>click</code> happens. This time you receive Onsen UI's notification that a page is ready, not a notification of a user action. It matches the order in Android where you set up the view before referring to its components, and in iOS where you configure the view from <code>viewDidLoad</code>. Because the notification's name and target are different, you also check the page's <code>id</code>."
     },
     {
+      "source": "<code>init</code> で一覧ページを判定し、画面の文字を変更できた。",
+      "translation": "The list page is detected in <code>init</code>, and the text on the screen has been changed."
+    },
+    {
       "source": "STEP 11 · コマ3",
       "translation": "STEP 11 · Session 3"
     },
@@ -681,6 +701,10 @@
     {
       "source": "JavaやSwiftでも、1件分の値をまとめたデータを配列で持ちました。JavaScriptでは <code>{ name: \"…\", genre: \"…\" }</code> のようにプロパティ名と値を書き、<code>.name</code> で参照します。Javaの配列の <code>length</code> と同じ目的で件数を読みます。ここで別の保存形式への変換は行いません。",
       "translation": "In Java and Swift, you also kept data that groups the values of one item in an array. In JavaScript, you write property names and values like <code>{ name: \"…\", genre: \"…\" }</code> and refer to them with <code>.name</code>. You read the number of items for the same purpose as <code>length</code> of a Java array. No conversion to another storage format is done here."
+    },
+    {
+      "source": "配列の件数を画面へ表示し、1件の <code>name</code>・<code>genre</code>・<code>comment</code> を読み取れた。",
+      "translation": "The number of items in the array is displayed on the screen, and the <code>name</code>, <code>genre</code>, and <code>comment</code> of one item have been read."
     },
     {
       "source": "STEP 12 · コマ3",
@@ -811,8 +835,20 @@
       "translation": "<code>ons-navigator</code> is a component that manages several pages as a stack. <code>page=\"list.html\"</code> specifies the page to show first. This <code>list.html</code> is not a separate file; it is the name of <code>template id=\"list.html\"</code> in the same HTML."
     },
     {
+      "source": "<code>template</code> の中身は、書いた場所で直ちに表示されるのではなく、必要なときに使うHTMLのひな形です。中には1個の <code>ons-page</code> を置きます。<code>ons-navigator</code> が一覧ページを作ると <code>init</code> が通知され、第3コマと同じ関数が行を作ります。",
+      "translation": "The contents of <code>template</code> are not displayed right where they are written; they are an HTML template used when needed. Inside it, put one <code>ons-page</code>. When <code>ons-navigator</code> creates the list page, <code>init</code> is fired, and the same function as in session 3 builds the rows."
+    },
+    {
       "source": "保存・再読み込みし、3件と選択表示が前と同じように動くことを確かめます。画面に変化がなくても、いまは管理の仕方を切り替えた段階なので正解です。",
       "translation": "Save and reload, and check that the three items and the selected text work as before. Even if nothing on the screen changes, that is correct: at this point you have only switched how the page is managed."
+    },
+    {
+      "source": "Androidで画面のレイアウトを用意して必要なときに表示する、iOSでビューコントローラをナビゲーションコントローラへ積む考え方と対応します。Web基礎の別ページへのリンクではなく、同じHTML内のひな形を <code>ons-navigator</code> が画面として管理します。要素を使う処理は、ひな形が実際に配置された後の <code>init</code> に置きます。",
+      "translation": "This matches preparing a screen layout in Android and showing it when needed, and pushing a view controller onto a navigation controller in iOS. Rather than a link to another page as in Web Basics, <code>ons-navigator</code> manages templates inside the same HTML as screens. Code that uses elements goes in <code>init</code>, which runs after the template has actually been placed."
+    },
+    {
+      "source": "<code>ons-navigator</code> と <code>template</code> へ移しても、一覧と選択が動いた。",
+      "translation": "After moving to <code>ons-navigator</code> and <code>template</code>, the list and the selection still work."
     },
     {
       "source": "STEP 16 · コマ4",
@@ -841,6 +877,10 @@
     {
       "source": "別の行でも、詳細を開く・戻るを確かめます。このSTEPでは連打せず、画面の動きが終わってから操作します。",
       "translation": "Check opening the detail screen and going back with other rows too. In this STEP, do not tap repeatedly; wait until the screen animation finishes before the next action."
+    },
+    {
+      "source": "<code>ons-back-button</code> は、そのページを管理する <code>ons-navigator</code> の前のページへ戻す部品です。自分でクリック処理を追加しなくても動きます。ページの切り替わり方もOSのスタイルで変わるので、常に同じ方向へスライドするとは限りません。ボタンの見た目もOSのスタイルで変わります。iOS向けでは、HTMLに書いた文字を添えて「＜ 戻る」と表示されます。Android向けでは左向きの矢印「←」だけになり、「戻る」の文字は表示されません。どちらも同じ <code>ons-back-button</code> で、押したときの動きは同じです。",
+      "translation": "<code>ons-back-button</code> is a component that goes back to the previous page of the <code>ons-navigator</code> that manages its page. It works without any click handling of your own. The way pages switch also depends on the OS style, so they do not always slide in the same direction. The look of the button depends on the OS style too. In the iOS look, it is displayed as 「＜ 戻る」 (&lt; Back), with the text written in the HTML. In the Android look, it becomes only a left-pointing arrow 「←」, and the text 「戻る」 (Back) is not displayed. Both are the same <code>ons-back-button</code>, and they behave the same when tapped."
     },
     {
       "source": "iOSのナビゲーションコントローラで次の画面をpushし、戻る操作でpopする構造と同じです。Androidで次の画面へ進んで戻る場合と同様、一覧を消して作り直す操作ではありません。Onsen UIでは <code>pushPage</code> で積み、<code>ons-back-button</code> に戻る操作を任せます。見た目も、iOSのナビゲーションバーの文字つきの戻るボタンと、Androidのツールバーの矢印だけの戻るボタンに合わせて、Onsen UIが描き分けます。",
@@ -883,6 +923,14 @@
       "translation": "See that the <code>\\n</code> in the reason has become a line break. <code>white-space: pre-wrap</code> in the CSS wraps the text while keeping the line breaks."
     },
     {
+      "source": "このSTEPも画面の動きが終わってから次を押します。画面の切り替えの途中に届いた2回目の操作は、Onsen UIの <code>ons-navigator</code> が受け付けないので、続けて押しても詳細は重なりません。次のSTEPでは、この仕組みに任せきりにせず、アプリの側でも開く途中かどうかを記録します。",
+      "translation": "In this STEP too, wait for the screen animation to finish before the next tap. Onsen UI's <code>ons-navigator</code> does not accept a second action that arrives while the screen is switching, so tapping again does not stack another detail screen. In the next STEP, instead of relying only on this behavior, the app itself also records whether a detail screen is being opened."
+    },
+    {
+      "source": "Androidで次の画面へ値を渡す、iOSで遷移先に表示用の値を渡す目的と同じです。Onsen UIでは <code>ons-navigator</code> の <code>data</code> を渡し、作られたページの <code>page.data</code> から受け取ります。ここで渡すのは実行中のJavaScriptオブジェクトで、ファイルへ保存したり文字列へ変換したりしているわけではありません。",
+      "translation": "The purpose is the same as passing values to the next screen in Android, or passing values for display to the destination in iOS. In Onsen UI, you pass the <code>data</code> of <code>ons-navigator</code> and receive it from <code>page.data</code> of the created page. What is passed here is a JavaScript object at runtime; it is not saved to a file or converted to a string."
+    },
+    {
       "source": "3件それぞれの名前・種類・理由が詳細へ渡り、改行も表示された。",
       "translation": "The name, type, and reason of each of the three items are passed to the detail screen, and the line breaks are displayed too."
     },
@@ -893,6 +941,10 @@
     {
       "source": "連続して押されても詳細を重ねない",
       "translation": "Do not stack detail screens on repeated taps"
+    },
+    {
+      "source": "<code>www/js/app.js</code> を全文に置き換えます。完成版では <code>isOpeningDetail</code> という真偽値と、<code>ons-navigator</code> の現在のページを使って、詳細を重ねて開くことを防ぎます。Onsen UIの <code>ons-navigator</code> も、切り替えの途中に届いた2回目の <code>pushPage</code> は受け付けませんが、断られた呼び出しはエラーになります。アプリの側で開く途中かどうかを記録しておけば、2回目の呼び出しそのものをしないで済みます。",
+      "translation": "Replace <code>www/js/app.js</code> with the full file. The finished version uses a boolean named <code>isOpeningDetail</code> and the current page of <code>ons-navigator</code> to prevent opening detail screens on top of each other. Onsen UI's <code>ons-navigator</code> also refuses a second <code>pushPage</code> that arrives during a transition, but a refused call becomes an error. If the app records whether it is in the middle of opening, it can avoid making the second call at all."
     },
     {
       "source": "場所",
@@ -913,6 +965,14 @@
     {
       "source": "次のクリックが来る前に、開く途中だと記録する。",
       "translation": "Records that opening is in progress, before the next click arrives."
+    },
+    {
+      "source": "ページを開く処理が終わったときに実行される関数。ここで真偽値を <code>false</code> へ戻す。",
+      "translation": "A function that runs when the page has finished opening. Here the boolean is set back to <code>false</code>."
+    },
+    {
+      "source": "<code>||</code> は「どちらか」、<code>!==</code> は「等しくない」、<code>return</code> はこの関数をそこで終える、というWeb基礎の書き方です。開き終わって真偽値が <code>false</code> になっても、詳細が一番上ならもう一度開きません。",
+      "translation": "<code>||</code> means \"either\", <code>!==</code> means \"not equal\", and <code>return</code> ends the function right there; all of these are from Web Basics. Even after opening has finished and the boolean is <code>false</code> again, it does not open again while the detail screen is on top."
     },
     {
       "source": "保存して再読み込みし、同じ行を続けて2回押します。",

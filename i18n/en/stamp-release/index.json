@@ -683,6 +683,10 @@
       "translation": "Check <code>distributionUrl</code> in <code>android/gradle/wrapper/gradle-wrapper.properties</code>. The empty template used here is Gradle 9.3.1. If it is <code>all.zip</code>, change it to <code>bin.zip</code> without changing the version. Change only this one line to the following form."
     },
     {
+      "source": "教員から同じURLで取得したGradleキャッシュを受け取る場合は、配布された<code>gradle-9.3.1-bin</code>フォルダを<code>~/.gradle/wrapper/dists/</code>の下へ配置します。ハッシュ名の階層、展開済みディレクトリ、<code>.zip.ok</code>を保ち、既存の別版を上書きしません。既に同じフォルダがある場合は先生へ確認します。<code>all.zip</code>のキャッシュとは共用できません。",
+      "translation": "If you receive a Gradle cache that the teacher downloaded from the same URL, place the distributed <code>gradle-9.3.1-bin</code> folder under <code>~/.gradle/wrapper/dists/</code>. Keep the hash-named directory level, the extracted directory, and <code>.zip.ok</code>, and do not overwrite an existing cache of another version. If the same folder already exists, check with your teacher. It cannot be shared with an <code>all.zip</code> cache."
+    },
+    {
       "source": "キャッシュを受け取ってもAndroid SDK・NDK・AGP等の取得が残る場合があります。<code>flutter run -d Android端末ID</code>を実行し、ターミナルの取得状況を見ます。待機時間はコードと提出前チェックの確認に使い、途中で同じビルドを重ねて始めません。",
       "translation": "Even after receiving the cache, downloads of the Android SDK, NDK, AGP, and so on may remain. Run <code>flutter run -d Android端末ID</code> (Android端末ID = Android device ID) and watch the download progress in the terminal. Use the waiting time to review the code and the pre-submission checks, and do not start the same build again in the middle."
     },
