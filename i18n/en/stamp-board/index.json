@@ -615,12 +615,12 @@
       "translation": "The count is kept between 0 and <code>stampGoal</code>. On the button side, at the limit <code>onPressed</code> is set to <code>null</code> so the button is shown as not pressable; on the function side, it also <code>return</code>s when out of range. Both are in place: disabling the display and checking the data range."
     },
     {
-      "source": "1件を5回まで押し、達成の文と押せない追加ボタンを確認します。",
-      "translation": "Add stamps to one habit up to 5 times, and check the achievement message and the add button that can no longer be pressed."
+      "source": "1件のスタンプを押すボタンを5回押し、達成の文が出て、そのボタンが無効になることを確認します。",
+      "translation": "Press the 「スタンプを押す」 (Add a stamp) button of one habit 5 times, and check that the achievement message appears and that the button becomes disabled."
     },
     {
-      "source": "1つ戻して4回にし、追加ボタンがまた使えることを確認します。",
-      "translation": "Undo one to make it 4, and check that the add button works again."
+      "source": "1つ戻して4回にし、スタンプを押すボタンがまた使えることを確認します。",
+      "translation": "Undo one to make it 4, and check that the 「スタンプを押す」 (Add a stamp) button works again."
     },
     {
       "source": "0回まで戻し、1つ戻すが無効になることを確認します。",

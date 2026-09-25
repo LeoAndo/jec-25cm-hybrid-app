@@ -239,8 +239,8 @@
       "translation": "制作输入习惯的页面"
     },
     {
-      "source": "一覧へ習慣を追加ボタン、移動先に<code>AddHabitPage</code>を置きます。入力内容とメッセージが変わるため、入力画面は<code>StatefulWidget</code>です。まだ追加処理を使わず、ボタンは無効にしておきます。",
-      "translation": "在列表中放一个「習慣を追加」（添加习惯）按钮，并把 <code>AddHabitPage</code> 作为跳转目标。因为输入内容和消息会变化，输入页面是 <code>StatefulWidget</code>。先不使用添加处理，把按钮设为禁用。"
+      "source": "一覧へ習慣を追加ボタン、移動先に<code>AddHabitPage</code>を置きます。入力内容とメッセージが変わるため、入力画面は<code>StatefulWidget</code>です。まだ追加処理を使わず、入力画面の追加するボタンは無効にしておきます。",
+      "translation": "在列表中放一个「習慣を追加」（添加习惯）按钮，并把 <code>AddHabitPage</code> 作为跳转目标。因为输入内容和消息会变化，输入页面是 <code>StatefulWidget</code>。先不使用添加处理，把输入页面的「追加する」（添加）按钮设为禁用。"
     },
     {
       "source": "<code>TextField</code>へ<code>TextEditingController</code>を渡すと、入力値を<code>controller.text</code>から読めます。コントローラは<code>build</code>のたびに作らず<code>State</code>のフィールドに置き、画面が破棄される<code>dispose</code>で各<code>controller.dispose</code>を呼び、最後に<code>super.dispose</code>を呼びます。",
@@ -275,8 +275,8 @@
       "translation": "检查留空"
     },
     {
-      "source": "追加ボタンの<code>onPressed</code>へ<code>submit</code>を渡します。括弧を付けた<code>submit()</code>の実行結果ではなく、押したときに呼ぶ関数を渡します。",
-      "translation": "把 <code>submit</code> 传给添加按钮的 <code>onPressed</code>。传的不是带括号的 <code>submit()</code> 的执行结果，而是按下时要调用的函数。"
+      "source": "追加するボタンの<code>onPressed</code>へ<code>submit</code>を渡します。括弧を付けた<code>submit()</code>の実行結果ではなく、押したときに呼ぶ関数を渡します。",
+      "translation": "把 <code>submit</code> 传给「追加する」（添加）按钮的 <code>onPressed</code>。传的不是带括号的 <code>submit()</code> 的执行结果，而是按下时要调用的函数。"
     },
     {
       "source": "<code>submit</code>では2つの<code>controller.text</code>を<code>trim</code>して前後の空白を除き、どちらかの<code>isEmpty</code>が<code>true</code>ならメッセージを表示して<code>return</code>します。今回は入力を確認しましたという文までで、一覧への追加は次のSTEPです。",
@@ -759,8 +759,8 @@
       "translation": "试试印章的上限和「1つ戻す」（退回一个）。"
     },
     {
-      "source": "Androidのアプリ情報からアプリを停止し、アイコンから起動し直して復元を確認します。バックグラウンドへ移すだけとは区別します。アプリ情報とアイコンに出るアプリの名前は、プロジェクト名の<code>f02_stamp_release</code>です（F01から続けている場合は<code>f01_stamp_board</code>）。",
-      "translation": "从 Android 的应用信息中停止应用，再从图标重新启动，确认恢复。这和只是移到后台不同。应用信息和图标上显示的应用名称是项目名 <code>f02_stamp_release</code>（从 F01 继续的话是 <code>f01_stamp_board</code>）。"
+      "source": "Androidのアプリ情報（<code>App info</code>）の<code>Force stop</code>でアプリを停止し、アイコンから起動し直して復元を確認します。バックグラウンドへ移すだけとは区別します。アプリ情報とアイコンに出るアプリの名前は、プロジェクト名の<code>f02_stamp_release</code>です（F01から続けている場合は<code>f01_stamp_board</code>）。",
+      "translation": "在 Android 的应用信息（<code>App info</code>）中用 <code>Force stop</code> 停止应用，再从图标重新启动，确认恢复。这和只是移到后台不同。应用信息和图标上显示的应用名称是项目名 <code>f02_stamp_release</code>（从 F01 继续的话是 <code>f01_stamp_board</code>）。"
     },
     {
       "source": "初期化を開いてやめるを選び、記録が残ることを確認します。",

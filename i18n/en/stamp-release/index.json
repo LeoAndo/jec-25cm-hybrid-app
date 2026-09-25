@@ -239,8 +239,8 @@
       "translation": "Create a screen for entering a habit"
     },
     {
-      "source": "一覧へ習慣を追加ボタン、移動先に<code>AddHabitPage</code>を置きます。入力内容とメッセージが変わるため、入力画面は<code>StatefulWidget</code>です。まだ追加処理を使わず、ボタンは無効にしておきます。",
-      "translation": "Put a 「習慣を追加」 (Add habit) button on the list screen, and <code>AddHabitPage</code> as its destination. The input screen is a <code>StatefulWidget</code>, because the input and the message change. Do not use the add process yet; keep the add button on the input screen disabled."
+      "source": "一覧へ習慣を追加ボタン、移動先に<code>AddHabitPage</code>を置きます。入力内容とメッセージが変わるため、入力画面は<code>StatefulWidget</code>です。まだ追加処理を使わず、入力画面の追加するボタンは無効にしておきます。",
+      "translation": "Put a 「習慣を追加」 (Add habit) button on the list screen, and <code>AddHabitPage</code> as its destination. The input screen is a <code>StatefulWidget</code>, because the input and the message change. Do not use the add process yet; keep the 「追加する」 (Add) button on the input screen disabled."
     },
     {
       "source": "<code>TextField</code>へ<code>TextEditingController</code>を渡すと、入力値を<code>controller.text</code>から読めます。コントローラは<code>build</code>のたびに作らず<code>State</code>のフィールドに置き、画面が破棄される<code>dispose</code>で各<code>controller.dispose</code>を呼び、最後に<code>super.dispose</code>を呼びます。",
@@ -275,8 +275,8 @@
       "translation": "Check for empty fields"
     },
     {
-      "source": "追加ボタンの<code>onPressed</code>へ<code>submit</code>を渡します。括弧を付けた<code>submit()</code>の実行結果ではなく、押したときに呼ぶ関数を渡します。",
-      "translation": "Pass <code>submit</code> to the <code>onPressed</code> of the add button. Pass the function to call when the button is pressed, not the result of running <code>submit()</code> with parentheses."
+      "source": "追加するボタンの<code>onPressed</code>へ<code>submit</code>を渡します。括弧を付けた<code>submit()</code>の実行結果ではなく、押したときに呼ぶ関数を渡します。",
+      "translation": "Pass <code>submit</code> to the <code>onPressed</code> of the 「追加する」 (Add) button. Pass the function to call when the button is pressed, not the result of running <code>submit()</code> with parentheses."
     },
     {
       "source": "<code>submit</code>では2つの<code>controller.text</code>を<code>trim</code>して前後の空白を除き、どちらかの<code>isEmpty</code>が<code>true</code>ならメッセージを表示して<code>return</code>します。今回は入力を確認しましたという文までで、一覧への追加は次のSTEPです。",
@@ -759,8 +759,8 @@
       "translation": "Try the stamp limit and 「1つ戻す」 (Undo one)."
     },
     {
-      "source": "Androidのアプリ情報からアプリを停止し、アイコンから起動し直して復元を確認します。バックグラウンドへ移すだけとは区別します。アプリ情報とアイコンに出るアプリの名前は、プロジェクト名の<code>f02_stamp_release</code>です（F01から続けている場合は<code>f01_stamp_board</code>）。",
-      "translation": "Force stop the app from the Android app info, start it again from the icon, and check that the records are restored. This is different from just moving it to the background. The app name shown in app info and under the icon is the project name <code>f02_stamp_release</code> (or <code>f01_stamp_board</code> if you continued from F01)."
+      "source": "Androidのアプリ情報（<code>App info</code>）の<code>Force stop</code>でアプリを停止し、アイコンから起動し直して復元を確認します。バックグラウンドへ移すだけとは区別します。アプリ情報とアイコンに出るアプリの名前は、プロジェクト名の<code>f02_stamp_release</code>です（F01から続けている場合は<code>f01_stamp_board</code>）。",
+      "translation": "Stop the app with <code>Force stop</code> on the Android <code>App info</code> screen, start it again from the icon, and check that the records are restored. This is different from just moving it to the background. The app name shown in app info and under the icon is the project name <code>f02_stamp_release</code> (or <code>f01_stamp_board</code> if you continued from F01)."
     },
     {
       "source": "初期化を開いてやめるを選び、記録が残ることを確認します。",
