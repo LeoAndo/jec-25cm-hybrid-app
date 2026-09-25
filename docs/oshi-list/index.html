@@ -14,28 +14,28 @@
 <aside class="sidebar"><div class="sidebar-inner">
 <div class="progress"><span data-progress-label>0 / 20 ステップ確認済み</span><progress max="20" value="0" aria-label="単元の進み具合"></progress></div>
 <nav aria-label="コマごとの目次">
-<p class="eyebrow">1コマ目 · STEP 00〜04</p><ol>
+<p class="eyebrow">コマ1 · STEP 00〜04</p><ol>
 <li><a href="#step-0">00 準備とプロジェクト</a></li>
 <li><a href="#step-1">01 1枚のカード</a></li>
 <li><a href="#step-2">02 余白と色</a></li>
 <li><a href="#step-3">03 カードを3枚に</a></li>
 <li><a href="#step-4">04 確認とアレンジ</a></li>
 </ol>
-<p class="eyebrow">2コマ目 · STEP 05〜09</p><ol>
+<p class="eyebrow">コマ2 · STEP 05〜09</p><ol>
 <li><a href="#step-5">05 Onsen UIの読み込み</a></li>
 <li><a href="#step-6">06 ページとツールバー</a></li>
 <li><a href="#step-7">07 静的な一覧</a></li>
 <li><a href="#step-8">08 auto-stylingの比較</a></li>
 <li><a href="#step-9">09 自動へ戻してアレンジ</a></li>
 </ol>
-<p class="eyebrow">3コマ目 · STEP 10〜14</p><ol>
+<p class="eyebrow">コマ3 · STEP 10〜14</p><ol>
 <li><a href="#step-10">10 initと処理の順序</a></li>
 <li><a href="#step-11">11 配列のデータ</a></li>
 <li><a href="#step-12">12 一覧とtextContent</a></li>
 <li><a href="#step-13">13 クリックと選択</a></li>
 <li><a href="#step-14">14 確認とアレンジ</a></li>
 </ol>
-<p class="eyebrow">4コマ目 · STEP 15〜19</p><ol>
+<p class="eyebrow">コマ4 · STEP 15〜19</p><ol>
 <li><a href="#step-15">15 navigatorとtemplate</a></li>
 <li><a href="#step-16">16 詳細を開く・戻る</a></li>
 <li><a href="#step-17">17 詳細へ値を渡す</a></li>
@@ -43,11 +43,11 @@
 <li><a href="#step-19">19 完成とアレンジ</a></li>
 </ol>
 </nav>
-<div class="resources"><a href="#sample-project">完成プロジェクトを開く</a><span aria-current="page">M01：OshiList</span><a href="../oshi-save/index.html">M02：OshiSave</a><a href="../stamp-board/index.html">F01：StampBoard</a><a href="../stamp-release/index.html">F02：StampRelease</a><a href="../common/setup.html?from=oshi-list">共通：はじめの準備</a></div>
+<div class="resources"><a href="#help">困ったとき</a><a href="#sample-project">完成プロジェクトを開く</a><span aria-current="page">M01：OshiList</span><a href="../oshi-save/index.html">M02：OshiSave</a><a href="../stamp-board/index.html">F01：StampBoard</a><a href="../stamp-release/index.html">F02：StampRelease</a><a href="../common/setup.html?from=oshi-list">共通：はじめの準備</a></div>
 </div></aside>
 <main id="main">
 <div class="hero">
-<div class="unit">M01</div><p class="eyebrow">4コマ · 各90分</p>
+<div class="unit">M01</div><p class="eyebrow">コマ1〜4 · 各90分</p>
 <h1>好きなものノート：一覧から詳細へ</h1>
 <p class="lede">日常の中で見つけた好きなものをカードに並べ、好きな理由を開いて読めるアプリを作ります。静的なカードから始め、Onsen UIの一覧、配列、詳細画面へ進みます。</p>
 <div class="tags"><span>Monaca クラウド IDE / Google Chrome</span><span>Onsen UI 2.12.9</span><span>HTML / CSS / JavaScript</span></div>
@@ -57,7 +57,7 @@
 </div>
 <section id="sample-project"><h2>完成プロジェクトを開く</h2><p>先生が見本を使うと案内したら、<a href="https://monaca.mobi/ja/directimport?pid=6ab3e25de78885da2c0a0ae6">M01OshiListの完成プロジェクトを開く</a>へ進みます。通常版Monacaへログインした状態で、取り込むプロジェクトを確認します。自分の制作を始めるにはSTEP 00へ進みます。</p><p>完成見本の取り込みにも1枠を使います。Freeプランの3枠を確認し、URLを繰り返し開いて複数のコピーを作らないようにします。自分の作品は削除しません。配布ZIPの <code>samples/M01OshiList</code> はコードを読むための見本です。</p></section>
 <section id="step-0">
-<p class="step-meta">STEP 00 · 1コマ目</p><h2>授業の準備と、自分のプロジェクト</h2>
+<p class="step-meta">STEP 00 · コマ1</p><h2>授業の準備と、自分のプロジェクト</h2>
 <p>この単元では <code>M01OshiList</code> という1つのプロジェクトを4コマかけて育てます。Google ChromeでMonaca クラウド IDEを使います。今日は静的なカードまで作ります。この教科書では、好きな音楽、食べ物、場所など、身近なものを集め、好きな理由を読み返せるようにします。自分の好きなものと好きな理由を、自分の言葉でカードにしましょう。M01では、コードに書いた好きなものを集めて読むところまで作ります。画面から入力する機能や、入力した内容を保存する機能はまだ付けません。</p>
 <ol><li><a href="../common/setup.html?from=oshi-list#step-1">共通資料のSTEP 1〜3</a>で、教材の受け取り、通常版Monacaの登録・ログイン、空き枠の確認を行い、このページへ戻ります。初めての登録とダウンロードも授業内で行います。</li><li>Monacaのプロジェクト一覧から新規作成に進み、<code>最小限のテンプレート</code> を選びます。プロジェクト名を <code>M01OshiList</code> として作成し、開きます。既に自分の同名プロジェクトがあれば、その続きを開きます。</li><li>ファイル一覧で <code>www/index.html</code> と <code>www/css/style.css</code> を探します。<code>components</code>、<code>res</code>、設定ファイルはそのまま使います。</li><li>下の全コードを開き、2ファイルの内容をそれぞれ置き換えて保存します。プレビューを再読み込みし、<strong>好きなものノートを作ります。</strong>を確認します。</li></ol>
 <p>以後、本文のパスはプロジェクト内の位置です。「全コード」は指定ファイルの中身をすべて置き換えるためのものです。先に比較と説明を読み、貼り付けた後は確認欄の操作まで行いましょう。</p>
@@ -86,7 +86,7 @@
 
 </section>
 <section id="step-1">
-<p class="step-meta">STEP 01 · 1コマ目</p><h2>HTMLで1枚のカードを作る</h2>
+<p class="step-meta">STEP 01 · コマ1</p><h2>HTMLで1枚のカードを作る</h2>
 <p><code>www/index.html</code> を、このSTEPの全文に置き換えます。まず <code>body</code> の中を読みます。<code>main</code> は画面の主な内容、<code>article</code> は1件のカードです。カードには種類・名前・ひとことを置きます。</p>
 <p><code>class</code> 属性は、次のSTEPでCSSを対応させるための名前です。この時点では装飾がなくても正解です。保存してプレビューを再読み込みし、音楽・好きな音楽・ひとことがこの順に並ぶことを確かめます。</p>
 <p><code>head</code> の読み込みと設定は残します。最小限のテンプレートが持つ <code>components/loader.js</code> などは、この単元で中身を書き換えるファイルではありません。</p>
@@ -122,7 +122,7 @@
 
 </section>
 <section id="step-2">
-<p class="step-meta">STEP 02 · 1コマ目</p><h2>CSSでカードの余白と色を整える</h2>
+<p class="step-meta">STEP 02 · コマ1</p><h2>CSSでカードの余白と色を整える</h2>
 <p><code>www/css/style.css</code> を全文に置き換えます。HTMLはSTEP 01のままです。<code>.oshi-card</code> はカード全体、<code>.oshi-name</code> は名前に適用されます。</p>
 <table><thead><tr><th>書く場所</th><th>画面での変化</th></tr></thead><tbody><tr><td><code>padding: 16px</code></td><td>枠の内側に空間ができる。</td></tr><tr><td><code>margin: 0 0 16px</code></td><td>カードの下側に空間ができる。</td></tr><tr><td><code>border-radius: 12px</code></td><td>枠の角が丸くなる。</td></tr><tr><td><code>overflow-wrap: anywhere</code></td><td>長い名前を折り返して表示できる。</td></tr></tbody></table>
 <p>保存して、カードの白と背景の薄い色、枠、余白を見分けます。CSSが反映されないときは、HTMLの <code>css/style.css</code> というパスと、ファイルを保存したかを確認します。</p>
@@ -193,7 +193,7 @@
 
 </section>
 <section id="step-3">
-<p class="step-meta">STEP 03 · 1コマ目</p><h2>同じ構造のカードを3枚にする</h2>
+<p class="step-meta">STEP 03 · コマ1</p><h2>同じ構造のカードを3枚にする</h2>
 <p><code>www/index.html</code> の全文を更新します。1つ目と同じ <code>article</code> を2つ増やし、名前と種類を変えています。CSSは共通なので、3枚とも同じ形になります。</p>
 <ol><li>プレビューで3件あることと、音楽・食べ物・場所の順になっていることを確かめます。</li><li>画面の幅を狭くして、名前がカードの外へはみ出さず、縦に読めることを確かめます。</li><li>3枚目だけ違う形なら、<code>article</code> の開始・終了タグ、<code>class</code> の名前を見比べます。</li></ol>
 <p>同じHTMLを増やす方式は、3件なら見通せます。件数が増えると書き換える場所も増えるので、第3コマでは配列を使ってこの繰り返しをまとめます。</p>
@@ -274,7 +274,7 @@
 
 </section>
 <section id="step-4">
-<p class="step-meta">STEP 04 · 1コマ目</p><h2>1コマ目の確認とアレンジ</h2>
+<p class="step-meta">STEP 04 · コマ1</p><h2>第1コマの確認とアレンジ</h2>
 <p>下の全コードが第1コマ終了時の基準です。自分の内容に変える前に、3枚が表示されることを確かめます。カードはまだ押しても何も起きません。</p>
 <ol><li>自分の好きなものを1つ選び、1枚目の名前・種類・好きな理由を自分の言葉へ変えます。</li><li><code>.app-caption</code> の <code>color</code> を変え、種類の文字だけが変化することを確かめます。</li><li>画面を再読み込みし、書いたHTMLの内容が残っていることを確かめます。次回も同じプロジェクトを開きます。</li></ol>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎と同じく、画面に表示する文章はHTML、色はCSSで変えます。同じクラスの色を1か所直すと、3枚全部の種類へ反映されます。複数の画面部品へ同じ見た目の設定を適用する考え方はAndroid・iOSでも共通です。</p></div>
@@ -354,7 +354,7 @@
 <div class="task"><p class="box-title">アレンジできる場所</p><p>カードの名前・種類・ひとこと、背景色、角丸の数値を変えられます。自分の好きなものと、その理由を自分の言葉で書きましょう。1か所変えるたびに保存・再読み込みをし、何が変わったかを説明します。</p></div>
 </section>
 <section id="step-5">
-<p class="step-meta">STEP 05 · 2コマ目</p><h2>Onsen UIを同じ版で読み込む</h2>
+<p class="step-meta">STEP 05 · コマ2</p><h2>Onsen UIを同じ版で読み込む</h2>
 <details><summary>このコマから合流する人：開始時の全コード</summary><p>同じM01OshiListを開き、各ファイルを次の内容にそろえて保存します。前のコマのアレンジを残したい人は、その文字や色を控えてから進みます。</p>
 <div class="code-head">www/index.html · 全文</div>
 <pre id="start-04-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
@@ -514,7 +514,7 @@
 
 </section>
 <section id="step-6">
-<p class="step-meta">STEP 06 · 2コマ目</p><h2>ページとツールバーをOnsen UIへ置き換える</h2>
+<p class="step-meta">STEP 06 · コマ2</p><h2>ページとツールバーをOnsen UIへ置き換える</h2>
 <p><code>www/index.html</code> を全文に置き換えます。<code>body</code> の中を <code>ons-page</code> で囲み、その先頭に <code>ons-toolbar</code> を置きます。カードはまだ前のコマのHTMLです。</p>
 <p><code>ons-</code> で始まるタグはOnsen UIが提供する画面部品です。ブラウザの標準タグだけではなく、STEP 05で読み込んだJavaScriptとCSSが表示を整えています。ツールバーの <code>class="center"</code> は、Onsen UIが決めた領域名です。文字が常に画面の厳密な中央にあるという意味ではありません。</p>
 <p>保存して再読み込みし、上部のツールバーに「好きなものノート」が出ていることを確認します。カードはツールバーの下に表示されます。タグ名がそのまま文字になったら、全角の記号や閉じタグの不足を確認します。</p>
@@ -609,7 +609,7 @@
 
 </section>
 <section id="step-7">
-<p class="step-meta">STEP 07 · 2コマ目</p><h2>カードをOnsen UIの一覧へ置き換える</h2>
+<p class="step-meta">STEP 07 · コマ2</p><h2>カードをOnsen UIの一覧へ置き換える</h2>
 <p>このSTEPのHTMLとCSSを全文に置き換えます。JavaScriptはコメントだけのままです。カード用のHTMLをOnsen UIの部品へ置き換え、<code>ons-list</code> の中へ3個の <code>ons-list-item</code> を置きます。それぞれに <code>class="oshi-card"</code> を付け、第1コマで使ったカードの見た目を引き継ぎます。一覧の上の見出しと、一覧の下の「まだ選択していません」の文も、このSTEPで加わります。</p>
 <table><thead><tr><th>部品・指定</th><th>役割</th></tr></thead><tbody><tr><td><code>ons-list</code></td><td>一覧全体。</td></tr><tr><td><code>ons-list-item</code></td><td>一覧の1行。</td></tr><tr><td><code>tappable</code></td><td>押したときの見た目を付ける。</td></tr><tr><td><code>modifier="chevron"</code></td><td>行の右端に目印（＞）を付ける。</td></tr><tr><td><code>list-item__title</code> / <code>list-item__subtitle</code></td><td>主な文字と補足の文字。Onsen UIが用意するクラス名。</td></tr><tr><td><code>app-caption</code>・<code>app-heading</code>・<code>app-description</code></td><td>一覧の上の小見出し・見出し・説明文。アプリ名はツールバーに出ているので、ここでは何を記録するノートかを示す。</td></tr><tr><td><code>txt_selected</code>（<code>app-selection</code>）</td><td>押した名前を出す欄。このSTEPでは最初の文「まだ選択していません」だけを出し、書き換える処理は第3コマで書く。</td></tr></tbody></table>
 <p><code>oshi-card</code> は、好きなものを1枚ずつ区切るための自分のクラスです。第1コマと同じ <code>border</code>・<code>border-radius</code> で、枠と角丸を付けます。一覧は、左右に余白のある <code>app-section</code> の外に置くので、<code>margin</code> を左右16px・下12pxに変え、<code>width: auto</code> で画面の幅に収めます。カードの内側の余白は <code>ons-list-item</code> が持つ余白を使うので、<code>padding</code> の指定は外します。一覧の1行としての役割はOnsen UI、カードの外枠は自分のCSSが担当します。<code>#list_oshi</code> と <code>.oshi-card .list-item__center</code> では、標準の区切り線を消してカードの外枠だけを見せます。後者は、カードの中にある中央領域だけを指定するCSSの子孫セレクタです。後者では右の余白も30px空けます。長い名前を折り返したときに、行の終わりが右端の目印「＞」と重ならないようにするためです（Onsen UIが目印の横に空ける幅と同じ値です）。ツールバーや押したときの反応など、OSによる部品の違いは引き続き比べられます。<code>oshi-name</code>・<code>oshi-genre</code> は自分のCSSで折り返しを指定するために加えた名前です。保存・再読み込みをして、名前と種類が各行に表示されることを確かめます。好きな理由は一覧に出さず、第4コマで作る詳細画面に出します。押した見た目は付きますが、選択の処理は第3コマで書きます。</p>
@@ -736,7 +736,7 @@
 
 </section>
 <section id="step-8">
-<p class="step-meta">STEP 08 · 2コマ目</p><h2>同じHTMLでiOSとAndroidの見た目を比べる</h2>
+<p class="step-meta">STEP 08 · コマ2</p><h2>同じHTMLでiOSとAndroidの見た目を比べる</h2>
 <p>この単元の新概念は <strong>auto-styling</strong> です。Onsen UIは実行環境に応じ、同じ <code>ons-toolbar</code> や <code>ons-list-item</code> をiOS向け・Android向けの見た目へ切り替えます。自分でOSごとに2組の画面を作る必要はありません。</p>
 <ol><li><code>www/js/app.js</code> を、このSTEPの全文に置き換えます。先頭の <code>ons.platform.select("android");</code> が有効になっています。保存して<strong>プレビュー全体を再読み込み</strong>します。</li><li>ツールバーの高さ・題名の位置、行を押した反応、右端の目印を見ます。右端の目印「＞」は、iOS向けとAndroid向けのどちらにも出ます。</li><li><code>"android"</code> を <code>"ios"</code> へ書き換え、保存してプレビュー全体を再読み込みします。HTMLと自分のCSSは変更せず、同じ箇所を比べます。</li><li>違いを1つ、共通する内容を1つ、言葉で説明します。</li></ol>
 <p>OSの指定はOnsen UIが画面を作る前に必要です。<code>app.js</code> の先頭で行い、後のイベント処理の中へ移しません。この指定は<strong>表示スタイルの比較</strong>であり、ブラウザをAndroidやiOSの実機に変える操作ではありません。</p>
@@ -862,7 +862,7 @@ ons.platform.select(&quot;android&quot;);
 
 </section>
 <section id="step-9">
-<p class="step-meta">STEP 09 · 2コマ目</p><h2>自動のスタイルへ戻してアレンジする</h2>
+<p class="step-meta">STEP 09 · コマ2</p><h2>自動のスタイルへ戻してアレンジする</h2>
 <p><code>app.js</code> の指定行の先頭へ <code>//</code> を付け、このSTEPの全文と同じコメントに戻します。保存してプレビュー全体を再読み込みします。これで特定のOSを強制せず、実行環境に応じてスタイルが選ばれます。</p>
 <p>Monacaのプレビューでも、端末を選んで見た目を比べられます。<code>app.js</code> の強制指定がコメントになっていることを確かめ、次の順に操作します。</p>
 <ol><li>Monacaのプレビューの端末選択で <code>iPhone 15</code> を選び、プレビューの <code>Reload</code> を押します。</li><li>ツールバーと一覧を確認します。</li><li>端末選択で <code>Pixel 8</code> を選び、もう一度 <code>Reload</code> を押します。同じ一覧で違いを確かめます。</li></ol><p>端末を選ぶだけでは前の表示が残ることがあるので、毎回 <code>Reload</code> まで行います。この操作はプレビューの比較であり、実機を使った確認ではありません。STEP 08のコードによる強制指定と同時には使わず、強制指定をコメントへ戻してから試します。</p>
@@ -989,7 +989,7 @@ ons.platform.select(&quot;android&quot;);
 <div class="task"><p class="box-title">アレンジできる場所</p><p>名前・種類、冒頭の説明、<code>.app-caption</code> の色、<code>.app-section</code> の余白を変えられます。自分の好きなものが伝わる名前と種類を考えましょう。auto-stylingの違いを確かめるときは自分のCSSを固定し、OS指定だけを切り替えます。</p></div>
 </section>
 <section id="step-10">
-<p class="step-meta">STEP 10 · 3コマ目</p><h2>ページができた時点で処理する</h2>
+<p class="step-meta">STEP 10 · コマ3</p><h2>ページができた時点で処理する</h2>
 <details><summary>このコマから合流する人：開始時の全コード</summary><p>同じM01OshiListを開き、各ファイルを次の内容にそろえて保存します。前のコマのアレンジを残したい人は、その文字や色を控えてから進みます。</p>
 <div class="code-head">www/index.html · 全文</div>
 <pre id="start-09-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
@@ -1239,7 +1239,7 @@ document.addEventListener(&quot;init&quot;, function(event) {
 
 </section>
 <section id="step-11">
-<p class="step-meta">STEP 11 · 3コマ目</p><h2>3件のデータを配列へまとめる</h2>
+<p class="step-meta">STEP 11 · コマ3</p><h2>3件のデータを配列へまとめる</h2>
 <p><code>www/js/app.js</code> を全文に置き換えます。<code>oshiItems</code> は3件の配列です。1件は <code>name</code>・<code>genre</code>・<code>comment</code> を持つオブジェクトにします。配列とオブジェクトはWeb基礎の書き方です。</p>
 <table><thead><tr><th>コード</th><th>読み方</th></tr></thead><tbody><tr><td><code>oshiItems[0].name</code></td><td>0番目の名前。</td></tr><tr><td><code>oshiItems.length</code></td><td>配列にある件数。</td></tr><tr><td><code>comment</code> 内の <code>\n</code></td><td>文字列内の改行。この理由文は第4コマで表示する。</td></tr></tbody></table>
 <p>保存・再読み込みして、一覧の下に「登録件数：3」が出ることを確認します。いまはHTMLにも同じ名前があります。まだ配列から一覧を作っていないため、配列だけ変更しても一覧の名前は変わりません。次のSTEPでデータの置き場所を配列へそろえます。</p>
@@ -1392,7 +1392,7 @@ document.addEventListener(&quot;init&quot;, function(event) {
 
 </section>
 <section id="step-12">
-<p class="step-meta">STEP 12 · 3コマ目</p><h2>配列から行を作り、文字を入れる</h2>
+<p class="step-meta">STEP 12 · コマ3</p><h2>配列から行を作り、文字を入れる</h2>
 <p>このSTEPのHTMLとJavaScriptを全文に置き換えます。CSSは変わりません。HTMLの <code>ons-list</code> は空になり、JavaScriptの <code>renderOshiList</code> が一覧を組み立てます。</p>
 <ol><li><code>createOshiRowHtml(index)</code> を読みます。カード用の <code>class="oshi-card"</code> を含む1行分のタグを文字列で返し、番号を足して <code>item_oshi_0</code>・<code>txt_name_0</code> のように重複しないidを作ります。</li><li>1回目の <code>for</code> で、行のHTMLを <code>html</code> にまとめます。ループ後に1回だけ <code>listOshi.innerHTML = html;</code> として全行を置きます。</li><li>2回目の <code>for</code> で、配置した各行の名前・種類を <code>textContent</code> へ代入します。</li><li>保存・再読み込みして3件の表示を確認し、配列の1件目の名前を一時的に <code>&lt;好きなもの&gt;</code> に変えます。山かっこを含む文字がそのまま表示されたら、元へ戻します。</li></ol>
 <p>タグを作る文字列には自分で決めた固定の構造と番号だけを入れます。名前を <code>innerHTML</code> の文字列へ混ぜません。データを文字として表示する場所には <code>textContent</code> を使います。</p>
@@ -1557,7 +1557,7 @@ function renderOshiList() {
 
 </section>
 <section id="step-13">
-<p class="step-meta">STEP 13 · 3コマ目</p><h2>押した行の名前を表示する</h2>
+<p class="step-meta">STEP 13 · コマ3</p><h2>押した行の名前を表示する</h2>
 <p><code>www/js/app.js</code> を全文に置き換えます。2回目の <code>for</code> の末尾へ、各行の <code>click</code> イベントが増えました。押された行に対応する <code>oshiItems[i]</code> を、<code>selectOshi</code> へ渡します。</p>
 <p><code>for (let i = 0; ...)</code> の <code>let</code> により、登録した関数はその回の番号を使えます。3つの行に同じ0番のデータを渡さず、各回の <code>i</code> で選ぶ点を確認します。</p>
 <p>保存・再読み込みして、3件を順に1回ずつ押します。一覧の下が「選択中：押した名前」に変われば成功です。画面遷移はまだありません。文字だけを変えられることを先に確かめます。</p>
@@ -1730,7 +1730,7 @@ function selectOshi(oshi) {
 
 </section>
 <section id="step-14">
-<p class="step-meta">STEP 14 · 3コマ目</p><h2>データと表示の役割を確かめる</h2>
+<p class="step-meta">STEP 14 · コマ3</p><h2>データと表示の役割を確かめる</h2>
 <p>第3コマの基準コードです。HTMLは一覧を置く場所、CSSは見た目、JavaScriptの配列は内容、関数は行の作成と選択を担当しています。</p>
 <ol><li>配列の2件目の名前と種類を書き換え、再読み込みします。一覧と選択中の両方へ同じ変更が出ることを確認します。</li><li>1件を複製して末尾へ加え、件数が4件になることを試します。オブジェクトの間のカンマに注意します。確認後は3件へ戻しても、自分の内容を残しても構いません。</li><li>行を押した後でプレビューを再読み込みします。「まだ選択していません」へ戻ることを確認します。</li></ol>
 <p>ソースに書いた配列は残りますが、今選んでいる項目は再読み込みでリセットされます。この単元には選択結果や入力内容の保存機能はありません。</p>
@@ -1902,7 +1902,7 @@ function selectOshi(oshi) {
 <div class="task"><p class="box-title">アレンジできる場所</p><p><code>oshiItems</code> の名前・種類・件数、選択中の接頭辞、文字色を変えられます。自分の好きなものと、その理由を配列へ自分の言葉で書きましょう。長い名前や山かっこを含む名前を試し、画面幅を狭くしても内容を読めるか確かめましょう。</p></div>
 </section>
 <section id="step-15">
-<p class="step-meta">STEP 15 · 4コマ目</p><h2>一覧をnavigatorが管理するページにする</h2>
+<p class="step-meta">STEP 15 · コマ4</p><h2>一覧をnavigatorが管理するページにする</h2>
 <details><summary>このコマから合流する人：開始時の全コード</summary><p>同じM01OshiListを開き、各ファイルを次の内容にそろえて保存します。前のコマのアレンジを残したい人は、その文字や色を控えてから進みます。</p>
 <div class="code-head">www/index.html · 全文</div>
 <pre id="start-14-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
@@ -2240,7 +2240,7 @@ function selectOshi(oshi) {
 
 </section>
 <section id="step-16">
-<p class="step-meta">STEP 16 · 4コマ目</p><h2>詳細画面を開き、戻る</h2>
+<p class="step-meta">STEP 16 · コマ4</p><h2>詳細画面を開き、戻る</h2>
 <p>このSTEPの3ファイルを全文に置き換えます。HTMLに <code>template id="detail.html"</code> を増やし、詳細のツールバーに <code>ons-back-button</code> を置きます。CSSには理由文用の余白と改行表示を追加します。</p>
 <p>JavaScriptでは、クリックしたときに呼ぶ関数を <code>selectOshi</code> から <code>openOshiDetail</code> へ変え、<code>navApp.pushPage("detail.html");</code> で詳細を重ねます。今回は名前や理由を詳細へまだ渡さないため、どの行を押しても「詳細画面の見本」が出ます。</p>
 <ol><li>一覧の1件を1回押し、詳細の見本を表示します。</li><li>詳細の左上にある戻るボタンを1回押し、一覧へ戻ります。ブラウザ自体の戻るボタンは使いません。</li><li>別の行でも、詳細を開く・戻るを確かめます。このSTEPでは連打せず、画面の動きが終わってから操作します。</li></ol>
@@ -2450,7 +2450,7 @@ function openOshiDetail(oshi) {
 
 </section>
 <section id="step-17">
-<p class="step-meta">STEP 17 · 4コマ目</p><h2>押した項目を詳細へ渡す</h2>
+<p class="step-meta">STEP 17 · コマ4</p><h2>押した項目を詳細へ渡す</h2>
 <p><code>www/index.html</code> と <code>www/js/app.js</code> を全文に置き換えます。CSSは変わりません。詳細の名前・種類・理由はHTMLでは空にし、受け取ったデータを後から入れます。</p>
 <p><code>pushPage</code> の2番目の引数に <code>{ data: { oshi: oshi } }</code> を渡します。左側の <code>oshi</code> は受け渡す項目の名前、右側の <code>oshi</code> は関数の引数で受け取った好きなもの1件です。</p>
 <p>詳細ページの <code>init</code> では、<code>const oshi = page.data.oshi;</code> でその1件を取り出します。その後、<code>txt_detail_name</code>・<code>txt_detail_genre</code>・<code>txt_detail_comment</code> の <code>textContent</code> を設定します。</p>
@@ -2675,7 +2675,7 @@ function openOshiDetail(oshi) {
 
 </section>
 <section id="step-18">
-<p class="step-meta">STEP 18 · 4コマ目</p><h2>連続して押されても詳細を重ねない</h2>
+<p class="step-meta">STEP 18 · コマ4</p><h2>連続して押されても詳細を重ねない</h2>
 <p><code>www/js/app.js</code> を全文に置き換えます。完成版では <code>isOpeningDetail</code> という真偽値と、navigatorの現在のページを使って、詳細を重ねて開くことを防ぎます。Onsen UIのnavigatorも、切り替えの途中に届いた2回目の <code>pushPage</code> は受け付けませんが、断られた呼び出しはエラーになります。アプリの側で開く途中かどうかを記録しておけば、2回目の呼び出しそのものをしないで済みます。</p>
 <table><thead><tr><th>場所</th><th>意味</th></tr></thead><tbody><tr><td><code>isOpeningDetail = false</code></td><td>まだ詳細を開く途中ではない。</td></tr><tr><td><code>if (isOpeningDetail || navApp.topPage.id !== "page_list")</code></td><td>開いている途中、または一覧が一番上でなければ処理を抜ける。</td></tr><tr><td><code>isOpeningDetail = true</code></td><td>次のクリックが来る前に、開く途中だと記録する。</td></tr><tr><td><code>callback: function() { ... }</code></td><td>ページを開く処理が終わったときに実行される関数。ここで真偽値をfalseへ戻す。</td></tr></tbody></table>
 <p><code>||</code> は「どちらか」、<code>!==</code> は「等しくない」、<code>return</code> はこの関数をそこで終える、というWeb基礎の書き方です。開き終わって真偽値がfalseになっても、詳細が一番上ならもう一度開きません。</p>
@@ -2911,7 +2911,7 @@ function openOshiDetail(oshi) {
 
 </section>
 <section id="step-19">
-<p class="step-meta">STEP 19 · 4コマ目</p><h2>完成版を確認し、自分の好きなものノートにする</h2>
+<p class="step-meta">STEP 19 · コマ4</p><h2>完成版を確認し、自分の好きなものノートにする</h2>
 <p>下の3ファイルは <code>M01OshiList</code> の完成版です。コードをそろえたら、順番に確認します。自分のアレンジを残す場合は、データや色の違いと、処理の違いを分けて見比べます。</p>
 <ol><li>再読み込み直後は3件と「まだ選択していません」が見えます。</li><li>3件を順に開き、それぞれの名前・種類・理由が正しいことを確かめます。戻ると一覧に選択した名前が残ります。</li><li>行を続けて押しても、戻る1回で一覧へ戻ることを確かめます。</li><li>先頭のOS強制指定がコメントになっていることを確認します。STEP 09と同じく、Monacaの端末選択で <code>iPhone 15</code>、<code>Pixel 8</code> を選び、それぞれ <code>Reload</code> を押して一覧・詳細・戻るを比べます。</li><li>長い名前と改行のある理由を試し、狭い幅でも読めることを確かめます。再読み込み後の選択は未選択へ戻ります。</li></ol>
 <h3>アレンジ箇所を記録する</h3><p>この単元は、変更したファイル・箇所と、画面での変化を記録して終えます。公開URLでの提出は、先生が案内するMonaca系の提出回に行います。自分のプロジェクトは残しておきます。</p>
@@ -3145,6 +3145,7 @@ function openOshiDetail(oshi) {
 <div class="check"><label><input type="checkbox" data-check="oshi-list-19"><span>一覧・詳細・戻る・連続クリック・OSによる差を確認し、自分の変更箇所を説明できる。</span></label></div>
 <div class="task"><p class="box-title">アレンジできる場所</p><p><code>oshiItems</code> の名前・種類・理由・件数、HTMLの見出し、CSSの色・余白・文字サイズを変えられます。自分の好きなものと、その理由を自分の言葉で書きます。次に1か所だけ見た目を変え、どのファイルの何を変え、どの画面へ反映されたかを説明してください。</p></div>
 </section>
+<section id="help"><h2>困ったとき</h2><table><thead><tr><th>見えること</th><th>確認すること</th></tr></thead><tbody><tr><td>装飾のない縦並びになる</td><td><code>index.html</code> の Onsen UI のCDNの版とパス、<code>css/style.css</code> のパスを確認。保存してからプレビューを再読み込みしたか。回線が <code>unpkg.com</code> へつながるか。</td></tr><tr><td><code>app.js</code> が動かない</td><td>置き場所が <code>www/js/app.js</code> か。<code>index.html</code> の <code>script</code> が Onsen UI より後にあるか。ファイルを保存したか。</td></tr><tr><td>一覧が空になる</td><td><code>page_list</code>・<code>list_oshi</code> の <code>id</code> の綴り。配列のカンマと引用符。<code>init</code> の中から <code>renderOshiList</code> を呼んでいるか。</td></tr><tr><td>どの行も同じ項目になる</td><td>繰り返しが <code>for (let i = 0; …)</code> になっているか。固定の <code>0</code> ではなく <code>oshiItems[i]</code> を渡しているか。</td></tr><tr><td>押しても反応しない</td><td><code>innerHTML</code> で行を作った後に <code>addEventListener</code> を登録しているか。<code>tappable</code> だけでは処理は付かない。</td></tr><tr><td><code>template</code> を足したら画面が空白になる</td><td><code>ons-navigator</code> の <code>page</code> と <code>template</code> の <code>id</code> の綴り。<code>template</code> の中に <code>ons-page</code> が1つあるか。要素を <code>init</code> より前に取得していないか。</td></tr><tr><td>詳細が空になる</td><td><code>pushPage</code> の <code>data</code> の <code>oshi</code> と、<code>page.data.oshi</code>、表示用の3つの <code>id</code> を照合する。</td></tr><tr><td>OS指定を変えても見た目が変わらない</td><td><code>ons.platform.select</code> を <code>app.js</code> の先頭で実行しているか。画面内の戻るではなく、プレビューの <code>Reload</code> を押したか。端末選択で比べるときは、コードの指定をコメントに戻したか。</td></tr></tbody></table></section>
 <p class="footer">JEC / ハイブリッドアプリ開発技法 · M01OshiList</p>
 <p class="sr-only" role="status" aria-live="polite" data-copy-status></p>
 </main>

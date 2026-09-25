@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>M02OshiSave 教員用ガイド</title><link rel="stylesheet" href="../../docs/assets/textbook.css"></head>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>M02OshiSave 教員用ガイド | ハイブリッドアプリ開発技法</title><link rel="stylesheet" href="../../docs/assets/textbook.css"></head>
 <body class="plain"><a class="skip" href="#main">本文へ移動</a><header class="topbar"><span class="brand">JEC / 教員用ガイド</span><a href="../../docs/oshi-save/index.html">学生用教科書</a></header><main id="main">
 <div class="hero"><p class="eyebrow">Monaca · コマ5〜7</p><h1>M02OshiSave：追加と保存</h1><p class="lede">自分の好きなものを入力して一覧へ加え、再読み込み後も戻る形にします。最後はソースに残るアレンジと公開URLを確認し、提出します。</p><div class="tags"><span>Monaca クラウド IDE / Google Chrome</span><span>1コマ90分 × 3</span><span>Onsen UI 2.12.9</span></div></div>
 <section id="policy"><h2>この単元の教材方針</h2>
@@ -17,6 +17,7 @@
 <h3>意図的に外したもの</h3><p>fetch、Promise、async / await、アロー関数、クラス、querySelector、外部データベース、アカウント連携、Cordovaプラグインは使いません。同期のlocalStorageを使い、保存成功後に一覧を更新します。閲覧画面はtextContentで表示し、入力文字をHTMLとして組み立てません。</p>
 <p>JSON.parseが返した配列と各要素の3つの文字列を検査します。空配列は有効です。読み込み失敗時は初期例を参考表示し、追加を止めて元データを上書きしません。初期化には確認を挟み、削除するのは本アプリのキー1個だけです。障害を起こすためのコードを学生の作品へ入れさせません。</p>
 <p>変更・削除・並べ替えや画像入力を足すと確認範囲が増えるため、題材・文字・色・初期データのアレンジに絞ります。個人的な話の開示は必須にせず、架空の好きなものでも構いません。</p>
+<h3>4冊の体裁の決まり（2026-09-25、#99）</h3><p>4冊で共通にそろえたのは表記です。コマは、見出し（<code>STEP 00 · コマ1</code>、<code>コマ1 · STEP 00〜04</code>）では「コマN」、本文では「第Nコマ」と書きます。書名は <code>README.md</code> の表の名前（「好きなものノート：一覧と詳細」「スタンプ帳：入力・保存・APK提出」など）を教科書の <code>title</code> と教員用ガイドの見出しにそろえます。Flutter系では、macOS の Terminal アプリは <code>Terminal</code>、Visual Studio Code の中のターミナルは「ターミナル」と書き分けます。構成はそろえません。「完成プロジェクトを開く」の節の位置（Monaca系は先頭、Flutter系は末尾）、ヒーローの到達点の表（Monaca系だけ）、既知の技術との比較の見せ方（Monaca系は文章の囲み、Flutter系はコードを並べる比較ブロック）は、道具と題材の違いに合わせた意図した構成です。「困ったとき」の節は4冊すべてに置きます。</p>
 </section>
 <section id="schedule"><h2>90分ごとの進め方</h2>
 <table><thead><tr><th>コマ / STEP</th><th>配分</th><th>到達点</th></tr></thead><tbody>
