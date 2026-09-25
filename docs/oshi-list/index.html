@@ -82,7 +82,7 @@
 <div class="code-head">www/css/style.css · 全文</div>
 <pre id="code-00-style-css" tabindex="0"><code>/* このコマで見た目を整えます。 */</code></pre>
 </details>
-<div class="check"><label><input type="checkbox" data-check="oshi-list-00"><span>通常版Monacaで自分のM01OshiListを開き、準備用の文字を表示できた。</span></label></div>
+<div class="check"><label><input type="checkbox" data-check="oshi-list-00"><span>通常版Monacaで自分の <code>M01OshiList</code> を開き、準備用の文字を表示できた。</span></label></div>
 
 </section>
 <section id="step-1">
@@ -355,7 +355,7 @@
 </section>
 <section id="step-5">
 <p class="step-meta">STEP 05 · コマ2</p><h2>Onsen UIを同じ版で読み込む</h2>
-<details><summary>このコマから合流する人：開始時の全コード</summary><p>同じM01OshiListを開き、各ファイルを次の内容にそろえて保存します。前のコマのアレンジを残したい人は、その文字や色を控えてから進みます。</p>
+<details><summary>このコマから合流する人：開始時の全コード</summary><p>同じ <code>M01OshiList</code> を開き、各ファイルを次の内容にそろえて保存します。前のコマのアレンジを残したい人は、その文字や色を控えてから進みます。</p>
 <div class="code-head">www/index.html · 全文</div>
 <pre id="start-04-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;ja&quot;&gt;
@@ -510,7 +510,7 @@
 // ons.platform.select(&quot;android&quot;);
 </code></pre>
 </details>
-<div class="check"><label><input type="checkbox" data-check="oshi-list-05"><span>版番号付きの3本の読み込みと、自分のapp.jsの位置を確認した。</span></label></div>
+<div class="check"><label><input type="checkbox" data-check="oshi-list-05"><span>版番号付きの3本の読み込みと、自分の <code>app.js</code> の位置を確認した。</span></label></div>
 
 </section>
 <section id="step-6">
@@ -518,7 +518,7 @@
 <p><code>www/index.html</code> を全文に置き換えます。<code>body</code> の中を <code>ons-page</code> で囲み、その先頭に <code>ons-toolbar</code> を置きます。カードはまだ前のコマのHTMLです。</p>
 <p><code>ons-</code> で始まるタグはOnsen UIが提供する画面部品です。ブラウザの標準タグだけではなく、STEP 05で読み込んだJavaScriptとCSSが表示を整えています。ツールバーの <code>class="center"</code> は、Onsen UIが決めた領域名です。文字が常に画面の厳密な中央にあるという意味ではありません。</p>
 <p>保存して再読み込みし、上部のツールバーに「好きなものノート」が出ていることを確認します。カードはツールバーの下に表示されます。タグ名がそのまま文字になったら、全角の記号や閉じタグの不足を確認します。</p>
-<div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎の <code>div</code> にCSSを付けて領域を作る代わりに、<code>ons-page</code> と <code>ons-toolbar</code> という部品を使います。AndroidのToolbar、iOSのナビゲーションバーと、画面の題名を置く役割は対応します。今回はHTMLで同じ部品の役割を指定します。</p></div>
+<div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎の <code>div</code> にCSSを付けて領域を作る代わりに、<code>ons-page</code> と <code>ons-toolbar</code> という部品を使います。Androidの <code>Toolbar</code>、iOSのナビゲーションバーと、画面の題名を置く役割は対応します。今回はHTMLで同じ部品の役割を指定します。</p></div>
 <details><summary>このSTEPの全コード（照合・合流用）</summary>
 <div class="code-head">www/index.html · 全文</div>
 <pre id="code-06-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
@@ -990,7 +990,7 @@ ons.platform.select(&quot;android&quot;);
 </section>
 <section id="step-10">
 <p class="step-meta">STEP 10 · コマ3</p><h2>ページができた時点で処理する</h2>
-<details><summary>このコマから合流する人：開始時の全コード</summary><p>同じM01OshiListを開き、各ファイルを次の内容にそろえて保存します。前のコマのアレンジを残したい人は、その文字や色を控えてから進みます。</p>
+<details><summary>このコマから合流する人：開始時の全コード</summary><p>同じ <code>M01OshiList</code> を開き、各ファイルを次の内容にそろえて保存します。前のコマのアレンジを残したい人は、その文字や色を控えてから進みます。</p>
 <div class="code-head">www/index.html · 全文</div>
 <pre id="start-09-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;ja&quot;&gt;
@@ -1235,7 +1235,7 @@ document.addEventListener(&quot;init&quot;, function(event) {
 });
 </code></pre>
 </details>
-<div class="check"><label><input type="checkbox" data-check="oshi-list-10"><span>initで一覧ページを判定し、画面の文字を変更できた。</span></label></div>
+<div class="check"><label><input type="checkbox" data-check="oshi-list-10"><span><code>init</code> で一覧ページを判定し、画面の文字を変更できた。</span></label></div>
 
 </section>
 <section id="step-11">
@@ -1388,7 +1388,7 @@ document.addEventListener(&quot;init&quot;, function(event) {
 });
 </code></pre>
 </details>
-<div class="check"><label><input type="checkbox" data-check="oshi-list-11"><span>配列の件数を画面へ表示し、1件のname・genre・commentを読み取れた。</span></label></div>
+<div class="check"><label><input type="checkbox" data-check="oshi-list-11"><span>配列の件数を画面へ表示し、1件の <code>name</code>・<code>genre</code>・<code>comment</code> を読み取れた。</span></label></div>
 
 </section>
 <section id="step-12">
@@ -1903,7 +1903,7 @@ function selectOshi(oshi) {
 </section>
 <section id="step-15">
 <p class="step-meta">STEP 15 · コマ4</p><h2>一覧をnavigatorが管理するページにする</h2>
-<details><summary>このコマから合流する人：開始時の全コード</summary><p>同じM01OshiListを開き、各ファイルを次の内容にそろえて保存します。前のコマのアレンジを残したい人は、その文字や色を控えてから進みます。</p>
+<details><summary>このコマから合流する人：開始時の全コード</summary><p>同じ <code>M01OshiList</code> を開き、各ファイルを次の内容にそろえて保存します。前のコマのアレンジを残したい人は、その文字や色を控えてから進みます。</p>
 <div class="code-head">www/index.html · 全文</div>
 <pre id="start-14-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;ja&quot;&gt;
@@ -2066,9 +2066,9 @@ function selectOshi(oshi) {
   document.getElementById(&quot;txt_selected&quot;).textContent = &quot;選択中：&quot; + oshi.name;
 }</code></pre></details><p>第4コマでは一覧から詳細を開き、戻れるようにします。まず、このSTEPの <code>www/index.html</code> へ置き換えます。CSSとJavaScriptは開始時のままです。</p>
 <p><code>ons-navigator</code> は複数のページを重ねて管理する部品です。<code>page="list.html"</code> に、最初に出すページを指定します。この <code>list.html</code> は別ファイルではなく、同じHTML内の <code>template id="list.html"</code> の名前です。</p>
-<p><code>template</code> の中身は、書いた場所で直ちに表示されるのではなく、必要なときに使うHTMLのひな形です。中には1個の <code>ons-page</code> を置きます。navigatorが一覧ページを作ると <code>init</code> が通知され、第3コマと同じ関数が行を作ります。</p>
+<p><code>template</code> の中身は、書いた場所で直ちに表示されるのではなく、必要なときに使うHTMLのひな形です。中には1個の <code>ons-page</code> を置きます。<code>ons-navigator</code> が一覧ページを作ると <code>init</code> が通知され、第3コマと同じ関数が行を作ります。</p>
 <p>保存・再読み込みし、3件と選択表示が前と同じように動くことを確かめます。画面に変化がなくても、いまは管理の仕方を切り替えた段階なので正解です。</p>
-<div class="note"><p class="box-title">既知の技術と比べる</p><p>Androidで画面のレイアウトを用意して必要なときに表示する、iOSでビューコントローラをナビゲーションコントローラへ積む考え方と対応します。Web基礎の別ページへのリンクではなく、同じHTML内のひな形をnavigatorが画面として管理します。要素を使う処理は、ひな形が実際に配置された後の <code>init</code> に置きます。</p></div>
+<div class="note"><p class="box-title">既知の技術と比べる</p><p>Androidで画面のレイアウトを用意して必要なときに表示する、iOSでビューコントローラをナビゲーションコントローラへ積む考え方と対応します。Web基礎の別ページへのリンクではなく、同じHTML内のひな形を <code>ons-navigator</code> が画面として管理します。要素を使う処理は、ひな形が実際に配置された後の <code>init</code> に置きます。</p></div>
 <details><summary>このSTEPの全コード（照合・合流用）</summary>
 <div class="code-head">www/index.html · 全文</div>
 <pre id="code-15-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
@@ -2236,7 +2236,7 @@ function selectOshi(oshi) {
   document.getElementById(&quot;txt_selected&quot;).textContent = &quot;選択中：&quot; + oshi.name;
 }</code></pre>
 </details>
-<div class="check"><label><input type="checkbox" data-check="oshi-list-15"><span>navigatorとtemplateへ移しても、一覧と選択が動いた。</span></label></div>
+<div class="check"><label><input type="checkbox" data-check="oshi-list-15"><span><code>ons-navigator</code> と <code>template</code> へ移しても、一覧と選択が動いた。</span></label></div>
 
 </section>
 <section id="step-16">
@@ -2244,7 +2244,7 @@ function selectOshi(oshi) {
 <p>このSTEPの3ファイルを全文に置き換えます。HTMLに <code>template id="detail.html"</code> を増やし、詳細のツールバーに <code>ons-back-button</code> を置きます。CSSには理由文用の余白と改行表示を追加します。</p>
 <p>JavaScriptでは、クリックしたときに呼ぶ関数を <code>selectOshi</code> から <code>openOshiDetail</code> へ変え、<code>navApp.pushPage("detail.html");</code> で詳細を重ねます。今回は名前や理由を詳細へまだ渡さないため、どの行を押しても「詳細画面の見本」が出ます。</p>
 <ol><li>一覧の1件を1回押し、詳細の見本を表示します。</li><li>詳細の左上にある戻るボタンを1回押し、一覧へ戻ります。ブラウザ自体の戻るボタンは使いません。</li><li>別の行でも、詳細を開く・戻るを確かめます。このSTEPでは連打せず、画面の動きが終わってから操作します。</li></ol>
-<p><code>ons-back-button</code> は、そのページを管理するnavigatorの前のページへ戻す部品です。自分でクリック処理を追加しなくても動きます。ページの切り替わり方もOSのスタイルで変わるので、常に同じ方向へスライドするとは限りません。ボタンの見た目もOSのスタイルで変わります。iOS向けでは、HTMLに書いた文字を添えて「＜ 戻る」と表示されます。Android向けでは左向きの矢印「←」だけになり、「戻る」の文字は表示されません。どちらも同じ <code>ons-back-button</code> で、押したときの動きは同じです。</p>
+<p><code>ons-back-button</code> は、そのページを管理する <code>ons-navigator</code> の前のページへ戻す部品です。自分でクリック処理を追加しなくても動きます。ページの切り替わり方もOSのスタイルで変わるので、常に同じ方向へスライドするとは限りません。ボタンの見た目もOSのスタイルで変わります。iOS向けでは、HTMLに書いた文字を添えて「＜ 戻る」と表示されます。Android向けでは左向きの矢印「←」だけになり、「戻る」の文字は表示されません。どちらも同じ <code>ons-back-button</code> で、押したときの動きは同じです。</p>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>iOSのナビゲーションコントローラで次の画面をpushし、戻る操作でpopする構造と同じです。Androidで次の画面へ進んで戻る場合と同様、一覧を消して作り直す操作ではありません。Onsen UIでは <code>pushPage</code> で積み、<code>ons-back-button</code> に戻る操作を任せます。見た目も、iOSのナビゲーションバーの文字つきの戻るボタンと、Androidのツールバーの矢印だけの戻るボタンに合わせて、Onsen UIが描き分けます。</p></div>
 <details><summary>このSTEPの全コード（照合・合流用）</summary>
 <div class="code-head">www/index.html · 全文</div>
@@ -2455,8 +2455,8 @@ function openOshiDetail(oshi) {
 <p><code>pushPage</code> の2番目の引数に <code>{ data: { oshi: oshi } }</code> を渡します。左側の <code>oshi</code> は受け渡す項目の名前、右側の <code>oshi</code> は関数の引数で受け取った好きなもの1件です。</p>
 <p>詳細ページの <code>init</code> では、<code>const oshi = page.data.oshi;</code> でその1件を取り出します。その後、<code>txt_detail_name</code>・<code>txt_detail_genre</code>・<code>txt_detail_comment</code> の <code>textContent</code> を設定します。</p>
 <ol><li>1件目を押し、名前・種類・理由が配列の1件目と一致することを確かめます。</li><li>戻って2件目、3件目でも確かめます。</li><li>理由の <code>\n</code> が改行になっていることを見ます。CSSの <code>white-space: pre-wrap</code> が、改行を保ちながら折り返します。</li></ol>
-<p>このSTEPも画面の動きが終わってから次を押します。画面の切り替えの途中に届いた2回目の操作は、Onsen UIのnavigatorが受け付けないので、続けて押しても詳細は重なりません。次のSTEPでは、この仕組みに任せきりにせず、アプリの側でも開く途中かどうかを記録します。</p>
-<div class="note"><p class="box-title">既知の技術と比べる</p><p>Androidで次の画面へ値を渡す、iOSで遷移先に表示用の値を渡す目的と同じです。Onsen UIではnavigatorの <code>data</code> を渡し、作られたページの <code>page.data</code> から受け取ります。ここで渡すのは実行中のJavaScriptオブジェクトで、ファイルへ保存したり文字列へ変換したりしているわけではありません。</p></div>
+<p>このSTEPも画面の動きが終わってから次を押します。画面の切り替えの途中に届いた2回目の操作は、Onsen UIの <code>ons-navigator</code> が受け付けないので、続けて押しても詳細は重なりません。次のSTEPでは、この仕組みに任せきりにせず、アプリの側でも開く途中かどうかを記録します。</p>
+<div class="note"><p class="box-title">既知の技術と比べる</p><p>Androidで次の画面へ値を渡す、iOSで遷移先に表示用の値を渡す目的と同じです。Onsen UIでは <code>ons-navigator</code> の <code>data</code> を渡し、作られたページの <code>page.data</code> から受け取ります。ここで渡すのは実行中のJavaScriptオブジェクトで、ファイルへ保存したり文字列へ変換したりしているわけではありません。</p></div>
 <details><summary>このSTEPの全コード（照合・合流用）</summary>
 <div class="code-head">www/index.html · 全文</div>
 <pre id="code-17-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
@@ -2676,9 +2676,9 @@ function openOshiDetail(oshi) {
 </section>
 <section id="step-18">
 <p class="step-meta">STEP 18 · コマ4</p><h2>連続して押されても詳細を重ねない</h2>
-<p><code>www/js/app.js</code> を全文に置き換えます。完成版では <code>isOpeningDetail</code> という真偽値と、navigatorの現在のページを使って、詳細を重ねて開くことを防ぎます。Onsen UIのnavigatorも、切り替えの途中に届いた2回目の <code>pushPage</code> は受け付けませんが、断られた呼び出しはエラーになります。アプリの側で開く途中かどうかを記録しておけば、2回目の呼び出しそのものをしないで済みます。</p>
-<table><thead><tr><th>場所</th><th>意味</th></tr></thead><tbody><tr><td><code>isOpeningDetail = false</code></td><td>まだ詳細を開く途中ではない。</td></tr><tr><td><code>if (isOpeningDetail || navApp.topPage.id !== "page_list")</code></td><td>開いている途中、または一覧が一番上でなければ処理を抜ける。</td></tr><tr><td><code>isOpeningDetail = true</code></td><td>次のクリックが来る前に、開く途中だと記録する。</td></tr><tr><td><code>callback: function() { ... }</code></td><td>ページを開く処理が終わったときに実行される関数。ここで真偽値をfalseへ戻す。</td></tr></tbody></table>
-<p><code>||</code> は「どちらか」、<code>!==</code> は「等しくない」、<code>return</code> はこの関数をそこで終える、というWeb基礎の書き方です。開き終わって真偽値がfalseになっても、詳細が一番上ならもう一度開きません。</p>
+<p><code>www/js/app.js</code> を全文に置き換えます。完成版では <code>isOpeningDetail</code> という真偽値と、<code>ons-navigator</code> の現在のページを使って、詳細を重ねて開くことを防ぎます。Onsen UIの <code>ons-navigator</code> も、切り替えの途中に届いた2回目の <code>pushPage</code> は受け付けませんが、断られた呼び出しはエラーになります。アプリの側で開く途中かどうかを記録しておけば、2回目の呼び出しそのものをしないで済みます。</p>
+<table><thead><tr><th>場所</th><th>意味</th></tr></thead><tbody><tr><td><code>isOpeningDetail = false</code></td><td>まだ詳細を開く途中ではない。</td></tr><tr><td><code>if (isOpeningDetail || navApp.topPage.id !== "page_list")</code></td><td>開いている途中、または一覧が一番上でなければ処理を抜ける。</td></tr><tr><td><code>isOpeningDetail = true</code></td><td>次のクリックが来る前に、開く途中だと記録する。</td></tr><tr><td><code>callback: function() { ... }</code></td><td>ページを開く処理が終わったときに実行される関数。ここで真偽値を <code>false</code> へ戻す。</td></tr></tbody></table>
+<p><code>||</code> は「どちらか」、<code>!==</code> は「等しくない」、<code>return</code> はこの関数をそこで終える、というWeb基礎の書き方です。開き終わって真偽値が <code>false</code> になっても、詳細が一番上ならもう一度開きません。</p>
 <ol><li>保存して再読み込みし、同じ行を続けて2回押します。</li><li>詳細の左上の戻るボタンを1回押します。一覧に戻れば、詳細は重なっていません。</li><li>別の行を押し、別の詳細も開けることを確かめます。</li></ol>
 <p>画面の見た目は、STEP 17のときと同じです。ここでは、処理を足したあとも、今までどおり詳細が1枚だけ開き、戻れることを確かめます。</p>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎でクリック後の処理を関数として登録したのと同じく、<code>callback</code> へ「終わったら行う関数」を渡します。Androidのアニメーション終了の通知やiOSの完了ハンドラと対応します。最初に真偽値を変え、完了通知で戻すことで、画面の切り替えを待つ間だけ次の開始を止めます。</p></div>
