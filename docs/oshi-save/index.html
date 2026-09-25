@@ -25,7 +25,7 @@
 <li><a href="#step-11">11 提出に残るアレンジを作る</a></li>
 <li><a href="#step-12">12 操作と公開URLを確認する</a></li>
 <li><a href="#step-13">13 提出と準備状況の確認</a></li>
-<li><a href="#step-14">14 アレンジ箇所を言葉にする</a></li>
+<li><a href="#step-14">14 アレンジ箇所を確かめる</a></li>
 </ol></nav>
 <div class="resources"><a href="#help">困ったとき</a><a href="#sample-project">完成プロジェクトを開く</a><a href="../oshi-list/index.html">M01：OshiList</a><span aria-current="page">M02：OshiSave</span><a href="../stamp-board/index.html">F01：StampBoard</a><a href="../stamp-release/index.html">F02：StampRelease</a><a href="../common/setup.html?from=oshi-save">共通：はじめの準備</a></div>
 </div></aside><main id="main"><div class="hero"><div class="unit">M02</div><p class="eyebrow">コマ5〜7 · 各90分</p><h1>好きなものノート：追加して、残そう。</h1>
@@ -34,7 +34,7 @@
 <div class="goal"><p class="box-title">この単元で分かること</p><p>新しい考え方は<strong>JSON</strong>です。画面で使う配列を保存用の文字列にし、読み込んだ文字列を配列へ戻します。保存先はJavaの<code>SharedPreferences</code>・Swiftの<code>UserDefaults</code>と比較します。</p></div>
 <p>完成見本の名前は <code>M02OshiSave</code> です。学生は自分の好きなものノートを同じ1プロジェクトで育てます。まだプロジェクトがない場合の作り方も、一覧・詳細の開始コードも、この本文にあります。</p>
 <table><thead><tr><th>コマ</th><th>到達点</th></tr></thead><tbody><tr><td>5</td><td>入力した好きなものを一覧へ追加し、詳細を読める。</td></tr><tr><td>6</td><td>JSONと<code>localStorage</code>で保存・復元できる。初期化には確認を挟む。</td></tr><tr><td>7</td><td>授業内でFlutter準備を開始し、待ち時間に好きなものノートをアレンジ・確認・提出する。</td></tr></tbody></table></div>
-<section id="sample-project"><h2>完成プロジェクトを開く</h2><p><a href="https://monaca.mobi/ja/directimport?pid=6ab62caae788858e561a0da3">M02OshiSaveをMonacaへ取り込む</a>。これはアプリを動かすURLではなく、完成見本のソースを取り込むURLです。リンク先でインポートすると自分のMonacaへコピーを取り込むため、Freeプランの3枠のうち1枠を使います。自分の制作を始める人は、STEP 00へ進みます。</p><p>配布ZIPの <code>samples/M02OshiSave</code> はコードを読み比べるための完成見本です。自分の作品を見本で上書きしません。</p></section>
+<section id="sample-project"><h2>完成プロジェクトを開く</h2><p>配布フォルダの <code>~/Documents/hybrid-app-student-materials-日付/samples/M02OshiSave</code> をFinderで開きます。<code>M02OshiSave</code> の完成見本で、自分のコードと読み比べるために使います。自分の作品を見本で上書きしません。自分の制作を始める人は、STEP 00へ進みます。</p><p>Monaca クラウド IDEは、Macのフォルダをそのまま開けません。見本をMonacaで動かすときは、先生がZIPにして公開した<a href="https://monaca.mobi/ja/directimport?pid=6ab62caae788858e561a0da3">M02OshiSaveの取り込み用URL</a>を開いて取り込みます。これはアプリを動かすURLではなく、完成見本のソースを自分のMonacaへ取り込むURLで、Freeプランの3枠のうち1枠を使います。空きを確かめてから1回だけ開きます。取り込み用URLがあっても、Freeプランの制限（プロジェクトの数や、対応するCordovaの版）で、取り込めない、または取り込んだ見本を開けないことがあります。そのときは無理に取り込まず、先生に知らせてください。見本のコードは配布フォルダの <code>samples</code> で読めるので、取り込めなくても授業は進められます。</p></section>
 <section id="step-0"><p class="step-meta">STEP 00 · コマ5</p><h2>自分の好きなものノートを開く</h2>
 <p>Google Chromeで通常版Monacaへログインし、自分の好きなものノートを開きます。続けて使っているプロジェクトは、名前が <code>M01OshiList</code> のままで構いません。今日のためにコピーを増やしたり、削除したりしません。</p>
 <ol><li>まだ自分の好きなものノートがない人だけ、ダッシュボードで新規作成し、<code>最小限のテンプレート</code> を選び、<code>M02OshiSave</code> と名付けます。登録や空き枠が不明なら、<a href="../common/setup.html?from=oshi-save#step-2">共通資料のSTEP 2〜3</a>で確認して戻ります。</li><li><code>www/index.html</code>・<code>www/css/style.css</code> を開きます。<code>www/js/app.js</code> がなければ、ファイル一覧の作成操作で <code>www</code> の下に <code>js</code> フォルダ、その中に <code>app.js</code> ファイルを作ります。</li><li>自分のアレンジがある場合は、変えた文字と色を控えます。下の開始コード3ファイルをそろえ、保存してプレビューを再読み込みします。<code>components</code> や <code>res</code> は変更しません。</li><li>3件の名前を押して詳細を開き、左上の戻るボタンで一覧へ戻ります。戻るボタンは、iOS向けの見た目では「＜ 戻る」、Android向けの見た目では左向きの矢印「←」だけです。タイトルと詳細の組み合わせを確かめます。</li></ol>
@@ -591,7 +591,7 @@ function openAddPage() {
     }
   });
 }</code></pre></details>
-<div class="check"><label><input type="checkbox" data-check="oshi-save-01"><span>入力画面を開き、3つの欄へ入力して戻れた。追加ボタンがまだ押せない理由を説明できた。</span></label></div></section>
+<div class="check"><label><input type="checkbox" data-check="oshi-save-01"><span>入力画面を開き、3つの欄へ入力して戻れた。追加ボタンがまだ押せないことを確認した。</span></label></div></section>
 <section id="step-2"><p class="step-meta">STEP 02 · コマ5</p><h2>入力した文字を確認する</h2>
 <p>HTMLの追加ボタンから <code>disabled</code> を外し、JSでは <code>page_add</code> の<code>init</code>で<code>addOshi</code>を登録します。関数名を渡しているので、登録した瞬間ではなくボタンを押したときに動きます。</p>
 <p><code>addOshi</code>は、入力欄を<code>id</code>で取得し、<code>value</code> で今の文字を読みます。<code>trim()</code> は前後の空白を取り除きます。3つのどれかが空ならメッセージを表示して<code>return</code>し、残りの処理へ進みません。</p>
@@ -1623,7 +1623,7 @@ function addOshi() {
   document.getElementById(&quot;txt_selected&quot;).textContent = &quot;追加したもの：&quot; + name;
   document.getElementById(&quot;nav_app&quot;).popPage();
 }</code></pre></details>
-<div class="check"><label><input type="checkbox" data-check="oshi-save-04"><span>アレンジした場所と結果を説明でき、追加・詳細・戻るが引き続き動いた。</span></label></div></section>
+<div class="check"><label><input type="checkbox" data-check="oshi-save-04"><span>アレンジした場所が画面に現れ、追加・詳細・戻るが引き続き動いた。</span></label></div></section>
 <section id="step-5"><p class="step-meta">STEP 05 · コマ6</p><h2>配列とJSONの違いを読む</h2>
 <details><summary>このコマの開始時の全コード</summary><p>途中から合流する場合は、変更した文字と色を控えてから3ファイルをそろえます。順番に進めている人は、前の回の続きで構いません。</p><div class="code-head">www/index.html · 全文</div>
 <pre id="start-04-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
@@ -1973,7 +1973,7 @@ const restored = JSON.parse(text);
 <p>配列のまま<code>setItem</code>へ渡すと、今回必要な構造を保持するJSONにはなりません。<code>String(oshiItems)</code> で一般的な文字列へ変えることとも区別しましょう。</p>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>JavaやSwiftの配列・データオブジェクトをそのまま画面で使っていたときと、文字列を保存するときでは型が違います。この差をつなぐ表現として、今回はJSONを新しく扱います。配列の操作自体を学び直すのではなく、「配列→JSON文字列→配列」という変換の向きを確認します。</p></div>
 
-<div class="check"><label><input type="checkbox" data-check="oshi-save-05"><span>JSONの文字列と配列を区別し、<code>stringify</code>と<code>parse</code>の向きを説明できた。</span></label></div></section>
+<div class="check"><label><input type="checkbox" data-check="oshi-save-05"><span>JSONの文字列と配列を区別し、<code>stringify</code>と<code>parse</code>の向きを確認した。</span></label></div></section>
 <section id="step-6"><p class="step-meta">STEP 06 · コマ6</p><h2>文字列にして保存する</h2>
 <p>このSTEPの3ファイルへ更新します。JSの先頭に <code>STORAGE_KEY</code> を置き、保存内容を探すための名前を1か所で管理します。この名前を途中で変更すると、以前のキーで保存した内容は見えなくなります。</p>
 <p><code>addOshi</code>では、<code>oshiItems.slice()</code> で配列の浅いコピー<code>nextItems</code>を作り、そこへ新しい1件を追加します。この処理では既存のオブジェクトの項目は変更せず、配列へ追加するだけなので、配列のコピーで足ります。</p>
@@ -2340,7 +2340,7 @@ function addOshi() {
   document.getElementById(&quot;txt_selected&quot;).textContent = &quot;追加したもの：&quot; + name;
   document.getElementById(&quot;nav_app&quot;).popPage();
 }</code></pre></details>
-<div class="check"><label><input type="checkbox" data-check="oshi-save-06"><span>保存成功の文を確認し、コピー・保存・表示更新の順番を説明できた。</span></label></div></section>
+<div class="check"><label><input type="checkbox" data-check="oshi-save-06"><span>保存成功の文を確認し、コピー・保存・表示更新の順番を確かめた。</span></label></div></section>
 <section id="step-7"><p class="step-meta">STEP 07 · コマ6</p><h2>保存した配列を復元する</h2>
 <p>JSに<code>loadOshiItems</code>と<code>isValidItems</code>を加え、<code>page_list</code>の<code>init</code>で <strong>読み込み→一覧生成</strong> の順に呼びます。保存した値を読む前に行を作ると、初期データのまま表示されるためです。</p>
 <p><code>getItem(STORAGE_KEY)</code> は、未保存なら <code>null</code> を返します。この場合は何も復元せず、ソースの初期データを使います。文字列があれば<code>JSON.parse</code>で値へ戻します。</p>
@@ -3192,7 +3192,7 @@ function resetOshiItems() {
 <p>入力→追加→詳細→戻る→再読み込みの順で動かし、保存した内容が復元されることを確認します。次に、ソースの初期データを自分の言葉へ変えます。</p>
 <p><strong>保存データがあると、ソースの初期データより優先して表示されます。</strong> <code>createInitialItems</code>を書き換えても画面が変わらない場合は、変更したコードのミスとは限りません。必要な入力を控えたうえで、アプリ内の初期化を使ってソースの内容を確認します。</p>
 <table><thead><tr><th>アレンジする場所</th><th>確かめること</th></tr></thead><tbody><tr><td><code>createInitialItems</code>の<code>name</code>・<code>genre</code>・<code>comment</code></td><td>初期化後の一覧と詳細が自分の好きなものになる。</td></tr><tr><td>HTMLの案内文・<code>placeholder</code></td><td>何を入力するアプリか伝わる。</td></tr><tr><td>CSSの色・枠・余白</td><td>長い日本語や改行も読める。</td></tr></tbody></table>
-<p>保存キーは変えず、まず文字や色を変えましょう。保存して再読み込みし、どの変更がソースに残り、どの内容がブラウザだけに残るかを説明します。</p>
+<p>保存キーは変えず、まず文字や色を変えましょう。保存して再読み込みし、どの変更がソースに残り、どの内容がブラウザだけに残るかを確かめます。</p>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>ネイティブアプリでも、コードに書いた既定値より保存済みの設定を優先することがあります。同じ区別を、<code>createInitialItems</code>と<code>getItem</code>のどちらが最終的な<code>oshiItems</code>になるかで追います。アレンジは既習のデータと装飾の変更だけで行います。</p></div>
 <details><summary>このSTEPの全コード（照合・合流用）</summary><div class="code-head">www/index.html · 全文</div>
 <pre id="code-09-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
@@ -3625,7 +3625,7 @@ function resetOshiItems() {
   document.getElementById(&quot;txt_selected&quot;).textContent = &quot;まだ選択していません&quot;;
   txtStorage.textContent = &quot;保存内容を削除し、ソースに書いた初期の内容へ戻しました。&quot;;
 }</code></pre></details>
-<div class="check"><label><input type="checkbox" data-check="oshi-save-09"><span>保存・復元の一連の操作ができ、ソースのアレンジと入力データの保存先を説明できた。</span></label></div></section>
+<div class="check"><label><input type="checkbox" data-check="oshi-save-09"><span>保存・復元の一連の操作ができ、ソースのアレンジと入力データの保存先を確かめた。</span></label></div></section>
 <section id="step-10"><p class="step-meta">STEP 10 · コマ7</p><h2>授業内でFlutterの準備を始める</h2>
 <details><summary>このコマの開始時の全コード</summary><p>途中から合流する場合は、変更した文字と色を控えてから3ファイルをそろえます。順番に進めている人は、前の回の続きで構いません。</p><div class="code-head">www/index.html · 全文</div>
 <pre id="start-09-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
@@ -4510,19 +4510,18 @@ function resetOshiItems() {
 
 <div class="check"><label><input type="checkbox" data-check="oshi-save-12"><span>初期状態と追加後の操作を確認し、自分の作品の取り込み用公開URLを発行できた。</span></label></div></section>
 <section id="step-13"><p class="step-meta">STEP 13 · コマ7</p><h2>提出と準備状況を確認する</h2>
-<p>先生が授業中に案内する提出先・締め切りを確認し、次の内容を提出します。まだ案内がない場合は、URLと説明を控えて先生へ確認します。</p>
-<ul><li>自分の好きなものノートで発行した公開URL。</li><li>アレンジした場所と、画面へどう表れるかの短い説明。</li></ul>
+<p>先生が授業中に案内する提出先・締め切りを確認し、自分の好きなものノートで発行した公開URLを提出します。まだ案内がない場合は、URLを控えて先生へ確認します。</p>
 <p>通常版MonacaのFreeプランではZIPを学生の提出物にしません。先生は公開URLから取り込み、初期データと操作を確認します。公開中の自分のプロジェクトは提出後に削除しません。</p>
 <p>Flutter準備のタブへ戻り、取得が終わったか、SDKの版、<code>flutter doctor</code>で止まっている項目を確認します。終わっていない項目はその場で先生へ伝え、コマ8へ引き継ぎます。授業外で終わらせることを条件にはしません。</p>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>ソースを共有する提出と、端末に保存したデータを見せることを区別します。Android／iOSの実行環境を確認するときと同様に、準備済みの項目とまだ使えない項目を具体的に記録します。</p></div>
 
-<div class="check"><label><input type="checkbox" data-check="oshi-save-13"><span>指定先へ自分のURLと変更説明を提出し、Flutter準備の状態も先生へ伝えた。</span></label></div></section>
-<section id="step-14"><p class="step-meta">STEP 14 · コマ7</p><h2>アレンジできる場所を言葉にする</h2>
-<p>最後に提出したソースを見ながら、次の3点を自分の言葉で説明します。</p>
+<div class="check"><label><input type="checkbox" data-check="oshi-save-13"><span>指定先へ自分の公開URLを提出し、Flutter準備の状態も先生へ伝えた。</span></label></div></section>
+<section id="step-14"><p class="step-meta">STEP 14 · コマ7</p><h2>アレンジできる場所を確かめる</h2>
+<p>最後に提出したソースを見ながら、次の3点を確かめます。</p>
 <ol><li>どのファイルの、どの文字・色・初期データを変更したか。</li><li>その変更が一覧・入力・詳細のどこに現れるか。</li><li>入力した保存データがない相手にも、アレンジが伝わるか。</li></ol>
 <p>余裕があれば、既に扱った範囲で記入例を分かりやすくしたり、余白を調整したりします。いまある画面で、自分の「好き」が伝わる状態を確かめましょう。変更したら保存し、一覧・追加・詳細・再読み込みを確認してから公開内容を確かめます。</p>
 <p>全コードは見本との比較用です。自分の変更を消して見本に戻す必要はありません。動かなくなった部分や、変更した場所と結果の関係を確かめるために使います。</p>
-<div class="note"><p class="box-title">既知の技術と比べる</p><p>HTML・CSS・JavaScriptの役割分担を使い、変更の理由をファイルの場所と結び付けて説明します。保存があるアプリでは、ソースの初期値と保存値の両方を見る点を、<code>SharedPreferences</code>／<code>UserDefaults</code>を使うアプリと比べて振り返ります。</p></div>
+<div class="note"><p class="box-title">既知の技術と比べる</p><p>HTML・CSS・JavaScriptの役割分担はWeb基礎と同じで、変更した場所はファイルの種類から見つけられます。保存があるアプリでは、ソースの初期値と保存値の両方を見ます。<code>SharedPreferences</code>／<code>UserDefaults</code>を使うアプリで、コードに書いた初期値と端末に残る保存値が別にあるのと同じです。</p></div>
 <details><summary>このSTEPの全コード（照合・合流用）</summary><div class="code-head">www/index.html · 全文</div>
 <pre id="code-14-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;ja&quot;&gt;
@@ -4954,7 +4953,7 @@ function resetOshiItems() {
   document.getElementById(&quot;txt_selected&quot;).textContent = &quot;まだ選択していません&quot;;
   txtStorage.textContent = &quot;保存内容を削除し、ソースに書いた初期の内容へ戻しました。&quot;;
 }</code></pre></details>
-<div class="check"><label><input type="checkbox" data-check="oshi-save-14"><span>自分の変更箇所と結果を説明でき、初期状態からも伝わる作品にできた。</span></label></div></section>
+<div class="check"><label><input type="checkbox" data-check="oshi-save-14"><span>自分の変更箇所が画面に現れ、初期状態からも伝わる作品にできた。</span></label></div></section>
 <section id="help"><h2>困ったとき</h2><table><thead><tr><th>見えること</th><th>確認すること</th></tr></thead><tbody>
 <tr><td>入力画面が開かない</td><td>3ファイルが同じSTEPか、保存したかを確認。読込失敗の表示が出ていればSTEP 08へ。</td></tr>
 <tr><td>追加した文字が消えた</td><td>コマ5では未保存が正常。コマ6以降は保存成功の文、同じブラウザ・同じプレビューかを確認。</td></tr>

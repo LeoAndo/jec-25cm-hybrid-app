@@ -55,7 +55,7 @@
 <p>使うプロジェクトは <code>M01OshiList</code> です。各STEPの「全コード」は開いてコピーでき、各コマの最初には開始時のコードもあります。前から順に作る場合は、説明されたファイルを更新します。途中から合流する場合は、開始時のファイルをすべてそろえてから進みます。</p>
 <table><thead><tr><th>コマ</th><th>この回の到達点</th></tr></thead><tbody><tr><td>1</td><td>通常版Monacaで静的なカードを表示する。</td></tr><tr><td>2</td><td>Onsen UIの一覧とauto-stylingを確認する。</td></tr><tr><td>3</td><td>配列から一覧を作り、押した名前を表示する。</td></tr><tr><td>4</td><td>詳細へ値を渡し、戻る操作まで完成させる。</td></tr></tbody></table>
 </div>
-<section id="sample-project"><h2>完成プロジェクトを開く</h2><p>先生が見本を使うと案内したら、<a href="https://monaca.mobi/ja/directimport?pid=6ab62c99e7888517430a0ae6">M01OshiListの完成プロジェクトを開く</a>へ進みます。通常版Monacaへログインした状態で、取り込むプロジェクトを確認します。自分の制作を始めるにはSTEP 00へ進みます。</p><p>完成見本の取り込みにも1枠を使います。Freeプランの3枠を確認し、URLを繰り返し開いて複数のコピーを作らないようにします。自分の作品は削除しません。配布ZIPの <code>samples/M01OshiList</code> はコードを読むための見本です。</p></section>
+<section id="sample-project"><h2>完成プロジェクトを開く</h2><p>先生が見本を使うと案内したら、配布フォルダの <code>~/Documents/hybrid-app-student-materials-日付/samples/M01OshiList</code> をFinderで開きます。<code>M01OshiList</code> の完成プロジェクトで、<code>www/index.html</code>・<code>www/css/style.css</code>・<code>www/js/app.js</code> を自分のコードと読み比べるために使います。自分の制作を始めるにはSTEP 00へ進みます。</p><p>Monaca クラウド IDEは、Macのフォルダをそのまま開けません。見本をMonacaで動かすときは、先生がZIPにして公開した<a href="https://monaca.mobi/ja/directimport?pid=6ab62c99e7888517430a0ae6">M01OshiListの取り込み用URL</a>を、通常版Monacaへログインした状態で開き、取り込みます。取り込みにもFreeプランの3枠のうち1枠を使うので、空きを確かめてからURLを1回だけ開き、自分の作品は削除しません。取り込み用URLがあっても、Freeプランの制限（プロジェクトの数や、対応するCordovaの版）で、取り込めない、または取り込んだ見本を開けないことがあります。そのときは無理に取り込まず、先生に知らせてください。見本のコードは配布フォルダの <code>samples</code> で読めるので、取り込めなくても授業は進められます。</p></section>
 <section id="step-0">
 <p class="step-meta">STEP 00 · コマ1</p><h2>授業の準備と、自分のプロジェクト</h2>
 <p>この単元では <code>M01OshiList</code> という1つのプロジェクトを4コマかけて育てます。Google ChromeでMonaca クラウド IDEを使います。今日は静的なカードまで作ります。この教科書では、好きな音楽、食べ物、場所など、身近なものを集め、好きな理由を読み返せるようにします。自分の好きなものと好きな理由を、自分の言葉でカードにしましょう。M01では、コードに書いた好きなものを集めて読むところまで作ります。画面から入力する機能や、入力した内容を保存する機能はまだ付けません。</p>
@@ -351,7 +351,7 @@
 }</code></pre>
 </details>
 <div class="check"><label><input type="checkbox" data-check="oshi-list-04"><span>自分の題材と色を試し、同じプロジェクトで次回へ進める。</span></label></div>
-<div class="task"><p class="box-title">アレンジできる場所</p><p>カードの名前・種類・ひとこと、背景色、角丸の数値を変えられます。自分の好きなものと、その理由を自分の言葉で書きましょう。1か所変えるたびに保存・再読み込みをし、何が変わったかを説明します。</p></div>
+<div class="task"><p class="box-title">アレンジできる場所</p><p>カードの名前・種類・ひとこと、背景色、角丸の数値を変えられます。自分の好きなものと、その理由を自分の言葉で書きましょう。1か所変えるたびに保存・再読み込みをし、何が変わったかを確かめます。</p></div>
 </section>
 <section id="step-5">
 <p class="step-meta">STEP 05 · コマ2</p><h2>Onsen UIを同じ版で読み込む</h2>
@@ -738,7 +738,7 @@
 <section id="step-8">
 <p class="step-meta">STEP 08 · コマ2</p><h2>同じHTMLでiOSとAndroidの見た目を比べる</h2>
 <p>この単元の新概念は <strong>auto-styling</strong> です。Onsen UIは実行環境に応じ、同じ <code>ons-toolbar</code> や <code>ons-list-item</code> をiOS向け・Android向けの見た目へ切り替えます。自分でOSごとに2組の画面を作る必要はありません。</p>
-<ol><li><code>www/js/app.js</code> を、このSTEPの全文に置き換えます。先頭の <code>ons.platform.select("android");</code> が有効になっています。保存して<strong>プレビュー全体を再読み込み</strong>します。</li><li>ツールバーの高さ・題名の位置、行を押した反応、右端の目印を見ます。右端の目印「＞」は、iOS向けとAndroid向けのどちらにも出ます。</li><li><code>"android"</code> を <code>"ios"</code> へ書き換え、保存してプレビュー全体を再読み込みします。HTMLと自分のCSSは変更せず、同じ箇所を比べます。</li><li>違いを1つ、共通する内容を1つ、言葉で説明します。</li></ol>
+<ol><li><code>www/js/app.js</code> を、このSTEPの全文に置き換えます。先頭の <code>ons.platform.select("android");</code> が有効になっています。保存して<strong>プレビュー全体を再読み込み</strong>します。</li><li>ツールバーの高さ・題名の位置、行を押した反応、右端の目印を見ます。右端の目印「＞」は、iOS向けとAndroid向けのどちらにも出ます。</li><li><code>"android"</code> を <code>"ios"</code> へ書き換え、保存してプレビュー全体を再読み込みします。HTMLと自分のCSSは変更せず、同じ箇所を比べます。</li><li>違いを1つ、共通する内容を1つ、見つけます。</li></ol>
 <p>OSの指定はOnsen UIが画面を作る前に必要です。<code>app.js</code> の先頭で行い、後のイベント処理の中へ移しません。この指定は<strong>表示スタイルの比較</strong>であり、ブラウザをAndroidやiOSの実機に変える操作ではありません。</p>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎では、CSSを自分で書き換えると見た目が変わりました。ここではHTMLを変えず、Onsen UIがOSに合った部品の見た目を選びます。Androidで作ったツールバーとiOSで作ったナビゲーションバーには違いがありました。その違いを、共通のHTMLへライブラリが適用する仕組みがauto-stylingです。</p></div>
 <details><summary>このSTEPの全コード（照合・合流用）</summary>
@@ -2916,7 +2916,7 @@ function openOshiDetail(oshi) {
 <ol><li>再読み込み直後は3件と「まだ選択していません」が見えます。</li><li>3件を順に開き、それぞれの名前・種類・理由が正しいことを確かめます。戻ると一覧に選択した名前が残ります。</li><li>行を続けて押しても、戻る1回で一覧へ戻ることを確かめます。</li><li>先頭のOS強制指定がコメントになっていることを確認します。STEP 09と同じく、Monacaの端末選択で <code>iPhone 15</code>、<code>Pixel 8</code> を選び、それぞれ <code>Reload</code> を押して一覧・詳細・戻るを比べます。</li><li>長い名前と改行のある理由を試し、狭い幅でも読めることを確かめます。再読み込み後の選択は未選択へ戻ります。</li></ol>
 <h3>アレンジ箇所を記録する</h3><p>この単元は、変更したファイル・箇所と、画面での変化を記録して終えます。公開URLでの提出は、先生が案内するMonaca系の提出回に行います。自分のプロジェクトは残しておきます。</p>
 <p>公開URLで相手へ渡るのは、ソースに書いた配列・HTML・CSSです。今画面で選んでいる項目は渡りません。この単元には保存機能もありません。</p>
-<div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎で作ったHTML・CSS・JavaScriptの役割分担は、完成版でも同じです。画面間の移動と値の受け渡しはAndroid・iOSの経験と対応します。今回の新しい考え方は、OS別の見た目を共通のHTMLへ適用するauto-stylingです。自分で変えた内容と、OSによる違いを分けて説明しましょう。</p></div>
+<div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎で作ったHTML・CSS・JavaScriptの役割分担は、完成版でも同じです。画面間の移動と値の受け渡しはAndroid・iOSの経験と対応します。今回の新しい考え方は、OS別の見た目を共通のHTMLへ適用するauto-stylingです。自分で変えた内容と、OSによる違いを分けて確かめましょう。</p></div>
 <details><summary>このSTEPの全コード（照合・合流用）</summary>
 <div class="code-head">www/index.html · 全文</div>
 <pre id="code-19-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
@@ -3142,8 +3142,8 @@ function openOshiDetail(oshi) {
   });
 }</code></pre>
 </details>
-<div class="check"><label><input type="checkbox" data-check="oshi-list-19"><span>一覧・詳細・戻る・連続クリック・OSによる差を確認し、自分の変更箇所を説明できる。</span></label></div>
-<div class="task"><p class="box-title">アレンジできる場所</p><p><code>oshiItems</code> の名前・種類・理由・件数、HTMLの見出し、CSSの色・余白・文字サイズを変えられます。自分の好きなものと、その理由を自分の言葉で書きます。次に1か所だけ見た目を変え、どのファイルの何を変え、どの画面へ反映されたかを説明してください。</p></div>
+<div class="check"><label><input type="checkbox" data-check="oshi-list-19"><span>一覧・詳細・戻る・連続クリック・OSによる差を確認し、自分の変更箇所を記録した。</span></label></div>
+<div class="task"><p class="box-title">アレンジできる場所</p><p><code>oshiItems</code> の名前・種類・理由・件数、HTMLの見出し、CSSの色・余白・文字サイズを変えられます。自分の好きなものと、その理由を自分の言葉で書きます。次に1か所だけ見た目を変え、どのファイルの何を変え、どの画面へ反映されたかを確かめてください。</p></div>
 </section>
 <section id="help"><h2>困ったとき</h2><table><thead><tr><th>見えること</th><th>確認すること</th></tr></thead><tbody><tr><td>装飾のない縦並びになる</td><td><code>index.html</code> の Onsen UI のCDNの版とパス、<code>css/style.css</code> のパスを確認。保存してからプレビューを再読み込みしたか。回線が <code>unpkg.com</code> へつながるか。</td></tr><tr><td><code>app.js</code> が動かない</td><td>置き場所が <code>www/js/app.js</code> か。<code>index.html</code> の <code>script</code> が Onsen UI より後にあるか。ファイルを保存したか。</td></tr><tr><td>一覧が空になる</td><td><code>page_list</code>・<code>list_oshi</code> の <code>id</code> の綴り。配列のカンマと引用符。<code>init</code> の中から <code>renderOshiList</code> を呼んでいるか。</td></tr><tr><td>どの行も同じ項目になる</td><td>繰り返しが <code>for (let i = 0; …)</code> になっているか。固定の <code>0</code> ではなく <code>oshiItems[i]</code> を渡しているか。</td></tr><tr><td>押しても反応しない</td><td><code>innerHTML</code> で行を作った後に <code>addEventListener</code> を登録しているか。<code>tappable</code> だけでは処理は付かない。</td></tr><tr><td><code>template</code> を足したら画面が空白になる</td><td><code>ons-navigator</code> の <code>page</code> と <code>template</code> の <code>id</code> の綴り。<code>template</code> の中に <code>ons-page</code> が1つあるか。要素を <code>init</code> より前に取得していないか。</td></tr><tr><td>詳細が空になる</td><td><code>pushPage</code> の <code>data</code> の <code>oshi</code> と、<code>page.data.oshi</code>、表示用の3つの <code>id</code> を照合する。</td></tr><tr><td>OS指定を変えても見た目が変わらない</td><td><code>ons.platform.select</code> を <code>app.js</code> の先頭で実行しているか。画面内の戻るではなく、プレビューの <code>Reload</code> を押したか。端末選択で比べるときは、コードの指定をコメントに戻したか。</td></tr></tbody></table></section>
 <p class="footer">JEC / ハイブリッドアプリ開発技法 · M01OshiList</p>
