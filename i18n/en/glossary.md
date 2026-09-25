@@ -69,6 +69,7 @@
 | 教材 | materials | |
 | 教科書 | textbook | |
 | 学生用ZIP | student ZIP | |
+| 配布フォルダ | distribution folder | 学生用ZIPを展開した `~/Documents/hybrid-app-student-materials-日付`。共通資料 STEP 1 で定義する文は "distribution folder" (配布フォルダ) と日本語を添える |
 | 共通資料 | shared guide | `docs/common/setup.html`。見出し「授業を始めるまでの準備」は Getting ready for class、サイドバーの「共通：はじめの準備」は Shared: Getting ready for class（jec-25cm-kotlin と同じ） |
 | 完成見本 | completed sample | finished sample とは書かない |
 | 完成プロジェクト | completed project | |
