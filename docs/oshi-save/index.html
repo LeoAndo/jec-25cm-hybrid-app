@@ -31,17 +31,17 @@
 </div></aside><main id="main"><div class="hero"><div class="unit">M02</div><p class="eyebrow">コマ5〜7 · 各90分</p><h1>好きなものノート：追加して、残そう。</h1>
 <p class="lede">日常の中で見つけた好きなものと、好きな理由を画面から追加します。再読み込みしても自分の記録が戻る仕組みを作り、ソースにアレンジを残して公開URLを提出します。</p>
 <div class="tags"><span>Monaca クラウド IDE / Google Chrome</span><span>Onsen UI 2.12.9</span><span>HTML / CSS / JavaScript</span></div>
-<div class="goal"><p class="box-title">この単元で分かること</p><p>新しい考え方は<strong>JSON</strong>です。画面で使う配列を保存用の文字列にし、読み込んだ文字列を配列へ戻します。保存先はJavaのSharedPreferences・SwiftのUserDefaultsと比較します。</p></div>
+<div class="goal"><p class="box-title">この単元で分かること</p><p>新しい考え方は<strong>JSON</strong>です。画面で使う配列を保存用の文字列にし、読み込んだ文字列を配列へ戻します。保存先はJavaの<code>SharedPreferences</code>・Swiftの<code>UserDefaults</code>と比較します。</p></div>
 <p>完成見本の名前は <code>M02OshiSave</code> です。学生は自分の好きなものノートを同じ1プロジェクトで育てます。まだプロジェクトがない場合の作り方も、一覧・詳細の開始コードも、この本文にあります。</p>
-<table><thead><tr><th>コマ</th><th>到達点</th></tr></thead><tbody><tr><td>5</td><td>入力した好きなものを一覧へ追加し、詳細を読める。</td></tr><tr><td>6</td><td>JSONとlocalStorageで保存・復元できる。初期化には確認を挟む。</td></tr><tr><td>7</td><td>授業内でFlutter準備を開始し、待ち時間に好きなものノートをアレンジ・確認・提出する。</td></tr></tbody></table></div>
+<table><thead><tr><th>コマ</th><th>到達点</th></tr></thead><tbody><tr><td>5</td><td>入力した好きなものを一覧へ追加し、詳細を読める。</td></tr><tr><td>6</td><td>JSONと<code>localStorage</code>で保存・復元できる。初期化には確認を挟む。</td></tr><tr><td>7</td><td>授業内でFlutter準備を開始し、待ち時間に好きなものノートをアレンジ・確認・提出する。</td></tr></tbody></table></div>
 <section id="sample-project"><h2>完成プロジェクトを開く</h2><p><a href="https://monaca.mobi/ja/directimport?pid=6ab5042ee78885db0a1a0da2">M02OshiSaveをMonacaへ取り込む</a>。これはアプリを動かすURLではなく、完成見本のソースを取り込むURLです。リンク先でインポートすると自分のMonacaへコピーを取り込むため、Freeプランの3枠のうち1枠を使います。自分の制作を始める人は、STEP 00へ進みます。</p><p>配布ZIPの <code>samples/M02OshiSave</code> はコードを読み比べるための完成見本です。自分の作品を見本で上書きしません。</p></section>
 <section id="step-0"><p class="step-meta">STEP 00 · コマ5</p><h2>自分の好きなものノートを開く</h2>
 <p>Google Chromeで通常版Monacaへログインし、自分の好きなものノートを開きます。続けて使っているプロジェクトは、名前が <code>M01OshiList</code> のままで構いません。今日のためにコピーを増やしたり、削除したりしません。</p>
 <ol><li>まだ自分の好きなものノートがない人だけ、ダッシュボードで新規作成し、<code>最小限のテンプレート</code> を選び、<code>M02OshiSave</code> と名付けます。登録や空き枠が不明なら、<a href="../common/setup.html?from=oshi-save#step-2">共通資料のSTEP 2〜3</a>で確認して戻ります。</li><li><code>www/index.html</code>・<code>www/css/style.css</code> を開きます。<code>www/js/app.js</code> がなければ、ファイル一覧の作成操作で <code>www</code> の下に <code>js</code> フォルダ、その中に <code>app.js</code> ファイルを作ります。</li><li>自分のアレンジがある場合は、変えた文字と色を控えます。下の開始コード3ファイルをそろえ、保存してプレビューを再読み込みします。<code>components</code> や <code>res</code> は変更しません。</li><li>3件の名前を押して詳細を開き、左上の戻るボタンで一覧へ戻ります。戻るボタンは、iOS向けの見た目では「＜ 戻る」、Android向けの見た目では左向きの矢印「←」だけです。タイトルと詳細の組み合わせを確かめます。</li></ol>
-<p>開始コードの役割を、次の順で追いましょう。新しいファイル名を <code>detail.html</code> として作る操作は不要です。これは <code>index.html</code> の中の <code>template</code> のidです。</p>
-<table><thead><tr><th>場所</th><th>処理と理由</th></tr></thead><tbody><tr><td>HTMLのhead</td><td>標準loader、Onsen UI 2.12.9のCSS・JavaScript、自作CSS・app.jsを読み込む。自作JSはOnsen UIより後。</td></tr><tr><td>ons-navigator / template</td><td>navigatorがlist.htmlを実体化する。templateは配置前のひな形で、詳細へ進んだときにdetail.htmlの要素が作られる。</td></tr><tr><td>initのリスナー</td><td>ページの要素が使える時点に、そのページのidを見てイベント登録や文字の設定を行う。</td></tr><tr><td>oshiItems / renderOshiList</td><td>配列の件数だけ固定の行構造を作る。名前や種類はtextContentへ入れ、文字をHTMLとして解釈しない。</td></tr><tr><td>openOshiDetail</td><td>pushPageのdataへ選んだデータを渡し、詳細のpage.dataで受け取る。現在のページと移動中の旗を調べ、連打でページを重ねない。</td></tr><tr><td>callback / 戻る</td><td>移動完了のcallbackで旗を戻す。ons-back-buttonはページを1つ戻す。</td></tr></tbody></table>
+<p>開始コードの役割を、次の順で追いましょう。新しいファイル名を <code>detail.html</code> として作る操作は不要です。これは <code>index.html</code> の中の <code>template</code> の<code>id</code>です。</p>
+<table><thead><tr><th>場所</th><th>処理と理由</th></tr></thead><tbody><tr><td>HTMLの<code>head</code></td><td>標準loader、Onsen UI 2.12.9のCSS・JavaScript、自作CSS・<code>app.js</code>を読み込む。自作JSはOnsen UIより後。</td></tr><tr><td><code>ons-navigator</code> / <code>template</code></td><td>navigatorが<code>list.html</code>を実体化する。<code>template</code>は配置前のひな形で、詳細へ進んだときに<code>detail.html</code>の要素が作られる。</td></tr><tr><td><code>init</code>のリスナー</td><td>ページの要素が使える時点に、そのページの<code>id</code>を見てイベント登録や文字の設定を行う。</td></tr><tr><td><code>oshiItems</code> / <code>renderOshiList</code></td><td>配列の件数だけ固定の行構造を作る。名前や種類は<code>textContent</code>へ入れ、文字をHTMLとして解釈しない。</td></tr><tr><td><code>openOshiDetail</code></td><td><code>pushPage</code>の<code>data</code>へ選んだデータを渡し、詳細の<code>page.data</code>で受け取る。現在のページと移動中の旗を調べ、連打でページを重ねない。</td></tr><tr><td><code>callback</code> / 戻る</td><td>移動完了の<code>callback</code>で旗を戻す。<code>ons-back-button</code>はページを1つ戻す。</td></tr></tbody></table>
 <p>CSSはクラスで余白・色・カードの枠を対応させています。Onsen UIは同じHTMLへOSに合わせた部品のスタイルを適用します。今回も素のJavaScriptから使い、別のフレームワークは追加しません。</p>
-<div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎と同じ3ファイル構成ですが、操作する場所はMonaca クラウド IDEです。initはAndroidのビュー生成後の設定やiOSのviewDidLoadに相当するタイミングで、JavaScriptのaddEventListenerで受け取ります。pushPageのdataは、ネイティブアプリで次の画面へ値を渡す操作に対応します。まだ保存用の文字列には変換していません。</p></div>
+<div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎と同じ3ファイル構成ですが、操作する場所はMonaca クラウド IDEです。<code>init</code>はAndroidのビュー生成後の設定やiOSの<code>viewDidLoad</code>に相当するタイミングで、JavaScriptの<code>addEventListener</code>で受け取ります。<code>pushPage</code>の<code>data</code>は、ネイティブアプリで次の画面へ値を渡す操作に対応します。まだ保存用の文字列には変換していません。</p></div>
 <details><summary>このSTEPの全コード（照合・合流用）</summary><div class="code-head">www/index.html · 全文</div>
 <pre id="code-00-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;ja&quot;&gt;
@@ -267,16 +267,16 @@ function openOshiDetail(oshi) {
 }</code></pre></details>
 <div class="check"><label><input type="checkbox" data-check="oshi-save-00"><span>自分の1プロジェクトで3件の一覧・詳細・戻るを確認し、HTMLとJSの対応を追えた。</span></label></div></section>
 <section id="step-1"><p class="step-meta">STEP 01 · コマ5</p><h2>入力画面を作る</h2>
-<p>3ファイルをこのSTEPのコードへ更新します。HTMLに <code>add.html</code> のtemplateを加え、名前・種類の <code>input</code> と、好きな理由の <code>textarea</code> を置きます。<code>label</code> のforと入力欄のidが対応します。</p>
-<p>CSSの <code>.app-input</code> は幅を100%にし、<code>box-sizing: border-box</code> でpaddingと枠をその幅の内側へ収めます。<code>font: inherit</code> で文字を周囲とそろえ、focusのoutlineで選択中の欄を見分けます。ほかに加わるクラスのうち、このSTEPの画面に当たる4つは次の表のとおりです。</p>
+<p>3ファイルをこのSTEPのコードへ更新します。HTMLに <code>add.html</code> の<code>template</code>を加え、名前・種類の <code>input</code> と、好きな理由の <code>textarea</code> を置きます。<code>label</code> の<code>for</code>と入力欄の<code>id</code>が対応します。</p>
+<p>CSSの <code>.app-input</code> は幅を100%にし、<code>box-sizing: border-box</code> で<code>padding</code>と枠をその幅の内側へ収めます。<code>font: inherit</code> で文字を周囲とそろえ、<code>focus</code>の<code>outline</code>で選択中の欄を見分けます。ほかに加わるクラスのうち、このSTEPの画面に当たる4つは次の表のとおりです。</p>
 <table><thead><tr><th>クラス</th><th>当たる要素</th><th>指定と理由</th></tr></thead><tbody><tr><td><code>.app-action</code></td><td>一覧の <code>btn_open_add</code></td><td><code>margin-top: 16px</code>。説明文の <code>.app-description</code> は <code>margin: 0</code> なので、その直下に置くボタンの上を空けて、文とボタンを離します。</td></tr><tr><td><code>.app-message</code></td><td>一覧の <code>txt_storage</code> と、入力画面の <code>txt_add_message</code></td><td>上下に12pxの余白、<code>.app-caption</code> と同じ文字色、<code>overflow-wrap: anywhere</code>。JavaScriptから文を入れる案内用の段落で、長い文でも画面の幅で折り返します。<code>txt_add_message</code> はこのSTEPでは空で、STEP 02から文を出します。</td></tr><tr><td><code>label.app-label</code></td><td>入力画面の3つの <code>label</code></td><td><code>display: block</code>。<code>.app-label</code> は、STEP 00から詳細の <code>p</code> に使っている余白と文字の指定です。<code>label</code> は既定でインライン要素なので、そのままでは上下の <code>margin</code> が効きません。<code>label</code> に付いたときだけブロックにして、各欄の上に1行ずつ並べます。</td></tr><tr><td><code>.app-note</code></td><td>入力画面のボタンの下の注記</td><td><code>.app-description</code> と同じ文字色で、文字の大きさは13px。補足の注記を、ボタンや案内文より控えめに見せます。</td></tr></tbody></table>
 <p><code>.reset-section</code>・<code>#panel_reset ons-button</code>・<code>.is-hidden</code> の3つは、STEP 08で足す初期化の確認欄のための指定です。このSTEPのHTMLには、まだ当たる要素がありません。</p>
-<p>一覧の <code>btn_open_add</code> へopenAddPageを登録し、<code>pushPage("add.html", ...)</code> で入力画面へ進みます。詳細と同じ移動中の旗を共有するため、片方を開いている最中にもう片方は開きません。</p>
-<p>この旗の名前は、STEP 00の <code>isOpeningDetail</code> から <code>isOpeningPage</code> に変えます。詳細を開くときだけでなく入力画面を開くときにも使うので、「詳細を開いている最中」ではなく「どちらかのページを開いている最中」と読める名前にするためです。宣言とopenOshiDetailの中の3か所も、新しい名前にそろえます。</p>
+<p>一覧の <code>btn_open_add</code> へ<code>openAddPage</code>を登録し、<code>pushPage("add.html", ...)</code> で入力画面へ進みます。詳細と同じ移動中の旗を共有するため、片方を開いている最中にもう片方は開きません。</p>
+<p>この旗の名前は、STEP 00の <code>isOpeningDetail</code> から <code>isOpeningPage</code> に変えます。詳細を開くときだけでなく入力画面を開くときにも使うので、「詳細を開いている最中」ではなく「どちらかのページを開いている最中」と読める名前にするためです。宣言と<code>openOshiDetail</code>の中の3か所も、新しい名前にそろえます。</p>
 <p>一覧のボタンの下の <code>txt_storage</code> には <code>この段階では、追加した内容は保存されません。</code>、入力画面のボタンの下の注記には <code>この段階では、追加した内容は再読み込みすると消えます。</code> と出します。追加した内容がまだ残らないことを、画面で先に伝えるためです。保存を作るSTEP 06で、どちらの文も書き換えます。</p>
-<p>初期データは <code>createInitialItems</code> が新しい配列を返す形にまとめました。後で初期化したときにも同じ内容を作り直せるようにするためです。呼び出しのたびに新しい配列になる点を、returnの位置と一緒に読みます。</p>
-<ol><li>保存・再読み込み後に <code>好きなものを追加</code> を押します。</li><li>3つの欄へ文字を入力して、左上の戻るボタンで一覧へ戻ります。もう一度開くと新しい入力画面が作られ、欄は空に戻ります。</li><li>このSTEPでは <code>追加する</code> をdisabledにしてあります。まだクリック処理を付けていないため、押せない状態が正解です。</li></ol>
-<div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎のinput・textarea・labelをそのまま使います。AndroidのEditText、iOSのUITextField・UITextViewと同じ役割です。画面を開く処理は詳細への移動と同じ形で、渡すデータが要らないためdataを省きます。createInitialItemsは、Java／Swiftでデータの配列を関数から返す書き方と対応します。</p></div>
+<p>初期データは <code>createInitialItems</code> が新しい配列を返す形にまとめました。後で初期化したときにも同じ内容を作り直せるようにするためです。呼び出しのたびに新しい配列になる点を、<code>return</code>の位置と一緒に読みます。</p>
+<ol><li>保存・再読み込み後に <code>好きなものを追加</code> を押します。</li><li>3つの欄へ文字を入力して、左上の戻るボタンで一覧へ戻ります。もう一度開くと新しい入力画面が作られ、欄は空に戻ります。</li><li>このSTEPでは <code>追加する</code> を<code>disabled</code>にしてあります。まだクリック処理を付けていないため、押せない状態が正解です。</li></ol>
+<div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎の<code>input</code>・<code>textarea</code>・<code>label</code>をそのまま使います。Androidの<code>EditText</code>、iOSの<code>UITextField</code>・<code>UITextView</code>と同じ役割です。画面を開く処理は詳細への移動と同じ形で、渡すデータが要らないため<code>data</code>を省きます。<code>createInitialItems</code>は、Java／Swiftでデータの配列を関数から返す書き方と対応します。</p></div>
 <details><summary>このSTEPの全コード（照合・合流用）</summary><div class="code-head">www/index.html · 全文</div>
 <pre id="code-01-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;ja&quot;&gt;
@@ -593,11 +593,11 @@ function openAddPage() {
 }</code></pre></details>
 <div class="check"><label><input type="checkbox" data-check="oshi-save-01"><span>入力画面を開き、3つの欄へ入力して戻れた。追加ボタンがまだ押せない理由を説明できた。</span></label></div></section>
 <section id="step-2"><p class="step-meta">STEP 02 · コマ5</p><h2>入力した文字を確認する</h2>
-<p>HTMLの追加ボタンから <code>disabled</code> を外し、JSでは <code>page_add</code> のinitでaddOshiを登録します。関数名を渡しているので、登録した瞬間ではなくボタンを押したときに動きます。</p>
-<p>addOshiは、入力欄をidで取得し、<code>value</code> で今の文字を読みます。<code>trim()</code> は前後の空白を取り除きます。3つのどれかが空ならメッセージを表示してreturnし、残りの処理へ進みません。</p>
-<p>このSTEPの成功結果は <code>入力を確認しました：</code> と名前の表示だけです。まだ一覧には追加しません。txt_add_messageをtextContentで更新するため、名前に山かっこを入れても文字として表示されます。</p>
+<p>HTMLの追加ボタンから <code>disabled</code> を外し、JSでは <code>page_add</code> の<code>init</code>で<code>addOshi</code>を登録します。関数名を渡しているので、登録した瞬間ではなくボタンを押したときに動きます。</p>
+<p><code>addOshi</code>は、入力欄を<code>id</code>で取得し、<code>value</code> で今の文字を読みます。<code>trim()</code> は前後の空白を取り除きます。3つのどれかが空ならメッセージを表示して<code>return</code>し、残りの処理へ進みません。</p>
+<p>このSTEPの成功結果は <code>入力を確認しました：</code> と名前の表示だけです。まだ一覧には追加しません。<code>txt_add_message</code>を<code>textContent</code>で更新するため、名前に山かっこを入れても文字として表示されます。</p>
 <ol><li>空欄のまま押し、不足のメッセージを確認します。</li><li>名前だけに空白を入れ、ほかを埋めて押します。前後の空白を取り除くと空になるため、同じメッセージになることを確認します。</li><li>すべて入力して押し、名前が表示されることを確認します。入力した文字が勝手に消えないことも見ます。</li></ol>
-<div class="note"><p class="box-title">既知の技術と比べる</p><p>JavaならEditText.getText().toString().trim()、SwiftならtextとtrimmingCharactersを使う場面です。今回はHTMLのvalueを読みます。空欄の条件やreturnは既習の書き方で、エラーの伝え先をダイアログではなく同じ画面の段落にしています。</p></div>
+<div class="note"><p class="box-title">既知の技術と比べる</p><p>Javaなら<code>EditText.getText().toString().trim()</code>、Swiftなら<code>text</code>と<code>trimmingCharacters</code>を使う場面です。今回はHTMLの<code>value</code>を読みます。空欄の条件や<code>return</code>は既習の書き方で、エラーの伝え先をダイアログではなく同じ画面の段落にしています。</p></div>
 <details><summary>このSTEPの全コード（照合・合流用）</summary><div class="code-head">www/index.html · 全文</div>
 <pre id="code-02-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;ja&quot;&gt;
@@ -934,12 +934,12 @@ function addOshi() {
 }</code></pre></details>
 <div class="check"><label><input type="checkbox" data-check="oshi-save-02"><span>空欄・空白だけ・正常入力の3通りで、結果の文を確認できた。</span></label></div></section>
 <section id="step-3"><p class="step-meta">STEP 03 · コマ5</p><h2>配列へ追加して戻る</h2>
-<p>JSのaddOshiで、入力確認だけの行を、配列へ追加して一覧を描き直す処理へ替えます。<code>oshiItems.push({ name: name, genre: genre, comment: comment })</code> の左側はデータの項目名、右側は入力欄から読んだ変数です。</p>
-<p>次にrenderOshiListを呼びます。この関数はinnerHTMLで行を置き直した後に、textContentの設定とクリックの登録をやり直します。古い行に登録したイベントは、新しい行へ自動では移らないためです。</p>
+<p>JSの<code>addOshi</code>で、入力確認だけの行を、配列へ追加して一覧を描き直す処理へ替えます。<code>oshiItems.push({ name: name, genre: genre, comment: comment })</code> の左側はデータの項目名、右側は入力欄から読んだ変数です。</p>
+<p>次に<code>renderOshiList</code>を呼びます。この関数は<code>innerHTML</code>で行を置き直した後に、<code>textContent</code>の設定とクリックの登録をやり直します。古い行に登録したイベントは、新しい行へ自動では移らないためです。</p>
 <p>その次の行で、一覧の下の <code>txt_selected</code> に <code>追加したもの：</code> と追加した名前を出します。STEP 00から、詳細を開いたときに <code>選択中：</code> と名前を出している欄です。一覧へ戻ったときに、どれを追加したかを行を探さずに確かめられるようにするためです。</p>
 <p>最後に <code>popPage()</code> で入力画面を閉じます。一覧はその下に残っているので、新しい行が見えます。追加を始める直前にボタンを無効にしておくことで、戻る途中の連続操作でも同じ内容を二重に追加しません。</p>
 <ol><li>新しい好きなものを1件入力して追加します。一覧が4件になり、一覧の下に <code>追加したもの：</code> と入力した名前が出たことを確認します。</li><li>追加した行を押し、名前・種類・好きな理由が入力どおりか確かめます。好きな理由に改行を入れた場合も確認します。</li><li>戻ってからプレビューを再読み込みします。配列はソースの初期データから作り直されるため、3件に戻ります。今日はこれで正解です。</li></ol>
-<div class="note"><p class="box-title">既知の技術と比べる</p><p>pushはJavaのArrayList.addやSwiftのArray.appendと同じ追加です。popPageはiOSで前の画面へ戻す操作に対応します。ここで変えたのは実行中の配列だけなので、ファイルに文字を保存したときやSharedPreferences／UserDefaultsへ書いたときとは残り方が異なります。</p></div>
+<div class="note"><p class="box-title">既知の技術と比べる</p><p><code>push</code>はJavaの<code>ArrayList.add</code>やSwiftの<code>Array.append</code>と同じ追加です。<code>popPage</code>はiOSで前の画面へ戻す操作に対応します。ここで変えたのは実行中の配列だけなので、ファイルに文字を保存したときや<code>SharedPreferences</code>／<code>UserDefaults</code>へ書いたときとは残り方が異なります。</p></div>
 <details><summary>このSTEPの全コード（照合・合流用）</summary><div class="code-head">www/index.html · 全文</div>
 <pre id="code-03-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;ja&quot;&gt;
@@ -1281,7 +1281,7 @@ function addOshi() {
 <div class="check"><label><input type="checkbox" data-check="oshi-save-03"><span>追加した行の詳細が入力と一致し、再読み込みでは初期データへ戻ることを確認できた。</span></label></div></section>
 <section id="step-4"><p class="step-meta">STEP 04 · コマ5</p><h2>確認とアレンジ</h2>
 <p>今日の終わりは、作った範囲を使って自分の表現に変えます。コードはSTEP 03の状態です。下の全コードは照合用で、自分の変更を無条件に貼り戻すためのものではありません。</p>
-<table><thead><tr><th>変える場所</th><th>変わること</th></tr></thead><tbody><tr><td>HTMLのplaceholder</td><td>入力前に見える記入例。</td></tr><tr><td>CSSのapp-inputの枠色・padding</td><td>入力欄の見た目と内側の余白。</td></tr><tr><td>JSのcreateInitialItems</td><td>再読み込み時に表示される自分の好きなものと理由。</td></tr></tbody></table>
+<table><thead><tr><th>変える場所</th><th>変わること</th></tr></thead><tbody><tr><td>HTMLの<code>placeholder</code></td><td>入力前に見える記入例。</td></tr><tr><td>CSSの<code>app-input</code>の枠色・<code>padding</code></td><td>入力欄の見た目と内側の余白。</td></tr><tr><td>JSの<code>createInitialItems</code></td><td>再読み込み時に表示される自分の好きなものと理由。</td></tr></tbody></table>
 <p>入力例には、好きな音楽や食べ物、場所を使えます。ほかの人の個人情報や、共有したくない内容は例に入れません。名前だけでなく、なぜ好きなのかを自分の言葉にしましょう。</p>
 <p>1か所変えたら保存・再読み込みし、入力・追加・詳細・戻るをもう一度試します。変えたファイル名と、画面のどこが変わったかを控えます。</p>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>HTMLは構造と記入例、CSSは装飾、JavaScriptはデータと動きというWeb基礎の役割分担を使います。画面に入力した値と、ソースの初期データの違いを、再読み込み後の結果で見分けます。</p></div>
@@ -1964,26 +1964,26 @@ function addOshi() {
   document.getElementById(&quot;nav_app&quot;).popPage();
 }</code></pre></details><p>Monaca クラウド IDEで同じ好きなものノートを開きます。開始状態は「入力して追加できるが、再読み込みすると初期データに戻る」です。保存する前に、画面で使う配列と、保存へ渡す文字列を区別します。</p>
 <p><strong>JSONは、値を文字で表すための決まった形式</strong>です。JavaScriptの配列やオブジェクトそのものではありません。<code>JSON.stringify</code> は値をJSONの文字列にし、<code>JSON.parse</code> はJSONの文字列から値を復元します。今回の保存対象は文字列の3項目を持つオブジェクトの配列です。</p>
-<table><thead><tr><th>場面</th><th>値</th><th>型</th></tr></thead><tbody><tr><td>画面で使う1件の例</td><td><code>{ name: "好きな音楽" }</code></td><td>オブジェクト</td></tr><tr><td>JSONで表した内容</td><td><code>{"name":"好きな音楽"}</code></td><td>この文字の並びを持つ文字列</td></tr><tr><td>parseした後</td><td><code>item.name</code> を読める値</td><td>再びオブジェクト</td></tr></tbody></table>
-<p>JSONではキーもダブルクォートで囲みます。コメントや末尾の余分なカンマは使えません。ただし、今回の保存文字列は手で組み立てず、stringifyに作らせます。名前に引用符や改行があっても、必要な表現への変換を任せられます。</p>
+<table><thead><tr><th>場面</th><th>値</th><th>型</th></tr></thead><tbody><tr><td>画面で使う1件の例</td><td><code>{ name: "好きな音楽" }</code></td><td>オブジェクト</td></tr><tr><td>JSONで表した内容</td><td><code>{"name":"好きな音楽"}</code></td><td>この文字の並びを持つ文字列</td></tr><tr><td><code>parse</code>した後</td><td><code>item.name</code> を読める値</td><td>再びオブジェクト</td></tr></tbody></table>
+<p>JSONではキーもダブルクォートで囲みます。コメントや末尾の余分なカンマは使えません。ただし、今回の保存文字列は手で組み立てず、<code>stringify</code>に作らせます。名前に引用符や改行があっても、必要な表現への変換を任せられます。</p>
 <p>次の3行は処理順を読むための抜粋です。まだ追加する必要はありません。次のSTEPで保存、STEP 07で読み込みへ組み込みます。</p>
 <div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">JavaScript</p><pre><code>const text = JSON.stringify(oshiItems);
 const restored = JSON.parse(text);
 // restored[0].name のように項目を読める。</code></pre></div></div>
-<p>配列のままsetItemへ渡すと、今回必要な構造を保持するJSONにはなりません。<code>String(oshiItems)</code> で一般的な文字列へ変えることとも区別しましょう。</p>
+<p>配列のまま<code>setItem</code>へ渡すと、今回必要な構造を保持するJSONにはなりません。<code>String(oshiItems)</code> で一般的な文字列へ変えることとも区別しましょう。</p>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>JavaやSwiftの配列・データオブジェクトをそのまま画面で使っていたときと、文字列を保存するときでは型が違います。この差をつなぐ表現として、今回はJSONを新しく扱います。配列の操作自体を学び直すのではなく、「配列→JSON文字列→配列」という変換の向きを確認します。</p></div>
 
-<div class="check"><label><input type="checkbox" data-check="oshi-save-05"><span>JSONの文字列と配列を区別し、stringifyとparseの向きを説明できた。</span></label></div></section>
+<div class="check"><label><input type="checkbox" data-check="oshi-save-05"><span>JSONの文字列と配列を区別し、<code>stringify</code>と<code>parse</code>の向きを説明できた。</span></label></div></section>
 <section id="step-6"><p class="step-meta">STEP 06 · コマ6</p><h2>文字列にして保存する</h2>
 <p>このSTEPの3ファイルへ更新します。JSの先頭に <code>STORAGE_KEY</code> を置き、保存内容を探すための名前を1か所で管理します。この名前を途中で変更すると、以前のキーで保存した内容は見えなくなります。</p>
-<p>addOshiでは、<code>oshiItems.slice()</code> で配列の浅いコピーnextItemsを作り、そこへ新しい1件を追加します。この処理では既存のオブジェクトの項目は変更せず、配列へ追加するだけなので、配列のコピーで足ります。</p>
-<p><code>localStorage.setItem(STORAGE_KEY, JSON.stringify(nextItems))</code> が、同じブラウザの同じ保存領域へ文字列を保存する行です。localStorageは同期APIなので、次の行へ進む前にこの呼び出しが終わります。今回はPromiseやasync / awaitを使いません。</p>
-<p>保存設定や空き容量などの理由で書き込めないと例外が発生します。<code>try</code> 内の保存が成功したときだけ、oshiItemsをnextItemsへ替えて一覧を描き直します。<code>catch</code> 側では入力内容を残し、ボタンを戻してエラーを表示し、returnします。</p>
+<p><code>addOshi</code>では、<code>oshiItems.slice()</code> で配列の浅いコピー<code>nextItems</code>を作り、そこへ新しい1件を追加します。この処理では既存のオブジェクトの項目は変更せず、配列へ追加するだけなので、配列のコピーで足ります。</p>
+<p><code>localStorage.setItem(STORAGE_KEY, JSON.stringify(nextItems))</code> が、同じブラウザの同じ保存領域へ文字列を保存する行です。<code>localStorage</code>は同期APIなので、次の行へ進む前にこの呼び出しが終わります。今回は<code>Promise</code>や<code>async</code> / <code>await</code>を使いません。</p>
+<p>保存設定や空き容量などの理由で書き込めないと例外が発生します。<code>try</code> 内の保存が成功したときだけ、<code>oshiItems</code>を<code>nextItems</code>へ替えて一覧を描き直します。<code>catch</code> 側では入力内容を残し、ボタンを戻してエラーを表示し、<code>return</code>します。</p>
 <table><thead><tr><th>順番</th><th>そうする理由</th></tr></thead><tbody><tr><td>別の配列に追加</td><td>保存前に画面の元データを変えない。</td></tr><tr><td>ボタンを無効化して保存</td><td>同じ入力を連続して処理しない。</td></tr><tr><td>成功したら配列更新・一覧再描画・戻る</td><td>保存失敗を「追加できた」と見せない。</td></tr><tr><td>失敗したら画面に理由を出す</td><td>入力を消さず、次の確認や再試行につなげる。</td></tr></tbody></table>
-<p>保存してよいかを表す <code>let canSave = true;</code> も加えます。openAddPageとaddOshiの最初の条件で <code>!canSave</code> なら何もせずに戻り、一覧のinitでは <code>btn_open_add</code> の <code>disabled</code> を <code>!canSave</code> にします。このSTEPには <code>canSave</code> をfalseにする行がないので、常にtrueのままで、画面の動きは変わりません。falseにするのは、次のSTEPで保存内容を読み込めなかったときです。そのまま追加できると、読めなかった保存内容を、初期データに1件足した配列で上書きしてしまいます。保存の処理を書くこのSTEPで、保存へ進む入口に確認を置いておけば、次のSTEPでは読み込みの処理を足すだけで済みます。</p>
+<p>保存してよいかを表す <code>let canSave = true;</code> も加えます。<code>openAddPage</code>と<code>addOshi</code>の最初の条件で <code>!canSave</code> なら何もせずに戻り、一覧の<code>init</code>では <code>btn_open_add</code> の <code>disabled</code> を <code>!canSave</code> にします。このSTEPには <code>canSave</code> を<code>false</code>にする行がないので、常に<code>true</code>のままで、画面の動きは変わりません。<code>false</code>にするのは、次のSTEPで保存内容を読み込めなかったときです。そのまま追加できると、読めなかった保存内容を、初期データに1件足した配列で上書きしてしまいます。保存の処理を書くこのSTEPで、保存へ進む入口に確認を置いておけば、次のSTEPでは読み込みの処理を足すだけで済みます。</p>
 <p>画面の文も、保存ができるようになったことに合わせて替えます。入力画面のボタンは <code>追加する</code> から <code>追加して保存</code> に変わります。押すと、配列への追加と一緒に保存まで行うことを、ボタンの文字で示すためです。STEP 01から出していた2つの文は、保存できるようになると事実と合わなくなるので、一覧の <code>txt_storage</code> は <code>保存はできますが、このSTEPではまだ読み込みません。</code> に、入力画面のボタンの下の注記は <code>保存先は、このブラウザの同じプレビューです。公開URLに入力内容は含まれません。</code> に替えます。保存した内容はこのブラウザにだけ残り、STEP 12で発行する公開URLから取り込んだ人には届かないためです。</p>
 <p>入力画面のボタンが <code>追加して保存</code> になったことを確かめてから、1件追加して一覧へ戻り、<code>件をこのブラウザに保存しました。</code> の文を確かめます。このSTEPでは保存までなので、再読み込み時の表示はまだ初期データです。保存されていないと決めつけず、次のSTEPで読み込む側を作ります。また、このSTEPで再読み込みしてからもう一度追加すると、前に保存した内容は、ソースの初期データと新しい1件で上書きされます。保存した内容をまだ読み込んでいない配列に、新しい1件を足して保存するためです。次のSTEPで読み込めるのは、最後に保存した内容です。</p>
-<div class="note"><p class="box-title">既知の技術と比べる</p><p>キーと値で保存する目的はAndroidのSharedPreferencesやiOSのUserDefaultsと同じです。localStorageの値は文字列に限るためJSONへ変換します。sliceはJavaでArrayListを複製したり、Swiftで配列の別の値を作ったりする操作と比較できます。try / catchはJavaの例外処理、Swiftのdo / catchに対応し、今回は失敗後に表示中のデータを更新しない順序が要点です。canSaveでボタンの <code>disabled</code> を切り替えるのは、AndroidのsetEnabled(false)やiOSのisEnabled = falseで、条件がそろうまで操作を受け付けないのと同じです。</p></div>
+<div class="note"><p class="box-title">既知の技術と比べる</p><p>キーと値で保存する目的はAndroidの<code>SharedPreferences</code>やiOSの<code>UserDefaults</code>と同じです。<code>localStorage</code>の値は文字列に限るためJSONへ変換します。<code>slice</code>はJavaで<code>ArrayList</code>を複製したり、Swiftで配列の別の値を作ったりする操作と比較できます。<code>try</code> / <code>catch</code>はJavaの例外処理、Swiftの<code>do</code> / <code>catch</code>に対応し、今回は失敗後に表示中のデータを更新しない順序が要点です。<code>canSave</code>でボタンの <code>disabled</code> を切り替えるのは、Androidの<code>setEnabled(false)</code>やiOSの<code>isEnabled = false</code>で、条件がそろうまで操作を受け付けないのと同じです。</p></div>
 <details><summary>このSTEPの全コード（照合・合流用）</summary><div class="code-head">www/index.html · 全文</div>
 <pre id="code-06-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;ja&quot;&gt;
@@ -2342,14 +2342,14 @@ function addOshi() {
 }</code></pre></details>
 <div class="check"><label><input type="checkbox" data-check="oshi-save-06"><span>保存成功の文を確認し、コピー・保存・表示更新の順番を説明できた。</span></label></div></section>
 <section id="step-7"><p class="step-meta">STEP 07 · コマ6</p><h2>保存した配列を復元する</h2>
-<p>JSにloadOshiItemsとisValidItemsを加え、page_listのinitで <strong>読み込み→一覧生成</strong> の順に呼びます。保存した値を読む前に行を作ると、初期データのまま表示されるためです。</p>
-<p><code>getItem(STORAGE_KEY)</code> は、未保存なら <code>null</code> を返します。この場合は何も復元せず、ソースの初期データを使います。文字列があればJSON.parseで値へ戻します。</p>
-<p>JSONとして読めることと、画面で使えることは別です。たとえば数値のJSONもparseできますが、今回欲しいのは文字列の項目を持つ配列です。isValidItemsは次の順に確かめます。</p>
-<ol><li><code>Array.isArray</code> で配列か確認します。</li><li>各itemがnullでなく、オブジェクトであるかを <code>typeof</code> と条件式で確認します。</li><li>name・genre・commentがすべてstringで、trim後に空でないか確認します。先に型を確認するため、文字列でないものへtrimを呼びません。</li><li>全部通ればtrueを返します。空の配列は有効な0件として扱います。</li></ol>
-<p>読み込みやparseが失敗したとき、または構造が違うときはcanSaveをfalseにします。保存済みの文字列を自動で消したり、初期データで上書きしたりしません。一覧には初期データと失敗メッセージを表示し、追加は止めます。次のSTEPで、本人が選んだときだけ初期化できる操作を作ります。失敗メッセージが案内する「初期の内容に戻す」ボタンも、そのときに作ります。このSTEPの画面には、まだありません。</p>
+<p>JSに<code>loadOshiItems</code>と<code>isValidItems</code>を加え、<code>page_list</code>の<code>init</code>で <strong>読み込み→一覧生成</strong> の順に呼びます。保存した値を読む前に行を作ると、初期データのまま表示されるためです。</p>
+<p><code>getItem(STORAGE_KEY)</code> は、未保存なら <code>null</code> を返します。この場合は何も復元せず、ソースの初期データを使います。文字列があれば<code>JSON.parse</code>で値へ戻します。</p>
+<p>JSONとして読めることと、画面で使えることは別です。たとえば数値のJSONも<code>parse</code>できますが、今回欲しいのは文字列の項目を持つ配列です。<code>isValidItems</code>は次の順に確かめます。</p>
+<ol><li><code>Array.isArray</code> で配列か確認します。</li><li>各<code>item</code>が<code>null</code>でなく、オブジェクトであるかを <code>typeof</code> と条件式で確認します。</li><li><code>name</code>・<code>genre</code>・<code>comment</code>がすべて<code>string</code>で、<code>trim</code>後に空でないか確認します。先に型を確認するため、文字列でないものへ<code>trim</code>を呼びません。</li><li>全部通れば<code>true</code>を返します。空の配列は有効な0件として扱います。</li></ol>
+<p>読み込みや<code>parse</code>が失敗したとき、または構造が違うときは<code>canSave</code>を<code>false</code>にします。保存済みの文字列を自動で消したり、初期データで上書きしたりしません。一覧には初期データと失敗メッセージを表示し、追加は止めます。次のSTEPで、本人が選んだときだけ初期化できる操作を作ります。失敗メッセージが案内する「初期の内容に戻す」ボタンも、そのときに作ります。このSTEPの画面には、まだありません。</p>
 <ol><li>名前に引用符や山かっこ、好きな理由に改行を入れて1件追加します。</li><li>同じプレビューを再読み込みし、保存した件数と追加した行が戻ることを確かめます。</li><li>詳細を開き、文字・改行が入力どおりに戻ったことを確認します。</li></ol>
 <p>保存領域はブラウザやプレビューの場所に結び付きます。別の端末・別のブラウザ・別のプロジェクトのコピーへ、内容が自動で移る仕組みではありません。</p>
-<div class="note"><p class="box-title">既知の技術と比べる</p><p>保存を読むタイミングは、AndroidのonCreateやiOSのviewDidLoadで保存値を画面へ戻すときに対応します。Javaの型検査やSwiftの型確認と同じ目的で、今回はJavaScriptのArray.isArrayとtypeofを使います。JSON.parseの結果を信頼し切らず、画面に必要な項目と型を確かめる点が違いです。</p></div>
+<div class="note"><p class="box-title">既知の技術と比べる</p><p>保存を読むタイミングは、Androidの<code>onCreate</code>やiOSの<code>viewDidLoad</code>で保存値を画面へ戻すときに対応します。Javaの型検査やSwiftの型確認と同じ目的で、今回はJavaScriptの<code>Array.isArray</code>と<code>typeof</code>を使います。<code>JSON.parse</code>の結果を信頼し切らず、画面に必要な項目と型を確かめる点が違いです。</p></div>
 <details><summary>このSTEPの全コード（照合・合流用）</summary><div class="code-head">www/index.html · 全文</div>
 <pre id="code-07-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;ja&quot;&gt;
@@ -2748,14 +2748,14 @@ function isValidItems(items) {
   }
   return true;
 }</code></pre></details>
-<div class="check"><label><input type="checkbox" data-check="oshi-save-07"><span>追加した内容を再読み込み後にも一覧・詳細で読め、null・不正データ・空配列の扱いを区別できた。</span></label></div></section>
+<div class="check"><label><input type="checkbox" data-check="oshi-save-07"><span>追加した内容を再読み込み後にも一覧・詳細で読め、<code>null</code>・不正データ・空配列の扱いを区別できた。</span></label></div></section>
 <section id="step-8"><p class="step-meta">STEP 08 · コマ6</p><h2>初期化の確認と失敗への対応</h2>
-<p>HTMLに初期化ボタンと確認欄、JSにそのイベントとresetOshiItemsを加えます。<code>初期の内容に戻す</code> を押すと、is-hiddenをremoveして確認欄を見せます。<code>やめる</code> ではクラスをaddし、欄を閉じるだけです。確認欄を囲む <code>reset-section</code> は上に区切りの線を引き、<code>#panel_reset ons-button</code> は確認欄の2つのボタンの上を12px空けます。この2つと <code>is-hidden</code> はSTEP 01のCSSに入れてあり、このSTEPのHTMLで初めて要素に当たります。</p>
-<p>実際の削除は <code>削除して初期の内容に戻す</code> を押した場合だけです。<code>localStorage.removeItem(STORAGE_KEY)</code> で、このアプリのキー1つだけを削除します。保存領域全体を空にするclearは使いません。</p>
-<p>削除に成功したらcreateInitialItemsで新しい初期配列を作り、canSaveをtrueへ戻し、一覧と文を更新します。削除に失敗したら画面の配列も変更せず、削除できなかったと表示します。初期化が終わると、以前入力した内容は戻せません。</p>
+<p>HTMLに初期化ボタンと確認欄、JSにそのイベントと<code>resetOshiItems</code>を加えます。<code>初期の内容に戻す</code> を押すと、<code>is-hidden</code>を<code>remove</code>して確認欄を見せます。<code>やめる</code> ではクラスを<code>add</code>し、欄を閉じるだけです。確認欄を囲む <code>reset-section</code> は上に区切りの線を引き、<code>#panel_reset ons-button</code> は確認欄の2つのボタンの上を12px空けます。この2つと <code>is-hidden</code> はSTEP 01のCSSに入れてあり、このSTEPのHTMLで初めて要素に当たります。</p>
+<p>実際の削除は <code>削除して初期の内容に戻す</code> を押した場合だけです。<code>localStorage.removeItem(STORAGE_KEY)</code> で、このアプリのキー1つだけを削除します。保存領域全体を空にする<code>clear</code>は使いません。</p>
+<p>削除に成功したら<code>createInitialItems</code>で新しい初期配列を作り、<code>canSave</code>を<code>true</code>へ戻し、一覧と文を更新します。削除に失敗したら画面の配列も変更せず、削除できなかったと表示します。初期化が終わると、以前入力した内容は戻せません。</p>
 <ol><li>検証用に追加したデータを使い、初期化の確認欄を開いて <code>やめる</code> を押します。件数が変わらないことを確認します。</li><li>残す必要のある内容は控えてから、もう一度確認欄を開き、削除するボタンを押します。</li><li>一覧がソースの初期データに戻り、再読み込みしてもその初期データになることを確かめます。</li></ol>
 <p>通常の操作で保存・読込に失敗した場合は、表示された文を先生と確認します。教材の確認のために、ブラウザのセキュリティ設定を変更する必要はありません。</p>
-<div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎のclassList.add / removeで表示クラスを切り替えます。キー1つの削除は、AndroidのSharedPreferences.Editor.removeやSwiftのUserDefaults.removeObjectに対応します。データを消す前に選び直せる画面を用意する点は、ネイティブアプリの確認操作と同じです。</p></div>
+<div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎の<code>classList.add</code> / <code>remove</code>で表示クラスを切り替えます。キー1つの削除は、Androidの<code>SharedPreferences.Editor.remove</code>やSwiftの<code>UserDefaults.removeObject</code>に対応します。データを消す前に選び直せる画面を用意する点は、ネイティブアプリの確認操作と同じです。</p></div>
 <details><summary>このSTEPの全コード（照合・合流用）</summary><div class="code-head">www/index.html · 全文</div>
 <pre id="code-08-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;ja&quot;&gt;
@@ -3190,10 +3190,10 @@ function resetOshiItems() {
 <div class="check"><label><input type="checkbox" data-check="oshi-save-08"><span>初期化を中止したときは内容が残り、確定したときだけ初期の内容へ戻った。</span></label></div></section>
 <section id="step-9"><p class="step-meta">STEP 09 · コマ6</p><h2>保存を確かめてアレンジする</h2>
 <p>入力→追加→詳細→戻る→再読み込みの順で動かし、保存した内容が復元されることを確認します。次に、ソースの初期データを自分の言葉へ変えます。</p>
-<p><strong>保存データがあると、ソースの初期データより優先して表示されます。</strong> createInitialItemsを書き換えても画面が変わらない場合は、変更したコードのミスとは限りません。必要な入力を控えたうえで、アプリ内の初期化を使ってソースの内容を確認します。</p>
-<table><thead><tr><th>アレンジする場所</th><th>確かめること</th></tr></thead><tbody><tr><td>createInitialItemsのname・genre・comment</td><td>初期化後の一覧と詳細が自分の好きなものになる。</td></tr><tr><td>HTMLの案内文・placeholder</td><td>何を入力するアプリか伝わる。</td></tr><tr><td>CSSの色・枠・余白</td><td>長い日本語や改行も読める。</td></tr></tbody></table>
+<p><strong>保存データがあると、ソースの初期データより優先して表示されます。</strong> <code>createInitialItems</code>を書き換えても画面が変わらない場合は、変更したコードのミスとは限りません。必要な入力を控えたうえで、アプリ内の初期化を使ってソースの内容を確認します。</p>
+<table><thead><tr><th>アレンジする場所</th><th>確かめること</th></tr></thead><tbody><tr><td><code>createInitialItems</code>の<code>name</code>・<code>genre</code>・<code>comment</code></td><td>初期化後の一覧と詳細が自分の好きなものになる。</td></tr><tr><td>HTMLの案内文・<code>placeholder</code></td><td>何を入力するアプリか伝わる。</td></tr><tr><td>CSSの色・枠・余白</td><td>長い日本語や改行も読める。</td></tr></tbody></table>
 <p>保存キーは変えず、まず文字や色を変えましょう。保存して再読み込みし、どの変更がソースに残り、どの内容がブラウザだけに残るかを説明します。</p>
-<div class="note"><p class="box-title">既知の技術と比べる</p><p>ネイティブアプリでも、コードに書いた既定値より保存済みの設定を優先することがあります。同じ区別を、createInitialItemsとgetItemのどちらが最終的なoshiItemsになるかで追います。アレンジは既習のデータと装飾の変更だけで行います。</p></div>
+<div class="note"><p class="box-title">既知の技術と比べる</p><p>ネイティブアプリでも、コードに書いた既定値より保存済みの設定を優先することがあります。同じ区別を、<code>createInitialItems</code>と<code>getItem</code>のどちらが最終的な<code>oshiItems</code>になるかで追います。アレンジは既習のデータと装飾の変更だけで行います。</p></div>
 <details><summary>このSTEPの全コード（照合・合流用）</summary><div class="code-head">www/index.html · 全文</div>
 <pre id="code-09-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;ja&quot;&gt;
@@ -4065,8 +4065,8 @@ function resetOshiItems() {
 <div class="check"><label><input type="checkbox" data-check="oshi-save-10"><span>指定SDKの取得を開始または版を確認し、既存iOS環境の状態を先生へ伝えられる。</span></label></div></section>
 <section id="step-11"><p class="step-meta">STEP 11 · コマ7</p><h2>提出に残るアレンジを作る</h2>
 <p>Monaca クラウド IDEへ戻り、自分の好きなものノートを仕上げます。既に扱った文字・色・初期データから変更箇所を選び、どんなものが好きで、なぜ好きなのかが伝わる内容にします。</p>
-<table><thead><tr><th>場所</th><th>変わること</th><th>確認方法</th></tr></thead><tbody><tr><td>createInitialItemsの配列</td><td>最初に読める好きなものとその理由。</td><td>必要な保存内容を控えて初期化し、全件の詳細を開く。</td></tr><tr><td>HTMLの見出し・案内文・入力例</td><td>自分の題材が画面から伝わる。</td><td>入力画面を開き、迷わず入力できるか読む。</td></tr><tr><td>CSSの文字色・枠色・余白</td><td>カードと入力欄の印象。</td><td>長い日本語を入れて、文字が切れないか見る。</td></tr></tbody></table>
-<p><strong>画面から追加して保存したデータは、公開URLへ含まれません。</strong> 先生が新しく取り込んだときに見えるアレンジは、ソースへ書きます。入力例として見せたい好きなものも、createInitialItemsに書いて保存します。</p>
+<table><thead><tr><th>場所</th><th>変わること</th><th>確認方法</th></tr></thead><tbody><tr><td><code>createInitialItems</code>の配列</td><td>最初に読める好きなものとその理由。</td><td>必要な保存内容を控えて初期化し、全件の詳細を開く。</td></tr><tr><td>HTMLの見出し・案内文・入力例</td><td>自分の題材が画面から伝わる。</td><td>入力画面を開き、迷わず入力できるか読む。</td></tr><tr><td>CSSの文字色・枠色・余白</td><td>カードと入力欄の印象。</td><td>長い日本語を入れて、文字が切れないか見る。</td></tr></tbody></table>
+<p><strong>画面から追加して保存したデータは、公開URLへ含まれません。</strong> 先生が新しく取り込んだときに見えるアレンジは、ソースへ書きます。入力例として見せたい好きなものも、<code>createInitialItems</code>に書いて保存します。</p>
 <p>ソースを変えても以前の保存内容が表示される場合はSTEP 09を確認します。保存キーを変えて見えなくする方法で済ませず、残す内容を控えてからアプリ内の初期化を使います。</p>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>JavaやSwiftでコードの初期値を変えることと、実行中に端末へ保存した内容を変えることは別です。公開URLで渡すのはソースなので、ブラウザの入力内容だけを変えても相手の初期画面には反映されません。</p></div>
 <details><summary>このSTEPの全コード（照合・合流用）</summary><div class="code-head">www/index.html · 全文</div>
@@ -4513,7 +4513,7 @@ function resetOshiItems() {
 <p>先生が授業中に案内する提出先・締め切りを確認し、次の内容を提出します。まだ案内がない場合は、URLと説明を控えて先生へ確認します。</p>
 <ul><li>自分の好きなものノートで発行した公開URL。</li><li>アレンジした場所と、画面へどう表れるかの短い説明。</li></ul>
 <p>通常版MonacaのFreeプランではZIPを学生の提出物にしません。先生は公開URLから取り込み、初期データと操作を確認します。公開中の自分のプロジェクトは提出後に削除しません。</p>
-<p>Flutter準備のタブへ戻り、取得が終わったか、SDKの版、flutter doctorで止まっている項目を確認します。終わっていない項目はその場で先生へ伝え、コマ8へ引き継ぎます。授業外で終わらせることを条件にはしません。</p>
+<p>Flutter準備のタブへ戻り、取得が終わったか、SDKの版、<code>flutter doctor</code>で止まっている項目を確認します。終わっていない項目はその場で先生へ伝え、コマ8へ引き継ぎます。授業外で終わらせることを条件にはしません。</p>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>ソースを共有する提出と、端末に保存したデータを見せることを区別します。Android／iOSの実行環境を確認するときと同様に、準備済みの項目とまだ使えない項目を具体的に記録します。</p></div>
 
 <div class="check"><label><input type="checkbox" data-check="oshi-save-13"><span>指定先へ自分のURLと変更説明を提出し、Flutter準備の状態も先生へ伝えた。</span></label></div></section>
@@ -4522,7 +4522,7 @@ function resetOshiItems() {
 <ol><li>どのファイルの、どの文字・色・初期データを変更したか。</li><li>その変更が一覧・入力・詳細のどこに現れるか。</li><li>入力した保存データがない相手にも、アレンジが伝わるか。</li></ol>
 <p>余裕があれば、既に扱った範囲で記入例を分かりやすくしたり、余白を調整したりします。いまある画面で、自分の「好き」が伝わる状態を確かめましょう。変更したら保存し、一覧・追加・詳細・再読み込みを確認してから公開内容を確かめます。</p>
 <p>全コードは見本との比較用です。自分の変更を消して見本に戻す必要はありません。動かなくなった部分や、変更した場所と結果の関係を確かめるために使います。</p>
-<div class="note"><p class="box-title">既知の技術と比べる</p><p>HTML・CSS・JavaScriptの役割分担を使い、変更の理由をファイルの場所と結び付けて説明します。保存があるアプリでは、ソースの初期値と保存値の両方を見る点を、SharedPreferences／UserDefaultsを使うアプリと比べて振り返ります。</p></div>
+<div class="note"><p class="box-title">既知の技術と比べる</p><p>HTML・CSS・JavaScriptの役割分担を使い、変更の理由をファイルの場所と結び付けて説明します。保存があるアプリでは、ソースの初期値と保存値の両方を見る点を、<code>SharedPreferences</code>／<code>UserDefaults</code>を使うアプリと比べて振り返ります。</p></div>
 <details><summary>このSTEPの全コード（照合・合流用）</summary><div class="code-head">www/index.html · 全文</div>
 <pre id="code-14-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;ja&quot;&gt;
