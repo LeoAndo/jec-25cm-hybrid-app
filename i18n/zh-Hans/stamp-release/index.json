@@ -683,10 +683,6 @@
       "translation": "确认 <code>android/gradle/wrapper/gradle-wrapper.properties</code> 中的 <code>distributionUrl</code>。这次的空模板是 Gradle 9.3.1。如果是 <code>all.zip</code>，不改版本，统一改成 <code>bin.zip</code>。只把这一行改成下面的形式。"
     },
     {
-      "source": "教員から同じURLで取得したGradleキャッシュを受け取る場合は、配布された<code>gradle-9.3.1-bin</code>フォルダを<code>~/.gradle/wrapper/dists/</code>の下へ配置します。ハッシュ名の階層、展開済みディレクトリ、.zip.okを保ち、既存の別版を上書きしません。既に同じフォルダがある場合は先生へ確認します。<code>all.zip</code>のキャッシュとは共用できません。",
-      "translation": "如果从老师那里拿到用同一 URL 下载的 Gradle 缓存，把分发的 <code>gradle-9.3.1-bin</code> 文件夹放到 <code>~/.gradle/wrapper/dists/</code> 下面。保持哈希名的目录层级、已解压的目录和 .zip.ok，不要覆盖已有的其他版本。如果已经有同名文件夹，向老师确认。不能和 <code>all.zip</code> 的缓存共用。"
-    },
-    {
       "source": "キャッシュを受け取ってもAndroid SDK・NDK・AGP等の取得が残る場合があります。<code>flutter run -d Android端末ID</code>を実行し、ターミナルの取得状況を見ます。待機時間はコードと提出前チェックの確認に使い、途中で同じビルドを重ねて始めません。",
       "translation": "即使拿到了缓存，也可能还需要下载 Android SDK、NDK、AGP 等。运行 <code>flutter run -d Android端末ID</code>（Android端末ID＝Android 设备 ID），观察终端里的下载情况。等待时间用来确认代码和提交前的检查项目，不要在中途重复启动同一个构建。"
     },

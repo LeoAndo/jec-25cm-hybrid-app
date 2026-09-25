@@ -211,14 +211,6 @@
       "translation": "HTML 的 <code>head</code>"
     },
     {
-      "source": "標準loader、Onsen UI 2.12.9のCSS・JavaScript、自作CSS・<code>app.js</code>を読み込む。自作JSはOnsen UIより後。",
-      "translation": "加载标准 loader、Onsen UI 2.12.9 的 CSS 和 JavaScript、自己编写的 CSS 和 <code>app.js</code>。自己编写的 JS 放在 Onsen UI 之后。"
-    },
-    {
-      "source": "navigatorが<code>list.html</code>を実体化する。<code>template</code>は配置前のひな形で、詳細へ進んだときに<code>detail.html</code>の要素が作られる。",
-      "translation": "navigator 把 <code>list.html</code> 实例化。<code>template</code> 是尚未放入页面的模板，进入详情时才会创建 <code>detail.html</code> 的元素。"
-    },
-    {
       "source": "<code>init</code>のリスナー",
       "translation": "<code>init</code> 的监听器"
     },

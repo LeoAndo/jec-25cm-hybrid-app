@@ -235,10 +235,6 @@
       "translation": "From here on is the Flutter setup, which you start during session 7. Check that <strong>Visual Studio Code, Xcode, and Android Studio</strong> are in <code>アプリケーション</code> (Applications) in Finder. For Xcode and Android Studio, use the ones you use in your iOS and Android classes. If you cannot find them, tell your teacher."
     },
     {
-      "source": "この授業のFlutter SDKは <strong>3.47.5</strong>、同梱されるDartは <strong>3.13.4</strong> にそろえます。学生のMacは全員Apple Siliconなので、<a1>公式のFlutter SDK archive</a1> で、macOS用の <code>Stable</code>、<code>3.47.5</code>、Architectureは <code>arm64</code> を選びます。",
-      "translation": "In this course, everyone uses Flutter SDK <strong>3.47.5</strong>, with the bundled Dart <strong>3.13.4</strong>. All students' Macs are Apple Silicon, so in <a1>the official Flutter SDK archive</a1>, choose <code>Stable</code> for macOS, <code>3.47.5</code>, and <code>arm64</code> as the Architecture."
-    },
-    {
       "source": "SDKの取得を始め、既存のiOS環境を確認する",
       "translation": "Start downloading the SDK and check your existing iOS environment"
     },
@@ -371,10 +367,6 @@
       "translation": "Just as you choose which SDK Android Studio or Xcode uses, you also set which Flutter location is used. <code>PATH</code> is the list of places where commands are looked for, and their order. If an old Flutter is shown, do not delete any SDK; first check the result of <code>which flutter</code>."
     },
     {
-      "source": "<strong>授業期間中は <code>flutter upgrade</code> を実行しません。</strong>教材と同じ版で進めます。版やパスが合わなければ、その出力を先生に見せてください。PATH設定と再起動の手順は <a1>Flutterの公式インストール手順</a1>に基づいています。",
-      "translation": "<strong>Do not run <code>flutter upgrade</code> during the course.</strong> Keep using the same version as the materials. If the version or path does not match, show the output to your teacher. The PATH setup and restart steps are based on <a1>Flutter's official installation instructions</a1>."
-    },
-    {
       "source": "新しいTerminalで、Flutter 3.47.5とDart 3.13.4を確認できた。",
       "translation": "A new Terminal window shows Flutter 3.47.5 and Dart 3.13.4."
     },
@@ -417,10 +409,6 @@
     {
       "source": "Flutterの初回実行には、STEP 4で確認した既存のiOSシミュレータを使います。ランタイムの追加が必要だった人は、ダウンロード用のTerminalを確認し、エラーで止まっておらず、取得が完了していることを確かめます。第7コマで終わらなかった場合は、第8コマの授業内でも確認を続けます。",
       "translation": "For your first Flutter run, use the existing iOS simulator you checked in STEP 4. If you needed to add a runtime, look at the Terminal window used for the download and make sure it has not stopped with an error and the download has finished. If it did not finish in session 7, checking continues during session 8."
-    },
-    {
-      "source": "Flutter SDKの展開とPATHの設定が済んだTerminalで、Flutter側のiOS用ファイルを取得します。これはiOSの授業で使ったランタイムとは別の、Flutter専用の資材です。必要なものが既に入っていれば、追加取得が省略されます。",
-      "translation": "In a Terminal window where the Flutter SDK has been extracted and PATH has been set, download Flutter's files for iOS. These are files used only by Flutter, separate from the runtime you used in your iOS class. If what is needed is already installed, the extra download is skipped."
     },
     {
       "source": "Terminal · FlutterのiOS用ファイルを取得",
@@ -495,10 +483,6 @@
       "translation": "The Gradle cache must match the distribution URL the project uses. <code>-bin.zip</code> and <code>-all.zip</code> are different. When you create a project in class, set <code>distributionUrl</code> in <code>android/gradle/wrapper/gradle-wrapper.properties</code> to the same URL as the distributed cache. You do not create a project here yet, so you do not edit any file now. How this works is explained in <a1>the official Gradle Wrapper documentation</a1>."
     },
     {
-      "source": "使うiOS環境とdoctorの結果を確認した。追加設定が必要な項目は先生に相談した。",
-      "translation": "The iOS environment you will use and the doctor results have been checked. Any items that need extra setup have been discussed with your teacher."
-    },
-    {
       "source": "ここまでできたら、準備完了",
       "translation": "Once you have done all this, setup is complete"
     },
@@ -515,10 +499,6 @@
       "translation": "You can open the textbook your teacher specified. You can log in to standard Monaca, and you have the free project slots you need while keeping your own work."
     },
     {
-      "source": "TerminalとVisual Studio Codeが同じFlutter 3.47.5を使っている。Flutter拡張とiOSの実行環境を用意し、doctorの結果を確認できている。",
-      "translation": "Terminal and Visual Studio Code use the same Flutter 3.47.5. The Flutter extension and the iOS run environment are ready, and the doctor results have been checked."
-    },
-    {
       "source": "アプリの作成、コードの編集、Visual Studio Codeでのデバイス選択、実行は、その日の教科書で行います。準備中に実行用の項目が見つからなくても、別のプロジェクトを作る必要はありません。",
       "translation": "Creating apps, editing code, selecting a device in Visual Studio Code, and running are done in the textbook for that day. Even if you cannot find the run-related items during setup, you do not need to create a separate project."
     },
@@ -529,10 +509,6 @@
     {
       "source": "ダウンロードが終わらない、確認メールが届かない、版が合わないときは、止まったSTEPと画面・出力を先生に見せてください。回線が遅い場合は先生が授業の進め方を調整します。家庭で終わらせる前提で先へ進める必要はありません。パスワードや確認メールのリンクは、教室の共有画面や提出物へ貼り付けません。",
       "translation": "If a download does not finish, the confirmation email does not arrive, or the version does not match, show your teacher the STEP where you are stuck and your screen or output. If the connection is slow, your teacher will adjust how the class proceeds. You do not need to move ahead assuming you will finish at home. Do not paste passwords or confirmation-email links into the classroom's shared screen or your deliverables."
-    },
-    {
-      "source": "質問の例：<strong>「STEP 5で、flutter --versionが3.41になりました」</strong>。表示された文字をそのまま伝えると、SDKの場所と版を一緒に確かめられます。",
-      "translation": "Example question: <strong>「STEP 5で、flutter --versionが3.41になりました」</strong> (In STEP 5, flutter --version showed 3.41). If you report the exact text shown, your teacher can check the SDK location and version with you."
     },
     {
       "source": "JEC / ハイブリッドアプリ開発技法 · 共通資料 · 2026-09-23",
