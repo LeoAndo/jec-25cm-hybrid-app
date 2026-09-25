@@ -48,18 +48,6 @@ def sample_example(projects):
     return f"samples/{roots[0]}" if roots else "samples/<プロジェクト名>"
 
 
-def monaca_zip_example(projects):
-    """はじめに.txt の「Monacaへ取り込むZIP」の例に挙げる、Monacaの完成プロジェクトZIP。
-
-    Monaca クラウド IDEはMacのフォルダを開けないので、見本を動かすときは samples/ ではなく、
-    教科書の downloads にある同じ内容のZIPをダッシュボードの「インポート」で取り込む。
-    教員が公開して発行する取り込み用のURLは、2026-09-25 にリンク切れ（Project Not Found）が
-    見つかったので、案内には使わない（#135）。
-    """
-    archives = [project["archive"] for project in projects if project.get("kind") == "monaca"]
-    return archives[0] if archives else "docs/<スラッグ>/downloads/<プロジェクト名>.zip"
-
-
 def unit_list(projects):
     """リリースノートに載せる単元一覧を作る。"""
     lines = []
@@ -216,8 +204,7 @@ def prepare(repo, metadata):
         f"{unit_list(projects)}\n\n"
         "4. 完成プロジェクト（先生が作った見本）を含む版には、`samples` フォルダがあります。\n"
         f"   Flutterの単元は、Visual Studio Code の「File > Open Folder…」で `{sample_example(projects)}` のように選ぶだけで開けます。\n"
-        "   Monacaの単元は、`samples` の中のフォルダでコードを読み比べます。Monaca クラウド IDEで動かすときは、\n"
-        f"   `{monaca_zip_example(projects)}` のような同じ内容のZIPを、ダッシュボードの「インポート」で取り込みます。\n"
+        "   Monacaの単元は、教科書に載っている取り込み用のURLからMonacaへ取り込みます。\n"
         "   `samples` フォルダの中身は、コードを読み比べるための写しです。\n\n"
         "教材を更新するときは `~/Documents` の直下に別のフォルダとして展開し、自分で作ったプロジェクト（`~/Documents/HybridApp` の中）を上書きしないでください。\n"
         "授業中は先生が指定した版を使ってください。\n\n"

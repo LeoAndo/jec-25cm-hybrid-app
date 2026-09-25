@@ -35,7 +35,7 @@ JEC（25CM）の「ハイブリッドアプリ開発技法」で使う教材で�
 
 展開後、はじめて授業を受ける学生は [共通資料：授業を始めるまでの準備](docs/common/setup.html) をブラウザで開き、第1コマにSTEP 1〜3、第7コマにSTEP 4〜7を進めます（同梱の `はじめに.txt` でも、単元一覧より前に案内しています）。準備が済んだら、その日の単元の教科書をブラウザで開きます。
 
-学生用ZIPには `docs` 一式と、開き方・版情報を収録します。**いまは日本語・英語（`en`）・中国語（簡体）（`zh-Hans`）の3言語で配布します。** 展開してできたフォルダには `docs` / `samples` / `はじめに.txt` / `VERSION.json` があります。現在の登録単元は `M01OshiList`・`M02OshiSave`・`F01StampBoard`・`F02StampRelease` で、`samples/` に各完成見本を展開済みで収録します。`samples` はコードを読み比べるために使い、Monacaで動かすときは教科書の `downloads` にある同じ内容のZIPをインポートします。展開したフォルダは `~/Documents`（書類）の直下に置き（`~/Documents/hybrid-app-student-materials-日付`）、学生自身が作るプロジェクトは配布フォルダの外の `~/Documents/HybridApp` に置きます（2026-09-25 先生レビュー、#135）。フォルダの直下には言語を選ぶ入口の `index.html` があり、`はじめに.txt` にも各言語の案内が付きます。入口に並ぶのは、`config/i18n.json` で `distribute: true` の言語だけです（「多言語展開」）。ほかの7言語は、翻訳と照合を終えて `distribute: true` にした時点で入口に加わります。`teacher` フォルダとテンプレート原本（`MonacaTemplate`・`MonacaMinimumTemplate`）は収録しません。GitHubが自動で表示する **Source code (zip)** はリポジトリ全体のため、学生用ZIPには使いません。なお、このリポジトリ自体はPublicなので、教員用ファイルもGitHub上では閲覧できます。
+学生用ZIPには `docs` 一式と、開き方・版情報を収録します。**いまは日本語・英語（`en`）・中国語（簡体）（`zh-Hans`）の3言語で配布します。** 展開してできたフォルダには `docs` / `samples` / `はじめに.txt` / `VERSION.json` があります。現在の登録単元は `M01OshiList`・`M02OshiSave`・`F01StampBoard`・`F02StampRelease` で、`samples/` に各完成見本を展開済みで収録します。`samples` はコードを読み比べるために使い、Monacaで動かすときは教科書の取り込み用URLから取り込みます。展開したフォルダは `~/Documents`（書類）の直下に置き（`~/Documents/hybrid-app-student-materials-日付`）、学生自身が作るプロジェクトは配布フォルダの外の `~/Documents/HybridApp` に置きます（2026-09-25 先生レビュー、#135）。フォルダの直下には言語を選ぶ入口の `index.html` があり、`はじめに.txt` にも各言語の案内が付きます。入口に並ぶのは、`config/i18n.json` で `distribute: true` の言語だけです（「多言語展開」）。ほかの7言語は、翻訳と照合を終えて `distribute: true` にした時点で入口に加わります。`teacher` フォルダとテンプレート原本（`MonacaTemplate`・`MonacaMinimumTemplate`）は収録しません。GitHubが自動で表示する **Source code (zip)** はリポジトリ全体のため、学生用ZIPには使いません。なお、このリポジトリ自体はPublicなので、教員用ファイルもGitHub上では閲覧できます。
 
 授業中は教員が指定した版を使います。授業ごとの案内には、内容が固定された個別リリースのURLを使ってください。更新版も `~/Documents` の直下に別フォルダとして展開し、学生自身のプロジェクト（`~/Documents/HybridApp`）は上書きしません。
 
@@ -43,7 +43,7 @@ JEC（25CM）の「ハイブリッドアプリ開発技法」で使う教材で�
 
 | 系統 | 学生が受け取る形 |
 | --- | --- |
-| Monaca | 配布フォルダの `samples/<プロジェクト名>` をFinderで開いて、コードを読み比べます。Monaca クラウド IDEで動かすときは、`docs/<スラッグ>/downloads/<プロジェクト名>.zip` をダッシュボードの「インポート」で取り込みます（Freeプランの1枠を使う）。教員が公開して発行する**取り込み用のURL**（`https://monaca.mobi/ja/directimport?pid=…`）は、2026-09-25 の先生レビューでリンク切れ（Project Not Found）が見つかったため、教科書には載せていません（#135）。公開し直したときは、`config/teaching-materials.json` の `import_url` と教科書に載せ直せます |
+| Monaca | 配布フォルダの `samples/<プロジェクト名>` をFinderで開いて、コードを読み比べます。Monaca クラウド IDEはMacのフォルダをそのまま開けないので、動かすときは教科書に載せた**取り込み用のURL**（教員がZIPにして公開した `https://monaca.mobi/ja/directimport?pid=…`）を開き、学生のMonacaにプロジェクトを取り込みます（Freeプランの1枠を使う）。2026-09-25 の先生レビュー時点ではこのURLがリンク切れ（Project Not Found）でしたが、同日に #132（PR #136）で公開し直した新しいURLに差し替えてあります |
 | Flutter | 配布フォルダ（`~/Documents/hybrid-app-student-materials-日付/`）の `samples/<プロジェクト名>` をFinderで開き、Visual Studio Code の `File > Open Folder…` で選びます。展開は済んでいるので、教科書からZIPをダウンロードさせません |
 
 ### Monacaのプランと、そこから来る制約

@@ -58,24 +58,11 @@ def archive_targets(projects):
 def sample_example(projects):
     """はじめに.txt の「File > Open Folder…」の例に挙げる見本。
 
-    フォルダーを開いて使うのはFlutterの単元の見本だけ（Monacaの見本はコードを読み比べる写しで、
-    Monaca クラウド IDEで動かすときは同じ内容のZIPを取り込む）。
+    フォルダーを開いて使うのはFlutterの単元の見本だけ（Monacaの見本は取り込み用のURLから取り込む）。
     projects の先頭はMonacaの単元なので、先頭を挙げるとFlutterの案内にMonacaの見本が出てしまう。
     """
     roots = [project["root"] for project in projects if project.get("kind") == "flutter"]
     return f"samples/{roots[0]}" if roots else "samples/<プロジェクト名>"
-
-
-def monaca_zip_example(projects):
-    """はじめに.txt の「Monacaへ取り込むZIP」の例に挙げる、Monacaの完成プロジェクトZIP。
-
-    Monaca クラウド IDEはMacのフォルダを開けないので、見本を動かすときは samples/ ではなく、
-    教科書の downloads にある同じ内容のZIPをダッシュボードの「インポート」で取り込む。
-    教員が公開して発行する取り込み用のURLは、2026-09-25 にリンク切れ（Project Not Found）が
-    見つかったので、案内には使わない（#135）。
-    """
-    archives = [project["archive"] for project in projects if project.get("kind") == "monaca"]
-    return archives[0] if archives else "docs/<スラッグ>/downloads/<プロジェクト名>.zip"
 
 
 class LocalLinks(HTMLParser):
@@ -222,8 +209,7 @@ def build(output_dir):
 
     # 完成プロジェクトを、展開済みの見本として samples/ にも収録する。Flutterの単元は、学生がダウンロードも
     # 展開もせず、Visual Studio Code の「File > Open Folder…」で選ぶだけになる。Monacaの単元の見本は、
-    # Monaca クラウド IDEがMacのフォルダを開けないので、samples/ の中身はコードを読み比べるための写しになり、
-    # 動かすときは docs/<スラッグ>/downloads/ にある同じ内容のZIPを取り込む。
+    # 取り込み用のURLから取り込むので、samples/ の中身はコードを読み比べるための写しになる。
     # 中身は配布物に入れるZIPと同じなので、新たにcommitするファイルはない。
     # リンク検査のあとで足すので、検査の対象は教科書と多言語の入口で、samples の中は検査しない。
     executables = set()
@@ -258,8 +244,7 @@ def build(output_dir):
         f"{unit_lines}"
         "4. 完成プロジェクト（先生が作った見本）を含む版には、samples フォルダがあります。\n"
         f"   Flutterの単元は、Visual Studio Code の「File > Open Folder…」で {sample_example(projects)} のように選ぶだけで開けます。\n"
-        "   Monacaの単元は、samples の中のフォルダでコードを読み比べます。Monaca クラウド IDEで動かすときは、\n"
-        f"   {monaca_zip_example(projects)} のような同じ内容のZIPを、ダッシュボードの「インポート」で取り込みます。\n"
+        "   Monacaの単元は、教科書に載っている取り込み用のURLからMonacaへ取り込みます。\n"
         "   samples フォルダの中身は、コードを読み比べるための写しです。\n\n"
         "教科書はオフラインで利用できます。Monacaはブラウザから使うサービスなので、ネット接続が必要です。\n"
         "Flutterの準備とビルドにもネット接続が必要です。\n"
