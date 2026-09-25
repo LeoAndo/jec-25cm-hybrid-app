@@ -115,8 +115,8 @@
       "translation": "17 Check the final APK and submit it"
     },
     {
-      "source": "18 変更箇所と動作を説明する",
-      "translation": "18 Explain your changes and how the app works"
+      "source": "18 変更箇所と動作を確かめる",
+      "translation": "18 Check your changes and how the app works"
     },
     {
       "source": "19 アレンジできる場所を振り返る",
@@ -239,8 +239,8 @@
       "translation": "Create a screen for entering a habit"
     },
     {
-      "source": "一覧へ習慣を追加ボタン、移動先に<code>AddHabitPage</code>を置きます。入力内容とメッセージが変わるため、入力画面は<code>StatefulWidget</code>です。まだ追加処理を使わず、ボタンは無効にしておきます。",
-      "translation": "Put a 「習慣を追加」 (Add habit) button on the list screen, and <code>AddHabitPage</code> as its destination. The input screen is a <code>StatefulWidget</code>, because the input and the message change. Do not use the add process yet; keep the add button on the input screen disabled."
+      "source": "一覧へ習慣を追加ボタン、移動先に<code>AddHabitPage</code>を置きます。入力内容とメッセージが変わるため、入力画面は<code>StatefulWidget</code>です。まだ追加処理を使わず、入力画面の追加するボタンは無効にしておきます。",
+      "translation": "Put a 「習慣を追加」 (Add habit) button on the list screen, and <code>AddHabitPage</code> as its destination. The input screen is a <code>StatefulWidget</code>, because the input and the message change. Do not use the add process yet; keep the 「追加する」 (Add) button on the input screen disabled."
     },
     {
       "source": "<code>TextField</code>へ<code>TextEditingController</code>を渡すと、入力値を<code>controller.text</code>から読めます。コントローラは<code>build</code>のたびに作らず<code>State</code>のフィールドに置き、画面が破棄される<code>dispose</code>で各<code>controller.dispose</code>を呼び、最後に<code>super.dispose</code>を呼びます。",
@@ -275,8 +275,8 @@
       "translation": "Check for empty fields"
     },
     {
-      "source": "追加ボタンの<code>onPressed</code>へ<code>submit</code>を渡します。括弧を付けた<code>submit()</code>の実行結果ではなく、押したときに呼ぶ関数を渡します。",
-      "translation": "Pass <code>submit</code> to the <code>onPressed</code> of the add button. Pass the function to call when the button is pressed, not the result of running <code>submit()</code> with parentheses."
+      "source": "追加するボタンの<code>onPressed</code>へ<code>submit</code>を渡します。括弧を付けた<code>submit()</code>の実行結果ではなく、押したときに呼ぶ関数を渡します。",
+      "translation": "Pass <code>submit</code> to the <code>onPressed</code> of the 「追加する」 (Add) button. Pass the function to call when the button is pressed, not the result of running <code>submit()</code> with parentheses."
     },
     {
       "source": "<code>submit</code>では2つの<code>controller.text</code>を<code>trim</code>して前後の空白を除き、どちらかの<code>isEmpty</code>が<code>true</code>ならメッセージを表示して<code>return</code>します。今回は入力を確認しましたという文までで、一覧への追加は次のSTEPです。",
@@ -347,8 +347,8 @@
       "translation": "This corresponds to passing a closure to a screen in Swift. In Dart, the argument and return types are written before and after <code>Function</code>. Only the parent's <code>State</code> holds the list, so do not create a duplicate list in the input screen."
     },
     {
-      "source": "追加した習慣を一覧・詳細で読め、再起動では消えることを説明できた。",
-      "translation": "The added habit can be read in the list and detail screens, and you can explain why it disappears on restart."
+      "source": "追加した習慣を一覧・詳細で読め、再起動では消えることを確認した。",
+      "translation": "The added habit can be read in the list and detail screens, and it has been checked that it disappears on restart."
     },
     {
       "source": "STEP 04 · コマ12",
@@ -443,8 +443,8 @@
       "translation": "Compared with a synchronous return value in Java, what is new here is waiting for the <code>Future</code> to complete to get the result. We do not assume you have learned the asynchronous APIs of Java / Swift. Starting from the sequential processing you already know, distinguish \"what continues after completion\" from \"the screen while waiting\"."
     },
     {
-      "source": "<code>Future</code>・<code>async</code>・<code>await</code>の役割と、保存後に進む順序を説明できた。",
-      "translation": "You can explain the roles of <code>Future</code>, <code>async</code>, and <code>await</code>, and the order of steps after saving."
+      "source": "<code>Future</code>・<code>async</code>・<code>await</code>の役割と、保存後に進む順序を確認した。",
+      "translation": "The roles of <code>Future</code>, <code>async</code>, and <code>await</code>, and the order of steps after saving, have been checked."
     },
     {
       "source": "STEP 06 · コマ13",
@@ -511,8 +511,8 @@
       "translation": "Putting a small amount of data on the device under a key corresponds to <code>UserDefaults</code> or <code>SharedPreferences</code> on Android. On the Flutter side, you wait for the <code>Future</code> to complete with <code>await</code>. <code>try</code> / <code>catch</code> / <code>finally</code> play the same role as exception handling in Java, and they line up the order so that the screen is updated after the save succeeds."
     },
     {
-      "source": "保存成功の文を確認し、失敗時に元の状態を保つ順序を説明できた。",
-      "translation": "The save-success message has been checked, and you can explain the order that keeps the original state on failure."
+      "source": "保存成功の文を確認し、失敗時に元の状態が保たれることを確かめた。",
+      "translation": "The save-success message has been checked, and it has been confirmed that the original state is kept on failure."
     },
     {
       "source": "STEP 07 · コマ13",
@@ -683,8 +683,8 @@
       "translation": "Check <code>distributionUrl</code> in <code>android/gradle/wrapper/gradle-wrapper.properties</code>. The empty template used here is Gradle 9.3.1. If it is <code>all.zip</code>, change it to <code>bin.zip</code> without changing the version. Change only this one line to the following form."
     },
     {
-      "source": "教員から同じURLで取得したGradleキャッシュを受け取る場合は、配布された<code>gradle-9.3.1-bin</code>フォルダを<code>~/.gradle/wrapper/dists/</code>の下へ配置します。ハッシュ名の階層、展開済みディレクトリ、.zip.okを保ち、既存の別版を上書きしません。既に同じフォルダがある場合は先生へ確認します。<code>all.zip</code>のキャッシュとは共用できません。",
-      "translation": "If you receive a Gradle cache that the teacher downloaded from the same URL, place the distributed <code>gradle-9.3.1-bin</code> folder under <code>~/.gradle/wrapper/dists/</code>. Keep the hash-named directory level, the extracted directory, and .zip.ok, and do not overwrite an existing cache of another version. If the same folder already exists, check with your teacher. It cannot be shared with an <code>all.zip</code> cache."
+      "source": "教員から同じURLで取得したGradleキャッシュを受け取る場合は、配布された<code>gradle-9.3.1-bin</code>フォルダを<code>~/.gradle/wrapper/dists/</code>の下へ配置します。ハッシュ名の階層、展開済みディレクトリ、<code>.zip.ok</code>を保ち、既存の別版を上書きしません。既に同じフォルダがある場合は先生へ確認します。<code>all.zip</code>のキャッシュとは共用できません。",
+      "translation": "If you receive a Gradle cache that the teacher downloaded from the same URL, place the distributed <code>gradle-9.3.1-bin</code> folder under <code>~/.gradle/wrapper/dists/</code>. Keep the hash-named directory level, the extracted directory, and <code>.zip.ok</code>, and do not overwrite an existing cache of another version. If the same folder already exists, check with your teacher. It cannot be shared with an <code>all.zip</code> cache."
     },
     {
       "source": "キャッシュを受け取ってもAndroid SDK・NDK・AGP等の取得が残る場合があります。<code>flutter run -d Android端末ID</code>を実行し、ターミナルの取得状況を見ます。待機時間はコードと提出前チェックの確認に使い、途中で同じビルドを重ねて始めません。",
@@ -759,8 +759,8 @@
       "translation": "Try the stamp limit and 「1つ戻す」 (Undo one)."
     },
     {
-      "source": "Androidのアプリ情報からアプリを停止し、アイコンから起動し直して復元を確認します。バックグラウンドへ移すだけとは区別します。アプリ情報とアイコンに出るアプリの名前は、プロジェクト名の<code>f02_stamp_release</code>です（F01から続けている場合は<code>f01_stamp_board</code>）。",
-      "translation": "Force stop the app from the Android app info, start it again from the icon, and check that the records are restored. This is different from just moving it to the background. The app name shown in app info and under the icon is the project name <code>f02_stamp_release</code> (or <code>f01_stamp_board</code> if you continued from F01)."
+      "source": "Androidのアプリ情報（<code>App info</code>）の<code>Force stop</code>でアプリを停止し、アイコンから起動し直して復元を確認します。バックグラウンドへ移すだけとは区別します。アプリ情報とアイコンに出るアプリの名前は、プロジェクト名の<code>f02_stamp_release</code>です（F01から続けている場合は<code>f01_stamp_board</code>）。",
+      "translation": "Stop the app with <code>Force stop</code> on the Android <code>App info</code> screen, start it again from the icon, and check that the records are restored. This is different from just moving it to the background. The app name shown in app info and under the icon is the project name <code>f02_stamp_release</code> (or <code>f01_stamp_board</code> if you continued from F01)."
     },
     {
       "source": "初期化を開いてやめるを選び、記録が残ることを確認します。",
@@ -803,8 +803,8 @@
       "translation": "In native apps too, the initial values in the source and the user data saved on the device are separate. Copying the APK is not handing over a backup of the storage area."
     },
     {
-      "source": "教員側に見せる内容をソースへ残す理由を説明できた。",
-      "translation": "You can explain why the content to show the teacher is kept in the source."
+      "source": "教員側に見せる内容を、保存データではなくソースへ残した。",
+      "translation": "The content to show the teacher has been kept in the source, not in the saved data."
     },
     {
       "source": "STEP 14 · コマ14",
@@ -955,8 +955,8 @@
       "translation": "Save the source, check what <code>flutter analyze</code> reports, and build the final APK with <code>flutter build apk</code>. Install the generated <code>app-release.apk</code> itself on Android with the command from STEP 12, and check it in the order from STEP 15."
     },
     {
-      "source": "Finderで<code>build/app/outputs/flutter-apk/app-release.apk</code>の容量と更新日時を確認します。教員が案内する提出先へ、そのAPKファイルとアレンジの説明を提出します。提出先・締め切り・ファイル名の指定がまだない場合は、授業中に先生へ確認してください。",
-      "translation": "In Finder, check the size and modification time of <code>build/app/outputs/flutter-apk/app-release.apk</code>. Submit that APK file and a description of your customization to the submission site your teacher tells you about. If the submission site, deadline, or file name has not been given yet, ask your teacher during class."
+      "source": "Finderで<code>build/app/outputs/flutter-apk/app-release.apk</code>の容量と更新日時を確認します。教員が案内する提出先へ、そのAPKファイルを提出します。提出先・締め切り・ファイル名の指定がまだない場合は、授業中に先生へ確認してください。",
+      "translation": "In Finder, check the size and modification time of <code>build/app/outputs/flutter-apk/app-release.apk</code>. Submit that APK file to the submission site your teacher tells you about. If the submission site, deadline, or file name has not been given yet, ask your teacher during class."
     },
     {
       "source": "ファイル名の指定がある場合は、確認済みAPKを別の提出用フォルダへコピーし、コピーの名前だけを指定に合わせます。拡張子.apkを保ちます。プロジェクトのZIP、<code>app-debug.apk</code>、ソースフォルダは今回の提出物ではありません。",
@@ -967,8 +967,8 @@
       "translation": "After submitting, check that the file name and size shown on the submission site match the ones you have. If the submission site allows it, download the submitted file again and check that it is the same APK. Keep your source for future fixes."
     },
     {
-      "source": "Androidの提出物としてAPKを渡す経験と同じです。保存データではなくアプリ本体を渡すため、相手の初期状態で見えるアレンジを説明します。",
-      "translation": "This is the same as handing in an APK as an Android deliverable. Because you hand over the app itself, not the saved data, explain the customization that is visible in the recipient's initial state."
+      "source": "Androidの提出物としてAPKを渡す経験と同じです。保存データではなくアプリ本体を渡すため、相手の初期状態で見えるアレンジにします。",
+      "translation": "This is the same as handing in an APK as an Android deliverable. Because you hand over the app itself, not the saved data, make customizations that are visible in the recipient's initial state."
     },
     {
       "source": "最終APKそのものを確認し、指定先へ提出したファイルを確かめた。",
@@ -979,16 +979,16 @@
       "translation": "STEP 18 · Session 15"
     },
     {
-      "source": "変更箇所と動作を説明する",
-      "translation": "Explain your changes and how the app works"
+      "source": "変更箇所と動作を確かめる",
+      "translation": "Check your changes and how the app works"
     },
     {
-      "source": "提出したアプリを見ながら、次の内容を短く説明します。",
-      "translation": "While looking at the app you submitted, explain the following briefly."
+      "source": "提出したアプリを動かしながら、次の内容を確かめます。",
+      "translation": "While running the app you submitted, check the following."
     },
     {
-      "source": "どのような人が、何を記録するためのスタンプ帳か。",
-      "translation": "What kind of person the stamp board is for, and what it records."
+      "source": "どのような人が、何を記録するためのスタンプ帳になっているか。",
+      "translation": "What kind of person your stamp board is made for, and what it records."
     },
     {
       "source": "どのファイルの、どの文字・色・初期データを変えたか。",
@@ -1003,16 +1003,16 @@
       "translation": "The difference between values that remain after a restart and values that go into the APK."
     },
     {
-      "source": "説明に自分の入力済みデータだけを使わず、初期画面から伝わる変更を示します。バグを直した場合は、直した箇所と確認した操作も添えます。",
-      "translation": "Do not use only your own entered data in the explanation; show changes that come across from the initial screen. If you fixed a bug, also add where you fixed it and which operations you checked."
+      "source": "自分の入力済みデータだけで確かめず、初期画面から伝わる変更になっているかを見ます。バグを直した場合は、直した箇所の操作ももう一度確かめます。",
+      "translation": "Do not check with only the data you have already entered; see whether your changes come across from the initial screen. If you fixed a bug, also check the operations of the part you fixed again."
     },
     {
-      "source": "処理の順序を追う既習の読み方を使い、非同期では完了を<code>await</code>で待つことを説明します。待機中の表示・操作の抑制も、保存の順番に対応しています。",
-      "translation": "Using the way you already read code by following the order of processing, explain that in asynchronous code you wait for completion with <code>await</code>. The display while waiting and the disabling of operations also correspond to the order of saving."
+      "source": "処理の順序を追う既習の読み方を使い、非同期では完了を<code>await</code>で待つことをコードで確かめます。待機中の表示・操作の抑制も、保存の順番に対応しています。",
+      "translation": "Using the way you already read code by following the order of processing, check in the code that in asynchronous code you wait for completion with <code>await</code>. The display while waiting and the disabling of operations also correspond to the order of saving."
     },
     {
-      "source": "自分の変更と、保存・表示の順序を説明できた。",
-      "translation": "You can explain your changes and the order of saving and display."
+      "source": "自分の変更と、保存・表示の順序をコードと画面で確かめた。",
+      "translation": "Your changes and the order of saving and display have been checked in the code and on the screen."
     },
     {
       "source": "STEP 19 · コマ15",
@@ -1027,20 +1027,20 @@
       "translation": "Finally, review the places you can customize that have already been covered. You can change the topic in <code>createInitialHabits</code>, the guidance in <code>Text</code>, the colors in <code>ThemeData</code>, the colors of <code>StampMarks</code>, and the spacing of <code>Padding</code> and <code>SizedBox</code> to fit your own purpose."
     },
     {
-      "source": "追加で直す場合も、ソース保存→解析→APK作成→そのAPKの操作確認という順番を保ちます。提出後にファイルを差し替える場合は、教員の提出ルールに従い、どの変更を入れた版かを説明してください。",
-      "translation": "When you make further fixes, keep the order: save the source → analyze → build the APK → check operations on that APK. If you replace the file after submitting, follow the teacher's submission rules and explain which changes the new version contains."
+      "source": "追加で直す場合も、ソース保存→解析→APK作成→そのAPKの操作確認という順番を保ちます。提出後にファイルを差し替える場合は、教員の提出ルールに従います。",
+      "translation": "When you make further fixes, keep the order: save the source → analyze → build the APK → check operations on that APK. If you replace the file after submitting, follow the teacher's submission rules."
     },
     {
-      "source": "いまある機能で、自分が選んだ習慣を入力し、できたことを残せる状態が完成です。どこを変えると何が変わるかを、自分のコードで示して授業を終えましょう。",
-      "translation": "The finished state is this: with the features you have now, you can enter the habits you chose and keep a record of what you did. Show in your own code what changes when you change each place, and finish the class."
+      "source": "いまある機能で、自分が選んだ習慣を入力し、できたことを残せる状態が完成です。どこを変えると何が変わるかを、自分のコードで確かめて授業を終えましょう。",
+      "translation": "The finished state is this: with the features you have now, you can enter the habits you chose and keep a record of what you did. Check in your own code what changes when you change each place, and finish the class."
     },
     {
       "source": "データの項目を変える目的はWeb基礎と同じです。Dartでは型に沿って初期データを用意し、その上へ入力・保存・復元を組み合わせました。新しいAPIを追加せず、既存の値と表示を使ってアレンジできます。",
       "translation": "Changing the data fields has the same purpose as in Web Basics. In Dart, you prepared the initial data according to the types, and combined input, saving, and restoring on top of it. You can customize with the existing values and display, without adding new APIs."
     },
     {
-      "source": "アレンジできる場所と確認の順を、自分のコードで説明できた。",
-      "translation": "You can explain the places you can customize and the order of checks, using your own code."
+      "source": "アレンジできる場所と確認の順を、自分のコードで確かめた。",
+      "translation": "The places you can customize and the order for checking them have been confirmed in your own code."
     },
     {
       "source": "状態",
@@ -1115,8 +1115,8 @@
       "translation": "Did you use the normal <code>release</code> build of <code>flutter build apk</code>, not <code>debug</code>? Check the size of <code>app-release.apk</code>."
     },
     {
-      "source": "学生用配布ZIPを展開し、<code>samples/F02StampRelease</code>をVisual Studio Codeの<code>File &gt; Open Folder…</code>で開きます。単体なら<a1>完成プロジェクトZIP</a1>を展開して中の<code>F02StampRelease</code>を開きます。自分の制作フォルダへ上書きしません。",
-      "translation": "Extract the student distribution ZIP, and open <code>samples/F02StampRelease</code> with <code>File &gt; Open Folder…</code> in Visual Studio Code. If you received it on its own, extract the <a1>completed project ZIP</a1> and open the <code>F02StampRelease</code> inside it. Do not overwrite your own work folder."
+      "source": "配布フォルダの<code>~/Documents/hybrid-app-student-materials-日付/samples/F02StampRelease</code>をFinderで開き、そのフォルダをVisual Studio Codeの<code>File &gt; Open Folder…</code>で開きます。<code>pubspec.yaml</code>が入っている階層を選びます。展開は済んでいるので、ZIPのダウンロードは要りません。自分の制作フォルダへ上書きしません。",
+      "translation": "In Finder, open <code>~/Documents/hybrid-app-student-materials-日付/samples/F02StampRelease</code> (日付 = date) in the distribution folder, then open that folder with <code>File &gt; Open Folder…</code> in Visual Studio Code. Choose the level that contains <code>pubspec.yaml</code>. The files are already extracted, so you do not need to download a ZIP. Do not overwrite your own work folder."
     },
     {
       "source": "<code>Terminal &gt; New Terminal</code>で<code>flutter pub get</code>と<code>flutter analyze</code>を実行します。<code>Flutter: Launch Emulator</code>で既存端末を起動し、<code>flutter devices</code>でIDを確認して<code>flutter run -d 端末ID</code>で実行します。APKの作成・実APKの確認は本文のSTEP 11〜12にあります。",

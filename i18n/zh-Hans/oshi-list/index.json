@@ -187,12 +187,12 @@
       "translation": "向详情传值，并完成返回操作。"
     },
     {
-      "source": "先生が見本を使うと案内したら、<a1>M01OshiListの完成プロジェクトを開く</a1>へ進みます。通常版Monacaへログインした状態で、取り込むプロジェクトを確認します。自分の制作を始めるにはSTEP 00へ進みます。",
-      "translation": "老师说明要使用示例时，前往<a1>打开 M01OshiList 的完成项目</a1>。在已登录标准版 Monaca 的状态下，确认要导入的项目。要开始自己的制作，请前往 STEP 00。"
+      "source": "先生が見本を使うと案内したら、配布フォルダの <code>~/Documents/hybrid-app-student-materials-日付/samples/M01OshiList</code> をFinderで開きます。<code>M01OshiList</code> の完成プロジェクトで、<code>www/index.html</code>・<code>www/css/style.css</code>・<code>www/js/app.js</code> を自分のコードと読み比べるために使います。自分の制作を始めるにはSTEP 00へ進みます。",
+      "translation": "老师说明要使用示例时，在 Finder 中打开分发文件夹中的 <code>~/Documents/hybrid-app-student-materials-日付/samples/M01OshiList</code>（日付 表示日期）。这是 <code>M01OshiList</code> 的完成项目，用来把 <code>www/index.html</code>、<code>www/css/style.css</code>、<code>www/js/app.js</code> 与自己的代码对照阅读。要开始自己的制作，请前往 STEP 00。"
     },
     {
-      "source": "完成見本の取り込みにも1枠を使います。Freeプランの3枠を確認し、URLを繰り返し開いて複数のコピーを作らないようにします。自分の作品は削除しません。配布ZIPの <code>samples/M01OshiList</code> はコードを読むための見本です。",
-      "translation": "导入完成示例也会占用1个名额。请确认 Free 方案的3个名额，不要反复打开该 URL 而生成多个副本。不要删除自己的作品。分发 ZIP 中的 <code>samples/M01OshiList</code> 是用来阅读代码的示例。"
+      "source": "Monaca クラウド IDEは、Macのフォルダをそのまま開けません。見本をMonacaで動かすときは、先生がZIPにして公開した<a1>M01OshiListの取り込み用URL</a1>を、通常版Monacaへログインした状態で開き、取り込みます。取り込みにもFreeプランの3枠のうち1枠を使うので、空きを確かめてからURLを1回だけ開き、自分の作品は削除しません。取り込み用URLがあっても、Freeプランの制限（プロジェクトの数や、対応するCordovaの版）で、取り込めない、または取り込んだ見本を開けないことがあります。そのときは無理に取り込まず、先生に知らせてください。見本のコードは配布フォルダの <code>samples</code> で読めるので、取り込めなくても授業は進められます。",
+      "translation": "Monaca クラウド IDE 不能直接打开 Mac 上的文件夹。要在 Monaca 中运行示例时，请在已登录标准版 Monaca 的状态下，打开老师把项目打包成 ZIP 后公开的<a1>M01OshiList 的导入链接</a1>，进行导入。导入也会占用 Free 方案3个名额中的1个，所以请先确认有空余名额，只打开一次链接，不要删除自己的作品。即使有导入链接，也可能因为 Free 方案的限制（项目数量、支持的 Cordova 版本）而无法导入，或者无法打开导入的示例。这时不要勉强导入，请告诉老师。示例的代码可以在分发文件夹的 <code>samples</code> 中阅读，所以即使无法导入，也能继续上课。"
     },
     {
       "source": "STEP 00 · コマ1",
@@ -247,8 +247,8 @@
       "translation": "www/css/style.css · 完整代码"
     },
     {
-      "source": "通常版Monacaで自分のM01OshiListを開き、準備用の文字を表示できた。",
-      "translation": "已在标准版 Monaca 中打开自己的 M01OshiList，并显示出准备用的文字。"
+      "source": "通常版Monacaで自分の <code>M01OshiList</code> を開き、準備用の文字を表示できた。",
+      "translation": "已在标准版 Monaca 中打开自己的 <code>M01OshiList</code>，并显示出准备用的文字。"
     },
     {
       "source": "STEP 01 · コマ1",
@@ -399,8 +399,8 @@
       "translation": "可以修改的地方"
     },
     {
-      "source": "カードの名前・種類・ひとこと、背景色、角丸の数値を変えられます。自分の好きなものと、その理由を自分の言葉で書きましょう。1か所変えるたびに保存・再読み込みをし、何が変わったかを説明します。",
-      "translation": "可以改变卡片的名称、类别、一句话、背景色和圆角的数值。用自己的话写下自己喜欢的东西及其理由。每改1处就保存并重新加载，然后说明什么发生了变化。"
+      "source": "カードの名前・種類・ひとこと、背景色、角丸の数値を変えられます。自分の好きなものと、その理由を自分の言葉で書きましょう。1か所変えるたびに保存・再読み込みをし、何が変わったかを確かめます。",
+      "translation": "可以改变卡片的名称、类别、一句话、背景色和圆角的数值。用自己的话写下自己喜欢的东西及其理由。每改1处就保存并重新加载，然后确认什么发生了变化。"
     },
     {
       "source": "STEP 05 · コマ2",
@@ -415,8 +415,8 @@
       "translation": "从本节课起中途加入的人：起始时的完整代码"
     },
     {
-      "source": "同じM01OshiListを開き、各ファイルを次の内容にそろえて保存します。前のコマのアレンジを残したい人は、その文字や色を控えてから進みます。",
-      "translation": "打开同一个 M01OshiList，把各文件调整为下面的内容并保存。想保留上一节课修改的人，先记下那些文字和颜色再继续。"
+      "source": "同じ <code>M01OshiList</code> を開き、各ファイルを次の内容にそろえて保存します。前のコマのアレンジを残したい人は、その文字や色を控えてから進みます。",
+      "translation": "打开同一个 <code>M01OshiList</code>，把各文件调整为下面的内容并保存。想保留上一节课修改的人，先记下那些文字和颜色再继续。"
     },
     {
       "source": "第2コマでは、同じHTMLからOSに合った見た目を作る <strong>auto-styling</strong> を確かめます。使うのは <strong>Onsen UI 2.12.9</strong> です。Onsen UIはHTMLに画面部品を加えるUIライブラリで、この授業では素のJavaScriptから操作します。",
@@ -447,8 +447,8 @@
       "translation": "www/js/app.js · 完整代码"
     },
     {
-      "source": "版番号付きの3本の読み込みと、自分のapp.jsの位置を確認した。",
-      "translation": "已确认带版本号的3处加载，以及自己的 app.js 的位置。"
+      "source": "版番号付きの3本の読み込みと、自分の <code>app.js</code> の位置を確認した。",
+      "translation": "已确认带版本号的3处加载，以及自己的 <code>app.js</code> 的位置。"
     },
     {
       "source": "STEP 06 · コマ2",
@@ -471,8 +471,8 @@
       "translation": "保存并重新加载，确认上方的工具栏中显示了「好きなものノート」（喜爱笔记）。卡片显示在工具栏下方。如果标签名直接变成了文字，就检查是否有全角符号或缺少结束标签。"
     },
     {
-      "source": "Web基礎の <code>div</code> にCSSを付けて領域を作る代わりに、<code>ons-page</code> と <code>ons-toolbar</code> という部品を使います。AndroidのToolbar、iOSのナビゲーションバーと、画面の題名を置く役割は対応します。今回はHTMLで同じ部品の役割を指定します。",
-      "translation": "不再像 Web 基础那样给 <code>div</code> 加 CSS 来划分区域，而是使用 <code>ons-page</code> 和 <code>ons-toolbar</code> 这两个部件。放置页面标题的作用，与 Android 的 Toolbar、iOS 的导航栏对应。这次用 HTML 指定相同部件的作用。"
+      "source": "Web基礎の <code>div</code> にCSSを付けて領域を作る代わりに、<code>ons-page</code> と <code>ons-toolbar</code> という部品を使います。Androidの <code>Toolbar</code>、iOSのナビゲーションバーと、画面の題名を置く役割は対応します。今回はHTMLで同じ部品の役割を指定します。",
+      "translation": "不再像 Web 基础那样给 <code>div</code> 加 CSS 来划分区域，而是使用 <code>ons-page</code> 和 <code>ons-toolbar</code> 这两个部件。放置页面标题的作用，与 Android 的 <code>Toolbar</code>、iOS 的导航栏对应。这次用 HTML 指定相同部件的作用。"
     },
     {
       "source": "ツールバーの下に3枚のカードが表示された。",
@@ -567,8 +567,8 @@
       "translation": "把 <code>\"android\"</code> 改写为 <code>\"ios\"</code>，保存后重新加载整个预览。不改变 HTML 和自己的 CSS，比较相同的位置。"
     },
     {
-      "source": "違いを1つ、共通する内容を1つ、言葉で説明します。",
-      "translation": "用语言说明1处不同点和1处相同点。"
+      "source": "違いを1つ、共通する内容を1つ、見つけます。",
+      "translation": "找出1处不同点和1处相同点。"
     },
     {
       "source": "OSの指定はOnsen UIが画面を作る前に必要です。<code>app.js</code> の先頭で行い、後のイベント処理の中へ移しません。この指定は<strong>表示スタイルの比較</strong>であり、ブラウザをAndroidやiOSの実機に変える操作ではありません。",
@@ -655,8 +655,8 @@
       "translation": "这和 Web 基础中注册 <code>click</code> 发生时的函数所用的 <code>addEventListener</code> 相同。这次接收的不是操作的通知，而是 Onsen UI 页面准备完成的通知。与 Android 中先准备好视图再引用部件、iOS 中从 <code>viewDidLoad</code> 设置视图的顺序对应。因为通知的名称和对象不同，所以还要确认页面的 <code>id</code>。"
     },
     {
-      "source": "initで一覧ページを判定し、画面の文字を変更できた。",
-      "translation": "已在 init 中判断出列表页面，并改变了页面上的文字。"
+      "source": "<code>init</code> で一覧ページを判定し、画面の文字を変更できた。",
+      "translation": "已在 <code>init</code> 中判断出列表页面，并改变了页面上的文字。"
     },
     {
       "source": "STEP 11 · コマ3",
@@ -703,8 +703,8 @@
       "translation": "在 Java 或 Swift 中，也曾用数组保存把一条的值归拢在一起的数据。在 JavaScript 中，像 <code>{ name: \"…\", genre: \"…\" }</code> 这样写属性名和值，并用 <code>.name</code> 引用。读取条数的目的与 Java 数组的 <code>length</code> 相同。这里不进行向其他保存格式的转换。"
     },
     {
-      "source": "配列の件数を画面へ表示し、1件のname・genre・commentを読み取れた。",
-      "translation": "已把数组的条数显示到页面上，并能读取一条中的 name、genre、comment。"
+      "source": "配列の件数を画面へ表示し、1件の <code>name</code>・<code>genre</code>・<code>comment</code> を読み取れた。",
+      "translation": "已把数组的条数显示到页面上，并能读取一条中的 <code>name</code>、<code>genre</code>、<code>comment</code>。"
     },
     {
       "source": "STEP 12 · コマ3",
@@ -835,20 +835,20 @@
       "translation": "<code>ons-navigator</code> 是把多个页面叠放起来管理的部件。在 <code>page=\"list.html\"</code> 中指定最初显示的页面。这个 <code>list.html</code> 不是另一个文件，而是同一份 HTML 中 <code>template id=\"list.html\"</code> 的名字。"
     },
     {
-      "source": "<code>template</code> の中身は、書いた場所で直ちに表示されるのではなく、必要なときに使うHTMLのひな形です。中には1個の <code>ons-page</code> を置きます。navigatorが一覧ページを作ると <code>init</code> が通知され、第3コマと同じ関数が行を作ります。",
-      "translation": "<code>template</code> 的内容不会在写的位置立即显示，而是需要时使用的 HTML 模板。里面放1个 <code>ons-page</code>。navigator 生成列表页面后会发出 <code>init</code> 通知，由与第3节课相同的函数生成行。"
+      "source": "<code>template</code> の中身は、書いた場所で直ちに表示されるのではなく、必要なときに使うHTMLのひな形です。中には1個の <code>ons-page</code> を置きます。<code>ons-navigator</code> が一覧ページを作ると <code>init</code> が通知され、第3コマと同じ関数が行を作ります。",
+      "translation": "<code>template</code> 的内容不会在写的位置立即显示，而是需要时使用的 HTML 模板。里面放1个 <code>ons-page</code>。<code>ons-navigator</code> 生成列表页面后会发出 <code>init</code> 通知，由与第3节课相同的函数生成行。"
     },
     {
       "source": "保存・再読み込みし、3件と選択表示が前と同じように動くことを確かめます。画面に変化がなくても、いまは管理の仕方を切り替えた段階なので正解です。",
       "translation": "保存并重新加载，确认3条和选择显示与之前一样工作。即使页面没有变化也是正确的，因为现在只是切换了管理方式的阶段。"
     },
     {
-      "source": "Androidで画面のレイアウトを用意して必要なときに表示する、iOSでビューコントローラをナビゲーションコントローラへ積む考え方と対応します。Web基礎の別ページへのリンクではなく、同じHTML内のひな形をnavigatorが画面として管理します。要素を使う処理は、ひな形が実際に配置された後の <code>init</code> に置きます。",
-      "translation": "与 Android 中先准备好页面布局、需要时再显示，以及 iOS 中把视图控制器压入导航控制器的思路对应。不是 Web 基础中指向其他页面的链接，而是由 navigator 把同一份 HTML 中的模板当作页面来管理。使用元素的处理，放在模板实际放置之后的 <code>init</code> 中。"
+      "source": "Androidで画面のレイアウトを用意して必要なときに表示する、iOSでビューコントローラをナビゲーションコントローラへ積む考え方と対応します。Web基礎の別ページへのリンクではなく、同じHTML内のひな形を <code>ons-navigator</code> が画面として管理します。要素を使う処理は、ひな形が実際に配置された後の <code>init</code> に置きます。",
+      "translation": "与 Android 中先准备好页面布局、需要时再显示，以及 iOS 中把视图控制器压入导航控制器的思路对应。不是 Web 基础中指向其他页面的链接，而是由 <code>ons-navigator</code> 把同一份 HTML 中的模板当作页面来管理。使用元素的处理，放在模板实际放置之后的 <code>init</code> 中。"
     },
     {
-      "source": "navigatorとtemplateへ移しても、一覧と選択が動いた。",
-      "translation": "改用 navigator 和 template 之后，列表和选择仍然正常工作。"
+      "source": "<code>ons-navigator</code> と <code>template</code> へ移しても、一覧と選択が動いた。",
+      "translation": "改用 <code>ons-navigator</code> 和 <code>template</code> 之后，列表和选择仍然正常工作。"
     },
     {
       "source": "STEP 16 · コマ4",
@@ -879,8 +879,8 @@
       "translation": "在其他行上也确认打开详情和返回。本 STEP 不要连续点击，等页面的动作结束后再操作。"
     },
     {
-      "source": "<code>ons-back-button</code> は、そのページを管理するnavigatorの前のページへ戻す部品です。自分でクリック処理を追加しなくても動きます。ページの切り替わり方もOSのスタイルで変わるので、常に同じ方向へスライドするとは限りません。ボタンの見た目もOSのスタイルで変わります。iOS向けでは、HTMLに書いた文字を添えて「＜ 戻る」と表示されます。Android向けでは左向きの矢印「←」だけになり、「戻る」の文字は表示されません。どちらも同じ <code>ons-back-button</code> で、押したときの動きは同じです。",
-      "translation": "<code>ons-back-button</code> 是让管理该页面的 navigator 返回上一个页面的部件。不用自己添加点击处理也能工作。页面的切换方式也会随 OS 的风格而变化，所以不一定总是向同一个方向滑动。按钮的外观也随 OS 的风格而变化。iOS 风格下，会带上 HTML 中写的文字，显示为「＜ 戻る」（＜ 返回）。Android 风格下只有向左的箭头「←」，不显示「戻る」（返回）的文字。两者都是同一个 <code>ons-back-button</code>，按下时的动作相同。"
+      "source": "<code>ons-back-button</code> は、そのページを管理する <code>ons-navigator</code> の前のページへ戻す部品です。自分でクリック処理を追加しなくても動きます。ページの切り替わり方もOSのスタイルで変わるので、常に同じ方向へスライドするとは限りません。ボタンの見た目もOSのスタイルで変わります。iOS向けでは、HTMLに書いた文字を添えて「＜ 戻る」と表示されます。Android向けでは左向きの矢印「←」だけになり、「戻る」の文字は表示されません。どちらも同じ <code>ons-back-button</code> で、押したときの動きは同じです。",
+      "translation": "<code>ons-back-button</code> 是让管理该页面的 <code>ons-navigator</code> 返回上一个页面的部件。不用自己添加点击处理也能工作。页面的切换方式也会随 OS 的风格而变化，所以不一定总是向同一个方向滑动。按钮的外观也随 OS 的风格而变化。iOS 风格下，会带上 HTML 中写的文字，显示为「＜ 戻る」（＜ 返回）。Android 风格下只有向左的箭头「←」，不显示「戻る」（返回）的文字。两者都是同一个 <code>ons-back-button</code>，按下时的动作相同。"
     },
     {
       "source": "iOSのナビゲーションコントローラで次の画面をpushし、戻る操作でpopする構造と同じです。Androidで次の画面へ進んで戻る場合と同様、一覧を消して作り直す操作ではありません。Onsen UIでは <code>pushPage</code> で積み、<code>ons-back-button</code> に戻る操作を任せます。見た目も、iOSのナビゲーションバーの文字つきの戻るボタンと、Androidのツールバーの矢印だけの戻るボタンに合わせて、Onsen UIが描き分けます。",
@@ -923,12 +923,12 @@
       "translation": "查看理由中的 <code>\\n</code> 是否变成了换行。CSS 的 <code>white-space: pre-wrap</code> 会在保留换行的同时自动折行。"
     },
     {
-      "source": "このSTEPも画面の動きが終わってから次を押します。画面の切り替えの途中に届いた2回目の操作は、Onsen UIのnavigatorが受け付けないので、続けて押しても詳細は重なりません。次のSTEPでは、この仕組みに任せきりにせず、アプリの側でも開く途中かどうかを記録します。",
-      "translation": "本 STEP 也要等页面的动作结束后再点击下一个。在页面切换途中到达的第2次操作，Onsen UI 的 navigator 不会接受，所以连续点击也不会叠加详情。下一个 STEP 不完全依赖这个机制，而是在应用一侧也记录是否正在打开。"
+      "source": "このSTEPも画面の動きが終わってから次を押します。画面の切り替えの途中に届いた2回目の操作は、Onsen UIの <code>ons-navigator</code> が受け付けないので、続けて押しても詳細は重なりません。次のSTEPでは、この仕組みに任せきりにせず、アプリの側でも開く途中かどうかを記録します。",
+      "translation": "本 STEP 也要等页面的动作结束后再点击下一个。在页面切换途中到达的第2次操作，Onsen UI 的 <code>ons-navigator</code> 不会接受，所以连续点击也不会叠加详情。下一个 STEP 不完全依赖这个机制，而是在应用一侧也记录是否正在打开。"
     },
     {
-      "source": "Androidで次の画面へ値を渡す、iOSで遷移先に表示用の値を渡す目的と同じです。Onsen UIではnavigatorの <code>data</code> を渡し、作られたページの <code>page.data</code> から受け取ります。ここで渡すのは実行中のJavaScriptオブジェクトで、ファイルへ保存したり文字列へ変換したりしているわけではありません。",
-      "translation": "目的与 Android 中向下一个页面传值、iOS 中向跳转目标传显示用的值相同。在 Onsen UI 中传入 navigator 的 <code>data</code>，从生成的页面的 <code>page.data</code> 接收。这里传递的是运行中的 JavaScript 对象，并没有保存到文件或转换成字符串。"
+      "source": "Androidで次の画面へ値を渡す、iOSで遷移先に表示用の値を渡す目的と同じです。Onsen UIでは <code>ons-navigator</code> の <code>data</code> を渡し、作られたページの <code>page.data</code> から受け取ります。ここで渡すのは実行中のJavaScriptオブジェクトで、ファイルへ保存したり文字列へ変換したりしているわけではありません。",
+      "translation": "目的与 Android 中向下一个页面传值、iOS 中向跳转目标传显示用的值相同。在 Onsen UI 中传入 <code>ons-navigator</code> 的 <code>data</code>，从生成的页面的 <code>page.data</code> 接收。这里传递的是运行中的 JavaScript 对象，并没有保存到文件或转换成字符串。"
     },
     {
       "source": "3件それぞれの名前・種類・理由が詳細へ渡り、改行も表示された。",
@@ -943,8 +943,8 @@
       "translation": "连续点击也不叠加详情"
     },
     {
-      "source": "<code>www/js/app.js</code> を全文に置き換えます。完成版では <code>isOpeningDetail</code> という真偽値と、navigatorの現在のページを使って、詳細を重ねて開くことを防ぎます。Onsen UIのnavigatorも、切り替えの途中に届いた2回目の <code>pushPage</code> は受け付けませんが、断られた呼び出しはエラーになります。アプリの側で開く途中かどうかを記録しておけば、2回目の呼び出しそのものをしないで済みます。",
-      "translation": "把 <code>www/js/app.js</code> 替换为完整代码。完成版使用名为 <code>isOpeningDetail</code> 的布尔值和 navigator 的当前页面，防止叠加打开详情。Onsen UI 的 navigator 虽然也不接受切换途中到达的第2次 <code>pushPage</code>，但被拒绝的调用会报错。在应用一侧记录是否正在打开，就可以不发出第2次调用。"
+      "source": "<code>www/js/app.js</code> を全文に置き換えます。完成版では <code>isOpeningDetail</code> という真偽値と、<code>ons-navigator</code> の現在のページを使って、詳細を重ねて開くことを防ぎます。Onsen UIの <code>ons-navigator</code> も、切り替えの途中に届いた2回目の <code>pushPage</code> は受け付けませんが、断られた呼び出しはエラーになります。アプリの側で開く途中かどうかを記録しておけば、2回目の呼び出しそのものをしないで済みます。",
+      "translation": "把 <code>www/js/app.js</code> 替换为完整代码。完成版使用名为 <code>isOpeningDetail</code> 的布尔值和 <code>ons-navigator</code> 的当前页面，防止叠加打开详情。Onsen UI 的 <code>ons-navigator</code> 虽然也不接受切换途中到达的第2次 <code>pushPage</code>，但被拒绝的调用会报错。在应用一侧记录是否正在打开，就可以不发出第2次调用。"
     },
     {
       "source": "場所",
@@ -967,12 +967,12 @@
       "translation": "在下一次点击到来之前，记录为正在打开。"
     },
     {
-      "source": "ページを開く処理が終わったときに実行される関数。ここで真偽値をfalseへ戻す。",
-      "translation": "打开页面的处理结束时执行的函数。在这里把布尔值恢复为 false。"
+      "source": "ページを開く処理が終わったときに実行される関数。ここで真偽値を <code>false</code> へ戻す。",
+      "translation": "打开页面的处理结束时执行的函数。在这里把布尔值恢复为 <code>false</code>。"
     },
     {
-      "source": "<code>||</code> は「どちらか」、<code>!==</code> は「等しくない」、<code>return</code> はこの関数をそこで終える、というWeb基礎の書き方です。開き終わって真偽値がfalseになっても、詳細が一番上ならもう一度開きません。",
-      "translation": "<code>||</code> 表示“二者之一”，<code>!==</code> 表示“不等于”，<code>return</code> 表示在此结束这个函数，这些都是 Web 基础中的写法。即使打开完毕、布尔值变为 false，只要详情在最上层，就不会再次打开。"
+      "source": "<code>||</code> は「どちらか」、<code>!==</code> は「等しくない」、<code>return</code> はこの関数をそこで終える、というWeb基礎の書き方です。開き終わって真偽値が <code>false</code> になっても、詳細が一番上ならもう一度開きません。",
+      "translation": "<code>||</code> 表示“二者之一”，<code>!==</code> 表示“不等于”，<code>return</code> 表示在此结束这个函数，这些都是 Web 基础中的写法。即使打开完毕、布尔值变为 <code>false</code>，只要详情在最上层，就不会再次打开。"
     },
     {
       "source": "保存して再読み込みし、同じ行を続けて2回押します。",
@@ -1043,16 +1043,16 @@
       "translation": "通过导入链接交给对方的，是写在源代码中的数组、HTML 和 CSS。现在页面上选中的项目不会交过去。本单元也没有保存功能。"
     },
     {
-      "source": "Web基礎で作ったHTML・CSS・JavaScriptの役割分担は、完成版でも同じです。画面間の移動と値の受け渡しはAndroid・iOSの経験と対応します。今回の新しい考え方は、OS別の見た目を共通のHTMLへ適用するauto-stylingです。自分で変えた内容と、OSによる違いを分けて説明しましょう。",
-      "translation": "在 Web 基础中做过的 HTML、CSS、JavaScript 的分工，在完成版中也是一样的。页面之间的跳转和值的传递，与 Android、iOS 的经验对应。这次的新思路是把各 OS 的外观应用到共通 HTML 上的 auto-styling。请把自己改变的内容和因 OS 而产生的差别分开说明。"
+      "source": "Web基礎で作ったHTML・CSS・JavaScriptの役割分担は、完成版でも同じです。画面間の移動と値の受け渡しはAndroid・iOSの経験と対応します。今回の新しい考え方は、OS別の見た目を共通のHTMLへ適用するauto-stylingです。自分で変えた内容と、OSによる違いを分けて確かめましょう。",
+      "translation": "在 Web 基础中做过的 HTML、CSS、JavaScript 的分工，在完成版中也是一样的。页面之间的跳转和值的传递，与 Android、iOS 的经验对应。这次的新思路是把各 OS 的外观应用到共通 HTML 上的 auto-styling。请把自己改变的内容和因 OS 而产生的差别分开确认。"
     },
     {
-      "source": "一覧・詳細・戻る・連続クリック・OSによる差を確認し、自分の変更箇所を説明できる。",
-      "translation": "已确认列表、详情、返回、连续点击和 OS 造成的差别，能够说明自己修改的地方。"
+      "source": "一覧・詳細・戻る・連続クリック・OSによる差を確認し、自分の変更箇所を記録した。",
+      "translation": "已确认列表、详情、返回、连续点击和 OS 造成的差别，并记录了自己修改的地方。"
     },
     {
-      "source": "<code>oshiItems</code> の名前・種類・理由・件数、HTMLの見出し、CSSの色・余白・文字サイズを変えられます。自分の好きなものと、その理由を自分の言葉で書きます。次に1か所だけ見た目を変え、どのファイルの何を変え、どの画面へ反映されたかを説明してください。",
-      "translation": "可以改变 <code>oshiItems</code> 的名称、类别、理由、条数，HTML 的标题，以及 CSS 的颜色、边距、文字大小。用自己的话写下自己喜欢的东西及其理由。然后只改1处外观，说明改了哪个文件的什么，反映到了哪个页面上。"
+      "source": "<code>oshiItems</code> の名前・種類・理由・件数、HTMLの見出し、CSSの色・余白・文字サイズを変えられます。自分の好きなものと、その理由を自分の言葉で書きます。次に1か所だけ見た目を変え、どのファイルの何を変え、どの画面へ反映されたかを確かめてください。",
+      "translation": "可以改变 <code>oshiItems</code> 的名称、类别、理由、条数，HTML 的标题，以及 CSS 的颜色、边距、文字大小。用自己的话写下自己喜欢的东西及其理由。然后只改1处外观，确认改了哪个文件的什么，反映到了哪个页面上。"
     },
     {
       "source": "見えること",
