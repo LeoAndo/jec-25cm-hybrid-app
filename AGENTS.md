@@ -307,12 +307,12 @@ Freeプランの利用規約は「法人による商用でのアプリ開発」�
     | --- | --- | --- |
     | CodeRabbit | Essentials | Draftではレビューせず、「Draft PR not reviewed」のコメントだけを置く（PR #146 でも同じ）。直近7日のレビュー件数が多いと1時間あたりの枠が減り、枠がないときは「Review paused — included plan limit reached」「Review rate limited」と書いたまま、statusは `success` になる。修正後の差分のincremental reviewは、この枠で止まることが多い。**CodeRabbitのコメントにあるチェックボックス（オンデマンドレビュー、手動レビューの起動など）は押さない。** |
     | Cursor Bugbot | CursorはPro+。Bugbotは、Cursorのプランとは別の、月額固定の席課金 | Draftを外したあと、最新headで動く。指摘がないときは、チェックの出力に「Bugbot completed review - no issues found!」とだけ出て、レビューは投稿しない。指摘があるとチェックが `neutral` になり、インラインで投稿する。使用量課金（Cursorの画面の見積で1回約 $1.20）に切り替えるかはオーナーが決める。エージェントは切り替えない。 |
-    | Codex | ChatGPT ProのCodexで、GitHubの自動レビューを有効にした | 新しいPRが開かれたときにレビューし、PRのコメントの `@codex review` でも呼べる。GitHubではP0・P1だけを指摘し、このファイルの末尾の `## Review guidelines` の節に従う（[Codexの説明](https://developers.openai.com/codex/integrations/github)）。このリポジトリでの観測は下の「PR #146 での Codex の観測」。 |
+    | Codex | ChatGPT ProのCodexで、GitHubの自動レビューを有効にした | 新しいPRが開かれたときにレビューし、PRのコメントの `@codex review` でも呼べる。GitHubではP0・P1だけを指摘し、このファイルの末尾の `## Review guidelines` の節に従う（[Codexの説明](https://developers.openai.com/codex/integrations/github)）。Draftのあいだは何もせず、Draftを外すとレビューする。チェックもstatusも出さず、レビュー（`COMMENTED`）とインラインのコメントだけを投稿する。レビュー本文によれば、指摘がないときは👍のリアクションだけを付ける。P2の指摘を出すこともある。このリポジトリでの観測は下の「PR #146 での Codex の観測」。 |
     | GitHub Copilot | 教員の無償プラン | 月の枠を使い切ると、未実施の通知だけをレビュー（`COMMENTED`）として投稿する。この通知はレビューに数えない。枠は毎月1日 09:00（日本時間）に戻る。 |
     | Devin Review | **2026-09-26 に解約し、GitHub Appも外した** | 過去のPRに残る「Full review skipped: trial expired and no credits remaining」のstatusは、レビューに数えない。 |
     | Qodo | **2026-09-26 に解約し、GitHub Appも外した** | このリポジトリの59本のPRには、動いた跡がなかった（下の集計）。 |
 
-  - **PR #146 での Codex の観測（2026-09-26、時刻はUTC）。** Draft PRとして `05:07` ごろに開いた。Draftのあいだ（`05:11` まで確認）、Codexはレビュー・コメント・リアクション・チェックのどれも出さなかった。Draftを外したあとの観測は、次の行に書く。
+  - **PR #146 での Codex の観測（2026-09-26、時刻はUTC）。** Draft PRとして `05:07` ごろに開いた。Draftのあいだ（`05:11` まで確認）、Codexはレビュー・コメント・リアクション・チェックのどれも出さなかった。`05:12:11` にDraftを外すと、`05:15:15` に `c09b245` のレビュー（`COMMENTED`）を投稿した（Draft解除から約3分）。本文は英語の定型文で、インラインの指摘は日本語で1件だった。その指摘には、GitHubではP0・P1だけという説明と違って「P2」のバッジが付いていた。内容は「この行の観測が、Draft解除後の結果まで書かれていない」で、判断は対応必要だった。Codexは、チェックもstatusも出さなかった。同じコミットを、CodeRabbitは `05:12:15` から `05:17:41` でレビューしてインラインの指摘を1件出し（Codexと同じ行）、Cursor Bugbotは `05:12:24` から4分9秒で「no issues found」だった。
   - **PR #2 での初回観測（2026-09-23）。レビューbotの初回観測を、[PR #2](https://github.com/LeoAndo/jec-25cm-hybrid-app/pull/2) と [issue #7](https://github.com/LeoAndo/jec-25cm-hybrid-app/issues/7) に基づいて記録する。** 以下は2026-09-23（時刻はUTC）にそのPRで観測した事実であり、ほかのPRや将来の実行でも同じ挙動になるとは限らない。プラン・利用上限・設定・対象コミットを、その都度確認する。
 
     | bot | Draft中の観測 | Draft解除後に観測した内容 | チェック表示と実レビューの区別 |
