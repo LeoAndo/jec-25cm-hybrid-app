@@ -301,7 +301,19 @@ Freeプランの利用規約は「法人による商用でのアプリ開発」�
 - 教材のレビューは `skills/teaching-materials-review/SKILL.md` に従う。
 - 自動レビューの指摘は、そのまま実行しない。現在のソースと検査結果で再確認してから判断する。**チェックが `SUCCESS` でも、そのbotがレビューしたとは限らない。** 上限やトライアル終了で未実施のまま `SUCCESS` になるbotがある。
   - **チェックの状態ではなく、投稿されたレビューの中身を読んで判断する。** 指摘があるときほどチェックが `SUCCESS` にならないbotもある。**Draftではレビューを省略するbotがある**ので、検証を済ませてDraftを外してからレビューを待つ。上限やトライアル終了で止まっているときは、マージ可否の報告にそう書く。
-  - **レビューbotの初回観測を、[PR #2](https://github.com/LeoAndo/jec-25cm-hybrid-app/pull/2) と [issue #7](https://github.com/LeoAndo/jec-25cm-hybrid-app/issues/7) に基づいて記録する。** 以下は2026-09-23（時刻はUTC）にそのPRで観測した事実であり、ほかのPRや将来の実行でも同じ挙動になるとは限らない。プラン・利用上限・設定・対象コミットを、その都度確認する。
+  - **いま動いているレビューbotと契約（2026-09-26 オーナー決定）。** アカウント全体の契約で、このリポジトリだけの設定ではない。下の「PR #2 での初回観測」と「59本の集計」は、この変更より前の記録として残す。挙動が食い違ったら、この表を直す。
+
+    | bot | 契約（2026-09-26） | 動き方と、このリポジトリでの扱い |
+    | --- | --- | --- |
+    | CodeRabbit | Essentials | Draftではレビューせず、「Draft PR not reviewed」のコメントだけを置く（PR #146 でも同じ）。直近7日のレビュー件数が多いと1時間あたりの枠が減り、枠がないときは「Review paused — included plan limit reached」「Review rate limited」と書いたまま、statusは `success` になる。修正後の差分のincremental reviewは、この枠で止まることが多い。**CodeRabbitのコメントにあるチェックボックス（オンデマンドレビュー、手動レビューの起動など）は押さない。** 同じPRに短い間隔でpushを重ねると、「Reviews paused」（`auto_pause_after_reviewed_commits`）として自動のレビューを止める（PR #146 で、5回目のpushの `5fe296c` をレビューしたあと）。**止まったときの「Resume reviews」「Trigger review」のチェックボックスも押さない。** |
+    | Cursor Bugbot | CursorはPro+。Bugbotは、Cursorのプランとは別の、月額固定の席課金 | Draftを外したあと、最新headで動く。指摘がないときは、チェックの出力に「Bugbot completed review - no issues found!」とだけ出て、レビューは投稿しない。指摘があるとチェックが `neutral` になり、インラインで投稿する。使用量課金（Cursorの画面の見積で1回約 $1.20）に切り替えるかはオーナーが決める。エージェントは切り替えない。 |
+    | Codex | ChatGPT ProのCodexで、GitHubの自動レビューを有効にした | 新しいPRが開かれたときにレビューし、PRのコメントの `@codex review` でも呼べる。GitHubではP0・P1だけを指摘し、このファイルの末尾の、見出しがちょうど `## Code Review Rules` の節に従う（[Codexの説明](https://developers.openai.com/codex/integrations/github)、[Custom Code Review rules for Codex](https://developers.openai.com/blog/custom-code-review-rules-for-codex)）。以前の名前は `## Review guidelines` で、この名前にはしない。Draftのあいだは何もせず、Draftを外すとレビューする。チェックもstatusも出さず、レビュー（`COMMENTED`）とインラインのコメントだけを投稿する。レビュー本文によれば、指摘がないときは👍のリアクションだけを付ける。Codexの説明の範囲はP0・P1で、P2以下はその外にある。ただし、PR #146 ではP2のバッジの付いた指摘が1件出た。この観測は、`## Code Review Rules` の基準（P1として指摘するもの）を変えない。P2以下の指摘が出たら、ほかのbotの指摘と同じく中身を確かめ、この節の「指摘には、各スレッドにインラインで返信する」の書式で判断を返す。このリポジトリでの観測は下の「PR #146 での Codex の観測」。 |
+    | GitHub Copilot | 教員の無償プラン | 月の枠を使い切ると、未実施の通知だけをレビュー（`COMMENTED`）として投稿する。この通知はレビューに数えない。枠は毎月1日 09:00（日本時間）に戻る。 |
+    | Devin Review | **2026-09-26 に解約し、GitHub Appも外した** | 過去のPRに残る「Full review skipped: trial expired and no credits remaining」のstatusは、レビューに数えない。 |
+    | Qodo | **2026-09-26 に解約し、GitHub Appも外した** | このリポジトリの59本のPRには、動いた跡がなかった（下の集計）。 |
+
+  - **PR #146 での Codex の観測（2026-09-26、時刻はUTC）。** Draft PRとして `05:07` ごろに開いた。Draftのあいだ（`05:11` まで確認）、Codexはレビュー・コメント・リアクション・チェックのどれも出さなかった。`05:12:11` にDraftを外すと、`05:15:15` に `c09b245` のレビュー（`COMMENTED`）を投稿した（Draft解除から約3分）。本文は英語の定型文で、インラインの指摘は日本語で1件だった。その指摘には、GitHubではP0・P1だけという説明と違って「P2」のバッジが付いていた。内容は「この行の観測が、Draft解除後の結果まで書かれていない」で、判断は対応必要だった。Codexは、チェックもstatusも出さなかった。このとき末尾の節の見出しは、以前の名前の `## Review guidelines` だった（`301ff2f` まで。その次のコミットで `## Code Review Rules` に直した）。同じコミットを、CodeRabbitは `05:12:15` から `05:17:41` でレビューしてインラインの指摘を1件出し（Codexと同じ行）、Cursor Bugbotは `05:12:24` から4分9秒で「no issues found」だった。見出しを `## Code Review Rules` に直したあと、`05:27:52` にPRのコメントで `@codex review` と頼むと、`05:29` ごろに `9718a9d` を読み、「Didn't find any major issues」とPRのコメントで返し、PRに👍のリアクションを付けた（依頼から約1分半）。このときはレビュー（`COMMENTED`）は投稿しなかった。push だけでは、Codexはレビューし直さなかった（`301ff2f`・`bb982a3`・`9718a9d` のpushのあと、依頼するまで何も出さなかった）。
+  - **PR #2 での初回観測（2026-09-23）。レビューbotの初回観測を、[PR #2](https://github.com/LeoAndo/jec-25cm-hybrid-app/pull/2) と [issue #7](https://github.com/LeoAndo/jec-25cm-hybrid-app/issues/7) に基づいて記録する。** 以下は2026-09-23（時刻はUTC）にそのPRで観測した事実であり、ほかのPRや将来の実行でも同じ挙動になるとは限らない。プラン・利用上限・設定・対象コミットを、その都度確認する。
 
     | bot | Draft中の観測 | Draft解除後に観測した内容 | チェック表示と実レビューの区別 |
     | --- | --- | --- | --- |
@@ -313,6 +325,31 @@ Freeプランの利用規約は「法人による商用でのアプリ開発」�
     `8ea2bbc` ではCIとbotの処理が完了し、5指摘の解決・新しい指摘なし・`CLEAN` を確認して、`14:51:34` にマージコミットで統合した。43分という待ち時間は、そのとき表示された値であり、今後の標準待機時間にはしない。
 
     **PR本文では、CodeRabbitとCursorによる要約ブロックの追加を観測した。** botの完了後に要約を残して `gh pr edit` を行い、`gh pr view --json body` で読み直して、意図した本文との一致を確認した。この操作では本文のロールバックは観測しなかった。レビュー中の編集でも安全であると確かめたわけではないため、本文更新後の読み直しは引き続き行う。
+  - **PR #2〜#143 の全59本で、各botが実際にしたことを数えた（2026-09-26、[issue #145](https://github.com/LeoAndo/jec-25cm-hybrid-app/issues/145)）。** 各PRで、最新headのチェックとstatus、レビュー、レビューコメント、PRコメントを読んだ。オーナーのアカウントが貼った翻訳の照合などの内部の報告は、botの指摘に数えていない。判断は、オーナーのアカウントの最初の返信の先頭で数えた。Devin Review・Qodoの解約と、Codexの導入より前の記録である。
+
+    | bot | 実際にレビューした本数 | 止まった本数と理由 | インラインの指摘 | オーナーの判断 |
+    | --- | --- | --- | --- | --- |
+    | CodeRabbit | 14本（#2・#13・#15・#23・#27・#29・#37・#52・#85・#93・#128・#130・#137・#143）。うち6本は「No actionable comments」 | 45本。利用上限が43本（7日で63〜78回のレビューで「1 review per hour」に絞られた）、レビュー中にマージが1本（#91）、レビューできる変更なしが1本（#125。statusは「Review completed」） | 13件（Major 1、Minor 12） | 対応必要10（うち#15の1件は判断の見出しなしで修正）、任意対応3、対応不要0 |
+    | Cursor Bugbot | 57本でチェックが最後まで走った | 2本（#33・#59）。作成から2〜6分でマージし、Bugbotが走る前だった | 1件（#91、Low） | 対応必要1（#91のマージ後に届いたので、#93で直した） |
+    | Devin Review | 0本 | statusが残る全PRで「trial expired and no credits remaining」。statusは `success` | 0件 | – |
+    | GitHub Copilot | 0本 | #2〜#33の15本でquota上限の通知。#36以降は痕跡なし | 0件 | – |
+    | Qodo | 0本 | 59本のどこにも痕跡なし | 0件 | – |
+
+    CodeRabbitは、インラインの指摘とは別に、レビュー本文の pre-merge checks に警告を14件出した（Docstring Coverage、Linked Issues、Out of Scope Changes）。返信したのは#23（対応必要。教材は変えず、検証結果をPRコメントで補った）と#85（対応不要。2件をまとめて返信）だけで、ほかは返信していない。
+
+    対応必要だった11件の種類は、次のとおり。末尾の `## Code Review Rules` のP1は、これを基にしている。
+
+    - スクリプトの不具合：教科書の「戻る」導線が節の位置を戻さない（#2、`docs/assets/textbook.js`）。`.github/release.yml` がなく、リリースノートの生成が失敗し得る（#2、Major）。CSSの左右の検査が `calc()` の中の `/` を区切りと取り違える（#91、Cursor）。
+    - 文書どうしの食い違い：学生向けリリースノートの文面と準備手順（#2）。skillに `flutter devices` を起動コマンドとして書いていた（#2）。AGENTS.md と skills の「例外は2つだけ」と、足した例外の数（#15）。削除した課題が教員用ガイドに残っていた（#137）。
+    - 用語集：正式表記の抜け（#2）。ほかのリポジトリの状態の古い記述（#52）。
+    - 検証記録の不足：完成プロジェクトのREADMEに、公開URLから取り込んだ確認結果がない（#128、2件）。
+
+    任意対応の3件は、右から左のページの属性値の向き（#52）と、英語版の訳の曖昧さ2件（#130。#138で直した）だった。
+
+    **集計から分かったこと。**
+    - **statusの `success` は、レビュー済みを意味しない。** CodeRabbitの上限・スキップ、Devinのスキップは、どれも `success` だった。
+    - **実際に中身のあるレビューを出したのは、CodeRabbitとCursor Bugbotだけ**だった。59本のうち、どちらかがインラインの指摘を出したのは7本。
+    - **作成から数分でマージしたPR（#33・#59・#91・#123〜#126）では、botが走る前か途中でマージしていた。** #91では、Cursor Bugbotの指摘がマージの36秒後に届き、別のPR（#93）で直した。下の「マージするのは…」のとおり、botが落ち着くのを待ってからマージする。
 - 指摘には、各スレッドにインラインで返信する。先頭に判断を書く。
 
   ```markdown
@@ -442,3 +479,28 @@ READMEの「完成コードの書き方（全単元共通）」を、系統ご�
 3. **翻訳PRを開いてから学生向けの公開が終わるまでは、`docs/` を触るPRをマージしない。** 翻訳PRの本文に、この期間と対象の版を書く。日本語の変更が入った場合は最新のmainを取り込み、差分だけを訳し直す。
 4. **訳した文が50文以上なら**、翻訳したのとは別のAIが、新しく訳した文を原文と照合する。50文未満なら照合せず、翻訳の担当が訳を見直して、その旨と文の数をPR本文に書く。照合では、ミャンマー語だけ原文を見ずに訳文を日本語へ訳し戻してから比べ、ほかの言語は対訳を並べて読む（翻訳用skillの「別のモデルによる照合」）。意味の違い・訳し落とし・足しすぎ・操作順・用語集との不一致を確かめる。**照合の担当には資料を自分で読ませ、指摘は全件を要約せずにPRのコメントに残し（ミャンマー語の綴りは写さない）、照合のあとで意味が変わる修正をした文だけ照合し直す**（くわしくは翻訳用skillの同じ節）。PR本文には担当と照合範囲、指摘への対応を残す。全体を訳し直す必要はない。
 5. §7の4つの検証に加え、`python3 scripts/localize-student-materials.py status --require-complete` を通す。ZIPの入口 `index.html` から配布対象の言語を開き、リンク・コードのコピー・共通資料からの戻り先を確認する。
+
+## Code Review Rules
+
+Codex の自動レビューは、この節で指摘するかどうかを決める（見出しの文字列を変えない）。**コメントは日本語で書く。** 前提は「受講生像と、教材の書き方」・§0-A・§0-B・§10・§11 にある。学生の手に渡る前に直すものだけを P1 とし、言い回しや書き方の好みは指摘しない。
+
+次のものは P1 として指摘する（学生の手に渡る前に直すもの）。
+
+- 教科書・教員用ガイドの説明が、完成コードや、ブラウザ・シミュレータで動かした結果と食い違っている（本文が指すボタン・画面・STEP番号・ファイル名・`id`・関数名・パッケージ名の食い違いを含む）
+- 手順どおりに進めると学生が止まる、または別の結果になる（手順の抜け、順番の入れ替わり、まだ扱っていないコードや前のSTEPで消したコードを前提にした説明、本文からほかの単元へ手順を送っている）
+- 教科書のSTEPに、Web基礎・Java（Android）・Swift（iOS）のどれとの比較もない。Web基礎で習っていないもの（`querySelector`・`fetch`・`Promise`・`async`/`await`・`JSON`・`localStorage`・アロー関数・`@keyframes`・CSS Grid・ES Modules・クラス構文）を、そのSTEPで説明せずに使っている。1単元で新概念が2つ以上ある
+- Monaca系で、Freeプランでは成り立たない手順を書いている（ZIPのエクスポートや提出、Monaca Education の「Web公開」や `Monaca for Study`、コアプラグイン以外のCordovaプラグイン、全員が授業中にクラウドビルドする回）。完成コードが Cordovaプラグインに依存する、`console.log` や `alert` で結果を見せる、`getElementById`・`addEventListener`・`classList` 以外の書き方に変わっている
+- Flutter系で、§0-B の固定値と食い違っている（Flutter 3.47.5 以外の版の手順、`flutter create` の `--empty`・`--platforms=ios,android` の抜け、`package:material_ui`・`package:cupertino_ui` の混在、`go_router` や名前付きルート、未説明の dot shorthand）。通信を扱うのに `android/app/src/main/AndroidManifest.xml` に `INTERNET` がなく、releaseのAPKで通信できない。`// ignore:` で警告を隠している。結果を `print`・`debugPrint` だけで見せる
+- `config/teaching-materials.json` と教材の食い違い（サイドバーの並び、`snippets` のバイト一致、配布ZIPの中身、正式表記）で、検査が素通りしている
+- `scripts/`・`.github/`・`docs/assets/textbook.js` の不具合で、配布ZIP・リリースノート・翻訳ページ・教科書の画面の動きが壊れる、または検査が素通りする（必要な設定ファイルがない場合を含む）
+- 文書どうしの食い違いで、学生や作業者が別の手順を踏む（教科書と教員用ガイド、AGENTS.md と `skills/`、学生向けリリースノートや `はじめに.txt` と準備手順。削除した課題が残っている、決まりの例外の数が合わない、`flutter devices` を起動コマンドとして書いている、など）
+- 完成プロジェクトの `README.md` や教員用ガイドの検証記録が、実際に確かめた範囲と合わない（確かめていないことを確認済みと書いている、確かめた結果が抜けている）
+- 教科書のHTMLに、§12 で禁止した形がある（閉じ忘れ、引用符のない属性、文の途中のHTMLコメント、`/` で始まるリンク、文の途中の要素の `translate="no"`）。`docs/assets/textbook.css` に左右を決め打ちした指定がある
+- 翻訳カタログで、操作を誤らせる訳（用語集 `i18n/<言語>/glossary.md` と違う訳語、コード・メニュー名の訳しすぎ、操作の順の入れ替わりを含む）。用語集に正式表記（`config/teaching-materials.json` の `terms`）が抜けている
+
+次のものは指摘しない。
+
+- §10 の対象外（完成プロジェクトのUnit Test、Windows、ダークテーマ、タブレット・横画面、Flutterの iOS・Android 以外のプラットフォーム、提出物の署名とストア公開、Monaca Education の機能がないという指摘）
+- §11 の書き方を変える提案（`querySelector` への置き換え、Vue・React などのフレームワークやビルドツールの追加、`go_router` や別の状態管理への置き換え、`package:material_ui` への移行、Onsen UI をやめる提案など）
+- 「初学者向けにかみ砕くべき」「もっとやさしく書き直すべき」という提案（§11 の12。受講生は Web基礎と Java・Swift を書ける）
+- 翻訳の言い回しの好み、`distribute: false` の言語の訳の質
