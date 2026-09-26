@@ -307,12 +307,12 @@ Freeプランの利用規約は「法人による商用でのアプリ開発」�
     | --- | --- | --- |
     | CodeRabbit | Essentials | Draftではレビューせず、「Draft PR not reviewed」のコメントだけを置く（PR #146 でも同じ）。直近7日のレビュー件数が多いと1時間あたりの枠が減り、枠がないときは「Review paused — included plan limit reached」「Review rate limited」と書いたまま、statusは `success` になる。修正後の差分のincremental reviewは、この枠で止まることが多い。**CodeRabbitのコメントにあるチェックボックス（オンデマンドレビュー、手動レビューの起動など）は押さない。** |
     | Cursor Bugbot | CursorはPro+。Bugbotは、Cursorのプランとは別の、月額固定の席課金 | Draftを外したあと、最新headで動く。指摘がないときは、チェックの出力に「Bugbot completed review - no issues found!」とだけ出て、レビューは投稿しない。指摘があるとチェックが `neutral` になり、インラインで投稿する。使用量課金（Cursorの画面の見積で1回約 $1.20）に切り替えるかはオーナーが決める。エージェントは切り替えない。 |
-    | Codex | ChatGPT ProのCodexで、GitHubの自動レビューを有効にした | 新しいPRが開かれたときにレビューし、PRのコメントの `@codex review` でも呼べる。GitHubではP0・P1だけを指摘し、このファイルの末尾の `## Review guidelines` の節に従う（[Codexの説明](https://developers.openai.com/codex/integrations/github)）。Draftのあいだは何もせず、Draftを外すとレビューする。チェックもstatusも出さず、レビュー（`COMMENTED`）とインラインのコメントだけを投稿する。レビュー本文によれば、指摘がないときは👍のリアクションだけを付ける。P2の指摘を出すこともある。このリポジトリでの観測は下の「PR #146 での Codex の観測」。 |
+    | Codex | ChatGPT ProのCodexで、GitHubの自動レビューを有効にした | 新しいPRが開かれたときにレビューし、PRのコメントの `@codex review` でも呼べる。GitHubではP0・P1だけを指摘し、このファイルの末尾の、見出しがちょうど `## Code Review Rules` の節に従う（[Codexの説明](https://developers.openai.com/codex/integrations/github)、[Custom Code Review rules for Codex](https://developers.openai.com/blog/custom-code-review-rules-for-codex)）。以前の名前は `## Review guidelines` で、この名前にはしない。Draftのあいだは何もせず、Draftを外すとレビューする。チェックもstatusも出さず、レビュー（`COMMENTED`）とインラインのコメントだけを投稿する。レビュー本文によれば、指摘がないときは👍のリアクションだけを付ける。P2の指摘を出すこともある。このリポジトリでの観測は下の「PR #146 での Codex の観測」。 |
     | GitHub Copilot | 教員の無償プラン | 月の枠を使い切ると、未実施の通知だけをレビュー（`COMMENTED`）として投稿する。この通知はレビューに数えない。枠は毎月1日 09:00（日本時間）に戻る。 |
     | Devin Review | **2026-09-26 に解約し、GitHub Appも外した** | 過去のPRに残る「Full review skipped: trial expired and no credits remaining」のstatusは、レビューに数えない。 |
     | Qodo | **2026-09-26 に解約し、GitHub Appも外した** | このリポジトリの59本のPRには、動いた跡がなかった（下の集計）。 |
 
-  - **PR #146 での Codex の観測（2026-09-26、時刻はUTC）。** Draft PRとして `05:07` ごろに開いた。Draftのあいだ（`05:11` まで確認）、Codexはレビュー・コメント・リアクション・チェックのどれも出さなかった。`05:12:11` にDraftを外すと、`05:15:15` に `c09b245` のレビュー（`COMMENTED`）を投稿した（Draft解除から約3分）。本文は英語の定型文で、インラインの指摘は日本語で1件だった。その指摘には、GitHubではP0・P1だけという説明と違って「P2」のバッジが付いていた。内容は「この行の観測が、Draft解除後の結果まで書かれていない」で、判断は対応必要だった。Codexは、チェックもstatusも出さなかった。同じコミットを、CodeRabbitは `05:12:15` から `05:17:41` でレビューしてインラインの指摘を1件出し（Codexと同じ行）、Cursor Bugbotは `05:12:24` から4分9秒で「no issues found」だった。
+  - **PR #146 での Codex の観測（2026-09-26、時刻はUTC）。** Draft PRとして `05:07` ごろに開いた。Draftのあいだ（`05:11` まで確認）、Codexはレビュー・コメント・リアクション・チェックのどれも出さなかった。`05:12:11` にDraftを外すと、`05:15:15` に `c09b245` のレビュー（`COMMENTED`）を投稿した（Draft解除から約3分）。本文は英語の定型文で、インラインの指摘は日本語で1件だった。その指摘には、GitHubではP0・P1だけという説明と違って「P2」のバッジが付いていた。内容は「この行の観測が、Draft解除後の結果まで書かれていない」で、判断は対応必要だった。Codexは、チェックもstatusも出さなかった。このとき末尾の節の見出しは、以前の名前の `## Review guidelines` だった（`301ff2f` まで。その次のコミットで `## Code Review Rules` に直した）。同じコミットを、CodeRabbitは `05:12:15` から `05:17:41` でレビューしてインラインの指摘を1件出し（Codexと同じ行）、Cursor Bugbotは `05:12:24` から4分9秒で「no issues found」だった。
   - **PR #2 での初回観測（2026-09-23）。レビューbotの初回観測を、[PR #2](https://github.com/LeoAndo/jec-25cm-hybrid-app/pull/2) と [issue #7](https://github.com/LeoAndo/jec-25cm-hybrid-app/issues/7) に基づいて記録する。** 以下は2026-09-23（時刻はUTC）にそのPRで観測した事実であり、ほかのPRや将来の実行でも同じ挙動になるとは限らない。プラン・利用上限・設定・対象コミットを、その都度確認する。
 
     | bot | Draft中の観測 | Draft解除後に観測した内容 | チェック表示と実レビューの区別 |
@@ -337,7 +337,7 @@ Freeプランの利用規約は「法人による商用でのアプリ開発」�
 
     CodeRabbitは、インラインの指摘とは別に、レビュー本文の pre-merge checks に警告を14件出した（Docstring Coverage、Linked Issues、Out of Scope Changes）。返信したのは#23（対応必要。教材は変えず、検証結果をPRコメントで補った）と#85（対応不要。2件をまとめて返信）だけで、ほかは返信していない。
 
-    対応必要だった11件の種類は、次のとおり。末尾の `## Review guidelines` のP1は、これを基にしている。
+    対応必要だった11件の種類は、次のとおり。末尾の `## Code Review Rules` のP1は、これを基にしている。
 
     - スクリプトの不具合：教科書の「戻る」導線が節の位置を戻さない（#2、`docs/assets/textbook.js`）。`.github/release.yml` がなく、リリースノートの生成が失敗し得る（#2、Major）。CSSの左右の検査が `calc()` の中の `/` を区切りと取り違える（#91、Cursor）。
     - 文書どうしの食い違い：学生向けリリースノートの文面と準備手順（#2）。skillに `flutter devices` を起動コマンドとして書いていた（#2）。AGENTS.md と skills の「例外は2つだけ」と、足した例外の数（#15）。削除した課題が教員用ガイドに残っていた（#137）。
@@ -480,7 +480,7 @@ READMEの「完成コードの書き方（全単元共通）」を、系統ご�
 4. **訳した文が50文以上なら**、翻訳したのとは別のAIが、新しく訳した文を原文と照合する。50文未満なら照合せず、翻訳の担当が訳を見直して、その旨と文の数をPR本文に書く。照合では、ミャンマー語だけ原文を見ずに訳文を日本語へ訳し戻してから比べ、ほかの言語は対訳を並べて読む（翻訳用skillの「別のモデルによる照合」）。意味の違い・訳し落とし・足しすぎ・操作順・用語集との不一致を確かめる。**照合の担当には資料を自分で読ませ、指摘は全件を要約せずにPRのコメントに残し（ミャンマー語の綴りは写さない）、照合のあとで意味が変わる修正をした文だけ照合し直す**（くわしくは翻訳用skillの同じ節）。PR本文には担当と照合範囲、指摘への対応を残す。全体を訳し直す必要はない。
 5. §7の4つの検証に加え、`python3 scripts/localize-student-materials.py status --require-complete` を通す。ZIPの入口 `index.html` から配布対象の言語を開き、リンク・コードのコピー・共通資料からの戻り先を確認する。
 
-## Review guidelines
+## Code Review Rules
 
 Codex の自動レビューは、この節で指摘するかどうかを決める（見出しの文字列を変えない）。**コメントは日本語で書く。** 前提は「受講生像と、教材の書き方」・§0-A・§0-B・§10・§11 にある。学生の手に渡る前に直すものだけを P1 とし、言い回しや書き方の好みは指摘しない。
 
