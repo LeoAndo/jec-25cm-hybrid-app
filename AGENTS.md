@@ -442,3 +442,26 @@ READMEの「完成コードの書き方（全単元共通）」を、系統ご�
 3. **翻訳PRを開いてから学生向けの公開が終わるまでは、`docs/` を触るPRをマージしない。** 翻訳PRの本文に、この期間と対象の版を書く。日本語の変更が入った場合は最新のmainを取り込み、差分だけを訳し直す。
 4. **訳した文が50文以上なら**、翻訳したのとは別のAIが、新しく訳した文を原文と照合する。50文未満なら照合せず、翻訳の担当が訳を見直して、その旨と文の数をPR本文に書く。照合では、ミャンマー語だけ原文を見ずに訳文を日本語へ訳し戻してから比べ、ほかの言語は対訳を並べて読む（翻訳用skillの「別のモデルによる照合」）。意味の違い・訳し落とし・足しすぎ・操作順・用語集との不一致を確かめる。**照合の担当には資料を自分で読ませ、指摘は全件を要約せずにPRのコメントに残し（ミャンマー語の綴りは写さない）、照合のあとで意味が変わる修正をした文だけ照合し直す**（くわしくは翻訳用skillの同じ節）。PR本文には担当と照合範囲、指摘への対応を残す。全体を訳し直す必要はない。
 5. §7の4つの検証に加え、`python3 scripts/localize-student-materials.py status --require-complete` を通す。ZIPの入口 `index.html` から配布対象の言語を開き、リンク・コードのコピー・共通資料からの戻り先を確認する。
+
+## Review guidelines
+
+Codex の自動レビューは、この節で指摘するかどうかを決める（見出しの文字列を変えない）。**コメントは日本語で書く。** 前提は「受講生像と、教材の書き方」・§0-A・§0-B・§10・§11 にある。学生の手に渡る前に直すものだけを P1 とし、言い回しや書き方の好みは指摘しない。
+
+次のものは P1 として指摘する（学生の手に渡る前に直すもの）。
+
+- 教科書・教員用ガイドの説明が、完成コードや、ブラウザ・シミュレータで動かした結果と食い違っている（本文が指すボタン・画面・STEP番号・ファイル名・`id`・関数名・パッケージ名の食い違いを含む）
+- 手順どおりに進めると学生が止まる、または別の結果になる（手順の抜け、順番の入れ替わり、まだ扱っていないコードや前のSTEPで消したコードを前提にした説明、本文からほかの単元へ手順を送っている）
+- 教科書のSTEPに、Web基礎・Java（Android）・Swift（iOS）のどれとの比較もない。Web基礎で習っていないもの（`querySelector`・`fetch`・`Promise`・`async`/`await`・`JSON`・`localStorage`・アロー関数・`@keyframes`・CSS Grid・ES Modules・クラス構文）を、そのSTEPで説明せずに使っている。1単元で新概念が2つ以上ある
+- Monaca系で、Freeプランでは成り立たない手順を書いている（ZIPのエクスポートや提出、Monaca Education の「Web公開」や `Monaca for Study`、コアプラグイン以外のCordovaプラグイン、全員が授業中にクラウドビルドする回）。完成コードが Cordovaプラグインに依存する、`console.log` や `alert` で結果を見せる、`getElementById`・`addEventListener`・`classList` 以外の書き方に変わっている
+- Flutter系で、§0-B の固定値と食い違っている（Flutter 3.47.5 以外の版の手順、`flutter create` の `--empty`・`--platforms=ios,android` の抜け、`package:material_ui`・`package:cupertino_ui` の混在、`go_router` や名前付きルート、未説明の dot shorthand）。通信を扱うのに `android/app/src/main/AndroidManifest.xml` に `INTERNET` がなく、releaseのAPKで通信できない。`// ignore:` で警告を隠している。結果を `print`・`debugPrint` だけで見せる
+- `config/teaching-materials.json` と教材の食い違い（サイドバーの並び、`snippets` のバイト一致、配布ZIPの中身、正式表記）で、検査が素通りしている
+- `scripts/` の不具合で、配布ZIPや翻訳ページが壊れる、または検査が素通りする
+- 教科書のHTMLに、§12 で禁止した形がある（閉じ忘れ、引用符のない属性、文の途中のHTMLコメント、`/` で始まるリンク、文の途中の要素の `translate="no"`）。`docs/assets/textbook.css` に左右を決め打ちした指定がある
+- 翻訳カタログで、操作を誤らせる訳（用語集 `i18n/<言語>/glossary.md` と違う訳語、コード・メニュー名の訳しすぎ、操作の順の入れ替わりを含む）。言い回しの好みは指摘しない
+
+次のものは指摘しない。
+
+- §10 の対象外（完成プロジェクトのUnit Test、Windows、ダークテーマ、タブレット・横画面、Flutterの iOS・Android 以外のプラットフォーム、提出物の署名とストア公開、Monaca Education の機能）
+- §11 の書き方を変える提案（`querySelector` への置き換え、Vue・React などのフレームワークやビルドツールの追加、`go_router` や別の状態管理への置き換え、`package:material_ui` への移行、Onsen UI をやめる提案など）
+- 「初学者向けにかみ砕くべき」「もっとやさしく書き直すべき」という提案（§11 の12。受講生は Web基礎と Java・Swift を書ける）
+- 翻訳の言い回しの好み、`distribute: false` の言語の訳の質
