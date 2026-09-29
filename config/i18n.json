@@ -162,7 +162,7 @@
     {
       "code": "mn",
       "name": "Монгол",
-      "distribute": false,
+      "distribute": true,
       "ui": {
         "copy": "Хуулах",
         "copy_label": "Кодыг хуулах: {title}",
