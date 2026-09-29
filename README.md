@@ -305,20 +305,52 @@ CocoaPods 1.16.2 / Android SDK 37.0.0 / JDK 21（Android Studio Panda 2 同梱�
 
 # 開発環境：学生
 
-2026年9月に実施したアンケートの回答です。**回答数は4件（n=4）のみで、クラス全員を調べた結果ではありません。** 傾向を見るための標本として扱ってください。回答は匿名化して記録します。
+2026年9月に実施したアンケートの回答です（学籍番号 `25cm0101`〜`25cm0131`、重複回答は最新を採用して匿名化）。**26件の回答（n=26）**を得て、クラスのほぼ全員の環境が判明しました。回答は匿名化して記録します。
 
-| | Android Studio | Xcode | MacBook / OS |
-| --- | --- | --- | --- |
-| 回答1 | 2026.1 | 27 | macOS 27 Golden Gate バージョン27.0 |
-| 回答2 | panda2 | 26.4 | tahoe ver.26.4.1 |
-| 回答3 | Android Studio Panda 3 \| 2025.3.3 | Xcode Version 26.4 | macOS Tahoe 26.5.2 |
-| 回答4 | Android Studio Panda 2 \| 2025.3 | Xcode Version 26.5 | macOS Tahoe バージョン 26.5.1 |
+| 回答番号 | 回答日 | Android Studio | Xcode | MacBook / OS |
+| --- | --- | --- | --- | --- |
+| 回答1 | 2026-09-16 | `2026.1` | 27.0 | macOS 27 Golden Gate バージョン27.0 |
+| 回答2 | 2026-09-17 | `panda2` | 26.4 | tahoe ver.26.4.1 |
+| 回答3 | 2026-09-18 | `Android Studio Panda 3 \| 2025.3.3` | Xcode Version 26.4 | macOS Tahoe 26.5.2 |
+| 回答4 | 2026-09-21 | `Android Studio Panda 2 \| 2025.3.2` | Xcode Version 26.4 (17E192) | macOS Tahoe 26.4.1 |
+| 回答5 | 2026-09-21 | `Android Studio Panda 2 \| 2025.3` | Xcode Version 26.5 | macOS Tahoe バージョン 26.5.1 |
+| 回答6 | 2026-09-24 | `Quail 4 (2026.1.4 Patch 1)` | Version 26.4 (17E192) | 26.5.2 (25F84) |
+| 回答7 | 2026-09-24 | `Android Studio Panda 3 \| 2025.3.3` | 26.4.1 | 26.5.2 |
+| 回答8 | 2026-09-24 | `Android Studio Panda 3 \| 2025.3.3` | Xcode Version 26.4 (17E192) | macOS Tahoe 26.4.1（25E253） |
+| 回答9 | 2026-09-24 | `Android Studio Quail 3 \| 2026.1.3` | Xcode Version 26.6 (17F113) | macOS Tahoe バージョン26.5.2 |
+| 回答10 | 2026-09-28 | `2025.3.2` | 26.4 | 26.4.1 |
+| 回答11 | 2026-09-29 | `Android Studio Meerkat \| 2024.3.1` | Xcode Version 16.4 (16F6) | バージョン15.3.2（24D81） |
+| 回答12 | 2026-09-29 | `Android Studio Panda 2 \| 2025.3.2` | Xcode Version 16.4（16F6） | macOS Sequoia バージョン15.3.2（24D81） |
+| 回答13 | 2026-09-29 | `Android Studio Panda 3 \| 2025.3.3` | Xcode 26.4 Build version 17E192 | 26.4.1 |
+| 回答14 | 2026-09-29 | `panda 3` | 26.4 | 26.6.2 |
+| 回答15 | 2026-09-29 | `Android Studio Panda 3 \| 2025.3.3` | Version 26.4 (17E192) | バージョン26.5.1（25F80） |
+| 回答16 | 2026-09-29 | `Android Studio Panda 2 \| 2025.3.2 Build #AI-253.30387.90...` | 26.3 | 26.3.1 |
+| 回答17 | 2026-09-29 | `panda4` | 26.4 | 26.5.1（25F80） |
+| 回答18 | 2026-09-29 | `Android Studio Panda 2 \| 2025.3.2` | Version 26.4 (17E192) | Tahoe26.4.1 |
+| 回答19 | 2026-09-29 | `Android Studio Panda 3 \| 2025.3.3 Build #AI-253.31033.145...` | 26.4 | 26.5.2 |
+| 回答20 | 2026-09-29 | `Android Studio Panda 3 \| 2025.3.3` | XCode Version 26.4 (17E192) | MacOS 26.5 |
+| 回答21 | 2026-09-29 | `Android Studio Panda 3 \| 2025.3.3` | Version 26.2 (17C52) | バージョン26.2（25C56） |
+| 回答22 | 2026-09-29 | `Android Studio Panda 3 \| 2025.3.3` | Xcode 26.3 | Tahoe 26.4.1 |
+| 回答23 | 2026-09-29 | `Android Studio Panda 4 2025.3.4` | Xcode Version 26.4.1 17E202 | macOS 26.6.2 |
+| 回答24 | 2026-09-29 | `Android Studio Panda 3 \| 2025.3.3` | Xcode Version 26.4.1 (17E202) | macOS Tahoe バージョン 26.4.1 |
+| 回答25 | 2026-09-29 | `panda 2` | 16.3 | 26.4.1 |
+| 回答26 | 2026-09-29 | `Android Studio Panda 2` | 26.6 | 26.4.1 |
 
-- 表の内容は回答をそのまま記録したものです。表記はそろっていません。教員側で補完・推測はしていません。
+- 表の内容は回答をそのまま記録したものです。表記はそろっていません。教員側で補完・推測はしていません（回答1の `2026.1` は Quail 4 と本人確認済み）。
 - **全員macOSです。Windowsは対象外です。**
+  - macOS 26系（Tahoe）が 23名（88.5%）、macOS 15系（Sequoia）が 2名（7.7%）、macOS 27系（Golden Gate）が 1名（3.8%）。
 - **ブラウザはアンケートしていません。教員と同じ Google Chrome を使っている前提で教科書を書きます。**
-- **Xcodeが 26.4 / 26.5 / 27 に割れています。** シミュレータの起動方法がXcode 27の前後で変わるため、教材ではXcodeのアプリ名に触れず、Visual Studio Code のデバイス選択から起動させます（[AGENTS.md](AGENTS.md) §0-B）。
-- Android Studio は、Flutterの Android エミュレータとSDKのために使います。Flutterのコードを書くのは Visual Studio Code です。
+- **Xcodeのバージョン分布：**
+  - **Xcode 26系（26.2〜26.6）**: 22名（84.6%）※圧倒的多数。26.4 / 26.4.1 が 16名（61.5%）で中心。
+  - **Xcode 16系（16.3 / 16.4）**: 3名（11.5%）※macOS 15 Sequoia環境の学生など。
+  - **Xcode 27系（27.0）**: 1名（3.8%）※macOS 27 Golden Gate環境の学生1名。
+  - **以前の考察からの更新**：前回の n=4 では「Xcodeが 26.4 / 26.5 / 27 に割れている」と見えましたが、クラス全体の n=26 で見ると、**Xcode 27 は1名のみで、Xcode 26系が8割強**を占めます。また、**Xcode 16系を使う学生が約1割（3名）存在する**ことが分かりました。シミュレータの起動方法が Xcode 27以降（`open -a DeviceHub`）と 26以前（`open -a Simulator`）で分かれますが、**教材ではXcodeのアプリ名に触れず、Visual Studio Code のデバイス選択（`Flutter: Launch Emulator`）から起動させる方針（[AGENTS.md](AGENTS.md) §0-B）の妥当性が裏付けられました**。Xcode 16・26・27 のいずれの環境でも同じ手順で進められます。
+- **Android Studioのバージョン分布：**
+  - Flutterの Android エミュレータとSDKのために使います。Flutterのコードを書くのは Visual Studio Code です。
+  - **Panda系（Panda 2 / Panda 3 / Panda 4）**: 22名（84.6%）。Panda 3（2025.3.3）が最多11名（42.3%）、Panda 2（2025.3.2）が9名（34.6%）、Panda 4が2名（7.7%）。
+  - **Quail系（Quail 3 / Quail 4）**: 3名（11.5%）。
+  - **Meerkat（2024.3.1）**: 1名（3.8%）。
+  - Android Studio 2026.1（Quail 4）の学生のために、Flutter SDK は 3.47.5 / Dart 3.13.4（JDK 25 / Gradle 9.3.1 互換）に固定した方針（[AGENTS.md](AGENTS.md) §0-B）が、実際にQuailを使う学生（3名）の存在により裏付けられています。
 
 # 基本方針
 
