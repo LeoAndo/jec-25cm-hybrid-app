@@ -1,0 +1,1138 @@
+{
+  "source": "docs/oshi-save/index.html",
+  "language": "es",
+  "entries": [
+    {
+      "source": "M02 好きなものノート：追加と保存 | ハイブリッドアプリ開発技法",
+      "translation": "M02 Cuaderno de favoritos: agregar y guardar | Técnicas de desarrollo de aplicaciones híbridas"
+    },
+    {
+      "source": "本文へ移動",
+      "translation": "Ir al contenido principal"
+    },
+    {
+      "source": "JEC / ハイブリッドアプリ開発技法",
+      "translation": "JEC / Desarrollo de aplicaciones híbridas"
+    },
+    {
+      "source": "0 / 15 ステップ確認済み",
+      "translation": "0 / 15 pasos verificados"
+    },
+    {
+      "source": "単元の進み具合",
+      "translation": "Progreso de la unidad"
+    },
+    {
+      "source": "コマごとの目次",
+      "translation": "Índice por clase"
+    },
+    {
+      "source": "コマ5 · STEP 00〜04",
+      "translation": "Clase 5 · STEP 00〜04"
+    },
+    {
+      "source": "00 自分の好きなものノートを開く",
+      "translation": "00 Abre tu propio cuaderno de favoritos"
+    },
+    {
+      "source": "01 入力画面を作る",
+      "translation": "01 Crea la pantalla de entrada"
+    },
+    {
+      "source": "02 入力した文字を確認する",
+      "translation": "02 Verifica el texto ingresado"
+    },
+    {
+      "source": "03 配列へ追加して戻る",
+      "translation": "03 Agrega al arreglo y regresa"
+    },
+    {
+      "source": "04 確認とアレンジ",
+      "translation": "04 Verificación y personalización"
+    },
+    {
+      "source": "コマ6 · STEP 05〜09",
+      "translation": "Clase 6 · STEP 05〜09"
+    },
+    {
+      "source": "05 配列とJSONの違い",
+      "translation": "05 Diferencia entre arreglos y JSON"
+    },
+    {
+      "source": "06 文字列にして保存する",
+      "translation": "06 Guarda como texto"
+    },
+    {
+      "source": "07 保存した配列を復元する",
+      "translation": "07 Restaura el arreglo guardado"
+    },
+    {
+      "source": "08 初期化の確認と失敗への対応",
+      "translation": "08 Confirmación del reinicio y manejo de fallas"
+    },
+    {
+      "source": "09 保存を確かめてアレンジ",
+      "translation": "09 Verifica el guardado y personaliza"
+    },
+    {
+      "source": "コマ7 · STEP 10〜14",
+      "translation": "Clase 7 · STEP 10〜14"
+    },
+    {
+      "source": "10 授業内でFlutterの準備を始める",
+      "translation": "10 Comienza la preparación de Flutter en clase"
+    },
+    {
+      "source": "11 提出に残るアレンジを作る",
+      "translation": "11 Crea personalizaciones que se conserven en la entrega"
+    },
+    {
+      "source": "12 操作と公開URLを確認する",
+      "translation": "12 Verifica el funcionamiento y la URL de importación"
+    },
+    {
+      "source": "13 提出と準備状況の確認",
+      "translation": "13 Entrega y verificación del estado de preparación"
+    },
+    {
+      "source": "14 アレンジ箇所を確かめる",
+      "translation": "14 Confirma los lugares que puedes personalizar"
+    },
+    {
+      "source": "困ったとき",
+      "translation": "Solución de problemas"
+    },
+    {
+      "source": "完成プロジェクトを開く",
+      "translation": "Abrir el proyecto terminado"
+    },
+    {
+      "source": "共通：はじめの準備",
+      "translation": "Común: Preparación inicial"
+    },
+    {
+      "source": "コマ5〜7 · 各90分",
+      "translation": "Clases 5〜7 · 90 minutos cada una"
+    },
+    {
+      "source": "好きなものノート：追加して、残そう。",
+      "translation": "Cuaderno de favoritos: agrega y conserva."
+    },
+    {
+      "source": "日常の中で見つけた好きなものと、好きな理由を画面から追加します。再読み込みしても自分の記録が戻る仕組みを作り、ソースにアレンジを残して公開URLを提出します。",
+      "translation": "Agrega desde la pantalla las cosas que te gustan de tu vida diaria y la razón por la que te gustan. Crea un mecanismo para que tus registros se recuperen incluso después de recargar, conserva tus personalizaciones en el código fuente y entrega la URL de importación (公開URL)."
+    },
+    {
+      "source": "Monaca クラウド IDE / Google Chrome",
+      "translation": "Monaca クラウド IDE (IDE en la nube) / Google Chrome"
+    },
+    {
+      "source": "この単元で分かること",
+      "translation": "Lo que aprenderás en esta unidad"
+    },
+    {
+      "source": "新しい考え方は<strong>JSON</strong>です。画面で使う配列を保存用の文字列にし、読み込んだ文字列を配列へ戻します。保存先はJavaの<code>SharedPreferences</code>・Swiftの<code>UserDefaults</code>と比較します。",
+      "translation": "El concepto nuevo es <strong>JSON</strong>. Convierte el arreglo que usas en pantalla en una cadena de texto para guardarlo y vuelve a convertir la cadena leída en un arreglo. El destino de guardado se compara con <code>SharedPreferences</code> de Java y <code>UserDefaults</code> de Swift."
+    },
+    {
+      "source": "完成見本の名前は <code>M02OshiSave</code> です。学生は自分の好きなものノートを同じ1プロジェクトで育てます。まだプロジェクトがない場合の作り方も、一覧・詳細の開始コードも、この本文にあります。",
+      "translation": "El nombre del ejemplo terminado es <code>M02OshiSave</code>. Cada estudiante desarrolla su propio cuaderno de favoritos en el mismo único proyecto. En este texto encontrarás tanto cómo crearlo si aún no tienes un proyecto, como el código inicial de la lista y el detalle."
+    },
+    {
+      "source": "コマ",
+      "translation": "Clase"
+    },
+    {
+      "source": "到達点",
+      "translation": "Objetivo"
+    },
+    {
+      "source": "入力した好きなものを一覧へ追加し、詳細を読める。",
+      "translation": "Poder agregar los favoritos ingresados a la lista y leer sus detalles."
+    },
+    {
+      "source": "JSONと<code>localStorage</code>で保存・復元できる。初期化には確認を挟む。",
+      "translation": "Poder guardar y restaurar con JSON y <code>localStorage</code>. Incluir una confirmación antes de reiniciar."
+    },
+    {
+      "source": "授業内でFlutter準備を開始し、待ち時間に好きなものノートをアレンジ・確認・提出する。",
+      "translation": "Comenzar la preparación de Flutter en clase, y mientras esperas, personalizar, verificar y entregar tu cuaderno de favoritos."
+    },
+    {
+      "source": "配布フォルダの <code>~/Documents/hybrid-app-student-materials-日付/samples/M02OshiSave</code> をFinderで開きます。<code>M02OshiSave</code> の完成見本で、自分のコードと読み比べるために使います。自分の作品を見本で上書きしません。自分の制作を始める人は、STEP 00へ進みます。",
+      "translation": "Abre <code>~/Documents/hybrid-app-student-materials-日付/samples/M02OshiSave</code> (日付 = fecha) de la carpeta de distribución en el Finder. Es el ejemplo terminado de <code>M02OshiSave</code>, que sirve para comparar con tu propio código. No sobrescribas tu propio trabajo con el ejemplo. Si vas a comenzar tu propia creación, avanza al STEP 00."
+    },
+    {
+      "source": "Monaca クラウド IDEは、Macのフォルダをそのまま開けません。見本をMonacaで動かすときは、先生がZIPにして公開した<a1>M02OshiSaveの取り込み用URL</a1>を開いて取り込みます。これはアプリを動かすURLではなく、完成見本のソースを自分のMonacaへ取り込むURLで、Freeプランの3枠のうち1枠を使います。空きを確かめてから1回だけ開きます。取り込み用URLがあっても、Freeプランの制限（プロジェクトの数や、対応するCordovaの版）で、取り込めない、または取り込んだ見本を開けないことがあります。そのときは無理に取り込まず、先生に知らせてください。見本のコードは配布フォルダの <code>samples</code> で読めるので、取り込めなくても授業は進められます。",
+      "translation": "Monaca クラウド IDE no puede abrir directamente una carpeta de tu Mac. Cuando vayas a ejecutar el ejemplo en Monaca, abre e importa la <a1>URL de importación de M02OshiSave</a1> que el docente comprimió en ZIP y publicó. Esta no es una URL para ejecutar la aplicación, sino una URL para importar el código fuente del ejemplo terminado a tu propio Monaca, y utiliza 1 de los 3 espacios del plan Free. Abre el enlace una sola vez después de comprobar que tienes espacio disponible. Aunque tengas la URL de importación, debido a las limitaciones del plan Free (la cantidad de proyectos o la versión compatible de Cordova), es posible que no puedas importar el ejemplo o que no puedas abrir el ejemplo importado. En ese caso, no intentes importarlo a la fuerza e infórmale a tu docente. Como puedes leer el código del ejemplo en <code>samples</code> dentro de la carpeta de distribución, la clase puede continuar aunque no puedas importarlo."
+    },
+    {
+      "source": "STEP 00 · コマ5",
+      "translation": "STEP 00 · Clase 5"
+    },
+    {
+      "source": "自分の好きなものノートを開く",
+      "translation": "Abre tu propio cuaderno de favoritos"
+    },
+    {
+      "source": "Google Chromeで通常版Monacaへログインし、自分の好きなものノートを開きます。続けて使っているプロジェクトは、名前が <code>M01OshiList</code> のままで構いません。今日のためにコピーを増やしたり、削除したりしません。",
+      "translation": "Inicia sesión en la versión estándar de Monaca con Google Chrome y abre tu propio cuaderno de favoritos. Si continúas usando el proyecto anterior, su nombre puede quedarse como <code>M01OshiList</code>. No crees copias adicionales ni elimines nada para el día de hoy."
+    },
+    {
+      "source": "まだ自分の好きなものノートがない人だけ、ダッシュボードで新規作成し、<code>最小限のテンプレート</code> を選び、<code>M02OshiSave</code> と名付けます。登録や空き枠が不明なら、<a1>共通資料のSTEP 2〜3</a1>で確認して戻ります。",
+      "translation": "Solo si aún no tienes tu propio cuaderno de favoritos, crea uno nuevo en el panel de control, elige <code>最小限のテンプレート</code> (Plantilla mínima) y nómbralo <code>M02OshiSave</code>. Si no estás seguro de tu registro o de los espacios libres, consulta el <a1>STEP 2 a 3 de los materiales comunes</a1> y regresa."
+    },
+    {
+      "source": "<code>www/index.html</code>・<code>www/css/style.css</code> を開きます。<code>www/js/app.js</code> がなければ、ファイル一覧の作成操作で <code>www</code> の下に <code>js</code> フォルダ、その中に <code>app.js</code> ファイルを作ります。",
+      "translation": "Abre <code>www/index.html</code> y <code>www/css/style.css</code>. Si no existe <code>www/js/app.js</code>, usa las opciones de creación de la lista de archivos para crear una carpeta <code>js</code> debajo de <code>www</code> y un archivo <code>app.js</code> dentro de ella."
+    },
+    {
+      "source": "自分のアレンジがある場合は、変えた文字と色を控えます。下の開始コード3ファイルをそろえ、保存してプレビューを再読み込みします。<code>components</code> や <code>res</code> は変更しません。",
+      "translation": "Si tienes tus propias personalizaciones, anota el texto y los colores que cambiaste. Ajusta los 3 archivos de código inicial como se muestra abajo, guarda y vuelve a cargar la vista previa. No modifiques <code>components</code> ni <code>res</code>."
+    },
+    {
+      "source": "3件の名前を押して詳細を開き、左上の戻るボタンで一覧へ戻ります。戻るボタンは、iOS向けの見た目では「＜ 戻る」、Android向けの見た目では左向きの矢印「←」だけです。タイトルと詳細の組み合わせを確かめます。",
+      "translation": "Presiona los nombres de los 3 elementos para abrir sus detalles y regresa a la lista con el botón de volver de la esquina superior izquierda. El botón de volver se muestra como 「＜ 戻る」 (Volver) en la apariencia para iOS y solo como una flecha hacia la izquierda 「←」 en la apariencia para Android. Verifica que los títulos coincidan con sus detalles correspondientes."
+    },
+    {
+      "source": "開始コードの役割を、次の順で追いましょう。新しいファイル名を <code>detail.html</code> として作る操作は不要です。これは <code>index.html</code> の中の <code>template</code> の<code>id</code>です。",
+      "translation": "Revisemos las funciones del código inicial en el siguiente orden. No es necesario crear un archivo nuevo llamado <code>detail.html</code>. Este es el <code>id</code> de un <code>template</code> dentro de <code>index.html</code>."
+    },
+    {
+      "source": "場所",
+      "translation": "Ubicación"
+    },
+    {
+      "source": "処理と理由",
+      "translation": "Qué hace y por qué"
+    },
+    {
+      "source": "HTMLの<code>head</code>",
+      "translation": "El <code>head</code> de HTML"
+    },
+    {
+      "source": "標準の<code>loader.js</code>、Onsen UI 2.12.9のCSS・JavaScript、自作CSS・<code>app.js</code>を読み込む。自作JSはOnsen UIより後。",
+      "translation": "Carga el <code>loader.js</code> estándar, el CSS y JavaScript de Onsen UI 2.12.9, tu propio CSS y <code>app.js</code>. Tu propio JS va después de Onsen UI."
+    },
+    {
+      "source": "<code>ons-navigator</code>が<code>list.html</code>を実体化する。<code>template</code>は配置前のひな形で、詳細へ進んだときに<code>detail.html</code>の要素が作られる。",
+      "translation": "<code>ons-navigator</code> instancia <code>list.html</code>. El <code>template</code> es una plantilla previa a la colocación; los elementos de <code>detail.html</code> se crean al avanzar al detalle."
+    },
+    {
+      "source": "<code>init</code>のリスナー",
+      "translation": "El listener de <code>init</code>"
+    },
+    {
+      "source": "ページの要素が使える時点に、そのページの<code>id</code>を見てイベント登録や文字の設定を行う。",
+      "translation": "En el momento en que los elementos de la página quedan disponibles, revisa el <code>id</code> de esa página y registra eventos o configura textos."
+    },
+    {
+      "source": "配列の件数だけ固定の行構造を作る。名前や種類は<code>textContent</code>へ入れ、文字をHTMLとして解釈しない。",
+      "translation": "Crea una estructura de filas fija según la cantidad de elementos del arreglo. El nombre y el tipo se asignan a <code>textContent</code>, para que el texto no se interprete como HTML."
+    },
+    {
+      "source": "<code>pushPage</code>の<code>data</code>へ選んだデータを渡し、詳細の<code>page.data</code>で受け取る。現在のページと移動中の旗を調べ、連打でページを重ねない。",
+      "translation": "Pasa los datos seleccionados al <code>data</code> de <code>pushPage</code> y los recibe en el <code>page.data</code> del detalle. Comprueba la página actual y la bandera de transición para no superponer páginas con toques consecutivos."
+    },
+    {
+      "source": "<code>callback</code> / 戻る",
+      "translation": "<code>callback</code> / volver"
+    },
+    {
+      "source": "移動完了の<code>callback</code>で旗を戻す。<code>ons-back-button</code>はページを1つ戻す。",
+      "translation": "Restablece la bandera en el <code>callback</code> al finalizar la transición. <code>ons-back-button</code> regresa una página."
+    },
+    {
+      "source": "CSSはクラスで余白・色・カードの枠を対応させています。Onsen UIは同じHTMLへOSに合わせた部品のスタイルを適用します。今回も素のJavaScriptから使い、別のフレームワークは追加しません。",
+      "translation": "El CSS asocia el espaciado, los colores y los bordes de las tarjetas mediante clases. Onsen UI aplica al mismo HTML los estilos de componentes adecuados para cada sistema operativo. Esta vez también lo usamos desde JavaScript puro y no agregamos ningún otro framework."
+    },
+    {
+      "source": "既知の技術と比べる",
+      "translation": "Comparar con tecnologías conocidas"
+    },
+    {
+      "source": "Web基礎と同じ3ファイル構成ですが、操作する場所はMonaca クラウド IDEです。<code>init</code>はAndroidのビュー生成後の設定やiOSの<code>viewDidLoad</code>に相当するタイミングで、JavaScriptの<code>addEventListener</code>で受け取ります。<code>pushPage</code>の<code>data</code>は、ネイティブアプリで次の画面へ値を渡す操作に対応します。まだ保存用の文字列には変換していません。",
+      "translation": "La estructura de 3 archivos es la misma que en Fundamentos de la Web, pero el lugar donde operas es el Monaca クラウド IDE. <code>init</code> equivale al momento de configuración tras crear las vistas en Android o a <code>viewDidLoad</code> en iOS, y se recibe con <code>addEventListener</code> en JavaScript. El <code>data</code> de <code>pushPage</code> corresponde a pasar valores a la siguiente pantalla en una aplicación nativa. Todavía no lo hemos convertido en una cadena de texto para guardarlo."
+    },
+    {
+      "source": "このSTEPの全コード（照合・合流用）",
+      "translation": "Código completo de este STEP (para comparar o incorporarse)"
+    },
+    {
+      "source": "www/index.html · 全文",
+      "translation": "www/index.html · texto completo"
+    },
+    {
+      "source": "www/css/style.css · 全文",
+      "translation": "www/css/style.css · texto completo"
+    },
+    {
+      "source": "www/js/app.js · 全文",
+      "translation": "www/js/app.js · texto completo"
+    },
+    {
+      "source": "自分の1プロジェクトで3件の一覧・詳細・戻るを確認し、HTMLとJSの対応を追えた。",
+      "translation": "Pudiste verificar la lista de 3 elementos, los detalles y el botón de volver en tu propio proyecto, y comprender la correspondencia entre HTML y JS."
+    },
+    {
+      "source": "STEP 01 · コマ5",
+      "translation": "STEP 01 · Clase 5"
+    },
+    {
+      "source": "入力画面を作る",
+      "translation": "Crea la pantalla de entrada"
+    },
+    {
+      "source": "3ファイルをこのSTEPのコードへ更新します。HTMLに <code>add.html</code> の<code>template</code>を加え、名前・種類の <code>input</code> と、好きな理由の <code>textarea</code> を置きます。<code>label</code> の<code>for</code>と入力欄の<code>id</code>が対応します。",
+      "translation": "Actualiza los 3 archivos con el código de este STEP. En el HTML, agrega el <code>template</code> de <code>add.html</code> y coloca los <code>input</code> para el nombre y el tipo, y el <code>textarea</code> para la razón por la que te gusta. El <code>for</code> de cada <code>label</code> corresponde al <code>id</code> de su campo de entrada."
+    },
+    {
+      "source": "CSSの <code>.app-input</code> は幅を100%にし、<code>box-sizing: border-box</code> で<code>padding</code>と枠をその幅の内側へ収めます。<code>font: inherit</code> で文字を周囲とそろえ、<code>focus</code>の<code>outline</code>で選択中の欄を見分けます。ほかに加わるクラスのうち、このSTEPの画面に当たる4つは次の表のとおりです。",
+      "translation": "En el CSS, <code>.app-input</code> establece el ancho al 100%, y con <code>box-sizing: border-box</code> mantiene el <code>padding</code> y el borde dentro de ese ancho. <code>font: inherit</code> unifica el estilo del texto con el entorno, y el <code>outline</code> de <code>focus</code> permite distinguir el campo seleccionado. Entre las demás clases que se agregan, las 4 que corresponden a la pantalla de este STEP se muestran en la siguiente tabla."
+    },
+    {
+      "source": "クラス",
+      "translation": "Clase"
+    },
+    {
+      "source": "当たる要素",
+      "translation": "Elementos a los que se aplica"
+    },
+    {
+      "source": "指定と理由",
+      "translation": "Declaración y motivo"
+    },
+    {
+      "source": "一覧の <code>btn_open_add</code>",
+      "translation": "<code>btn_open_add</code> en la lista"
+    },
+    {
+      "source": "<code>margin-top: 16px</code>。説明文の <code>.app-description</code> は <code>margin: 0</code> なので、その直下に置くボタンの上を空けて、文とボタンを離します。",
+      "translation": "<code>margin-top: 16px</code>. Como el texto de descripción <code>.app-description</code> tiene <code>margin: 0</code>, deja un espacio arriba del botón que se coloca justo debajo para separar el texto del botón."
+    },
+    {
+      "source": "一覧の <code>txt_storage</code> と、入力画面の <code>txt_add_message</code>",
+      "translation": "<code>txt_storage</code> en la lista y <code>txt_add_message</code> en la pantalla de entrada"
+    },
+    {
+      "source": "上下に12pxの余白、<code>.app-caption</code> と同じ文字色、<code>overflow-wrap: anywhere</code>。JavaScriptから文を入れる案内用の段落で、長い文でも画面の幅で折り返します。<code>txt_add_message</code> はこのSTEPでは空で、STEP 02から文を出します。",
+      "translation": "Margen superior e inferior de 12px, el mismo color de texto que <code>.app-caption</code> y <code>overflow-wrap: anywhere</code>. Son párrafos de guía donde se inserta texto desde JavaScript, y ajustan el salto de línea al ancho de la pantalla incluso en frases largas. <code>txt_add_message</code> está vacío en este STEP y mostrará texto a partir del STEP 02."
+    },
+    {
+      "source": "入力画面の3つの <code>label</code>",
+      "translation": "Los 3 elementos <code>label</code> de la pantalla de entrada"
+    },
+    {
+      "source": "<code>display: block</code>。<code>.app-label</code> は、STEP 00から詳細の <code>p</code> に使っている余白と文字の指定です。<code>label</code> は既定でインライン要素なので、そのままでは上下の <code>margin</code> が効きません。<code>label</code> に付いたときだけブロックにして、各欄の上に1行ずつ並べます。",
+      "translation": "<code>display: block</code>. <code>.app-label</code> es la declaración de espaciado y texto que se usa desde el STEP 00 para la <code>p</code> del detalle. Como <code>label</code> es por defecto un elemento en línea, el <code>margin</code> superior e inferior no tiene efecto por sí solo. Solo cuando se aplica a un <code>label</code>, se convierte en bloque para alinearlos en una línea sobre cada campo."
+    },
+    {
+      "source": "入力画面のボタンの下の注記",
+      "translation": "La nota debajo del botón en la pantalla de entrada"
+    },
+    {
+      "source": "<code>.app-description</code> と同じ文字色で、文字の大きさは13px。補足の注記を、ボタンや案内文より控えめに見せます。",
+      "translation": "El mismo color de texto que <code>.app-description</code> y un tamaño de fuente de 13px. Muestra la nota complementaria de forma más discreta que los botones y los mensajes de guía."
+    },
+    {
+      "source": "<code>.reset-section</code>・<code>#panel_reset ons-button</code>・<code>.is-hidden</code> の3つは、STEP 08で足す初期化の確認欄のための指定です。このSTEPのHTMLには、まだ当たる要素がありません。",
+      "translation": "Las tres declaraciones <code>.reset-section</code>, <code>#panel_reset ons-button</code> y <code>.is-hidden</code> son reglas para el panel de confirmación de reinicio que se agregará en el STEP 08. En el HTML de este STEP, aún no hay elementos a los que se apliquen."
+    },
+    {
+      "source": "一覧の <code>btn_open_add</code> へ<code>openAddPage</code>を登録し、<code>pushPage(\"add.html\", ...)</code> で入力画面へ進みます。詳細と同じ移動中の旗を共有するため、片方を開いている最中にもう片方は開きません。",
+      "translation": "Registra <code>openAddPage</code> en <code>btn_open_add</code> de la lista y avanza a la pantalla de entrada con <code>pushPage(\"add.html\", ...)</code>. Como comparte la misma bandera de transición con el detalle, mientras se abre uno, el otro no se puede abrir."
+    },
+    {
+      "source": "この旗の名前は、STEP 00の <code>isOpeningDetail</code> から <code>isOpeningPage</code> に変えます。詳細を開くときだけでなく入力画面を開くときにも使うので、「詳細を開いている最中」ではなく「どちらかのページを開いている最中」と読める名前にするためです。宣言と<code>openOshiDetail</code>の中の3か所も、新しい名前にそろえます。",
+      "translation": "Cambiamos el nombre de esta bandera de <code>isOpeningDetail</code> en el STEP 00 a <code>isOpeningPage</code>. Dado que no solo se usa al abrir el detalle sino también al abrir la pantalla de entrada, el nombre debe reflejar “abriendo alguna de las páginas” en lugar de “abriendo el detalle”. También unificamos la declaración y los 3 lugares dentro de <code>openOshiDetail</code> con el nombre nuevo."
+    },
+    {
+      "source": "一覧のボタンの下の <code>txt_storage</code> には <code>この段階では、追加した内容は保存されません。</code>、入力画面のボタンの下の注記には <code>この段階では、追加した内容は再読み込みすると消えます。</code> と出します。追加した内容がまだ残らないことを、画面で先に伝えるためです。保存を作るSTEP 06で、どちらの文も書き換えます。",
+      "translation": "En <code>txt_storage</code> debajo del botón de la lista, muestra <code>この段階では、追加した内容は保存されません。</code> (En esta etapa, el contenido agregado no se guardará.), y en la nota debajo del botón de la pantalla de entrada, muestra <code>この段階では、追加した内容は再読み込みすると消えます。</code> (En esta etapa, el contenido agregado desaparecerá al recargar.). El objetivo es informar previamente en la pantalla que el contenido agregado aún no persiste. En el STEP 06, donde implementaremos el guardado, modificaremos ambas frases."
+    },
+    {
+      "source": "初期データは <code>createInitialItems</code> が新しい配列を返す形にまとめました。後で初期化したときにも同じ内容を作り直せるようにするためです。呼び出しのたびに新しい配列になる点を、<code>return</code>の位置と一緒に読みます。",
+      "translation": "Los datos iniciales se organizaron para que <code>createInitialItems</code> devuelva un arreglo nuevo. Esto permite volver a crear el mismo contenido cuando se reinicie más adelante. Observa que en cada llamada se genera un arreglo nuevo, prestando atención a la posición de <code>return</code>."
+    },
+    {
+      "source": "保存・再読み込み後に <code>好きなものを追加</code> を押します。",
+      "translation": "Después de guardar y volver a cargar, presiona <code>好きなものを追加</code> (Agregar un favorito)."
+    },
+    {
+      "source": "3つの欄へ文字を入力して、左上の戻るボタンで一覧へ戻ります。もう一度開くと新しい入力画面が作られ、欄は空に戻ります。",
+      "translation": "Ingresa texto en los 3 campos y regresa a la lista con el botón de volver de la esquina superior izquierda. Al abrirlo de nuevo, se crea una pantalla de entrada nueva y los campos vuelven a estar vacíos."
+    },
+    {
+      "source": "このSTEPでは <code>追加する</code> を<code>disabled</code>にしてあります。まだクリック処理を付けていないため、押せない状態が正解です。",
+      "translation": "En este STEP, <code>追加する</code> (Agregar) tiene el atributo <code>disabled</code>. Como todavía no le hemos asignado el evento de clic, lo correcto es que no se pueda presionar."
+    },
+    {
+      "source": "Web基礎の<code>input</code>・<code>textarea</code>・<code>label</code>をそのまま使います。Androidの<code>EditText</code>、iOSの<code>UITextField</code>・<code>UITextView</code>と同じ役割です。画面を開く処理は詳細への移動と同じ形で、渡すデータが要らないため<code>data</code>を省きます。<code>createInitialItems</code>は、Java／Swiftでデータの配列を関数から返す書き方と対応します。",
+      "translation": "Usamos <code>input</code>, <code>textarea</code> y <code>label</code> de Fundamentos de la Web tal como están. Cumplen la misma función que <code>EditText</code> en Android y <code>UITextField</code> o <code>UITextView</code> en iOS. El proceso de abrir la pantalla tiene la misma forma que la navegación al detalle, y se omite <code>data</code> porque no hace falta pasar datos. <code>createInitialItems</code> corresponde a la forma de retornar un arreglo de datos desde una función en Java o Swift."
+    },
+    {
+      "source": "入力画面を開き、3つの欄へ入力して戻れた。追加ボタンがまだ押せないことを確認した。",
+      "translation": "Pudiste abrir la pantalla de entrada, escribir en los 3 campos y regresar. Verificaste que el botón de agregar todavía no se puede presionar."
+    },
+    {
+      "source": "STEP 02 · コマ5",
+      "translation": "STEP 02 · Clase 5"
+    },
+    {
+      "source": "入力した文字を確認する",
+      "translation": "Verifica el texto ingresado"
+    },
+    {
+      "source": "HTMLの追加ボタンから <code>disabled</code> を外し、JSでは <code>page_add</code> の<code>init</code>で<code>addOshi</code>を登録します。関数名を渡しているので、登録した瞬間ではなくボタンを押したときに動きます。",
+      "translation": "Quita <code>disabled</code> del botón de agregar en el HTML y, en el JS, registra <code>addOshi</code> en el <code>init</code> de <code>page_add</code>. Como pasas el nombre de la función, esta se ejecuta cuando se presiona el botón y no en el momento del registro."
+    },
+    {
+      "source": "<code>addOshi</code>は、入力欄を<code>id</code>で取得し、<code>value</code> で今の文字を読みます。<code>trim()</code> は前後の空白を取り除きます。3つのどれかが空ならメッセージを表示して<code>return</code>し、残りの処理へ進みません。",
+      "translation": "<code>addOshi</code> obtiene los campos de entrada mediante su <code>id</code> y lee el texto actual con <code>value</code>. <code>trim()</code> elimina los espacios en blanco iniciales y finales. Si alguno de los 3 está vacío, muestra un mensaje y hace <code>return</code> sin continuar con el resto del procesamiento."
+    },
+    {
+      "source": "このSTEPの成功結果は <code>入力を確認しました：</code> と名前の表示だけです。まだ一覧には追加しません。<code>txt_add_message</code>を<code>textContent</code>で更新するため、名前に山かっこを入れても文字として表示されます。",
+      "translation": "El resultado exitoso de este STEP es solo mostrar <code>入力を確認しました：</code> (Entrada confirmada:) junto con el nombre. Aún no se agrega a la lista. Dado que <code>txt_add_message</code> se actualiza con <code>textContent</code>, incluso si escribes paréntesis angulares en el nombre, se mostrarán como texto."
+    },
+    {
+      "source": "空欄のまま押し、不足のメッセージを確認します。",
+      "translation": "Presiona el botón con los campos vacíos y verifica el mensaje de datos faltantes."
+    },
+    {
+      "source": "名前だけに空白を入れ、ほかを埋めて押します。前後の空白を取り除くと空になるため、同じメッセージになることを確認します。",
+      "translation": "Ingresa únicamente espacios en blanco en el nombre, llena los demás campos y presiona el botón. Como queda vacío al eliminar los espacios iniciales y finales, verifica que aparezca el mismo mensaje."
+    },
+    {
+      "source": "すべて入力して押し、名前が表示されることを確認します。入力した文字が勝手に消えないことも見ます。",
+      "translation": "Llena todos los campos, presiona el botón y confirma que se muestre el nombre. Observa también que el texto ingresado no desaparezca por su cuenta."
+    },
+    {
+      "source": "Javaなら<code>EditText.getText().toString().trim()</code>、Swiftなら<code>text</code>と<code>trimmingCharacters</code>を使う場面です。今回はHTMLの<code>value</code>を読みます。空欄の条件や<code>return</code>は既習の書き方で、エラーの伝え先をダイアログではなく同じ画面の段落にしています。",
+      "translation": "Esta es una situación donde usarías <code>EditText.getText().toString().trim()</code> en Java o <code>text</code> y <code>trimmingCharacters</code> en Swift. En esta ocasión leemos el <code>value</code> de HTML. La condición de campo vacío y el <code>return</code> son formas de escribir que ya aprendiste; la notificación del error se realiza en un párrafo de la misma pantalla en lugar de un cuadro de diálogo."
+    },
+    {
+      "source": "空欄・空白だけ・正常入力の3通りで、結果の文を確認できた。",
+      "translation": "Pudiste verificar el mensaje resultante en los 3 casos: campos vacíos, solo espacios en blanco y entrada normal."
+    },
+    {
+      "source": "STEP 03 · コマ5",
+      "translation": "STEP 03 · Clase 5"
+    },
+    {
+      "source": "配列へ追加して戻る",
+      "translation": "Agrega al arreglo y regresa"
+    },
+    {
+      "source": "JSの<code>addOshi</code>で、入力確認だけの行を、配列へ追加して一覧を描き直す処理へ替えます。<code>oshiItems.push({ name: name, genre: genre, comment: comment })</code> の左側はデータの項目名、右側は入力欄から読んだ変数です。",
+      "translation": "En <code>addOshi</code> de JS, reemplaza la línea que solo confirmaba la entrada por el proceso que agrega al arreglo y vuelve a dibujar la lista. En <code>oshiItems.push({ name: name, genre: genre, comment: comment })</code>, el lado izquierdo corresponde al nombre del campo de datos y el lado derecho es la variable leída del campo de entrada."
+    },
+    {
+      "source": "次に<code>renderOshiList</code>を呼びます。この関数は<code>innerHTML</code>で行を置き直した後に、<code>textContent</code>の設定とクリックの登録をやり直します。古い行に登録したイベントは、新しい行へ自動では移らないためです。",
+      "translation": "A continuación, llama a <code>renderOshiList</code>. Después de reemplazar las filas con <code>innerHTML</code>, esta función vuelve a configurar <code>textContent</code> y a registrar los clics. Esto se debe a que los eventos registrados en las filas antiguas no se transfieren automáticamente a las filas nuevas."
+    },
+    {
+      "source": "その次の行で、一覧の下の <code>txt_selected</code> に <code>追加したもの：</code> と追加した名前を出します。STEP 00から、詳細を開いたときに <code>選択中：</code> と名前を出している欄です。一覧へ戻ったときに、どれを追加したかを行を探さずに確かめられるようにするためです。",
+      "translation": "En la siguiente línea, muestra <code>追加したもの：</code> (Elemento agregado:) y el nombre que agregaste en <code>txt_selected</code> debajo de la lista. Desde el STEP 00, este es el campo donde se muestra <code>選択中：</code> (Seleccionado:) y el nombre al abrir el detalle. Sirve para que, al regresar a la lista, puedas confirmar cuál agregaste sin tener que buscar entre las filas."
+    },
+    {
+      "source": "最後に <code>popPage()</code> で入力画面を閉じます。一覧はその下に残っているので、新しい行が見えます。追加を始める直前にボタンを無効にしておくことで、戻る途中の連続操作でも同じ内容を二重に追加しません。",
+      "translation": "Por último, cierra la pantalla de entrada con <code>popPage()</code>. Como la lista permanece debajo, la nueva fila queda a la vista. Deshabilitar el botón justo antes de iniciar la adición evita que el mismo contenido se agregue por duplicado incluso con toques repetidos mientras se regresa."
+    },
+    {
+      "source": "新しい好きなものを1件入力して追加します。一覧が4件になり、一覧の下に <code>追加したもの：</code> と入力した名前が出たことを確認します。",
+      "translation": "Ingresa un nuevo favorito y agrégalo. Confirma que la lista ahora tiene 4 elementos y que debajo de la lista aparece <code>追加したもの：</code> (Elemento agregado:) con el nombre ingresado."
+    },
+    {
+      "source": "追加した行を押し、名前・種類・好きな理由が入力どおりか確かめます。好きな理由に改行を入れた場合も確認します。",
+      "translation": "Presiona la fila agregada y verifica que el nombre, el tipo y la razón coincidan con lo ingresado. Comprueba también el caso en que hayas incluido saltos de línea en la razón."
+    },
+    {
+      "source": "戻ってからプレビューを再読み込みします。配列はソースの初期データから作り直されるため、3件に戻ります。今日はこれで正解です。",
+      "translation": "Regresa y vuelve a cargar la vista previa. Dado que el arreglo se reconstruye a partir de los datos iniciales del código fuente, vuelve a tener 3 elementos. Por hoy, este es el resultado correcto."
+    },
+    {
+      "source": "<code>push</code>はJavaの<code>ArrayList.add</code>やSwiftの<code>Array.append</code>と同じ追加です。<code>popPage</code>はiOSで前の画面へ戻す操作に対応します。ここで変えたのは実行中の配列だけなので、ファイルに文字を保存したときや<code>SharedPreferences</code>／<code>UserDefaults</code>へ書いたときとは残り方が異なります。",
+      "translation": "<code>push</code> es una adición similar a <code>ArrayList.add</code> en Java o <code>Array.append</code> en Swift. <code>popPage</code> corresponde a la operación de volver a la pantalla anterior en iOS. Dado que aquí solo modificamos el arreglo en memoria durante la ejecución, la forma en que se conservan los datos difiere de cuando se guardan textos en un archivo o se escriben en <code>SharedPreferences</code> / <code>UserDefaults</code>."
+    },
+    {
+      "source": "追加した行の詳細が入力と一致し、再読み込みでは初期データへ戻ることを確認できた。",
+      "translation": "Pudiste confirmar que los detalles de la fila agregada coinciden con la entrada y que, al recargar, se regresa a los datos iniciales."
+    },
+    {
+      "source": "STEP 04 · コマ5",
+      "translation": "STEP 04 · Clase 5"
+    },
+    {
+      "source": "確認とアレンジ",
+      "translation": "Verificación y personalización"
+    },
+    {
+      "source": "今日の終わりは、作った範囲を使って自分の表現に変えます。コードはSTEP 03の状態です。下の全コードは照合用で、自分の変更を無条件に貼り戻すためのものではありません。",
+      "translation": "Para terminar por hoy, personaliza lo que construiste con tu propia expresión. El código se encuentra en el estado del STEP 03. El código completo que aparece abajo es para cotejar; no es para pegar y sobrescribir tus cambios sin revisar."
+    },
+    {
+      "source": "変える場所",
+      "translation": "Lugar que puedes cambiar"
+    },
+    {
+      "source": "変わること",
+      "translation": "Qué cambia"
+    },
+    {
+      "source": "HTMLの<code>placeholder</code>",
+      "translation": "El <code>placeholder</code> de HTML"
+    },
+    {
+      "source": "入力前に見える記入例。",
+      "translation": "Ejemplos de llenado visibles antes de ingresar datos."
+    },
+    {
+      "source": "CSSの<code>app-input</code>の枠色・<code>padding</code>",
+      "translation": "Color de borde y <code>padding</code> de <code>app-input</code> en CSS"
+    },
+    {
+      "source": "入力欄の見た目と内側の余白。",
+      "translation": "Apariencia y margen interno de los campos de entrada."
+    },
+    {
+      "source": "JSの<code>createInitialItems</code>",
+      "translation": "<code>createInitialItems</code> de JS"
+    },
+    {
+      "source": "再読み込み時に表示される自分の好きなものと理由。",
+      "translation": "Tus propios favoritos y razones mostrados al recargar."
+    },
+    {
+      "source": "入力例には、好きな音楽や食べ物、場所を使えます。ほかの人の個人情報や、共有したくない内容は例に入れません。名前だけでなく、なぜ好きなのかを自分の言葉にしましょう。",
+      "translation": "Para los ejemplos de entrada, puedes usar música, comidas o lugares que te gusten. No incluyas información personal de otras personas ni contenidos que no quieras compartir. Expresa con tus propias palabras no solo el nombre, sino también por qué te gusta."
+    },
+    {
+      "source": "1か所変えたら保存・再読み込みし、入力・追加・詳細・戻るをもう一度試します。変えたファイル名と、画面のどこが変わったかを控えます。",
+      "translation": "Después de cambiar un lugar, guarda y vuelve a cargar, y prueba nuevamente escribir, agregar, ver el detalle y volver. Anota el nombre del archivo que modificaste y qué parte de la pantalla cambió."
+    },
+    {
+      "source": "HTMLは構造と記入例、CSSは装飾、JavaScriptはデータと動きというWeb基礎の役割分担を使います。画面に入力した値と、ソースの初期データの違いを、再読み込み後の結果で見分けます。",
+      "translation": "Utilizamos la división de roles de Fundamentos de la Web: HTML para la estructura y ejemplos de llenado, CSS para la apariencia y JavaScript para los datos y el comportamiento. Distingue la diferencia entre los valores ingresados en pantalla y los datos iniciales del código fuente a partir del resultado tras recargar."
+    },
+    {
+      "source": "アレンジした場所が画面に現れ、追加・詳細・戻るが引き続き動いた。",
+      "translation": "Los lugares personalizados se reflejaron en la pantalla, y agregar, ver el detalle y volver continuaron funcionando."
+    },
+    {
+      "source": "STEP 05 · コマ6",
+      "translation": "STEP 05 · Clase 6"
+    },
+    {
+      "source": "配列とJSONの違いを読む",
+      "translation": "Lee la diferencia entre arreglos y JSON"
+    },
+    {
+      "source": "このコマの開始時の全コード",
+      "translation": "Código completo al inicio de esta clase"
+    },
+    {
+      "source": "途中から合流する場合は、変更した文字と色を控えてから3ファイルをそろえます。順番に進めている人は、前の回の続きで構いません。",
+      "translation": "Si te unes a mitad de la clase, anota el texto y los colores que modificaste antes de igualar los 3 archivos. Si vienes trabajando en orden, puedes continuar desde la sesión anterior."
+    },
+    {
+      "source": "Monaca クラウド IDEで同じ好きなものノートを開きます。開始状態は「入力して追加できるが、再読み込みすると初期データに戻る」です。保存する前に、画面で使う配列と、保存へ渡す文字列を区別します。",
+      "translation": "Abre el mismo cuaderno de favoritos en Monaca クラウド IDE. El estado inicial es “puedes escribir y agregar, pero al recargar vuelve a los datos iniciales”. Antes de guardar, distinguiremos entre el arreglo utilizado en la pantalla y la cadena de texto que se pasa al almacenamiento."
+    },
+    {
+      "source": "<strong>JSONは、値を文字で表すための決まった形式</strong>です。JavaScriptの配列やオブジェクトそのものではありません。<code>JSON.stringify</code> は値をJSONの文字列にし、<code>JSON.parse</code> はJSONの文字列から値を復元します。今回の保存対象は文字列の3項目を持つオブジェクトの配列です。",
+      "translation": "<strong>JSON es un formato establecido para representar valores como texto.</strong> No es el arreglo ni el objeto de JavaScript en sí mismo. <code>JSON.stringify</code> convierte un valor en una cadena JSON, y <code>JSON.parse</code> restaura el valor a partir de una cadena JSON. En esta ocasión, lo que guardamos es un arreglo de objetos con 3 campos de texto."
+    },
+    {
+      "source": "場面",
+      "translation": "Situación"
+    },
+    {
+      "source": "値",
+      "translation": "Valor"
+    },
+    {
+      "source": "型",
+      "translation": "Tipo"
+    },
+    {
+      "source": "画面で使う1件の例",
+      "translation": "Ejemplo de 1 elemento usado en pantalla"
+    },
+    {
+      "source": "オブジェクト",
+      "translation": "Objeto"
+    },
+    {
+      "source": "JSONで表した内容",
+      "translation": "Contenido expresado en JSON"
+    },
+    {
+      "source": "この文字の並びを持つ文字列",
+      "translation": "Cadena con esta secuencia de caracteres"
+    },
+    {
+      "source": "<code>parse</code>した後",
+      "translation": "Después de <code>parse</code>"
+    },
+    {
+      "source": "<code>item.name</code> を読める値",
+      "translation": "Valor donde se puede leer <code>item.name</code>"
+    },
+    {
+      "source": "再びオブジェクト",
+      "translation": "Nuevamente un objeto"
+    },
+    {
+      "source": "JSONではキーもダブルクォートで囲みます。コメントや末尾の余分なカンマは使えません。ただし、今回の保存文字列は手で組み立てず、<code>stringify</code>に作らせます。名前に引用符や改行があっても、必要な表現への変換を任せられます。",
+      "translation": "En JSON, las claves también se encierran entre comillas dobles. No se permiten comentarios ni comas finales adicionales. Sin embargo, esta vez no armaremos la cadena guardada a mano, sino que dejaremos que <code>stringify</code> la genere. Incluso si el nombre contiene comillas o saltos de línea, podemos dejarle la conversión a la representación necesaria."
+    },
+    {
+      "source": "次の3行は処理順を読むための抜粋です。まだ追加する必要はありません。次のSTEPで保存、STEP 07で読み込みへ組み込みます。",
+      "translation": "Las siguientes 3 líneas son un fragmento para comprender el orden del proceso. Todavía no es necesario agregarlas. Se integrarán al guardado en el siguiente STEP y a la carga en el STEP 07."
+    },
+    {
+      "source": "配列のまま<code>setItem</code>へ渡すと、今回必要な構造を保持するJSONにはなりません。<code>String(oshiItems)</code> で一般的な文字列へ変えることとも区別しましょう。",
+      "translation": "Si pasas el arreglo tal cual a <code>setItem</code>, no se convertirá en un JSON que conserve la estructura requerida esta vez. También distingamos esto de convertirlo en una cadena genérica con <code>String(oshiItems)</code>."
+    },
+    {
+      "source": "JavaやSwiftの配列・データオブジェクトをそのまま画面で使っていたときと、文字列を保存するときでは型が違います。この差をつなぐ表現として、今回はJSONを新しく扱います。配列の操作自体を学び直すのではなく、「配列→JSON文字列→配列」という変換の向きを確認します。",
+      "translation": "El tipo de dato es diferente entre usar directamente arreglos y objetos de datos en pantalla como en Java o Swift, y guardar una cadena de texto. Para salvar esta diferencia, introducimos JSON como nueva forma de representación. No se trata de volver a aprender el manejo de arreglos, sino de verificar el sentido de la conversión: “arreglo → cadena JSON → arreglo”."
+    },
+    {
+      "source": "JSONの文字列と配列を区別し、<code>stringify</code>と<code>parse</code>の向きを確認した。",
+      "translation": "Pudiste distinguir entre una cadena JSON y un arreglo, y confirmar el sentido de <code>stringify</code> y <code>parse</code>."
+    },
+    {
+      "source": "STEP 06 · コマ6",
+      "translation": "STEP 06 · Clase 6"
+    },
+    {
+      "source": "文字列にして保存する",
+      "translation": "Guarda como texto"
+    },
+    {
+      "source": "このSTEPの3ファイルへ更新します。JSの先頭に <code>STORAGE_KEY</code> を置き、保存内容を探すための名前を1か所で管理します。この名前を途中で変更すると、以前のキーで保存した内容は見えなくなります。",
+      "translation": "Actualiza con los 3 archivos de este STEP. Coloca <code>STORAGE_KEY</code> al inicio de JS para administrar en un solo lugar el nombre con el que se buscan los datos guardados. Si cambias este nombre en el camino, ya no podrás ver los datos guardados con la clave anterior."
+    },
+    {
+      "source": "<code>addOshi</code>では、<code>oshiItems.slice()</code> で配列の浅いコピー<code>nextItems</code>を作り、そこへ新しい1件を追加します。この処理では既存のオブジェクトの項目は変更せず、配列へ追加するだけなので、配列のコピーで足ります。",
+      "translation": "En <code>addOshi</code>, creamos una copia superficial del arreglo <code>nextItems</code> con <code>oshiItems.slice()</code> y agregamos el nuevo elemento allí. Dado que en este proceso no modificamos los campos de los objetos existentes sino que solo agregamos al arreglo, una copia del arreglo es suficiente."
+    },
+    {
+      "source": "<code>localStorage.setItem(STORAGE_KEY, JSON.stringify(nextItems))</code> が、同じブラウザの同じ保存領域へ文字列を保存する行です。<code>localStorage</code>は同期APIなので、次の行へ進む前にこの呼び出しが終わります。今回は<code>Promise</code>や<code>async</code> / <code>await</code>を使いません。",
+      "translation": "<code>localStorage.setItem(STORAGE_KEY, JSON.stringify(nextItems))</code> es la línea que guarda la cadena de texto en la misma área de almacenamiento del mismo navegador. Como <code>localStorage</code> es una API sincrónica, esta llamada termina antes de pasar a la siguiente línea. En esta ocasión no usamos <code>Promise</code> ni <code>async</code> / <code>await</code>."
+    },
+    {
+      "source": "保存設定や空き容量などの理由で書き込めないと例外が発生します。<code>try</code> 内の保存が成功したときだけ、<code>oshiItems</code>を<code>nextItems</code>へ替えて一覧を描き直します。<code>catch</code> 側では入力内容を残し、ボタンを戻してエラーを表示し、<code>return</code>します。",
+      "translation": "Si no se puede escribir debido a la configuración de almacenamiento o falta de espacio, se generará una excepción. Solo cuando el guardado dentro de <code>try</code> tenga éxito, reemplazamos <code>oshiItems</code> por <code>nextItems</code> y redibujamos la lista. En el bloque <code>catch</code>, conservamos lo ingresado, reactivamos el botón, mostramos el error y hacemos <code>return</code>."
+    },
+    {
+      "source": "順番",
+      "translation": "Orden"
+    },
+    {
+      "source": "そうする理由",
+      "translation": "Motivo"
+    },
+    {
+      "source": "別の配列に追加",
+      "translation": "Agregar a otro arreglo"
+    },
+    {
+      "source": "保存前に画面の元データを変えない。",
+      "translation": "No modificar los datos originales de la pantalla antes de guardar."
+    },
+    {
+      "source": "ボタンを無効化して保存",
+      "translation": "Deshabilitar el botón y guardar"
+    },
+    {
+      "source": "同じ入力を連続して処理しない。",
+      "translation": "No procesar la misma entrada de forma consecutiva."
+    },
+    {
+      "source": "成功したら配列更新・一覧再描画・戻る",
+      "translation": "Si tiene éxito, actualizar el arreglo, redibujar la lista y volver"
+    },
+    {
+      "source": "保存失敗を「追加できた」と見せない。",
+      "translation": "No mostrar un fallo al guardar como si se hubiera agregado con éxito."
+    },
+    {
+      "source": "失敗したら画面に理由を出す",
+      "translation": "Si falla, mostrar el motivo en pantalla"
+    },
+    {
+      "source": "入力を消さず、次の確認や再試行につなげる。",
+      "translation": "No borrar lo ingresado, permitiendo verificar o reintentar a continuación."
+    },
+    {
+      "source": "保存してよいかを表す <code>let canSave = true;</code> も加えます。<code>openAddPage</code>と<code>addOshi</code>の最初の条件で <code>!canSave</code> なら何もせずに戻り、一覧の<code>init</code>では <code>btn_open_add</code> の <code>disabled</code> を <code>!canSave</code> にします。このSTEPには <code>canSave</code> を<code>false</code>にする行がないので、常に<code>true</code>のままで、画面の動きは変わりません。<code>false</code>にするのは、次のSTEPで保存内容を読み込めなかったときです。そのまま追加できると、読めなかった保存内容を、初期データに1件足した配列で上書きしてしまいます。保存の処理を書くこのSTEPで、保存へ進む入口に確認を置いておけば、次のSTEPでは読み込みの処理を足すだけで済みます。",
+      "translation": "También agregamos <code>let canSave = true;</code>, que indica si se puede guardar. En la primera condición de <code>openAddPage</code> y <code>addOshi</code>, si se cumple <code>!canSave</code> regresa sin hacer nada, y en el <code>init</code> de la lista se asigna <code>!canSave</code> al <code>disabled</code> de <code>btn_open_add</code>. En este STEP no hay ninguna línea que ponga <code>canSave</code> en <code>false</code>, por lo que siempre permanece en <code>true</code> y el comportamiento de la pantalla no cambia. Se pondrá en <code>false</code> en el siguiente STEP, en caso de que no se puedan leer los datos guardados. Si se permitiera agregar de todas formas, el contenido guardado que no se pudo leer se sobrescribiría con un arreglo que solo contiene los datos iniciales más 1 elemento. Al colocar esta verificación en la entrada al guardado en este STEP donde escribimos el proceso de guardar, en el siguiente STEP solo necesitaremos agregar el proceso de lectura."
+    },
+    {
+      "source": "画面の文も、保存ができるようになったことに合わせて替えます。入力画面のボタンは <code>追加する</code> から <code>追加して保存</code> に変わります。押すと、配列への追加と一緒に保存まで行うことを、ボタンの文字で示すためです。STEP 01から出していた2つの文は、保存できるようになると事実と合わなくなるので、一覧の <code>txt_storage</code> は <code>保存はできますが、このSTEPではまだ読み込みません。</code> に、入力画面のボタンの下の注記は <code>保存先は、このブラウザの同じプレビューです。公開URLに入力内容は含まれません。</code> に替えます。保存した内容はこのブラウザにだけ残り、STEP 12で発行する公開URLから取り込んだ人には届かないためです。",
+      "translation": "Los textos en pantalla también cambian al habilitar la capacidad de guardar. El botón de la pantalla de entrada cambia de <code>追加する</code> (Agregar) a <code>追加して保存</code> (Agregar y guardar). Esto se debe a que el texto del botón indica que, al presionarlo, se realiza el guardado junto con la adición al arreglo. Las dos frases que mostrábamos desde el STEP 01 ya no coinciden con la realidad al poder guardar, por lo que cambiamos <code>txt_storage</code> en la lista a <code>保存はできますが、このSTEPではまだ読み込みません。</code> (Se puede guardar, pero en este STEP todavía no se lee.), y la nota debajo del botón en la pantalla de entrada a <code>保存先は、このブラウザの同じプレビューです。公開URLに入力内容は含まれません。</code> (El destino de guardado es la misma vista previa de este navegador. La URL de importación no incluye el contenido ingresado.). Esto se debe a que el contenido guardado solo permanece en este navegador y no llega a quienes importen el proyecto desde la URL de importación generada en el STEP 12."
+    },
+    {
+      "source": "入力画面のボタンが <code>追加して保存</code> になったことを確かめてから、1件追加して一覧へ戻り、<code>件をこのブラウザに保存しました。</code> の文を確かめます。このSTEPでは保存までなので、再読み込み時の表示はまだ初期データです。保存されていないと決めつけず、次のSTEPで読み込む側を作ります。また、このSTEPで再読み込みしてからもう一度追加すると、前に保存した内容は、ソースの初期データと新しい1件で上書きされます。保存した内容をまだ読み込んでいない配列に、新しい1件を足して保存するためです。次のSTEPで読み込めるのは、最後に保存した内容です。",
+      "translation": "Después de confirmar que el botón de la pantalla de entrada cambió a <code>追加して保存</code> (Agregar y guardar), agrega 1 elemento, regresa a la lista y verifica la frase <code>件をこのブラウザに保存しました。</code> (elementos guardados en este navegador.). Como en este STEP solo implementamos hasta el guardado, al recargar la pantalla aún se mostrarán los datos iniciales. No asumas que no se guardó; en el siguiente STEP construiremos la parte que los lee. Además, si recargas en este STEP y vuelves a agregar otro elemento, el contenido guardado anteriormente se sobrescribirá con los datos iniciales del código fuente más el nuevo elemento. Esto se debe a que se agrega un nuevo elemento a un arreglo que todavía no leyó los datos guardados y luego se guarda. Lo que podrás leer en el siguiente STEP es el último contenido guardado."
+    },
+    {
+      "source": "キーと値で保存する目的はAndroidの<code>SharedPreferences</code>やiOSの<code>UserDefaults</code>と同じです。<code>localStorage</code>の値は文字列に限るためJSONへ変換します。<code>slice</code>はJavaで<code>ArrayList</code>を複製したり、Swiftで配列の別の値を作ったりする操作と比較できます。<code>try</code> / <code>catch</code>はJavaの例外処理、Swiftの<code>do</code> / <code>catch</code>に対応し、今回は失敗後に表示中のデータを更新しない順序が要点です。<code>canSave</code>でボタンの <code>disabled</code> を切り替えるのは、Androidの<code>setEnabled(false)</code>やiOSの<code>isEnabled = false</code>で、条件がそろうまで操作を受け付けないのと同じです。",
+      "translation": "El propósito de guardar mediante clave y valor es el mismo que con <code>SharedPreferences</code> en Android o <code>UserDefaults</code> en iOS. Como los valores de <code>localStorage</code> están limitados a cadenas de texto, los convertimos a JSON. <code>slice</code> se puede comparar con duplicar un <code>ArrayList</code> en Java o crear un valor de arreglo independiente en Swift. <code>try</code> / <code>catch</code> corresponde al manejo de excepciones en Java o a <code>do</code> / <code>catch</code> en Swift; el punto clave en esta ocasión es el orden que no actualiza los datos mostrados tras un fallo. Alternar el <code>disabled</code> del botón con <code>canSave</code> equivale a <code>setEnabled(false)</code> en Android o <code>isEnabled = false</code> en iOS para no aceptar operaciones hasta que se cumplan las condiciones."
+    },
+    {
+      "source": "保存成功の文を確認し、コピー・保存・表示更新の順番を確かめた。",
+      "translation": "Verificaste el mensaje de guardado exitoso y el orden de copiar, guardar y actualizar la visualización."
+    },
+    {
+      "source": "STEP 07 · コマ6",
+      "translation": "STEP 07 · Clase 6"
+    },
+    {
+      "source": "保存した配列を復元する",
+      "translation": "Restaura el arreglo guardado"
+    },
+    {
+      "source": "JSに<code>loadOshiItems</code>と<code>isValidItems</code>を加え、<code>page_list</code>の<code>init</code>で <strong>読み込み→一覧生成</strong> の順に呼びます。保存した値を読む前に行を作ると、初期データのまま表示されるためです。",
+      "translation": "Agrega <code>loadOshiItems</code> y <code>isValidItems</code> en JS y, en el <code>init</code> de <code>page_list</code>, llámalos en el orden <strong>lectura → generación de lista</strong>. Si creas las filas antes de leer los valores guardados, se mostrarán con los datos iniciales."
+    },
+    {
+      "source": "<code>getItem(STORAGE_KEY)</code> は、未保存なら <code>null</code> を返します。この場合は何も復元せず、ソースの初期データを使います。文字列があれば<code>JSON.parse</code>で値へ戻します。",
+      "translation": "<code>getItem(STORAGE_KEY)</code> devuelve <code>null</code> si aún no se ha guardado nada. En ese caso no restaura nada y usa los datos iniciales del código fuente. Si hay una cadena de texto, la devuelve a su valor con <code>JSON.parse</code>."
+    },
+    {
+      "source": "JSONとして読めることと、画面で使えることは別です。たとえば数値のJSONも<code>parse</code>できますが、今回欲しいのは文字列の項目を持つ配列です。<code>isValidItems</code>は次の順に確かめます。",
+      "translation": "Que se pueda leer como JSON y que se pueda usar en la pantalla son cosas distintas. Por ejemplo, un número en JSON también pasa por <code>parse</code>, pero lo que necesitamos en esta ocasión es un arreglo cuyos elementos tengan campos de texto. <code>isValidItems</code> realiza la verificación en el siguiente orden."
+    },
+    {
+      "source": "<code>Array.isArray</code> で配列か確認します。",
+      "translation": "Verifica si es un arreglo mediante <code>Array.isArray</code>."
+    },
+    {
+      "source": "各<code>item</code>が<code>null</code>でなく、オブジェクトであるかを <code>typeof</code> と条件式で確認します。",
+      "translation": "Verifica que cada <code>item</code> no sea <code>null</code> y sea un objeto utilizando <code>typeof</code> y una expresión condicional."
+    },
+    {
+      "source": "<code>name</code>・<code>genre</code>・<code>comment</code>がすべて<code>string</code>で、<code>trim</code>後に空でないか確認します。先に型を確認するため、文字列でないものへ<code>trim</code>を呼びません。",
+      "translation": "Verifica que <code>name</code>, <code>genre</code> y <code>comment</code> sean todos de tipo <code>string</code> y no queden vacíos después de <code>trim</code>. Como se comprueba el tipo de antemano, no se llama a <code>trim</code> sobre valores que no sean cadenas de texto."
+    },
+    {
+      "source": "全部通れば<code>true</code>を返します。空の配列は有効な0件として扱います。",
+      "translation": "Si pasa todas las comprobaciones, devuelve <code>true</code>. Un arreglo vacío se trata como un conjunto válido de 0 elementos."
+    },
+    {
+      "source": "読み込みや<code>parse</code>が失敗したとき、または構造が違うときは<code>canSave</code>を<code>false</code>にします。保存済みの文字列を自動で消したり、初期データで上書きしたりしません。一覧には初期データと失敗メッセージを表示し、追加は止めます。次のSTEPで、本人が選んだときだけ初期化できる操作を作ります。失敗メッセージが案内する「初期の内容に戻す」ボタンも、そのときに作ります。このSTEPの画面には、まだありません。",
+      "translation": "Cuando la lectura o <code>parse</code> fallen, o cuando la estructura sea diferente, asigna <code>false</code> a <code>canSave</code>. No borres automáticamente la cadena guardada ni la sobrescribas con los datos iniciales. Muestra los datos iniciales y un mensaje de fallo en la lista, y detén la adición. En el siguiente STEP crearemos una operación para reiniciar solo cuando el propio usuario lo elija. El botón 「初期の内容に戻す」 (Restaurar contenido inicial) indicado en el mensaje de error también se creará en ese momento. En la pantalla de este STEP aún no existe."
+    },
+    {
+      "source": "名前に引用符や山かっこ、好きな理由に改行を入れて1件追加します。",
+      "translation": "Agrega 1 elemento incluyendo comillas o paréntesis angulares en el nombre y saltos de línea en la razón."
+    },
+    {
+      "source": "同じプレビューを再読み込みし、保存した件数と追加した行が戻ることを確かめます。",
+      "translation": "Vuelve a cargar la misma vista previa y confirma que se recuperen la cantidad de elementos guardados y la fila agregada."
+    },
+    {
+      "source": "詳細を開き、文字・改行が入力どおりに戻ったことを確認します。",
+      "translation": "Abre el detalle y comprueba que el texto y los saltos de línea se hayan restaurado tal como los ingresaste."
+    },
+    {
+      "source": "保存領域はブラウザやプレビューの場所に結び付きます。別の端末・別のブラウザ・別のプロジェクトのコピーへ、内容が自動で移る仕組みではありません。",
+      "translation": "El área de almacenamiento está vinculada al navegador y a la ubicación de la vista previa. No es un mecanismo que transfiera el contenido automáticamente a otro dispositivo, a otro navegador ni a otra copia del proyecto."
+    },
+    {
+      "source": "保存を読むタイミングは、Androidの<code>onCreate</code>やiOSの<code>viewDidLoad</code>で保存値を画面へ戻すときに対応します。Javaの型検査やSwiftの型確認と同じ目的で、今回はJavaScriptの<code>Array.isArray</code>と<code>typeof</code>を使います。<code>JSON.parse</code>の結果を信頼し切らず、画面に必要な項目と型を確かめる点が違いです。",
+      "translation": "El momento en que se leen los datos guardados corresponde a cuando se restauran los valores guardados en pantalla en <code>onCreate</code> de Android o <code>viewDidLoad</code> de iOS. Con el mismo objetivo de las comprobaciones de tipos en Java o de confirmación de tipos en Swift, esta vez usamos <code>Array.isArray</code> y <code>typeof</code> en JavaScript. La diferencia radica en no confiar ciegamente en el resultado de <code>JSON.parse</code>, sino verificar los campos y tipos que la pantalla necesita."
+    },
+    {
+      "source": "追加した内容を再読み込み後にも一覧・詳細で読め、<code>null</code>・不正データ・空配列の扱いを区別できた。",
+      "translation": "Pudiste leer el contenido agregado en la lista y el detalle incluso después de recargar, y distinguir el tratamiento de <code>null</code>, datos inválidos y arreglos vacíos."
+    },
+    {
+      "source": "STEP 08 · コマ6",
+      "translation": "STEP 08 · Clase 6"
+    },
+    {
+      "source": "初期化の確認と失敗への対応",
+      "translation": "Confirmación del reinicio y manejo de fallas"
+    },
+    {
+      "source": "HTMLに初期化ボタンと確認欄、JSにそのイベントと<code>resetOshiItems</code>を加えます。<code>初期の内容に戻す</code> を押すと、<code>is-hidden</code>を<code>remove</code>して確認欄を見せます。<code>やめる</code> ではクラスを<code>add</code>し、欄を閉じるだけです。確認欄を囲む <code>reset-section</code> は上に区切りの線を引き、<code>#panel_reset ons-button</code> は確認欄の2つのボタンの上を12px空けます。この2つと <code>is-hidden</code> はSTEP 01のCSSに入れてあり、このSTEPのHTMLで初めて要素に当たります。",
+      "translation": "Agrega el botón de reinicio y el panel de confirmación en el HTML, y su evento y <code>resetOshiItems</code> en el JS. Al presionar <code>初期の内容に戻す</code> (Restaurar contenido inicial), se aplica <code>remove</code> sobre <code>is-hidden</code> para mostrar el panel de confirmación. Con <code>やめる</code> (Cancelar), solo se aplica <code>add</code> a la clase y se cierra el panel. <code>reset-section</code>, que rodea el panel de confirmación, dibuja una línea divisoria arriba, y <code>#panel_reset ons-button</code> deja un espacio de 12px arriba de los 2 botones del panel de confirmación. Estas dos reglas y <code>is-hidden</code> se incluyeron en el CSS desde el STEP 01, y es en el HTML de este STEP donde se aplican a elementos por primera vez."
+    },
+    {
+      "source": "実際の削除は <code>削除して初期の内容に戻す</code> を押した場合だけです。<code>localStorage.removeItem(STORAGE_KEY)</code> で、このアプリのキー1つだけを削除します。保存領域全体を空にする<code>clear</code>は使いません。",
+      "translation": "La eliminación real solo ocurre al presionar <code>削除して初期の内容に戻す</code> (Eliminar y restaurar contenido inicial). Con <code>localStorage.removeItem(STORAGE_KEY)</code> se elimina únicamente la clave correspondiente a esta aplicación. No utilizamos <code>clear</code>, que vaciaría toda el área de almacenamiento."
+    },
+    {
+      "source": "削除に成功したら<code>createInitialItems</code>で新しい初期配列を作り、<code>canSave</code>を<code>true</code>へ戻し、一覧と文を更新します。削除に失敗したら画面の配列も変更せず、削除できなかったと表示します。初期化が終わると、以前入力した内容は戻せません。",
+      "translation": "Si la eliminación tiene éxito, crea un nuevo arreglo inicial con <code>createInitialItems</code>, devuelve <code>canSave</code> a <code>true</code> y actualiza la lista y los textos. Si la eliminación falla, no modifica el arreglo en pantalla y muestra que no se pudo eliminar. Una vez que se completa el reinicio, el contenido ingresado anteriormente no se podrá recuperar."
+    },
+    {
+      "source": "検証用に追加したデータを使い、初期化の確認欄を開いて <code>やめる</code> を押します。件数が変わらないことを確認します。",
+      "translation": "Usando los datos agregados para la verificación, abre el panel de confirmación de reinicio y presiona <code>やめる</code> (Cancelar). Confirma que la cantidad de elementos no cambie."
+    },
+    {
+      "source": "残す必要のある内容は控えてから、もう一度確認欄を開き、削除するボタンを押します。",
+      "translation": "Anota cualquier contenido que necesites conservar, abre de nuevo el panel de confirmación y presiona el botón de eliminar."
+    },
+    {
+      "source": "一覧がソースの初期データに戻り、再読み込みしてもその初期データになることを確かめます。",
+      "translation": "Confirma que la lista regrese a los datos iniciales del código fuente y que se mantenga en esos datos iniciales incluso al recargar."
+    },
+    {
+      "source": "通常の操作で保存・読込に失敗した場合は、表示された文を先生と確認します。教材の確認のために、ブラウザのセキュリティ設定を変更する必要はありません。",
+      "translation": "Si falla el guardado o la lectura durante el funcionamiento normal, revisa el mensaje mostrado con tu docente. No es necesario modificar la configuración de seguridad del navegador para verificar el material educativo."
+    },
+    {
+      "source": "Web基礎の<code>classList.add</code> / <code>remove</code>で表示クラスを切り替えます。キー1つの削除は、Androidの<code>SharedPreferences.Editor.remove</code>やSwiftの<code>UserDefaults.removeObject</code>に対応します。データを消す前に選び直せる画面を用意する点は、ネイティブアプリの確認操作と同じです。",
+      "translation": "Alternamos la clase de visualización mediante <code>classList.add</code> / <code>remove</code> de Fundamentos de la Web. Eliminar una sola clave corresponde a <code>SharedPreferences.Editor.remove</code> en Android o <code>UserDefaults.removeObject</code> en Swift. Ofrecer una interfaz para reconsiderar antes de borrar los datos es igual a las operaciones de confirmación en aplicaciones nativas."
+    },
+    {
+      "source": "初期化を中止したときは内容が残り、確定したときだけ初期の内容へ戻った。",
+      "translation": "Al cancelar el reinicio el contenido se mantuvo, y solo al confirmarlo se restableció al contenido inicial."
+    },
+    {
+      "source": "STEP 09 · コマ6",
+      "translation": "STEP 09 · Clase 6"
+    },
+    {
+      "source": "保存を確かめてアレンジする",
+      "translation": "Verificar el guardado y personalizar"
+    },
+    {
+      "source": "入力→追加→詳細→戻る→再読み込みの順で動かし、保存した内容が復元されることを確認します。次に、ソースの初期データを自分の言葉へ変えます。",
+      "translation": "Ejecuta la secuencia de ingresar → agregar → detalle → volver → recargar, y confirma que el contenido guardado se restaure. A continuación, cambia los datos iniciales del código fuente con tus propias palabras."
+    },
+    {
+      "source": "<strong>保存データがあると、ソースの初期データより優先して表示されます。</strong> <code>createInitialItems</code>を書き換えても画面が変わらない場合は、変更したコードのミスとは限りません。必要な入力を控えたうえで、アプリ内の初期化を使ってソースの内容を確認します。",
+      "translation": "<strong>Si existen datos guardados, se muestran con prioridad sobre los datos iniciales del código fuente.</strong> Si la pantalla no cambia tras modificar <code>createInitialItems</code>, no necesariamente se debe a un error en el código modificado. Anota los datos ingresados que necesites y usa la opción de reinicio dentro de la aplicación para comprobar el contenido del código fuente."
+    },
+    {
+      "source": "アレンジする場所",
+      "translation": "Lugar para personalizar"
+    },
+    {
+      "source": "確かめること",
+      "translation": "Qué verificar"
+    },
+    {
+      "source": "<code>createInitialItems</code>の<code>name</code>・<code>genre</code>・<code>comment</code>",
+      "translation": "<code>name</code>, <code>genre</code> y <code>comment</code> en <code>createInitialItems</code>"
+    },
+    {
+      "source": "初期化後の一覧と詳細が自分の好きなものになる。",
+      "translation": "La lista y el detalle tras el reinicio muestran tus propios favoritos."
+    },
+    {
+      "source": "HTMLの案内文・<code>placeholder</code>",
+      "translation": "Texto de guía y <code>placeholder</code> en HTML"
+    },
+    {
+      "source": "何を入力するアプリか伝わる。",
+      "translation": "Se transmite claramente qué se ingresa en la aplicación."
+    },
+    {
+      "source": "CSSの色・枠・余白",
+      "translation": "Colores, bordes y espaciado en CSS"
+    },
+    {
+      "source": "長い日本語や改行も読める。",
+      "translation": "Los textos largos en japonés y los saltos de línea se pueden leer."
+    },
+    {
+      "source": "保存キーは変えず、まず文字や色を変えましょう。保存して再読み込みし、どの変更がソースに残り、どの内容がブラウザだけに残るかを確かめます。",
+      "translation": "Sin cambiar la clave de guardado, primero modifiquemos los textos y los colores. Guarda y vuelve a cargar, y comprueba qué cambios permanecen en el código fuente y qué contenido queda únicamente en el navegador."
+    },
+    {
+      "source": "ネイティブアプリでも、コードに書いた既定値より保存済みの設定を優先することがあります。同じ区別を、<code>createInitialItems</code>と<code>getItem</code>のどちらが最終的な<code>oshiItems</code>になるかで追います。アレンジは既習のデータと装飾の変更だけで行います。",
+      "translation": "En las aplicaciones nativas también se priorizan a veces los ajustes guardados sobre los valores predeterminados escritos en el código. Seguimos esta misma distinción observando cuál de los dos, <code>createInitialItems</code> o <code>getItem</code>, se convierte en el <code>oshiItems</code> definitivo. Las personalizaciones se realizan únicamente modificando datos y estilos que ya aprendiste."
+    },
+    {
+      "source": "保存・復元の一連の操作ができ、ソースのアレンジと入力データの保存先を確かめた。",
+      "translation": "Pudiste realizar la secuencia completa de guardar y restaurar, y verificaste las personalizaciones en el código fuente y el destino de guardado de los datos ingresados."
+    },
+    {
+      "source": "STEP 10 · コマ7",
+      "translation": "STEP 10 · Clase 7"
+    },
+    {
+      "source": "授業内でFlutterの準備を始める",
+      "translation": "Comienza la preparación de Flutter en clase"
+    },
+    {
+      "source": "今日は好きなものノートを仕上げて提出します。最初の10分で、後半に使うFlutter SDKのダウンロードと既存のiOS環境の確認を始めます。授業前に取得しておく必要はありません。",
+      "translation": "Hoy terminaremos el cuaderno de favoritos y lo entregaremos. En los primeros 10 minutos comenzaremos a descargar el SDK de Flutter que usaremos en la segunda mitad y a verificar el entorno de iOS existente. No es necesario descargarlo antes de la clase."
+    },
+    {
+      "source": "<a1>共通資料のSTEP 4〜7</a1>を別のタブで開きます。",
+      "translation": "Abre el <a1>STEP 4 a 7 de los materiales comunes</a1> en otra pestaña."
+    },
+    {
+      "source": "Apple Silicon用のFlutter 3.47.5 / Dart 3.13.4を取得します。既にその版を用意できている場合は、版を確認して重複取得を避けます。",
+      "translation": "Descarga Flutter 3.47.5 / Dart 3.13.4 para Apple Silicon. Si ya tienes lista esa versión, verifica la versión para evitar descargarla de nuevo."
+    },
+    {
+      "source": "別科目で使っているXcodeのiOS環境を確認します。利用できるランタイムは再利用します。<code>xcodebuild -downloadPlatform iOS</code> は全員必須ではありません。",
+      "translation": "Verifica el entorno de iOS en el Xcode que usas en otra asignatura. Reutiliza los runtimes disponibles. <code>xcodebuild -downloadPlatform iOS</code> no es obligatorio para todos."
+    },
+    {
+      "source": "不足分だけ先生と確認して取得を始め、この教科書へ戻ります。Flutter専用のiOS資材は共通資料の <code>flutter precache --ios</code> で用意します。",
+      "translation": "Verifica con tu docente solo lo que te falte, comienza a descargarlo y regresa a este libro de texto. Los recursos de iOS específicos para Flutter se preparan con <code>flutter precache --ios</code> según los materiales comunes."
+    },
+    {
+      "source": "取得待ちは好きなものノートのアレンジに使います。コマ8の冒頭にも準備確認の時間があります。家庭での作業が済んでいることを前提にはしません。",
+      "translation": "Aprovecha el tiempo de espera de la descarga para personalizar tu cuaderno de favoritos. Al inicio de la clase 8 también habrá tiempo para verificar los preparativos. No se da por sentado que hayas trabajado en casa."
+    },
+    {
+      "source": "Android StudioやXcodeでも、開発用SDKとアプリのソースは別です。今回はFlutter SDKと既存のiOS環境を組み合わせます。MonacaのソースをFlutterへ変換する操作ではなく、後半に使う道具の準備です。",
+      "translation": "Tanto en Android Studio como en Xcode, el SDK de desarrollo y el código fuente de la aplicación van por separado. En esta ocasión combinamos el SDK de Flutter con el entorno de iOS existente. No se trata de una operación para convertir el código de Monaca a Flutter, sino de la preparación de las herramientas que usaremos en la segunda mitad."
+    },
+    {
+      "source": "指定SDKの取得を開始または版を確認し、既存iOS環境の状態を先生へ伝えられる。",
+      "translation": "Iniciaste la descarga del SDK especificado o comprobaste su versión, y puedes comunicarle a tu docente el estado de tu entorno de iOS actual."
+    },
+    {
+      "source": "STEP 11 · コマ7",
+      "translation": "STEP 11 · Clase 7"
+    },
+    {
+      "source": "提出に残るアレンジを作る",
+      "translation": "Crea personalizaciones que se conserven en la entrega"
+    },
+    {
+      "source": "Monaca クラウド IDEへ戻り、自分の好きなものノートを仕上げます。既に扱った文字・色・初期データから変更箇所を選び、どんなものが好きで、なぜ好きなのかが伝わる内容にします。",
+      "translation": "Regresa a Monaca クラウド IDE y termina tu propio cuaderno de favoritos. Elige las partes a modificar entre los textos, colores y datos iniciales que ya manejamos, para que transmita qué cosas te gustan y por qué te gustan."
+    },
+    {
+      "source": "確認方法",
+      "translation": "Método de comprobación"
+    },
+    {
+      "source": "<code>createInitialItems</code>の配列",
+      "translation": "El arreglo de <code>createInitialItems</code>"
+    },
+    {
+      "source": "最初に読める好きなものとその理由。",
+      "translation": "Los favoritos y sus razones que se pueden leer primero."
+    },
+    {
+      "source": "必要な保存内容を控えて初期化し、全件の詳細を開く。",
+      "translation": "Anotar el contenido guardado necesario, reiniciar y abrir los detalles de todos los elementos."
+    },
+    {
+      "source": "HTMLの見出し・案内文・入力例",
+      "translation": "Encabezados, textos de guía y ejemplos de entrada en HTML"
+    },
+    {
+      "source": "自分の題材が画面から伝わる。",
+      "translation": "Tu propia temática se transmite desde la pantalla."
+    },
+    {
+      "source": "入力画面を開き、迷わず入力できるか読む。",
+      "translation": "Abrir la pantalla de entrada y comprobar si se puede ingresar información sin dudas."
+    },
+    {
+      "source": "CSSの文字色・枠色・余白",
+      "translation": "Color de texto, color de borde y espaciado en CSS"
+    },
+    {
+      "source": "カードと入力欄の印象。",
+      "translation": "La impresión de las tarjetas y los campos de entrada."
+    },
+    {
+      "source": "長い日本語を入れて、文字が切れないか見る。",
+      "translation": "Ingresar texto largo en japonés y verificar que no se corte."
+    },
+    {
+      "source": "<strong>画面から追加して保存したデータは、公開URLへ含まれません。</strong> 先生が新しく取り込んだときに見えるアレンジは、ソースへ書きます。入力例として見せたい好きなものも、<code>createInitialItems</code>に書いて保存します。",
+      "translation": "<strong>Los datos agregados y guardados desde la pantalla no se incluyen en la URL de importación.</strong> Las personalizaciones que tu docente verá al importar el proyecto desde cero deben escribirse en el código fuente. Los favoritos que desees mostrar como ejemplos de entrada también deben escribirse en <code>createInitialItems</code> y guardarse."
+    },
+    {
+      "source": "ソースを変えても以前の保存内容が表示される場合はSTEP 09を確認します。保存キーを変えて見えなくする方法で済ませず、残す内容を控えてからアプリ内の初期化を使います。",
+      "translation": "Si después de modificar el código fuente se sigue mostrando el contenido guardado anteriormente, revisa el STEP 09. No te limites a ocultarlo cambiando la clave de guardado; anota el contenido que desees conservar y luego usa el reinicio dentro de la aplicación."
+    },
+    {
+      "source": "JavaやSwiftでコードの初期値を変えることと、実行中に端末へ保存した内容を変えることは別です。公開URLで渡すのはソースなので、ブラウザの入力内容だけを変えても相手の初期画面には反映されません。",
+      "translation": "En Java o Swift, cambiar los valores iniciales en el código y cambiar el contenido guardado en el dispositivo durante la ejecución son cosas distintas. Como lo que se transfiere mediante la URL de importación es el código fuente, cambiar solo lo ingresado en tu navegador no se reflejará en la pantalla inicial de la otra persona."
+    },
+    {
+      "source": "自分の題材に合わせた変更をソースへ保存し、初期状態から確認できた。",
+      "translation": "Guardaste en el código fuente los cambios acordes a tu propia temática y los pudiste verificar desde el estado inicial."
+    },
+    {
+      "source": "STEP 12 · コマ7",
+      "translation": "STEP 12 · Clase 7"
+    },
+    {
+      "source": "操作と公開URLを確認する",
+      "translation": "Verifica el funcionamiento y la URL de importación"
+    },
+    {
+      "source": "ソースの初期の内容が表示された状態から完成確認を始めます。必要な入力は内容を控えて、先生と確認してから初期化します。",
+      "translation": "Comienza la comprobación final desde el estado en que se muestra el contenido inicial del código fuente. Anota los datos ingresados que necesites y realiza el reinicio tras confirmarlo con tu docente."
+    },
+    {
+      "source": "一覧の各行から詳細へ進み、名前・種類・理由が一致することを確認します。",
+      "translation": "Avanza al detalle desde cada fila de la lista y confirma que el nombre, el tipo y la razón coincidan."
+    },
+    {
+      "source": "追加画面で空欄を試し、同じ画面に案内が出ることを確認します。",
+      "translation": "Prueba dejar campos en blanco en la pantalla de entrada y confirma que aparezca un mensaje de guía en la misma pantalla."
+    },
+    {
+      "source": "確認用の1件を追加し、成功の文・件数・詳細・再読み込み後の復元を確認します。",
+      "translation": "Agrega 1 elemento de prueba y confirma el mensaje de éxito, la cantidad de elementos, el detalle y la restauración tras recargar."
+    },
+    {
+      "source": "初期化で <code>やめる</code> を選び、データが残ることを確かめます。必要な内容を控えた後に初期化し、ソースのデータへ戻します。",
+      "translation": "Elige <code>やめる</code> (Cancelar) en el reinicio y comprueba que los datos permanezcan. Tras anotar el contenido necesario, reinicia y regresa a los datos del código fuente."
+    },
+    {
+      "source": "iPhone系・Android系のプレビューで入力・戻る・ボタンの見た目を比べます。比較用の <code>ons.platform.select(\"android\")</code> を有効にした場合は、最後にコメントへ戻します。",
+      "translation": "Compara la apariencia de la entrada, el botón de volver y los botones en las vistas previas de estilo iPhone y Android. Si habilitaste <code>ons.platform.select(\"android\")</code> para la comparación, vuelve a comentarlo al final."
+    },
+    {
+      "source": "クラウド IDEの <code>プロジェクト → 公開…</code> を開き、自分の作品であることを確かめ、公開URLを発行します。",
+      "translation": "Abre <code>プロジェクト → 公開…</code> (Proyecto → Publicar…) en el IDE en la nube, confirma que sea tu propio trabajo y genera la URL de importación."
+    },
+    {
+      "source": "提出するのは <code>https://monaca.mobi/ja/directimport?pid=…</code> という形の、実際に発行されたURLです。クラウド IDEやプレビューのアドレス、先生の完成見本URLを代わりに貼りません。相手のMonacaへソースを取り込むためのURLです。",
+      "translation": "Lo que debes entregar es la URL emitida con el formato <code>https://monaca.mobi/ja/directimport?pid=…</code>. No pegues en su lugar la dirección del IDE en la nube ni de la vista previa, ni la URL del ejemplo terminado de tu docente. Es una URL para importar el código fuente al Monaca de la otra persona."
+    },
+    {
+      "source": "発行したURLを開き、対象のプロジェクトを確かめます。取り込みを確定するとコピーが増えるため、繰り返して枠を埋めないようにします。教員側で新しく取り込んだ状態の動作も確認します。",
+      "translation": "Abre la URL emitida y verifica el proyecto correspondiente. Al confirmar la importación se genera otra copia, por lo que evita repetirla para no agotar tus espacios. El docente también verificará el funcionamiento tras importarlo nuevamente."
+    },
+    {
+      "source": "OSの見た目が変わっても入力・保存の処理は同じです。ネイティブアプリのビルド成果物を渡す方法と違い、ここではソースを相手の開発環境へコピーします。ブラウザの保存領域まで渡す操作ではありません。",
+      "translation": "Aunque cambie la apariencia según el sistema operativo, los procesos de entrada y guardado son los mismos. A diferencia de entregar el archivo compilado de una aplicación nativa, aquí copias el código fuente al entorno de desarrollo de la otra persona. No es una operación que transfiera también el área de almacenamiento del navegador."
+    },
+    {
+      "source": "初期状態と追加後の操作を確認し、自分の作品の取り込み用公開URLを発行できた。",
+      "translation": "Verificaste el funcionamiento en el estado inicial y tras agregar elementos, y pudiste generar la URL de importación pública para tu propio trabajo."
+    },
+    {
+      "source": "STEP 13 · コマ7",
+      "translation": "STEP 13 · Clase 7"
+    },
+    {
+      "source": "提出と準備状況を確認する",
+      "translation": "Entrega y verifica el estado de preparación"
+    },
+    {
+      "source": "先生が授業中に案内する提出先・締め切りを確認し、自分の好きなものノートで発行した公開URLを提出します。まだ案内がない場合は、URLを控えて先生へ確認します。",
+      "translation": "Comprueba el lugar de entrega y la fecha límite que indique tu docente durante la clase, y entrega la URL de importación que generaste para tu cuaderno de favoritos. Si aún no hay aviso, anota la URL y consúltalo con tu docente."
+    },
+    {
+      "source": "通常版MonacaのFreeプランではZIPを学生の提出物にしません。先生は公開URLから取り込み、初期データと操作を確認します。公開中の自分のプロジェクトは提出後に削除しません。",
+      "translation": "En el plan Free de la versión estándar de Monaca, no se usan archivos ZIP para las entregas de los estudiantes. El docente importa el proyecto mediante la URL de importación y verifica los datos iniciales y el funcionamiento. No elimines tu proyecto publicado después de la entrega."
+    },
+    {
+      "source": "Flutter準備のタブへ戻り、取得が終わったか、SDKの版、<code>flutter doctor</code>で止まっている項目を確認します。終わっていない項目はその場で先生へ伝え、コマ8へ引き継ぎます。授業外で終わらせることを条件にはしません。",
+      "translation": "Regresa a la pestaña de preparación de Flutter y comprueba si terminó la descarga, la versión del SDK y los puntos pendientes en <code>flutter doctor</code>. Informa a tu docente en el momento sobre los elementos que no hayan finalizado para continuarlos en la clase 8. No es un requisito completarlos fuera del horario de clase."
+    },
+    {
+      "source": "ソースを共有する提出と、端末に保存したデータを見せることを区別します。Android／iOSの実行環境を確認するときと同様に、準備済みの項目とまだ使えない項目を具体的に記録します。",
+      "translation": "Distingue entre entregar compartiendo el código fuente y mostrar los datos guardados en el dispositivo. Al igual que cuando verificas el entorno de ejecución de Android o iOS, anota de forma concreta qué elementos están listos y cuáles aún no se pueden usar."
+    },
+    {
+      "source": "指定先へ自分の公開URLを提出し、Flutter準備の状態も先生へ伝えた。",
+      "translation": "Entregaste tu URL de importación en el lugar indicado y le comunicaste el estado de los preparativos de Flutter a tu docente."
+    },
+    {
+      "source": "STEP 14 · コマ7",
+      "translation": "STEP 14 · Clase 7"
+    },
+    {
+      "source": "アレンジできる場所を確かめる",
+      "translation": "Verifica los lugares que puedes personalizar"
+    },
+    {
+      "source": "最後に提出したソースを見ながら、次の3点を確かめます。",
+      "translation": "Por último, mientras miras el código fuente entregado, verifica los siguientes 3 puntos."
+    },
+    {
+      "source": "どのファイルの、どの文字・色・初期データを変更したか。",
+      "translation": "En qué archivo modificaste los textos, colores o datos iniciales."
+    },
+    {
+      "source": "その変更が一覧・入力・詳細のどこに現れるか。",
+      "translation": "En qué parte aparece ese cambio: en la lista, en la entrada o en el detalle."
+    },
+    {
+      "source": "入力した保存データがない相手にも、アレンジが伝わるか。",
+      "translation": "Si las personalizaciones se transmiten a otra persona que no tenga los datos guardados ingresados."
+    },
+    {
+      "source": "余裕があれば、既に扱った範囲で記入例を分かりやすくしたり、余白を調整したりします。いまある画面で、自分の「好き」が伝わる状態を確かめましょう。変更したら保存し、一覧・追加・詳細・再読み込みを確認してから公開内容を確かめます。",
+      "translation": "Si tienes tiempo, aclara los ejemplos de llenado o ajusta los márgenes dentro de lo que ya hemos visto. Asegúrate de que la pantalla actual transmita lo que te gusta. Si realizas cambios, guarda, comprueba la lista, agregar, el detalle y la recarga, y luego verifica el contenido publicado."
+    },
+    {
+      "source": "全コードは見本との比較用です。自分の変更を消して見本に戻す必要はありません。動かなくなった部分や、変更した場所と結果の関係を確かめるために使います。",
+      "translation": "El código completo es para compararlo con el ejemplo. No es necesario borrar tus cambios para volver al ejemplo. Úsalo para revisar las partes que hayan dejado de funcionar y la relación entre los lugares modificados y los resultados."
+    },
+    {
+      "source": "HTML・CSS・JavaScriptの役割分担はWeb基礎と同じで、変更した場所はファイルの種類から見つけられます。保存があるアプリでは、ソースの初期値と保存値の両方を見ます。<code>SharedPreferences</code>／<code>UserDefaults</code>を使うアプリで、コードに書いた初期値と端末に残る保存値が別にあるのと同じです。",
+      "translation": "La división de roles entre HTML, CSS y JavaScript es la misma que en Fundamentos de la Web, por lo que puedes ubicar los lugares modificados según el tipo de archivo. En aplicaciones con guardado, se observan tanto los valores iniciales del código fuente como los valores guardados. Esto es igual a las aplicaciones que usan <code>SharedPreferences</code> / <code>UserDefaults</code>, donde los valores iniciales escritos en el código y los valores guardados en el dispositivo son independientes."
+    },
+    {
+      "source": "自分の変更箇所が画面に現れ、初期状態からも伝わる作品にできた。",
+      "translation": "Tus modificaciones se reflejaron en la pantalla y lograste un trabajo que se aprecia incluso desde el estado inicial."
+    },
+    {
+      "source": "見えること",
+      "translation": "Lo que ves"
+    },
+    {
+      "source": "確認すること",
+      "translation": "Qué verificar"
+    },
+    {
+      "source": "入力画面が開かない",
+      "translation": "No se abre la pantalla de entrada"
+    },
+    {
+      "source": "3ファイルが同じSTEPか、保存したかを確認。読込失敗の表示が出ていればSTEP 08へ。",
+      "translation": "Comprueba si los 3 archivos corresponden al mismo STEP y si están guardados. Si aparece un mensaje de fallo de lectura, ve al STEP 08."
+    },
+    {
+      "source": "追加した文字が消えた",
+      "translation": "El texto agregado desapareció"
+    },
+    {
+      "source": "コマ5では未保存が正常。コマ6以降は保存成功の文、同じブラウザ・同じプレビューかを確認。",
+      "translation": "En la clase 5 es normal que no se guarde. A partir de la clase 6, comprueba el mensaje de guardado exitoso y que sea el mismo navegador y la misma vista previa."
+    },
+    {
+      "source": "初期データを書き換えても古い内容が出る",
+      "translation": "Aparece el contenido antiguo aunque se hayan modificado los datos iniciales"
+    },
+    {
+      "source": "保存データが優先される。必要な内容を控えたうえで、アプリ内の「初期の内容に戻す」を使う。",
+      "translation": "Los datos guardados tienen prioridad. Tras anotar el contenido necesario, usa 「初期の内容に戻す」 (Restaurar contenido inicial) dentro de la aplicación."
+    },
+    {
+      "source": "保存・読込失敗と出る",
+      "translation": "Aparece un mensaje de fallo de guardado o lectura"
+    },
+    {
+      "source": "その表示を先生へ見せる。読込に失敗したデータは自動で上書きしない。ブラウザ設定を無理に変更しない。",
+      "translation": "Muestra ese mensaje a tu docente. Los datos cuya lectura falló no se sobrescribirán automáticamente. No intentes modificar la configuración del navegador a la fuerza."
+    },
+    {
+      "source": "提出URLが先生の見本と同じ",
+      "translation": "La URL de entrega es igual a la del ejemplo del docente"
+    },
+    {
+      "source": "自分のプロジェクトで発行したURLか確認。クラウド IDEのアドレスやプレビューURLでは提出しない。",
+      "translation": "Verifica si es la URL generada desde tu propio proyecto. No entregues la dirección del IDE en la nube ni la URL de la vista previa."
+    },
+    {
+      "source": "JEC / ハイブリッドアプリ開発技法 · M02OshiSave",
+      "translation": "JEC / Técnicas de desarrollo de aplicaciones híbridas · M02OshiSave"
+    }
+  ]
+}

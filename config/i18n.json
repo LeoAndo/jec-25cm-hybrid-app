@@ -123,7 +123,7 @@
     {
       "code": "es",
       "name": "Español",
-      "distribute": false,
+      "distribute": true,
       "ui": {
         "copy": "Copiar",
         "copy_label": "Copiar el código de {title}",
