@@ -119,7 +119,8 @@ pre code { padding: 0; background: transparent; color: inherit; font-size: inher
 .compare-item pre { border-radius: 9px; margin: 0; flex: 1 1 auto; padding: .9rem; font-size: .76rem; white-space: pre-wrap; overflow-wrap: anywhere; overflow-x: visible; }
 kbd { font-size: .84em; border: 1px solid #bfc7cf; border-bottom-width: 2px; border-radius: 4px; padding: .1em .4em; white-space: nowrap; }
 table { width: 100%; border-collapse: collapse; margin: 1.2rem 0; font-size: .88rem; }
-th, td { border-bottom: 1px solid var(--line); text-align: start; vertical-align: top; padding: .75rem .6rem; overflow-wrap: anywhere; }
+th, td { border-bottom: 1px solid var(--line); text-align: start; vertical-align: top; padding: .75rem .6rem; overflow-wrap: break-word; }
+th, td code { overflow-wrap: break-word; }
 th { background: #f0f2ef; font-weight: 700; }
 figure { margin: 1.4rem 0; }
 img { max-width: 100%; height: auto; display: block; border-radius: 9px; border: 1px solid var(--line); }
