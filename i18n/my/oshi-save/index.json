@@ -1,0 +1,1138 @@
+{
+  "source": "docs/oshi-save/index.html",
+  "language": "my",
+  "entries": [
+    {
+      "source": "M02 好きなものノート：追加と保存 | ハイブリッドアプリ開発技法",
+      "translation": "M02 ကြိုက်နှစ်သက်ရာများ မှတ်စု - ထည့်သွင်းခြင်းနှင့် သိမ်းဆည်းခြင်း | Hybrid App Development"
+    },
+    {
+      "source": "本文へ移動",
+      "translation": "အဓိကအကြောင်းအရာသို့ သွားရန်"
+    },
+    {
+      "source": "JEC / ハイブリッドアプリ開発技法",
+      "translation": "JEC / Hybrid App Development"
+    },
+    {
+      "source": "0 / 15 ステップ確認済み",
+      "translation": "0 / 15 အဆင့် စစ်ဆေးပြီး"
+    },
+    {
+      "source": "単元の進み具合",
+      "translation": "ယူနစ်၏ တိုးတက်မှု"
+    },
+    {
+      "source": "コマごとの目次",
+      "translation": "အတန်းချိန်အလိုက် မာတိကာ"
+    },
+    {
+      "source": "コマ5 · STEP 00〜04",
+      "translation": "အတန်းချိန် 5 · STEP 00〜04"
+    },
+    {
+      "source": "00 自分の好きなものノートを開く",
+      "translation": "00 မိမိ၏ ကြိုက်နှစ်သက်ရာများ မှတ်စုကို ဖွင့်ခြင်း"
+    },
+    {
+      "source": "01 入力画面を作る",
+      "translation": "01 အချက်အလက်ထည့်သွင်းသည့် screen ပြုလုပ်ခြင်း"
+    },
+    {
+      "source": "02 入力した文字を確認する",
+      "translation": "02 ထည့်သွင်းထားသော စာသားကို စစ်ဆေးခြင်း"
+    },
+    {
+      "source": "03 配列へ追加して戻る",
+      "translation": "03 array ထဲသို့ ထည့်သွင်းပြီး ပြန်သွားခြင်း"
+    },
+    {
+      "source": "04 確認とアレンジ",
+      "translation": "04 စစ်ဆေးခြင်းနှင့် customize ပြုလုပ်ခြင်း"
+    },
+    {
+      "source": "コマ6 · STEP 05〜09",
+      "translation": "အတန်းချိန် 6 · STEP 05〜09"
+    },
+    {
+      "source": "05 配列とJSONの違い",
+      "translation": "05 array နှင့် JSON အကြား ကွာခြားချက်"
+    },
+    {
+      "source": "06 文字列にして保存する",
+      "translation": "06 string အဖြစ် ပြောင်းလဲသိမ်းဆည်းခြင်း"
+    },
+    {
+      "source": "07 保存した配列を復元する",
+      "translation": "07 သိမ်းဆည်းထားသော array ကို ပြန်လည်ရယူခြင်း"
+    },
+    {
+      "source": "08 初期化の確認と失敗への対応",
+      "translation": "08 reset ပြုလုပ်ရန် အတည်ပြုခြင်းနှင့် အမှားများကို ဖြေရှင်းခြင်း"
+    },
+    {
+      "source": "09 保存を確かめてアレンジ",
+      "translation": "09 သိမ်းဆည်းမှုကို စစ်ဆေးပြီး customize ပြုလုပ်ခြင်း"
+    },
+    {
+      "source": "コマ7 · STEP 10〜14",
+      "translation": "အတန်းချိန် 7 · STEP 10〜14"
+    },
+    {
+      "source": "10 授業内でFlutterの準備を始める",
+      "translation": "10 အတန်းချိန်အတွင်း Flutter ပြင်ဆင်မှုကို စတင်ခြင်း"
+    },
+    {
+      "source": "11 提出に残るアレンジを作る",
+      "translation": "11 ပေးပို့မည့်အလုပ်တွင် ပါဝင်မည့် customize ပြုလုပ်မှုများကို ဖန်တီးခြင်း"
+    },
+    {
+      "source": "12 操作と公開URLを確認する",
+      "translation": "12 လုပ်ဆောင်ချက်များနှင့် import URL ကို စစ်ဆေးခြင်း"
+    },
+    {
+      "source": "13 提出と準備状況の確認",
+      "translation": "13 ပေးပို့ခြင်းနှင့် ပြင်ဆင်မှုအခြေအနေကို စစ်ဆေးခြင်း"
+    },
+    {
+      "source": "14 アレンジ箇所を確かめる",
+      "translation": "14 customize ပြုလုပ်ထားသော နေရာများကို စစ်ဆေးခြင်း"
+    },
+    {
+      "source": "困ったとき",
+      "translation": "အခက်အခဲရှိသည့်အခါ"
+    },
+    {
+      "source": "完成プロジェクトを開く",
+      "translation": "ပြီးစီးပြီးသော project ကို ဖွင့်ရန်"
+    },
+    {
+      "source": "共通：はじめの準備",
+      "translation": "အထွေထွေ: အတန်းမစမီ ပြင်ဆင်ရန်"
+    },
+    {
+      "source": "コマ5〜7 · 各90分",
+      "translation": "အတန်းချိန် 5〜7 · တစ်ချိန်လျှင် 90 မိနစ်"
+    },
+    {
+      "source": "好きなものノート：追加して、残そう。",
+      "translation": "ကြိုက်နှစ်သက်ရာများ မှတ်စု - ထည့်သွင်းပြီး သိမ်းဆည်းကြစို့။"
+    },
+    {
+      "source": "日常の中で見つけた好きなものと、好きな理由を画面から追加します。再読み込みしても自分の記録が戻る仕組みを作り、ソースにアレンジを残して公開URLを提出します。",
+      "translation": "နေ့စဉ်ဘဝတွင် တွေ့ရှိခဲ့သော မိမိကြိုက်နှစ်သက်သည့် အရာများနှင့် ကြိုက်ရသည့် အကြောင်းပြချက်များကို screen ပေါ်မှ ထည့်သွင်းပါမည်။ reload ပြုလုပ်သော်လည်း မိမိ၏ မှတ်တမ်းများ ပြန်လည်ပေါ်လာစေမည့် စနစ်ကို တည်ဆောက်ပြီး၊ source code တွင် customize ပြုလုပ်မှုများကို ထည့်သွင်းကာ import URL ကို ပေးပို့ပါမည်။"
+    },
+    {
+      "source": "Monaca クラウド IDE / Google Chrome",
+      "translation": "Monaca クラウド IDE (cloud IDE) / Google Chrome"
+    },
+    {
+      "source": "この単元で分かること",
+      "translation": "ဤယူနစ်တွင် လေ့လာသိရှိနိုင်မည့်အရာများ"
+    },
+    {
+      "source": "新しい考え方は<strong>JSON</strong>です。画面で使う配列を保存用の文字列にし、読み込んだ文字列を配列へ戻します。保存先はJavaの<code>SharedPreferences</code>・Swiftの<code>UserDefaults</code>と比較します。",
+      "translation": "အယူအဆအသစ်မှာ <strong>JSON</strong> ဖြစ်ပါသည်။ screen တွင် အသုံးပြုသော array ကို သိမ်းဆည်းရန် string အဖြစ်သို့ ပြောင်းလဲပြီး၊ ဖတ်ယူထားသော string ကို array အဖြစ်သို့ ပြန်လည်ပြောင်းလဲပါမည်။ သိမ်းဆည်းသည့်နေရာကို Java ၏ <code>SharedPreferences</code> နှင့် Swift ၏ <code>UserDefaults</code> တို့နှင့် နှိုင်းယှဉ်ဖော်ပြပါမည်။"
+    },
+    {
+      "source": "完成見本の名前は <code>M02OshiSave</code> です。学生は自分の好きなものノートを同じ1プロジェクトで育てます。まだプロジェクトがない場合の作り方も、一覧・詳細の開始コードも、この本文にあります。",
+      "translation": "ပြီးပြည့်စုံသော နမူနာ၏ အမည်မှာ <code>M02OshiSave</code> ဖြစ်ပါသည်။ ကျောင်းသားများသည် မိမိတို့၏ ကြိုက်နှစ်သက်ရာများ မှတ်စုကို project တစ်ခုတည်းတွင် ဆက်လက်တည်ဆောက်သွားမည် ဖြစ်ပါသည်။ project မရှိသေးပါက ဖန်တီးနည်းနှင့် စာရင်း (list)၊ အသေးစိတ် (detail) screen များအတွက် စတင်အသုံးပြုမည့် starter code များသည်လည်း ဤသင်ခန်းစာတွင် ပါဝင်ပါသည်။"
+    },
+    {
+      "source": "コマ",
+      "translation": "အတန်းချိန်"
+    },
+    {
+      "source": "到達点",
+      "translation": "ရည်မှန်းချက်"
+    },
+    {
+      "source": "入力した好きなものを一覧へ追加し、詳細を読める。",
+      "translation": "ထည့်သွင်းထားသော ကြိုက်နှစ်သက်သည့်အရာကို စာရင်းထဲသို့ ထည့်သွင်းပြီး အသေးစိတ်ကို ဖတ်ရှုနိုင်ခြင်း။"
+    },
+    {
+      "source": "JSONと<code>localStorage</code>で保存・復元できる。初期化には確認を挟む。",
+      "translation": "JSON နှင့် <code>localStorage</code> ဖြင့် သိမ်းဆည်းခြင်း၊ ပြန်လည်ရယူခြင်း ပြုလုပ်နိုင်ခြင်း။ reset မလုပ်မီ အတည်ပြုချက် ရယူထားခြင်း။"
+    },
+    {
+      "source": "授業内でFlutter準備を開始し、待ち時間に好きなものノートをアレンジ・確認・提出する。",
+      "translation": "အတန်းချိန်အတွင်း Flutter ပြင်ဆင်မှုကို စတင်ပြီး၊ စောင့်ဆိုင်းနေစဉ်အတွင်း ကြိုက်နှစ်သက်ရာများ မှတ်စုကို customize ပြုလုပ်ခြင်း၊ စစ်ဆေးခြင်းနှင့် ပေးပို့ခြင်း။"
+    },
+    {
+      "source": "配布フォルダの <code>~/Documents/hybrid-app-student-materials-日付/samples/M02OshiSave</code> をFinderで開きます。<code>M02OshiSave</code> の完成見本で、自分のコードと読み比べるために使います。自分の作品を見本で上書きしません。自分の制作を始める人は、STEP 00へ進みます。",
+      "translation": "ဖြန့်ဝေထားသော folder အတွင်းရှိ <code>~/Documents/hybrid-app-student-materials-日付/samples/M02OshiSave</code> (日付 = date) ကို Finder တွင် ဖွင့်ပါ။ ၎င်းသည် မိမိ၏ code နှင့် နှိုင်းယှဉ်ဖတ်ရှုရန် အသုံးပြုမည့် <code>M02OshiSave</code> ၏ ပြီးပြည့်စုံသော နမူနာ ဖြစ်ပါသည်။ မိမိ၏လက်ရာကို နမူနာဖြင့် overwrite မလုပ်ပါနှင့်။ မိမိကိုယ်တိုင် စတင်ဖန်တီးမည့်သူများသည် STEP 00 သို့ ဆက်သွားပါ။"
+    },
+    {
+      "source": "Monaca クラウド IDEは、Macのフォルダをそのまま開けません。見本をMonacaで動かすときは、先生がZIPにして公開した<a1>M02OshiSaveの取り込み用URL</a1>を開いて取り込みます。これはアプリを動かすURLではなく、完成見本のソースを自分のMonacaへ取り込むURLで、Freeプランの3枠のうち1枠を使います。空きを確かめてから1回だけ開きます。取り込み用URLがあっても、Freeプランの制限（プロジェクトの数や、対応するCordovaの版）で、取り込めない、または取り込んだ見本を開けないことがあります。そのときは無理に取り込まず、先生に知らせてください。見本のコードは配布フォルダの <code>samples</code> で読めるので、取り込めなくても授業は進められます。",
+      "translation": "Monaca クラウド IDE သည် Mac ပေါ်ရှိ folder ကို တိုက်ရိုက်မဖွင့်နိုင်ပါ။ နမူနာကို Monaca တွင် run ရန် ဆရာမှ ZIP ပြုလုပ်၍ publish လုပ်ထားသော <a1>M02OshiSave အတွက် import URL</a1> ကို ဖွင့်ပြီး import လုပ်ပါ။ ၎င်းသည် app ကို run သည့် URL မဟုတ်ဘဲ ပြီးပြည့်စုံသော နမူနာ၏ source code ကို မိမိ၏ Monaca ထဲသို့ ထည့်သွင်းသည့် URL ဖြစ်ပြီး Free plan ၏ slot 3 ခုအနက် 1 ခုကို အသုံးပြုပါသည်။ နေရာလွတ်ရှိမရှိ စစ်ဆေးပြီးမှ 1 ကြိမ်သာ ဖွင့်ပါ။ import URL ရှိသော်လည်း Free plan ၏ ကန့်သတ်ချက်များ (project အရေအတွက် သို့မဟုတ် ကိုက်ညီသော Cordova version) ကြောင့် import လုပ်၍မရခြင်း သို့မဟုတ် import လုပ်ထားသော နမူနာကို ဖွင့်၍မရခြင်းတို့ ဖြစ်ပေါ်နိုင်ပါသည်။ ထိုအခါ အတင်းအကျပ် import မလုပ်ဘဲ ဆရာ့ကို အသိပေးပါ။ နမူနာ code ကို ဖြန့်ဝေထားသော folder ၏ <code>samples</code> တွင် ဖတ်ရှုနိုင်သောကြောင့် import မလုပ်နိုင်သော်လည်း သင်ခန်းစာကို ဆက်လက်လုပ်ဆောင်နိုင်ပါသည်။"
+    },
+    {
+      "source": "STEP 00 · コマ5",
+      "translation": "STEP 00 · အတန်းချိန် 5"
+    },
+    {
+      "source": "自分の好きなものノートを開く",
+      "translation": "မိမိ၏ ကြိုက်နှစ်သက်ရာများ မှတ်စုကို ဖွင့်ခြင်း"
+    },
+    {
+      "source": "Google Chromeで通常版Monacaへログインし、自分の好きなものノートを開きます。続けて使っているプロジェクトは、名前が <code>M01OshiList</code> のままで構いません。今日のためにコピーを増やしたり、削除したりしません。",
+      "translation": "Google Chrome တွင် standard Monaca သို့ log in ဝင်ပြီး မိမိ၏ ကြိုက်နှစ်သက်ရာများ မှတ်စုကို ဖွင့်ပါ။ ဆက်လက်အသုံးပြုနေသော project ၏ အမည်သည် <code>M01OshiList</code> အတိုင်း ရှိနေပါစေ။ ယနေ့အတွက် ထပ်ဆောင်း copy များ ပြုလုပ်ခြင်း သို့မဟုတ် ဖျက်ပစ်ခြင်းများ မပြုလုပ်ပါနှင့်။"
+    },
+    {
+      "source": "まだ自分の好きなものノートがない人だけ、ダッシュボードで新規作成し、<code>最小限のテンプレート</code> を選び、<code>M02OshiSave</code> と名付けます。登録や空き枠が不明なら、<a1>共通資料のSTEP 2〜3</a1>で確認して戻ります。",
+      "translation": "ကြိုက်နှစ်သက်ရာများ မှတ်စု မရှိသေးသူများသာ dashboard မှ project အသစ်တစ်ခုကို ဖန်တီးပြီး <code>最小限のテンプレート</code> (Minimal template) ကို ရွေးချယ်ကာ <code>M02OshiSave</code> ဟု အမည်ပေးပါ။ စာရင်းသွင်းမှု သို့မဟုတ် နေရာလွတ် slot များကို မသေချာပါက <a1>အခြေခံလမ်းညွှန်၏ STEP 2〜3</a1> တွင် စစ်ဆေးပြီး ပြန်လာပါ။"
+    },
+    {
+      "source": "<code>www/index.html</code>・<code>www/css/style.css</code> を開きます。<code>www/js/app.js</code> がなければ、ファイル一覧の作成操作で <code>www</code> の下に <code>js</code> フォルダ、その中に <code>app.js</code> ファイルを作ります。",
+      "translation": "<code>www/index.html</code> နှင့် <code>www/css/style.css</code> ကို ဖွင့်ပါ။ အကယ်၍ <code>www/js/app.js</code> မရှိပါက file list ရှိ ဖန်တီးမှုလုပ်ဆောင်ချက်များကို အသုံးပြု၍ <code>www</code> အောက်တွင် <code>js</code> folder နှင့် ၎င်းအတွင်း၌ <code>app.js</code> file ကို ဖန်တီးပါ။"
+    },
+    {
+      "source": "自分のアレンジがある場合は、変えた文字と色を控えます。下の開始コード3ファイルをそろえ、保存してプレビューを再読み込みします。<code>components</code> や <code>res</code> は変更しません。",
+      "translation": "အကယ်၍ မိမိကိုယ်ပိုင် customize ပြုလုပ်ထားသည်များ ရှိပါက ပြောင်းလဲထားသော စာသားများနှင့် အရောင်များကို မှတ်ထားပါ။ အောက်ဖော်ပြပါ starter code file 3 ခုနှင့် ကိုက်ညီအောင် ပြုလုပ်ပြီး သိမ်းဆည်းကာ preview ကို reload လုပ်ပါ။ <code>components</code> နှင့် <code>res</code> တို့ကို မပြောင်းလဲပါနှင့်။"
+    },
+    {
+      "source": "3件の名前を押して詳細を開き、左上の戻るボタンで一覧へ戻ります。戻るボタンは、iOS向けの見た目では「＜ 戻る」、Android向けの見た目では左向きの矢印「←」だけです。タイトルと詳細の組み合わせを確かめます。",
+      "translation": "အကြောင်းအရာ 3 ခု၏ အမည်များကို နှိပ်၍ အသေးစိတ်ကို ဖွင့်ပြီး ဘယ်ဘက်အပေါ်ရှိ back ခလုတ်ဖြင့် စာရင်းသို့ ပြန်သွားပါ။ back ခလုတ်သည် iOS ပုံစံတွင် 「＜ 戻る」 (Back) ဟု ပြသပြီး၊ Android ပုံစံတွင် ဘယ်ဘက်ညွှန်မြှား 「←」 သာ ဖြစ်ပါသည်။ ခေါင်းစဉ်နှင့် အသေးစိတ်တွဲဖက်မှု မှန်ကန်ခြင်း ရှိမရှိ စစ်ဆေးပါ။"
+    },
+    {
+      "source": "開始コードの役割を、次の順で追いましょう。新しいファイル名を <code>detail.html</code> として作る操作は不要です。これは <code>index.html</code> の中の <code>template</code> の<code>id</code>です。",
+      "translation": "starter code ၏ အခန်းကဏ္ဍများကို အောက်ပါအစီအစဉ်အတိုင်း လေ့လာကြည့်ကြပါစို့။ <code>detail.html</code> အမည်ဖြင့် file အသစ်တစ်ခု ဖန်တီးရန် မလိုအပ်ပါ။ ၎င်းသည် <code>index.html</code> အတွင်းရှိ <code>template</code> ၏ <code>id</code> ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "場所",
+      "translation": "နေရာ"
+    },
+    {
+      "source": "処理と理由",
+      "translation": "လုပ်ဆောင်ချက်နှင့် အကြောင်းပြချက်"
+    },
+    {
+      "source": "HTMLの<code>head</code>",
+      "translation": "HTML ၏ <code>head</code>"
+    },
+    {
+      "source": "標準の<code>loader.js</code>、Onsen UI 2.12.9のCSS・JavaScript、自作CSS・<code>app.js</code>を読み込む。自作JSはOnsen UIより後。",
+      "translation": "standard <code>loader.js</code>၊ Onsen UI 2.12.9 ၏ CSS နှင့် JavaScript၊ ကိုယ်ပိုင် CSS နှင့် <code>app.js</code> တို့ကို load လုပ်ပါသည်။ ကိုယ်ပိုင် JS သည် Onsen UI ပြီးမှ လာရပါမည်။"
+    },
+    {
+      "source": "<code>ons-navigator</code>が<code>list.html</code>を実体化する。<code>template</code>は配置前のひな形で、詳細へ進んだときに<code>detail.html</code>の要素が作られる。",
+      "translation": "<code>ons-navigator</code> သည် <code>list.html</code> ကို ဖော်ဆောင်ပေးပါသည်။ <code>template</code> သည် နေရာမချရသေးသော ပုံစံကြမ်းဖြစ်ပြီး၊ အသေးစိတ် (detail) သို့ ဆက်သွားသောအခါမှ <code>detail.html</code> ၏ element များကို ဖန်တီးပေးပါသည်။"
+    },
+    {
+      "source": "<code>init</code>のリスナー",
+      "translation": "<code>init</code> ၏ listener"
+    },
+    {
+      "source": "ページの要素が使える時点に、そのページの<code>id</code>を見てイベント登録や文字の設定を行う。",
+      "translation": "page ၏ element များကို အသုံးပြုနိုင်သည့်အချိန်တွင် ထို page ၏ <code>id</code> ကိုကြည့်၍ event မှတ်ပုံတင်ခြင်း သို့မဟုတ် စာသားသတ်မှတ်ခြင်းတို့ကို လုပ်ဆောင်ပါသည်။"
+    },
+    {
+      "source": "配列の件数だけ固定の行構造を作る。名前や種類は<code>textContent</code>へ入れ、文字をHTMLとして解釈しない。",
+      "translation": "array ၏ အရေအတွက်အတိုင်း ပုံသေ row ဖွဲ့စည်းပုံကို တည်ဆောက်ပါသည်။ အမည်နှင့် အမျိုးအစားများကို <code>textContent</code> ထဲသို့ ထည့်သွင်းသဖြင့် စာသားကို HTML အဖြစ် interpret မလုပ်ပါ။"
+    },
+    {
+      "source": "<code>pushPage</code>の<code>data</code>へ選んだデータを渡し、詳細の<code>page.data</code>で受け取る。現在のページと移動中の旗を調べ、連打でページを重ねない。",
+      "translation": "ရွေးချယ်ထားသော data ကို <code>pushPage</code> ၏ <code>data</code> မှတစ်ဆင့် ပေးပို့ပြီး၊ အသေးစိတ် screen တွင် <code>page.data</code> ဖြင့် လက်ခံရယူပါသည်။ လက်ရှိ page နှင့် ကူးပြောင်းနေဆဲဖြစ်ကြောင်းပြ flag ကို စစ်ဆေးသောကြောင့် ထပ်ခါတလဲလဲ နှိပ်မိသော်လည်း page များ ထပ်မသွားစေပါ။"
+    },
+    {
+      "source": "<code>callback</code> / 戻る",
+      "translation": "<code>callback</code> / နောက်သို့ပြန်သွားခြင်း"
+    },
+    {
+      "source": "移動完了の<code>callback</code>で旗を戻す。<code>ons-back-button</code>はページを1つ戻す。",
+      "translation": "ကူးပြောင်းမှု ပြီးဆုံးသည့် <code>callback</code> တွင် flag ကို မူလအခြေအနေသို့ ပြန်ထားပါသည်။ <code>ons-back-button</code> သည် page တစ်ခု နောက်သို့ ပြန်သွားပေးပါသည်။"
+    },
+    {
+      "source": "CSSはクラスで余白・色・カードの枠を対応させています。Onsen UIは同じHTMLへOSに合わせた部品のスタイルを適用します。今回も素のJavaScriptから使い、別のフレームワークは追加しません。",
+      "translation": "CSS တွင် class များကို အသုံးပြု၍ margin/padding၊ အရောင်နှင့် card ဘောင်များကို သတ်မှတ်ထားပါသည်။ Onsen UI သည် HTML တစ်ခုတည်းပေါ်တွင် OS နှင့် ကိုက်ညီသော component style များကို အသုံးပြုပေးပါသည်။ ယခုတစ်ကြိမ်တွင်လည်း သာမန် (plain) JavaScript ဖြင့်သာ အသုံးပြုမည်ဖြစ်ပြီး အခြား framework များကို ထပ်မံထည့်သွင်းမည် မဟုတ်ပါ။"
+    },
+    {
+      "source": "既知の技術と比べる",
+      "translation": "မိမိသိရှိပြီးသော နည်းပညာနှင့် နှိုင်းယှဉ်ခြင်း"
+    },
+    {
+      "source": "Web基礎と同じ3ファイル構成ですが、操作する場所はMonaca クラウド IDEです。<code>init</code>はAndroidのビュー生成後の設定やiOSの<code>viewDidLoad</code>に相当するタイミングで、JavaScriptの<code>addEventListener</code>で受け取ります。<code>pushPage</code>の<code>data</code>は、ネイティブアプリで次の画面へ値を渡す操作に対応します。まだ保存用の文字列には変換していません。",
+      "translation": "Web Basics နှင့် တူညီသော file 3 ခုပါ ဖွဲ့စည်းပုံ ဖြစ်သော်လည်း လုပ်ဆောင်ရမည့် နေရာမှာ Monaca クラウド IDE ဖြစ်ပါသည်။ <code>init</code> သည် Android တွင် view ဖန်တီးပြီးနောက် ပြင်ဆင်သတ်မှတ်ခြင်း သို့မဟုတ် iOS ၏ <code>viewDidLoad</code> နှင့် ညီမျှသော အချိန်အခိုက်အတန့်ဖြစ်ပြီး JavaScript ၏ <code>addEventListener</code> ဖြင့် လက်ခံရယူပါသည်။ <code>pushPage</code> ၏ <code>data</code> သည် native app တွင် နောက် screen သို့ တန်ဖိုးများ ပေးပို့သည့် လုပ်ဆောင်ချက်နှင့် ကိုက်ညီပါသည်။ သိမ်းဆည်းရန် string အဖြစ်သို့ ပြောင်းလဲခြင်း မပြုလုပ်ရသေးပါ။"
+    },
+    {
+      "source": "このSTEPの全コード（照合・合流用）",
+      "translation": "ဤ STEP ၏ ကုဒ်အပြည့်အစုံ (တိုက်စစ်ရန် သို့မဟုတ် ကြားမှ ပူးပေါင်းရန်)"
+    },
+    {
+      "source": "www/index.html · 全文",
+      "translation": "www/index.html · ဖိုင်အပြည့်အစုံ"
+    },
+    {
+      "source": "www/css/style.css · 全文",
+      "translation": "www/css/style.css · ဖိုင်အပြည့်အစုံ"
+    },
+    {
+      "source": "www/js/app.js · 全文",
+      "translation": "www/js/app.js · ဖိုင်အပြည့်အစုံ"
+    },
+    {
+      "source": "自分の1プロジェクトで3件の一覧・詳細・戻るを確認し、HTMLとJSの対応を追えた。",
+      "translation": "မိမိ၏ project တစ်ခုတည်းတွင် အကြောင်းအရာ 3 ခု၏ စာရင်း၊ အသေးစိတ်နှင့် နောက်သို့ပြန်သွားခြင်းတို့ကို စစ်ဆေးပြီး HTML နှင့် JS တို့၏ အပြန်အလှန် ချိတ်ဆက်မှုကို လေ့လာနိုင်ခဲ့သည်။"
+    },
+    {
+      "source": "STEP 01 · コマ5",
+      "translation": "STEP 01 · အတန်းချိန် 5"
+    },
+    {
+      "source": "入力画面を作る",
+      "translation": "အချက်အလက်ထည့်သွင်းသည့် screen ပြုလုပ်ခြင်း"
+    },
+    {
+      "source": "3ファイルをこのSTEPのコードへ更新します。HTMLに <code>add.html</code> の<code>template</code>を加え、名前・種類の <code>input</code> と、好きな理由の <code>textarea</code> を置きます。<code>label</code> の<code>for</code>と入力欄の<code>id</code>が対応します。",
+      "translation": "file 3 ခုကို ဤ STEP ၏ code သို့ update လုပ်ပါ။ HTML တွင် <code>add.html</code> အတွက် <code>template</code> ကို ထည့်သွင်းပြီး အမည်နှင့် အမျိုးအစားအတွက် <code>input</code> တစ်ခုစီနှင့် ကြိုက်နှစ်သက်ရသည့် အကြောင်းပြချက်အတွက် <code>textarea</code> တစ်ခုကို ထားရှိပါ။ <code>label</code> ၏ <code>for</code> နှင့် input field ၏ <code>id</code> တို့သည် ကိုက်ညီမှု ရှိပါသည်။"
+    },
+    {
+      "source": "CSSの <code>.app-input</code> は幅を100%にし、<code>box-sizing: border-box</code> で<code>padding</code>と枠をその幅の内側へ収めます。<code>font: inherit</code> で文字を周囲とそろえ、<code>focus</code>の<code>outline</code>で選択中の欄を見分けます。ほかに加わるクラスのうち、このSTEPの画面に当たる4つは次の表のとおりです。",
+      "translation": "CSS ရှိ <code>.app-input</code> သည် width ကို 100% သတ်မှတ်ပေးပြီး <code>box-sizing: border-box</code> ဖြင့် <code>padding</code> နှင့် border ကို ထို width ၏ အတွင်းဘက်သို့ ထည့်သွင်းပေးပါသည်။ <code>font: inherit</code> ဖြင့် စာလုံးကို ပတ်ဝန်းကျင်နှင့် ကိုက်ညီစေပြီး <code>focus</code> ပေါ်ရှိ <code>outline</code> ဖြင့် ရွေးချယ်ထားသော field ကို ခွဲခြားသိရှိစေပါသည်။ ထပ်မံထည့်သွင်းထားသော အခြား class များအနက် ဤ STEP ၏ screen နှင့် သက်ဆိုင်သော 4 ခုမှာ အောက်ပါဇယားအတိုင်း ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "クラス",
+      "translation": "Class"
+    },
+    {
+      "source": "当たる要素",
+      "translation": "သက်ဆိုင်သော element များ"
+    },
+    {
+      "source": "指定と理由",
+      "translation": "သတ်မှတ်ချက်နှင့် အကြောင်းပြချက်"
+    },
+    {
+      "source": "一覧の <code>btn_open_add</code>",
+      "translation": "စာရင်းရှိ <code>btn_open_add</code>"
+    },
+    {
+      "source": "<code>margin-top: 16px</code>。説明文の <code>.app-description</code> は <code>margin: 0</code> なので、その直下に置くボタンの上を空けて、文とボタンを離します。",
+      "translation": "<code>margin-top: 16px</code>။ ရှင်းလင်းချက်စာသား <code>.app-description</code> တွင် <code>margin: 0</code> ဖြစ်သောကြောင့် ၎င်း၏ အောက်တည့်တည့်ရှိ ခလုတ်၏ အပေါ်ဘက်တွင် နေရာလွတ်ချန်ထားပြီး စာသားနှင့် ခလုတ်ကို ခွဲခြားပေးပါသည်။"
+    },
+    {
+      "source": "一覧の <code>txt_storage</code> と、入力画面の <code>txt_add_message</code>",
+      "translation": "စာရင်းရှိ <code>txt_storage</code> နှင့် input screen ရှိ <code>txt_add_message</code>"
+    },
+    {
+      "source": "上下に12pxの余白、<code>.app-caption</code> と同じ文字色、<code>overflow-wrap: anywhere</code>。JavaScriptから文を入れる案内用の段落で、長い文でも画面の幅で折り返します。<code>txt_add_message</code> はこのSTEPでは空で、STEP 02から文を出します。",
+      "translation": "အထက်အောက် 12px နေရာလွတ်၊ <code>.app-caption</code> နှင့် တူညီသော စာသားအရောင်နှင့် <code>overflow-wrap: anywhere</code>။ ၎င်းတို့သည် JavaScript မှ စာသားထည့်သွင်းပေးသည့် လမ်းညွှန်စာပိုဒ်များဖြစ်ပြီး ရှည်လျားသော စာသားဖြစ်သော်လည်း screen width အတိုင်း အလိုအလျောက် စာကြောင်းဆင်းပေးပါသည်။ <code>txt_add_message</code> သည် ဤ STEP တွင် အလွတ်ဖြစ်ပြီး STEP 02 မှ စတင်၍ စာသားပြသမည် ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "入力画面の3つの <code>label</code>",
+      "translation": "input screen ရှိ <code>label</code> element 3 ခု"
+    },
+    {
+      "source": "<code>display: block</code>。<code>.app-label</code> は、STEP 00から詳細の <code>p</code> に使っている余白と文字の指定です。<code>label</code> は既定でインライン要素なので、そのままでは上下の <code>margin</code> が効きません。<code>label</code> に付いたときだけブロックにして、各欄の上に1行ずつ並べます。",
+      "translation": "<code>display: block</code>။ <code>.app-label</code> သည် STEP 00 မှစတင်၍ detail screen ၏ <code>p</code> တွင် အသုံးပြုထားသော နေရာလွတ်နှင့် စာသားသတ်မှတ်ချက် ဖြစ်ပါသည်။ <code>label</code> သည် ပုံမှန်အားဖြင့် inline element ဖြစ်သောကြောင့် မူလအတိုင်းဆိုပါက အထက်အောက် <code>margin</code> အလုပ်မလုပ်ပါ။ <code>label</code> တွင် သတ်မှတ်ထားသည့်အခါမှသာ block ဖြစ်စေပြီး field တစ်ခုစီ၏ အပေါ်တွင် တစ်ကြောင်းစီ စီတန်းထားရှိပါသည်။"
+    },
+    {
+      "source": "入力画面のボタンの下の注記",
+      "translation": "input screen ရှိ ခလုတ်အောက်မှ မှတ်ချက်"
+    },
+    {
+      "source": "<code>.app-description</code> と同じ文字色で、文字の大きさは13px。補足の注記を、ボタンや案内文より控えめに見せます。",
+      "translation": "<code>.app-description</code> နှင့် တူညီသော စာသားအရောင်ဖြစ်ပြီး font size မှာ 13px ဖြစ်ပါသည်။ ထပ်ဆောင်းမှတ်ချက်ကို ခလုတ်များနှင့် လမ်းညွှန်စာသားများထက် ပိုမိုမသိမသာဖြစ်အောင် ပြသပေးပါသည်။"
+    },
+    {
+      "source": "<code>.reset-section</code>・<code>#panel_reset ons-button</code>・<code>.is-hidden</code> の3つは、STEP 08で足す初期化の確認欄のための指定です。このSTEPのHTMLには、まだ当たる要素がありません。",
+      "translation": "<code>.reset-section</code>၊ <code>#panel_reset ons-button</code> နှင့် <code>.is-hidden</code> ဟူသော သတ်မှတ်ချက် 3 ခုသည် STEP 08 တွင် ထည့်သွင်းမည့် reset အတည်ပြုချက် panel အတွက် ဖြစ်ပါသည်။ ဤ STEP ၏ HTML တွင် ၎င်းတို့နှင့် သက်ဆိုင်သော element များ မရှိသေးပါ။"
+    },
+    {
+      "source": "一覧の <code>btn_open_add</code> へ<code>openAddPage</code>を登録し、<code>pushPage(\"add.html\", ...)</code> で入力画面へ進みます。詳細と同じ移動中の旗を共有するため、片方を開いている最中にもう片方は開きません。",
+      "translation": "စာရင်းရှိ <code>btn_open_add</code> တွင် <code>openAddPage</code> ကို မှတ်ပုံတင်ပြီး <code>pushPage(\"add.html\", ...)</code> ဖြင့် input screen သို့ သွားပါမည်။ detail screen နှင့် တူညီသော ကူးပြောင်းမှု flag ကို မျှဝေအသုံးပြုထားသောကြောင့် တစ်ဖက်ကို ဖွင့်နေစဉ် အခြားတစ်ဖက်ကို ဖွင့်၍မရပါ။"
+    },
+    {
+      "source": "この旗の名前は、STEP 00の <code>isOpeningDetail</code> から <code>isOpeningPage</code> に変えます。詳細を開くときだけでなく入力画面を開くときにも使うので、「詳細を開いている最中」ではなく「どちらかのページを開いている最中」と読める名前にするためです。宣言と<code>openOshiDetail</code>の中の3か所も、新しい名前にそろえます。",
+      "translation": "ဤ flag ၏ အမည်ကို STEP 00 ရှိ <code>isOpeningDetail</code> မှ <code>isOpeningPage</code> သို့ ပြောင်းလဲပါမည်။ detail screen ကို ဖွင့်သည့်အခါသာမက input screen ကို ဖွင့်သည့်အခါတွင်လည်း အသုံးပြုသောကြောင့် \"detail screen ကို ဖွင့်နေစဉ်\" အစား \"မည်သည့် page ကိုမဆို ဖွင့်နေစဉ်\" ဟု အဓိပ္ပာယ်ရစေရန် ဖြစ်ပါသည်။ declaration နှင့် <code>openOshiDetail</code> အတွင်းရှိ နေရာ 3 ခုကိုလည်း အမည်အသစ်အတိုင်း ညီညွတ်အောင် ပြောင်းလဲပေးပါ။"
+    },
+    {
+      "source": "一覧のボタンの下の <code>txt_storage</code> には <code>この段階では、追加した内容は保存されません。</code>、入力画面のボタンの下の注記には <code>この段階では、追加した内容は再読み込みすると消えます。</code> と出します。追加した内容がまだ残らないことを、画面で先に伝えるためです。保存を作るSTEP 06で、どちらの文も書き換えます。",
+      "translation": "စာရင်းရှိ ခလုတ်အောက်မှ <code>txt_storage</code> တွင် <code>この段階では、追加した内容は保存されません。</code> (At this stage, added entries are not saved.) ဟု ပြသပြီး၊ input screen ရှိ ခလုတ်အောက်မှ မှတ်ချက်တွင် <code>この段階では、追加した内容は再読み込みすると消えます。</code> (At this stage, added entries disappear when you reload.) ဟု ပြသပါမည်။ ထည့်သွင်းထားသော အချက်အလက်များ မကျန်ရှိသေးကြောင်းကို screen ပေါ်တွင် ကြိုတင်အသိပေးရန် ဖြစ်ပါသည်။ သိမ်းဆည်းမှုကို ပြုလုပ်မည့် STEP 06 တွင် စာသားနှစ်ခုစလုံးကို ပြန်လည်ရေးသားပါမည်။"
+    },
+    {
+      "source": "初期データは <code>createInitialItems</code> が新しい配列を返す形にまとめました。後で初期化したときにも同じ内容を作り直せるようにするためです。呼び出しのたびに新しい配列になる点を、<code>return</code>の位置と一緒に読みます。",
+      "translation": "မူလ initial data ကို <code>createInitialItems</code> က array အသစ်တစ်ခု ပြန်ပေးသည့် ပုံစံဖြင့် စုစည်းထားပါသည်။ နောင်တွင် reset ပြုလုပ်သည့်အခါ တူညီသော အကြောင်းအရာကို ပြန်လည်ဖန်တီးနိုင်စေရန် ဖြစ်ပါသည်။ call လုပ်သည့် အကြိမ်တိုင်းတွင် array အသစ်တစ်ခု ဖြစ်ပေါ်လာသည့် အချက်ကို <code>return</code> ၏ တည်နေရာနှင့်အတူ လေ့လာဖတ်ရှုပါ။"
+    },
+    {
+      "source": "保存・再読み込み後に <code>好きなものを追加</code> を押します。",
+      "translation": "သိမ်းဆည်းပြီး reload လုပ်ပြီးနောက် <code>好きなものを追加</code> (Add favorite) ကို နှိပ်ပါ။"
+    },
+    {
+      "source": "3つの欄へ文字を入力して、左上の戻るボタンで一覧へ戻ります。もう一度開くと新しい入力画面が作られ、欄は空に戻ります。",
+      "translation": "field 3 ခုတွင် စာသားများ ရိုက်ထည့်ပြီး ဘယ်ဘက်အပေါ်ရှိ back ခလုတ်ဖြင့် စာရင်းသို့ ပြန်သွားပါ။ နောက်တစ်ကြိမ် ထပ်ဖွင့်သောအခါ input screen အသစ်တစ်ခု ဖန်တီးပြီး field များသည် မူလအတိုင်း အလွတ် ပြန်ဖြစ်သွားပါမည်။"
+    },
+    {
+      "source": "このSTEPでは <code>追加する</code> を<code>disabled</code>にしてあります。まだクリック処理を付けていないため、押せない状態が正解です。",
+      "translation": "ဤ STEP တွင် <code>追加する</code> (Add) ကို <code>disabled</code> ပြုလုပ်ထားပါသည်။ click handler မထည့်ရသေးသောကြောင့် နှိပ်၍မရသော အခြေအနေမှာ မှန်ကန်ပါသည်။"
+    },
+    {
+      "source": "Web基礎の<code>input</code>・<code>textarea</code>・<code>label</code>をそのまま使います。Androidの<code>EditText</code>、iOSの<code>UITextField</code>・<code>UITextView</code>と同じ役割です。画面を開く処理は詳細への移動と同じ形で、渡すデータが要らないため<code>data</code>を省きます。<code>createInitialItems</code>は、Java／Swiftでデータの配列を関数から返す書き方と対応します。",
+      "translation": "Web Basics မှ <code>input</code>၊ <code>textarea</code> နှင့် <code>label</code> တို့ကို မူလအတိုင်း အသုံးပြုပါသည်။ ၎င်းတို့သည် Android ၏ <code>EditText</code>၊ iOS ၏ <code>UITextField</code> နှင့် <code>UITextView</code> တို့နှင့် တူညီသော အခန်းကဏ္ဍမှ ပါဝင်ပါသည်။ screen ဖွင့်သည့် လုပ်ဆောင်ချက်သည် detail သို့ သွားသည့်ပုံစံနှင့် အတူတူပင်ဖြစ်ပြီး ပေးပို့ရန် data မလိုအပ်သောကြောင့် <code>data</code> ကို ချန်လှပ်ထားပါသည်။ <code>createInitialItems</code> သည် Java/Swift တွင် function မှ data array တစ်ခုကို return ပြန်ပေးသည့် ရေးသားပုံနှင့် ကိုက်ညီပါသည်။"
+    },
+    {
+      "source": "入力画面を開き、3つの欄へ入力して戻れた。追加ボタンがまだ押せないことを確認した。",
+      "translation": "input screen ကို ဖွင့်ပြီး field 3 ခုတွင် ရိုက်ထည့်ကာ ပြန်သွားနိုင်ခဲ့သည်။ ထည့်သွင်းသည့်ခလုတ်ကို နှိပ်၍မရသေးကြောင်း စစ်ဆေးအတည်ပြုခဲ့သည်။"
+    },
+    {
+      "source": "STEP 02 · コマ5",
+      "translation": "STEP 02 · အတန်းချိန် 5"
+    },
+    {
+      "source": "入力した文字を確認する",
+      "translation": "ထည့်သွင်းထားသော စာသားကို စစ်ဆေးခြင်း"
+    },
+    {
+      "source": "HTMLの追加ボタンから <code>disabled</code> を外し、JSでは <code>page_add</code> の<code>init</code>で<code>addOshi</code>を登録します。関数名を渡しているので、登録した瞬間ではなくボタンを押したときに動きます。",
+      "translation": "HTML ရှိ add ခလုတ်မှ <code>disabled</code> ကို ဖယ်ရှားပြီး JS တွင် <code>page_add</code> ၏ <code>init</code> ၌ <code>addOshi</code> ကို မှတ်ပုံတင်ပါ။ function အမည်ကို ပေးပို့ထားသောကြောင့် မှတ်ပုံတင်သည့် အခိုက်အတန့်တွင် မဟုတ်ဘဲ ခလုတ်ကို နှိပ်သည့်အခါမှ အလုပ်လုပ်မည် ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "<code>addOshi</code>は、入力欄を<code>id</code>で取得し、<code>value</code> で今の文字を読みます。<code>trim()</code> は前後の空白を取り除きます。3つのどれかが空ならメッセージを表示して<code>return</code>し、残りの処理へ進みません。",
+      "translation": "<code>addOshi</code> သည် input field များကို <code>id</code> ဖြင့် ရယူပြီး <code>value</code> ဖြင့် လက်ရှိ စာသားကို ဖတ်ရှုပါသည်။ <code>trim()</code> သည် ရှေ့နှင့်နောက်ရှိ space များကို ဖယ်ရှားပေးပါသည်။ 3 ခုအနက် တစ်ခုခု အလွတ်ဖြစ်နေပါက message ကို ပြသပြီး <code>return</code> လုပ်ကာ ကျန်ရှိသော လုပ်ဆောင်ချက်များသို့ ဆက်မသွားပါ။"
+    },
+    {
+      "source": "このSTEPの成功結果は <code>入力を確認しました：</code> と名前の表示だけです。まだ一覧には追加しません。<code>txt_add_message</code>を<code>textContent</code>で更新するため、名前に山かっこを入れても文字として表示されます。",
+      "translation": "ဤ STEP တွင် အောင်မြင်သော ရလဒ်မှာ <code>入力を確認しました：</code> (Input confirmed:) နှင့် အမည်ကို ပြသခြင်းသာ ဖြစ်ပါသည်။ စာရင်းထဲသို့ မထည့်သွင်းရသေးပါ။ <code>txt_add_message</code> ကို <code>textContent</code> ဖြင့် update လုပ်ထားသောကြောင့် အမည်တွင် ထောင့်ကွင်းများ (angle brackets) ထည့်သွင်းထားသော်လည်း စာသားအဖြစ်သာ ပြသမည် ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "空欄のまま押し、不足のメッセージを確認します。",
+      "translation": "field များကို အလွတ်ထားပြီး ခလုတ်ကို နှိပ်ကာ အချက်အလက်မပြည့်စုံကြောင်းပြ message ကို စစ်ဆေးပါ။"
+    },
+    {
+      "source": "名前だけに空白を入れ、ほかを埋めて押します。前後の空白を取り除くと空になるため、同じメッセージになることを確認します。",
+      "translation": "အမည်တွင် space သာ ရိုက်ထည့်ပြီး ကျန်အကွက်များကို ဖြည့်သွင်း၍ နှိပ်ပါ။ ရှေ့နောက် space များကို ဖယ်ရှားလိုက်သည့်အခါ အလွတ်ဖြစ်သွားသောကြောင့် တူညီသော message ပြသခြင်း ရှိမရှိ စစ်ဆေးပါ။"
+    },
+    {
+      "source": "すべて入力して押し、名前が表示されることを確認します。入力した文字が勝手に消えないことも見ます。",
+      "translation": "အားလုံးကို ဖြည့်သွင်းပြီး နှိပ်ကာ အမည်ပြသခြင်း ရှိမရှိ စစ်ဆေးပါ။ ရိုက်ထည့်ထားသော စာသားများ အလိုအလျောက် ပျောက်မသွားခြင်းကိုလည်း ကြည့်ရှုပါ။"
+    },
+    {
+      "source": "Javaなら<code>EditText.getText().toString().trim()</code>、Swiftなら<code>text</code>と<code>trimmingCharacters</code>を使う場面です。今回はHTMLの<code>value</code>を読みます。空欄の条件や<code>return</code>は既習の書き方で、エラーの伝え先をダイアログではなく同じ画面の段落にしています。",
+      "translation": "၎င်းသည် Java တွင် <code>EditText.getText().toString().trim()</code> သို့မဟုတ် Swift တွင် <code>text</code> နှင့် <code>trimmingCharacters</code> ကို အသုံးပြုရမည့် အခြေအနေ ဖြစ်ပါသည်။ ယခုတစ်ကြိမ်တွင် HTML ၏ <code>value</code> ကို ဖတ်ရှုပါသည်။ အလွတ်ဖြစ်ကြောင်း စစ်ဆေးသည့် condition နှင့် <code>return</code> တို့သည် သင်ယူပြီးသား ရေးသားပုံများဖြစ်ပြီး error ကို dialog ဖြင့် မဟုတ်ဘဲ screen တစ်ခုတည်းပေါ်ရှိ စာပိုဒ်တွင် ပြသထားပါသည်။"
+    },
+    {
+      "source": "空欄・空白だけ・正常入力の3通りで、結果の文を確認できた。",
+      "translation": "အလွတ်ထားခြင်း၊ space သာရိုက်ခြင်းနှင့် ပုံမှန်ရိုက်ထည့်ခြင်း ဟူသော အခြေအနေ 3 မျိုးစလုံးတွင် ရလဒ်စာသားကို စစ်ဆေးနိုင်ခဲ့သည်။"
+    },
+    {
+      "source": "STEP 03 · コマ5",
+      "translation": "STEP 03 · အတန်းချိန် 5"
+    },
+    {
+      "source": "配列へ追加して戻る",
+      "translation": "array ထဲသို့ ထည့်သွင်းပြီး ပြန်သွားခြင်း"
+    },
+    {
+      "source": "JSの<code>addOshi</code>で、入力確認だけの行を、配列へ追加して一覧を描き直す処理へ替えます。<code>oshiItems.push({ name: name, genre: genre, comment: comment })</code> の左側はデータの項目名、右側は入力欄から読んだ変数です。",
+      "translation": "JS ရှိ <code>addOshi</code> တွင် ထည့်သွင်းမှုကို စစ်ဆေးရုံသာ လုပ်ဆောင်သည့် လိုင်းကို array ထဲသို့ ထည့်သွင်းပြီး စာရင်းကို ပြန်လည်ဆွဲသားသည့် လုပ်ဆောင်ချက်ဖြင့် အစားထိုးပါ။ <code>oshiItems.push({ name: name, genre: genre, comment: comment })</code> ၏ ဘယ်ဘက်ခြမ်းသည် data field အမည်ဖြစ်ပြီး ညာဘက်ခြမ်းသည် input field မှ ဖတ်ရှုထားသော variable ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "次に<code>renderOshiList</code>を呼びます。この関数は<code>innerHTML</code>で行を置き直した後に、<code>textContent</code>の設定とクリックの登録をやり直します。古い行に登録したイベントは、新しい行へ自動では移らないためです。",
+      "translation": "ထို့နောက် <code>renderOshiList</code> ကို call လုပ်ပါ။ ဤ function သည် <code>innerHTML</code> ဖြင့် row များကို အသစ်လဲလှယ်ပြီးနောက် <code>textContent</code> သတ်မှတ်ခြင်းနှင့် click မှတ်ပုံတင်ခြင်းတို့ကို ပြန်လည်လုပ်ဆောင်ပေးပါသည်။ row အဟောင်းများတွင် မှတ်ပုံတင်ထားသော event များသည် row အသစ်များသို့ အလိုအလျောက် ရောက်ရှိမသွားသောကြောင့် ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "その次の行で、一覧の下の <code>txt_selected</code> に <code>追加したもの：</code> と追加した名前を出します。STEP 00から、詳細を開いたときに <code>選択中：</code> と名前を出している欄です。一覧へ戻ったときに、どれを追加したかを行を探さずに確かめられるようにするためです。",
+      "translation": "နောက်တစ်လိုင်းတွင် စာရင်းအောက်ရှိ <code>txt_selected</code> ၌ <code>追加したもの：</code> (Added:) နှင့် ထည့်သွင်းထားသော အမည်ကို ပြသပေးပါ။ STEP 00 မှစတင်၍ detail screen ကို ဖွင့်သည့်အခါ <code>選択中：</code> (Selected:) နှင့် အမည်ကို ပြသပေးနေသော field ဖြစ်ပါသည်။ စာရင်းသို့ ပြန်ရောက်သည့်အခါ row များကို လိုက်ရှာစရာမလိုဘဲ မည်သည့်အရာကို ထည့်သွင်းခဲ့သည်ကို အတည်ပြုနိုင်စေရန် ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "最後に <code>popPage()</code> で入力画面を閉じます。一覧はその下に残っているので、新しい行が見えます。追加を始める直前にボタンを無効にしておくことで、戻る途中の連続操作でも同じ内容を二重に追加しません。",
+      "translation": "နောက်ဆုံးတွင် <code>popPage()</code> ဖြင့် input screen ကို ပိတ်ပါ။ စာရင်းသည် ၎င်း၏အောက်တွင် ရှိနေဆဲဖြစ်သောကြောင့် row အသစ်ကို တွေ့မြင်ရပါမည်။ ထည့်သွင်းမှု မစတင်မီ ခလုတ်ကို disable ပြုလုပ်ထားခြင်းဖြင့် ပြန်သွားနေစဉ် ဆက်တိုက်နှိပ်မိသော်လည်း တူညီသောအရာကို နှစ်ခါထပ်မံ မထည့်သွင်းစေပါ။"
+    },
+    {
+      "source": "新しい好きなものを1件入力して追加します。一覧が4件になり、一覧の下に <code>追加したもの：</code> と入力した名前が出たことを確認します。",
+      "translation": "ကြိုက်နှစ်သက်ရာ အသစ်တစ်ခုကို ရိုက်ထည့်ပြီး ထည့်သွင်းပါ။ စာရင်းတွင် 4 ခု ဖြစ်လာပြီး စာရင်း၏အောက်တွင် <code>追加したもの：</code> (Added:) နှင့် ရိုက်ထည့်လိုက်သော အမည် ပေါ်လာကြောင်း စစ်ဆေးပါ။"
+    },
+    {
+      "source": "追加した行を押し、名前・種類・好きな理由が入力どおりか確かめます。好きな理由に改行を入れた場合も確認します。",
+      "translation": "ထည့်သွင်းထားသော row ကို နှိပ်ပြီး အမည်၊ အမျိုးအစားနှင့် ကြိုက်ရသည့်အကြောင်းပြချက်တို့သည် ရိုက်ထည့်ထားသည့်အတိုင်း မှန်ကန်ခြင်း ရှိမရှိ စစ်ဆေးပါ။ အကြောင်းပြချက်တွင် စာကြောင်းဆင်းခြင်း (line break) ထည့်သွင်းထားသည့်အခါတွင်လည်း စစ်ဆေးပါ။"
+    },
+    {
+      "source": "戻ってからプレビューを再読み込みします。配列はソースの初期データから作り直されるため、3件に戻ります。今日はこれで正解です。",
+      "translation": "ပြန်သွားပြီးနောက် preview ကို reload လုပ်ပါ။ array ကို source code ရှိ initial data မှ ပြန်လည်တည်ဆောက်သောကြောင့် 3 ခုသို့ ပြန်ရောက်သွားပါမည်။ ယနေ့အတွက် ဤရလဒ်မှာ မှန်ကန်ပါသည်။"
+    },
+    {
+      "source": "<code>push</code>はJavaの<code>ArrayList.add</code>やSwiftの<code>Array.append</code>と同じ追加です。<code>popPage</code>はiOSで前の画面へ戻す操作に対応します。ここで変えたのは実行中の配列だけなので、ファイルに文字を保存したときや<code>SharedPreferences</code>／<code>UserDefaults</code>へ書いたときとは残り方が異なります。",
+      "translation": "<code>push</code> သည် Java ၏ <code>ArrayList.add</code> သို့မဟုတ် Swift ၏ <code>Array.append</code> နှင့် တူညီသော ထည့်သွင်းမှု ဖြစ်ပါသည်။ <code>popPage</code> သည် iOS တွင် ယခင် screen သို့ ပြန်သွားသည့် လုပ်ဆောင်ချက်နှင့် ကိုက်ညီပါသည်။ ဤနေရာတွင် ပြောင်းလဲခဲ့သည်မှာ run နေဆဲ array သာ ဖြစ်သောကြောင့် file ထဲသို့ စာသားသိမ်းဆည်းခြင်း သို့မဟုတ် <code>SharedPreferences</code>/<code>UserDefaults</code> ထဲသို့ ရေးသားသိမ်းဆည်းခြင်းတို့ကဲ့သို့ အမြဲတမ်း ကျန်ရှိနေမည် မဟုတ်ပါ။"
+    },
+    {
+      "source": "追加した行の詳細が入力と一致し、再読み込みでは初期データへ戻ることを確認できた。",
+      "translation": "ထည့်သွင်းထားသော row ၏ အသေးစိတ်သည် ရိုက်ထည့်ထားသည်နှင့် ကိုက်ညီပြီး reload ပြုလုပ်သည့်အခါ initial data သို့ ပြန်လည်ရောက်ရှိသွားကြောင်း အတည်ပြုနိုင်ခဲ့သည်။"
+    },
+    {
+      "source": "STEP 04 · コマ5",
+      "translation": "STEP 04 · အတန်းချိန် 5"
+    },
+    {
+      "source": "確認とアレンジ",
+      "translation": "စစ်ဆေးခြင်းနှင့် customize ပြုလုပ်ခြင်း"
+    },
+    {
+      "source": "今日の終わりは、作った範囲を使って自分の表現に変えます。コードはSTEP 03の状態です。下の全コードは照合用で、自分の変更を無条件に貼り戻すためのものではありません。",
+      "translation": "ယနေ့၏ ပြီးဆုံးချိန်တွင် ဖန်တီးထားသော အတိုင်းအတာကို အသုံးပြု၍ မိမိကိုယ်ပိုင် စိတ်ကြိုက်ပုံစံသို့ ပြောင်းလဲကြပါစို့။ code သည် STEP 03 ၏ အခြေအနေတွင် ရှိနေပါသည်။ အောက်ဖော်ပြပါ code အပြည့်အစုံမှာ နှိုင်းယှဉ်ရန်အတွက်သာဖြစ်ပြီး မိမိ ပြုပြင်ထားသည်များကို ပြန်လည်အစားထိုး paste လုပ်ရန်အတွက် မဟုတ်ပါ။"
+    },
+    {
+      "source": "変える場所",
+      "translation": "ပြောင်းလဲရမည့် နေရာ"
+    },
+    {
+      "source": "変わること",
+      "translation": "ပြောင်းလဲမည့် အချက်"
+    },
+    {
+      "source": "HTMLの<code>placeholder</code>",
+      "translation": "HTML ရှိ <code>placeholder</code>"
+    },
+    {
+      "source": "入力前に見える記入例。",
+      "translation": "အချက်အလက်မဖြည့်မီ မြင်တွေ့ရသော ဖြည့်စွက်နမူနာ။"
+    },
+    {
+      "source": "CSSの<code>app-input</code>の枠色・<code>padding</code>",
+      "translation": "CSS ရှိ <code>app-input</code> ၏ border အရောင်နှင့် <code>padding</code>"
+    },
+    {
+      "source": "入力欄の見た目と内側の余白。",
+      "translation": "input field ၏ အသွင်အပြင်နှင့် အတွင်းဘက် နေရာလွတ်။"
+    },
+    {
+      "source": "JSの<code>createInitialItems</code>",
+      "translation": "JS ရှိ <code>createInitialItems</code>"
+    },
+    {
+      "source": "再読み込み時に表示される自分の好きなものと理由。",
+      "translation": "reload ပြုလုပ်သည့်အခါ ပြသမည့် မိမိ၏ ကြိုက်နှစ်သက်သည့်အရာနှင့် အကြောင်းပြချက်။"
+    },
+    {
+      "source": "入力例には、好きな音楽や食べ物、場所を使えます。ほかの人の個人情報や、共有したくない内容は例に入れません。名前だけでなく、なぜ好きなのかを自分の言葉にしましょう。",
+      "translation": "နမူနာများတွင် မိမိကြိုက်နှစ်သက်သော သီချင်း၊ အစားအစာ သို့မဟုတ် နေရာများကို အသုံးပြုနိုင်ပါသည်။ အခြားသူများ၏ ကိုယ်ရေးကိုယ်တာ အချက်အလက်များ သို့မဟုတ် မျှဝေရန် မလိုလားသော အကြောင်းအရာများကို နမူနာတွင် မထည့်သွင်းပါနှင့်။ အမည်သာမက အဘယ်ကြောင့် ကြိုက်နှစ်သက်ရသည်ကိုပါ မိမိကိုယ်ပိုင်စကားဖြင့် ဖော်ပြပါ။"
+    },
+    {
+      "source": "1か所変えたら保存・再読み込みし、入力・追加・詳細・戻るをもう一度試します。変えたファイル名と、画面のどこが変わったかを控えます。",
+      "translation": "နေရာတစ်ခု ပြောင်းလဲပြီးပါက သိမ်းဆည်း၍ reload လုပ်ပြီး ရိုက်ထည့်ခြင်း၊ ထည့်သွင်းခြင်း၊ အသေးစိတ်ကြည့်ခြင်းနှင့် နောက်သို့ပြန်သွားခြင်းတို့ကို နောက်တစ်ကြိမ် စမ်းသပ်ပါ။ ပြောင်းလဲခဲ့သော file အမည်နှင့် screen ၏ မည်သည့်နေရာ ပြောင်းလဲသွားသည်ကို မှတ်ထားပါ။"
+    },
+    {
+      "source": "HTMLは構造と記入例、CSSは装飾、JavaScriptはデータと動きというWeb基礎の役割分担を使います。画面に入力した値と、ソースの初期データの違いを、再読み込み後の結果で見分けます。",
+      "translation": "HTML သည် ဖွဲ့စည်းပုံနှင့် ဖြည့်စွက်နမူနာ၊ CSS သည် အလှဆင်မှု၊ JavaScript သည် data နှင့် လှုပ်ရှားဆောင်ရွက်မှု ဟူသော Web Basics ၏ အခန်းကဏ္ဍ ခွဲဝေမှုများကို အသုံးပြုပါသည်။ screen ပေါ်တွင် ရိုက်ထည့်ထားသော တန်ဖိုးများနှင့် source code ရှိ initial data တို့၏ ကွာခြားချက်ကို reload ပြုလုပ်ပြီးနောက် ရလဒ်ဖြင့် ခွဲခြားသိရှိနိုင်ပါသည်။"
+    },
+    {
+      "source": "アレンジした場所が画面に現れ、追加・詳細・戻るが引き続き動いた。",
+      "translation": "customize ပြုလုပ်ထားသော နေရာများသည် screen ပေါ်တွင် ပေါ်လာပြီး ထည့်သွင်းခြင်း၊ အသေးစိတ်ကြည့်ခြင်းနှင့် နောက်သို့ပြန်သွားခြင်းတို့ ဆက်လက်အလုပ်လုပ်သည်။"
+    },
+    {
+      "source": "STEP 05 · コマ6",
+      "translation": "STEP 05 · အတန်းချိန် 6"
+    },
+    {
+      "source": "配列とJSONの違いを読む",
+      "translation": "array နှင့် JSON အကြား ကွာခြားချက်ကို ဖတ်ရှုခြင်း"
+    },
+    {
+      "source": "このコマの開始時の全コード",
+      "translation": "ဤအတန်းချိန် စတင်ချိန်တွင် ရှိရမည့် code အပြည့်အစုံ"
+    },
+    {
+      "source": "途中から合流する場合は、変更した文字と色を控えてから3ファイルをそろえます。順番に進めている人は、前の回の続きで構いません。",
+      "translation": "အလယ်အလတ်မှ ပြန်လည်ပါဝင်လာသူများသည် ပြောင်းလဲခဲ့သော စာသားများနှင့် အရောင်များကို မှတ်ထားပြီးနောက် file 3 ခုကို ညီညွတ်အောင် ချိန်ညှိပါ။ အစဉ်လိုက်အတိုင်း ဆက်တိုက်လုပ်ဆောင်နေသူများသည် ယခင်အတန်းချိန်မှ ဆက်လက်လုပ်ဆောင်နိုင်ပါသည်။"
+    },
+    {
+      "source": "Monaca クラウド IDEで同じ好きなものノートを開きます。開始状態は「入力して追加できるが、再読み込みすると初期データに戻る」です。保存する前に、画面で使う配列と、保存へ渡す文字列を区別します。",
+      "translation": "Monaca クラウド IDE တွင် တူညီသော ကြိုက်နှစ်သက်ရာများ မှတ်စုကို ဖွင့်ပါ။ စတင်သည့် အခြေအနေမှာ \"ရိုက်ထည့်၍ ထည့်သွင်းနိုင်သော်လည်း reload ပြုလုပ်သည့်အခါ initial data သို့ ပြန်ရောက်သွားသည်\" ဖြစ်ပါသည်။ မသိမ်းဆည်းမီ screen တွင် အသုံးပြုမည့် array နှင့် storage သို့ ပေးပို့မည့် string တို့ကို ခွဲခြားသိရှိထားပါ။"
+    },
+    {
+      "source": "<strong>JSONは、値を文字で表すための決まった形式</strong>です。JavaScriptの配列やオブジェクトそのものではありません。<code>JSON.stringify</code> は値をJSONの文字列にし、<code>JSON.parse</code> はJSONの文字列から値を復元します。今回の保存対象は文字列の3項目を持つオブジェクトの配列です。",
+      "translation": "<strong>JSON သည် တန်ဖိုးများကို စာသားဖြင့် ဖော်ပြရန်အတွက် သတ်မှတ်ထားသော format</strong> ဖြစ်ပါသည်။ ၎င်းသည် JavaScript array သို့မဟုတ် object အစစ်အမှန် မဟုတ်ပါ။ <code>JSON.stringify</code> သည် တန်ဖိုးတစ်ခုကို JSON string အဖြစ်သို့ ပြောင်းလဲပေးပြီး <code>JSON.parse</code> သည် JSON string မှ တန်ဖိုးတစ်ခုကို ပြန်လည်ရယူပေးပါသည်။ ယခုတစ်ကြိမ်တွင် သိမ်းဆည်းမည့် အရာမှာ string field 3 ခုပါရှိသော object များ၏ array ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "場面",
+      "translation": "အခြေအနေ"
+    },
+    {
+      "source": "値",
+      "translation": "တန်ဖိုး"
+    },
+    {
+      "source": "型",
+      "translation": "Type"
+    },
+    {
+      "source": "画面で使う1件の例",
+      "translation": "screen တွင် အသုံးပြုသော item တစ်ခု၏ ဥပမာ"
+    },
+    {
+      "source": "オブジェクト",
+      "translation": "Object"
+    },
+    {
+      "source": "JSONで表した内容",
+      "translation": "JSON ဖြင့် ဖော်ပြထားသော အကြောင်းအရာ"
+    },
+    {
+      "source": "この文字の並びを持つ文字列",
+      "translation": "ဤအက္ခရာအစဉ်အတန်း ပါဝင်သော string"
+    },
+    {
+      "source": "<code>parse</code>した後",
+      "translation": "<code>parse</code> လုပ်ပြီးနောက်"
+    },
+    {
+      "source": "<code>item.name</code> を読める値",
+      "translation": "<code>item.name</code> ကို ဖတ်ရှုနိုင်သော တန်ဖိုး"
+    },
+    {
+      "source": "再びオブジェクト",
+      "translation": "Object တစ်ဖန်ပြန်ဖြစ်သွားခြင်း"
+    },
+    {
+      "source": "JSONではキーもダブルクォートで囲みます。コメントや末尾の余分なカンマは使えません。ただし、今回の保存文字列は手で組み立てず、<code>stringify</code>に作らせます。名前に引用符や改行があっても、必要な表現への変換を任せられます。",
+      "translation": "JSON တွင် key များကိုလည်း double quotes ဖြင့် ဝန်းရံထားရပါမည်။ comment များနှင့် နောက်ဆုံးရှိ ပိုလျှံနေသော comma များကို အသုံးပြု၍ မရပါ။ သို့သော် ယခုတစ်ကြိမ်တွင် သိမ်းဆည်းမည့် string ကို ကိုယ်တိုင် လက်ဖြင့် တည်ဆောက်မည် မဟုတ်ဘဲ <code>stringify</code> ကို ဖန်တီးခိုင်းပါမည်။ အမည်တွင် quotation marks သို့မဟုတ် line breaks များ ပါဝင်နေသော်လည်း လိုအပ်သော ပြောင်းလဲမှုများကို ၎င်းထံ လွှဲအပ်နိုင်ပါသည်။"
+    },
+    {
+      "source": "次の3行は処理順を読むための抜粋です。まだ追加する必要はありません。次のSTEPで保存、STEP 07で読み込みへ組み込みます。",
+      "translation": "အောက်ပါ လိုင်း 3 လိုင်းသည် လုပ်ဆောင်ချက် အစီအစဉ်ကို ဖတ်ရှုရန်အတွက် ကောက်နုတ်ချက် ဖြစ်ပါသည်။ ထည့်သွင်းရန် မလိုအပ်သေးပါ။ နောက် STEP တွင် သိမ်းဆည်းခြင်းနှင့် STEP 07 တွင် ဖတ်ရှုခြင်းတို့၌ ထည့်သွင်းတည်ဆောက်ပါမည်။"
+    },
+    {
+      "source": "配列のまま<code>setItem</code>へ渡すと、今回必要な構造を保持するJSONにはなりません。<code>String(oshiItems)</code> で一般的な文字列へ変えることとも区別しましょう。",
+      "translation": "array အတိုင်း <code>setItem</code> သို့ ပေးပို့ပါက ယခုလိုအပ်သော ဖွဲ့စည်းပုံကို ထိန်းသိမ်းထားသည့် JSON ဖြစ်လာမည် မဟုတ်ပါ။ <code>String(oshiItems)</code> ဖြင့် သာမန် string သို့ ပြောင်းလဲခြင်းနှင့်လည်း ခွဲခြားမှတ်သားပါ။"
+    },
+    {
+      "source": "JavaやSwiftの配列・データオブジェクトをそのまま画面で使っていたときと、文字列を保存するときでは型が違います。この差をつなぐ表現として、今回はJSONを新しく扱います。配列の操作自体を学び直すのではなく、「配列→JSON文字列→配列」という変換の向きを確認します。",
+      "translation": "Java သို့မဟုတ် Swift တွင် array နှင့် data object များကို screen ပေါ်တွင် တိုက်ရိုက် အသုံးပြုခြင်းနှင့် string တစ်ခုကို သိမ်းဆည်းခြင်းတို့အကြား type ကွာခြားမှု ရှိပါသည်။ ဤကွာဟချက်ကို ချိတ်ဆက်ပေးသည့် ဖော်ပြမှုအဖြစ် ယခုတစ်ကြိမ်တွင် JSON ကို အသစ်အဖြစ် လေ့လာပါမည်။ array ၏ လုပ်ဆောင်ချက်များကို အသစ်မှ ပြန်လည်သင်ယူခြင်း မဟုတ်ဘဲ \"array → JSON string → array\" ဟူသော ပြောင်းလဲမှု ဦးတည်ချက်ကို အတည်ပြုခြင်း ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "JSONの文字列と配列を区別し、<code>stringify</code>と<code>parse</code>の向きを確認した。",
+      "translation": "JSON string နှင့် array တို့ကို ခွဲခြားသိရှိပြီး <code>stringify</code> နှင့် <code>parse</code> ၏ ဦးတည်ချက်ကို စစ်ဆေးအတည်ပြုခဲ့သည်။"
+    },
+    {
+      "source": "STEP 06 · コマ6",
+      "translation": "STEP 06 · အတန်းချိန် 6"
+    },
+    {
+      "source": "文字列にして保存する",
+      "translation": "string အဖြစ် ပြောင်းလဲသိမ်းဆည်းခြင်း"
+    },
+    {
+      "source": "このSTEPの3ファイルへ更新します。JSの先頭に <code>STORAGE_KEY</code> を置き、保存内容を探すための名前を1か所で管理します。この名前を途中で変更すると、以前のキーで保存した内容は見えなくなります。",
+      "translation": "ဤ STEP ၏ file 3 ခုသို့ update လုပ်ပါ။ သိမ်းဆည်းထားသော အကြောင်းအရာကို ရှာဖွေမည့် အမည်ကို နေရာတစ်ခုတည်းတွင် စီမံခန့်ခွဲနိုင်ရန် JS ၏ အစတွင် <code>STORAGE_KEY</code> ကို ထားရှိပါ။ ဤအမည်ကို လမ်းခုလတ်တွင် ပြောင်းလဲလိုက်ပါက ယခင် key ဖြင့် သိမ်းဆည်းထားသော အရာများကို တွေ့မြင်နိုင်တော့မည် မဟုတ်ပါ။"
+    },
+    {
+      "source": "<code>addOshi</code>では、<code>oshiItems.slice()</code> で配列の浅いコピー<code>nextItems</code>を作り、そこへ新しい1件を追加します。この処理では既存のオブジェクトの項目は変更せず、配列へ追加するだけなので、配列のコピーで足ります。",
+      "translation": "<code>addOshi</code> တွင် <code>oshiItems.slice()</code> ဖြင့် array ၏ shallow copy ဖြစ်သော <code>nextItems</code> ကို ပြုလုပ်ပြီး ၎င်းထဲသို့ item အသစ်တစ်ခုကို ထည့်သွင်းပါသည်။ ဤလုပ်ဆောင်ချက်တွင် ရှိပြီးသား object များ၏ field များကို ပြင်ဆင်ခြင်း မပြုဘဲ array ထဲသို့သာ ထည့်သွင်းသောကြောင့် array ၏ copy ပြုလုပ်ရုံဖြင့် လုံလောက်ပါသည်။"
+    },
+    {
+      "source": "<code>localStorage.setItem(STORAGE_KEY, JSON.stringify(nextItems))</code> が、同じブラウザの同じ保存領域へ文字列を保存する行です。<code>localStorage</code>は同期APIなので、次の行へ進む前にこの呼び出しが終わります。今回は<code>Promise</code>や<code>async</code> / <code>await</code>を使いません。",
+      "translation": "<code>localStorage.setItem(STORAGE_KEY, JSON.stringify(nextItems))</code> သည် တူညီသော browser ၏ တူညီသော storage နေရာထဲသို့ string ကို သိမ်းဆည်းသည့် လိုင်းဖြစ်ပါသည်။ <code>localStorage</code> သည် synchronous API ဖြစ်သောကြောင့် နောက်တစ်လိုင်းသို့ မသွားမီ ဤ call လုပ်မှု ပြီးဆုံးပါမည်။ ယခုတစ်ကြိမ်တွင် <code>Promise</code> သို့မဟုတ် <code>async</code> / <code>await</code> ကို အသုံးမပြုပါ။"
+    },
+    {
+      "source": "保存設定や空き容量などの理由で書き込めないと例外が発生します。<code>try</code> 内の保存が成功したときだけ、<code>oshiItems</code>を<code>nextItems</code>へ替えて一覧を描き直します。<code>catch</code> 側では入力内容を残し、ボタンを戻してエラーを表示し、<code>return</code>します。",
+      "translation": "storage ဆက်တင်များ သို့မဟုတ် နေရာလွတ် မလုံလောက်ခြင်း စသည့် အကြောင်းပြချက်များကြောင့် ရေးသား၍မရပါက exception ဖြစ်ပေါ်ပါမည်။ <code>try</code> အတွင်းရှိ သိမ်းဆည်းမှု အောင်မြင်သည့်အခါမှသာ <code>oshiItems</code> ကို <code>nextItems</code> ဖြင့် အစားထိုးပြီး စာရင်းကို ပြန်လည်ဆွဲသားပါမည်။ <code>catch</code> ဘက်ခြမ်းတွင် ရိုက်ထည့်ထားသော အချက်အလက်များကို မဖျက်ဘဲ ထားရှိပြီး ခလုတ်ကို ပြန်ဖွင့်ပေးကာ error ကို ပြသပြီး <code>return</code> လုပ်ပါမည်။"
+    },
+    {
+      "source": "順番",
+      "translation": "အစီအစဉ်"
+    },
+    {
+      "source": "そうする理由",
+      "translation": "ထိုသို့ ပြုလုပ်ရသည့် အကြောင်းပြချက်"
+    },
+    {
+      "source": "別の配列に追加",
+      "translation": "သီးခြား array ထဲသို့ ထည့်သွင်းခြင်း"
+    },
+    {
+      "source": "保存前に画面の元データを変えない。",
+      "translation": "မသိမ်းဆည်းမီ screen ၏ မူလ data ကို မပြောင်းလဲစေရန်။"
+    },
+    {
+      "source": "ボタンを無効化して保存",
+      "translation": "ခလုတ်ကို disable လုပ်၍ သိမ်းဆည်းခြင်း"
+    },
+    {
+      "source": "同じ入力を連続して処理しない。",
+      "translation": "တူညီသော ထည့်သွင်းမှုကို ဆက်တိုက် မလုပ်ဆောင်စေရန်။"
+    },
+    {
+      "source": "成功したら配列更新・一覧再描画・戻る",
+      "translation": "အောင်မြင်ပါက array ကို update လုပ်ခြင်း၊ စာရင်းကို ပြန်လည်ဆွဲသားခြင်းနှင့် နောက်သို့ပြန်သွားခြင်း"
+    },
+    {
+      "source": "保存失敗を「追加できた」と見せない。",
+      "translation": "သိမ်းဆည်းမှု မအောင်မြင်သည်ကို \"ထည့်သွင်းပြီးပါပြီ\" ဟု မပြသစေရန်။"
+    },
+    {
+      "source": "失敗したら画面に理由を出す",
+      "translation": "မအောင်မြင်ပါက screen ပေါ်တွင် အကြောင်းပြချက် ပြသခြင်း"
+    },
+    {
+      "source": "入力を消さず、次の確認や再試行につなげる。",
+      "translation": "ထည့်သွင်းထားသည်များကို မဖျက်ဘဲ နောက်တစ်ကြိမ် စစ်ဆေးခြင်း သို့မဟုတ် ပြန်လည်ကြိုးစားခြင်း ပြုလုပ်နိုင်စေရန်။"
+    },
+    {
+      "source": "保存してよいかを表す <code>let canSave = true;</code> も加えます。<code>openAddPage</code>と<code>addOshi</code>の最初の条件で <code>!canSave</code> なら何もせずに戻り、一覧の<code>init</code>では <code>btn_open_add</code> の <code>disabled</code> を <code>!canSave</code> にします。このSTEPには <code>canSave</code> を<code>false</code>にする行がないので、常に<code>true</code>のままで、画面の動きは変わりません。<code>false</code>にするのは、次のSTEPで保存内容を読み込めなかったときです。そのまま追加できると、読めなかった保存内容を、初期データに1件足した配列で上書きしてしまいます。保存の処理を書くこのSTEPで、保存へ進む入口に確認を置いておけば、次のSTEPでは読み込みの処理を足すだけで済みます。",
+      "translation": "သိမ်းဆည်းခွင့် ရှိမရှိကို ဖော်ပြသည့် <code>let canSave = true;</code> ကိုလည်း ထည့်သွင်းပါမည်။ <code>openAddPage</code> နှင့် <code>addOshi</code> ၏ ပထမဆုံး condition တွင် <code>!canSave</code> ဖြစ်ပါက မည်သည့်အရာမျှ မလုပ်ဘဲ ပြန်ထွက်မည်ဖြစ်ပြီး စာရင်း၏ <code>init</code> တွင် <code>btn_open_add</code> ၏ <code>disabled</code> ကို <code>!canSave</code> ဟု သတ်မှတ်ပါမည်။ ဤ STEP တွင် <code>canSave</code> ကို <code>false</code> သတ်မှတ်သည့် လိုင်းမပါရှိသောကြောင့် အမြဲတမ်း <code>true</code> အဖြစ် ရှိနေပြီး screen ၏ လှုပ်ရှားဆောင်ရွက်မှု မပြောင်းလဲပါ။ <code>false</code> သို့ ပြောင်းလဲမည့်အချိန်မှာ နောက် STEP တွင် သိမ်းဆည်းထားသော အရာများကို ဖတ်ယူ၍မရသည့် အခါဖြစ်ပါသည်။ ထိုအခြေအနေတွင် တိုက်ရိုက် ထည့်သွင်းခွင့်ပြုလိုက်ပါက ဖတ်ယူ၍မရသော သိမ်းဆည်းထားသည့် အကြောင်းအရာများကို initial data ပေါ်တွင် 1 ခု ထပ်ပေါင်းထားသည့် array ဖြင့် overwrite လုပ်ပစ်မည် ဖြစ်ပါသည်။ သိမ်းဆည်းမှု ရေးသားသည့် ဤ STEP တွင် သိမ်းဆည်းမှုဆီသို့ သွားမည့် အဝင်ဝ၌ စစ်ဆေးချက် ထားရှိခြင်းဖြင့် နောက် STEP တွင် ဖတ်ယူမှု လုပ်ဆောင်ချက်ကို ထည့်သွင်းရုံဖြင့် လုံလောက်မည် ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "画面の文も、保存ができるようになったことに合わせて替えます。入力画面のボタンは <code>追加する</code> から <code>追加して保存</code> に変わります。押すと、配列への追加と一緒に保存まで行うことを、ボタンの文字で示すためです。STEP 01から出していた2つの文は、保存できるようになると事実と合わなくなるので、一覧の <code>txt_storage</code> は <code>保存はできますが、このSTEPではまだ読み込みません。</code> に、入力画面のボタンの下の注記は <code>保存先は、このブラウザの同じプレビューです。公開URLに入力内容は含まれません。</code> に替えます。保存した内容はこのブラウザにだけ残り、STEP 12で発行する公開URLから取り込んだ人には届かないためです。",
+      "translation": "သိမ်းဆည်းနိုင်လာသည်နှင့်အမျှ screen ပေါ်ရှိ စာသားများကိုလည်း လိုက်လျောညီထွေ ပြောင်းလဲပါမည်။ input screen ရှိ ခလုတ်သည် <code>追加する</code> (Add) မှ <code>追加して保存</code> (Add and save) သို့ ပြောင်းလဲသွားပါမည်။ နှိပ်လိုက်ပါက array ထဲသို့ ထည့်သွင်းခြင်းနှင့်အတူ သိမ်းဆည်းခြင်းကိုပါ လုပ်ဆောင်မည်ဖြစ်ကြောင်း ခလုတ်စာသားဖြင့် ဖော်ပြရန် ဖြစ်ပါသည်။ STEP 01 မှ ပြသထားသော စာသား 2 ခုသည် သိမ်းဆည်းနိုင်လာသည့်အခါ လက်တွေ့နှင့် ကိုက်ညီမှု မရှိတော့သောကြောင့် စာရင်းရှိ <code>txt_storage</code> ကို <code>保存はできますが、このSTEPではまだ読み込みません。</code> (Saving works, but this STEP does not load it yet.) သို့လည်းကောင်း၊ input screen ရှိ ခလုတ်အောက်မှ မှတ်ချက်ကို <code>保存先は、このブラウザの同じプレビューです。公開URLに入力内容は含まれません。</code> (The save location is this same preview in this browser. Your input is not included in the import URL.) သို့လည်းကောင်း ပြောင်းလဲပါမည်။ သိမ်းဆည်းထားသော အကြောင်းအရာများသည် ဤ browser တွင်သာ ကျန်ရှိမည်ဖြစ်ပြီး STEP 12 တွင် ထုတ်ပေးမည့် import URL မှတစ်ဆင့် import လုပ်သူများထံသို့ ရောက်ရှိမည် မဟုတ်သောကြောင့် ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "入力画面のボタンが <code>追加して保存</code> になったことを確かめてから、1件追加して一覧へ戻り、<code>件をこのブラウザに保存しました。</code> の文を確かめます。このSTEPでは保存までなので、再読み込み時の表示はまだ初期データです。保存されていないと決めつけず、次のSTEPで読み込む側を作ります。また、このSTEPで再読み込みしてからもう一度追加すると、前に保存した内容は、ソースの初期データと新しい1件で上書きされます。保存した内容をまだ読み込んでいない配列に、新しい1件を足して保存するためです。次のSTEPで読み込めるのは、最後に保存した内容です。",
+      "translation": "input screen ရှိ ခလုတ်သည် <code>追加して保存</code> (Add and save) သို့ ပြောင်းလဲသွားကြောင်း အတည်ပြုပြီးနောက် item တစ်ခု ထည့်သွင်းပြီး စာရင်းသို့ ပြန်သွားကာ <code>件をこのブラウザに保存しました。</code> (items saved in this browser.) ဟူသော စာသားကို စစ်ဆေးပါ။ ဤ STEP တွင် သိမ်းဆည်းခြင်းအထိသာ လုပ်ဆောင်ထားသဖြင့် reload ပြုလုပ်သည့်အခါ ပြသမည့်အရာမှာ initial data ပင် ဖြစ်နေပါသေးသည်။ သိမ်းဆည်းမှု မရှိဟု မယူဆပါနှင့်၊ ဖတ်ယူမည့်အပိုင်းကို နောက် STEP တွင် ပြုလုပ်ပါမည်။ ထို့အပြင် ဤ STEP တွင် reload လုပ်ပြီးမှ နောက်တစ်ကြိမ် ထပ်မံထည့်သွင်းပါက ယခင်က သိမ်းဆည်းထားသော အရာများကို source code ရှိ initial data နှင့် item အသစ်တစ်ခုဖြင့် overwrite လုပ်သွားပါမည်။ အဘယ်ကြောင့်ဆိုသော် သိမ်းဆည်းထားသော အကြောင်းအရာများကို ဖတ်ယူထားခြင်း မရှိသေးသည့် array ပေါ်တွင် item အသစ်ကို ထပ်ပေါင်း၍ သိမ်းဆည်းသောကြောင့် ဖြစ်ပါသည်။ နောက် STEP တွင် ဖတ်ယူနိုင်မည့် အရာမှာ နောက်ဆုံး သိမ်းဆည်းခဲ့သော အကြောင်းအရာ ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "キーと値で保存する目的はAndroidの<code>SharedPreferences</code>やiOSの<code>UserDefaults</code>と同じです。<code>localStorage</code>の値は文字列に限るためJSONへ変換します。<code>slice</code>はJavaで<code>ArrayList</code>を複製したり、Swiftで配列の別の値を作ったりする操作と比較できます。<code>try</code> / <code>catch</code>はJavaの例外処理、Swiftの<code>do</code> / <code>catch</code>に対応し、今回は失敗後に表示中のデータを更新しない順序が要点です。<code>canSave</code>でボタンの <code>disabled</code> を切り替えるのは、Androidの<code>setEnabled(false)</code>やiOSの<code>isEnabled = false</code>で、条件がそろうまで操作を受け付けないのと同じです。",
+      "translation": "key နှင့် value ဖြင့် သိမ်းဆည်းရသည့် ရည်ရွယ်ချက်မှာ Android ၏ <code>SharedPreferences</code> သို့မဟုတ် iOS ၏ <code>UserDefaults</code> တို့နှင့် အတူတူပင် ဖြစ်ပါသည်။ <code>localStorage</code> ၏ တန်ဖိုးများကို string သာ သတ်မှတ်နိုင်သောကြောင့် JSON သို့ ပြောင်းလဲခြင်း ဖြစ်ပါသည်။ <code>slice</code> ကို Java တွင် <code>ArrayList</code> အား copy ပွားခြင်း သို့မဟုတ် Swift တွင် array ၏ သီးခြားတန်ဖိုးတစ်ခု ပြုလုပ်ခြင်းတို့နှင့် နှိုင်းယှဉ်နိုင်ပါသည်။ <code>try</code> / <code>catch</code> သည် Java ၏ exception handling၊ Swift ၏ <code>do</code> / <code>catch</code> တို့နှင့် ကိုက်ညီပြီး ယခုတစ်ကြိမ်တွင် အမှားဖြစ်ပေါ်ပြီးနောက် ပြသထားသော data ကို update မလုပ်သည့် အစီအစဉ်မှာ အဓိကအချက် ဖြစ်ပါသည်။ <code>canSave</code> ဖြင့် ခလုတ်၏ <code>disabled</code> ကို အဖွင့်အပိတ် လုပ်ဆောင်ခြင်းသည် Android ၏ <code>setEnabled(false)</code> သို့မဟုတ် iOS ၏ <code>isEnabled = false</code> ကဲ့သို့ အခြေအနေများ ပြည့်စုံသည့်တိုင်အောင် လုပ်ဆောင်ချက်များကို လက်မခံဘဲ ထားရှိခြင်းနှင့် အတူတူပင် ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "保存成功の文を確認し、コピー・保存・表示更新の順番を確かめた。",
+      "translation": "သိမ်းဆည်းမှု အောင်မြင်သည့် စာသားကို စစ်ဆေးအတည်ပြုခဲ့ပြီး copy ပွားခြင်း၊ သိမ်းဆည်းခြင်းနှင့် မျက်နှာပြင်ပြသမှု update လုပ်ခြင်းတို့၏ အစီအစဉ်ကို စစ်ဆေးခဲ့သည်။"
+    },
+    {
+      "source": "STEP 07 · コマ6",
+      "translation": "STEP 07 · အတန်းချိန် 6"
+    },
+    {
+      "source": "保存した配列を復元する",
+      "translation": "သိမ်းဆည်းထားသော array ကို ပြန်လည်ရယူခြင်း"
+    },
+    {
+      "source": "JSに<code>loadOshiItems</code>と<code>isValidItems</code>を加え、<code>page_list</code>の<code>init</code>で <strong>読み込み→一覧生成</strong> の順に呼びます。保存した値を読む前に行を作ると、初期データのまま表示されるためです。",
+      "translation": "JS တွင် <code>loadOshiItems</code> နှင့် <code>isValidItems</code> တို့ကို ထည့်သွင်းပြီး <code>page_list</code> ၏ <code>init</code> တွင် <strong>load လုပ်ခြင်း → စာရင်းဖန်တီးခြင်း</strong> ဟူသော အစီအစဉ်အတိုင်း call လုပ်ပါ။ သိမ်းဆည်းထားသော တန်ဖိုးကို မဖတ်ယူမီ row များကို ဖန်တီးလိုက်ပါက initial data သာ screen ပေါ်တွင် ကျန်ရှိနေမည် ဖြစ်သောကြောင့် ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "<code>getItem(STORAGE_KEY)</code> は、未保存なら <code>null</code> を返します。この場合は何も復元せず、ソースの初期データを使います。文字列があれば<code>JSON.parse</code>で値へ戻します。",
+      "translation": "<code>getItem(STORAGE_KEY)</code> သည် မသိမ်းဆည်းရသေးပါက <code>null</code> ကို return ပြန်ပေးပါသည်။ ထိုအခါ မည်သည့်အရာကိုမျှ ပြန်လည်မရယူဘဲ source code ရှိ initial data ကို အသုံးပြုပါသည်။ string ရှိပါက <code>JSON.parse</code> ဖြင့် တန်ဖိုးအဖြစ်သို့ ပြန်လည်ပြောင်းလဲပါမည်။"
+    },
+    {
+      "source": "JSONとして読めることと、画面で使えることは別です。たとえば数値のJSONも<code>parse</code>できますが、今回欲しいのは文字列の項目を持つ配列です。<code>isValidItems</code>は次の順に確かめます。",
+      "translation": "JSON အဖြစ် ဖတ်ရှုနိုင်ခြင်းနှင့် screen ပေါ်တွင် အသုံးပြုနိုင်ခြင်းတို့သည် မတူညီပါ။ ဥပမာအားဖြင့် ကိန်းဂဏန်း (number) JSON ကိုလည်း <code>parse</code> လုပ်နိုင်သော်လည်း ယခုတစ်ကြိမ်တွင် လိုချင်သောအရာမှာ string field များ ပါဝင်သော array ဖြစ်ပါသည်။ <code>isValidItems</code> သည် အောက်ပါအစီအစဉ်အတိုင်း စစ်ဆေးပါမည်။"
+    },
+    {
+      "source": "<code>Array.isArray</code> で配列か確認します。",
+      "translation": "<code>Array.isArray</code> ဖြင့် array ဟုတ်မဟုတ် စစ်ဆေးပါ။"
+    },
+    {
+      "source": "各<code>item</code>が<code>null</code>でなく、オブジェクトであるかを <code>typeof</code> と条件式で確認します。",
+      "translation": "<code>item</code> တစ်ခုချင်းစီသည် <code>null</code> မဟုတ်ဘဲ object ဟုတ်မဟုတ်ကို <code>typeof</code> နှင့် condition စစ်ဆေးချက်တို့ဖြင့် စစ်ဆေးပါ။"
+    },
+    {
+      "source": "<code>name</code>・<code>genre</code>・<code>comment</code>がすべて<code>string</code>で、<code>trim</code>後に空でないか確認します。先に型を確認するため、文字列でないものへ<code>trim</code>を呼びません。",
+      "translation": "<code>name</code>၊ <code>genre</code> နှင့် <code>comment</code> အားလုံးသည် <code>string</code> ဖြစ်ပြီး <code>trim</code> လုပ်ပြီးနောက် အလွတ် မဟုတ်ကြောင်း စစ်ဆေးပါ။ type ကို အရင်စစ်ဆေးသောကြောင့် string မဟုတ်သော အရာများပေါ်တွင် <code>trim</code> ကို call မလုပ်ပါ။"
+    },
+    {
+      "source": "全部通れば<code>true</code>を返します。空の配列は有効な0件として扱います。",
+      "translation": "အားလုံး အောင်မြင်ပါက <code>true</code> ကို return ပြန်ပေးပါမည်။ array အလွတ်ကို တရားဝင်သော 0 ခုအဖြစ် သတ်မှတ်ပါမည်။"
+    },
+    {
+      "source": "読み込みや<code>parse</code>が失敗したとき、または構造が違うときは<code>canSave</code>を<code>false</code>にします。保存済みの文字列を自動で消したり、初期データで上書きしたりしません。一覧には初期データと失敗メッセージを表示し、追加は止めます。次のSTEPで、本人が選んだときだけ初期化できる操作を作ります。失敗メッセージが案内する「初期の内容に戻す」ボタンも、そのときに作ります。このSTEPの画面には、まだありません。",
+      "translation": "ဖတ်ယူခြင်း သို့မဟုတ် <code>parse</code> လုပ်ခြင်း မအောင်မြင်သည့်အခါ သို့မဟုတ် ဖွဲ့စည်းပုံ ကွဲပြားနေသည့်အခါ <code>canSave</code> ကို <code>false</code> ဟု သတ်မှတ်ပါမည်။ သိမ်းဆည်းထားပြီးသော string ကို အလိုအလျောက် ဖျက်ပစ်ခြင်း သို့မဟုတ် initial data ဖြင့် overwrite လုပ်ပစ်ခြင်း မပြုလုပ်ပါနှင့်။ စာရင်းတွင် initial data နှင့် မအောင်မြင်ကြောင်းပြ message ကို ပြသပြီး ထည့်သွင်းမှုကို ရပ်တန့်ထားပါမည်။ နောက် STEP တွင် အသုံးပြုသူကိုယ်တိုင် ရွေးချယ်သည့်အခါမှသာ reset ပြုလုပ်နိုင်သည့် လုပ်ဆောင်ချက်ကို ဖန်တီးပါမည်။ မအောင်မြင်ကြောင်းပြ message မှ ညွှန်ပြထားသော 「初期の内容に戻す」 (Restore initial contents) ခလုတ်ကိုလည်း ထိုအခါမှ ပြုလုပ်ပါမည်။ ဤ STEP ၏ screen တွင် မပါရှိသေးပါ။"
+    },
+    {
+      "source": "名前に引用符や山かっこ、好きな理由に改行を入れて1件追加します。",
+      "translation": "အမည်တွင် quotation marks များနှင့် angle brackets များ၊ ကြိုက်နှစ်သက်ရသည့် အကြောင်းပြချက်တွင် line breaks များ ထည့်သွင်းပြီး item တစ်ခု ထည့်သွင်းပါ။"
+    },
+    {
+      "source": "同じプレビューを再読み込みし、保存した件数と追加した行が戻ることを確かめます。",
+      "translation": "တူညီသော preview ကို reload လုပ်ပြီး သိမ်းဆည်းထားသော အရေအတွက်နှင့် ထည့်သွင်းထားသော row ပြန်လည်ပေါ်လာခြင်း ရှိမရှိ စစ်ဆေးပါ။"
+    },
+    {
+      "source": "詳細を開き、文字・改行が入力どおりに戻ったことを確認します。",
+      "translation": "အသေးစိတ်ကို ဖွင့်ပြီး စာသားနှင့် line breaks များသည် ရိုက်ထည့်ထားသည့်အတိုင်း ပြန်လည်ပေါ်လာခြင်း ရှိမရှိ အတည်ပြုပါ။"
+    },
+    {
+      "source": "保存領域はブラウザやプレビューの場所に結び付きます。別の端末・別のブラウザ・別のプロジェクトのコピーへ、内容が自動で移る仕組みではありません。",
+      "translation": "storage ဧရိယာသည် browser နှင့် preview ၏ တည်နေရာတို့နှင့် ချိတ်ဆက်ထားပါသည်။ အခြား device၊ အခြား browser သို့မဟုတ် အခြား project copy များဆီသို့ အကြောင်းအရာများ အလိုအလျောက် ရောက်ရှိသွားမည့် စနစ် မဟုတ်ပါ။"
+    },
+    {
+      "source": "保存を読むタイミングは、Androidの<code>onCreate</code>やiOSの<code>viewDidLoad</code>で保存値を画面へ戻すときに対応します。Javaの型検査やSwiftの型確認と同じ目的で、今回はJavaScriptの<code>Array.isArray</code>と<code>typeof</code>を使います。<code>JSON.parse</code>の結果を信頼し切らず、画面に必要な項目と型を確かめる点が違いです。",
+      "translation": "သိမ်းဆည်းထားသည်များကို ဖတ်ရှုသည့် အချိန်အခိုက်အတန့်သည် Android ၏ <code>onCreate</code> သို့မဟုတ် iOS ၏ <code>viewDidLoad</code> တွင် သိမ်းဆည်းထားသော တန်ဖိုးများကို screen ပေါ်သို့ ပြန်လည်တင်ပြသည့် အချိန်နှင့် ကိုက်ညီပါသည်။ Java တွင် type စစ်ဆေးခြင်း သို့မဟုတ် Swift တွင် type အတည်ပြုခြင်းနှင့် တူညီသော ရည်ရွယ်ချက်အတွက် ယခုတစ်ကြိမ်တွင် JavaScript ၏ <code>Array.isArray</code> နှင့် <code>typeof</code> တို့ကို အသုံးပြုပါသည်။ <code>JSON.parse</code> ၏ ရလဒ်ကို အလုံးစုံ မယုံကြည်ဘဲ screen အတွက် လိုအပ်သော field များနှင့် type များကို သေချာစစ်ဆေးသည့် အချက်မှာ ကွာခြားချက် ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "追加した内容を再読み込み後にも一覧・詳細で読め、<code>null</code>・不正データ・空配列の扱いを区別できた。",
+      "translation": "ထည့်သွင်းထားသော အကြောင်းအရာများကို reload လုပ်ပြီးနောက်တွင်လည်း စာရင်းနှင့် အသေးစိတ်တို့၌ ဖတ်ရှုနိုင်ခဲ့ပြီး <code>null</code>၊ မှားယွင်းသော data နှင့် array အလွတ်တို့အား ကိုင်တွယ်ပုံကို ခွဲခြားသိရှိနိုင်ခဲ့သည်။"
+    },
+    {
+      "source": "STEP 08 · コマ6",
+      "translation": "STEP 08 · အတန်းချိန် 6"
+    },
+    {
+      "source": "初期化の確認と失敗への対応",
+      "translation": "reset ပြုလုပ်ရန် အတည်ပြုခြင်းနှင့် အမှားများကို ဖြေရှင်းခြင်း"
+    },
+    {
+      "source": "HTMLに初期化ボタンと確認欄、JSにそのイベントと<code>resetOshiItems</code>を加えます。<code>初期の内容に戻す</code> を押すと、<code>is-hidden</code>を<code>remove</code>して確認欄を見せます。<code>やめる</code> ではクラスを<code>add</code>し、欄を閉じるだけです。確認欄を囲む <code>reset-section</code> は上に区切りの線を引き、<code>#panel_reset ons-button</code> は確認欄の2つのボタンの上を12px空けます。この2つと <code>is-hidden</code> はSTEP 01のCSSに入れてあり、このSTEPのHTMLで初めて要素に当たります。",
+      "translation": "HTML တွင် reset ခလုတ်နှင့် အတည်ပြုချက် panel၊ JS တွင် ၎င်း၏ event နှင့် <code>resetOshiItems</code> တို့ကို ထည့်သွင်းပါ။ <code>初期の内容に戻す</code> (Restore initial contents) ကို နှိပ်ပါက <code>is-hidden</code> အား <code>remove</code> လုပ်ပြီး အတည်ပြုချက် panel ကို ပြသပါမည်။ <code>やめる</code> (Cancel) တွင် class အား <code>add</code> လုပ်ပြီး panel ကို ပြန်ပိတ်ရုံသာ ဖြစ်ပါသည်။ အတည်ပြုချက် panel ကို ဝန်းရံထားသော <code>reset-section</code> သည် အပေါ်ဘက်တွင် ပိုင်းခြားမျဉ်းတစ်ခု ဆွဲပေးပြီး <code>#panel_reset ons-button</code> သည် panel အတွင်းရှိ ခလုတ် 2 ခု၏ အပေါ်ဘက်တွင် 12px နေရာလွတ် ချန်ထားပေးပါသည်။ ဤ 2 ခုနှင့် <code>is-hidden</code> တို့ကို STEP 01 ၏ CSS တွင် ထည့်သွင်းထားပြီး ဖြစ်ကာ ဤ STEP ၏ HTML တွင် ပထမဆုံးအကြိမ် element များနှင့် သက်ဆိုင်သွားခြင်း ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "実際の削除は <code>削除して初期の内容に戻す</code> を押した場合だけです。<code>localStorage.removeItem(STORAGE_KEY)</code> で、このアプリのキー1つだけを削除します。保存領域全体を空にする<code>clear</code>は使いません。",
+      "translation": "အမှန်တကယ် ဖျက်ပစ်ခြင်းမှာ <code>削除して初期の内容に戻す</code> (Delete and restore initial contents) ကို နှိပ်သည့်အခါမှသာ ဖြစ်ပါသည်။ <code>localStorage.removeItem(STORAGE_KEY)</code> ဖြင့် ဤ app ၏ key တစ်ခုတည်းကိုသာ ဖျက်ပစ်ပါမည်။ storage တစ်ခုလုံးကို ရှင်းလင်းပစ်မည့် <code>clear</code> ကို အသုံးမပြုပါ။"
+    },
+    {
+      "source": "削除に成功したら<code>createInitialItems</code>で新しい初期配列を作り、<code>canSave</code>を<code>true</code>へ戻し、一覧と文を更新します。削除に失敗したら画面の配列も変更せず、削除できなかったと表示します。初期化が終わると、以前入力した内容は戻せません。",
+      "translation": "ဖျက်ပစ်ခြင်း အောင်မြင်ပါက <code>createInitialItems</code> ဖြင့် initial array အသစ်တစ်ခု ဖန်တီးပြီး <code>canSave</code> ကို <code>true</code> သို့ ပြန်လည်သတ်မှတ်ကာ စာရင်းနှင့် စာသားများကို update လုပ်ပါမည်။ ဖျက်ပစ်ခြင်း မအောင်မြင်ပါက screen ၏ array ကိုလည်း မပြောင်းလဲဘဲ မဖျက်နိုင်ခဲ့ကြောင်း ပြသပါမည်။ reset လုပ်ဆောင်မှု ပြီးဆုံးပါက ယခင် ရိုက်ထည့်ထားသော အကြောင်းအရာများကို ပြန်လည်ရယူ၍ မရနိုင်တော့ပါ။"
+    },
+    {
+      "source": "検証用に追加したデータを使い、初期化の確認欄を開いて <code>やめる</code> を押します。件数が変わらないことを確認します。",
+      "translation": "စမ်းသပ်ရန် ထည့်သွင်းထားသော data ကို အသုံးပြု၍ reset အတည်ပြုချက် panel ကို ဖွင့်ပြီး <code>やめる</code> (Cancel) ကို နှိပ်ပါ။ အရေအတွက် မပြောင်းလဲကြောင်း စစ်ဆေးပါ။"
+    },
+    {
+      "source": "残す必要のある内容は控えてから、もう一度確認欄を開き、削除するボタンを押します。",
+      "translation": "သိမ်းဆည်းထားရန် လိုအပ်သော အကြောင်းအရာများကို မှတ်သားထားပြီးနောက် အတည်ပြုချက် panel ကို နောက်တစ်ကြိမ် ထပ်ဖွင့်ပြီး delete ခလုတ်ကို နှိပ်ပါ။"
+    },
+    {
+      "source": "一覧がソースの初期データに戻り、再読み込みしてもその初期データになることを確かめます。",
+      "translation": "စာရင်းသည် source code ရှိ initial data သို့ ပြန်လည်ရောက်ရှိသွားပြီး reload ပြုလုပ်သော်လည်း ထို initial data အတိုင်း ကျန်ရှိနေခြင်း ရှိမရှိ စစ်ဆေးပါ။"
+    },
+    {
+      "source": "通常の操作で保存・読込に失敗した場合は、表示された文を先生と確認します。教材の確認のために、ブラウザのセキュリティ設定を変更する必要はありません。",
+      "translation": "ပုံမှန်လုပ်ဆောင်မှုအတွင်း သိမ်းဆည်းခြင်း သို့မဟုတ် ဖတ်ယူခြင်း မအောင်မြင်ပါက ပြသထားသော စာသားကို ဆရာနှင့်အတူ စစ်ဆေးပါ။ သင်ထောက်ကူပစ္စည်းများကို စစ်ဆေးရန်အတွက် browser ၏ security ဆက်တင်များကို ပြောင်းလဲရန် မလိုအပ်ပါ။"
+    },
+    {
+      "source": "Web基礎の<code>classList.add</code> / <code>remove</code>で表示クラスを切り替えます。キー1つの削除は、Androidの<code>SharedPreferences.Editor.remove</code>やSwiftの<code>UserDefaults.removeObject</code>に対応します。データを消す前に選び直せる画面を用意する点は、ネイティブアプリの確認操作と同じです。",
+      "translation": "Web Basics မှ <code>classList.add</code> / <code>remove</code> ဖြင့် display class ကို အဖွင့်အပိတ် လုပ်ဆောင်ပါသည်။ key တစ်ခုတည်းကို ဖျက်ပစ်ခြင်းသည် Android ၏ <code>SharedPreferences.Editor.remove</code> သို့မဟုတ် Swift ၏ <code>UserDefaults.removeObject</code> နှင့် ကိုက်ညီပါသည်။ data များကို မဖျက်မီ ပြန်လည်ရွေးချယ်နိုင်သော screen တစ်ခုကို ပြင်ဆင်ပေးထားသည့် အချက်မှာ native app များရှိ အတည်ပြုမှု လုပ်ဆောင်ချက်များနှင့် အတူတူပင် ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "初期化を中止したときは内容が残り、確定したときだけ初期の内容へ戻った。",
+      "translation": "reset လုပ်ဆောင်မှုကို ပယ်ဖျက်လိုက်သည့်အခါ အကြောင်းအရာများ ကျန်ရှိနေပြီး အတည်ပြုသည့်အခါမှသာ မူလ initial data သို့ ပြန်လည်ရောက်ရှိသွားခဲ့သည်။"
+    },
+    {
+      "source": "STEP 09 · コマ6",
+      "translation": "STEP 09 · အတန်းချိန် 6"
+    },
+    {
+      "source": "保存を確かめてアレンジする",
+      "translation": "သိမ်းဆည်းမှုကို စစ်ဆေးပြီး customize ပြုလုပ်ခြင်း"
+    },
+    {
+      "source": "入力→追加→詳細→戻る→再読み込みの順で動かし、保存した内容が復元されることを確認します。次に、ソースの初期データを自分の言葉へ変えます。",
+      "translation": "ထည့်သွင်းခြင်း → အသစ်ထည့်ခြင်း → အသေးစိတ်ကြည့်ခြင်း → နောက်သို့ပြန်သွားခြင်း → reload လုပ်ခြင်း ဟူသော အစီအစဉ်အတိုင်း လုပ်ဆောင်ပြီး သိမ်းဆည်းထားသော အကြောင်းအရာများ ပြန်လည်ပေါ်လာခြင်း ရှိမရှိ အတည်ပြုပါ။ ထို့နောက် source code ရှိ initial data ကို မိမိကိုယ်ပိုင်စကားဖြင့် ပြောင်းလဲပါ။"
+    },
+    {
+      "source": "<strong>保存データがあると、ソースの初期データより優先して表示されます。</strong> <code>createInitialItems</code>を書き換えても画面が変わらない場合は、変更したコードのミスとは限りません。必要な入力を控えたうえで、アプリ内の初期化を使ってソースの内容を確認します。",
+      "translation": "<strong>သိမ်းဆည်းထားသော data ရှိပါက source code ရှိ initial data ထက် ဦးစားပေး၍ ပြသမည် ဖြစ်ပါသည်။</strong> <code>createInitialItems</code> ကို ပြင်ဆင်ရေးသားသော်လည်း screen ပေါ်တွင် မပြောင်းလဲပါက ပြင်ဆင်လိုက်သော code ၏ အမှားကြောင့်သာ ဖြစ်သည်ဟု မဆိုနိုင်ပါ။ လိုအပ်သော အချက်အလက်များကို မှတ်သားထားပြီးနောက် app အတွင်းရှိ reset ကို အသုံးပြု၍ source code ၏ အကြောင်းအရာများကို စစ်ဆေးပါ။"
+    },
+    {
+      "source": "アレンジする場所",
+      "translation": "customize ပြုလုပ်ရမည့် နေရာ"
+    },
+    {
+      "source": "確かめること",
+      "translation": "စစ်ဆေးရမည့် အချက်"
+    },
+    {
+      "source": "<code>createInitialItems</code>の<code>name</code>・<code>genre</code>・<code>comment</code>",
+      "translation": "<code>createInitialItems</code> ရှိ <code>name</code>၊ <code>genre</code> နှင့် <code>comment</code>"
+    },
+    {
+      "source": "初期化後の一覧と詳細が自分の好きなものになる。",
+      "translation": "reset လုပ်ပြီးနောက် စာရင်းနှင့် အသေးစိတ်တို့သည် မိမိ ကြိုက်နှစ်သက်သည့် အရာများ ဖြစ်လာခြင်း။"
+    },
+    {
+      "source": "HTMLの案内文・<code>placeholder</code>",
+      "translation": "HTML ရှိ လမ်းညွှန်စာသားနှင့် <code>placeholder</code>"
+    },
+    {
+      "source": "何を入力するアプリか伝わる。",
+      "translation": "မည်သည့်အရာကို ထည့်သွင်းရမည့် app ဖြစ်ကြောင်း ရှင်းလင်းစွာ သိရှိနိုင်ခြင်း။"
+    },
+    {
+      "source": "CSSの色・枠・余白",
+      "translation": "CSS ရှိ အရောင်၊ border နှင့် နေရာလွတ်"
+    },
+    {
+      "source": "長い日本語や改行も読める。",
+      "translation": "ရှည်လျားသော ဂျပန်စာသားများနှင့် line break များကိုလည်း ဖတ်ရှုနိုင်ခြင်း။"
+    },
+    {
+      "source": "保存キーは変えず、まず文字や色を変えましょう。保存して再読み込みし、どの変更がソースに残り、どの内容がブラウザだけに残るかを確かめます。",
+      "translation": "storage key ကို မပြောင်းလဲဘဲ စာသားများနှင့် အရောင်များကို အရင် ပြောင်းလဲကြပါစို့။ သိမ်းဆည်း၍ reload လုပ်ပြီး မည်သည့် အပြောင်းအလဲများသည် source code တွင် ကျန်ရှိနေပြီး မည်သည့် အကြောင်းအရာများသည် browser တွင်သာ ကျန်ရှိနေသည်ကို စစ်ဆေးပါ။"
+    },
+    {
+      "source": "ネイティブアプリでも、コードに書いた既定値より保存済みの設定を優先することがあります。同じ区別を、<code>createInitialItems</code>と<code>getItem</code>のどちらが最終的な<code>oshiItems</code>になるかで追います。アレンジは既習のデータと装飾の変更だけで行います。",
+      "translation": "native app များတွင်လည်း code ၌ ရေးသားထားသော default value များထက် သိမ်းဆည်းထားပြီးသော setting များကို ဦးစားပေးခြင်းများ ရှိတတ်ပါသည်။ <code>createInitialItems</code> နှင့် <code>getItem</code> အနက် မည်သည့်အရာက နောက်ဆုံး <code>oshiItems</code> ဖြစ်လာမည်နည်းကို ကြည့်ရှုခြင်းဖြင့် တူညီသော ခွဲခြားမှုကို လေ့လာနိုင်ပါသည်။ customize ပြုလုပ်ရာတွင် သင်ယူပြီးသား data နှင့် အလှဆင်မှုများကိုသာ ပြောင်းလဲလုပ်ဆောင်ပါမည်။"
+    },
+    {
+      "source": "保存・復元の一連の操作ができ、ソースのアレンジと入力データの保存先を確かめた。",
+      "translation": "သိမ်းဆည်းခြင်းနှင့် ပြန်လည်ရယူခြင်းဆိုင်ရာ လုပ်ဆောင်ချက် အစဉ်အတန်းကို ဆောင်ရွက်နိုင်ခဲ့ပြီး source code ရှိ customize ပြုလုပ်မှုများနှင့် ထည့်သွင်းထားသော data သိမ်းဆည်းသည့်နေရာကို စစ်ဆေးအတည်ပြုခဲ့သည်။"
+    },
+    {
+      "source": "STEP 10 · コマ7",
+      "translation": "STEP 10 · အတန်းချိန် 7"
+    },
+    {
+      "source": "授業内でFlutterの準備を始める",
+      "translation": "အတန်းချိန်အတွင်း Flutter ပြင်ဆင်မှုကို စတင်ခြင်း"
+    },
+    {
+      "source": "今日は好きなものノートを仕上げて提出します。最初の10分で、後半に使うFlutter SDKのダウンロードと既存のiOS環境の確認を始めます。授業前に取得しておく必要はありません。",
+      "translation": "ယနေ့တွင် ကြိုက်နှစ်သက်ရာများ မှတ်စုကို အပြီးသတ်၍ ပေးပို့ပါမည်။ ပထမ ၁၀ မိနစ်တွင် ဒုတိယပိုင်း၌ အသုံးပြုမည့် Flutter SDK ကို download လုပ်ခြင်းနှင့် ရှိပြီးသား iOS ပတ်ဝန်းကျင်ကို စစ်ဆေးခြင်းတို့ကို စတင်ပါမည်။ အတန်းမစမီ ကြိုတင်ရယူထားရန် မလိုအပ်ပါ။"
+    },
+    {
+      "source": "<a1>共通資料のSTEP 4〜7</a1>を別のタブで開きます。",
+      "translation": "<a1>အခြေခံလမ်းညွှန်၏ STEP 4〜7</a1> ကို tab အသစ်တစ်ခုတွင် ဖွင့်ပါ။"
+    },
+    {
+      "source": "Apple Silicon用のFlutter 3.47.5 / Dart 3.13.4を取得します。既にその版を用意できている場合は、版を確認して重複取得を避けます。",
+      "translation": "Apple Silicon အတွက် Flutter 3.47.5 / Dart 3.13.4 ကို ရယူပါ။ ထို version ကို အဆင်သင့် ပြင်ဆင်ထားပြီး ဖြစ်ပါက version ကို စစ်ဆေးပြီး ထပ်ခါတလဲလဲ download လုပ်ခြင်းကို ရှောင်ကြဉ်ပါ။"
+    },
+    {
+      "source": "別科目で使っているXcodeのiOS環境を確認します。利用できるランタイムは再利用します。<code>xcodebuild -downloadPlatform iOS</code> は全員必須ではありません。",
+      "translation": "အခြားဘာသာရပ်တွင် အသုံးပြုနေသော Xcode ၏ iOS ပတ်ဝန်းကျင်ကို စစ်ဆေးပါ။ အသုံးပြုနိုင်သော runtime ရှိပါက ပြန်လည်အသုံးပြုပါ။ <code>xcodebuild -downloadPlatform iOS</code> သည် လူတိုင်းအတွက် မဖြစ်မနေ မဟုတ်ပါ။"
+    },
+    {
+      "source": "不足分だけ先生と確認して取得を始め、この教科書へ戻ります。Flutter専用のiOS資材は共通資料の <code>flutter precache --ios</code> で用意します。",
+      "translation": "လိုအပ်နေသော အစိတ်အပိုင်းများကိုသာ ဆရာနှင့် စစ်ဆေးအတည်ပြုပြီး download စတင်ကာ ဤဖတ်စာအုပ်သို့ ပြန်လာပါ။ Flutter အတွက် သီးသန့် iOS artifacts များကို အခြေခံလမ်းညွှန်ရှိ <code>flutter precache --ios</code> ဖြင့် ပြင်ဆင်ပါမည်။"
+    },
+    {
+      "source": "取得待ちは好きなものノートのアレンジに使います。コマ8の冒頭にも準備確認の時間があります。家庭での作業が済んでいることを前提にはしません。",
+      "translation": "download လုပ်နေစဉ် စောင့်ဆိုင်းချိန်ကို ကြိုက်နှစ်သက်ရာများ မှတ်စုအား customize ပြုလုပ်ရန် အသုံးပြုပါ။ အတန်းချိန် 8 ၏ အစတွင်လည်း ပြင်ဆင်မှု အခြေအနေကို စစ်ဆေးရန် အချိန်ရှိပါသည်။ အိမ်တွင် ကြိုတင်လုပ်ဆောင်ထားပြီးဖြစ်ရန် သတ်မှတ်မထားပါ။"
+    },
+    {
+      "source": "Android StudioやXcodeでも、開発用SDKとアプリのソースは別です。今回はFlutter SDKと既存のiOS環境を組み合わせます。MonacaのソースをFlutterへ変換する操作ではなく、後半に使う道具の準備です。",
+      "translation": "Android Studio သို့မဟုတ် Xcode တွင်လည်း development SDK နှင့် app ၏ source code တို့သည် သီးခြားစီ ဖြစ်ပါသည်။ ယခုတစ်ကြိမ်တွင် Flutter SDK နှင့် ရှိပြီးသား iOS ပတ်ဝန်းကျင်ကို တွဲဖက်အသုံးပြုပါမည်။ ၎င်းသည် Monaca ၏ source code ကို Flutter သို့ ပြောင်းလဲသည့် လုပ်ဆောင်ချက် မဟုတ်ဘဲ ဒုတိယပိုင်းတွင် အသုံးပြုမည့် tools များကို ကြိုတင်ပြင်ဆင်ခြင်း ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "指定SDKの取得を開始または版を確認し、既存iOS環境の状態を先生へ伝えられる。",
+      "translation": "သတ်မှတ်ထားသော SDK ကို download စတင်ခြင်း သို့မဟုတ် version ကို စစ်ဆေးခြင်း ပြုလုပ်နိုင်ခဲ့ပြီး ရှိပြီးသား iOS ပတ်ဝန်းကျင် အခြေအနေကို ဆရာ့ထံ အသိပေးနိုင်ခဲ့သည်။"
+    },
+    {
+      "source": "STEP 11 · コマ7",
+      "translation": "STEP 11 · အတန်းချိန် 7"
+    },
+    {
+      "source": "提出に残るアレンジを作る",
+      "translation": "ပေးပို့မည့်အလုပ်တွင် ပါဝင်မည့် customize ပြုလုပ်မှုများကို ဖန်တီးခြင်း"
+    },
+    {
+      "source": "Monaca クラウド IDEへ戻り、自分の好きなものノートを仕上げます。既に扱った文字・色・初期データから変更箇所を選び、どんなものが好きで、なぜ好きなのかが伝わる内容にします。",
+      "translation": "Monaca クラウド IDE သို့ ပြန်သွားပြီး မိမိ၏ ကြိုက်နှစ်သက်ရာများ မှတ်စုကို အပြီးသတ်ပါ။ ယခင်က အသုံးပြုခဲ့သော စာသားများ၊ အရောင်များနှင့် initial data များထဲမှ ပြောင်းလဲမည့် နေရာများကို ရွေးချယ်ပြီး မည်သည့်အရာများကို ကြိုက်နှစ်သက်ကြောင်းနှင့် အဘယ်ကြောင့် ကြိုက်နှစ်သက်ရကြောင်း ပေါ်လွင်စေမည့် အကြောင်းအရာများ ဖြစ်စေပါ။"
+    },
+    {
+      "source": "確認方法",
+      "translation": "စစ်ဆေးနည်း"
+    },
+    {
+      "source": "<code>createInitialItems</code>の配列",
+      "translation": "<code>createInitialItems</code> ရှိ array"
+    },
+    {
+      "source": "最初に読める好きなものとその理由。",
+      "translation": "စတင်ချိန်တွင် ဖတ်ရှုနိုင်သော ကြိုက်နှစ်သက်သည့် အရာနှင့် အကြောင်းပြချက်။"
+    },
+    {
+      "source": "必要な保存内容を控えて初期化し、全件の詳細を開く。",
+      "translation": "လိုအပ်သော သိမ်းဆည်းထားသည့် အကြောင်းအရာများကို မှတ်သားထားပြီး reset လုပ်ကာ item အားလုံး၏ အသေးစိတ်ကို ဖွင့်ကြည့်ပါ။"
+    },
+    {
+      "source": "HTMLの見出し・案内文・入力例",
+      "translation": "HTML ရှိ ခေါင်းစဉ်များ၊ လမ်းညွှန်စာသားများနှင့် ဖြည့်စွက်နမူနာများ"
+    },
+    {
+      "source": "自分の題材が画面から伝わる。",
+      "translation": "မိမိ၏ အကြောင်းအရာကို screen ပေါ်မှ ရှင်းလင်းစွာ မြင်တွေ့နိုင်ခြင်း။"
+    },
+    {
+      "source": "入力画面を開き、迷わず入力できるか読む。",
+      "translation": "input screen ကို ဖွင့်ပြီး တွေဝေမှုမရှိဘဲ ရိုက်ထည့်နိုင်ခြင်း ရှိမရှိ ဖတ်ရှုစစ်ဆေးပါ။"
+    },
+    {
+      "source": "CSSの文字色・枠色・余白",
+      "translation": "CSS ရှိ စာသားအရောင်၊ border အရောင်နှင့် နေရာလွတ်"
+    },
+    {
+      "source": "カードと入力欄の印象。",
+      "translation": "card များနှင့် input field များ၏ အမြင်အာရုံခံစားမှု။"
+    },
+    {
+      "source": "長い日本語を入れて、文字が切れないか見る。",
+      "translation": "ရှည်လျားသော ဂျပန်စာသားများကို ရိုက်ထည့်ကြည့်ပြီး စာသားများ ပြတ်တောက်သွားခြင်း ရှိမရှိ စစ်ဆေးပါ။"
+    },
+    {
+      "source": "<strong>画面から追加して保存したデータは、公開URLへ含まれません。</strong> 先生が新しく取り込んだときに見えるアレンジは、ソースへ書きます。入力例として見せたい好きなものも、<code>createInitialItems</code>に書いて保存します。",
+      "translation": "<strong>screen ပေါ်မှ ထည့်သွင်းသိမ်းဆည်းထားသော data များသည် import URL တွင် ပါဝင်မည် မဟုတ်ပါ။</strong> ဆရာမှ အသစ် import လုပ်သည့်အခါ တွေ့မြင်ရမည့် customize ပြုလုပ်မှုများကို source code တွင် ရေးသားရပါမည်။ ဖြည့်စွက်နမူနာအဖြစ် ပြသလိုသော ကြိုက်နှစ်သက်သည့် အရာများကိုလည်း <code>createInitialItems</code> တွင် ရေးသားပြီး သိမ်းဆည်းပါ။"
+    },
+    {
+      "source": "ソースを変えても以前の保存内容が表示される場合はSTEP 09を確認します。保存キーを変えて見えなくする方法で済ませず、残す内容を控えてからアプリ内の初期化を使います。",
+      "translation": "source code ကို ပြောင်းလဲသော်လည်း ယခင်က သိမ်းဆည်းထားသော အကြောင်းအရာများ ဆက်လက်ပြသနေပါက STEP 09 ကို စစ်ဆေးပါ။ storage key ကို ပြောင်းလဲ၍ မမြင်ရအောင် ဖုံးကွယ်သည့်နည်းလမ်းဖြင့် မပြီးဆုံးစေဘဲ သိမ်းဆည်းထားလိုသော အချက်အလက်များကို မှတ်သားထားပြီးမှ app အတွင်းရှိ reset ကို အသုံးပြုပါ။"
+    },
+    {
+      "source": "JavaやSwiftでコードの初期値を変えることと、実行中に端末へ保存した内容を変えることは別です。公開URLで渡すのはソースなので、ブラウザの入力内容だけを変えても相手の初期画面には反映されません。",
+      "translation": "Java သို့မဟုတ် Swift တွင် code ၏ initial value များကို ပြောင်းလဲခြင်းနှင့် run နေစဉ် device ပေါ်တွင် သိမ်းဆည်းထားသော အကြောင်းအရာများကို ပြောင်းလဲခြင်းတို့သည် သီးခြားစီ ဖြစ်ပါသည်။ import URL ဖြင့် ပေးပို့သည်မှာ source code ဖြစ်သောကြောင့် browser ၏ input အချက်အလက်များကိုသာ ပြောင်းလဲခြင်းသည် တစ်ဖက်လူ၏ မူလ initial screen ပေါ်တွင် ထင်ဟပ်ပေါ်လွင်မည် မဟုတ်ပါ။"
+    },
+    {
+      "source": "自分の題材に合わせた変更をソースへ保存し、初期状態から確認できた。",
+      "translation": "မိမိ၏ အကြောင်းအရာနှင့် ကိုက်ညီသော ပြုပြင်ပြောင်းလဲမှုများကို source code သို့ သိမ်းဆည်းပြီး initial အခြေအနေမှ စတင်၍ စစ်ဆေးအတည်ပြုနိုင်ခဲ့သည်။"
+    },
+    {
+      "source": "STEP 12 · コマ7",
+      "translation": "STEP 12 · အတန်းချိန် 7"
+    },
+    {
+      "source": "操作と公開URLを確認する",
+      "translation": "လုပ်ဆောင်ချက်များနှင့် import URL ကို စစ်ဆေးခြင်း"
+    },
+    {
+      "source": "ソースの初期の内容が表示された状態から完成確認を始めます。必要な入力は内容を控えて、先生と確認してから初期化します。",
+      "translation": "source code ၏ မူလ initial အကြောင်းအရာများကို ပြသထားသည့် အခြေအနေမှ စတင်၍ ပြီးပြည့်စုံမှု စစ်ဆေးခြင်းကို စတင်ပါ။ လိုအပ်သော ထည့်သွင်းချက်များကို မှတ်သားထားပြီး ဆရာနှင့် စစ်ဆေးပြီးမှ reset လုပ်ပါ။"
+    },
+    {
+      "source": "一覧の各行から詳細へ進み、名前・種類・理由が一致することを確認します。",
+      "translation": "စာရင်း၏ row တစ်ခုချင်းစီမှ အသေးစိတ်သို့ သွားပြီး အမည်၊ အမျိုးအစားနှင့် အကြောင်းပြချက်တို့ ကိုက်ညီမှု ရှိမရှိ စစ်ဆေးပါ။"
+    },
+    {
+      "source": "追加画面で空欄を試し、同じ画面に案内が出ることを確認します。",
+      "translation": "add screen တွင် field များကို အလွတ်ထားကြည့်ပြီး တူညီသော screen ပေါ်တွင် လမ်းညွှန်စာသား ပေါ်မပေါ် စစ်ဆေးပါ။"
+    },
+    {
+      "source": "確認用の1件を追加し、成功の文・件数・詳細・再読み込み後の復元を確認します。",
+      "translation": "စစ်ဆေးရန်အတွက် item 1 ခု ထည့်သွင်းပြီး အောင်မြင်ကြောင်းပြ စာသား၊ အရေအတွက်၊ အသေးစိတ်နှင့် reload လုပ်ပြီးနောက် ပြန်လည်ရယူနိုင်မှုတို့ကို စစ်ဆေးပါ။"
+    },
+    {
+      "source": "初期化で <code>やめる</code> を選び、データが残ることを確かめます。必要な内容を控えた後に初期化し、ソースのデータへ戻します。",
+      "translation": "reset ပြုလုပ်ရာတွင် <code>やめる</code> (Cancel) ကို ရွေးချယ်ပြီး data များ ကျန်ရှိနေကြောင်း စစ်ဆေးပါ။ လိုအပ်သော အကြောင်းအရာများကို မှတ်သားပြီးနောက် reset လုပ်ကာ source code ရှိ data သို့ ပြန်လည်ထားရှိပါ။"
+    },
+    {
+      "source": "iPhone系・Android系のプレビューで入力・戻る・ボタンの見た目を比べます。比較用の <code>ons.platform.select(\"android\")</code> を有効にした場合は、最後にコメントへ戻します。",
+      "translation": "iPhone ပုံစံနှင့် Android ပုံစံ preview များတွင် input၊ back နှင့် ခလုတ်များ၏ အသွင်အပြင်ကို နှိုင်းယှဉ်ကြည့်ပါ။ နှိုင်းယှဉ်ရန်အတွက် <code>ons.platform.select(\"android\")</code> ကို enable လုပ်ခဲ့ပါက နောက်ဆုံးတွင် comment ပြန်လုပ်ပေးပါ။"
+    },
+    {
+      "source": "クラウド IDEの <code>プロジェクト → 公開…</code> を開き、自分の作品であることを確かめ、公開URLを発行します。",
+      "translation": "cloud IDE ၏ <code>プロジェクト → 公開…</code> (Project → Publish…) ကို ဖွင့်ပြီး မိမိ၏ လက်ရာဖြစ်ကြောင်း အတည်ပြုကာ import URL ကို ထုတ်ယူပါ။"
+    },
+    {
+      "source": "提出するのは <code>https://monaca.mobi/ja/directimport?pid=…</code> という形の、実際に発行されたURLです。クラウド IDEやプレビューのアドレス、先生の完成見本URLを代わりに貼りません。相手のMonacaへソースを取り込むためのURLです。",
+      "translation": "ပေးပို့ရမည့်အရာမှာ <code>https://monaca.mobi/ja/directimport?pid=…</code> ဟူသော ပုံစံဖြင့် အမှန်တကယ် ထုတ်ပေးထားသည့် URL ဖြစ်ပါသည်။ cloud IDE သို့မဟုတ် preview ၏ address၊ ဆရာ့၏ ပြီးပြည့်စုံသော နမူနာ URL များကို အစားထိုး မကူးထည့်ပါနှင့်။ ၎င်းသည် တစ်ဖက်လူ၏ Monaca ထဲသို့ source code ကို import လုပ်ရန်အတွက် URL ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "発行したURLを開き、対象のプロジェクトを確かめます。取り込みを確定するとコピーが増えるため、繰り返して枠を埋めないようにします。教員側で新しく取り込んだ状態の動作も確認します。",
+      "translation": "ထုတ်ယူထားသော URL ကို ဖွင့်ပြီး သက်ဆိုင်ရာ project ဖြစ်ကြောင်း စစ်ဆေးပါ။ import လုပ်ရန် အတည်ပြုလိုက်ပါက copy တစ်ခု တိုးလာမည်ဖြစ်သောကြောင့် ထပ်ခါတလဲလဲ ပြုလုပ်၍ slot များကို ပြည့်မသွားစေပါနှင့်။ ဆရာ့ဘက်မှ အသစ် import လုပ်ထားသော အခြေအနေတွင် အလုပ်လုပ်ပုံကိုလည်း စစ်ဆေးပါမည်။"
+    },
+    {
+      "source": "OSの見た目が変わっても入力・保存の処理は同じです。ネイティブアプリのビルド成果物を渡す方法と違い、ここではソースを相手の開発環境へコピーします。ブラウザの保存領域まで渡す操作ではありません。",
+      "translation": "OS ၏ အသွင်အပြင် ကွဲပြားသော်လည်း input နှင့် save လုပ်ဆောင်ချက်များသည် အတူတူပင် ဖြစ်ပါသည်။ native app ၏ build output ကို ပေးပို့သည့် နည်းလမ်းနှင့် မတူဘဲ ဤနေရာတွင် source code ကို တစ်ဖက်လူ၏ development environment ထဲသို့ copy ကူးယူခြင်း ဖြစ်ပါသည်။ browser ၏ storage ဧရိယာကိုပါ ပေးပို့သည့် လုပ်ဆောင်ချက် မဟုတ်ပါ။"
+    },
+    {
+      "source": "初期状態と追加後の操作を確認し、自分の作品の取り込み用公開URLを発行できた。",
+      "translation": "initial အခြေအနေနှင့် အသစ်ထည့်သွင်းပြီးနောက် လုပ်ဆောင်ချက်များကို စစ်ဆေးနိုင်ခဲ့ပြီး မိမိလက်ရာအတွက် import URL ကို ထုတ်ယူနိုင်ခဲ့သည်။"
+    },
+    {
+      "source": "STEP 13 · コマ7",
+      "translation": "STEP 13 · အတန်းချိန် 7"
+    },
+    {
+      "source": "提出と準備状況を確認する",
+      "translation": "ပေးပို့ခြင်းနှင့် ပြင်ဆင်မှုအခြေအနေကို စစ်ဆေးခြင်း"
+    },
+    {
+      "source": "先生が授業中に案内する提出先・締め切りを確認し、自分の好きなものノートで発行した公開URLを提出します。まだ案内がない場合は、URLを控えて先生へ確認します。",
+      "translation": "ဆရာမှ အတန်းချိန်အတွင်း ကြေညာမည့် ပေးပို့ရမည့်နေရာနှင့် သတ်မှတ်ရက်ကို စစ်ဆေးပြီး မိမိ၏ ကြိုက်နှစ်သက်ရာများ မှတ်စုအတွက် ထုတ်ယူထားသော import URL ကို ပေးပို့ပါ။ ကြေညာချက် မရှိသေးပါက URL ကို မှတ်သားထားပြီး ဆရာ့ထံ မေးမြန်းစစ်ဆေးပါ။"
+    },
+    {
+      "source": "通常版MonacaのFreeプランではZIPを学生の提出物にしません。先生は公開URLから取り込み、初期データと操作を確認します。公開中の自分のプロジェクトは提出後に削除しません。",
+      "translation": "standard Monaca ၏ Free plan တွင် ကျောင်းသားများ၏ ပေးပို့မှုအဖြစ် ZIP ကို အသုံးမပြုပါ။ ဆရာသည် import URL မှတစ်ဆင့် import လုပ်ပြီး initial data နှင့် လုပ်ဆောင်ချက်များကို စစ်ဆေးပါမည်။ publish လုပ်ထားသော မိမိ၏ project ကို ပေးပို့ပြီးနောက် ဖျက်ပစ်ခြင်း မပြုလုပ်ပါနှင့်။"
+    },
+    {
+      "source": "Flutter準備のタブへ戻り、取得が終わったか、SDKの版、<code>flutter doctor</code>で止まっている項目を確認します。終わっていない項目はその場で先生へ伝え、コマ8へ引き継ぎます。授業外で終わらせることを条件にはしません。",
+      "translation": "Flutter ပြင်ဆင်မှု tab သို့ ပြန်သွားပြီး download ပြီးစီးမှု ရှိမရှိ၊ SDK version နှင့် <code>flutter doctor</code> တွင် ရပ်တန့်နေသော အချက်များကို စစ်ဆေးပါ။ မပြီးသေးသော အချက်များကို ချက်ချင်း ဆရာ့ထံ အသိပေးပြီး အတန်းချိန် 8 သို့ လက်ဆင့်ကမ်းပါ။ အတန်းပြင်ပတွင် အပြီးလုပ်ဆောင်ရန် မသတ်မှတ်ထားပါ။"
+    },
+    {
+      "source": "ソースを共有する提出と、端末に保存したデータを見せることを区別します。Android／iOSの実行環境を確認するときと同様に、準備済みの項目とまだ使えない項目を具体的に記録します。",
+      "translation": "source code ကို မျှဝေ၍ ပေးပို့ခြင်းနှင့် device တွင် သိမ်းဆည်းထားသော data ကို ပြသခြင်းတို့ကို ခွဲခြားမှတ်သားပါ။ Android/iOS runtime environment ကို စစ်ဆေးသည့်နည်းတူ ပြင်ဆင်ပြီးသောအချက်များနှင့် အသုံးမပြုနိုင်သေးသော အချက်များကို တိကျစွာ မှတ်တမ်းတင်ပါ။"
+    },
+    {
+      "source": "指定先へ自分の公開URLを提出し、Flutter準備の状態も先生へ伝えた。",
+      "translation": "သတ်မှတ်ထားသော နေရာသို့ မိမိ၏ import URL ကို ပေးပို့ခဲ့ပြီး Flutter ပြင်ဆင်မှု အခြေအနေကိုလည်း ဆရာ့ထံ အသိပေးနိုင်ခဲ့သည်။"
+    },
+    {
+      "source": "STEP 14 · コマ7",
+      "translation": "STEP 14 · အတန်းချိန် 7"
+    },
+    {
+      "source": "アレンジできる場所を確かめる",
+      "translation": "customize ပြုလုပ်နိုင်သော နေရာများကို စစ်ဆေးခြင်း"
+    },
+    {
+      "source": "最後に提出したソースを見ながら、次の3点を確かめます。",
+      "translation": "နောက်ဆုံးအနေဖြင့် ပေးပို့ထားသော source code ကို ကြည့်ရှုရင်း အောက်ပါအချက် 3 ချက်ကို စစ်ဆေးကြပါစို့။"
+    },
+    {
+      "source": "どのファイルの、どの文字・色・初期データを変更したか。",
+      "translation": "မည်သည့် file ၏ မည်သည့်စာသား၊ အရောင်နှင့် initial data ကို ပြောင်းလဲခဲ့သနည်း။"
+    },
+    {
+      "source": "その変更が一覧・入力・詳細のどこに現れるか。",
+      "translation": "ထိုအပြောင်းအလဲသည် စာရင်း၊ input နှင့် အသေးစိတ်တို့အနက် မည်သည့်နေရာတွင် ပေါ်လာသနည်း။"
+    },
+    {
+      "source": "入力した保存データがない相手にも、アレンジが伝わるか。",
+      "translation": "မိမိ ရိုက်ထည့်ထားသော သိမ်းဆည်းထားသည့် data မရှိသော အခြားသူထံသို့လည်း customize ပြုလုပ်မှုသည် ရှင်းလင်းစွာ ပေါ်လွင်ပါသလား။"
+    },
+    {
+      "source": "余裕があれば、既に扱った範囲で記入例を分かりやすくしたり、余白を調整したりします。いまある画面で、自分の「好き」が伝わる状態を確かめましょう。変更したら保存し、一覧・追加・詳細・再読み込みを確認してから公開内容を確かめます。",
+      "translation": "အချိန်ရပါက ယခင်က လေ့လာခဲ့သော အတိုင်းအတာအတွင်း ဖြည့်စွက်နမူနာများကို ပိုမိုရှင်းလင်းစေခြင်း သို့မဟုတ် နေရာလွတ်များကို ချိန်ညှိခြင်းတို့ ပြုလုပ်ပါ။ ယခုရှိနေသော screen ပေါ်တွင် မိမိ၏ \"ကြိုက်နှစ်သက်မှု\" ပေါ်လွင်နေသော အခြေအနေကို စစ်ဆေးပါ။ ပြောင်းလဲပြီးပါက သိမ်းဆည်းပြီး စာရင်း၊ အသစ်ထည့်ခြင်း၊ အသေးစိတ်နှင့် reload လုပ်ခြင်းတို့ကို စစ်ဆေးပြီးမှ publish လုပ်ထားသော အကြောင်းအရာကို စစ်ဆေးအတည်ပြုပါ။"
+    },
+    {
+      "source": "全コードは見本との比較用です。自分の変更を消して見本に戻す必要はありません。動かなくなった部分や、変更した場所と結果の関係を確かめるために使います。",
+      "translation": "code အပြည့်အစုံသည် နမူနာနှင့် နှိုင်းယှဉ်ရန်အတွက် ဖြစ်ပါသည်။ မိမိ ပြုပြင်ထားသည်များကို ဖျက်ပစ်ပြီး နမူနာအတိုင်း ပြန်လည်ပြောင်းလဲရန် မလိုအပ်ပါ။ အလုပ်မလုပ်တော့သော အစိတ်အပိုင်းများ သို့မဟုတ် ပြောင်းလဲခဲ့သော နေရာနှင့် ရလဒ်တို့၏ ဆက်နွှယ်မှုကို စစ်ဆေးရန်အတွက် အသုံးပြုပါ။"
+    },
+    {
+      "source": "HTML・CSS・JavaScriptの役割分担はWeb基礎と同じで、変更した場所はファイルの種類から見つけられます。保存があるアプリでは、ソースの初期値と保存値の両方を見ます。<code>SharedPreferences</code>／<code>UserDefaults</code>を使うアプリで、コードに書いた初期値と端末に残る保存値が別にあるのと同じです。",
+      "translation": "HTML, CSS နှင့် JavaScript တို့၏ အခန်းကဏ္ဍ ခွဲဝေမှုသည် Web Basics နှင့် အတူတူပင်ဖြစ်ပြီး ပြောင်းလဲခဲ့သော နေရာကို file အမျိုးအစားအလိုက် ရှာဖွေနိုင်ပါသည်။ သိမ်းဆည်းမှုပါဝင်သော app တွင် source code ရှိ initial value နှင့် သိမ်းဆည်းထားသော value နှစ်ခုစလုံးကို ကြည့်ရှုရပါမည်။ ၎င်းသည် <code>SharedPreferences</code>/<code>UserDefaults</code> ကို အသုံးပြုသော app များတွင် code ၌ ရေးသားထားသော initial value နှင့် device တွင် ကျန်ရှိနေသော saved value တို့ သီးခြားစီ ရှိနေခြင်းနှင့် အတူတူပင် ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "自分の変更箇所が画面に現れ、初期状態からも伝わる作品にできた。",
+      "translation": "မိမိ၏ ပြောင်းလဲထားသော နေရာများသည် screen ပေါ်တွင် ပေါ်လာပြီး initial အခြေအနေမှပင် ရှင်းလင်းစွာ ပေါ်လွင်သော လက်ရာတစ်ခုကို ဖန်တီးနိုင်ခဲ့သည်။"
+    },
+    {
+      "source": "見えること",
+      "translation": "ဖြစ်ပျက်သည့်အရာ"
+    },
+    {
+      "source": "確認すること",
+      "translation": "စစ်ဆေးရမည့်အရာ"
+    },
+    {
+      "source": "入力画面が開かない",
+      "translation": "input screen ဖွင့်၍မရခြင်း"
+    },
+    {
+      "source": "3ファイルが同じSTEPか、保存したかを確認。読込失敗の表示が出ていればSTEP 08へ。",
+      "translation": "file 3 ခုသည် တူညီသော STEP မှ ဖြစ်မဖြစ်နှင့် သိမ်းဆည်းထားခြင်း ရှိမရှိ စစ်ဆေးပါ။ ဖတ်ရှုမှု မအောင်မြင်ကြောင်း ပြသနေပါက STEP 08 သို့ သွားပါ။"
+    },
+    {
+      "source": "追加した文字が消えた",
+      "translation": "ထည့်သွင်းထားသော စာသားများ ပျောက်သွားခြင်း"
+    },
+    {
+      "source": "コマ5では未保存が正常。コマ6以降は保存成功の文、同じブラウザ・同じプレビューかを確認。",
+      "translation": "အတန်းချိန် 5 တွင် မသိမ်းဆည်းရသေးခြင်းမှာ ပုံမှန်ဖြစ်ပါသည်။ အတန်းချိန် 6 မှစတင်၍ သိမ်းဆည်းမှု အောင်မြင်သည့် စာသားနှင့် တူညီသော browser၊ တူညီသော preview ဖြစ်မဖြစ် စစ်ဆေးပါ။"
+    },
+    {
+      "source": "初期データを書き換えても古い内容が出る",
+      "translation": "initial data ကို ပြင်ဆင်ရေးသားသော်လည်း အကြောင်းအရာ အဟောင်းများ ပေါ်နေခြင်း"
+    },
+    {
+      "source": "保存データが優先される。必要な内容を控えたうえで、アプリ内の「初期の内容に戻す」を使う。",
+      "translation": "သိမ်းဆည်းထားသော data ကို ဦးစားပေးပါသည်။ လိုအပ်သော အကြောင်းအရာများကို မှတ်သားထားပြီးနောက် app အတွင်းရှိ 「初期の内容に戻す」 (Restore initial contents) ကို အသုံးပြုပါ။"
+    },
+    {
+      "source": "保存・読込失敗と出る",
+      "translation": "သိမ်းဆည်းခြင်း သို့မဟုတ် ဖတ်ယူခြင်း မအောင်မြင်ကြောင်း ပြသနေခြင်း"
+    },
+    {
+      "source": "その表示を先生へ見せる。読込に失敗したデータは自動で上書きしない。ブラウザ設定を無理に変更しない。",
+      "translation": "ထိုပြသချက်ကို ဆရာ့ထံ ပြသပါ။ ဖတ်ရှု၍ မရသော data များကို အလိုအလျောက် overwrite မလုပ်ပါနှင့်။ browser ဆက်တင်များကို အတင်းအကျပ် ပြောင်းလဲခြင်း မပြုလုပ်ပါနှင့်။"
+    },
+    {
+      "source": "提出URLが先生の見本と同じ",
+      "translation": "ပေးပို့သည့် URL သည် ဆရာ့၏ နမူနာနှင့် တူညီနေခြင်း"
+    },
+    {
+      "source": "自分のプロジェクトで発行したURLか確認。クラウド IDEのアドレスやプレビューURLでは提出しない。",
+      "translation": "မိမိ၏ project မှ ထုတ်ယူထားသော URL ဟုတ်မဟုတ် စစ်ဆေးပါ။ cloud IDE ၏ address သို့မဟုတ် preview URL ဖြင့် မပေးပို့ပါနှင့်။"
+    },
+    {
+      "source": "JEC / ハイブリッドアプリ開発技法 · M02OshiSave",
+      "translation": "JEC / Hybrid App Development · M02OshiSave"
+    }
+  ]
+}

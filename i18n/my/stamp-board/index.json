@@ -1,0 +1,946 @@
+{
+  "source": "docs/stamp-board/index.html",
+  "language": "my",
+  "entries": [
+    {
+      "source": "F01 スタンプ帳：一覧・状態・詳細 | ハイブリッドアプリ開発技法",
+      "translation": "F01 Stamp board: list, state နှင့် detail | Hybrid App Development"
+    },
+    {
+      "source": "本文へ移動",
+      "translation": "အဓိကအကြောင်းအရာသို့ သွားရန်"
+    },
+    {
+      "source": "JEC / ハイブリッドアプリ開発技法",
+      "translation": "JEC / Hybrid App Development"
+    },
+    {
+      "source": "0 / 20 ステップ確認済み",
+      "translation": "အဆင့် 0 / 20 စစ်ဆေးပြီး"
+    },
+    {
+      "source": "単元の進み具合",
+      "translation": "ယူနစ်၏ တိုးတက်မှု"
+    },
+    {
+      "source": "コマごとの目次",
+      "translation": "အတန်းချိန်အလိုက် မာတိကာ"
+    },
+    {
+      "source": "コマ8 · STEP 00〜04",
+      "translation": "အတန်းချိန် 8 · STEP 00–04"
+    },
+    {
+      "source": "00 道具と作業フォルダを用意する",
+      "translation": "00 ကိရိယာများနှင့် အလုပ်လုပ်မည့် folder ကို ပြင်ဆင်ရန်"
+    },
+    {
+      "source": "01 空のアプリを起動する",
+      "translation": "01 အလွတ် app ကို စတင် run ရန်"
+    },
+    {
+      "source": "02 Widgetの組み合わせで画面を書く",
+      "translation": "02 Widget များကို ပေါင်းစပ်ပြီး screen တည်ဆောက်ရန်"
+    },
+    {
+      "source": "03 保存してホットリロードする",
+      "translation": "03 သိမ်းဆည်းပြီး hot reload ပြုလုပ်ရန်"
+    },
+    {
+      "source": "04 文字と大きさをアレンジする",
+      "translation": "04 စာသားနှင့် အရွယ်အစားကို စိတ်ကြိုက်ပြောင်းလဲရန်"
+    },
+    {
+      "source": "コマ9 · STEP 05〜09",
+      "translation": "အတန်းချိန် 9 · STEP 05–09"
+    },
+    {
+      "source": "05 習慣を1枚のカードにする",
+      "translation": "05 အလေ့အကျင့်ကို card တစ်ခု ပြုလုပ်ရန်"
+    },
+    {
+      "source": "06 余白と縦横の並びを読む",
+      "translation": "06 Margin နှင့် ဒေါင်လိုက်၊ အလျားလိုက် စီစဉ်မှုကို နားလည်ရန်"
+    },
+    {
+      "source": "07 データから一覧を作る",
+      "translation": "07 Data မှ list တစ်ခု ဖန်တီးရန်"
+    },
+    {
+      "source": "08 配色と表示をそろえる",
+      "translation": "08 အရောင်နှင့် ပြသမှုကို ညှိယူရန်"
+    },
+    {
+      "source": "09 カードの題材をアレンジする",
+      "translation": "09 Card ၏ အကြောင်းအရာကို စိတ်ကြိုက်ပြောင်းလဲရန်"
+    },
+    {
+      "source": "コマ10 · STEP 10〜14",
+      "translation": "အတန်းချိန် 10 · STEP 10–14"
+    },
+    {
+      "source": "10 回数と画面の関係を読む",
+      "translation": "10 အကြိမ်အရေအတွက်နှင့် screen ၏ ဆက်စပ်မှုကို နားလည်ရန်"
+    },
+    {
+      "source": "11 setStateでスタンプを増やす",
+      "translation": "11 setState ဖြင့် stamp အရေအတွက် တိုးရန်"
+    },
+    {
+      "source": "12 合計とマークを値から作る",
+      "translation": "12 တန်ဖိုးမှ စုစုပေါင်းနှင့် mark ကို ဖန်တီးရန်"
+    },
+    {
+      "source": "13 上限と戻す操作を確かめる",
+      "translation": "13 အများဆုံးကန့်သတ်ချက်နှင့် ပြန်ပြင်သည့် လုပ်ဆောင်ချက်ကို စစ်ဆေးရန်"
+    },
+    {
+      "source": "14 回数と見た目をアレンジする",
+      "translation": "14 အကြိမ်အရေအတွက်နှင့် ပုံပန်းသဏ္ဌာန်ကို စိတ်ကြိုက်ပြောင်းလဲရန်"
+    },
+    {
+      "source": "コマ11 · STEP 15〜19",
+      "translation": "အတန်းချိန် 11 · STEP 15–19"
+    },
+    {
+      "source": "15 詳細へ渡す値を決める",
+      "translation": "15 Detail သို့ ပေးပို့မည့် တန်ဖိုးကို သတ်မှတ်ရန်"
+    },
+    {
+      "source": "16 Navigatorで詳細を開く",
+      "translation": "16 Navigator ဖြင့် detail ကို ဖွင့်ရန်"
+    },
+    {
+      "source": "17 受け取った習慣を表示する",
+      "translation": "17 လက်ခံရရှိသော အလေ့အကျင့်ကို ပြသရန်"
+    },
+    {
+      "source": "18 一覧と詳細を通して確かめる",
+      "translation": "18 List နှင့် detail တစ်လျှောက် စစ်ဆေးရန်"
+    },
+    {
+      "source": "19 アレンジできる場所を確かめる",
+      "translation": "19 စိတ်ကြိုက်ပြောင်းလဲနိုင်သည့် နေရာများကို စစ်ဆေးရန်"
+    },
+    {
+      "source": "困ったとき",
+      "translation": "အခက်အခဲရှိသည့်အခါ"
+    },
+    {
+      "source": "完成プロジェクトを開く",
+      "translation": "ပြီးစီးပြီးသော project ကို ဖွင့်ရန်"
+    },
+    {
+      "source": "共通：はじめの準備",
+      "translation": "အထွေထွေ: အတန်းမစမီ ပြင်ဆင်ရန်"
+    },
+    {
+      "source": "コマ8〜11 · 各90分",
+      "translation": "အတန်းချိန် 8–11 · တစ်ချိန်လျှင် 90 မိနစ်"
+    },
+    {
+      "source": "小さな「できた」を、スタンプに。",
+      "translation": "သေးငယ်သော “လုပ်ဆောင်နိုင်မှု” များကို stamp အဖြစ်သို့။"
+    },
+    {
+      "source": "自分が続けたい習慣をカードにし、できたときにスタンプを押すアプリを作ります。画面の部品を一つずつ変更する方法と、値から画面を組み立てる方法の違いを確かめましょう。",
+      "translation": "မိမိ ဆက်လက်လုပ်ဆောင်လိုသော အလေ့အကျင့်များကို card အဖြစ် ပြုလုပ်ပြီး ပြီးမြောက်သည့်အခါ stamp နှိပ်နိုင်သည့် app ကို တည်ဆောက်မည် ဖြစ်ပါသည်။ Screen အစိတ်အပိုင်းများကို တစ်ခုချင်းစီ ပြောင်းလဲသည့်နည်းလမ်းနှင့် တန်ဖိုးများမှ screen ကို တည်ဆောက်သည့်နည်းလမ်းတို့၏ ကွာခြားချက်ကို လေ့လာကြပါစို့။"
+    },
+    {
+      "source": "完成見本は<code>F01StampBoard</code>です。この教科書だけで、新規作成から一覧・スタンプ・詳細の実行まで進められます。Web基礎とJava／Swiftの知識を比べながら読みます。",
+      "translation": "ပြီးစီးပြီးသော နမူနာမှာ <code>F01StampBoard</code> ဖြစ်ပါသည်။ ဤသင်ခန်းစာစာအုပ်ဖြင့်သာ အသစ်ဖန်တီးခြင်းမှစတင်၍ list၊ stamp နှင့် detail များကို run ခြင်းအထိ ဆောင်ရွက်နိုင်ပါသည်။ Web အခြေခံနှင့် Java / Swift အသိပညာများကို နှိုင်းယှဉ်ရင်း ဖတ်ရှုပါ။"
+    },
+    {
+      "source": "STEP 00 · コマ8",
+      "translation": "STEP 00 · အတန်းချိန် 8"
+    },
+    {
+      "source": "道具と作業フォルダを用意する",
+      "translation": "ကိရိယာများနှင့် အလုပ်လုပ်မည့် folder ကို ပြင်ဆင်ရန်"
+    },
+    {
+      "source": "Visual Studio Codeを使います。最初の25分でFlutter 3.47.5 / Dart 3.13.4、Flutter拡張、iOS実行環境を確認します。<a1>共通資料のSTEP 4〜7</a1>を開き、不足分は授業中に用意してください。学生のMacはApple Siliconです。既存のXcodeで使えるiOSランタイムは再利用し、全員に再取得は求めません。",
+      "translation": "Visual Studio Code ကို အသုံးပြုပါမည်။ ပထမ 25 မိနစ်တွင် Flutter 3.47.5 / Dart 3.13.4၊ Flutter extension နှင့် iOS run ပတ်ဝန်းကျင်ကို စစ်ဆေးပါမည်။ <a1>အထွေထွေလမ်းညွှန်၏ STEP 4–7</a1> ကို ဖွင့်ပြီး လိုအပ်သည်များကို အတန်းချိန်အတွင်း ပြင်ဆင်ပါ။ ကျောင်းသားများ၏ Mac များမှာ Apple Silicon ဖြစ်ပါသည်။ လက်ရှိ Xcode တွင် သုံးနိုင်သော iOS runtime များကို ပြန်လည်အသုံးပြုပြီး အားလုံးကို အသစ်ပြန်လည်ရယူရန် မတောင်းဆိုပါ။"
+    },
+    {
+      "source": "<code>flutter --version</code>と<code>flutter doctor -v</code>を確認します。この単元はiOSで始めるため、Android欄の課題は先生と切り分けます。取得が終わらないときは授業中に相談し、自宅で終わらせることを条件にはしません。",
+      "translation": "<code>flutter --version</code> နှင့် <code>flutter doctor -v</code> ကို စစ်ဆေးပါ။ ဤယူနစ်ကို iOS ဖြင့် စတင်မည်ဖြစ်သောကြောင့် Android အပိုင်းရှိ ပြဿနာများကို ဆရာနှင့်အတူ ခွဲခြားသတ်မှတ်ပါ။ ဒေါင်းလုဒ်ဆွဲခြင်း မပြီးဆုံးပါက အတန်းချိန်အတွင်း တိုင်ပင်ဆွေးနွေးပါ၊ အိမ်တွင် ပြီးအောင်လုပ်ရန် မလိုအပ်ပါ။"
+    },
+    {
+      "source": "macOSのTerminalで、制作フォルダを用意して次を実行します。同名フォルダが既にある場合は上書きせず、内容を先生と確認します。<code>mkdir -p</code>は親フォルダが既にあっても使えます。",
+      "translation": "macOS ၏ Terminal တွင် project folder ကို ပြင်ဆင်ပြီး အောက်ပါတို့ကို run ပါ။ အမည်တူ folder ရှိနှင့်ပြီးဖြစ်ပါက overwrite မလုပ်ဘဲ ပါဝင်သည့်အရာများကို ဆရာနှင့်အတူ စစ်ဆေးပါ။ မိဘ folder ရှိပြီးဖြစ်ပါကလည်း <code>mkdir -p</code> ကို အသုံးပြုနိုင်ပါသည်။"
+    },
+    {
+      "source": "<code>--empty</code>は空の画面、<code>--platforms</code>は対象OSを選ぶ指定です。フォルダ名は<code>F01StampBoard</code>、Dartのパッケージ名は小文字の<code>f01_stamp_board</code>に分けます。<code>--org</code>は識別子の先頭で、今回のAndroidアプリIDは<code>jp.ac.jec.f01_stamp_board</code>です。",
+      "translation": "<code>--empty</code> သည် အလွတ် screen ဖြစ်ပြီး <code>--platforms</code> သည် သက်ဆိုင်ရာ OS ကို ရွေးချယ်သည့် သတ်မှတ်ချက် ဖြစ်ပါသည်။ Folder အမည်မှာ <code>F01StampBoard</code> ဖြစ်ပြီး Dart ၏ package အမည်ကို စာလုံးအသေး <code>f01_stamp_board</code> အဖြစ် ခွဲခြားထားပါသည်။ <code>--org</code> သည် identifier ၏ အစဖြစ်ပြီး ယခု Android app ID မှာ <code>jp.ac.jec.f01_stamp_board</code> ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "Javaの<code>import</code>と同様に、使う型を読み込みます。Flutter SDKとアプリのフォルダは別物です。Android StudioやXcodeで作成したプロジェクトを開くように、次は生成した<code>F01StampBoard</code>を開きます。",
+      "translation": "Java ၏ <code>import</code> ကဲ့သို့ပင် အသုံးပြုမည့် type များကို import လုပ်ပါသည်။ Flutter SDK နှင့် app ၏ folder သည် သီးခြားစီ ဖြစ်ပါသည်။ Android Studio သို့မဟုတ် Xcode တွင် ဖန်တီးထားသော project များကို ဖွင့်သကဲ့သို့ပင် နောက်တစ်ဆင့်အနေဖြင့် ထုတ်လုပ်ထားသော <code>F01StampBoard</code> ကို ဖွင့်ပါ။"
+    },
+    {
+      "source": "SDKの版と準備状況を確認し、空のプロジェクトを作れた。",
+      "translation": "SDK ၏ ဗားရှင်းနှင့် ပြင်ဆင်မှုအခြေအနေကို စစ်ဆေးပြီး အလွတ် project ကို ဖန်တီးနိုင်ခဲ့သည်။"
+    },
+    {
+      "source": "STEP 01 · コマ8",
+      "translation": "STEP 01 · အတန်းချိန် 8"
+    },
+    {
+      "source": "空のアプリを起動する",
+      "translation": "အလွတ် app ကို စတင် run ရန်"
+    },
+    {
+      "source": "Visual Studio Codeの<code>File &gt; Open Folder…</code>で<code>F01StampBoard</code>を選びます。<code>pubspec.yaml</code>が直接見えるフォルダです。",
+      "translation": "Visual Studio Code ၏ <code>File &gt; Open Folder…</code> တွင် <code>F01StampBoard</code> ကို ရွေးချယ်ပါ။ ၎င်းသည် <code>pubspec.yaml</code> ကို တိုက်ရိုက်တွေ့မြင်နိုင်သော folder ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "<code>Terminal &gt; New Terminal</code>を開き、<code>flutter pub get</code>を実行します。",
+      "translation": "<code>Terminal &gt; New Terminal</code> ကို ဖွင့်ပြီး <code>flutter pub get</code> ကို run ပါ။"
+    },
+    {
+      "source": "<code>Command Palette</code>を開き、<code>Flutter: Launch Emulator</code>から既存のiOSシミュレータを選びます。",
+      "translation": "<code>Command Palette</code> ကို ဖွင့်ပြီး <code>Flutter: Launch Emulator</code> မှ လက်ရှိ iOS simulator ကို ရွေးချယ်ပါ။"
+    },
+    {
+      "source": "<code>flutter devices</code>に表示されたiOS端末のIDを使って<code>flutter run -d 端末ID</code>を実行します。端末IDという文字のまま実行しません。",
+      "translation": "<code>flutter devices</code> တွင် ပြသထားသော iOS စက်၏ ID ကို အသုံးပြု၍ <code>flutter run -d 端末ID</code> ကို run ပါ။ 端末ID (စက် ID) ဟူသော စာသားအတိုင်း မ run ပါနှင့်။"
+    },
+    {
+      "source": "<code>flutter devices</code>は一覧表示で、端末を起動するコマンドではありません。実行が完了すると白い画面の中央にHello World!が出ます。ビルドの取得待ちは先生へ状況を伝え、同じコマンドを重ねて実行しません。",
+      "translation": "<code>flutter devices</code> သည် စာရင်းပြသခြင်းသာ ဖြစ်ပြီး စက်ကို စတင် run သည့် command မဟုတ်ပါ။ Run ခြင်း ပြီးဆုံးပါက အဖြူရောင် screen ၏ အလယ်တွင် Hello World! ပေါ်လာမည် ဖြစ်ပါသည်။ Build ဒေါင်းလုဒ်စောင့်ဆိုင်းနေရပါက ဆရာ့ထံ အခြေအနေကို အသိပေးပါ၊ ထို command ကို ထပ်ခါတလဲလဲ မ run ပါနှင့်။"
+    },
+    {
+      "source": "<code>lib/main.dart</code>が画面の入口です。<code>main</code>から<code>runApp</code>へ<code>MainApp</code>を渡し、<code>MainApp</code>の<code>build</code>が<code>MaterialApp</code>と<code>Scaffold</code>を返します。<code>android/</code>と<code>ios/</code>は起動の土台で、この単元では直接編集しません。",
+      "translation": "<code>lib/main.dart</code> သည် screen ၏ အဝင်ပေါက် ဖြစ်ပါသည်။ <code>main</code> မှ <code>runApp</code> သို့ <code>MainApp</code> ကို ပေးပို့ပြီး <code>MainApp</code> ၏ <code>build</code> က <code>MaterialApp</code> နှင့် <code>Scaffold</code> ကို return ပြန်ပေးပါသည်။ <code>android/</code> နှင့် <code>ios/</code> တို့သည် launch လုပ်ရန် အခြေခံဖြစ်ပြီး ဤယူနစ်တွင် တိုက်ရိုက် ပြင်ဆင်မည် မဟုတ်ပါ။"
+    },
+    {
+      "source": "<code>pubspec.yaml</code>の<code>dev_dependencies</code>にある<code>flutter_test:</code>と、その直下の<code>sdk: flutter</code>の2行は使わないため除きます。<code>dependencies</code>側のFlutter SDKは残します。<code>test/</code>が生成されていた場合だけ、そのひな形も除きます。<code>flutter_lints</code>は残し、もう一度<code>flutter pub get</code>を実行します。",
+      "translation": "အသုံးမပြုသောကြောင့် <code>pubspec.yaml</code> ၏ <code>dev_dependencies</code> တွင်ရှိသော <code>flutter_test:</code> နှင့် ၎င်း၏အောက်တည့်တည့်ရှိ <code>sdk: flutter</code> စာကြောင်း 2 ကြောင်းကို ဖယ်ရှားပါ။ <code>dependencies</code> ဘက်ရှိ Flutter SDK ကို ချန်ထားပါ။ <code>test/</code> ကို ထုတ်လုပ်ထားပါက ထို template ကိုလည်း ဖယ်ရှားပါ။ <code>flutter_lints</code> ကို ချန်ထားပြီး <code>flutter pub get</code> ကို နောက်တစ်ကြိမ် run ပါ။"
+    },
+    {
+      "source": "Dartも<code>main</code>が開始点です。<code>runApp</code>に最上位のWidgetを渡すところがFlutter固有です。<code>const</code>は実行時に変化しない設定の生成に使います。<code>class</code>と<code>extends</code>はJavaの継承に対応し、<code>super.key</code>は親へ識別用の引数を渡す省略形です。",
+      "translation": "Dart တွင်လည်း <code>main</code> သည် စတင်သည့်နေရာ ဖြစ်ပါသည်။ အမြင့်ဆုံးအဆင့် Widget ကို <code>runApp</code> သို့ ပေးပို့ခြင်းသည် Flutter ၏ သီးသန့်လုပ်ဆောင်ချက် ဖြစ်ပါသည်။ <code>const</code> ကို runtime တွင် မပြောင်းလဲသော setting များကို ဖန်တီးရာတွင် အသုံးပြုပါသည်။ <code>class</code> နှင့် <code>extends</code> သည် Java ၏ inheritance နှင့် သက်ဆိုင်ပြီး <code>super.key</code> သည် မိဘထံသို့ သတ်မှတ်ခွဲခြားရန် argument ပေးပို့သည့် အတိုကောက်ပုံစံ ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "このSTEPの全コード（照合・合流用）",
+      "translation": "ဤ STEP ၏ ကုဒ်အပြည့်အစုံ (တိုက်စစ်ရန် သို့မဟုတ် ကြားမှ ပူးပေါင်းရန်)"
+    },
+    {
+      "source": "lib/main.dart · 全文",
+      "translation": "lib/main.dart · အပြည့်အစုံ"
+    },
+    {
+      "source": "iOSでHello World!が表示され、入口のファイルを開けた。",
+      "translation": "iOS တွင် Hello World! ကို ပြသနိုင်ခဲ့ပြီး အဝင်ဖိုင်ကို ဖွင့်နိုင်ခဲ့သည်။"
+    },
+    {
+      "source": "STEP 02 · コマ8",
+      "translation": "STEP 02 · အတန်းချိန် 8"
+    },
+    {
+      "source": "Widgetの組み合わせで画面を書く",
+      "translation": "Widget များကို ပေါင်းစပ်ပြီး screen တည်ဆောက်ရန်"
+    },
+    {
+      "source": "この単元の新概念は<strong>宣言的UI</strong>です。現在の値に対応する画面の構成を<code>build</code>で返します。既存の<code>View</code>やDOMを順番に探して書き換えるのではなく、「この値なら、この部品を置く」と記述します。",
+      "translation": "ဤယူနစ်၏ အယူအဆအသစ်မှာ <strong>declarative UI</strong> (宣言的UI) ဖြစ်ပါသည်။ လက်ရှိတန်ဖိုးများနှင့် ကိုက်ညီသော screen ဖွဲ့စည်းပုံကို <code>build</code> ဖြင့် return ပြန်ပေးပါသည်။ ရှိပြီးသား <code>View</code> သို့မဟုတ် DOM များကို အစဉ်လိုက် ရှာဖွေပြီး ပြန်ရေးမည့်အစား “ဤတန်ဖိုးဖြစ်ပါက ဤအစိတ်အပိုင်းကို ထားရှိမည်” ဟု ရေးသားဖော်ပြပါသည်။"
+    },
+    {
+      "source": "<code>lib/main.dart</code>をこのSTEPの全文へ更新します。<code>MaterialApp</code>はアプリの設定、<code>Scaffold</code>は画面の基本枠、<code>SafeArea</code>はOSの表示領域を避ける余白、<code>Center</code>は中央配置、<code>Text</code>は文字を担当します。<code>child:</code>は1つのWidget、後で使う<code>children:</code>は複数のWidgetのリストです。<code>MaterialApp</code>に加えた<code>debugShowCheckedModeBanner: false</code>は、STEP 01で画面の右上に出ていたDEBUGの帯を消す設定です。帯はデバッグ実行中を示す目印で、アプリの動きには関係しません。",
+      "translation": "<code>lib/main.dart</code> ကို ဤ STEP ၏ ကုဒ်အပြည့်အစုံဖြင့် update လုပ်ပါ။ <code>MaterialApp</code> သည် app ၏ setting များ၊ <code>Scaffold</code> သည် screen ၏ အခြေခံဘောင်၊ <code>SafeArea</code> သည် OS ၏ ပြသမှုဧရိယာကို ရှောင်ရှားသည့် margin၊ <code>Center</code> သည် အလယ်တွင် နေရာချထားခြင်း၊ <code>Text</code> သည် စာသားကို တာဝန်ယူပါသည်။ <code>child:</code> သည် Widget တစ်ခုဖြစ်ပြီး နောက်ပိုင်းတွင် သုံးမည့် <code>children:</code> သည် Widget အများအပြားပါဝင်သော list ဖြစ်ပါသည်။ <code>MaterialApp</code> တွင် ထည့်သွင်းထားသော <code>debugShowCheckedModeBanner: false</code> သည် STEP 01 တွင် screen ၏ ညာဘက်အပေါ်ထောင့်၌ ပေါ်နေသော DEBUG တံဆိပ်ပြားကို ဖျောက်သည့် setting ဖြစ်ပါသည်။ ၎င်းတံဆိပ်ပြားသည် debug run နေခြင်းကို ပြသသည့် အမှတ်အသားဖြစ်ပြီး app ၏ လုပ်ဆောင်ချက်နှင့် မသက်ဆိုင်ပါ။"
+    },
+    {
+      "source": "<code>Text('今日の小さな一歩', style: TextStyle(fontSize: 28))</code>では、最初の引数が文字、名前付き引数<code>style</code>が装飾です。括弧とカンマの対応をインデントで追いましょう。<code>@override</code>は親のメソッドを実装し直す印です。<code>build</code>へ渡される<code>BuildContext</code>は、そのWidgetがツリーのどこにあるかを表す情報です。",
+      "translation": "<code>Text('今日の小さな一歩', style: TextStyle(fontSize: 28))</code> တွင် ပထမ argument သည် စာသားဖြစ်ပြီး named argument <code>style</code> သည် အလှဆင်မှု ဖြစ်ပါသည်။ လက်သည်းကွင်းများနှင့် ကော်မာများ၏ အတွဲအစပ်ကို indentation ဖြင့် လိုက်ကြည့်ပါ။ <code>@override</code> သည် မိဘ၏ method ကို ပြန်လည် implement လုပ်သည့် အမှတ်အသား ဖြစ်ပါသည်။ <code>build</code> သို့ ပေးပို့သော <code>BuildContext</code> သည် ထို Widget သည် tree ၏ မည်သည့်နေရာတွင် ရှိသည်ကို ဖော်ပြသည့် အချက်အလက် ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "Javaで<code>View</code>を更新した手順に対して、Dartは表示したい文字と大きさをWidgetの構成として返します。Dartの名前付き引数はSwiftの引数ラベルに近く、設定の意味を引数名で読み取れます。",
+      "translation": "Java တွင် <code>View</code> ကို update လုပ်သည့် လုပ်ငန်းစဉ်နှင့် နှိုင်းယှဉ်ပါက Dart သည် ပြသလိုသော စာသားနှင့် အရွယ်အစားကို Widget ၏ ဖွဲ့စည်းပုံအဖြစ် return ပြန်ပေးပါသည်။ Dart ၏ named argument များသည် Swift ၏ argument label များနှင့် ဆင်တူပြီး setting ၏ အဓိပ္ပာယ်ကို argument အမည်ဖြင့် နားလည်နိုင်ပါသည်။"
+    },
+    {
+      "source": "Widgetの親子関係と<code>child</code>の役割を確認した。",
+      "translation": "Widget ၏ မိဘ-သားသမီး ဆက်နွှယ်မှုနှင့် <code>child</code> ၏ အခန်းကဏ္ဍကို စစ်ဆေးအတည်ပြုခဲ့သည်။"
+    },
+    {
+      "source": "STEP 03 · コマ8",
+      "translation": "STEP 03 · အတန်းချိန် 8"
+    },
+    {
+      "source": "保存してホットリロードする",
+      "translation": "သိမ်းဆည်းပြီး hot reload ပြုလုပ်ရန်"
+    },
+    {
+      "source": "実行中のまま<code>Text</code>の文字を1か所変え、保存します。ターミナルから<code>flutter run</code>している場合は、その実行中のターミナルで<code>r</code>を押すとホットリロードします。Visual Studio Codeの実行機能を使っている場合は<code>Flutter: Hot Reload</code>を選べます。",
+      "translation": "Run နေဆဲအချိန်မှာပင် <code>Text</code> ၏ စာသားကို တစ်နေရာ ပြောင်းလဲပြီး သိမ်းဆည်းပါ။ Terminal မှ <code>flutter run</code> ဖြင့် run ထားပါက ထို run နေသော terminal တွင် <code>r</code> ကို နှိပ်ခြင်းဖြင့် hot reload ပြုလုပ်နိုင်ပါသည်။ Visual Studio Code ၏ run လုပ်ဆောင်ချက်ကို အသုံးပြုနေပါက <code>Flutter: Hot Reload</code> ကို ရွေးချယ်နိုင်ပါသည်။"
+    },
+    {
+      "source": "ホットリロードはコードの変更を反映し、現在の状態をできるだけ保ちます。<code>R</code>によるホットリスタートはDart側を起動し直します。いまは状態を持たない画面ですが、後の回数の操作で違いが見えます。<code>main</code>や状態の初期値を変えた場合にはホットリスタートを使います。",
+      "translation": "Hot reload သည် ကုဒ်အပြောင်းအလဲများကို ထင်ဟပ်စေပြီး လက်ရှိ state ကို တတ်နိုင်သမျှ ထိန်းသိမ်းပေးပါသည်။ <code>R</code> ဖြင့် hot restart ပြုလုပ်ခြင်းသည် Dart ဘက်ခြမ်းကို အစမှ ပြန်လည်စတင်စေပါသည်။ ယခုအခါ screen တွင် state မရှိသေးသော်လည်း နောက်ပိုင်း အကြိမ်အရေအတွက် လုပ်ဆောင်ချက်များတွင် ကွာခြားချက်ကို တွေ့မြင်ရပါမည်။ <code>main</code> သို့မဟုတ် state ၏ ကနဦးတန်ဖိုးများကို ပြောင်းလဲသည့်အခါ hot restart ကို အသုံးပြုပါ။"
+    },
+    {
+      "source": "<code>style</code>の<code>fontSize</code>を28から別の値へ変え、1回ごとの変化を確認します。エラーが出たらターミナルか<code>Problems</code>の最初のエラーを読み、閉じ括弧・カンマを確認します。実行を終了する場合は実行中のターミナルで<code>q</code>を押します。",
+      "translation": "<code>style</code> ၏ <code>fontSize</code> ကို 28 မှ အခြားတန်ဖိုးတစ်ခုသို့ ပြောင်းလဲပြီး အကြိမ်တိုင်း ပြောင်းလဲမှုကို စစ်ဆေးပါ။ Error ပေါ်လာပါက terminal သို့မဟုတ် <code>Problems</code> ရှိ ပထမဆုံး error ကို ဖတ်ရှုပြီး ပိတ်လက်သည်းကွင်းများနှင့် ကော်မာများကို စစ်ဆေးပါ။ Run နေခြင်းကို ရပ်တန့်လိုပါက run နေသော terminal တွင် <code>q</code> ကို နှိပ်ပါ။"
+    },
+    {
+      "source": "変更する文字とサイズはSwiftのラベル設定と同じ目的です。FlutterではWidgetを記述し直して再表示します。ホットリロードは保存したコードを実行中のアプリへ反映する機能で、ソースを端末内へ永続保存する機能ではありません。",
+      "translation": "စာသားနှင့် အရွယ်အစားကို ပြောင်းလဲခြင်းသည် Swift တွင် label သတ်မှတ်သည့် ရည်ရွယ်ချက်နှင့် အတူတူပင် ဖြစ်ပါသည်။ Flutter တွင် Widget ကို ပြန်လည်ရေးသားဖော်ပြပြီး ပြန်လည်ပြသပေးပါသည်။ Hot reload သည် သိမ်းဆည်းထားသော ကုဒ်ကို run နေသော app ထဲသို့ ထင်ဟပ်စေသည့် လုပ်ဆောင်ချက်ဖြစ်ပြီး source ကို စက်အတွင်းသို့ အမြဲတမ်း သိမ်းဆည်းသည့် လုပ်ဆောင်ချက် မဟုတ်ပါ။"
+    },
+    {
+      "source": "文字とサイズを変え、ホットリロードで結果を確認できた。",
+      "translation": "စာသားနှင့် အရွယ်အစားကို ပြောင်းလဲပြီး hot reload ဖြင့် ရလဒ်ကို စစ်ဆေးနိုင်ခဲ့သည်။"
+    },
+    {
+      "source": "STEP 04 · コマ8",
+      "translation": "STEP 04 · အတန်းချိန် 8"
+    },
+    {
+      "source": "文字と大きさをアレンジする",
+      "translation": "စာသားနှင့် အရွယ်အစားကို စိတ်ကြိုက်ပြောင်းလဲရန်"
+    },
+    {
+      "source": "最後に、表示する一言と文字の大きさを自分の題材へ変えます。「毎日必ず」より「できたときに少し」のように、自分が使いやすい文でも構いません。",
+      "translation": "နောက်ဆုံးအနေဖြင့် ပြသမည့် စကားစုနှင့် စာသားအရွယ်အစားကို မိမိ၏ ကိုယ်ပိုင်အကြောင်းအရာသို့ ပြောင်းလဲပါ။ “နေ့တိုင်း မပျက်မကွက်” ထက် “လုပ်နိုင်သည့်အခါ အနည်းငယ်စီ” ကဲ့သို့ မိမိအတွက် သုံးရလွယ်ကူသော စာသားဖြစ်လျှင်လည်း ရပါသည်။"
+    },
+    {
+      "source": "場所",
+      "translation": "နေရာ"
+    },
+    {
+      "source": "変わること",
+      "translation": "ပြောင်းလဲမည့် အချက်"
+    },
+    {
+      "source": "<code>Text</code>の文字列",
+      "translation": "<code>Text</code> ၏ string"
+    },
+    {
+      "source": "画面中央の一言。",
+      "translation": "Screen အလယ်ရှိ စကားစု။"
+    },
+    {
+      "source": "<code>TextStyle</code>の<code>fontSize</code>",
+      "translation": "<code>TextStyle</code> ၏ <code>fontSize</code>"
+    },
+    {
+      "source": "文字の大きさ。",
+      "translation": "စာသားအရွယ်အစား။"
+    },
+    {
+      "source": "保存し、ホットリロードして、全文が読めるか確認します。次回の合流のため、変えた文字・数値を控えておきます。全コードは見比べるための基準で、自分の変更を消すためのものではありません。",
+      "translation": "သိမ်းဆည်းပြီး hot reload ပြုလုပ်ကာ စာသားအပြည့်အစုံကို ဖတ်ရှုနိုင်ခြင်း ရှိမရှိ စစ်ဆေးပါ။ နောက်တစ်ကြိမ်တွင် ချောမွေ့စွာ ပြန်လည်ပူးပေါင်းနိုင်ရန် ပြောင်းလဲထားသော စာသားနှင့် ကိန်းဂဏန်းတန်ဖိုးများကို မှတ်သားထားပါ။ ကုဒ်အပြည့်အစုံသည် နှိုင်းယှဉ်ကြည့်ရန် စံဖြစ်ပြီး မိမိ ပြုလုပ်ထားသော အပြောင်းအလဲများကို ဖျက်ပစ်ရန် မဟုတ်ပါ။"
+    },
+    {
+      "source": "Web基礎では既存要素へ<code>textContent</code>を設定しました。Flutterでは表示する<code>Text</code>を返します。同じ「文字を変える」操作でも、画面の指定方法が違います。",
+      "translation": "Web အခြေခံတွင် ရှိပြီးသား element သို့ <code>textContent</code> ကို သတ်မှတ်ခဲ့ပါသည်။ Flutter တွင် ပြသလိုသော <code>Text</code> Widget ကို return ပြန်ပေးပါသည်။ “စာသားကို ပြောင်းလဲခြင်း” ဟူသော တူညီသည့် လုပ်ဆောင်ချက်ပင် ဖြစ်သော်လည်း screen ကို သတ်မှတ်ဖော်ပြသည့် နည်းလမ်းမှာ ကွဲပြားပါသည်။"
+    },
+    {
+      "source": "変更した場所と、画面の変化を確認した。",
+      "translation": "ပြောင်းလဲခဲ့သော နေရာများနှင့် screen ၏ ပြောင်းလဲမှုကို စစ်ဆေးအတည်ပြုခဲ့သည်။"
+    },
+    {
+      "source": "STEP 05 · コマ9",
+      "translation": "STEP 05 · အတန်းချိန် 9"
+    },
+    {
+      "source": "習慣を1枚のカードにする",
+      "translation": "အလေ့အကျင့်ကို card တစ်ခု ပြုလုပ်ရန်"
+    },
+    {
+      "source": "このコマの開始コード",
+      "translation": "ဤအတန်းချိန်အတွက် စတင်သည့်ကုဒ်"
+    },
+    {
+      "source": "途中から合流する場合は、自分が変えた文字・色・数値を控えてから<code>lib/main.dart</code>をそろえます。",
+      "translation": "အလယ်အလတ်မှ ပြန်လည်ပူးပေါင်းပါက မိမိ ပြောင်းလဲထားသော စာသား၊ အရောင်နှင့် ကိန်းဂဏန်းများကို ဦးစွာ မှတ်သားထားပြီးမှ <code>lib/main.dart</code> ကို ကိုက်ညီအောင် ညှိယူပါ။"
+    },
+    {
+      "source": "Visual Studio Codeで同じ<code>F01StampBoard</code>を開き、iOSで実行します。今日の開始状態は中央に1つの<code>Text</code>がある画面です。このSTEPでは<code>Center</code>の<code>child</code>を<code>Card</code>へ替え、習慣名・マーク・回数を1枚にまとめます。",
+      "translation": "Visual Studio Code တွင် တူညီသော <code>F01StampBoard</code> ကို ဖွင့်ပြီး iOS တွင် run ပါ။ ယနေ့ စတင်သည့် အခြေအနေမှာ အလယ်တွင် <code>Text</code> တစ်ခုတည်းသာ ရှိသော screen ဖြစ်ပါသည်။ ဤ STEP တွင် <code>Center</code> ၏ <code>child</code> ကို <code>Card</code> သို့ ပြောင်းလဲပြီး အလေ့အကျင့်အမည်၊ mark နှင့် အကြိမ်အရေအတွက်တို့ကို card တစ်ခုတည်းတွင် စုစည်းပါမည်။"
+    },
+    {
+      "source": "<code>Card</code>の中に<code>Padding</code>、さらに<code>Column</code>を置きます。<code>children</code>の角括弧の中へ<code>Text</code>、<code>SizedBox</code>、<code>Icon</code>を順番に並べます。今回は回数を変える処理をまだ付けないため、0 / 5 回のままです。",
+      "translation": "<code>Card</code> အတွင်းတွင် <code>Padding</code>၊ ၎င်းအထဲတွင် <code>Column</code> ကို ထားရှိပါ။ <code>children</code> ၏ လေးထောင့်ကွင်းအတွင်း၌ <code>Text</code>၊ <code>SizedBox</code>၊ <code>Icon</code> တို့ကို အစဉ်လိုက် စီစဉ်ပါ။ ယခုတစ်ကြိမ်တွင် အကြိမ်အရေအတွက် ပြောင်းလဲသည့် လုပ်ဆောင်ချက်ကို မထည့်သွင်းသေးသောကြောင့် 0 / 5 ကြိမ် အဖြစ်သာ ရှိနေပါမည်။"
+    },
+    {
+      "source": "<code>Card</code>はまとまりのある面、<code>Padding</code>は内側の余白、<code>SizedBox</code>は部品間の空きを作ります。<code>Icon</code>にはSDKに含まれるMaterialアイコンを使い、画像ファイルは追加しません。",
+      "translation": "<code>Card</code> သည် ညီညွတ်သော မျက်နှာပြင်တစ်ခုကို ဖန်တီးပေးပြီး <code>Padding</code> သည် အတွင်းဘက် margin ကို ပေးကာ <code>SizedBox</code> သည် အစိတ်အပိုင်းများအကြား နေရာလွတ်ကို ဖန်တီးပေးပါသည်။ <code>Icon</code> အတွက် SDK တွင် ပါဝင်သော Material icon များကို အသုံးပြုပြီး ပုံဖိုင်များကို ထပ်မံထည့်သွင်းခြင်း မပြုပါ။"
+    },
+    {
+      "source": "HTMLの要素とCSSの余白を分けた書き方に対し、Flutterでは<code>Card</code>・<code>Padding</code>・<code>Text</code>というWidgetを組み合わせます。装飾の目的は同じですが、CSSファイルへ書く操作はありません。",
+      "translation": "HTML element များနှင့် CSS margin များကို သီးခြားစီ ခွဲခြားရေးသားသည့် ပုံစံနှင့် မတူဘဲ Flutter တွင် <code>Card</code>၊ <code>Padding</code>၊ <code>Text</code> စသည့် Widget များကို ပေါင်းစပ်ပါသည်။ အလှဆင်ခြင်း ရည်ရွယ်ချက်မှာ အတူတူပင်ဖြစ်သော်လည်း CSS ဖိုင်ထဲသို့ ရေးသားသည့် လုပ်ဆောင်ချက် မရှိပါ။"
+    },
+    {
+      "source": "習慣名・マーク・回数が1枚のカードに表示された。",
+      "translation": "အလေ့အကျင့်အမည်၊ mark နှင့် အကြိမ်အရေအတွက်ကို card တစ်ခုပေါ်တွင် ပြသနိုင်ခဲ့သည်။"
+    },
+    {
+      "source": "STEP 06 · コマ9",
+      "translation": "STEP 06 · အတန်းချိန် 9"
+    },
+    {
+      "source": "余白と縦横の並びを読む",
+      "translation": "Margin နှင့် ဒေါင်လိုက်၊ အလျားလိုက် စီစဉ်မှုကို နားလည်ရန်"
+    },
+    {
+      "source": "<code>Column</code>は縦、<code>Row</code>は横に<code>children</code>を並べます。<code>Column</code>の<code>mainAxisSize: MainAxisSize.min</code>は主軸方向を必要な大きさに絞り、<code>crossAxisAlignment: CrossAxisAlignment.start</code>は横方向の開始側へ寄せます。型名を省略したdot shorthandは使いません。",
+      "translation": "<code>Column</code> သည် <code>children</code> ကို ဒေါင်လိုက်စီစဉ်ပြီး <code>Row</code> သည် အလျားလိုက် စီစဉ်ပါသည်။ <code>Column</code> ၏ <code>mainAxisSize: MainAxisSize.min</code> သည် ပင်မဝင်ရိုး ဦးတည်ချက်ကို လိုအပ်သော အရွယ်အစားသို့သာ ချုံ့ပေးပြီး <code>crossAxisAlignment: CrossAxisAlignment.start</code> သည် ကန့်လန့်ဖြတ်ဝင်ရိုး၏ စတင်သည့်ဘက်သို့ ညှိပေးပါသည်။ Type အမည်ကို ချန်လှပ်ထားသော dot shorthand ကို အသုံးမပြုပါ။"
+    },
+    {
+      "source": "<code>EdgeInsets.all(24)</code>は上下左右同じ余白、<code>SizedBox(height: 16)</code>は縦の空きです。余白を1か所変えて保存し、カード外側の位置とカード内側の間隔を区別します。<code>Container</code>や<code>Card</code>の<code>margin</code>を後で使うときも、<code>Padding</code>の内側とは別です。",
+      "translation": "<code>EdgeInsets.all(24)</code> သည် အထက်၊ အောက်၊ ဘယ်၊ ညာ တူညီသော margin ဖြစ်ပြီး <code>SizedBox(height: 16)</code> သည် ဒေါင်လိုက်နေရာလွတ် ဖြစ်ပါသည်။ Margin တစ်နေရာကို ပြောင်းလဲသိမ်းဆည်းပြီး card အပြင်ဘက် တည်နေရာနှင့် card အတွင်းဘက် နေရာလွတ်တို့ကို ခွဲခြားနားလည်ပါ။ နောက်ပိုင်းတွင် <code>Container</code> သို့မဟုတ် <code>Card</code> ၏ <code>margin</code> ကို သုံးသည့်အခါတွင်လည်း အတွင်းဘက် <code>Padding</code> နှင့် သီးခြားစီ ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "文字が複数行になる題材を使い、カードの高さが内容に合わせて変わることを確かめます。<code>Text</code>の文字列を変えるときは、最後の閉じクォートとカンマを残します。",
+      "translation": "စာကြောင်းအများအပြား ပါဝင်သည့် အကြောင်းအရာကို အသုံးပြု၍ card ၏ အမြင့်သည် ပါဝင်သည့်အရာနှင့်အညီ ပြောင်းလဲသွားကြောင်း စစ်ဆေးပါ။ <code>Text</code> ၏ string ကို ပြောင်းလဲသည့်အခါ နောက်ဆုံးပိတ် quotation mark နှင့် comma ကို ချန်ထားပါ။"
+    },
+    {
+      "source": "Swiftの縦のStackと同じ配置の目的です。Flutterは間隔にも<code>SizedBox</code>というWidgetを置きます。<code>children</code>はDartの<code>List</code>で、Widgetを順に並べた角括弧です。",
+      "translation": "၎င်းသည် Swift ၏ ဒေါင်လိုက် Stack နှင့် တူညီသော layout ရည်ရွယ်ချက် ဖြစ်ပါသည်။ Flutter သည် နေရာလွတ်အတွက်ပင် <code>SizedBox</code> ဟူသော Widget ကို အသုံးပြုပါသည်။ <code>children</code> သည် Dart ၏ <code>List</code> ဖြစ်ပြီး Widget များကို လေးထောင့်ကွင်းအတွင်း အစဉ်လိုက် စီစဉ်ထားခြင်း ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "内側の余白と部品間の間隔を見分け、変更できた。",
+      "translation": "အတွင်းဘက် margin နှင့် အစိတ်အပိုင်းများအကြား နေရာလွတ်ကို ခွဲခြားသိမြင်ပြီး ပြောင်းလဲနိုင်ခဲ့သည်။"
+    },
+    {
+      "source": "STEP 07 · コマ9",
+      "translation": "STEP 07 · အတန်းချိန် 9"
+    },
+    {
+      "source": "データから一覧を作る",
+      "translation": "Data မှ list တစ်ခု ဖန်တီးရန်"
+    },
+    {
+      "source": "習慣を3件へ増やします。同じカードを3回コピーする代わりに、名前・理由・回数を<code>Habit</code>にまとめ、<code>habits</code>のリストから作ります。",
+      "translation": "အလေ့အကျင့်ကို 3 ခုအထိ တိုးမြှင့်ပါမည်။ တူညီသော card ကို 3 ကြိမ် copy ကူးမည့်အစား အမည်၊ အကြောင်းပြချက်နှင့် အကြိမ်အရေအတွက်တို့ကို <code>Habit</code> ထဲတွင် စုစည်းပြီး <code>habits</code> list မှ တည်ဆောက်ပါမည်။"
+    },
+    {
+      "source": "<code>Habit({required this.name, required this.reason, this.count = 0})</code>は名前付き引数を持つコンストラクタです。<code>required</code>は必須、<code>this.name</code>は受け取った値を同名フィールドへ代入する省略形、<code>count = 0</code>は省略時の初期値です。<code>name</code>・<code>reason</code>は<code>final</code>で一度代入した参照を再代入せず、回数<code>count</code>は<code>int</code>として後で変更します。",
+      "translation": "<code>Habit({required this.name, required this.reason, this.count = 0})</code> သည် named parameter များ ပါဝင်သော constructor ဖြစ်ပါသည်။ <code>required</code> သည် မဖြစ်မနေ လိုအပ်သည်ကို ပြသပြီး <code>this.name</code> သည် လက်ခံရရှိသော တန်ဖိုးကို အမည်တူ field ထဲသို့ assign လုပ်သည့် အတိုကောက်ပုံစံ ဖြစ်ကာ <code>count = 0</code> သည် ချန်လှပ်ထားချိန်တွင် အသုံးပြုမည့် ကနဦးတန်ဖိုး ဖြစ်ပါသည်။ <code>name</code> နှင့် <code>reason</code> သည် <code>final</code> ဖြစ်သောကြောင့် တစ်ကြိမ် assign လုပ်ပြီးပါက reference ကို ထပ်မံ assign ပြုလုပ်၍မရဘဲ အကြိမ်အရေအတွက် <code>count</code> ကို <code>int</code> အဖြစ် နောက်ပိုင်းတွင် ပြောင်းလဲပါမည်။"
+    },
+    {
+      "source": "<code>ListView</code>は縦にスクロールする領域です。<code>children</code>の中の<code>for (final habit in habits) buildHabitCard(habit)</code>で各データから<code>Card</code>を作ります。<code>buildHabitCard</code>は1件をWidgetとして返すメソッドです。この段階の一覧は<code>StatelessWidget</code>で、操作ボタンはありません。",
+      "translation": "<code>ListView</code> သည် ဒေါင်လိုက် scroll လုပ်နိုင်သော ဧရိယာ ဖြစ်ပါသည်။ <code>children</code> အတွင်းရှိ <code>for (final habit in habits) buildHabitCard(habit)</code> ဖြင့် data တစ်ခုချင်းစီမှ <code>Card</code> ကို ဖန်တီးပါသည်။ <code>buildHabitCard</code> သည် item တစ်ခုကို Widget အဖြစ် return ပြန်ပေးသော method ဖြစ်ပါသည်။ ဤအဆင့်ရှိ list သည် <code>StatelessWidget</code> ဖြစ်ပြီး လုပ်ဆောင်ချက် ခလုတ်များ မပါဝင်သေးပါ။"
+    },
+    {
+      "source": "コード中の<code>var total = 0</code>は型を推論した変更可能な<code>int</code>、<code>final habit</code>はループの各回で再代入しない変数です。リストを<code>final</code>にしても、中身が自動的に変更不可になるわけではありません。",
+      "translation": "ကုဒ်ထဲရှိ <code>var total = 0</code> သည် type ကို infer လုပ်ထားသော ပြောင်းလဲနိုင်သည့် <code>int</code> ဖြစ်ပြီး <code>final habit</code> သည် loop ၏ အကြိမ်တိုင်းတွင် ပြန်လည် assign မလုပ်သော variable ဖြစ်ပါသည်။ List ကို <code>final</code> အဖြစ် သတ်မှတ်ထားသော်လည်း အတွင်းရှိ အရာများကို အလိုအလျောက် ပြောင်းလဲ၍မရအောင် ပြုလုပ်ပေးသည် မဟုတ်ပါ။"
+    },
+    {
+      "source": "<code>Habit</code>のクラスとリストはJavaのデータクラス・<code>ArrayList</code>に対応します。Dartではリストの中に<code>for</code>を置けるため、生成したWidgetを<code>children</code>へ並べられます。Web基礎のDOMを直接生成するコードへ置き換える必要はありません。",
+      "translation": "<code>Habit</code> ၏ class နှင့် list သည် Java ၏ data class နှင့် <code>ArrayList</code> တို့နှင့် သက်ဆိုင်ပါသည်။ Dart တွင် list အတွင်း၌ <code>for</code> ကို ထားရှိနိုင်သောကြောင့် ထုတ်လုပ်ထားသော Widget များကို <code>children</code> အတွင်း တိုက်ရိုက် စီစဉ်နိုင်ပါသည်။ Web အခြေခံကဲ့သို့ DOM ကို တိုက်ရိုက်ဖန်တီးသည့် ကုဒ်ဖြင့် အစားထိုးရန် မလိုအပ်ပါ။"
+    },
+    {
+      "source": "3件のカードを表示し、データのどの項目がどの文字になるか確認した。",
+      "translation": "Card 3 ခုကို ပြသခဲ့ပြီး data ၏ မည်သည့်အကွက်သည် မည်သည့်စာသား ဖြစ်လာသည်ကို စစ်ဆေးအတည်ပြုခဲ့သည်။"
+    },
+    {
+      "source": "STEP 08 · コマ9",
+      "translation": "STEP 08 · အတန်းချိန် 9"
+    },
+    {
+      "source": "配色と表示をそろえる",
+      "translation": "အရောင်နှင့် ပြသမှုကို ညှိယူရန်"
+    },
+    {
+      "source": "画面全体の配色を<code>StampApp</code>で指定します。<code>MaterialApp</code>の<code>theme</code>に<code>ThemeData</code>、<code>colorScheme</code>に<code>ColorScheme.fromSeed</code>を渡し、<code>seedColor</code>で基準の色を決めます。<code>Color(0xFF287A70)</code>の<code>FF</code>は不透明度、続く6桁はRGBです。",
+      "translation": "Screen တစ်ခုလုံး၏ အရောင်စပ်မှုကို <code>StampApp</code> တွင် သတ်မှတ်ပါမည်။ <code>MaterialApp</code> ၏ <code>theme</code> သို့ <code>ThemeData</code> နှင့် <code>colorScheme</code> သို့ <code>ColorScheme.fromSeed</code> ကို ပေးပို့ပြီး <code>seedColor</code> ဖြင့် အခြေခံအရောင်ကို ဆုံးဖြတ်ပါသည်။ <code>Color(0xFF287A70)</code> ၏ <code>FF</code> သည် opacity ဖြစ်ပြီး နောက်ဆက်တွဲ ဂဏန်း 6 လုံးမှာ RGB ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "<code>Scaffold</code>の背景は<code>scaffoldBackgroundColor</code>、カードの背景は<code>Colors.white</code>です。<code>TextStyle</code>の<code>fontWeight</code>で文字の太さを指定します。<code>Container</code>の<code>BoxDecoration</code>と<code>BorderRadius.circular</code>で合計欄の背景と角を整えます。",
+      "translation": "<code>Scaffold</code> ၏ နောက်ခံသည် <code>scaffoldBackgroundColor</code> ဖြစ်ပြီး card ၏ နောက်ခံသည် <code>Colors.white</code> ဖြစ်ပါသည်။ <code>TextStyle</code> ၏ <code>fontWeight</code> ဖြင့် စာလုံးအထူကို သတ်မှတ်ပါသည်။ <code>Container</code> ၏ <code>BoxDecoration</code> နှင့် <code>BorderRadius.circular</code> ဖြင့် စုစုပေါင်းပြကွက်၏ နောက်ခံနှင့် ထောင့်ကွေးများကို ပြင်ဆင်ညှိယူပါသည်။"
+    },
+    {
+      "source": "合計欄の<code>Row</code>はアイコンと文字を横へ並べ、<code>Expanded</code>が文字へ残りの幅を渡します。<code>StampMarks</code>の<code>Wrap</code>は必要なら次の行へ折り返します。<code>ListView</code>は縦へ動かせるため、下のカードも確認できます。",
+      "translation": "စုစုပေါင်းပြကွက်၏ <code>Row</code> သည် icon နှင့် စာသားကို အလျားလိုက် စီစဉ်ပေးပြီး <code>Expanded</code> က ကျန်ရှိသော အကျယ်အဝန်းကို စာသားထံသို့ ပေးပို့ပါသည်။ <code>StampMarks</code> ၏ <code>Wrap</code> သည် လိုအပ်ပါက နောက်တစ်ကြောင်းသို့ ခေါက်ချပေးပါသည်။ <code>ListView</code> ကို ဒေါင်လိုက် scroll ပြုလုပ်နိုင်သောကြောင့် အောက်ဘက်ရှိ card များကိုလည်း ကြည့်ရှုနိုင်ပါသည်။"
+    },
+    {
+      "source": "見出しの文字列中の<code>\\n</code>は改行です。<code>'集めたスタンプ $total 個'</code>は文字列補間で、式を含む場合は<code>${habit.count}</code>のように波括弧で囲みます。",
+      "translation": "ခေါင်းစဉ် string အတွင်းရှိ <code>\\n</code> သည် စာကြောင်းအသစ်ဆင်းခြင်း ဖြစ်ပါသည်။ <code>'集めたスタンプ $total 個'</code> (စုဆောင်းထားသော stamp $total ခု) သည် string interpolation ဖြစ်ပြီး expression များ ပါဝင်ပါက <code>${habit.count}</code> ကဲ့သို့ တွန့်ကွင်းဖြင့် ဖုံးအုပ်ပေးရပါမည်။"
+    },
+    {
+      "source": "CSSの16進色と同じRGBを使いますが、Flutterは先頭に不透明度も書きます。文字列補間はJavaScriptで文字と変数を連結する目的と同じで、Dartでは$と必要に応じた波括弧で埋め込みます。",
+      "translation": "CSS ၏ hexadecimal color ကဲ့သို့ တူညီသော RGB ကို အသုံးပြုသော်လည်း Flutter တွင် အစပိုင်း၌ opacity ကိုလည်း ရေးသားပါသည်။ String interpolation သည် JavaScript တွင် စာသားနှင့် variable များကို ချိတ်ဆက်သည့် ရည်ရွယ်ချက်နှင့် အတူတူပင်ဖြစ်ပြီး Dart တွင် $ နှင့် လိုအပ်ပါက တွန့်ကွင်းများကို အသုံးပြု၍ ထည့်သွင်းပေးပါသည်။"
+    },
+    {
+      "source": "色・角・余白・折り返しを読み分け、3件とも表示できた。",
+      "translation": "အရောင်၊ ထောင့်ကွေး၊ margin နှင့် ခေါက်ချမှုတို့ကို ခွဲခြားနားလည်ပြီး 3 ခုစလုံးကို ပြသနိုင်ခဲ့သည်။"
+    },
+    {
+      "source": "STEP 09 · コマ9",
+      "translation": "STEP 09 · အတန်းချိန် 9"
+    },
+    {
+      "source": "カードの題材をアレンジする",
+      "translation": "Card ၏ အကြောင်းအရာကို စိတ်ကြိုက်ပြောင်းလဲရန်"
+    },
+    {
+      "source": "3件の名前と理由を、自分が使いたい題材へ変えます。学習でも、休憩でも、架空の習慣でも構いません。<code>Habit</code>を1つ増やす場合は同じ形でリストへ加えます。",
+      "translation": "အကြောင်းအရာ 3 ခု၏ အမည်နှင့် အကြောင်းပြချက်ကို မိမိ အသုံးပြုလိုသော အကြောင်းအရာသို့ ပြောင်းလဲပါ။ စာလေ့လာခြင်း၊ အနားယူခြင်း သို့မဟုတ် စိတ်ကူးယဉ် အလေ့အကျင့် ဖြစ်လျှင်လည်း ရပါသည်။ <code>Habit</code> တစ်ခု ထပ်တိုးလိုပါက တူညီသော ပုံစံဖြင့် list ထဲသို့ ထည့်သွင်းပါ။"
+    },
+    {
+      "source": "確認すること",
+      "translation": "စစ်ဆေးရမည့်အရာ"
+    },
+    {
+      "source": "<code>Habit</code>の<code>name</code>・<code>reason</code>",
+      "translation": "<code>Habit</code> ၏ <code>name</code>၊ <code>reason</code>"
+    },
+    {
+      "source": "カードに自分の名前が出る。理由は次の詳細画面で使うため空にしない。",
+      "translation": "Card ပေါ်တွင် မိမိ၏အမည် ပေါ်လာမည်။ နောက်ထပ် detail screen တွင် သုံးမည်ဖြစ်သောကြောင့် အကြောင်းပြချက်ကို အလွတ်မထားပါနှင့်။"
+    },
+    {
+      "source": "文字が読みやすい配色。",
+      "translation": "စာသား ဖတ်ရှုရ လွယ်ကူသော အရောင်စပ်မှု။"
+    },
+    {
+      "source": "カードの間隔と余白。",
+      "translation": "Card များ၏ နေရာလွတ်နှင့် margin။"
+    },
+    {
+      "source": "初期リストを書き換えたらホットリスタートします。いまは静的な一覧の完成です。まだボタンが無いことと、どの値から表示されているかを確かめます。",
+      "translation": "ကနဦး list ကို ပြင်ဆင်ပြီးပါက hot restart ပြုလုပ်ပါ။ ယခုအခါ static list ပြီးမြောက်သွားပြီ ဖြစ်ပါသည်။ ခလုတ်များ မရှိသေးခြင်းနှင့် မည်သည့်တန်ဖိုးများမှ ပြသနေသည်ကို စစ်ဆေးပါ။"
+    },
+    {
+      "source": "データの値を変えて表示を変える点はJavaのモデルと同じです。Dartは名前付き引数なので、<code>name</code>と<code>reason</code>を取り違えず読めます。新しいAPIを追加せず、既存の値と装飾でアレンジします。",
+      "translation": "Data တန်ဖိုးများကို ပြောင်းလဲပြီး ပြသမှုကို ပြောင်းလဲခြင်းသည် Java ၏ model နှင့် အတူတူပင် ဖြစ်ပါသည်။ Dart သည် named argument ဖြစ်သောကြောင့် <code>name</code> နှင့် <code>reason</code> ကို မှားယွင်းမှုမရှိဘဲ ဖတ်ရှုနိုင်ပါသည်။ API အသစ်များကို ထပ်မထည့်ဘဲ ရှိပြီးသား တန်ဖိုးများနှင့် အလှဆင်မှုများဖြင့် စိတ်ကြိုက်ပြောင်းလဲပါ။"
+    },
+    {
+      "source": "題材と配色を変え、どの値が画面へ出るか確認した。",
+      "translation": "အကြောင်းအရာနှင့် အရောင်စပ်မှုကို ပြောင်းလဲပြီး မည်သည့်တန်ဖိုးသည် screen ပေါ်သို့ ရောက်ရှိလာသည်ကို စစ်ဆေးအတည်ပြုခဲ့သည်။"
+    },
+    {
+      "source": "STEP 10 · コマ10",
+      "translation": "STEP 10 · အတန်းချိန် 10"
+    },
+    {
+      "source": "回数と画面の関係を読む",
+      "translation": "အကြိမ်အရေအတွက်နှင့် screen ၏ ဆက်စပ်မှုကို နားလည်ရန်"
+    },
+    {
+      "source": "Visual Studio Codeで<code>F01StampBoard</code>を開き、3件の静的な一覧から再開します。今日は「現在の回数から表示する」という宣言的UIの使い方を操作で確かめます。",
+      "translation": "Visual Studio Code တွင် <code>F01StampBoard</code> ကို ဖွင့်ပြီး 3 ခုပါဝင်သော static list မှ ပြန်လည်စတင်ပါ။ ယနေ့တွင် “လက်ရှိ အကြိမ်အရေအတွက်မှ ပြသခြင်း” ဟူသော declarative UI ၏ အသုံးပြုပုံကို လက်တွေ့လုပ်ဆောင်မှုဖြင့် စစ်ဆေးပါမည်။"
+    },
+    {
+      "source": "<code>Habit</code>の<code>count</code>、合計<code>total</code>、<code>StampMarks</code>の<code>count</code>がどうつながるかを先に読みます。数値・マーク・達成メッセージを別々に記憶せず、<code>count</code>を基準に計算します。初期データの<code>count</code>を一時的に1へ変えてホットリスタートし、複数の表示が同時に変わることを確かめ、0へ戻します。",
+      "translation": "<code>Habit</code> ၏ <code>count</code>၊ စုစုပေါင်း <code>total</code> နှင့် <code>StampMarks</code> ၏ <code>count</code> တို့ မည်သို့ ချိတ်ဆက်ထားသည်ကို ဦးစွာ ဖတ်ရှုလေ့လာပါ။ ကိန်းဂဏန်းများ၊ mark များနှင့် အောင်မြင်မှု မက်ဆေ့ချ်များကို သီးခြားစီ မှတ်သားမထားဘဲ <code>count</code> ကို အခြေခံ၍ တွက်ချက်ပါသည်။ ကနဦး data ၏ <code>count</code> ကို ယာယီအားဖြင့် 1 သို့ ပြောင်းလဲပြီး hot restart ပြုလုပ်ကာ ပြသမှု အများအပြား တစ်ပြိုင်နက် ပြောင်းလဲသွားသည်ကို စစ်ဆေးပြီးနောက် 0 သို့ ပြန်ပြောင်းပါ။"
+    },
+    {
+      "source": "アプリを閉じて起動し直すと、ソースの初期値へ戻ります。この単元では端末内保存をまだ作りません。ホットリロードで状態が残ることと、永続保存は分けて考えます。",
+      "translation": "App ကို ပိတ်ပြီး ပြန်လည်စတင်ပါက source ကုဒ်ထဲရှိ ကနဦးတန်ဖိုးသို့ ပြန်လည်ရောက်ရှိသွားပါမည်။ ဤယူနစ်တွင် စက်အတွင်း သိမ်းဆည်းခြင်းကို မပြုလုပ်သေးပါ။ Hot reload တွင် state ကျန်ရှိနေခြင်းနှင့် အမြဲတမ်း သိမ်းဆည်းခြင်းတို့ကို ခွဲခြားစဉ်းစားပါ။"
+    },
+    {
+      "source": "Javaのモデルの値と<code>View</code>を対応させた経験を使います。Flutterでも値は必要ですが、<code>build</code>が値から関連する表示をまとめて返します。どのWidgetが同じ<code>count</code>を読むかを追うのが要点です。",
+      "translation": "Java တွင် model တန်ဖိုးများနှင့် <code>View</code> ကို ချိတ်ဆက်ခဲ့သော အတွေ့အကြုံကို အသုံးချပါ။ Flutter တွင်လည်း တန်ဖိုးများ လိုအပ်သော်လည်း <code>build</code> က တန်ဖိုးများမှ သက်ဆိုင်ရာ ပြသမှုများကို တစ်ပြိုင်နက် return ပြန်ပေးပါသည်။ မည်သည့် Widget က တူညီသော <code>count</code> ကို ဖတ်ရှုနေသည်ကို ခြေရာခံရန်မှာ အဓိကအချက် ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "回数1つから数値・マーク・合計が変わることを追えた。",
+      "translation": "အကြိမ်အရေအတွက် တစ်ခုတည်းမှ ကိန်းဂဏန်း၊ mark နှင့် စုစုပေါင်းတို့ ပြောင်းလဲသွားပုံကို ခြေရာခံနိုင်ခဲ့သည်။"
+    },
+    {
+      "source": "STEP 11 · コマ10",
+      "translation": "STEP 11 · အတန်းချိန် 10"
+    },
+    {
+      "source": "setStateでスタンプを増やす",
+      "translation": "setState ဖြင့် stamp အရေအတွက် တိုးရန်"
+    },
+    {
+      "source": "操作で変わる<code>habits</code>を<code>State</code>へ移します。<code>StampBoardPage</code>は<code>StatefulWidget</code>となり、<code>createState</code>が<code>_StampBoardPageState</code>を作ります。Widgetは画面の設定、<code>State</code>は操作によって変わる値を保持します。名前の先頭のアンダースコアはDartのライブラリ内で使う名前という指定です。",
+      "translation": "လုပ်ဆောင်မှုများကြောင့် ပြောင်းလဲမည့် <code>habits</code> ကို <code>State</code> သို့ ရွှေ့ပါမည်။ <code>StampBoardPage</code> သည် <code>StatefulWidget</code> ဖြစ်လာပြီး <code>createState</code> က <code>_StampBoardPageState</code> ကို ဖန်တီးပေးပါသည်။ Widget သည် screen ၏ setting ကို ထိန်းသိမ်းထားပြီး <code>State</code> သည် အသုံးပြုသူ၏ လုပ်ဆောင်ချက်ကြောင့် ပြောင်းလဲသော တန်ဖိုးများကို ထိန်းသိမ်းထားပါသည်။ အမည်၏ အစရှိ underscore သည် Dart library အတွင်း၌သာ သုံးမည့် အမည်ဟူသော သတ်မှတ်ချက် ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "ボタンの<code>onPressed</code>へ<code>() =&gt; changeStamp(habit, 1)</code>を渡します。これは引数のない関数で、押したときに<code>changeStamp</code>を呼びます。関数の呼出結果をその場で渡す書き方と区別してください。Dartのアローは1つの式を返す省略形です。",
+      "translation": "ခလုတ်၏ <code>onPressed</code> သို့ <code>() =&gt; changeStamp(habit, 1)</code> ကို ပေးပို့ပါ။ ၎င်းသည် argument မပါဝင်သော function တစ်ခုဖြစ်ပြီး နှိပ်လိုက်သည့်အခါ <code>changeStamp</code> ကို ခေါ်ယူပါသည်။ Function ခေါ်ယူမှု၏ ရလဒ်ကို ချက်ချင်းပေးပို့သည့် ပုံစံနှင့် ခွဲခြားပါ။ Dart ၏ arrow သည် expression တစ်ခုတည်းကို return ပြန်ပေးသည့် အတိုကောက်ပုံစံ ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "<code>changeStamp</code>は次の回数が範囲内か確認し、<code>setState(() { habit.count = nextCount; });</code>で値を変更します。<code>setState</code>は変更をFlutterへ知らせ、<code>build</code>で現在の値に合った画面を作り直せるようにします。<code>setState</code>の中へ画面の部品を追加する操作は書きません。",
+      "translation": "<code>changeStamp</code> သည် နောက်ထပ် အကြိမ်အရေအတွက် သတ်မှတ်ဘောင်အတွင်း ရှိမရှိ စစ်ဆေးပြီး <code>setState(() { habit.count = nextCount; });</code> ဖြင့် တန်ဖိုးကို ပြောင်းလဲပေးပါသည်။ <code>setState</code> သည် အပြောင်းအလဲများကို Flutter ထံ အသိပေးပြီး လက်ရှိတန်ဖိုးများနှင့် ကိုက်ညီသော screen ကို <code>build</code> က ပြန်လည်တည်ဆောက်နိုင်အောင် ပြုလုပ်ပေးပါသည်။ <code>setState</code> အတွင်းသို့ screen အစိတ်အပိုင်းများ ထပ်ထည့်သည့် လုပ်ဆောင်ချက်များကို မရေးသားပါနှင့်။"
+    },
+    {
+      "source": "1回押して、カードの回数・合計・マークが一緒に1になることを確かめます。0に戻す操作も試します。",
+      "translation": "1 ကြိမ် နှိပ်ပြီးနောက် card ၏ အကြိမ်အရေအတွက်၊ စုစုပေါင်းနှင့် mark များ အားလုံး အတူတကွ 1 ဖြစ်သွားသည်ကို စစ်ဆေးပါ။ 0 သို့ ပြန်ပြင်သည့် လုပ်ဆောင်ချက်ကိုလည်း စမ်းသပ်ကြည့်ပါ။"
+    },
+    {
+      "source": "ボタンへ処理を渡す目的はJavaのリスナーやSwiftのクロージャと同じです。Dartでは() =>で1式の関数を渡します。値を変えた後に個別のラベルを更新する代わりに、<code>setState</code>で再構築を知らせます。",
+      "translation": "ခလုတ်ထံသို့ လုပ်ဆောင်ချက် ပေးပို့ခြင်း ရည်ရွယ်ချက်မှာ Java ၏ listener သို့မဟုတ် Swift ၏ closure နှင့် အတူတူပင် ဖြစ်ပါသည်။ Dart တွင် () =&gt; ဖြင့် expression တစ်ခုတည်းပါသော function ကို ပေးပို့ပါသည်။ တန်ဖိုး ပြောင်းလဲပြီးနောက် သီးခြား label များကို update လုပ်မည့်အစား <code>setState</code> ဖြင့် ပြန်လည်တည်ဆောက်ရန် အသိပေးပါသည်။"
+    },
+    {
+      "source": "押す・戻すで回数とマークが同時に変わった。",
+      "translation": "နှိပ်ခြင်းနှင့် ပြန်ပြင်ခြင်းတို့ဖြင့် အကြိမ်အရေအတွက်နှင့် mark များ တစ်ပြိုင်နက် ပြောင်းလဲသွားခဲ့သည်။"
+    },
+    {
+      "source": "STEP 12 · コマ10",
+      "translation": "STEP 12 · အတန်းချိန် 10"
+    },
+    {
+      "source": "合計とマークを値から作る",
+      "translation": "တန်ဖိုးမှ စုစုပေါင်းနှင့် mark ကို ဖန်တီးရန်"
+    },
+    {
+      "source": "<code>build</code>の最初で<code>total</code>を0にし、<code>for</code>で全件の<code>count</code>を足します。合計を別の状態として持たないため、戻す操作でも合計の更新忘れが起こりにくくなります。",
+      "translation": "<code>build</code> ၏ အစတွင် <code>total</code> ကို 0 ဟု သတ်မှတ်ပြီး <code>for</code> ဖြင့် အားလုံး၏ <code>count</code> ကို ပေါင်းထည့်ပါသည်။ စုစုပေါင်းကို သီးခြား state အဖြစ် မသိမ်းဆည်းထားသောကြောင့် ပြန်ပြင်သည့် လုပ်ဆောင်ချက်တွင်လည်း စုစုပေါင်းကို update လုပ်ရန် မေ့လျော့မှု နည်းပါးစေပါသည်။"
+    },
+    {
+      "source": "<code>StampMarks</code>は<code>count</code>を引数で受け取る<code>StatelessWidget</code>です。0から<code>stampGoal</code>未満までの<code>for</code>で<code>Icon</code>を並べ、<code>i &lt; count ? Icons.check_circle : Icons.radio_button_unchecked</code>で押した分と未達成の分を切り替えます。<code>条件 ? 成立時 : 不成立時</code>は条件演算子です。",
+      "translation": "<code>StampMarks</code> သည် <code>count</code> ကို argument အဖြစ် လက်ခံရရှိသော <code>StatelessWidget</code> ဖြစ်ပါသည်။ 0 မှ <code>stampGoal</code> မပြည့်မီအထိ <code>for</code> ဖြင့် <code>Icon</code> များကို စီစဉ်ပြီး <code>i &lt; count ? Icons.check_circle : Icons.radio_button_unchecked</code> ဖြင့် နှိပ်ပြီးသော အပိုင်းနှင့် မပြည့်မီသေးသော အပိုင်းတို့ကို အဖွင့်အပိတ် ပြုလုပ်ပေးပါသည်။ <code>条件 ? 成立時 : 不成立時</code> (condition ? when_true : when_false) သည် conditional operator ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "同じ条件で色も変え、<code>Wrap</code>で幅が足りないと折り返します。目標<code>stampGoal</code>はファイル先頭に1か所だけ置き、マーク数・上限・残り回数が同じ目標を参照します。残り回数は<code>stampGoal</code> - <code>habit.count</code>です。",
+      "translation": "တူညီသော အခြေအနေဖြင့် အရောင်ကိုလည်း ပြောင်းလဲပြီး အကျယ်အဝန်း မလုံလောက်ပါက <code>Wrap</code> ဖြင့် ခေါက်ချပေးပါသည်။ ပန်းတိုင် <code>stampGoal</code> ကို ဖိုင်၏ ထိပ်ဆုံးတွင် တစ်နေရာတည်း၌သာ ထားရှိပြီး mark အရေအတွက်၊ အများဆုံးကန့်သတ်ချက်နှင့် ကျန်ရှိသော အကြိမ်အရေအတွက်တို့သည် တူညီသော ပန်းတိုင်ကို ရည်ညွှန်းကြပါသည်။ ကျန်ရှိသော အကြိမ်အရေအတွက်မှာ <code>stampGoal</code> - <code>habit.count</code> ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "別々のカードを1回ずつ押し、合計が2、各カードは1になることを確認します。",
+      "translation": "မတူညီသော card များကို တစ်ကြိမ်စီ နှိပ်ပြီး စုစုပေါင်းသည် 2 ဖြစ်လာကာ card တစ်ခုချင်းစီသည် 1 ဖြစ်လာသည်ကို စစ်ဆေးပါ။"
+    },
+    {
+      "source": "合計の計算はJavaの拡張<code>for</code>と同じです。違うのは、Flutterでは<code>build</code>のたびに現在の一覧から算出し、その結果を<code>Text</code>へ渡すことです。<code>StampMarks</code>は状態を所有せず、受け取った値の表示だけを担当します。",
+      "translation": "စုစုပေါင်းကို တွက်ချက်ခြင်းသည် Java ၏ enhanced <code>for</code> loop နှင့် အတူတူပင် ဖြစ်ပါသည်။ ကွာခြားချက်မှာ Flutter တွင် <code>build</code> run တိုင်း လက်ရှိ list မှ တွက်ချက်ပြီး ထိုရလဒ်ကို <code>Text</code> ထံသို့ ပေးပို့ခြင်း ဖြစ်ပါသည်။ <code>StampMarks</code> သည် state ကို ပိုင်ဆိုင်မထားဘဲ လက်ခံရရှိသော တန်ဖိုးများကို ပြသရန်အတွက်သာ တာဝန်ယူပါသည်။"
+    },
+    {
+      "source": "複数カードの回数と合計が一致し、マークの条件を確認した。",
+      "translation": "Card အများအပြား၏ အကြိမ်အရေအတွက်နှင့် စုစုပေါင်းတို့ ကိုက်ညီပြီး mark ၏ အခြေအနေများကို စစ်ဆေးအတည်ပြုခဲ့သည်။"
+    },
+    {
+      "source": "STEP 13 · コマ10",
+      "translation": "STEP 13 · အတန်းချိန် 10"
+    },
+    {
+      "source": "上限と戻す操作を確かめる",
+      "translation": "အများဆုံးကန့်သတ်ချက်နှင့် ပြန်ပြင်သည့် လုပ်ဆောင်ချက်ကို စစ်ဆေးရန်"
+    },
+    {
+      "source": "回数は0〜<code>stampGoal</code>に収めます。ボタン側では、上限なら<code>onPressed</code>を<code>null</code>にして押せない表示にし、関数側でも範囲外なら<code>return</code>します。表示の無効化とデータの範囲確認を両方置きます。",
+      "translation": "အကြိမ်အရေအတွက်ကို 0 မှ <code>stampGoal</code> အတွင်း ထားရှိပါမည်။ ခလုတ်ဘက်တွင် အများဆုံးကန့်သတ်ချက်သို့ ရောက်ရှိပါက <code>onPressed</code> ကို <code>null</code> အဖြစ် သတ်မှတ်ပြီး နှိပ်၍မရသော ပုံစံဖြစ်စေကာ function ဘက်တွင်လည်း သတ်မှတ်ဘောင်ပြင်ပဖြစ်ပါက <code>return</code> ပြန်စေပါသည်။ UI ကို disable လုပ်ခြင်းနှင့် data ၏ သတ်မှတ်ဘောင်ကို စစ်ဆေးခြင်း နှစ်ခုစလုံးကို ထည့်သွင်းထားပါသည်။"
+    },
+    {
+      "source": "1件のスタンプを押すボタンを5回押し、達成の文が出て、そのボタンが無効になることを確認します。",
+      "translation": "Item တစ်ခု၏ 「スタンプを押す」 (Add a stamp) ခလုတ်ကို 5 ကြိမ် နှိပ်ပြီးနောက် အောင်မြင်မှု စာသားပေါ်လာကာ ထိုခလုတ် disable ဖြစ်သွားသည်ကို စစ်ဆေးပါ။"
+    },
+    {
+      "source": "1つ戻して4回にし、スタンプを押すボタンがまた使えることを確認します。",
+      "translation": "1 ကြိမ် ပြန်ပြင်ပြီး 4 ကြိမ် ဖြစ်စေကာ 「スタンプを押す」 (Add a stamp) ခလုတ်ကို ပြန်လည်အသုံးပြုနိုင်သည်ကို စစ်ဆေးပါ။"
+    },
+    {
+      "source": "0回まで戻し、1つ戻すが無効になることを確認します。",
+      "translation": "0 ကြိမ်အထိ ပြန်ပြင်ပြီးနောက် 「1つ戻す」 (Undo) ခလုတ် disable ဖြစ်သွားသည်ကို စစ်ဆေးပါ။"
+    },
+    {
+      "source": "もう一度1回押し、ホットリロードでは1回が残ることを見ます。",
+      "translation": "နောက်ထပ် 1 ကြိမ် ထပ်မံနှိပ်ပြီး hot reload တွင် 1 ကြိမ် ကျန်ရှိနေသည်ကို စစ်ဆေးပါ။"
+    },
+    {
+      "source": "ホットリスタートすると、保存していないため初期値0へ戻ることを確かめます。",
+      "translation": "Hot restart ပြုလုပ်ပါက သိမ်းဆည်းထားခြင်း မရှိသောကြောင့် ကနဦးတန်ဖိုး 0 သို့ ပြန်လည်ရောက်ရှိသွားသည်ကို စစ်ဆေးပါ။"
+    },
+    {
+      "source": "アプリをバックグラウンドへ移すだけでは終了せず、回数が残ることがあります。再起動の検証と混同しないようにします。",
+      "translation": "App ကို background သို့ ရွှေ့ရုံဖြင့် မရပ်တန့်သွားသောကြောင့် အကြိမ်အရေအတွက် ကျန်ရှိနေနိုင်ပါသည်။ Restart စမ်းသပ်မှုနှင့် မရောထွေးပါစေနှင့်။"
+    },
+    {
+      "source": "Javaで<code>enabled</code>を切り替える目的に対応します。Flutterのボタンは<code>onPressed</code>が<code>null</code>なら無効です。<code>null</code>を呼ぶ関数として書くのではなく、押したときの処理が無いことを値で表しています。",
+      "translation": "၎င်းသည် Java တွင် <code>enabled</code> ကို အဖွင့်အပိတ် ပြုလုပ်သည့် ရည်ရွယ်ချက်နှင့် သက်ဆိုင်ပါသည်။ Flutter ၏ ခလုတ်များသည် <code>onPressed</code> သည် <code>null</code> ဖြစ်ပါက disable ဖြစ်သွားပါသည်။ <code>null</code> ကို ခေါ်ယူသည့် function အဖြစ် ရေးသားမည့်အစား နှိပ်လိုက်သည့်အခါ လုပ်ဆောင်ချက် မရှိခြင်းကို တန်ဖိုးဖြင့် ဖော်ပြခြင်း ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "0と5の境界、取消し、再起動時の初期化を確認できた。",
+      "translation": "0 နှင့် 5 ၏ ကန့်သတ်ချက်ဘောင်၊ ပြန်ပြင်ခြင်းနှင့် restart ပြုလုပ်ချိန်တွင် ကနဦးအခြေအနေသို့ ပြန်ရောက်ခြင်းတို့ကို စစ်ဆေးအတည်ပြုခဲ့သည်။"
+    },
+    {
+      "source": "STEP 14 · コマ10",
+      "translation": "STEP 14 · အတန်းချိန် 10"
+    },
+    {
+      "source": "回数と見た目をアレンジする",
+      "translation": "အကြိမ်အရေအတွက်နှင့် ပုံပန်းသဏ္ဌာန်ကို စိတ်ကြိုက်ပြောင်းလဲရန်"
+    },
+    {
+      "source": "ファイル先頭の<code>stampGoal</code>を5から3や7へ変え、上限・マークの数・残り回数・達成の文がそろうことを確認します。目標を減らす前には回数を0へ戻すか、ホットリスタートします。ホットリロードでは回数が残るため、5回のまま目標を3にすると「5 / 3 回 · あと-2回」と出ます。1つ戻すは押せる表示ですが、<code>changeStamp</code>が目標を超える次の回数を受け付けないため、押しても変わりません。そのときはホットリスタートで0へ戻します。",
+      "translation": "ဖိုင်၏ ထိပ်ဆုံးရှိ <code>stampGoal</code> ကို 5 မှ 3 သို့မဟုတ် 7 သို့ ပြောင်းလဲပြီး အများဆုံးကန့်သတ်ချက်၊ mark အရေအတွက်၊ ကျန်ရှိသော အကြိမ်အရေအတွက်နှင့် အောင်မြင်မှု စာသားတို့ ကိုက်ညီနေသည်ကို စစ်ဆေးပါ။ ပန်းတိုင်ကို မလျှော့ချမီ အကြိမ်အရေအတွက်ကို 0 သို့ ပြန်ပြင်ပါ သို့မဟုတ် hot restart ပြုလုပ်ပါ။ Hot reload တွင် အကြိမ်အရေအတွက် ကျန်ရှိနေသောကြောင့် 5 ကြိမ် ရှိနေစဉ် ပန်းတိုင်ကို 3 ဟု ပြောင်းပါက 「5 / 3 回 · あと-2回」 (5 / 3 times · -2 left) ဟု ပေါ်လာပါမည်။ 「1つ戻す」 (Undo) သည် နှိပ်နိုင်သည့် ပုံစံ ပေါ်နေသော်လည်း <code>changeStamp</code> သည် ပန်းတိုင်ထက် ကျော်လွန်သော နောက်ထပ် အကြိမ်အရေအတွက်ကို လက်မခံသောကြောင့် နှိပ်သော်လည်း ပြောင်းလဲမည် မဟုတ်ပါ။ ထိုအခါတွင် hot restart ဖြင့် 0 သို့ ပြန်လည်ရောက်ရှိစေပါ။"
+    },
+    {
+      "source": "マークの色、習慣名、見出しも既習の場所で変更できます。回数の操作を直接別の変数へ分散させず、<code>count</code>を表示の基準に保ちます。変更後は最低0・上限・1つ戻すの3通りを確かめます。",
+      "translation": "Mark အရောင်၊ အလေ့အကျင့်အမည်နှင့် ခေါင်းစဉ်များကိုလည်း ယခင်က လေ့လာခဲ့သည့် နေရာများတွင် ပြောင်းလဲနိုင်ပါသည်။ အကြိမ်အရေအတွက် လုပ်ဆောင်ချက်များကို သီးခြား variable များထံသို့ တိုက်ရိုက် ပြန့်ကျဲမသွားစေဘဲ <code>count</code> ကို ပြသမှု၏ အခြေခံစံအဖြစ် ထိန်းသိမ်းပါ။ အပြောင်းအလဲ ပြုလုပ်ပြီးနောက် အနည်းဆုံး 0၊ အများဆုံးကန့်သတ်ချက်နှင့် 「1つ戻す」 (Undo) ဟူသော အခြေအနေ 3 မျိုးလုံးကို စစ်ဆေးပါ။"
+    },
+    {
+      "source": "どの値からどの表示が決まるか、<code>Habit.count</code>・<code>total</code>・<code>StampMarks</code>の関係をコードで確かめましょう。",
+      "translation": "မည်သည့်တန်ဖိုးမှ မည်သည့်ပြသမှုကို ဆုံးဖြတ်သည်ကို <code>Habit.count</code>၊ <code>total</code> နှင့် <code>StampMarks</code> တို့၏ ဆက်စပ်မှုအား ကုဒ်တွင် စစ်ဆေးကြည့်ကြပါစို့။"
+    },
+    {
+      "source": "Javaの変更しない基準値と同じ目的です。Dartの<code>const</code>はコンパイル時に確定する値で、今回の目標回数を1か所で管理します。新しい機能ではなく既存の数値と装飾をアレンジします。",
+      "translation": "၎င်းသည် Java တွင် မပြောင်းလဲသော စံတန်ဖိုးများနှင့် ရည်ရွယ်ချက် အတူတူပင် ဖြစ်ပါသည်။ Dart ၏ <code>const</code> သည် compile time တွင် အတည်ပြုသော တန်ဖိုးဖြစ်ပြီး ယခု ရည်မှန်းချက် အကြိမ်အရေအတွက်ကို တစ်နေရာတည်းတွင် စီမံခန့်ခွဲပါသည်။ လုပ်ဆောင်ချက် အသစ်များ ထပ်မထည့်ဘဲ ရှိပြီးသား ကိန်းဂဏန်းများနှင့် အလှဆင်မှုများကိုသာ စိတ်ကြိုက်ပြောင်းလဲပါ။"
+    },
+    {
+      "source": "目標と配色を変えても、上限・取消し・合計がそろった。",
+      "translation": "ပန်းတိုင်နှင့် အရောင်စပ်မှုကို ပြောင်းလဲသော်လည်း အများဆုံးကန့်သတ်ချက်၊ ပြန်ပြင်ခြင်းနှင့် စုစုပေါင်းတို့ ကိုက်ညီနေသည်ကို စစ်ဆေးအတည်ပြုခဲ့သည်။"
+    },
+    {
+      "source": "STEP 15 · コマ11",
+      "translation": "STEP 15 · အတန်းချိန် 11"
+    },
+    {
+      "source": "詳細へ渡す値を決める",
+      "translation": "Detail သို့ ပေးပို့မည့် တန်ဖိုးကို သတ်မှတ်ရန်"
+    },
+    {
+      "source": "Visual Studio Codeで<code>F01StampBoard</code>を開き、スタンプを増減できる一覧から再開します。今日は「続けたい理由」を別の画面で読めるようにします。",
+      "translation": "Visual Studio Code တွင် <code>F01StampBoard</code> ကို ဖွင့်ပြီး stamp တိုး/လျှော့ ပြုလုပ်နိုင်သော list မှ ပြန်လည်စတင်ပါ။ ယနေ့တွင် 「続けたい理由」 (the reason you want to keep going) ကို အခြား screen တစ်ခုတွင် ဖတ်ရှုနိုင်အောင် ပြုလုပ်ပါမည်。"
+    },
+    {
+      "source": "詳細へ渡すのは選んだ<code>Habit</code>です。名前だけでなく<code>reason</code>と<code>count</code>も1つの値として渡せるため、同じ内容をもう一度検索する必要がありません。詳細では編集せず、スタンプの操作は一覧へ戻って行います。",
+      "translation": "Detail သို့ ပေးပို့မည်မှာ ရွေးချယ်ထားသော <code>Habit</code> ဖြစ်ပါသည်။ အမည်သာမက <code>reason</code> နှင့် <code>count</code> တို့ကိုလည်း တန်ဖိုးတစ်ခုတည်းအဖြစ် ပေးပို့နိုင်သောကြောင့် တူညီသောအကြောင်းအရာကို နောက်တစ်ကြိမ် ထပ်မံရှာဖွေရန် မလိုအပ်ပါ။ Detail တွင် ပြင်ဆင်ခြင်း မပြုဘဲ stamp လုပ်ဆောင်ချက်များကို list သို့ ပြန်သွားပြီးမှ လုပ်ဆောင်ပါမည်။"
+    },
+    {
+      "source": "まず名前と<code>reason</code>を読み比べ、空の理由があれば記入します。個人的な内容を公開する必要はなく、架空の習慣でも構いません。クリック処理を増やす前に、表示に必要なデータが<code>Habit</code>へそろっていることを確認します。",
+      "translation": "ဦးစွာ အမည်နှင့် <code>reason</code> ကို နှိုင်းယှဉ်ဖတ်ရှုပြီး အလွတ်ဖြစ်နေသော အကြောင်းပြချက်များ ရှိပါက ဖြည့်သွင်းပါ။ ကိုယ်ရေးကိုယ်တာ အချက်အလက်များကို ထုတ်ဖော်ရန် မလိုအပ်ဘဲ စိတ်ကူးယဉ် အလေ့အကျင့် ဖြစ်လျှင်လည်း ရပါသည်။ Click လုပ်ဆောင်ချက်များ မထည့်သွင်းမီ ပြသရန် လိုအပ်သော data များသည် <code>Habit</code> တွင် ပြည့်စုံစွာ ရှိမရှိ စစ်ဆေးပါ။"
+    },
+    {
+      "source": "画面のデータをクラスへまとめる考え方はJavaと同じです。Dartの<code>final</code>は名前・理由の再代入を止め、回数だけが操作で変わります。画面間で何を渡すかを、モデルの項目で決めます。",
+      "translation": "Screen ၏ data များကို class ထဲတွင် စုစည်းသည့် အတွေးအခေါ်မှာ Java နှင့် အတူတူပင် ဖြစ်ပါသည်။ Dart ၏ <code>final</code> သည် အမည်နှင့် အကြောင်းပြချက်ကို ပြန်လည် assign မလုပ်ရန် တားဆီးပေးပြီး အကြိမ်အရေအတွက် တစ်ခုတည်းသာ လုပ်ဆောင်မှုကြောင့် ပြောင်းလဲပါသည်။ Screen အချင်းချင်း မည်သည့်အရာကို ပေးပို့မည်ကို model ၏ field များဖြင့် ဆုံးဖြတ်ပါသည်။"
+    },
+    {
+      "source": "選んだ<code>Habit</code>に詳細で必要な3項目がそろっている。",
+      "translation": "ရွေးချယ်ထားသော <code>Habit</code> တွင် detail အတွက် လိုအပ်သော အချက် 3 ချက် ပြည့်စုံစွာ ရှိနေသည်။"
+    },
+    {
+      "source": "STEP 16 · コマ11",
+      "translation": "STEP 16 · အတန်းချိန် 11"
+    },
+    {
+      "source": "Navigatorで詳細を開く",
+      "translation": "Navigator ဖြင့် detail ကို ဖွင့်ရန်"
+    },
+    {
+      "source": "カードに詳しく見るを加え、<code>openDetail(habit)</code>を呼びます。<code>openDetail</code>は<code>Navigator.push</code>へ<code>context</code>と<code>MaterialPageRoute</code>を渡し、ルートの<code>builder</code>で<code>HabitDetailPage</code>を作ります。",
+      "translation": "Card တွင် 「詳しく見る」 (View details) ကို ထည့်သွင်းပြီး <code>openDetail(habit)</code> ကို ခေါ်ယူပါ။ <code>openDetail</code> သည် <code>Navigator.push</code> သို့ <code>context</code> နှင့် <code>MaterialPageRoute</code> ကို ပေးပို့ပြီး route ၏ <code>builder</code> ဖြင့် <code>HabitDetailPage</code> ကို ဖန်တီးပေးပါသည်။"
+    },
+    {
+      "source": "<code>Navigator</code>は画面の重なりを管理します。<code>push</code>で詳細を上に載せるため、一覧の<code>State</code>は下に残ります。<code>MaterialPageRoute</code>の<code>&lt;void&gt;</code>は、この画面から結果の値を受け取らない指定です。<code>builder</code>の<code>context</code>は新しい画面を作る場所の情報です。",
+      "translation": "<code>Navigator</code> သည် screen များ ထပ်ဆင့်နေမှုကို စီမံခန့်ခွဲပါသည်။ <code>push</code> ဖြင့် detail ကို အပေါ်သို့ ထပ်တင်သောကြောင့် list ၏ <code>State</code> သည် အောက်တွင် ကျန်ရှိနေပါသည်။ <code>MaterialPageRoute</code> ၏ <code>&lt;void&gt;</code> သည် ဤ screen မှ ရလဒ်တန်ဖိုးကို ပြန်လည်လက်ခံမည် မဟုတ်ကြောင်း သတ်မှတ်ချက် ဖြစ်ပါသည်။ <code>builder</code> ၏ <code>context</code> သည် screen အသစ်ကို ဖန်တီးသည့် နေရာ၏ အချက်အလက် ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "詳細の<code>AppBar</code>には戻る操作が自動で付きます。この単元では名前付きルートや追加パッケージを使わず、移動先の型と渡す値が同じ場所で見える書き方にします。",
+      "translation": "Detail ၏ <code>AppBar</code> တွင် ပြန်သွားသည့် လုပ်ဆောင်ချက်သည် အလိုအလျောက် ပါဝင်လာပါသည်။ ဤယူနစ်တွင် named route များနှင့် အပို package များကို အသုံးမပြုဘဲ သွားရောက်မည့် နေရာ၏ type နှင့် ပေးပို့မည့် တန်ဖိုးတို့ကို နေရာတစ်ခုတည်း၌ တွေ့မြင်နိုင်သော ပုံစံဖြင့် ရေးသားပါမည်။"
+    },
+    {
+      "source": "1件目を1回押してから、詳しく見るを押します。",
+      "translation": "ပထမ item ကို 1 ကြိမ် နှိပ်ပြီးနောက် 「詳しく見る」 (View details) ကို နှိပ်ပါ။"
+    },
+    {
+      "source": "詳細の名前と回数が選んだカードに一致することを確かめます。",
+      "translation": "Detail ရှိ အမည်နှင့် အကြိမ်အရေအတွက်သည် ရွေးချယ်ထားသော card နှင့် ကိုက်ညီကြောင်း စစ်ဆေးပါ။"
+    },
+    {
+      "source": "戻ると一覧の1回が残ることを確かめます。",
+      "translation": "နောက်သို့ ပြန်သွားပြီး list တွင် 1 ကြိမ် ကျန်ရှိနေသည်ကို စစ်ဆေးပါ။"
+    },
+    {
+      "source": "Swiftのナビゲーションで次の画面へ値を渡して積む操作に対応します。Flutterはコンストラクタの名前付き引数<code>habit</code>で渡します。一覧を作り直して置き換える操作ではないため、戻ったときの<code>State</code>を保持できます。",
+      "translation": "၎င်းသည် Swift navigation တွင် နောက် screen သို့ တန်ဖိုးများ ပေးပို့ပြီး ထပ်ဆင့်တင်သည့် လုပ်ဆောင်ချက်နှင့် သက်ဆိုင်ပါသည်။ Flutter သည် constructor ၏ named argument <code>habit</code> ဖြင့် ပေးပို့ပါသည်။ List ကို ပြန်လည်ဖန်တီးပြီး အစားထိုးသည့် လုပ်ဆောင်ချက် မဟုတ်သောကြောင့် ပြန်သွားသည့်အခါ <code>State</code> ကို ထိန်းသိမ်းထားနိုင်ပါသည်။"
+    },
+    {
+      "source": "選んだカードの詳細へ移り、戻って回数が維持された。",
+      "translation": "ရွေးချယ်ထားသော card ၏ detail သို့ သွားရောက်ပြီး ပြန်လာသည့်အခါ အကြိမ်အရေအတွက် ထိန်းသိမ်းထားနိုင်ခဲ့သည်။"
+    },
+    {
+      "source": "STEP 17 · コマ11",
+      "translation": "STEP 17 · အတန်းချိန် 11"
+    },
+    {
+      "source": "受け取った習慣を表示する",
+      "translation": "လက်ခံရရှိသော အလေ့အကျင့်ကို ပြသရန်"
+    },
+    {
+      "source": "<code>HabitDetailPage</code>は受け取った<code>Habit</code>を表示するだけなので<code>StatelessWidget</code>です。<code>const HabitDetailPage({super.key, required this.habit})</code>で<code>habit</code>を必須にし、<code>final</code>フィールドへ保持します。",
+      "translation": "<code>HabitDetailPage</code> သည် လက်ခံရရှိသော <code>Habit</code> ကို ပြသရန်သာ ဖြစ်သောကြောင့် <code>StatelessWidget</code> ဖြစ်ပါသည်။ <code>const HabitDetailPage({super.key, required this.habit})</code> ဖြင့် <code>habit</code> ကို မဖြစ်မနေ လိုအပ်စေပြီး <code>final</code> field တွင် ထိန်းသိမ်းထားပါသည်။"
+    },
+    {
+      "source": "本文は<code>SafeArea</code>の中の<code>ListView</code>へ名前・<code>StampMarks</code>・回数・理由を並べます。続けたい理由の<code>TextStyle</code>は<code>height: 1.7</code>で行間を確保します。長い理由は折り返し、縦の領域が足りなければスクロールできます。",
+      "translation": "အဓိကအကြောင်းအရာတွင် <code>SafeArea</code> အတွင်းရှိ <code>ListView</code> ထဲ၌ အမည်၊ <code>StampMarks</code>၊ အကြိမ်အရေအတွက်နှင့် အကြောင်းပြချက်တို့ကို စီစဉ်ထားပါသည်။ ဆက်လက်လုပ်ဆောင်လိုသော အကြောင်းပြချက်၏ <code>TextStyle</code> တွင် <code>height: 1.7</code> ဖြင့် စာကြောင်းအကွာအဝေးကို ရယူထားပါသည်။ ရှည်လျားသော အကြောင်းပြချက်များသည် အောက်ကြောင်းသို့ ခေါက်ဆင်းသွားမည်ဖြစ်ပြီး ဒေါင်လိုက်နေရာလွတ် မလုံလောက်ပါက scroll ပြုလုပ်နိုင်ပါသည်။"
+    },
+    {
+      "source": "一覧と詳細で同じ<code>StampMarks</code>を使うため、目標回数や色の基準がそろいます。詳細へ新しい<code>count</code>の状態は作りません。受け取った<code>habit.count</code>をそのまま表示します。",
+      "translation": "List နှင့် detail တွင် တူညီသော <code>StampMarks</code> ကို အသုံးပြုသောကြောင့် ရည်မှန်းချက် အကြိမ်အရေအတွက်နှင့် အရောင်၏ စံနှုန်းများ ကိုက်ညီနေပါသည်။ Detail တွင် <code>count</code> ၏ state အသစ်ကို မဖန်တီးဘဲ လက်ခံရရှိသော <code>habit.count</code> ကို ထိုအတိုင်း ပြသပါသည်။"
+    },
+    {
+      "source": "3件とも詳細を開き、理由の取り違えがないか、長文が読めるかを確かめます。",
+      "translation": "Item 3 ခုစလုံး၏ detail ကို ဖွင့်ပြီး အကြောင်းပြချက်များ မှားယွင်းရောထွေးခြင်း မရှိစေရန်နှင့် စာသားရှည်များကို ဖတ်ရှုနိုင်ခြင်း ရှိမရှိ စစ်ဆေးပါ။"
+    },
+    {
+      "source": "Swiftの初期化時に値を受け取る形に対応します。Dartは<code>required</code> <code>this.habit</code>で必須引数と代入をまとめます。表示専用だから<code>StatelessWidget</code>を選び、更新を管理する<code>State</code>を余分に作りません。",
+      "translation": "၎င်းသည် Swift တွင် initialize လုပ်ချိန်၌ တန်ဖိုးများကို လက်ခံရရှိသည့် ပုံစံနှင့် သက်ဆိုင်ပါသည်။ Dart တွင် <code>required</code> <code>this.habit</code> ဖြင့် မဖြစ်မနေ လိုအပ်သော argument နှင့် assign လုပ်ခြင်းကို တစ်ပြိုင်နက် လုပ်ဆောင်ပါသည်။ ပြသရန်အတွက်သာ ဖြစ်သောကြောင့် <code>StatelessWidget</code> ကို ရွေးချယ်ပြီး update များကို စီမံခန့်ခွဲမည့် ပိုလျှံသော <code>State</code> ကို မဖန်တီးပါ။"
+    },
+    {
+      "source": "3件の名前・回数・理由が正しく表示された。",
+      "translation": "Item 3 ခုစလုံး၏ အမည်၊ အကြိမ်အရေအတွက်နှင့် အကြောင်းပြချက်တို့ကို မှန်ကန်စွာ ပြသနိုင်ခဲ့သည်။"
+    },
+    {
+      "source": "STEP 18 · コマ11",
+      "translation": "STEP 18 · အတန်းချိန် 11"
+    },
+    {
+      "source": "一覧と詳細を通して確かめる",
+      "translation": "List နှင့် detail တစ်လျှောက် စစ်ဆေးရန်"
+    },
+    {
+      "source": "最後に一覧と詳細を通して動かします。説明を読めるだけでなく、変更したデータが操作中も一致することを確かめます。",
+      "translation": "နောက်ဆုံးအနေဖြင့် list နှင့် detail တစ်လျှောက် စမ်းသပ် run ကြည့်ပါမည်။ ရှင်းလင်းချက်များကို ဖတ်ရှုနိုင်ရုံသာမက ပြင်ဆင်ထားသော data များသည် လုပ်ဆောင်နေစဉ်အတွင်းလည်း ကိုက်ညီနေသည်ကို စစ်ဆေးပါ။"
+    },
+    {
+      "source": "一覧で初期3件と合計0を確認します。",
+      "translation": "List တွင် ကနဦး item 3 ခုနှင့် စုစုပေါင်း 0 ကို စစ်ဆေးပါ။"
+    },
+    {
+      "source": "1件を5回まで押し、上限を確認して1つ戻します。",
+      "translation": "Item တစ်ခုကို 5 ကြိမ်အထိ နှိပ်ပြီး အများဆုံးကန့်သတ်ချက်ကို စစ်ဆေးကာ 「1つ戻す」 (Undo) ဖြင့် 1 ကြိမ် ပြန်ပြင်ပါ။"
+    },
+    {
+      "source": "詳しく見るで名前・4回・理由が合うことを確認します。",
+      "translation": "「詳しく見る」 (View details) တွင် အမည်၊ 4 ကြိမ်နှင့် အကြောင်းပြချက်တို့ ကိုက်ညီကြောင်း စစ်ဆေးပါ။"
+    },
+    {
+      "source": "戻って別のカードも操作し、合計と各回数の関係を確認します。",
+      "translation": "နောက်သို့ ပြန်သွားပြီး အခြား card တစ်ခုကိုလည်း စမ်းသပ်လုပ်ဆောင်ကာ စုစုပေါင်းနှင့် အကြိမ်အရေအတွက် တစ်ခုချင်းစီ၏ ဆက်စပ်မှုကို စစ်ဆေးပါ။"
+    },
+    {
+      "source": "ホットリスタートで初期状態へ戻ることを確認します。",
+      "translation": "Hot restart ဖြင့် ကနဦးအခြေအနေသို့ ပြန်လည်ရောက်ရှိသွားသည်ကို စစ်ဆေးပါ။"
+    },
+    {
+      "source": "<code>flutter analyze</code>をプロジェクトのターミナルで実行し、指摘があれば最初の行から直します。実行中の<code>flutter run</code>とは別のターミナルを開いて構いません。解析は画面操作の確認を代わりに行うものではありません。",
+      "translation": "Project ၏ terminal တွင် <code>flutter analyze</code> ကို run ပြီး သတိပေးချက်များ ရှိပါက ပထမဆုံး စာကြောင်းမှ စတင်၍ ပြင်ဆင်ပါ။ Run နေသော <code>flutter run</code> နှင့် မတူသည့် သီးခြား terminal တစ်ခုကို ဖွင့်နိုင်ပါသည်။ Analysis လုပ်ဆောင်ချက်သည် screen လုပ်ဆောင်ချက်များကို စစ်ဆေးခြင်းအတွက် အစားထိုး မဟုတ်ပါ။"
+    },
+    {
+      "source": "範囲を守る条件はJavaと同じです。Flutterの画面が正しく見えていても、データ・上限・遷移が合うかは操作して確かめます。構文や型の静的解析と、画面の確認を分けます。",
+      "translation": "သတ်မှတ်ဘောင်အတွင်း ထိန်းသိမ်းသည့် အခြေအနေမှာ Java နှင့် အတူတူပင် ဖြစ်ပါသည်။ Flutter ၏ screen သည် မှန်ကန်စွာ ပေါ်နေသော်လည်း data၊ အများဆုံးကန့်သတ်ချက်နှင့် navigation တို့ ကိုက်ညီမှု ရှိမရှိကို လက်တွေ့လုပ်ဆောင်ပြီး စစ်ဆေးပါ။ Syntax နှင့် type များ၏ static analysis နှင့် screen စစ်ဆေးခြင်းတို့ကို သီးခြားစီ ခွဲခြားထားပါ။"
+    },
+    {
+      "source": "一覧・詳細・境界・再起動を一続きで確認できた。",
+      "translation": "List၊ detail၊ ကန့်သတ်ချက်ဘောင်နှင့် restart ပြုလုပ်ခြင်းတို့ကို ဆက်တိုက် စစ်ဆေးအတည်ပြုနိုင်ခဲ့သည်။"
+    },
+    {
+      "source": "STEP 19 · コマ11",
+      "translation": "STEP 19 · အတန်းချိန် 11"
+    },
+    {
+      "source": "アレンジできる場所を確かめる",
+      "translation": "customize ပြုလုပ်နိုင်သော နေရာများကို စစ်ဆေးခြင်း"
+    },
+    {
+      "source": "仕上げに、自分の題材で使いやすいスタンプ帳にします。変更する場所は、ここまでに扱った範囲から選びます。",
+      "translation": "အပြီးသတ်အနေဖြင့် မိမိ၏ ကိုယ်ပိုင်အကြောင်းအရာဖြင့် သုံးရလွယ်ကူသော stamp board တစ်ခု ဖြစ်လာအောင် ပြုလုပ်ပါ။ ပြောင်းလဲရမည့် နေရာများကို ယခုအချိန်အထိ လေ့လာခဲ့သည့် ဘောင်အတွင်းမှ ရွေးချယ်ပါ။"
+    },
+    {
+      "source": "一覧の名前と詳細の理由。",
+      "translation": "List ရှိ အမည်များနှင့် detail ရှိ အကြောင်းပြချက်များ။"
+    },
+    {
+      "source": "マーク数・回数の上限・達成の表示。",
+      "translation": "Mark အရေအတွက်၊ အကြိမ်အရေအတွက် အများဆုံးကန့်သတ်ချက်နှင့် အောင်မြင်မှု ပြသချက်။"
+    },
+    {
+      "source": "<code>seedColor</code>と<code>StampMarks</code>の色",
+      "translation": "<code>seedColor</code> နှင့် <code>StampMarks</code> ၏ အရောင်များ"
+    },
+    {
+      "source": "ボタンとスタンプの配色。",
+      "translation": "ခလုတ်များနှင့် stamp များ၏ အရောင်စပ်မှု။"
+    },
+    {
+      "source": "<code>Text</code>の文章・<code>TextStyle</code>・余白",
+      "translation": "<code>Text</code> ၏ စာသား၊ <code>TextStyle</code> နှင့် margin များ"
+    },
+    {
+      "source": "見出しや詳細の読みやすさ。",
+      "translation": "ခေါင်းစဉ်များနှင့် detail များ၏ ဖတ်ရှုရ လွယ်ကူမှု။"
+    },
+    {
+      "source": "初期データを変えたらホットリスタートし、全件の詳細と上限・戻す操作を再確認します。どの値を変え、画面のどこが変わったかを確かめてコマを終えます。次回の合流のため、自分の変更箇所を控えてください。",
+      "translation": "ကနဦး data များကို ပြောင်းလဲပြီးနောက် hot restart ပြုလုပ်ကာ item အားလုံး၏ detail၊ အများဆုံးကန့်သတ်ချက်နှင့် ပြန်ပြင်သည့် လုပ်ဆောင်ချက်များကို ပြန်လည်စစ်ဆေးပါ။ မည်သည့်တန်ဖိုးကို ပြောင်းလဲခဲ့ပြီး screen ၏ မည်သည့်နေရာ ပြောင်းလဲသွားသည်ကို စစ်ဆေးအတည်ပြုပြီး အတန်းချိန်ကို အဆုံးသတ်ပါ။ နောက်တစ်ကြိမ်တွင် ချောမွေ့စွာ ပြန်လည်ပူးပေါင်းနိုင်ရန် မိမိ ပြောင်းလဲခဲ့သော နေရာများကို မှတ်သားထားပါ။"
+    },
+    {
+      "source": "Web基礎のデータの項目を変更する目的と同じです。Flutterでは<code>Habit</code>の型に沿って値を渡し、その値から一覧と詳細を作ります。自分の題材でも表示と操作がそろうことを確かめましょう。",
+      "translation": "Web အခြေခံတွင် data field များကို ပြောင်းလဲသည့် ရည်ရွယ်ချက်နှင့် အတူတူပင် ဖြစ်ပါသည်။ Flutter တွင် <code>Habit</code> type နှင့်အညီ တန်ဖိုးများကို ပေးပို့ပြီး ထိုတန်ဖိုးများမှ list နှင့် detail များကို တည်ဆောက်ပါသည်။ မိမိ၏ ကိုယ်ပိုင်အကြောင်းအရာတွင်လည်း ပြသမှုနှင့် လုပ်ဆောင်ချက်များ ကိုက်ညီနေသည်ကို စစ်ဆေးကြည့်ကြပါစို့။"
+    },
+    {
+      "source": "変更箇所が画面に現れ、自分の題材でも一連の操作が動いた。",
+      "translation": "ပြောင်းလဲခဲ့သော နေရာများသည် screen ပေါ်တွင် ပေါ်လာပြီး မိမိ၏ ကိုယ်ပိုင်အကြောင်းအရာဖြင့်လည်း ဆက်စပ်လုပ်ဆောင်ချက်များ အလုပ်လုပ်ခဲ့သည်။"
+    },
+    {
+      "source": "状態",
+      "translation": "အခြေအနေ"
+    },
+    {
+      "source": "確認するところ",
+      "translation": "စစ်ဆေးရမည့်အရာ"
+    },
+    {
+      "source": "flutterが見つからない",
+      "translation": "flutter ကို ရှာမတွေ့ပါ"
+    },
+    {
+      "source": "共通資料のSDK・<code>PATH</code>を確認し、Visual Studio Codeとターミナルを開き直す。",
+      "translation": "အထွေထွေလမ်းညွှန်ရှိ SDK နှင့် <code>PATH</code> ကို စစ်ဆေးပြီး Visual Studio Code နှင့် Terminal ကို ပြန်ဖွင့်ပါ။"
+    },
+    {
+      "source": "<code>pubspec.yaml</code>が見つからない",
+      "translation": "<code>pubspec.yaml</code> ကို ရှာမတွေ့ပါ"
+    },
+    {
+      "source": "<code>File &gt; Open Folder…</code>で<code>F01StampBoard</code>そのものを開く。親の<code>HybridApp</code>ではない。",
+      "translation": "<code>File &gt; Open Folder…</code> တွင် <code>F01StampBoard</code> ကိုယ်တိုင်ကို ဖွင့်ပါ။ မိဘ folder ဖြစ်သော <code>HybridApp</code> မဟုတ်ပါ။"
+    },
+    {
+      "source": "端末が表示されない",
+      "translation": "စက် ပေါ်မလာပါ"
+    },
+    {
+      "source": "<code>Flutter: Launch Emulator</code>で既存のiOS端末を起動し、<code>flutter devices</code>でIDを確認。",
+      "translation": "<code>Flutter: Launch Emulator</code> ဖြင့် လက်ရှိ iOS စက်ကို စတင် run ပြီး <code>flutter devices</code> ဖြင့် ID ကို စစ်ဆေးပါ။"
+    },
+    {
+      "source": "画面が変わらない",
+      "translation": "Screen ပြောင်းလဲခြင်း မရှိပါ"
+    },
+    {
+      "source": "保存、実行中のプロジェクト、ホットリロードの結果を確認。初期値の変更はホットリスタート。",
+      "translation": "သိမ်းဆည်းမှု၊ run နေသော project နှင့် hot reload ၏ ရလဒ်ကို စစ်ဆေးပါ။ ကနဦးတန်ဖိုးများ ပြောင်းလဲခြင်းအတွက် hot restart ကို အသုံးပြုပါ။"
+    },
+    {
+      "source": "括弧のエラーが出た",
+      "translation": "လက်သည်းကွင်း error ပေါ်လာပါသည်"
+    },
+    {
+      "source": "最初のエラーから確認。<code>child</code>は1つ、<code>children</code>はリスト。各STEPの全文で閉じ括弧を照合。",
+      "translation": "ပထမဆုံး error မှ စတင်စစ်ဆေးပါ။ <code>child</code> သည် တစ်ခုတည်းဖြစ်ပြီး <code>children</code> သည် list ဖြစ်ပါသည်။ STEP တစ်ခုချင်းစီ၏ ကုဒ်အပြည့်အစုံနှင့် ပိတ်လက်သည်းကွင်းများကို တိုက်စစ်ပါ။"
+    },
+    {
+      "source": "再起動すると0に戻った",
+      "translation": "ပြန်လည်စတင်သောအခါ 0 သို့ ပြန်လည်ရောက်ရှိသွားသည်"
+    },
+    {
+      "source": "この単元はメモリだけ。保存していないため正常。",
+      "translation": "ဤယူနစ်တွင် memory တွင်သာ ရှိပါသည်။ သိမ်းဆည်းထားခြင်း မရှိသောကြောင့် ပုံမှန်ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "残り回数が負になり、1つ戻すが効かない",
+      "translation": "ကျန်ရှိသော အကြိမ်အရေအတွက် အနှုတ်ဖြစ်သွားပြီး 「1つ戻す」 (Undo) သည် အလုပ်မလုပ်ပါ"
+    },
+    {
+      "source": "回数が目標を超えたまま<code>stampGoal</code>を減らし、ホットリロードした。ホットリスタートで0に戻す。",
+      "translation": "အကြိမ်အရေအတွက် ပန်းတိုင်ထက် ကျော်လွန်နေစဉ် <code>stampGoal</code> ကို လျှော့ချပြီး hot reload ပြုလုပ်ခဲ့သည်။ Hot restart ဖြင့် 0 သို့ ပြန်လည်ရောက်ရှိစေပါ။"
+    },
+    {
+      "source": "配布フォルダの<code>~/Documents/hybrid-app-student-materials-日付/samples/F01StampBoard</code>をFinderで開き、そのフォルダをVisual Studio Codeの<code>File &gt; Open Folder…</code>で開きます。<code>pubspec.yaml</code>が入っている階層を選びます。展開は済んでいるので、ZIPのダウンロードは要りません。自分の制作フォルダと混ぜず、見比べるために使います。",
+      "translation": "ဖြန့်ဝေထားသော folder ဖြစ်သည့် <code>~/Documents/hybrid-app-student-materials-日付/samples/F01StampBoard</code> ကို Finder တွင် ဖွင့်ပြီး ထို folder ကို Visual Studio Code ၏ <code>File &gt; Open Folder…</code> ဖြင့် ဖွင့်ပါ (日付 ကို သက်ဆိုင်ရာ ရက်စွဲဖြင့် ဖတ်ရှုပါ)။ <code>pubspec.yaml</code> ပါဝင်သော အဆင့်ကို ရွေးချယ်ပါ။ ဖြည်ချပြီးဖြစ်သောကြောင့် ZIP ဒေါင်းလုဒ်ဆွဲရန် မလိုအပ်ပါ။ မိမိ လုပ်ဆောင်နေသော folder နှင့် မရောထွေးစေဘဲ နှိုင်းယှဉ်ကြည့်ရန်အတွက်သာ အသုံးပြုပါ။"
+    },
+    {
+      "source": "<code>Terminal &gt; New Terminal</code>で<code>flutter pub get</code>、<code>flutter analyze</code>を実行します。<code>Flutter: Launch Emulator</code>から既存iOSシミュレータを選び、<code>flutter devices</code>でIDを見て、<code>flutter run -d 端末ID</code>で実行します。端末IDは表示された値に置き換えます。",
+      "translation": "<code>Terminal &gt; New Terminal</code> တွင် <code>flutter pub get</code>၊ <code>flutter analyze</code> တို့ကို run ပါ။ <code>Flutter: Launch Emulator</code> မှ လက်ရှိ iOS simulator ကို ရွေးချယ်ပြီး <code>flutter devices</code> ဖြင့် ID ကို ကြည့်ရှုကာ <code>flutter run -d 端末ID</code> ဖြင့် run ပါ။ 端末ID (စက် ID) ကို ပြသထားသော တန်ဖိုးဖြင့် အစားထိုးပါ။"
+    },
+    {
+      "source": "JEC / ハイブリッドアプリ開発技法 · F01StampBoard",
+      "translation": "JEC / Hybrid App Development · F01StampBoard"
+    }
+  ]
+}

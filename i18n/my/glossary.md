@@ -61,7 +61,7 @@
 | ホットリロード | hot reload | |
 | 画面遷移 | screen navigation | `Navigator` は `<code>` のまま |
 | 非同期 | asynchronous | `async` / `await` は `<code>` のまま |
-| コマ | အတန်းချိန် | 1コマ＝90分の授業1回。要確認 |
+| コマ | အတန်းချိန် | 1コマ＝90分の授業1回 |
 
 ## Web基礎で習った用語
 
