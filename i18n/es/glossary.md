@@ -49,7 +49,7 @@
 | インポート・取り込む | importar | ダッシュボードの **インポート** は日本語のまま残す。Dart の `import` 文は `<code>` の中なので関係ない |
 | エクスポート | exportar | Freeプランでは使えない |
 | プレビュー | vista previa | クラウドIDEの画面名 **プレビュー** は日本語のまま残す |
-| ビルド | compilación | 動詞は compilar。build と英字のまま書く資料もある。要確認 |
+| ビルド | compilación | 動詞は compilar。build と英字のまま書く資料もある |
 | クラウドビルド | compilación en la nube | ビルドの訳語にそろえる |
 | デバッグ | depuración | 動詞は depurar |
 | 実機 | dispositivo físico | |
@@ -58,7 +58,7 @@
 | ウィジェット | widget | 男性名詞（el widget）。個々のクラス名（`Text`、`Scaffold`）は `<code>` の中なので訳さない |
 | 宣言的UI | UI declarativa | 女性名詞（la UI） |
 | 状態 | estado | `setState` は `<code>` のまま |
-| ホットリロード | hot reload | 英字のまま。男性名詞（el hot reload）。recarga en caliente と訳す資料もある。要確認 |
+| ホットリロード | hot reload | 英字のまま。男性名詞（el hot reload）。recarga en caliente と訳す資料もある |
 | 画面遷移 | navegación entre pantallas | `Navigator` は `<code>` のまま |
 | 非同期 | asíncrono | `async` / `await` は `<code>` のまま |
 | コマ | clase | 1コマ＝90分の授業1回。「2コマ目」は clase 2 |
