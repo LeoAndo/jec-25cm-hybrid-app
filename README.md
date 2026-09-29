@@ -223,7 +223,7 @@ python3 scripts/package-student-materials.py
 
 日本語で書いた教科書（`docs/`）を、配布前に学生の母国語へ展開します。対象は、日本語のほかに次の9言語です。スペイン語・台湾華語・アラビア語・モンゴル語は、2026-09の学生アンケートで加えました。
 
-**初版（2026-09-28 の授業開始）は、英語（`en`）と中国語（簡体）（`zh-Hans`）だけを配布対象にしました（2026-09-25 オーナー決定）。** ほかの7言語は `distribute: false` のままで、後期の授業が始まってから1言語ずつ段階的に進めます。`false` の言語は、未翻訳が残ったまま配布対象にすると公開ゲートで止まります。全文を訳し終え、別のAIがその言語の全文を1回照合した言語から、その言語だけ `distribute` を `true` に上げてください。**照合は、学生の手に渡る前のこの1回を中心にします**（2026-09-25 オーナー決定、[#87](https://github.com/LeoAndo/jec-25cm-hybrid-app/issues/87)。Kotlin演習の [jec-25cm-kotlin](https://github.com/LeoAndo/jec-25cm-kotlin) と同じ決まりです）。配布していない言語の翻訳PRでは照合しません。くわしくは [AGENTS.md](AGENTS.md) §12 と [翻訳用skill](skills/translate-teaching-materials/SKILL.md) の「別のモデルによる照合」にあります。
+**初版（2026-09-28 の授業開始）は英語（`en`）・中国語（簡体）（`zh-Hans`）を配布対象とし、続いて広東語（繁体・香港）（`zh-Hant-HK`）を追加しました（2026-09-29 追加）。** ほかの6言語は `distribute: false` のままで、後期の授業が始まってから1言語ずつ段階的に進めます。`false` の言語は、未翻訳が残ったまま配布対象にすると公開ゲートで止まります。全文を訳し終え、別のAIがその言語の全文を1回照合した言語から、その言語だけ `distribute` を `true` に上げてください。**照合は、学生の手に渡る前のこの1回を中心にします**（2026-09-25 オーナー決定、[#87](https://github.com/LeoAndo/jec-25cm-hybrid-app/issues/87)。Kotlin演習の [jec-25cm-kotlin](https://github.com/LeoAndo/jec-25cm-kotlin) と同じ決まりです）。配布していない言語の翻訳PRでは照合しません。くわしくは [AGENTS.md](AGENTS.md) §12 と [翻訳用skill](skills/translate-teaching-materials/SKILL.md) の「別のモデルによる照合」にあります。
 
 | 言語 | コード | `distribute` | 書き方 |
 | --- | --- | --- | --- |
@@ -231,7 +231,7 @@ python3 scripts/package-student-materials.py
 | 中国語 | `zh-Hans` | `true` | 簡体字 |
 | 韓国語 | `ko` | `false` | |
 | ミャンマー語 | `my` | `false` | Unicode |
-| 広東語 | `zh-Hant-HK` | `false` | 繁体字の書き言葉に、香港の語彙を使う |
+| 広東語 | `zh-Hant-HK` | `true` | 繁体字の書き言葉に、香港の語彙を使う |
 | 台湾華語 | `zh-Hant-TW` | `false` | 繁体字に、台湾の語彙を使う |
 | スペイン語 | `es` | `false` | 中南米の言い方 |
 | アラビア語 | `ar` | `false` | 右から左に書く（`dir` が `rtl`） |
