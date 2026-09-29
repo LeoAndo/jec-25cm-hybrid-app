@@ -104,7 +104,7 @@
     {
       "code": "my",
       "name": "မြန်မာဘာသာ",
-      "distribute": false,
+      "distribute": true,
       "ui": {
         "copy": "ကူးယူမည်",
         "copy_label": "{title} အတွက် ကုဒ်ကို ကူးယူမည်",
