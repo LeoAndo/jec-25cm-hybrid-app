@@ -142,7 +142,7 @@
     {
       "code": "ar",
       "name": "العربية",
-      "distribute": false,
+      "distribute": true,
       "dir": "rtl",
       "ui": {
         "copy": "نسخ",

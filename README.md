@@ -35,7 +35,7 @@ JEC（25CM）の「ハイブリッドアプリ開発技法」で使う教材で�
 
 展開後、はじめて授業を受ける学生は [共通資料：授業を始めるまでの準備](docs/common/setup.html) をブラウザで開き、第1コマにSTEP 1〜3、第7コマにSTEP 4〜7を進めます（同梱の `はじめに.txt` でも、単元一覧より前に案内しています）。準備が済んだら、その日の単元の教科書をブラウザで開きます。
 
-学生用ZIPには `docs` 一式と、開き方・版情報を収録します。**いまは日本語・英語（`en`）・中国語（簡体）（`zh-Hans`）・広東語（繁体・香港）（`zh-Hant-HK`）・台湾華語（`zh-Hant-TW`）・韓国語（`ko`）・スペイン語（`es`）・ミャンマー語（`my`）の8言語で配布します。** 展開してできたフォルダには `docs` / `samples` / `はじめに.txt` / `VERSION.json` があります。現在の登録単元は `M01OshiList`・`M02OshiSave`・`F01StampBoard`・`F02StampRelease` で、`samples/` に各完成見本を展開済みで収録します。`samples` はコードを読み比べるために使い、Monacaで動かすときは教科書の取り込み用URLから取り込みます。展開したフォルダは `~/Documents`（書類）の直下に置き（`~/Documents/hybrid-app-student-materials-日付`）、学生自身が作るプロジェクトは配布フォルダの外の `~/Documents/HybridApp` に置きます（2026-09-25 先生レビュー、#135）。フォルダの直下には言語を選ぶ入口の `index.html` があり、`はじめに.txt` にも各言語の案内が付きます。入口に並ぶのは、`config/i18n.json` で `distribute: true` の言語だけです（「多言語展開」）。ほかの2言語は、翻訳と照合を終えて `distribute: true` にした時点で入口に加わります。`teacher` フォルダとテンプレート原本（`MonacaTemplate`・`MonacaMinimumTemplate`）は収録しません。GitHubが自動で表示する **Source code (zip)** はリポジトリ全体のため、学生用ZIPには使いません。なお、このリポジトリ自体はPublicなので、教員用ファイルもGitHub上では閲覧できます。
+学生用ZIPには `docs` 一式と、開き方・版情報を収録します。**いまは日本語・英語（`en`）・中国語（簡体）（`zh-Hans`）・広東語（繁体・香港）（`zh-Hant-HK`）・台湾華語（`zh-Hant-TW`）・韓国語（`ko`）・スペイン語（`es`）・ミャンマー語（`my`）・アラビア語（`ar`）の9言語で配布します。** 展開してできたフォルダには `docs` / `samples` / `はじめに.txt` / `VERSION.json` があります。現在の登録単元は `M01OshiList`・`M02OshiSave`・`F01StampBoard`・`F02StampRelease` で、`samples/` に各完成見本を展開済みで収録します。`samples` はコードを読み比べるために使い、Monacaで動かすときは教科書の取り込み用URLから取り込みます。展開したフォルダは `~/Documents`（書類）の直下に置き（`~/Documents/hybrid-app-student-materials-日付`）、学生自身が作るプロジェクトは配布フォルダの外の `~/Documents/HybridApp` に置きます（2026-09-25 先生レビュー、#135）。フォルダの直下には言語を選ぶ入口の `index.html` があり、`はじめに.txt` にも各言語の案内が付きます。入口に並ぶのは、`config/i18n.json` で `distribute: true` の言語だけです（「多言語展開」）。ほかの1言語は、翻訳と照合を終えて `distribute: true` にした時点で入口に加わります。`teacher` フォルダとテンプレート原本（`MonacaTemplate`・`MonacaMinimumTemplate`）は収録しません。GitHubが自動で表示する **Source code (zip)** はリポジトリ全体のため、学生用ZIPには使いません。なお、このリポジトリ自体はPublicなので、教員用ファイルもGitHub上では閲覧できます。
 
 授業中は教員が指定した版を使います。授業ごとの案内には、内容が固定された個別リリースのURLを使ってください。更新版も `~/Documents` の直下に別フォルダとして展開し、学生自身のプロジェクト（`~/Documents/HybridApp`）は上書きしません。
 
@@ -223,7 +223,7 @@ python3 scripts/package-student-materials.py
 
 日本語で書いた教科書（`docs/`）を、配布前に学生の母国語へ展開します。対象は、日本語のほかに次の9言語です。スペイン語・台湾華語・アラビア語・モンゴル語は、2026-09の学生アンケートで加えました。
 
-**初版（2026-09-28 の授業開始）は英語（`en`）・中国語（簡体）（`zh-Hans`）を配布対象とし、続いて広東語（繁体・香港）（`zh-Hant-HK`）、台湾華語（`zh-Hant-TW`）、韓国語（`ko`）、スペイン語（`es`）、ミャンマー語（`my`）を追加しました（2026-09-29 追加）。** ほかの2言語は `distribute: false` のままで、後期の授業が始まってから1言語ずつ段階的に進めます。`false` の言語は、未翻訳が残ったまま配布対象にすると公開ゲートで止まります。全文を訳し終え、別のAIがその言語の全文を1回照合した言語から、その言語だけ `distribute` を `true` に上げてください。**照合は、学生の手に渡る前のこの1回を中心にします**（2026-09-25 オーナー決定、[#87](https://github.com/LeoAndo/jec-25cm-hybrid-app/issues/87)。Kotlin演習の [jec-25cm-kotlin](https://github.com/LeoAndo/jec-25cm-kotlin) と同じ決まりです）。配布していない言語の翻訳PRでは照合しません。くわしくは [AGENTS.md](AGENTS.md) §12 と [翻訳用skill](skills/translate-teaching-materials/SKILL.md) の「別のモデルによる照合」にあります。
+**初版（2026-09-28 の授業開始）は英語（`en`）・中国語（簡体）（`zh-Hans`）を配布対象とし、続いて広東語（繁体・香港）（`zh-Hant-HK`）、台湾華語（`zh-Hant-TW`）、韓国語（`ko`）、スペイン語（`es`）、ミャンマー語（`my`）、アラビア語（`ar`）を追加しました（2026-09-29 追加）。** ほかの1言語は `distribute: false` のままで、後期の授業が始まってから1言語ずつ段階的に進めます。`false` の言語は、未翻訳が残ったまま配布対象にすると公開ゲートで止まります。全文を訳し終え、別のAIがその言語の全文を1回照合した言語から、その言語だけ `distribute` を `true` に上げてください。**照合は、学生の手に渡る前のこの1回を中心にします**（2026-09-25 オーナー決定、[#87](https://github.com/LeoAndo/jec-25cm-hybrid-app/issues/87)。Kotlin演習の [jec-25cm-kotlin](https://github.com/LeoAndo/jec-25cm-kotlin) と同じ決まりです）。配布していない言語の翻訳PRでは照合しません。くわしくは [AGENTS.md](AGENTS.md) §12 と [翻訳用skill](skills/translate-teaching-materials/SKILL.md) の「別のモデルによる照合」にあります。
 
 | 言語 | コード | `distribute` | 書き方 |
 | --- | --- | --- | --- |
@@ -234,7 +234,7 @@ python3 scripts/package-student-materials.py
 | 広東語 | `zh-Hant-HK` | `true` | 繁体字の書き言葉に、香港の語彙を使う |
 | 台湾華語 | `zh-Hant-TW` | `true` | 繁体字に、台湾の語彙を使う |
 | スペイン語 | `es` | `true` | 中南米の言い方 |
-| アラビア語 | `ar` | `false` | 右から左に書く（`dir` が `rtl`） |
+| アラビア語 | `ar` | `true` | 右から左に書く（`dir` が `rtl`） |
 | モンゴル語 | `mn` | `false` | キリル文字（モンゴル国の表記）。横書き |
 
 モンゴル語は、学生本人に読む文字を確かめて、モンゴル国のキリル文字（`mn`）で加えました。伝統的モンゴル文字（縦書き）には対応しません（[#40](https://github.com/LeoAndo/jec-25cm-hybrid-app/issues/40)）。
