@@ -85,20 +85,20 @@
     {
       "code": "ko",
       "name": "한국어",
-      "distribute": false,
+      "distribute": true,
       "ui": {
         "copy": "복사",
         "copy_label": "{title}의 코드 복사",
         "copied": "복사했습니다",
-        "copy_success": "코드를 복사했습니다. 편집기에 붙여 넣으세요.",
+        "copy_success": "코드를 복사했습니다. 편집기에 붙여 넣으십시오.",
         "copy_shortcut": "⌘ C로 복사",
-        "copy_selected": "코드를 선택했습니다. ⌘ C를 눌러 복사하세요.",
+        "copy_selected": "코드를 선택했습니다. ⌘ C를 눌러 복사하십시오.",
         "progress": "{total} 단계 중 {count} 단계 확인함"
       },
       "language_label": "언어",
-      "translation_notice": "이 페이지는 AI가 번역했습니다. 일본어판이 원본입니다. 번역이 이상하다고 느끼면 선생님에게 알려 주세요.",
+      "translation_notice": "이 페이지는 AI가 번역했습니다. 일본어판이 원본입니다. 번역이 이상하다고 느끼면 선생님에게 알려 주십시오.",
       "japanese_version": "같은 위치에서 일본어판 열기",
-      "open_instructions": "브라우저에서 index.html을 열고 한국어를 선택하세요.",
+      "open_instructions": "브라우저에서 index.html을 열고 한국어를 선택하십시오.",
       "start_here": "여기에서 시작"
     },
     {
