@@ -65,7 +65,7 @@
     {
       "code": "zh-Hant-TW",
       "name": "繁體中文（台灣）",
-      "distribute": false,
+      "distribute": true,
       "han": true,
       "ui": {
         "copy": "複製",
