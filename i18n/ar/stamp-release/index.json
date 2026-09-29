@@ -176,7 +176,7 @@
     },
     {
       "source": "コードを保存したら、<code>flutter run</code>が動いているターミナルで小文字の<code>r</code>を押すとホットリロードし、現在の<code>State</code>を保って画面を更新します。初期値や<code>initState</code>からやり直す場合は、大文字の<code>R</code>（<code>Shift + R</code>）でホットリスタートします。<code>q</code>は実行の終了です。以後、再起動による確認では<code>R</code>を使い、保存が未実装の段階では入力した習慣や回数が消えることも確かめます。",
-      "translation": "بعد حفظ الشيفرة، اضغط على الحرف الصغير <code>r</code> في مبنى الأوامر (terminal) الذي يعمل فيه <code>flutter run</code> لإجراء Hot Reload، مما يحدّث الشاشة مع الاحتفاظ بالحالة <code>State</code> الحالية. وإذا أردت البدء مجددًا من القيم الأولية و<code>initState</code>، فقم بإجراء Hot Restart باستخدام الحرف الكبير <code>R</code> (<code>Shift + R</code>). أما <code>q</code> فيُنهي التشغيل. بعد ذلك، استخدم <code>R</code> للتحقق عن طريق إعادة التشغيل، وتأكد أيضًا من أن العادات وعدد المرات التي أدخلتها تختفي في هذه المرحلة التي لم يُطبّق فيها الحفظ بعد."
+      "translation": "بعد حفظ الشيفرة، اضغط على الحرف الصغير <code>r</code> في Terminal الذي يعمل فيه <code>flutter run</code> لإجراء Hot Reload، مما يحدّث الشاشة مع الاحتفاظ بالحالة <code>State</code> الحالية. وإذا أردت البدء مجددًا من القيم الأولية و<code>initState</code>، فقم بإجراء Hot Restart باستخدام الحرف الكبير <code>R</code> (<code>Shift + R</code>). أما <code>q</code> فيُنهي التشغيل. بعد ذلك، استخدم <code>R</code> للتحقق عن طريق إعادة التشغيل، وتأكد أيضًا من أن العادات وعدد المرات التي أدخلتها تختفي في هذه المرحلة التي لم يُطبّق فيها الحفظ بعد."
     },
     {
       "source": "開始コード",
@@ -464,7 +464,7 @@
     },
     {
       "source": "起動し直さずに<code>r</code>で反映すると、ターミナルにはエラーが出ませんが、スタンプを押しても習慣を追加しても「保存できませんでした。」で始まる文が出るだけで、保存できません。続けて<code>R</code>を押すと、画面全体が赤くなり<code>Bad state: The SharedPreferencesAsyncPlatform instance must be set.</code>と出ます。<code>r</code>と<code>R</code>はDartのコードを入れ替えるだけで、アプリのビルドをやり直しません。新しいプラグインは、ビルドし直したアプリにだけ組み込まれます。そのときは<code>q</code>で終了し、<code>flutter run -d 端末ID</code>で起動し直します。",
-      "translation": "إذا طبقت التغيير بـ <code>r</code> دون إعادة التشغيل، فلن تظهر أخطاء في مبنى الأوامر، ولكن عند الضغط على الطابع أو إضافة عادة، ستظهر فقط جملة تبدأ بـ 「保存できませんでした。&lrm;」 (لم نتمكن من الحفظ.) ولن يتم الحفظ. وإذا ضغطت بعد ذلك على <code>R</code>، فستتحول الشاشة بالكامل إلى اللون الأحمر ويظهر الخطأ <code>Bad state: The SharedPreferencesAsyncPlatform instance must be set.</code>. إن <code>r</code> و<code>R</code> يقومان فقط باستبدال شيفرة Dart دون إعادة بناء التطبيق. والمكونات الإضافية الجديدة لا تُدمج إلا في تطبيق أُعيد بناؤه. في هذه الحالة، أنهِ التشغيل بـ <code>q</code>، ثم أعد التشغيل بـ <code>flutter run -d 端末ID</code>."
+      "translation": "إذا طبقت التغيير بـ <code>r</code> دون إعادة التشغيل، فلن تظهر أخطاء في Terminal، ولكن عند الضغط على الطابع أو إضافة عادة، ستظهر فقط جملة تبدأ بـ 「保存できませんでした。&lrm;」 (لم نتمكن من الحفظ.) ولن يتم الحفظ. وإذا ضغطت بعد ذلك على <code>R</code>، فستتحول الشاشة بالكامل إلى اللون الأحمر ويظهر الخطأ <code>Bad state: The SharedPreferencesAsyncPlatform instance must be set.</code>. إن <code>r</code> و<code>R</code> يقومان فقط باستبدال شيفرة Dart دون إعادة بناء التطبيق. والمكونات الإضافية الجديدة لا تُدمج إلا في تطبيق أُعيد بناؤه. في هذه الحالة، أنهِ التشغيل بـ <code>q</code>، ثم أعد التشغيل بـ <code>flutter run -d 端末ID</code>."
     },
     {
       "source": "<code>import</code>でパッケージを読み込み、<code>State</code>に<code>SharedPreferencesAsync</code>を1つ持ちます。保存キー<code>storageKey</code>も1か所です。このAPIだけを使い、旧APIやキャッシュ付きAPIを混ぜません。",
@@ -688,7 +688,7 @@
     },
     {
       "source": "キャッシュを受け取ってもAndroid SDK・NDK・AGP等の取得が残る場合があります。<code>flutter run -d Android端末ID</code>を実行し、ターミナルの取得状況を見ます。待機時間はコードと提出前チェックの確認に使い、途中で同じビルドを重ねて始めません。",
-      "translation": "حتى بعد استلام الذاكرة المؤقتة، قد يتبقى تنزيل Android SDK وNDK وAGP وما شابه. نفّذ <code>flutter run -d Android端末ID</code> (معرّف جهاز Android = Android端末ID)، وراقب حالة التنزيل في مبنى الأوامر. استغل وقت الانتظار في مراجعة الشيفرة وقائمة التحقق قبل التسليم، ولا تبدأ عملية بناء مكررة أثناء ذلك."
+      "translation": "حتى بعد استلام الذاكرة المؤقتة، قد يتبقى تنزيل Android SDK وNDK وAGP وما شابه. نفّذ <code>flutter run -d Android端末ID</code> (معرّف جهاز Android = Android端末ID)، وراقب حالة التنزيل في Terminal. استغل وقت الانتظار في مراجعة الشيفرة وقائمة التحقق قبل التسليم، ولا تبدأ عملية بناء مكررة أثناء ذلك."
     },
     {
       "source": "同じDartソースからiOS用とAndroid用をビルドしますが、ネイティブ側の道具と依存関係は別です。既に知っているAndroid StudioのSDK・エミュレータを使い、Flutterがビルドと起動をつなぎます。",
