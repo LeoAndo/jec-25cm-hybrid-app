@@ -556,7 +556,7 @@
     },
     {
       "source": "<code>www/js/app.js</code> を、このSTEPの全文に置き換えます。先頭の <code>ons.platform.select(\"android\");</code> が有効になっています。保存して<strong>プレビュー全体を再読み込み</strong>します。",
-      "translation": "استبدل <code>www/js/app.js</code> بالنص الكامل لهذه الخطوة. السطر <code>ons.platform.select(\"android\");</code> في البداية مفعل. احفظ، وقم بـ <strong>「プレビュー全体を再読み込み」 (إعادة تحميل المعاينة بالكامل)</strong>."
+      "translation": "استبدل <code>www/js/app.js</code> بالنص الكامل لهذه الخطوة. السطر <code>ons.platform.select(\"android\");</code> في البداية مفعل. احفظ، وقم بـ <strong>إعادة تحميل المعاينة بالكامل (「プレビュー全体を再読み込み」)</strong>."
     },
     {
       "source": "ツールバーの高さ・題名の位置、行を押した反応、右端の目印を見ます。右端の目印「＞」は、iOS向けとAndroid向けのどちらにも出ます。",
