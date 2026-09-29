@@ -1,0 +1,1138 @@
+{
+  "source": "docs/oshi-save/index.html",
+  "language": "zh-Hant-HK",
+  "entries": [
+    {
+      "source": "M02 好きなものノート：追加と保存 | ハイブリッドアプリ開発技法",
+      "translation": "M02 喜愛筆記：新增與儲存 | 混合應用程式開發技法"
+    },
+    {
+      "source": "本文へ移動",
+      "translation": "跳至正文"
+    },
+    {
+      "source": "JEC / ハイブリッドアプリ開発技法",
+      "translation": "JEC / 混合應用程式開發技法"
+    },
+    {
+      "source": "0 / 15 ステップ確認済み",
+      "translation": "已確認 0 / 15 個步驟"
+    },
+    {
+      "source": "単元の進み具合",
+      "translation": "單元進度"
+    },
+    {
+      "source": "コマごとの目次",
+      "translation": "每堂課的目錄"
+    },
+    {
+      "source": "コマ5 · STEP 00〜04",
+      "translation": "第5堂課 · STEP 00〜04"
+    },
+    {
+      "source": "00 自分の好きなものノートを開く",
+      "translation": "00 開啟自己的喜愛筆記"
+    },
+    {
+      "source": "01 入力画面を作る",
+      "translation": "01 製作輸入畫面"
+    },
+    {
+      "source": "02 入力した文字を確認する",
+      "translation": "02 確認輸入的文字"
+    },
+    {
+      "source": "03 配列へ追加して戻る",
+      "translation": "03 新增至陣列並返回"
+    },
+    {
+      "source": "04 確認とアレンジ",
+      "translation": "04 確認與自訂"
+    },
+    {
+      "source": "コマ6 · STEP 05〜09",
+      "translation": "第6堂課 · STEP 05〜09"
+    },
+    {
+      "source": "05 配列とJSONの違い",
+      "translation": "05 陣列與 JSON 的分別"
+    },
+    {
+      "source": "06 文字列にして保存する",
+      "translation": "06 轉換為字串並儲存"
+    },
+    {
+      "source": "07 保存した配列を復元する",
+      "translation": "07 還原已儲存的陣列"
+    },
+    {
+      "source": "08 初期化の確認と失敗への対応",
+      "translation": "08 重設確認與失敗應對"
+    },
+    {
+      "source": "09 保存を確かめてアレンジ",
+      "translation": "09 確認儲存並進行修改"
+    },
+    {
+      "source": "コマ7 · STEP 10〜14",
+      "translation": "第7堂課 · STEP 10〜14"
+    },
+    {
+      "source": "10 授業内でFlutterの準備を始める",
+      "translation": "10 在課堂上開始準備 Flutter"
+    },
+    {
+      "source": "11 提出に残るアレンジを作る",
+      "translation": "11 製作保留在提交中的修改"
+    },
+    {
+      "source": "12 操作と公開URLを確認する",
+      "translation": "12 確認操作與匯入連結"
+    },
+    {
+      "source": "13 提出と準備状況の確認",
+      "translation": "13 提交與準備情況確認"
+    },
+    {
+      "source": "14 アレンジ箇所を確かめる",
+      "translation": "14 確認可以修改的地方"
+    },
+    {
+      "source": "困ったとき",
+      "translation": "遇到問題時"
+    },
+    {
+      "source": "完成プロジェクトを開く",
+      "translation": "開啟已完成專案"
+    },
+    {
+      "source": "共通：はじめの準備",
+      "translation": "通用：上課前的準備"
+    },
+    {
+      "source": "コマ5〜7 · 各90分",
+      "translation": "第5〜7堂課 · 各90分鐘"
+    },
+    {
+      "source": "好きなものノート：追加して、残そう。",
+      "translation": "喜愛筆記：新增並保留。"
+    },
+    {
+      "source": "日常の中で見つけた好きなものと、好きな理由を画面から追加します。再読み込みしても自分の記録が戻る仕組みを作り、ソースにアレンジを残して公開URLを提出します。",
+      "translation": "從畫面新增日常生活中發現的喜愛之物和喜愛理由。製作重新載入後自己的紀錄也能還原的機制，在原始碼中保留修改，並提交匯入連結。"
+    },
+    {
+      "source": "Monaca クラウド IDE / Google Chrome",
+      "translation": "Monaca クラウド IDE（雲端 IDE）/ Google Chrome"
+    },
+    {
+      "source": "この単元で分かること",
+      "translation": "本單元能學到的內容"
+    },
+    {
+      "source": "新しい考え方は<strong>JSON</strong>です。画面で使う配列を保存用の文字列にし、読み込んだ文字列を配列へ戻します。保存先はJavaの<code>SharedPreferences</code>・Swiftの<code>UserDefaults</code>と比較します。",
+      "translation": "新的概念是<strong>JSON</strong>。把畫面上使用的陣列轉換為儲存用的字串，再把讀取到的字串還原為陣列。儲存位置將與 Java 的 <code>SharedPreferences</code>、Swift 的 <code>UserDefaults</code> 進行比較。"
+    },
+    {
+      "source": "完成見本の名前は <code>M02OshiSave</code> です。学生は自分の好きなものノートを同じ1プロジェクトで育てます。まだプロジェクトがない場合の作り方も、一覧・詳細の開始コードも、この本文にあります。",
+      "translation": "完成範例的名稱是 <code>M02OshiSave</code>。學生在同一個專案中繼續完善自己的喜愛筆記。還沒有專案時的建立方法，以及清單、詳細資訊的起始程式碼，都在本文中。"
+    },
+    {
+      "source": "コマ",
+      "translation": "堂課"
+    },
+    {
+      "source": "到達点",
+      "translation": "達成目標"
+    },
+    {
+      "source": "入力した好きなものを一覧へ追加し、詳細を読める。",
+      "translation": "能把輸入的喜愛之物新增至清單，並閱讀詳細資訊。"
+    },
+    {
+      "source": "JSONと<code>localStorage</code>で保存・復元できる。初期化には確認を挟む。",
+      "translation": "能用 JSON 和 <code>localStorage</code> 儲存與還原。重設前加入確認步驟。"
+    },
+    {
+      "source": "授業内でFlutter準備を開始し、待ち時間に好きなものノートをアレンジ・確認・提出する。",
+      "translation": "在課堂上開始準備 Flutter，利用等待時間修改、確認並提交喜愛筆記。"
+    },
+    {
+      "source": "配布フォルダの <code>~/Documents/hybrid-app-student-materials-日付/samples/M02OshiSave</code> をFinderで開きます。<code>M02OshiSave</code> の完成見本で、自分のコードと読み比べるために使います。自分の作品を見本で上書きしません。自分の制作を始める人は、STEP 00へ進みます。",
+      "translation": "在 Finder 中開啟分發資料夾中的 <code>~/Documents/hybrid-app-student-materials-日付/samples/M02OshiSave</code>（日付 表示日期）。這是 <code>M02OshiSave</code> 的完成範例，用於與自己的程式碼對照閱讀。不要用範例覆寫自己的作品。要開始自己製作的人，請前往 STEP 00。"
+    },
+    {
+      "source": "Monaca クラウド IDEは、Macのフォルダをそのまま開けません。見本をMonacaで動かすときは、先生がZIPにして公開した<a1>M02OshiSaveの取り込み用URL</a1>を開いて取り込みます。これはアプリを動かすURLではなく、完成見本のソースを自分のMonacaへ取り込むURLで、Freeプランの3枠のうち1枠を使います。空きを確かめてから1回だけ開きます。取り込み用URLがあっても、Freeプランの制限（プロジェクトの数や、対応するCordovaの版）で、取り込めない、または取り込んだ見本を開けないことがあります。そのときは無理に取り込まず、先生に知らせてください。見本のコードは配布フォルダの <code>samples</code> で読めるので、取り込めなくても授業は進められます。",
+      "translation": "Monaca クラウド IDE 不能直接開啟 Mac 上的資料夾。要在 Monaca 中執行範例時，開啟老師打包成 ZIP 後公開的<a1>M02OshiSave 的匯入連結</a1>進行匯入。這不是執行應用程式的連結，而是將完成範例的原始碼匯入自己 Monaca 的連結，會佔用 Free 方案 3 個配額中的 1 個。請先確認有空餘配額，再只開啟一次。即使有匯入連結，也可能因為 Free 方案的限制（專案數量、支援的 Cordova 版本）而無法匯入，或者無法開啟匯入的範例。這時不要勉強匯入，請告知老師。範例的程式碼可以在分發資料夾的 <code>samples</code> 中閱讀，所以即使無法匯入，也能繼續上課。"
+    },
+    {
+      "source": "STEP 00 · コマ5",
+      "translation": "STEP 00 · 第5堂課"
+    },
+    {
+      "source": "自分の好きなものノートを開く",
+      "translation": "開啟自己的喜愛筆記"
+    },
+    {
+      "source": "Google Chromeで通常版Monacaへログインし、自分の好きなものノートを開きます。続けて使っているプロジェクトは、名前が <code>M01OshiList</code> のままで構いません。今日のためにコピーを増やしたり、削除したりしません。",
+      "translation": "在 Google Chrome 中登入標準版 Monaca，開啟自己的喜愛筆記。一直使用的專案，名稱保持為 <code>M01OshiList</code> 也沒關係。不要為了今天的課增加複本或刪除專案。"
+    },
+    {
+      "source": "まだ自分の好きなものノートがない人だけ、ダッシュボードで新規作成し、<code>最小限のテンプレート</code> を選び、<code>M02OshiSave</code> と名付けます。登録や空き枠が不明なら、<a1>共通資料のSTEP 2〜3</a1>で確認して戻ります。",
+      "translation": "只有還沒有自己喜愛筆記的人，才在儀表板建立新專案，選擇 <code>最小限のテンプレート</code>（最簡範本），並命名為 <code>M02OshiSave</code>。如果不清楚註冊或剩餘配額的情況，請到<a1>通用資料的 STEP 2～3</a1>確認後再返回。"
+    },
+    {
+      "source": "<code>www/index.html</code>・<code>www/css/style.css</code> を開きます。<code>www/js/app.js</code> がなければ、ファイル一覧の作成操作で <code>www</code> の下に <code>js</code> フォルダ、その中に <code>app.js</code> ファイルを作ります。",
+      "translation": "開啟 <code>www/index.html</code>、<code>www/css/style.css</code>。如果沒有 <code>www/js/app.js</code>，就透過檔案清單的建立操作，在 <code>www</code> 下建立 <code>js</code> 資料夾，再在其中建立 <code>app.js</code> 檔案。"
+    },
+    {
+      "source": "自分のアレンジがある場合は、変えた文字と色を控えます。下の開始コード3ファイルをそろえ、保存してプレビューを再読み込みします。<code>components</code> や <code>res</code> は変更しません。",
+      "translation": "如果有自己做過的修改，先記下改過的文字和顏色。準備好下方的 3 個起始程式碼檔案，儲存後重新載入預覽。不要修改 <code>components</code> 和 <code>res</code>。"
+    },
+    {
+      "source": "3件の名前を押して詳細を開き、左上の戻るボタンで一覧へ戻ります。戻るボタンは、iOS向けの見た目では「＜ 戻る」、Android向けの見た目では左向きの矢印「←」だけです。タイトルと詳細の組み合わせを確かめます。",
+      "translation": "點選 3 筆資料的名稱以開啟詳細資訊，再用左上角的返回按鈕回到清單。返回按鈕在 iOS 風格的外觀中是「＜ 戻る」（返回），在 Android 風格的外觀中只有一個向左的箭頭「←」。確認標題與詳細資訊的組合是否正確。"
+    },
+    {
+      "source": "開始コードの役割を、次の順で追いましょう。新しいファイル名を <code>detail.html</code> として作る操作は不要です。これは <code>index.html</code> の中の <code>template</code> の<code>id</code>です。",
+      "translation": "按以下順序瞭解起始程式碼各部分的作用。不需要建立名為 <code>detail.html</code> 的新檔案。它是 <code>index.html</code> 中 <code>template</code> 的 <code>id</code>。"
+    },
+    {
+      "source": "場所",
+      "translation": "位置"
+    },
+    {
+      "source": "処理と理由",
+      "translation": "處理與理由"
+    },
+    {
+      "source": "HTMLの<code>head</code>",
+      "translation": "HTML 的 <code>head</code>"
+    },
+    {
+      "source": "標準の<code>loader.js</code>、Onsen UI 2.12.9のCSS・JavaScript、自作CSS・<code>app.js</code>を読み込む。自作JSはOnsen UIより後。",
+      "translation": "載入標準的 <code>loader.js</code>、Onsen UI 2.12.9 的 CSS 與 JavaScript、自行編寫的 CSS 與 <code>app.js</code>。自行編寫的 JS 放在 Onsen UI 之後。"
+    },
+    {
+      "source": "<code>ons-navigator</code>が<code>list.html</code>を実体化する。<code>template</code>は配置前のひな形で、詳細へ進んだときに<code>detail.html</code>の要素が作られる。",
+      "translation": "<code>ons-navigator</code> 將 <code>list.html</code> 實體化。<code>template</code> 是尚未放入畫面的雛形，前往詳細資訊時才會建立 <code>detail.html</code> 的元素。"
+    },
+    {
+      "source": "<code>init</code>のリスナー",
+      "translation": "<code>init</code> 的監聽器"
+    },
+    {
+      "source": "ページの要素が使える時点に、そのページの<code>id</code>を見てイベント登録や文字の設定を行う。",
+      "translation": "在頁面元素可用的時間點，根據該頁面的 <code>id</code> 註冊事件和設定文字。"
+    },
+    {
+      "source": "配列の件数だけ固定の行構造を作る。名前や種類は<code>textContent</code>へ入れ、文字をHTMLとして解釈しない。",
+      "translation": "按陣列的筆數建立固定結構的資料列。名稱和類別放入 <code>textContent</code>，文字不會被當作 HTML 解譯。"
+    },
+    {
+      "source": "<code>pushPage</code>の<code>data</code>へ選んだデータを渡し、詳細の<code>page.data</code>で受け取る。現在のページと移動中の旗を調べ、連打でページを重ねない。",
+      "translation": "把選取的資料傳遞給 <code>pushPage</code> 的 <code>data</code>，在詳細資訊頁面用 <code>page.data</code> 接收。檢查目前頁面和表示跳轉中的旗標，連續點擊時不會重疊頁面。"
+    },
+    {
+      "source": "<code>callback</code> / 戻る",
+      "translation": "<code>callback</code> / 返回"
+    },
+    {
+      "source": "移動完了の<code>callback</code>で旗を戻す。<code>ons-back-button</code>はページを1つ戻す。",
+      "translation": "在跳轉完成的 <code>callback</code> 中將旗標復位。<code>ons-back-button</code> 會返回上一個頁面。"
+    },
+    {
+      "source": "CSSはクラスで余白・色・カードの枠を対応させています。Onsen UIは同じHTMLへOSに合わせた部品のスタイルを適用します。今回も素のJavaScriptから使い、別のフレームワークは追加しません。",
+      "translation": "CSS 透過類別設定邊距、顏色和卡片的邊框。Onsen UI 會對同一份 HTML 套用符合各作業系統的元件樣式。這次也直接使用純 JavaScript，不加入其他框架。"
+    },
+    {
+      "source": "既知の技術と比べる",
+      "translation": "與已知技術比較"
+    },
+    {
+      "source": "Web基礎と同じ3ファイル構成ですが、操作する場所はMonaca クラウド IDEです。<code>init</code>はAndroidのビュー生成後の設定やiOSの<code>viewDidLoad</code>に相当するタイミングで、JavaScriptの<code>addEventListener</code>で受け取ります。<code>pushPage</code>の<code>data</code>は、ネイティブアプリで次の画面へ値を渡す操作に対応します。まだ保存用の文字列には変換していません。",
+      "translation": "檔案結構與 Web 基礎相同是 3 個檔案，但操作的地方是 Monaca クラウド IDE。<code>init</code> 相當於 Android 中建立 View 之後進行設定、iOS 中 <code>viewDidLoad</code> 的時機，以 JavaScript 的 <code>addEventListener</code> 接收。<code>pushPage</code> 的 <code>data</code> 對應原生應用程式中向下一畫面傳遞值的操作。此時尚未轉換為儲存用的字串。"
+    },
+    {
+      "source": "このSTEPの全コード（照合・合流用）",
+      "translation": "本 STEP 的完整程式碼（用於對照與中途加入）"
+    },
+    {
+      "source": "www/index.html · 全文",
+      "translation": "www/index.html · 完整程式碼"
+    },
+    {
+      "source": "www/css/style.css · 全文",
+      "translation": "www/css/style.css · 完整程式碼"
+    },
+    {
+      "source": "www/js/app.js · 全文",
+      "translation": "www/js/app.js · 完整程式碼"
+    },
+    {
+      "source": "自分の1プロジェクトで3件の一覧・詳細・戻るを確認し、HTMLとJSの対応を追えた。",
+      "translation": "已在自己的一個專案中確認 3 筆資料的清單、詳細資訊與返回，並掌握了 HTML 與 JS 的對應關係。"
+    },
+    {
+      "source": "STEP 01 · コマ5",
+      "translation": "STEP 01 · 第5堂課"
+    },
+    {
+      "source": "入力画面を作る",
+      "translation": "製作輸入畫面"
+    },
+    {
+      "source": "3ファイルをこのSTEPのコードへ更新します。HTMLに <code>add.html</code> の<code>template</code>を加え、名前・種類の <code>input</code> と、好きな理由の <code>textarea</code> を置きます。<code>label</code> の<code>for</code>と入力欄の<code>id</code>が対応します。",
+      "translation": "將 3 個檔案更新為本 STEP 的程式碼。在 HTML 中加入 <code>add.html</code> 的 <code>template</code>，放置名稱、類別的 <code>input</code> 和喜愛理由的 <code>textarea</code>。<code>label</code> 的 <code>for</code> 與輸入欄位之 <code>id</code> 相對應。"
+    },
+    {
+      "source": "CSSの <code>.app-input</code> は幅を100%にし、<code>box-sizing: border-box</code> で<code>padding</code>と枠をその幅の内側へ収めます。<code>font: inherit</code> で文字を周囲とそろえ、<code>focus</code>の<code>outline</code>で選択中の欄を見分けます。ほかに加わるクラスのうち、このSTEPの画面に当たる4つは次の表のとおりです。",
+      "translation": "CSS 的 <code>.app-input</code> 將寬度設為 100%，使用 <code>box-sizing: border-box</code> 將 <code>padding</code> 和邊框收進該寬度之內。使用 <code>font: inherit</code> 讓文字與周圍一致，使用 <code>focus</code> 的 <code>outline</code> 區分正選取的欄位。其他新增的類別中，作用於本 STEP 畫面的 4 個如下表所示。"
+    },
+    {
+      "source": "クラス",
+      "translation": "class"
+    },
+    {
+      "source": "当たる要素",
+      "translation": "套用的元素"
+    },
+    {
+      "source": "指定と理由",
+      "translation": "設定與理由"
+    },
+    {
+      "source": "一覧の <code>btn_open_add</code>",
+      "translation": "清單中的 <code>btn_open_add</code>"
+    },
+    {
+      "source": "<code>margin-top: 16px</code>。説明文の <code>.app-description</code> は <code>margin: 0</code> なので、その直下に置くボタンの上を空けて、文とボタンを離します。",
+      "translation": "<code>margin-top: 16px</code>。說明文字的 <code>.app-description</code> 是 <code>margin: 0</code>，因此要在緊接其下的按鈕上方留出空間，將文字與按鈕分開。"
+    },
+    {
+      "source": "一覧の <code>txt_storage</code> と、入力画面の <code>txt_add_message</code>",
+      "translation": "清單中的 <code>txt_storage</code> 與輸入畫面的 <code>txt_add_message</code>"
+    },
+    {
+      "source": "上下に12pxの余白、<code>.app-caption</code> と同じ文字色、<code>overflow-wrap: anywhere</code>。JavaScriptから文を入れる案内用の段落で、長い文でも画面の幅で折り返します。<code>txt_add_message</code> はこのSTEPでは空で、STEP 02から文を出します。",
+      "translation": "上下各 12px 的邊距、與 <code>.app-caption</code> 相同的文字顏色、<code>overflow-wrap: anywhere</code>。這是由 JavaScript 寫入文字的提示段落，即使文字很長也會在螢幕寬度內換行。<code>txt_add_message</code> 在本 STEP 中為空，從 STEP 02 開始顯示文字。"
+    },
+    {
+      "source": "入力画面の3つの <code>label</code>",
+      "translation": "輸入畫面的 3 個 <code>label</code>"
+    },
+    {
+      "source": "<code>display: block</code>。<code>.app-label</code> は、STEP 00から詳細の <code>p</code> に使っている余白と文字の指定です。<code>label</code> は既定でインライン要素なので、そのままでは上下の <code>margin</code> が効きません。<code>label</code> に付いたときだけブロックにして、各欄の上に1行ずつ並べます。",
+      "translation": "<code>display: block</code>。<code>.app-label</code> 是從 STEP 00 起用於詳細資訊畫面 <code>p</code> 的邊距和文字設定。<code>label</code> 預設為行內元素，直接使用時上下的 <code>margin</code> 不起作用。只在套用至 <code>label</code> 時改為區塊元素，讓每個輸入欄位上方各佔一行。"
+    },
+    {
+      "source": "入力画面のボタンの下の注記",
+      "translation": "輸入畫面按鈕下方的備註"
+    },
+    {
+      "source": "<code>.app-description</code> と同じ文字色で、文字の大きさは13px。補足の注記を、ボタンや案内文より控えめに見せます。",
+      "translation": "與 <code>.app-description</code> 相同的文字顏色，文字大小為 13px。讓補充說明的備註比按鈕和提示文字更低調一些。"
+    },
+    {
+      "source": "<code>.reset-section</code>・<code>#panel_reset ons-button</code>・<code>.is-hidden</code> の3つは、STEP 08で足す初期化の確認欄のための指定です。このSTEPのHTMLには、まだ当たる要素がありません。",
+      "translation": "<code>.reset-section</code>、<code>#panel_reset ons-button</code>、<code>.is-hidden</code> 這 3 個是為 STEP 08 要加入的重設確認欄準備的設定。在本 STEP 的 HTML 中，還沒有套用它們的元素。"
+    },
+    {
+      "source": "一覧の <code>btn_open_add</code> へ<code>openAddPage</code>を登録し、<code>pushPage(\"add.html\", ...)</code> で入力画面へ進みます。詳細と同じ移動中の旗を共有するため、片方を開いている最中にもう片方は開きません。",
+      "translation": "為清單中的 <code>btn_open_add</code> 註冊 <code>openAddPage</code>，使用 <code>pushPage(\"add.html\", ...)</code> 前往輸入畫面。因為與詳細資訊共用同一個表示跳轉中的旗標，所以在開啟其中一個的過程中不會開啟另一個。"
+    },
+    {
+      "source": "この旗の名前は、STEP 00の <code>isOpeningDetail</code> から <code>isOpeningPage</code> に変えます。詳細を開くときだけでなく入力画面を開くときにも使うので、「詳細を開いている最中」ではなく「どちらかのページを開いている最中」と読める名前にするためです。宣言と<code>openOshiDetail</code>の中の3か所も、新しい名前にそろえます。",
+      "translation": "這個旗標的名稱從 STEP 00 的 <code>isOpeningDetail</code> 改為 <code>isOpeningPage</code>。因為它不僅在開啟詳細資訊時使用，在開啟輸入畫面時也會使用，所以要讓名稱讀起來是「正在開啟某個頁面」，而不是「正在開啟詳細資訊」。宣告處與 <code>openOshiDetail</code> 中的 3 處也統一改成新名稱。"
+    },
+    {
+      "source": "一覧のボタンの下の <code>txt_storage</code> には <code>この段階では、追加した内容は保存されません。</code>、入力画面のボタンの下の注記には <code>この段階では、追加した内容は再読み込みすると消えます。</code> と出します。追加した内容がまだ残らないことを、画面で先に伝えるためです。保存を作るSTEP 06で、どちらの文も書き換えます。",
+      "translation": "在清單按鈕下方的 <code>txt_storage</code> 中顯示 <code>この段階では、追加した内容は保存されません。</code>（現階段新增的內容不會儲存。），在輸入畫面按鈕下方的備註中顯示 <code>この段階では、追加した内容は再読み込みすると消えます。</code>（現階段新增的內容在重新載入後會消失。）。這是為了先在畫面上告知使用者，新增的內容目前還不會保留。在製作儲存功能的 STEP 06 中，這兩句都會改寫。"
+    },
+    {
+      "source": "初期データは <code>createInitialItems</code> が新しい配列を返す形にまとめました。後で初期化したときにも同じ内容を作り直せるようにするためです。呼び出しのたびに新しい配列になる点を、<code>return</code>の位置と一緒に読みます。",
+      "translation": "初始資料整理成了由 <code>createInitialItems</code> 返回一個新陣列的形式。這是為了稍後重設時也能重新建立相同的內容。請結合 <code>return</code> 的位置，注意每次呼叫都會產生一個新陣列這一點。"
+    },
+    {
+      "source": "保存・再読み込み後に <code>好きなものを追加</code> を押します。",
+      "translation": "儲存並重新載入後，點選 <code>好きなものを追加</code>（新增喜愛之物）。"
+    },
+    {
+      "source": "3つの欄へ文字を入力して、左上の戻るボタンで一覧へ戻ります。もう一度開くと新しい入力画面が作られ、欄は空に戻ります。",
+      "translation": "在 3 個欄位中輸入文字，然後使用左上角的返回按鈕回到清單。再次開啟時會建立新的輸入畫面，欄位恢復為空。"
+    },
+    {
+      "source": "このSTEPでは <code>追加する</code> を<code>disabled</code>にしてあります。まだクリック処理を付けていないため、押せない状態が正解です。",
+      "translation": "在本 STEP 中，<code>追加する</code>（新增）被設為 <code>disabled</code>。因為尚未加上點擊處理，所以無法點選才是正確的狀態。"
+    },
+    {
+      "source": "Web基礎の<code>input</code>・<code>textarea</code>・<code>label</code>をそのまま使います。Androidの<code>EditText</code>、iOSの<code>UITextField</code>・<code>UITextView</code>と同じ役割です。画面を開く処理は詳細への移動と同じ形で、渡すデータが要らないため<code>data</code>を省きます。<code>createInitialItems</code>は、Java／Swiftでデータの配列を関数から返す書き方と対応します。",
+      "translation": "直接使用 Web 基礎中的 <code>input</code>、<code>textarea</code>、<code>label</code>。它們的作用與 Android 的 <code>EditText</code>、iOS 的 <code>UITextField</code>、<code>UITextView</code> 相同。開啟畫面的處理與前往詳細資訊的形式相同，因為不需要傳遞資料，所以省略了 <code>data</code>。<code>createInitialItems</code> 對應 Java／Swift 中由函式返回資料陣列的寫法。"
+    },
+    {
+      "source": "入力画面を開き、3つの欄へ入力して戻れた。追加ボタンがまだ押せないことを確認した。",
+      "translation": "已開啟輸入畫面，在 3 個欄位中輸入並返回。已確認新增按鈕目前尚無法點選。"
+    },
+    {
+      "source": "STEP 02 · コマ5",
+      "translation": "STEP 02 · 第5堂課"
+    },
+    {
+      "source": "入力した文字を確認する",
+      "translation": "確認輸入的文字"
+    },
+    {
+      "source": "HTMLの追加ボタンから <code>disabled</code> を外し、JSでは <code>page_add</code> の<code>init</code>で<code>addOshi</code>を登録します。関数名を渡しているので、登録した瞬間ではなくボタンを押したときに動きます。",
+      "translation": "移除 HTML 中新增按鈕的 <code>disabled</code>，在 JS 中於 <code>page_add</code> 的 <code>init</code> 內註冊 <code>addOshi</code>。因為傳入的是函式名稱，所以它不會在註冊的瞬間執行，而是在點選按鈕時執行。"
+    },
+    {
+      "source": "<code>addOshi</code>は、入力欄を<code>id</code>で取得し、<code>value</code> で今の文字を読みます。<code>trim()</code> は前後の空白を取り除きます。3つのどれかが空ならメッセージを表示して<code>return</code>し、残りの処理へ進みません。",
+      "translation": "<code>addOshi</code> 透過 <code>id</code> 取得輸入欄位，使用 <code>value</code> 讀取目前的文字。<code>trim()</code> 會去除前後的空白。3 個欄位中只要有一個為空，就顯示訊息並 <code>return</code>，不再繼續後續處理。"
+    },
+    {
+      "source": "このSTEPの成功結果は <code>入力を確認しました：</code> と名前の表示だけです。まだ一覧には追加しません。<code>txt_add_message</code>を<code>textContent</code>で更新するため、名前に山かっこを入れても文字として表示されます。",
+      "translation": "本 STEP 成功時的結果只是顯示 <code>入力を確認しました：</code>（已確認輸入：）與名稱。尚未新增至清單。因為 <code>txt_add_message</code> 是使用 <code>textContent</code> 更新的，所以即使名稱中含有尖括號，也會作為文字顯示。"
+    },
+    {
+      "source": "空欄のまま押し、不足のメッセージを確認します。",
+      "translation": "留空直接點選，確認顯示提示缺少輸入的訊息。"
+    },
+    {
+      "source": "名前だけに空白を入れ、ほかを埋めて押します。前後の空白を取り除くと空になるため、同じメッセージになることを確認します。",
+      "translation": "只在名稱中輸入空格，其他都填好後點選。因為去除前後的空白後就變為空，所以確認會顯示相同的訊息。"
+    },
+    {
+      "source": "すべて入力して押し、名前が表示されることを確認します。入力した文字が勝手に消えないことも見ます。",
+      "translation": "全部填好後點選，確認顯示出名稱。同時亦確認輸入的文字不會自行消失。"
+    },
+    {
+      "source": "Javaなら<code>EditText.getText().toString().trim()</code>、Swiftなら<code>text</code>と<code>trimmingCharacters</code>を使う場面です。今回はHTMLの<code>value</code>を読みます。空欄の条件や<code>return</code>は既習の書き方で、エラーの伝え先をダイアログではなく同じ画面の段落にしています。",
+      "translation": "這相當於 Java 中使用 <code>EditText.getText().toString().trim()</code>、Swift 中使用 <code>text</code> 與 <code>trimmingCharacters</code> 的場景。這次讀取的是 HTML 的 <code>value</code>。判斷空白欄位的條件與 <code>return</code> 都是學過的寫法，錯誤訊息不是透過對話方塊，而是顯示在同一畫面的段落中。"
+    },
+    {
+      "source": "空欄・空白だけ・正常入力の3通りで、結果の文を確認できた。",
+      "translation": "已在留空、只有空格、正常輸入這 3 種情況下確認結果文字。"
+    },
+    {
+      "source": "STEP 03 · コマ5",
+      "translation": "STEP 03 · 第5堂課"
+    },
+    {
+      "source": "配列へ追加して戻る",
+      "translation": "新增至陣列並返回"
+    },
+    {
+      "source": "JSの<code>addOshi</code>で、入力確認だけの行を、配列へ追加して一覧を描き直す処理へ替えます。<code>oshiItems.push({ name: name, genre: genre, comment: comment })</code> の左側はデータの項目名、右側は入力欄から読んだ変数です。",
+      "translation": "在 JS 的 <code>addOshi</code> 中，把只做輸入確認的那一行，替換為新增至陣列並重新繪製清單的處理。<code>oshiItems.push({ name: name, genre: genre, comment: comment })</code> 中，左側是資料的屬性名稱，右側是從輸入欄位讀取的變數。"
+    },
+    {
+      "source": "次に<code>renderOshiList</code>を呼びます。この関数は<code>innerHTML</code>で行を置き直した後に、<code>textContent</code>の設定とクリックの登録をやり直します。古い行に登録したイベントは、新しい行へ自動では移らないためです。",
+      "translation": "接著呼叫 <code>renderOshiList</code>。這個函式使用 <code>innerHTML</code> 重新放置各列之後，再重新設定 <code>textContent</code> 並註冊點擊事件。因為註冊在舊列上的事件不會自動轉移至新列。"
+    },
+    {
+      "source": "その次の行で、一覧の下の <code>txt_selected</code> に <code>追加したもの：</code> と追加した名前を出します。STEP 00から、詳細を開いたときに <code>選択中：</code> と名前を出している欄です。一覧へ戻ったときに、どれを追加したかを行を探さずに確かめられるようにするためです。",
+      "translation": "在下一行，讓清單下方的 <code>txt_selected</code> 顯示 <code>追加したもの：</code>（已新增：）與新增的名稱。這個欄位從 STEP 00 起就在開啟詳細資訊時顯示 <code>選択中：</code>（已選取：）與名稱。這樣回到清單時，無需逐列尋找就能確認新增了哪一筆。"
+    },
+    {
+      "source": "最後に <code>popPage()</code> で入力画面を閉じます。一覧はその下に残っているので、新しい行が見えます。追加を始める直前にボタンを無効にしておくことで、戻る途中の連続操作でも同じ内容を二重に追加しません。",
+      "translation": "最後使用 <code>popPage()</code> 關閉輸入畫面。清單仍留在其下方，因此能看見新的資料列。在開始新增之前先將按鈕設為停用，這樣即使在返回途中連續操作，也不會重複新增相同的內容。"
+    },
+    {
+      "source": "新しい好きなものを1件入力して追加します。一覧が4件になり、一覧の下に <code>追加したもの：</code> と入力した名前が出たことを確認します。",
+      "translation": "輸入並新增 1 筆新的喜愛之物。確認清單變成 4 筆，且清單下方顯示 <code>追加したもの：</code>（已新增：）與輸入的名稱。"
+    },
+    {
+      "source": "追加した行を押し、名前・種類・好きな理由が入力どおりか確かめます。好きな理由に改行を入れた場合も確認します。",
+      "translation": "點選新增的列，確認名稱、類別、喜愛理由與輸入一致。在喜愛理由中輸入了換行的情況亦需確認。"
+    },
+    {
+      "source": "戻ってからプレビューを再読み込みします。配列はソースの初期データから作り直されるため、3件に戻ります。今日はこれで正解です。",
+      "translation": "返回後重新載入預覽。陣列會從原始碼的初始資料重新建立，因此會回到 3 筆。今天這樣就是正確的。"
+    },
+    {
+      "source": "<code>push</code>はJavaの<code>ArrayList.add</code>やSwiftの<code>Array.append</code>と同じ追加です。<code>popPage</code>はiOSで前の画面へ戻す操作に対応します。ここで変えたのは実行中の配列だけなので、ファイルに文字を保存したときや<code>SharedPreferences</code>／<code>UserDefaults</code>へ書いたときとは残り方が異なります。",
+      "translation": "<code>push</code> 與 Java 的 <code>ArrayList.add</code>、Swift 的 <code>Array.append</code> 是相同的新增操作。<code>popPage</code> 對應 iOS 中返回上一畫面的操作。這裏改變的只是執行中的陣列，因此保留的方式與將文字儲存至檔案、或寫入 <code>SharedPreferences</code>／<code>UserDefaults</code> 時不同。"
+    },
+    {
+      "source": "追加した行の詳細が入力と一致し、再読み込みでは初期データへ戻ることを確認できた。",
+      "translation": "已確認新增列的詳細資訊與輸入一致，重新載入後會回到初始資料。"
+    },
+    {
+      "source": "STEP 04 · コマ5",
+      "translation": "STEP 04 · 第5堂課"
+    },
+    {
+      "source": "確認とアレンジ",
+      "translation": "確認與自訂"
+    },
+    {
+      "source": "今日の終わりは、作った範囲を使って自分の表現に変えます。コードはSTEP 03の状態です。下の全コードは照合用で、自分の変更を無条件に貼り戻すためのものではありません。",
+      "translation": "今天的最後，在已製作的範圍內改為自己的表達方式。程式碼為 STEP 03 的狀態。下方的完整程式碼僅供比對核對，並非用來無條件貼回以覆蓋自己的修改。"
+    },
+    {
+      "source": "変える場所",
+      "translation": "修改的地方"
+    },
+    {
+      "source": "変わること",
+      "translation": "會改變的內容"
+    },
+    {
+      "source": "HTMLの<code>placeholder</code>",
+      "translation": "HTML 的 <code>placeholder</code>"
+    },
+    {
+      "source": "入力前に見える記入例。",
+      "translation": "輸入前看到的填寫範例。"
+    },
+    {
+      "source": "CSSの<code>app-input</code>の枠色・<code>padding</code>",
+      "translation": "CSS 中 <code>app-input</code> 的邊框顏色、<code>padding</code>"
+    },
+    {
+      "source": "入力欄の見た目と内側の余白。",
+      "translation": "輸入欄位的外觀與內部邊距。"
+    },
+    {
+      "source": "JSの<code>createInitialItems</code>",
+      "translation": "JS 的 <code>createInitialItems</code>"
+    },
+    {
+      "source": "再読み込み時に表示される自分の好きなものと理由。",
+      "translation": "重新載入時顯示的自己喜愛之物與理由。"
+    },
+    {
+      "source": "入力例には、好きな音楽や食べ物、場所を使えます。ほかの人の個人情報や、共有したくない内容は例に入れません。名前だけでなく、なぜ好きなのかを自分の言葉にしましょう。",
+      "translation": "輸入範例可以使用喜愛的音樂、食物、地點。不要將他人的個人資料或不想分享的內容放進範例。不僅是填寫名稱，更要用自己的話寫出為甚麼喜歡。"
+    },
+    {
+      "source": "1か所変えたら保存・再読み込みし、入力・追加・詳細・戻るをもう一度試します。変えたファイル名と、画面のどこが変わったかを控えます。",
+      "translation": "每修改一處就儲存並重新載入，再次嘗試輸入、新增、詳細資訊、返回。記下修改過的檔案名稱，以及畫面哪裏發生了改變。"
+    },
+    {
+      "source": "HTMLは構造と記入例、CSSは装飾、JavaScriptはデータと動きというWeb基礎の役割分担を使います。画面に入力した値と、ソースの初期データの違いを、再読み込み後の結果で見分けます。",
+      "translation": "沿用 Web 基礎中的分工：HTML 負責結構與填寫範例，CSS 負責裝飾，JavaScript 負責資料與動作。透過重新載入後的結果，分辨在畫面上輸入的值與原始碼初始資料的分別。"
+    },
+    {
+      "source": "アレンジした場所が画面に現れ、追加・詳細・戻るが引き続き動いた。",
+      "translation": "修改的地方已出現在畫面上，新增、詳細資訊、返回仍然正常運作。"
+    },
+    {
+      "source": "STEP 05 · コマ6",
+      "translation": "STEP 05 · 第6堂課"
+    },
+    {
+      "source": "配列とJSONの違いを読む",
+      "translation": "理解陣列與 JSON 的分別"
+    },
+    {
+      "source": "このコマの開始時の全コード",
+      "translation": "本堂課開始時的完整程式碼"
+    },
+    {
+      "source": "途中から合流する場合は、変更した文字と色を控えてから3ファイルをそろえます。順番に進めている人は、前の回の続きで構いません。",
+      "translation": "中途加入的人，先記下改過的文字和顏色，再準備好 3 個檔案。按順序進行的人，接續上一堂課的內容繼續即可。"
+    },
+    {
+      "source": "Monaca クラウド IDEで同じ好きなものノートを開きます。開始状態は「入力して追加できるが、再読み込みすると初期データに戻る」です。保存する前に、画面で使う配列と、保存へ渡す文字列を区別します。",
+      "translation": "在 Monaca クラウド IDE 中開啟同一個喜愛筆記。開始時的狀態是「可以輸入並新增，但重新載入後會回到初始資料」。在儲存之前，先區分畫面上使用的陣列與傳遞給儲存的字串。"
+    },
+    {
+      "source": "<strong>JSONは、値を文字で表すための決まった形式</strong>です。JavaScriptの配列やオブジェクトそのものではありません。<code>JSON.stringify</code> は値をJSONの文字列にし、<code>JSON.parse</code> はJSONの文字列から値を復元します。今回の保存対象は文字列の3項目を持つオブジェクトの配列です。",
+      "translation": "<strong>JSON 是用文字表示值的一種固定格式</strong>。它不是 JavaScript 的陣列或物件本身。<code>JSON.stringify</code> 將值轉換為 JSON 字串，<code>JSON.parse</code> 從 JSON 字串還原出值。這次要儲存的是由帶有 3 個字串屬性的物件組成的陣列。"
+    },
+    {
+      "source": "場面",
+      "translation": "場景"
+    },
+    {
+      "source": "値",
+      "translation": "值"
+    },
+    {
+      "source": "型",
+      "translation": "型別"
+    },
+    {
+      "source": "画面で使う1件の例",
+      "translation": "畫面上使用的 1 筆資料之範例"
+    },
+    {
+      "source": "オブジェクト",
+      "translation": "物件"
+    },
+    {
+      "source": "JSONで表した内容",
+      "translation": "以 JSON 表示的內容"
+    },
+    {
+      "source": "この文字の並びを持つ文字列",
+      "translation": "由這些字元組成的字串"
+    },
+    {
+      "source": "<code>parse</code>した後",
+      "translation": "<code>parse</code> 之後"
+    },
+    {
+      "source": "<code>item.name</code> を読める値",
+      "translation": "可以讀取 <code>item.name</code> 的值"
+    },
+    {
+      "source": "再びオブジェクト",
+      "translation": "再次成為物件"
+    },
+    {
+      "source": "JSONではキーもダブルクォートで囲みます。コメントや末尾の余分なカンマは使えません。ただし、今回の保存文字列は手で組み立てず、<code>stringify</code>に作らせます。名前に引用符や改行があっても、必要な表現への変換を任せられます。",
+      "translation": "在 JSON 中，鍵亦需使用雙引號括起來。不能使用註解與末尾多餘的逗號。不過，這次要儲存的字串並非手動拼接，而是交由 <code>stringify</code> 產生。即使名稱中含有引號或換行，亦可交由它轉換為所需的表示形式。"
+    },
+    {
+      "source": "次の3行は処理順を読むための抜粋です。まだ追加する必要はありません。次のSTEPで保存、STEP 07で読み込みへ組み込みます。",
+      "translation": "接下來的 3 行是為了理解處理順序而摘錄的程式碼。現在還不需要加入。下一個 STEP 會將其用於儲存，STEP 07 會將其整合至讀取處理中。"
+    },
+    {
+      "source": "配列のまま<code>setItem</code>へ渡すと、今回必要な構造を保持するJSONにはなりません。<code>String(oshiItems)</code> で一般的な文字列へ変えることとも区別しましょう。",
+      "translation": "若直接將陣列傳遞給 <code>setItem</code>，將無法成為保留本次所需結構的 JSON。亦需將其與使用 <code>String(oshiItems)</code> 轉換為一般字串區分開來。"
+    },
+    {
+      "source": "JavaやSwiftの配列・データオブジェクトをそのまま画面で使っていたときと、文字列を保存するときでは型が違います。この差をつなぐ表現として、今回はJSONを新しく扱います。配列の操作自体を学び直すのではなく、「配列→JSON文字列→配列」という変換の向きを確認します。",
+      "translation": "在 Java 或 Swift 中直接將陣列、資料物件用於畫面時，與儲存字串時的型別不同。作為銜接此差異的表達形式，這次將學習新的概念 JSON。並非重新學習陣列操作本身，而是確認「陣列→JSON 字串→陣列」這個轉換的方向。"
+    },
+    {
+      "source": "JSONの文字列と配列を区別し、<code>stringify</code>と<code>parse</code>の向きを確認した。",
+      "translation": "已區分 JSON 字串與陣列，並確認了 <code>stringify</code> 與 <code>parse</code> 的方向。"
+    },
+    {
+      "source": "STEP 06 · コマ6",
+      "translation": "STEP 06 · 第6堂課"
+    },
+    {
+      "source": "文字列にして保存する",
+      "translation": "轉換為字串並儲存"
+    },
+    {
+      "source": "このSTEPの3ファイルへ更新します。JSの先頭に <code>STORAGE_KEY</code> を置き、保存内容を探すための名前を1か所で管理します。この名前を途中で変更すると、以前のキーで保存した内容は見えなくなります。",
+      "translation": "更新為本 STEP 的 3 個檔案。在 JS 的開頭放置 <code>STORAGE_KEY</code>，將用於尋找儲存內容的名稱集中於一處管理。若中途變更這個名稱，使用先前的索引鍵所儲存的內容就無法看見了。"
+    },
+    {
+      "source": "<code>addOshi</code>では、<code>oshiItems.slice()</code> で配列の浅いコピー<code>nextItems</code>を作り、そこへ新しい1件を追加します。この処理では既存のオブジェクトの項目は変更せず、配列へ追加するだけなので、配列のコピーで足ります。",
+      "translation": "在 <code>addOshi</code> 中，使用 <code>oshiItems.slice()</code> 建立陣列的淺層複製 <code>nextItems</code>，再將新的 1 筆加入其中。這個處理不會變更現有物件的屬性，只是新增至陣列，因此複製陣列便已足夠。"
+    },
+    {
+      "source": "<code>localStorage.setItem(STORAGE_KEY, JSON.stringify(nextItems))</code> が、同じブラウザの同じ保存領域へ文字列を保存する行です。<code>localStorage</code>は同期APIなので、次の行へ進む前にこの呼び出しが終わります。今回は<code>Promise</code>や<code>async</code> / <code>await</code>を使いません。",
+      "translation": "<code>localStorage.setItem(STORAGE_KEY, JSON.stringify(nextItems))</code> 就是將字串儲存至同一瀏覽器的同一儲存區域的那一行。<code>localStorage</code> 是同步 API，因此在進入下一行之前，這個呼叫便已完成。這次不使用 <code>Promise</code> 與 <code>async</code> / <code>await</code>。"
+    },
+    {
+      "source": "保存設定や空き容量などの理由で書き込めないと例外が発生します。<code>try</code> 内の保存が成功したときだけ、<code>oshiItems</code>を<code>nextItems</code>へ替えて一覧を描き直します。<code>catch</code> 側では入力内容を残し、ボタンを戻してエラーを表示し、<code>return</code>します。",
+      "translation": "若因儲存設定或剩餘空間等原因無法寫入，就會發生例外狀況。只有在 <code>try</code> 中的儲存成功時，才將 <code>oshiItems</code> 替換為 <code>nextItems</code> 並重新繪製清單。在 <code>catch</code> 一端，保留輸入內容，恢復按鈕狀態，顯示錯誤並執行 <code>return</code>。"
+    },
+    {
+      "source": "順番",
+      "translation": "順序"
+    },
+    {
+      "source": "そうする理由",
+      "translation": "這樣做的理由"
+    },
+    {
+      "source": "別の配列に追加",
+      "translation": "新增至另一個陣列"
+    },
+    {
+      "source": "保存前に画面の元データを変えない。",
+      "translation": "儲存前不變更畫面上的原始資料。"
+    },
+    {
+      "source": "ボタンを無効化して保存",
+      "translation": "停用按鈕後再儲存"
+    },
+    {
+      "source": "同じ入力を連続して処理しない。",
+      "translation": "不連續處理相同的輸入。"
+    },
+    {
+      "source": "成功したら配列更新・一覧再描画・戻る",
+      "translation": "成功後更新陣列、重新繪製清單、返回"
+    },
+    {
+      "source": "保存失敗を「追加できた」と見せない。",
+      "translation": "不將儲存失敗顯示為「已成功新增」。"
+    },
+    {
+      "source": "失敗したら画面に理由を出す",
+      "translation": "失敗時在畫面上顯示原因"
+    },
+    {
+      "source": "入力を消さず、次の確認や再試行につなげる。",
+      "translation": "不清除輸入，便於後續確認或重試。"
+    },
+    {
+      "source": "保存してよいかを表す <code>let canSave = true;</code> も加えます。<code>openAddPage</code>と<code>addOshi</code>の最初の条件で <code>!canSave</code> なら何もせずに戻り、一覧の<code>init</code>では <code>btn_open_add</code> の <code>disabled</code> を <code>!canSave</code> にします。このSTEPには <code>canSave</code> を<code>false</code>にする行がないので、常に<code>true</code>のままで、画面の動きは変わりません。<code>false</code>にするのは、次のSTEPで保存内容を読み込めなかったときです。そのまま追加できると、読めなかった保存内容を、初期データに1件足した配列で上書きしてしまいます。保存の処理を書くこのSTEPで、保存へ進む入口に確認を置いておけば、次のSTEPでは読み込みの処理を足すだけで済みます。",
+      "translation": "還要加上表示是否可以儲存的 <code>let canSave = true;</code>。在 <code>openAddPage</code> 與 <code>addOshi</code> 開頭的條件中，若 <code>!canSave</code> 就甚麼都不做直接返回；在清單的 <code>init</code> 中，將 <code>btn_open_add</code> 的 <code>disabled</code> 設為 <code>!canSave</code>。本 STEP 中沒有將 <code>canSave</code> 設為 <code>false</code> 的行，因此它始終維持 <code>true</code>，畫面的運作方式不會改變。將其設為 <code>false</code>，是在下一個 STEP 中無法讀取儲存內容的時候。如果那時仍然可以新增，就會使用「初始資料加上 1 筆」的陣列覆寫掉無法讀取的儲存內容。在編寫儲存處理的本 STEP 中，先在進入儲存的入口放上檢查，下一個 STEP 就只需要加入讀取的處理即可。"
+    },
+    {
+      "source": "画面の文も、保存ができるようになったことに合わせて替えます。入力画面のボタンは <code>追加する</code> から <code>追加して保存</code> に変わります。押すと、配列への追加と一緒に保存まで行うことを、ボタンの文字で示すためです。STEP 01から出していた2つの文は、保存できるようになると事実と合わなくなるので、一覧の <code>txt_storage</code> は <code>保存はできますが、このSTEPではまだ読み込みません。</code> に、入力画面のボタンの下の注記は <code>保存先は、このブラウザの同じプレビューです。公開URLに入力内容は含まれません。</code> に替えます。保存した内容はこのブラウザにだけ残り、STEP 12で発行する公開URLから取り込んだ人には届かないためです。",
+      "translation": "畫面上的文字亦需配合已可進行儲存這一點進行更換。輸入畫面的按鈕從 <code>追加する</code>（新增）改為 <code>追加して保存</code>（新增並儲存）。這是為了透過按鈕的文字表明，點選後在新增至陣列的同時亦會進行儲存。從 STEP 01 起顯示的兩句話，在可以儲存之後便與事實不符，因此將清單的 <code>txt_storage</code> 改為 <code>保存はできますが、このSTEPではまだ読み込みません。</code>（可以儲存，但在本 STEP 中尚不會讀取。），將輸入畫面按鈕下方的備註改為 <code>保存先は、このブラウザの同じプレビューです。公開URLに入力内容は含まれません。</code>（儲存位置是此瀏覽器的同一個預覽。匯入連結中不包含輸入的內容。）。因為儲存的內容只會保留在此瀏覽器中，不會傳遞給透過 STEP 12 發行之匯入連結匯入專案的人。"
+    },
+    {
+      "source": "入力画面のボタンが <code>追加して保存</code> になったことを確かめてから、1件追加して一覧へ戻り、<code>件をこのブラウザに保存しました。</code> の文を確かめます。このSTEPでは保存までなので、再読み込み時の表示はまだ初期データです。保存されていないと決めつけず、次のSTEPで読み込む側を作ります。また、このSTEPで再読み込みしてからもう一度追加すると、前に保存した内容は、ソースの初期データと新しい1件で上書きされます。保存した内容をまだ読み込んでいない配列に、新しい1件を足して保存するためです。次のSTEPで読み込めるのは、最後に保存した内容です。",
+      "translation": "確認輸入畫面的按鈕已變成 <code>追加して保存</code>（新增並儲存）後，新增 1 筆並返回清單，確認顯示 <code>件をこのブラウザに保存しました。</code>（……筆已儲存至此瀏覽器。）這句話。本 STEP 只做到儲存，因此重新載入時顯示的仍是初始資料。不要斷定沒有儲存成功，下一個 STEP 會製作讀取的一側。另外，在本 STEP 中重新載入後再新增一次，先前儲存的內容會被「原始碼的初始資料加上新的 1 筆」覆寫。因為是在尚未讀取儲存內容的陣列上加上新的 1 筆再儲存。下一個 STEP 能讀取到的，是最後一次儲存的內容。"
+    },
+    {
+      "source": "キーと値で保存する目的はAndroidの<code>SharedPreferences</code>やiOSの<code>UserDefaults</code>と同じです。<code>localStorage</code>の値は文字列に限るためJSONへ変換します。<code>slice</code>はJavaで<code>ArrayList</code>を複製したり、Swiftで配列の別の値を作ったりする操作と比較できます。<code>try</code> / <code>catch</code>はJavaの例外処理、Swiftの<code>do</code> / <code>catch</code>に対応し、今回は失敗後に表示中のデータを更新しない順序が要点です。<code>canSave</code>でボタンの <code>disabled</code> を切り替えるのは、Androidの<code>setEnabled(false)</code>やiOSの<code>isEnabled = false</code>で、条件がそろうまで操作を受け付けないのと同じです。",
+      "translation": "以鍵與值儲存的目的，與 Android 的 <code>SharedPreferences</code>、iOS 的 <code>UserDefaults</code> 相同。<code>localStorage</code> 的值只限於字串，因此要轉換為 JSON。<code>slice</code> 可以與 Java 中複製 <code>ArrayList</code>、Swift 中建立陣列的另一個值的操作相比較。<code>try</code> / <code>catch</code> 對應 Java 的例外處理、Swift 的 <code>do</code> / <code>catch</code>，這次的要點是失敗後不更新顯示中資料的順序。使用 <code>canSave</code> 切換按鈕的 <code>disabled</code>，與 Android 的 <code>setEnabled(false)</code>、iOS 的 <code>isEnabled = false</code> 相同，在條件滿足之前不接受操作。"
+    },
+    {
+      "source": "保存成功の文を確認し、コピー・保存・表示更新の順番を確かめた。",
+      "translation": "已確認儲存成功的文字，並確認了複製、儲存、更新顯示的順序。"
+    },
+    {
+      "source": "STEP 07 · コマ6",
+      "translation": "STEP 07 · 第6堂課"
+    },
+    {
+      "source": "保存した配列を復元する",
+      "translation": "還原已儲存的陣列"
+    },
+    {
+      "source": "JSに<code>loadOshiItems</code>と<code>isValidItems</code>を加え、<code>page_list</code>の<code>init</code>で <strong>読み込み→一覧生成</strong> の順に呼びます。保存した値を読む前に行を作ると、初期データのまま表示されるためです。",
+      "translation": "在 JS 中加入 <code>loadOshiItems</code> 與 <code>isValidItems</code>，在 <code>page_list</code> 的 <code>init</code> 中按 <strong>讀取→產生清單</strong> 的順序呼叫。因為如果在讀取儲存的值之前就建立資料列，顯示的仍會是初始資料。"
+    },
+    {
+      "source": "<code>getItem(STORAGE_KEY)</code> は、未保存なら <code>null</code> を返します。この場合は何も復元せず、ソースの初期データを使います。文字列があれば<code>JSON.parse</code>で値へ戻します。",
+      "translation": "<code>getItem(STORAGE_KEY)</code> 在尚未儲存時返回 <code>null</code>。這種情況下甚麼都不還原，使用原始碼的初始資料。若有字串，就使用 <code>JSON.parse</code> 還原為值。"
+    },
+    {
+      "source": "JSONとして読めることと、画面で使えることは別です。たとえば数値のJSONも<code>parse</code>できますが、今回欲しいのは文字列の項目を持つ配列です。<code>isValidItems</code>は次の順に確かめます。",
+      "translation": "能作為 JSON 讀取，與能在畫面上使用，是兩回事。例如數值的 JSON 亦能 <code>parse</code>，但這次需要的是帶有字串屬性的陣列。<code>isValidItems</code> 按以下順序檢查。"
+    },
+    {
+      "source": "<code>Array.isArray</code> で配列か確認します。",
+      "translation": "使用 <code>Array.isArray</code> 確認是否為陣列。"
+    },
+    {
+      "source": "各<code>item</code>が<code>null</code>でなく、オブジェクトであるかを <code>typeof</code> と条件式で確認します。",
+      "translation": "使用 <code>typeof</code> 與條件表達式確認每個 <code>item</code> 不是 <code>null</code>，且為物件。"
+    },
+    {
+      "source": "<code>name</code>・<code>genre</code>・<code>comment</code>がすべて<code>string</code>で、<code>trim</code>後に空でないか確認します。先に型を確認するため、文字列でないものへ<code>trim</code>を呼びません。",
+      "translation": "確認 <code>name</code>、<code>genre</code>、<code>comment</code> 均為 <code>string</code>，且 <code>trim</code> 之後不為空。因為先確認了型別，所以不會對非字串的值呼叫 <code>trim</code>。"
+    },
+    {
+      "source": "全部通れば<code>true</code>を返します。空の配列は有効な0件として扱います。",
+      "translation": "全部通過就返回 <code>true</code>。空陣列按有效的 0 筆處理。"
+    },
+    {
+      "source": "読み込みや<code>parse</code>が失敗したとき、または構造が違うときは<code>canSave</code>を<code>false</code>にします。保存済みの文字列を自動で消したり、初期データで上書きしたりしません。一覧には初期データと失敗メッセージを表示し、追加は止めます。次のSTEPで、本人が選んだときだけ初期化できる操作を作ります。失敗メッセージが案内する「初期の内容に戻す」ボタンも、そのときに作ります。このSTEPの画面には、まだありません。",
+      "translation": "讀取或 <code>parse</code> 失敗時，或者結構不同時，將 <code>canSave</code> 設為 <code>false</code>。不會自動刪除已儲存的字串，亦不會使用初始資料覆寫。清單中顯示初始資料與失敗訊息，並停止新增。下一個 STEP 會製作只有本人選擇時才能重設的操作。失敗訊息中提到的「初期の内容に戻す」（恢復初始內容）按鈕亦在那時製作。本 STEP 的畫面上還沒有它。"
+    },
+    {
+      "source": "名前に引用符や山かっこ、好きな理由に改行を入れて1件追加します。",
+      "translation": "在名稱中輸入引號或尖括號，在喜愛理由中輸入換行，新增 1 筆。"
+    },
+    {
+      "source": "同じプレビューを再読み込みし、保存した件数と追加した行が戻ることを確かめます。",
+      "translation": "重新載入同一個預覽，確認儲存的筆數與新增的列都已還原。"
+    },
+    {
+      "source": "詳細を開き、文字・改行が入力どおりに戻ったことを確認します。",
+      "translation": "開啟詳細資訊，確認文字與換行都按輸入的樣子還原。"
+    },
+    {
+      "source": "保存領域はブラウザやプレビューの場所に結び付きます。別の端末・別のブラウザ・別のプロジェクトのコピーへ、内容が自動で移る仕組みではありません。",
+      "translation": "儲存區域與瀏覽器和預覽所在的位置綁定。內容不會自動轉移至其他裝置、其他瀏覽器或其他專案複本中。"
+    },
+    {
+      "source": "保存を読むタイミングは、Androidの<code>onCreate</code>やiOSの<code>viewDidLoad</code>で保存値を画面へ戻すときに対応します。Javaの型検査やSwiftの型確認と同じ目的で、今回はJavaScriptの<code>Array.isArray</code>と<code>typeof</code>を使います。<code>JSON.parse</code>の結果を信頼し切らず、画面に必要な項目と型を確かめる点が違いです。",
+      "translation": "讀取儲存內容的時機，對應 Android 在 <code>onCreate</code>、iOS 在 <code>viewDidLoad</code> 中將儲存的值還原至畫面上的時刻。與 Java 的型別檢查、Swift 的型別確認目的相同，這次使用的是 JavaScript 的 <code>Array.isArray</code> 與 <code>typeof</code>。不同之處在於，不完全信任 <code>JSON.parse</code> 的結果，而是確認畫面所需的屬性與型別。"
+    },
+    {
+      "source": "追加した内容を再読み込み後にも一覧・詳細で読め、<code>null</code>・不正データ・空配列の扱いを区別できた。",
+      "translation": "重新載入後仍能在清單與詳細資訊中看到新增的內容，並能區分 <code>null</code>、無效資料、空陣列的處理方式。"
+    },
+    {
+      "source": "STEP 08 · コマ6",
+      "translation": "STEP 08 · 第6堂課"
+    },
+    {
+      "source": "初期化の確認と失敗への対応",
+      "translation": "重設確認與失敗應對"
+    },
+    {
+      "source": "HTMLに初期化ボタンと確認欄、JSにそのイベントと<code>resetOshiItems</code>を加えます。<code>初期の内容に戻す</code> を押すと、<code>is-hidden</code>を<code>remove</code>して確認欄を見せます。<code>やめる</code> ではクラスを<code>add</code>し、欄を閉じるだけです。確認欄を囲む <code>reset-section</code> は上に区切りの線を引き、<code>#panel_reset ons-button</code> は確認欄の2つのボタンの上を12px空けます。この2つと <code>is-hidden</code> はSTEP 01のCSSに入れてあり、このSTEPのHTMLで初めて要素に当たります。",
+      "translation": "在 HTML 中加入重設按鈕與確認欄，在 JS 中加入對應的事件與 <code>resetOshiItems</code>。點選 <code>初期の内容に戻す</code>（恢復初始內容）時，<code>remove</code> 掉 <code>is-hidden</code>，顯示確認欄。點選 <code>やめる</code>（取消）時，只是 <code>add</code> 該類別，關閉欄位。包圍確認欄的 <code>reset-section</code> 在上方繪製一條分隔線，<code>#panel_reset ons-button</code> 在確認欄的 2 個按鈕上方留出 12px。這 2 個與 <code>is-hidden</code> 已在 STEP 01 的 CSS 中寫好，在本 STEP 的 HTML 中才第一次套用至元素上。"
+    },
+    {
+      "source": "実際の削除は <code>削除して初期の内容に戻す</code> を押した場合だけです。<code>localStorage.removeItem(STORAGE_KEY)</code> で、このアプリのキー1つだけを削除します。保存領域全体を空にする<code>clear</code>は使いません。",
+      "translation": "只有點選 <code>削除して初期の内容に戻す</code>（刪除並恢復初始內容）時才會真正刪除。使用 <code>localStorage.removeItem(STORAGE_KEY)</code> 只刪除此應用程式的 1 個鍵。不使用會清空整個儲存區域的 <code>clear</code>。"
+    },
+    {
+      "source": "削除に成功したら<code>createInitialItems</code>で新しい初期配列を作り、<code>canSave</code>を<code>true</code>へ戻し、一覧と文を更新します。削除に失敗したら画面の配列も変更せず、削除できなかったと表示します。初期化が終わると、以前入力した内容は戻せません。",
+      "translation": "刪除成功後，使用 <code>createInitialItems</code> 建立新的初始陣列，將 <code>canSave</code> 恢復為 <code>true</code>，並更新清單與文字。刪除失敗時畫面的陣列亦不變更，並顯示未能刪除。重設完成後，先前輸入的內容無法還原。"
+    },
+    {
+      "source": "検証用に追加したデータを使い、初期化の確認欄を開いて <code>やめる</code> を押します。件数が変わらないことを確認します。",
+      "translation": "利用為驗證而新增的資料，開啟重設的確認欄，點選 <code>やめる</code>（取消）。確認筆數沒有變化。"
+    },
+    {
+      "source": "残す必要のある内容は控えてから、もう一度確認欄を開き、削除するボタンを押します。",
+      "translation": "先記下需要保留的內容，再次開啟確認欄，點選刪除按鈕。"
+    },
+    {
+      "source": "一覧がソースの初期データに戻り、再読み込みしてもその初期データになることを確かめます。",
+      "translation": "確認清單回到原始碼的初始資料，重新載入後亦是這些初始資料。"
+    },
+    {
+      "source": "通常の操作で保存・読込に失敗した場合は、表示された文を先生と確認します。教材の確認のために、ブラウザのセキュリティ設定を変更する必要はありません。",
+      "translation": "若在正常操作中儲存或讀取失敗，請與老師一同確認顯示出的文字。為了確認教材內容，不需要變更瀏覽器的安全性設定。"
+    },
+    {
+      "source": "Web基礎の<code>classList.add</code> / <code>remove</code>で表示クラスを切り替えます。キー1つの削除は、Androidの<code>SharedPreferences.Editor.remove</code>やSwiftの<code>UserDefaults.removeObject</code>に対応します。データを消す前に選び直せる画面を用意する点は、ネイティブアプリの確認操作と同じです。",
+      "translation": "使用 Web 基礎中的 <code>classList.add</code> / <code>remove</code> 切換控制顯示的類別。刪除 1 個鍵，對應 Android 的 <code>SharedPreferences.Editor.remove</code>、Swift 的 <code>UserDefaults.removeObject</code>。在刪除資料之前提供可重新選擇的畫面，這點與原生應用程式的確認操作相同。"
+    },
+    {
+      "source": "初期化を中止したときは内容が残り、確定したときだけ初期の内容へ戻った。",
+      "translation": "取消重設時內容保留，只有確認時才回到初始內容。"
+    },
+    {
+      "source": "STEP 09 · コマ6",
+      "translation": "STEP 09 · 第6堂課"
+    },
+    {
+      "source": "保存を確かめてアレンジする",
+      "translation": "確認儲存並進行自訂"
+    },
+    {
+      "source": "入力→追加→詳細→戻る→再読み込みの順で動かし、保存した内容が復元されることを確認します。次に、ソースの初期データを自分の言葉へ変えます。",
+      "translation": "按輸入→新增→詳細資訊→返回→重新載入的順序操作，確認儲存的內容已還原。接著，把原始碼的初始資料改為自己的話。"
+    },
+    {
+      "source": "<strong>保存データがあると、ソースの初期データより優先して表示されます。</strong> <code>createInitialItems</code>を書き換えても画面が変わらない場合は、変更したコードのミスとは限りません。必要な入力を控えたうえで、アプリ内の初期化を使ってソースの内容を確認します。",
+      "translation": "<strong>有儲存資料時，會優先顯示儲存資料，而非原始碼的初始資料。</strong>若改寫了 <code>createInitialItems</code> 但畫面沒有變化，不一定是修改的程式碼有誤。先記下需要的輸入內容，再使用應用程式內的重設功能來確認原始碼的內容。"
+    },
+    {
+      "source": "アレンジする場所",
+      "translation": "修改的地方"
+    },
+    {
+      "source": "確かめること",
+      "translation": "要確認的內容"
+    },
+    {
+      "source": "<code>createInitialItems</code>の<code>name</code>・<code>genre</code>・<code>comment</code>",
+      "translation": "<code>createInitialItems</code> 的 <code>name</code>、<code>genre</code>、<code>comment</code>"
+    },
+    {
+      "source": "初期化後の一覧と詳細が自分の好きなものになる。",
+      "translation": "重設後的清單與詳細資訊變成自己喜愛之物。"
+    },
+    {
+      "source": "HTMLの案内文・<code>placeholder</code>",
+      "translation": "HTML 的提示文字、<code>placeholder</code>"
+    },
+    {
+      "source": "何を入力するアプリか伝わる。",
+      "translation": "能讓人明白這是輸入甚麼的應用程式。"
+    },
+    {
+      "source": "CSSの色・枠・余白",
+      "translation": "CSS 的顏色、邊框、邊距"
+    },
+    {
+      "source": "長い日本語や改行も読める。",
+      "translation": "較長的日文與換行亦能正常閱讀。"
+    },
+    {
+      "source": "保存キーは変えず、まず文字や色を変えましょう。保存して再読み込みし、どの変更がソースに残り、どの内容がブラウザだけに残るかを確かめます。",
+      "translation": "不要更改儲存鍵，先從文字與顏色改起。儲存並重新載入，然後確認哪些修改保留在原始碼中，哪些內容只保留在瀏覽器中。"
+    },
+    {
+      "source": "ネイティブアプリでも、コードに書いた既定値より保存済みの設定を優先することがあります。同じ区別を、<code>createInitialItems</code>と<code>getItem</code>のどちらが最終的な<code>oshiItems</code>になるかで追います。アレンジは既習のデータと装飾の変更だけで行います。",
+      "translation": "在原生應用程式中，有時亦會優先使用已儲存的設定，而非程式碼中編寫的預設值。透過 <code>createInitialItems</code> 與 <code>getItem</code> 哪一個最終成為 <code>oshiItems</code>，來掌握相同的區別。修改僅限於已學過的資料與裝飾之變更。"
+    },
+    {
+      "source": "保存・復元の一連の操作ができ、ソースのアレンジと入力データの保存先を確かめた。",
+      "translation": "能夠完成儲存與還原的一整套操作，並確認了原始碼的修改與輸入資料的儲存位置。"
+    },
+    {
+      "source": "STEP 10 · コマ7",
+      "translation": "STEP 10 · 第7堂課"
+    },
+    {
+      "source": "授業内でFlutterの準備を始める",
+      "translation": "在課堂上開始準備 Flutter"
+    },
+    {
+      "source": "今日は好きなものノートを仕上げて提出します。最初の10分で、後半に使うFlutter SDKのダウンロードと既存のiOS環境の確認を始めます。授業前に取得しておく必要はありません。",
+      "translation": "今天要完成喜愛筆記並提交。在最初的 10 分鐘內，開始下載後半學期要用的 Flutter SDK，並確認現有的 iOS 環境。不需要在上課前預先下載。"
+    },
+    {
+      "source": "<a1>共通資料のSTEP 4〜7</a1>を別のタブで開きます。",
+      "translation": "在另一個分頁中開啟<a1>通用資料的 STEP 4～7</a1>。"
+    },
+    {
+      "source": "Apple Silicon用のFlutter 3.47.5 / Dart 3.13.4を取得します。既にその版を用意できている場合は、版を確認して重複取得を避けます。",
+      "translation": "取得適用於 Apple Silicon 的 Flutter 3.47.5 / Dart 3.13.4。若已經準備好該版本，請確認版本以避免重複下載。"
+    },
+    {
+      "source": "別科目で使っているXcodeのiOS環境を確認します。利用できるランタイムは再利用します。<code>xcodebuild -downloadPlatform iOS</code> は全員必須ではありません。",
+      "translation": "確認在其他科目中使用的 Xcode 的 iOS 環境。可使用的執行階段就直接重複使用。<code>xcodebuild -downloadPlatform iOS</code> 並非所有人都必須執行。"
+    },
+    {
+      "source": "不足分だけ先生と確認して取得を始め、この教科書へ戻ります。Flutter専用のiOS資材は共通資料の <code>flutter precache --ios</code> で用意します。",
+      "translation": "僅針對缺少的部分與老師確認後開始取得，然後返回此教科書。Flutter 專用的 iOS 素材使用通用資料中的 <code>flutter precache --ios</code> 準備。"
+    },
+    {
+      "source": "取得待ちは好きなものノートのアレンジに使います。コマ8の冒頭にも準備確認の時間があります。家庭での作業が済んでいることを前提にはしません。",
+      "translation": "等待下載的時間用來修改喜愛筆記。第 8 堂課的開頭亦有確認準備情況的時間。不以在家完成準備為前提。"
+    },
+    {
+      "source": "Android StudioやXcodeでも、開発用SDKとアプリのソースは別です。今回はFlutter SDKと既存のiOS環境を組み合わせます。MonacaのソースをFlutterへ変換する操作ではなく、後半に使う道具の準備です。",
+      "translation": "在 Android Studio 與 Xcode 中，開發用的 SDK 與應用程式原始碼亦是分開的。這次是將 Flutter SDK 與現有的 iOS 環境結合。這並非將 Monaca 的原始碼轉換為 Flutter 的操作，而是為後半學期要使用的工具做好準備。"
+    },
+    {
+      "source": "指定SDKの取得を開始または版を確認し、既存iOS環境の状態を先生へ伝えられる。",
+      "translation": "已開始取得指定的 SDK 或確認了版本，並能向老師說明現有 iOS 環境的狀態。"
+    },
+    {
+      "source": "STEP 11 · コマ7",
+      "translation": "STEP 11 · 第7堂課"
+    },
+    {
+      "source": "提出に残るアレンジを作る",
+      "translation": "製作能保留至提交內容中的修改"
+    },
+    {
+      "source": "Monaca クラウド IDEへ戻り、自分の好きなものノートを仕上げます。既に扱った文字・色・初期データから変更箇所を選び、どんなものが好きで、なぜ好きなのかが伝わる内容にします。",
+      "translation": "返回 Monaca クラウド IDE，完成自己的喜愛筆記。從已經學過的文字、顏色、初始資料中選擇要修改的地方，讓內容能傳達出喜歡甚麼、為甚麼喜歡。"
+    },
+    {
+      "source": "確認方法",
+      "translation": "確認方法"
+    },
+    {
+      "source": "<code>createInitialItems</code>の配列",
+      "translation": "<code>createInitialItems</code> 的陣列"
+    },
+    {
+      "source": "最初に読める好きなものとその理由。",
+      "translation": "一開始就能看到的喜愛之物及其理由。"
+    },
+    {
+      "source": "必要な保存内容を控えて初期化し、全件の詳細を開く。",
+      "translation": "記下需要的儲存內容後重設，開啟所有項目的詳細資訊。"
+    },
+    {
+      "source": "HTMLの見出し・案内文・入力例",
+      "translation": "HTML 的標題、提示文字、輸入範例"
+    },
+    {
+      "source": "自分の題材が画面から伝わる。",
+      "translation": "自己的主題能從畫面上傳達出來。"
+    },
+    {
+      "source": "入力画面を開き、迷わず入力できるか読む。",
+      "translation": "開啟輸入畫面，閱讀內容，看看能否順利輸入而不會感到困惑。"
+    },
+    {
+      "source": "CSSの文字色・枠色・余白",
+      "translation": "CSS 的文字顏色、邊框顏色、邊距"
+    },
+    {
+      "source": "カードと入力欄の印象。",
+      "translation": "卡片與輸入欄位給人的印象。"
+    },
+    {
+      "source": "長い日本語を入れて、文字が切れないか見る。",
+      "translation": "輸入較長的日文，看看文字是否會被截斷。"
+    },
+    {
+      "source": "<strong>画面から追加して保存したデータは、公開URLへ含まれません。</strong> 先生が新しく取り込んだときに見えるアレンジは、ソースへ書きます。入力例として見せたい好きなものも、<code>createInitialItems</code>に書いて保存します。",
+      "translation": "<strong>從畫面上新增並儲存的資料，不會包含在匯入連結中。</strong>想讓老師在新匯入時看到的修改，要寫入原始碼中。想作為輸入範例展示的喜愛之物，亦需寫入 <code>createInitialItems</code> 並儲存。"
+    },
+    {
+      "source": "ソースを変えても以前の保存内容が表示される場合はSTEP 09を確認します。保存キーを変えて見えなくする方法で済ませず、残す内容を控えてからアプリ内の初期化を使います。",
+      "translation": "若修改了原始碼卻仍顯示先前儲存的內容，請查看 STEP 09。不要使用更改儲存鍵使其看不見的辦法來應付，而是先記下要保留的內容，再使用應用程式內的重設功能。"
+    },
+    {
+      "source": "JavaやSwiftでコードの初期値を変えることと、実行中に端末へ保存した内容を変えることは別です。公開URLで渡すのはソースなので、ブラウザの入力内容だけを変えても相手の初期画面には反映されません。",
+      "translation": "在 Java 或 Swift 中，更改程式碼裡的初始值，與更改執行時儲存至裝置上的內容，是兩回事。透過匯入連結傳遞的是原始碼，因此僅更改瀏覽器中輸入的內容，不會反映在對方的初始畫面上。"
+    },
+    {
+      "source": "自分の題材に合わせた変更をソースへ保存し、初期状態から確認できた。",
+      "translation": "已將符合自己主題的修改儲存至原始碼中，並已從初始狀態確認過。"
+    },
+    {
+      "source": "STEP 12 · コマ7",
+      "translation": "STEP 12 · 第7堂課"
+    },
+    {
+      "source": "操作と公開URLを確認する",
+      "translation": "確認操作與匯入連結"
+    },
+    {
+      "source": "ソースの初期の内容が表示された状態から完成確認を始めます。必要な入力は内容を控えて、先生と確認してから初期化します。",
+      "translation": "從顯示原始碼初始內容的狀態開始進行完成確認。需要的輸入內容先記下來，與老師確認後再進行重設。"
+    },
+    {
+      "source": "一覧の各行から詳細へ進み、名前・種類・理由が一致することを確認します。",
+      "translation": "從清單的每一列前往詳細資訊，確認名稱、類別、理由一致。"
+    },
+    {
+      "source": "追加画面で空欄を試し、同じ画面に案内が出ることを確認します。",
+      "translation": "在新增畫面嘗試留空，確認同一畫面上顯示提示。"
+    },
+    {
+      "source": "確認用の1件を追加し、成功の文・件数・詳細・再読み込み後の復元を確認します。",
+      "translation": "新增 1 筆用於確認的資料，確認成功的文字、筆數、詳細資訊，以及重新載入後的還原。"
+    },
+    {
+      "source": "初期化で <code>やめる</code> を選び、データが残ることを確かめます。必要な内容を控えた後に初期化し、ソースのデータへ戻します。",
+      "translation": "在重設時選擇 <code>やめる</code>（取消），確認資料仍然保留。記下需要的內容後再重設，回到原始碼的資料。"
+    },
+    {
+      "source": "iPhone系・Android系のプレビューで入力・戻る・ボタンの見た目を比べます。比較用の <code>ons.platform.select(\"android\")</code> を有効にした場合は、最後にコメントへ戻します。",
+      "translation": "在 iPhone 系與 Android 系的預覽中比較輸入、返回、按鈕的外觀。若啟用了用於比較的 <code>ons.platform.select(\"android\")</code>，最後要將其改回註解。"
+    },
+    {
+      "source": "クラウド IDEの <code>プロジェクト → 公開…</code> を開き、自分の作品であることを確かめ、公開URLを発行します。",
+      "translation": "開啟雲端 IDE 的 <code>プロジェクト → 公開…</code>（專案 → 公開…），確認是自己的作品，然後發行匯入連結。"
+    },
+    {
+      "source": "提出するのは <code>https://monaca.mobi/ja/directimport?pid=…</code> という形の、実際に発行されたURLです。クラウド IDEやプレビューのアドレス、先生の完成見本URLを代わりに貼りません。相手のMonacaへソースを取り込むためのURLです。",
+      "translation": "要提交的是形如 <code>https://monaca.mobi/ja/directimport?pid=…</code> 的、實際發行的連結。不要用雲端 IDE 或預覽的位址、老師的完成範例連結來代替。它是將原始碼匯入對方 Monaca 的連結。"
+    },
+    {
+      "source": "発行したURLを開き、対象のプロジェクトを確かめます。取り込みを確定するとコピーが増えるため、繰り返して枠を埋めないようにします。教員側で新しく取り込んだ状態の動作も確認します。",
+      "translation": "開啟發行的連結，確認對應的專案。一旦確定匯入就會增加複本，因此不要重複匯入佔滿配額。亦需確認老師一側新匯入後的運作情況。"
+    },
+    {
+      "source": "OSの見た目が変わっても入力・保存の処理は同じです。ネイティブアプリのビルド成果物を渡す方法と違い、ここではソースを相手の開発環境へコピーします。ブラウザの保存領域まで渡す操作ではありません。",
+      "translation": "即使作業系統風格的外觀不同，輸入與儲存的處理亦相同。與交付原生應用程式建置成品的方式不同，這裏是將原始碼複製到對方的開發環境。這並非連同瀏覽器的儲存區域一起交付的操作。"
+    },
+    {
+      "source": "初期状態と追加後の操作を確認し、自分の作品の取り込み用公開URLを発行できた。",
+      "translation": "已確認初始狀態與新增後的操作，並發行了自己作品的匯入連結。"
+    },
+    {
+      "source": "STEP 13 · コマ7",
+      "translation": "STEP 13 · 第7堂課"
+    },
+    {
+      "source": "提出と準備状況を確認する",
+      "translation": "確認提交與準備情況"
+    },
+    {
+      "source": "先生が授業中に案内する提出先・締め切りを確認し、自分の好きなものノートで発行した公開URLを提出します。まだ案内がない場合は、URLを控えて先生へ確認します。",
+      "translation": "確認老師在課堂上公佈的提交處與截止時間，提交為自己喜愛筆記所發行的匯入連結。若尚未收到通知，就先記下連結，向老師確認。"
+    },
+    {
+      "source": "通常版MonacaのFreeプランではZIPを学生の提出物にしません。先生は公開URLから取り込み、初期データと操作を確認します。公開中の自分のプロジェクトは提出後に削除しません。",
+      "translation": "在標準版 Monaca 的 Free 方案中，不以 ZIP 作為學生的提交作品。老師透過匯入連結進行匯入，確認初始資料與操作。公開中的自己專案在提交後請勿刪除。"
+    },
+    {
+      "source": "Flutter準備のタブへ戻り、取得が終わったか、SDKの版、<code>flutter doctor</code>で止まっている項目を確認します。終わっていない項目はその場で先生へ伝え、コマ8へ引き継ぎます。授業外で終わらせることを条件にはしません。",
+      "translation": "回到 Flutter 準備的分頁，確認下載是否完成、SDK 的版本，以及 <code>flutter doctor</code> 仍然報告的未解決項目。未完成的項目當場告知老師，延續至第 8 堂課處理。不以在課外完成為條件。"
+    },
+    {
+      "source": "ソースを共有する提出と、端末に保存したデータを見せることを区別します。Android／iOSの実行環境を確認するときと同様に、準備済みの項目とまだ使えない項目を具体的に記録します。",
+      "translation": "區分共享原始碼的提交，與展示儲存在裝置上的資料。與確認 Android／iOS 執行環境時相同，具體記錄已準備好的項目與尚無法使用的項目。"
+    },
+    {
+      "source": "指定先へ自分の公開URLを提出し、Flutter準備の状態も先生へ伝えた。",
+      "translation": "已向指定的提交處提交自己的匯入連結，並向老師說明了 Flutter 的準備狀態。"
+    },
+    {
+      "source": "STEP 14 · コマ7",
+      "translation": "STEP 14 · 第7堂課"
+    },
+    {
+      "source": "アレンジできる場所を確かめる",
+      "translation": "確認可以修改的地方"
+    },
+    {
+      "source": "最後に提出したソースを見ながら、次の3点を確かめます。",
+      "translation": "最後一邊檢視提交的原始碼，一邊確認以下 3 點。"
+    },
+    {
+      "source": "どのファイルの、どの文字・色・初期データを変更したか。",
+      "translation": "修改了哪個檔案的哪些文字、顏色、初始資料。"
+    },
+    {
+      "source": "その変更が一覧・入力・詳細のどこに現れるか。",
+      "translation": "這些修改出現在清單、輸入、詳細資訊的哪個位置。"
+    },
+    {
+      "source": "入力した保存データがない相手にも、アレンジが伝わるか。",
+      "translation": "對於沒有輸入過儲存資料的對方，修改是否亦能傳達出來。"
+    },
+    {
+      "source": "余裕があれば、既に扱った範囲で記入例を分かりやすくしたり、余白を調整したりします。いまある画面で、自分の「好き」が伝わる状態を確かめましょう。変更したら保存し、一覧・追加・詳細・再読み込みを確認してから公開内容を確かめます。",
+      "translation": "若時間充裕，可以在已學過的範圍內讓填寫範例更清晰易懂，或調整邊距。在現有的畫面上，確認能傳達出自己的「喜愛」。修改後儲存，確認清單、新增、詳細資訊、重新載入之後，再確認公開的內容。"
+    },
+    {
+      "source": "全コードは見本との比較用です。自分の変更を消して見本に戻す必要はありません。動かなくなった部分や、変更した場所と結果の関係を確かめるために使います。",
+      "translation": "完整程式碼僅供與範例比對。不需要刪除自己的修改還原為範例。它用來確認無法運作的部分，以及修改處與結果之間的關係。"
+    },
+    {
+      "source": "HTML・CSS・JavaScriptの役割分担はWeb基礎と同じで、変更した場所はファイルの種類から見つけられます。保存があるアプリでは、ソースの初期値と保存値の両方を見ます。<code>SharedPreferences</code>／<code>UserDefaults</code>を使うアプリで、コードに書いた初期値と端末に残る保存値が別にあるのと同じです。",
+      "translation": "HTML、CSS、JavaScript 的分工與 Web 基礎相同，可以根據檔案的種類找到修改的位置。具有儲存功能的應用程式，要同時檢視原始碼的初始值與儲存的值。這與使用 <code>SharedPreferences</code>／<code>UserDefaults</code> 的應用程式中，程式碼中編寫的初始值與保留在裝置上的儲存值是分開的一樣。"
+    },
+    {
+      "source": "自分の変更箇所が画面に現れ、初期状態からも伝わる作品にできた。",
+      "translation": "自己修改的地方已出現在畫面上，作品從初始狀態亦能傳達出主題。"
+    },
+    {
+      "source": "見えること",
+      "translation": "看到的現象"
+    },
+    {
+      "source": "確認すること",
+      "translation": "要檢查的內容"
+    },
+    {
+      "source": "入力画面が開かない",
+      "translation": "輸入畫面無法開啟"
+    },
+    {
+      "source": "3ファイルが同じSTEPか、保存したかを確認。読込失敗の表示が出ていればSTEP 08へ。",
+      "translation": "確認 3 個檔案是否屬於同一個 STEP、是否已儲存。若顯示讀取失敗，請參閱 STEP 08。"
+    },
+    {
+      "source": "追加した文字が消えた",
+      "translation": "新增的文字消失了"
+    },
+    {
+      "source": "コマ5では未保存が正常。コマ6以降は保存成功の文、同じブラウザ・同じプレビューかを確認。",
+      "translation": "在第 5 堂課中未儲存是正常的。第 6 堂課以後，確認是否顯示儲存成功的文字，以及是否為同一瀏覽器、同一預覽。"
+    },
+    {
+      "source": "初期データを書き換えても古い内容が出る",
+      "translation": "改寫了初始資料仍顯示舊內容"
+    },
+    {
+      "source": "保存データが優先される。必要な内容を控えたうえで、アプリ内の「初期の内容に戻す」を使う。",
+      "translation": "儲存資料會優先顯示。先記下需要的內容，再使用應用程式內的「初期の内容に戻す」（恢復初始內容）。"
+    },
+    {
+      "source": "保存・読込失敗と出る",
+      "translation": "顯示儲存或讀取失敗"
+    },
+    {
+      "source": "その表示を先生へ見せる。読込に失敗したデータは自動で上書きしない。ブラウザ設定を無理に変更しない。",
+      "translation": "將該提示顯示給老師看。讀取失敗的資料不會被自動覆寫。不要勉強變更瀏覽器設定。"
+    },
+    {
+      "source": "提出URLが先生の見本と同じ",
+      "translation": "提交的連結與老師的範例相同"
+    },
+    {
+      "source": "自分のプロジェクトで発行したURLか確認。クラウド IDEのアドレスやプレビューURLでは提出しない。",
+      "translation": "確認是否為自己專案發行的連結。不要使用雲端 IDE 的位址或預覽連結提交。"
+    },
+    {
+      "source": "JEC / ハイブリッドアプリ開発技法 · M02OshiSave",
+      "translation": "JEC / 混合應用程式開發技法 · M02OshiSave"
+    }
+  ]
+}

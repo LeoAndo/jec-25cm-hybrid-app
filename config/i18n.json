@@ -45,7 +45,7 @@
     {
       "code": "zh-Hant-HK",
       "name": "繁體中文（香港）",
-      "distribute": false,
+      "distribute": true,
       "han": true,
       "ui": {
         "copy": "複製",
