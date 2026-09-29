@@ -1,0 +1,1138 @@
+{
+  "source": "docs/oshi-save/index.html",
+  "language": "ar",
+  "entries": [
+    {
+      "source": "M02 好きなものノート：追加と保存 | ハイブリッドアプリ開発技法",
+      "translation": "M02 دفتر الأشياء المفضلة: الإضافة والحفظ | تقنيات تطوير التطبيقات الهجينة"
+    },
+    {
+      "source": "本文へ移動",
+      "translation": "الانتقال إلى المحتوى الرئيسي"
+    },
+    {
+      "source": "JEC / ハイブリッドアプリ開発技法",
+      "translation": "JEC / تقنيات تطوير التطبيقات الهجينة"
+    },
+    {
+      "source": "0 / 15 ステップ確認済み",
+      "translation": "الخطوات التي تم التحقق منها: 0 / 15"
+    },
+    {
+      "source": "単元の進み具合",
+      "translation": "التقدم في الوحدة"
+    },
+    {
+      "source": "コマごとの目次",
+      "translation": "جدول المحتويات حسب الحصة"
+    },
+    {
+      "source": "コマ5 · STEP 00〜04",
+      "translation": "الحصة 5 · STEP 00〜04"
+    },
+    {
+      "source": "00 自分の好きなものノートを開く",
+      "translation": "00 فتح دفتر الأشياء المفضلة الخاص بك"
+    },
+    {
+      "source": "01 入力画面を作る",
+      "translation": "01 إنشاء شاشة الإدخال"
+    },
+    {
+      "source": "02 入力した文字を確認する",
+      "translation": "02 التحقق من النصوص المدخلة"
+    },
+    {
+      "source": "03 配列へ追加して戻る",
+      "translation": "03 الإضافة إلى المصفوفة والرجوع"
+    },
+    {
+      "source": "04 確認とアレンジ",
+      "translation": "04 التحقق والتعديل"
+    },
+    {
+      "source": "コマ6 · STEP 05〜09",
+      "translation": "الحصة 6 · STEP 05〜09"
+    },
+    {
+      "source": "05 配列とJSONの違い",
+      "translation": "05 الفرق بين المصفوفات وJSON"
+    },
+    {
+      "source": "06 文字列にして保存する",
+      "translation": "06 التحويل إلى سلسلة نصية والحفظ"
+    },
+    {
+      "source": "07 保存した配列を復元する",
+      "translation": "07 استعادة المصفوفة المحفوظة"
+    },
+    {
+      "source": "08 初期化の確認と失敗への対応",
+      "translation": "08 تأكيد التهيئة والتعامل مع الفشل"
+    },
+    {
+      "source": "09 保存を確かめてアレンジ",
+      "translation": "09 التحقق من الحفظ والتخصيص"
+    },
+    {
+      "source": "コマ7 · STEP 10〜14",
+      "translation": "الحصة 7 · STEP 10〜14"
+    },
+    {
+      "source": "10 授業内でFlutterの準備を始める",
+      "translation": "10 بدء التحضير لـ Flutter أثناء الحصة"
+    },
+    {
+      "source": "11 提出に残るアレンジを作る",
+      "translation": "11 إنشاء تخصيص يبقى في التسليم"
+    },
+    {
+      "source": "12 操作と公開URLを確認する",
+      "translation": "12 التحقق من العمليات ورابط الاستيراد"
+    },
+    {
+      "source": "13 提出と準備状況の確認",
+      "translation": "13 التحقق من التسليم وحالة التحضير"
+    },
+    {
+      "source": "14 アレンジ箇所を確かめる",
+      "translation": "14 التحقق من مواضع التخصيص"
+    },
+    {
+      "source": "困ったとき",
+      "translation": "عند مواجهة مشكلة"
+    },
+    {
+      "source": "完成プロジェクトを開く",
+      "translation": "فتح المشروع المكتمل"
+    },
+    {
+      "source": "共通：はじめの準備",
+      "translation": "المشترك: الإعداد الأولي"
+    },
+    {
+      "source": "コマ5〜7 · 各90分",
+      "translation": "الحصص 5〜7 · 90 دقيقة لكل منها"
+    },
+    {
+      "source": "好きなものノート：追加して、残そう。",
+      "translation": "دفتر الأشياء المفضلة: أضف واحفظ."
+    },
+    {
+      "source": "日常の中で見つけた好きなものと、好きな理由を画面から追加します。再読み込みしても自分の記録が戻る仕組みを作り、ソースにアレンジを残して公開URLを提出します。",
+      "translation": "أضف من الشاشة الأشياء المفضلة التي وجدتها في حياتك اليومية مع أسباب تفضيلها. وأنشئ آلية تستعيد سجلاتك حتى بعد إعادة التحميل، مع ترك التخصيص في الشيفرة المصدرية وتسليم رابط الاستيراد."
+    },
+    {
+      "source": "Monaca クラウド IDE / Google Chrome",
+      "translation": "Monaca クラウド IDE (بيئة التطوير السحابية) / Google Chrome"
+    },
+    {
+      "source": "この単元で分かること",
+      "translation": "ما ستتعلمه في هذه الوحدة"
+    },
+    {
+      "source": "新しい考え方は<strong>JSON</strong>です。画面で使う配列を保存用の文字列にし、読み込んだ文字列を配列へ戻します。保存先はJavaの<code>SharedPreferences</code>・Swiftの<code>UserDefaults</code>と比較します。",
+      "translation": "المفهوم الجديد هو <strong>JSON</strong>. سنحول المصفوفة المستخدمة في الشاشة إلى سلسلة نصية للحفظ، ثم نعيد السلسلة النصية المقروءة إلى مصفوفة. وتتم مقارنة وجهة الحفظ مع <code>SharedPreferences</code> في Java و<code>UserDefaults</code> في Swift."
+    },
+    {
+      "source": "完成見本の名前は <code>M02OshiSave</code> です。学生は自分の好きなものノートを同じ1プロジェクトで育てます。まだプロジェクトがない場合の作り方も、一覧・詳細の開始コードも、この本文にあります。",
+      "translation": "اسم نموذج المشروع المكتمل هو <code>M02OshiSave</code>. يطور الطلاب دفتر الأشياء المفضلة الخاص بهم ضمن المشروع نفسه. وإذا لم يكن لديك مشروع بعد، فإن طريقة إنشائه، بالإضافة إلى الشيفرة الأولية للقائمة والتفاصيل، موجودة في هذا النص."
+    },
+    {
+      "source": "コマ",
+      "translation": "الحصة"
+    },
+    {
+      "source": "到達点",
+      "translation": "الهدف"
+    },
+    {
+      "source": "入力した好きなものを一覧へ追加し、詳細を読める。",
+      "translation": "إمكانية إضافة الشيء المفضل المدخل إلى القائمة وقراءة التفاصيل."
+    },
+    {
+      "source": "JSONと<code>localStorage</code>で保存・復元できる。初期化には確認を挟む。",
+      "translation": "إمكانية الحفظ والاستعادة باستخدام JSON و<code>localStorage</code>، مع تضمين تأكيد قبل التهيئة."
+    },
+    {
+      "source": "授業内でFlutter準備を開始し、待ち時間に好きなものノートをアレンジ・確認・提出する。",
+      "translation": "بدء التحضير لـ Flutter أثناء الحصة، وتخصيص دفتر الأشياء المفضلة والتحقق منه وتسليمه أثناء أوقات الانتظار."
+    },
+    {
+      "source": "配布フォルダの <code>~/Documents/hybrid-app-student-materials-日付/samples/M02OshiSave</code> をFinderで開きます。<code>M02OshiSave</code> の完成見本で、自分のコードと読み比べるために使います。自分の作品を見本で上書きしません。自分の制作を始める人は、STEP 00へ進みます。",
+      "translation": "افتح <code>~/Documents/hybrid-app-student-materials-日付/samples/M02OshiSave</code> من مجلد التوزيع في Finder. هذا هو نموذج <code>M02OshiSave</code> المكتمل، ويُستخدم لمقارنته بقراءته مع شيفرتك الخاصة. لا تستبدل عملك الخاص بالنموذج. وإذا كنت ستبدأ عملك الخاص، فانتقل إلى STEP 00."
+    },
+    {
+      "source": "Monaca クラウド IDEは、Macのフォルダをそのまま開けません。見本をMonacaで動かすときは、先生がZIPにして公開した<a1>M02OshiSaveの取り込み用URL</a1>を開いて取り込みます。これはアプリを動かすURLではなく、完成見本のソースを自分のMonacaへ取り込むURLで、Freeプランの3枠のうち1枠を使います。空きを確かめてから1回だけ開きます。取り込み用URLがあっても、Freeプランの制限（プロジェクトの数や、対応するCordovaの版）で、取り込めない、または取り込んだ見本を開けないことがあります。そのときは無理に取り込まず、先生に知らせてください。見本のコードは配布フォルダの <code>samples</code> で読めるので、取り込めなくても授業は進められます。",
+      "translation": "لا يمكن لـ Monaca クラウド IDE فتح مجلد Mac مباشرة. عندما تشغل النموذج في Monaca، افتح <a1>رابط استيراد M02OshiSave</a1> الذي نشره المعلم كملف ZIP لاستيراده. هذا الرابط ليس لتشغيل التطبيق، بل هو رابط لاستيراد الشيفرة المصدرية للنموذج المكتمل إلى Monaca الخاص بك، ويستهلك مساحة واحدة من المساحات الثلاث في خطة Free. تحقق من وجود مساحة فارغة ثم افتحه مرة واحدة فقط. حتى مع وجود رابط الاستيراد، قد يتعذر الاستيراد أو فتح النموذج المستورد بسبب قيود خطة Free (عدد المشاريع أو إصدار Cordova المدعوم). في هذه الحالة، لا تحاول الاستيراد قسراً، بل أبلغ المعلم. بما أنه يمكنك قراءة شيفرة النموذج في مجلد <code>samples</code> ضمن مجلد التوزيع، يمكنك متابعة الدرس حتى لو لم تتمكن من استيراده."
+    },
+    {
+      "source": "STEP 00 · コマ5",
+      "translation": "STEP 00 · الحصة 5"
+    },
+    {
+      "source": "自分の好きなものノートを開く",
+      "translation": "فتح دفتر الأشياء المفضلة الخاص بك"
+    },
+    {
+      "source": "Google Chromeで通常版Monacaへログインし、自分の好きなものノートを開きます。続けて使っているプロジェクトは、名前が <code>M01OshiList</code> のままで構いません。今日のためにコピーを増やしたり、削除したりしません。",
+      "translation": "سجل الدخول إلى النسخة القياسية من Monaca باستخدام Google Chrome، وافتح دفتر الأشياء المفضلة الخاص بك. بالنسبة للمشروع الذي تواصل استخدامه، لا بأس إذا بقي اسمه <code>M01OshiList</code>. لا تقم بإنشاء نسخ إضافية أو حذف المشاريع من أجل درس اليوم."
+    },
+    {
+      "source": "まだ自分の好きなものノートがない人だけ、ダッシュボードで新規作成し、<code>最小限のテンプレート</code> を選び、<code>M02OshiSave</code> と名付けます。登録や空き枠が不明なら、<a1>共通資料のSTEP 2〜3</a1>で確認して戻ります。",
+      "translation": "فقط إذا لم يكن لديك دفتر للأشياء المفضلة بعد، أنشئ مشروعاً جديداً في لوحة التحكم، واختر <code>最小限のテンプレート</code> (قالب الحد الأدنى)، وقم بتسميته <code>M02OshiSave</code>. إذا لم تكن متأكداً من التسجيل أو المساحات المتاحة، فتحقق من <a1>STEP 2〜3 في المواد المشتركة</a1> ثم عد إلى هنا."
+    },
+    {
+      "source": "<code>www/index.html</code>・<code>www/css/style.css</code> を開きます。<code>www/js/app.js</code> がなければ、ファイル一覧の作成操作で <code>www</code> の下に <code>js</code> フォルダ、その中に <code>app.js</code> ファイルを作ります。",
+      "translation": "افتح <code>www/index.html</code> و<code>www/css/style.css</code>. وإذا لم يكن <code>www/js/app.js</code> موجوداً، فأنشئ مجلد <code>js</code> تحت <code>www</code> من خلال عملية إنشاء الملفات، ثم أنشئ ملف <code>app.js</code> داخله."
+    },
+    {
+      "source": "自分のアレンジがある場合は、変えた文字と色を控えます。下の開始コード3ファイルをそろえ、保存してプレビューを再読み込みします。<code>components</code> や <code>res</code> は変更しません。",
+      "translation": "إذا كان لديك تخصيص خاص بك، فاحتفظ بملاحظة للنصوص والألوان التي قمت بتغييرها. جهز ملفات الشيفرة الأولية الثلاثة أدناه، واحفظها وأعد تحميل المعاينة. لا تعدل مجلدي <code>components</code> أو <code>res</code>."
+    },
+    {
+      "source": "3件の名前を押して詳細を開き、左上の戻るボタンで一覧へ戻ります。戻るボタンは、iOS向けの見た目では「＜ 戻る」、Android向けの見た目では左向きの矢印「←」だけです。タイトルと詳細の組み合わせを確かめます。",
+      "translation": "اضغط على أسماء العناصر الثلاثة لفتح التفاصيل، ثم ارجع إلى القائمة باستخدام زر الرجوع في أعلى اليسار. يظهر زر الرجوع بالشكل «＜ 戻る» في مظهر iOS، وبشكل سهم يشير لليسار «←» فقط في مظهر Android. تحقق من تطابق العنوان مع التفاصيل."
+    },
+    {
+      "source": "開始コードの役割を、次の順で追いましょう。新しいファイル名を <code>detail.html</code> として作る操作は不要です。これは <code>index.html</code> の中の <code>template</code> の<code>id</code>です。",
+      "translation": "دعنا نتتبع دور الشيفرة الأولية بالترتيب التالي. لا داعي لإنشاء ملف جديد باسم <code>detail.html</code>. فهذا هو <code>id</code> الخاص بعنصر <code>template</code> داخل <code>index.html</code>."
+    },
+    {
+      "source": "場所",
+      "translation": "الموضع"
+    },
+    {
+      "source": "処理と理由",
+      "translation": "المعالجة والسبب"
+    },
+    {
+      "source": "HTMLの<code>head</code>",
+      "translation": "عنصر <code>head</code> في HTML"
+    },
+    {
+      "source": "標準の<code>loader.js</code>、Onsen UI 2.12.9のCSS・JavaScript、自作CSS・<code>app.js</code>を読み込む。自作JSはOnsen UIより後。",
+      "translation": "تحميل <code>loader.js</code> القياسي، وCSS وJavaScript الخاصين بـ Onsen UI 2.12.9، وCSS المخصص و<code>app.js</code>. يكون JS المخصص بعد Onsen UI."
+    },
+    {
+      "source": "<code>ons-navigator</code>が<code>list.html</code>を実体化する。<code>template</code>は配置前のひな形で、詳細へ進んだときに<code>detail.html</code>の要素が作られる。",
+      "translation": "يقوم <code>ons-navigator</code> بإنشاء مثيل لـ <code>list.html</code>. أما <code>template</code> فهو نموذج أولي قبل التوزيع، ويتم إنشاء عناصر <code>detail.html</code> عند الانتقال إلى التفاصيل."
+    },
+    {
+      "source": "<code>init</code>のリスナー",
+      "translation": "مستمع الحدث <code>init</code>"
+    },
+    {
+      "source": "ページの要素が使える時点に、そのページの<code>id</code>を見てイベント登録や文字の設定を行う。",
+      "translation": "في اللحظة التي تصبح فيها عناصر الصفحة متاحة، يتم فحص <code>id</code> الخاص بالصفحة لتسجيل الأحداث وضبط النصوص."
+    },
+    {
+      "source": "配列の件数だけ固定の行構造を作る。名前や種類は<code>textContent</code>へ入れ、文字をHTMLとして解釈しない。",
+      "translation": "إنشاء بنية صفوف ثابتة بعدد عناصر المصفوفة. ويتم إدخال الأسماء والأنواع في <code>textContent</code> دون تفسير النصوص كـ HTML."
+    },
+    {
+      "source": "<code>pushPage</code>の<code>data</code>へ選んだデータを渡し、詳細の<code>page.data</code>で受け取る。現在のページと移動中の旗を調べ、連打でページを重ねない。",
+      "translation": "تمرير البيانات المحددة إلى <code>data</code> في <code>pushPage</code>، واستلامها في <code>page.data</code> في التفاصيل. والتحقق من الصفحة الحالية ومؤشر الانتقال لتجنب تكرار الصفحات عند النقر المتتالي."
+    },
+    {
+      "source": "<code>callback</code> / 戻る",
+      "translation": "<code>callback</code> / الرجوع"
+    },
+    {
+      "source": "移動完了の<code>callback</code>で旗を戻す。<code>ons-back-button</code>はページを1つ戻す。",
+      "translation": "إعادة تعيين المؤشر في <code>callback</code> الخاص بانتهاء الانتقال. ويعيد <code>ons-back-button</code> الصفحة بمقدار صفحة واحدة للخلف."
+    },
+    {
+      "source": "CSSはクラスで余白・色・カードの枠を対応させています。Onsen UIは同じHTMLへOSに合わせた部品のスタイルを適用します。今回も素のJavaScriptから使い、別のフレームワークは追加しません。",
+      "translation": "يربط CSS بين الهوامش والألوان وإطارات البطاقات باستخدام الفئات (classes). يطبق Onsen UI أنماط المكونات المناسبة لنظام التشغيل على نفس الـ HTML. نستخدمه هذه المرة أيضاً من JavaScript النقي دون إضافة أطر عمل أخرى."
+    },
+    {
+      "source": "既知の技術と比べる",
+      "translation": "المقارنة بالتقنيات المعروفة"
+    },
+    {
+      "source": "Web基礎と同じ3ファイル構成ですが、操作する場所はMonaca クラウド IDEです。<code>init</code>はAndroidのビュー生成後の設定やiOSの<code>viewDidLoad</code>に相当するタイミングで、JavaScriptの<code>addEventListener</code>で受け取ります。<code>pushPage</code>の<code>data</code>は、ネイティブアプリで次の画面へ値を渡す操作に対応します。まだ保存用の文字列には変換していません。",
+      "translation": "البنية تتكون من 3 ملفات كما في أساسيات الويب، لكن مكان العمل هو Monaca クラウド IDE. يتوافق توقيت <code>init</code> مع الإعدادات بعد إنشاء العرض في Android أو <code>viewDidLoad</code> في iOS، ويتم استقباله بواسطة <code>addEventListener</code> في JavaScript. وتتوافق <code>data</code> في <code>pushPage</code> مع عملية تمرير القيم إلى الشاشة التالية في التطبيقات الأصلية. لم نقم بعد بالتحويل إلى سلسلة نصية للحفظ."
+    },
+    {
+      "source": "このSTEPの全コード（照合・合流用）",
+      "translation": "الشيفرة الكاملة لهذه الخطوة (للمطابقة والمتابعة)"
+    },
+    {
+      "source": "www/index.html · 全文",
+      "translation": "www/index.html · النص بالكامل"
+    },
+    {
+      "source": "www/css/style.css · 全文",
+      "translation": "www/css/style.css · النص بالكامل"
+    },
+    {
+      "source": "www/js/app.js · 全文",
+      "translation": "www/js/app.js · النص بالكامل"
+    },
+    {
+      "source": "自分の1プロジェクトで3件の一覧・詳細・戻るを確認し、HTMLとJSの対応を追えた。",
+      "translation": "تم التحقق من القائمة المكونة من 3 عناصر، والتفاصيل، وزر الرجوع في مشروعي الفردي، وتتبعت التوافق بين HTML وJS."
+    },
+    {
+      "source": "STEP 01 · コマ5",
+      "translation": "STEP 01 · الحصة 5"
+    },
+    {
+      "source": "入力画面を作る",
+      "translation": "إنشاء شاشة الإدخال"
+    },
+    {
+      "source": "3ファイルをこのSTEPのコードへ更新します。HTMLに <code>add.html</code> の<code>template</code>を加え、名前・種類の <code>input</code> と、好きな理由の <code>textarea</code> を置きます。<code>label</code> の<code>for</code>と入力欄の<code>id</code>が対応します。",
+      "translation": "حدث الملفات الثلاثة إلى شيفرة هذا الـ STEP. أضف <code>template</code> الخاص بـ <code>add.html</code> إلى HTML، وضع حقول <code>input</code> للاسم والنوع، و<code>textarea</code> لسبب التفضيل. يتطابق <code>for</code> الخاص بـ <code>label</code> مع <code>id</code> الخاص بحقل الإدخال."
+    },
+    {
+      "source": "CSSの <code>.app-input</code> は幅を100%にし、<code>box-sizing: border-box</code> で<code>padding</code>と枠をその幅の内側へ収めます。<code>font: inherit</code> で文字を周囲とそろえ、<code>focus</code>の<code>outline</code>で選択中の欄を見分けます。ほかに加わるクラスのうち、このSTEPの画面に当たる4つは次の表のとおりです。",
+      "translation": "يجعل <code>.app-input</code> في CSS العرض 100%، ويحتوي <code>padding</code> والإطار داخل ذلك العرض باستخدام <code>box-sizing: border-box</code>. تجعل <code>font: inherit</code> الخط متناسقاً مع ما حوله، ويميز <code>outline</code> الخاص بـ <code>focus</code> الحقل المحدد حالياً. ومن بين الفئات الأخرى المضافة، الفئات الأربع التي تنطبق على شاشة هذا الـ STEP موضحة في الجدول التالي."
+    },
+    {
+      "source": "クラス",
+      "translation": "الفئة"
+    },
+    {
+      "source": "当たる要素",
+      "translation": "العنصر المستهدف"
+    },
+    {
+      "source": "指定と理由",
+      "translation": "التعيين والسبب"
+    },
+    {
+      "source": "一覧の <code>btn_open_add</code>",
+      "translation": "<code>btn_open_add</code> في القائمة"
+    },
+    {
+      "source": "<code>margin-top: 16px</code>。説明文の <code>.app-description</code> は <code>margin: 0</code> なので、その直下に置くボタンの上を空けて、文とボタンを離します。",
+      "translation": "<code>margin-top: 16px</code>. نظراً لأن <code>.app-description</code> للنص الوصفي يحتوي على <code>margin: 0</code>، يتم ترك مساحة أعلى الزر الموضوع تحته مباشرة لفصل النص عن الزر."
+    },
+    {
+      "source": "一覧の <code>txt_storage</code> と、入力画面の <code>txt_add_message</code>",
+      "translation": "<code>txt_storage</code> في القائمة، و<code>txt_add_message</code> في شاشة الإدخال"
+    },
+    {
+      "source": "上下に12pxの余白、<code>.app-caption</code> と同じ文字色、<code>overflow-wrap: anywhere</code>。JavaScriptから文を入れる案内用の段落で、長い文でも画面の幅で折り返します。<code>txt_add_message</code> はこのSTEPでは空で、STEP 02から文を出します。",
+      "translation": "هامش علوي وسفلي 12px، ولون نص مطابق لـ <code>.app-caption</code>، و<code>overflow-wrap: anywhere</code>. هذه فقرة للإرشادات يتم إدخال النصوص فيها من JavaScript، وتلتف حتى النصوص الطويلة ضمن عرض الشاشة. <code>txt_add_message</code> فارغ في هذا الـ STEP، وسيتم عرض النصوص فيه بدءاً من STEP 02."
+    },
+    {
+      "source": "入力画面の3つの <code>label</code>",
+      "translation": "عناصر <code>label</code> الثلاثة في شاشة الإدخال"
+    },
+    {
+      "source": "<code>display: block</code>。<code>.app-label</code> は、STEP 00から詳細の <code>p</code> に使っている余白と文字の指定です。<code>label</code> は既定でインライン要素なので、そのままでは上下の <code>margin</code> が効きません。<code>label</code> に付いたときだけブロックにして、各欄の上に1行ずつ並べます。",
+      "translation": "<code>display: block</code>. <code>.app-label</code> هو تعيين للهوامش والنصوص المستخدمة لـ <code>p</code> في التفاصيل منذ STEP 00. نظراً لأن <code>label</code> عنصر مضمن (inline) افتراضياً، فإن <code>margin</code> العلوي والسفلي لا يعمل كما هو. يتم تحويله إلى كتلة (block) فقط عندما يرتبط بـ <code>label</code>، ليصطف سطراً بسطر فوق كل حقل."
+    },
+    {
+      "source": "入力画面のボタンの下の注記",
+      "translation": "الملاحظة أسفل الزر في شاشة الإدخال"
+    },
+    {
+      "source": "<code>.app-description</code> と同じ文字色で、文字の大きさは13px。補足の注記を、ボタンや案内文より控えめに見せます。",
+      "translation": "لون نص مطابق لـ <code>.app-description</code> وحجم خط 13px. يظهر الملاحظة التكميلية بشكل أكثر هدوءاً من الأزرار والنصوص الإرشادية."
+    },
+    {
+      "source": "<code>.reset-section</code>・<code>#panel_reset ons-button</code>・<code>.is-hidden</code> の3つは、STEP 08で足す初期化の確認欄のための指定です。このSTEPのHTMLには、まだ当たる要素がありません。",
+      "translation": "التعيينات الثلاثة <code>.reset-section</code> و<code>#panel_reset ons-button</code> و<code>.is-hidden</code> مخصصة لقسم تأكيد التهيئة الذي ستتم إضافته في STEP 08. لا توجد عناصر تنطبق عليها هذه التعيينات في HTML الخاص بهذا الـ STEP بعد."
+    },
+    {
+      "source": "一覧の <code>btn_open_add</code> へ<code>openAddPage</code>を登録し、<code>pushPage(\"add.html\", ...)</code> で入力画面へ進みます。詳細と同じ移動中の旗を共有するため、片方を開いている最中にもう片方は開きません。",
+      "translation": "سجل <code>openAddPage</code> في <code>btn_open_add</code> بالقائمة، وانتقل إلى شاشة الإدخال باستخدام <code>pushPage(\"add.html\", ...)</code>. نظراً لمشاركة نفس مؤشر الانتقال مع التفاصيل، فلن تفتح إحداهما أثناء فتح الأخرى."
+    },
+    {
+      "source": "この旗の名前は、STEP 00の <code>isOpeningDetail</code> から <code>isOpeningPage</code> に変えます。詳細を開くときだけでなく入力画面を開くときにも使うので、「詳細を開いている最中」ではなく「どちらかのページを開いている最中」と読める名前にするためです。宣言と<code>openOshiDetail</code>の中の3か所も、新しい名前にそろえます。",
+      "translation": "نغير اسم هذا المؤشر من <code>isOpeningDetail</code> في STEP 00 إلى <code>isOpeningPage</code>. والسبب في ذلك هو استخدامه ليس فقط عند فتح التفاصيل بل عند فتح شاشة الإدخال أيضاً، ليكون اسماً يُقرأ على أنه «أثناء فتح إحدى الصفحتين» بدلاً من «أثناء فتح التفاصيل». ونعدل الإعلان والمواضع الثلاثة داخل <code>openOshiDetail</code> لتتطابق مع الاسم الجديد."
+    },
+    {
+      "source": "一覧のボタンの下の <code>txt_storage</code> には <code>この段階では、追加した内容は保存されません。</code>、入力画面のボタンの下の注記には <code>この段階では、追加した内容は再読み込みすると消えます。</code> と出します。追加した内容がまだ残らないことを、画面で先に伝えるためです。保存を作るSTEP 06で、どちらの文も書き換えます。",
+      "translation": "في <code>txt_storage</code> أسفل الزر في القائمة، نعرض <code>この段階では、追加した内容は保存されません。</code>، وفي الملاحظة أسفل الزر في شاشة الإدخال، نعرض <code>この段階では、追加した内容は再読み込みすると消えます。</code>. وذلك لنوضح مسبقاً على الشاشة أن المحتوى المضاف لا يتم حفظه بعد. وسيتم إعادة كتابة كلا النصين في STEP 06 الذي ننشئ فيه الحفظ."
+    },
+    {
+      "source": "初期データは <code>createInitialItems</code> が新しい配列を返す形にまとめました。後で初期化したときにも同じ内容を作り直せるようにするためです。呼び出しのたびに新しい配列になる点を、<code>return</code>の位置と一緒に読みます。",
+      "translation": "تم تجميع البيانات الأولية بحيث تعيد <code>createInitialItems</code> مصفوفة جديدة. وذلك لكي نتمكن من إعادة إنشاء نفس المحتوى عند إجراء التهيئة لاحقاً. تتبع موضع <code>return</code> لفهم أن كل استدعاء ينتج مصفوفة جديدة."
+    },
+    {
+      "source": "保存・再読み込み後に <code>好きなものを追加</code> を押します。",
+      "translation": "بعد الحفظ وإعادة التحميل، اضغط على <code>好きなものを追加</code>."
+    },
+    {
+      "source": "3つの欄へ文字を入力して、左上の戻るボタンで一覧へ戻ります。もう一度開くと新しい入力画面が作られ、欄は空に戻ります。",
+      "translation": "أدخل النصوص في الحقول الثلاثة، ثم ارجع إلى القائمة باستخدام زر الرجوع في أعلى اليسار. عند الفتح مرة أخرى، يتم إنشاء شاشة إدخال جديدة وتعود الحقول فارغة."
+    },
+    {
+      "source": "このSTEPでは <code>追加する</code> を<code>disabled</code>にしてあります。まだクリック処理を付けていないため、押せない状態が正解です。",
+      "translation": "في هذا الـ STEP، تم جعل <code>追加する</code> في حالة <code>disabled</code>. نظراً لأننا لم نضف معالجة النقر بعد، فإن الحالة غير القابلة للضغط هي الحالة الصحيحة."
+    },
+    {
+      "source": "Web基礎の<code>input</code>・<code>textarea</code>・<code>label</code>をそのまま使います。Androidの<code>EditText</code>、iOSの<code>UITextField</code>・<code>UITextView</code>と同じ役割です。画面を開く処理は詳細への移動と同じ形で、渡すデータが要らないため<code>data</code>を省きます。<code>createInitialItems</code>は、Java／Swiftでデータの配列を関数から返す書き方と対応します。",
+      "translation": "نستخدم <code>input</code> و<code>textarea</code> و<code>label</code> من أساسيات الويب كما هي. وهي تؤدي نفس الدور الذي يؤديه <code>EditText</code> في Android و<code>UITextField</code> و<code>UITextView</code> في iOS. عملية فتح الشاشة تأخذ نفس شكل الانتقال إلى التفاصيل، ونظراً لعدم الحاجة إلى تمرير بيانات فإننا نحذف <code>data</code>. وتتوافق <code>createInitialItems</code> مع طريقة إرجاع مصفوفة بيانات من دالة في Java / Swift."
+    },
+    {
+      "source": "入力画面を開き、3つの欄へ入力して戻れた。追加ボタンがまだ押せないことを確認した。",
+      "translation": "تم فتح شاشة الإدخال، والكتابة في الحقول الثلاثة، والرجوع بنجاح. وتم التأكد من أن زر الإضافة غير قابل للضغط بعد."
+    },
+    {
+      "source": "STEP 02 · コマ5",
+      "translation": "STEP 02 · الحصة 5"
+    },
+    {
+      "source": "入力した文字を確認する",
+      "translation": "التحقق من النصوص المدخلة"
+    },
+    {
+      "source": "HTMLの追加ボタンから <code>disabled</code> を外し、JSでは <code>page_add</code> の<code>init</code>で<code>addOshi</code>を登録します。関数名を渡しているので、登録した瞬間ではなくボタンを押したときに動きます。",
+      "translation": "أزل <code>disabled</code> من زر الإضافة في HTML، وسجل <code>addOshi</code> في حدث <code>init</code> الخاص بـ <code>page_add</code> في JS. نظراً لأننا نمرر اسم الدالة، فإنها تعمل عند الضغط على الزر وليس في لحظة التسجيل."
+    },
+    {
+      "source": "<code>addOshi</code>は、入力欄を<code>id</code>で取得し、<code>value</code> で今の文字を読みます。<code>trim()</code> は前後の空白を取り除きます。3つのどれかが空ならメッセージを表示して<code>return</code>し、残りの処理へ進みません。",
+      "translation": "تحصل <code>addOshi</code> على حقول الإدخال عبر <code>id</code>، وتقرأ النص الحالي باستخدام <code>value</code>. تزيل <code>trim()</code> المسافات الفارغة في البداية والنهاية. وإذا كان أي من الحقول الثلاثة فارغاً، يتم عرض رسالة وتطبيق <code>return</code>، دون المتابعة إلى بقية المعالجة."
+    },
+    {
+      "source": "このSTEPの成功結果は <code>入力を確認しました：</code> と名前の表示だけです。まだ一覧には追加しません。<code>txt_add_message</code>を<code>textContent</code>で更新するため、名前に山かっこを入れても文字として表示されます。",
+      "translation": "النتيجة الناجحة في هذا الـ STEP هي فقط عرض <code>入力を確認しました：</code> مع الاسم. لا نضيفه إلى القائمة بعد. ونظراً لتحديث <code>txt_add_message</code> باستخدام <code>textContent</code>، فحتى لو وضعت أقواساً زاوية في الاسم فستُعرض كنصوص عادية."
+    },
+    {
+      "source": "空欄のまま押し、不足のメッセージを確認します。",
+      "translation": "اضغط مع ترك الحقول فارغة، وتحقق من رسالة النقص."
+    },
+    {
+      "source": "名前だけに空白を入れ、ほかを埋めて押します。前後の空白を取り除くと空になるため、同じメッセージになることを確認します。",
+      "translation": "أدخل مسافات فارغة فقط في الاسم واملأ الحقول الأخرى ثم اضغط. تحقق من ظهور نفس الرسالة لأن إزالة المسافات الفارغة تجعله فارغاً."
+    },
+    {
+      "source": "すべて入力して押し、名前が表示されることを確認します。入力した文字が勝手に消えないことも見ます。",
+      "translation": "أدخل البيانات في جميع الحقول واضغط، وتحقق من عرض الاسم. وتأكد أيضاً من عدم اختفاء النصوص المدخلة تلقائياً."
+    },
+    {
+      "source": "Javaなら<code>EditText.getText().toString().trim()</code>、Swiftなら<code>text</code>と<code>trimmingCharacters</code>を使う場面です。今回はHTMLの<code>value</code>を読みます。空欄の条件や<code>return</code>は既習の書き方で、エラーの伝え先をダイアログではなく同じ画面の段落にしています。",
+      "translation": "هذا موقف يُستخدم فيه <code>EditText.getText().toString().trim()</code> في Java، أو <code>text</code> و<code>trimmingCharacters</code> في Swift. هذه المرة نقرأ <code>value</code> الخاص بـ HTML. شروط الفراغ واستخدام <code>return</code> هي أساليب تمت دراستها مسبقاً، وتكون وجهة إبلاغ الخطأ في فقرة على نفس الشاشة بدلاً من مربع حوار (dialog)."
+    },
+    {
+      "source": "空欄・空白だけ・正常入力の3通りで、結果の文を確認できた。",
+      "translation": "تم التحقق من النصوص الناتجة في الحالات الثلاث: فارغ، ومسافات فارغة فقط، وإدخال صحيح."
+    },
+    {
+      "source": "STEP 03 · コマ5",
+      "translation": "STEP 03 · الحصة 5"
+    },
+    {
+      "source": "配列へ追加して戻る",
+      "translation": "الإضافة إلى المصفوفة والرجوع"
+    },
+    {
+      "source": "JSの<code>addOshi</code>で、入力確認だけの行を、配列へ追加して一覧を描き直す処理へ替えます。<code>oshiItems.push({ name: name, genre: genre, comment: comment })</code> の左側はデータの項目名、右側は入力欄から読んだ変数です。",
+      "translation": "في <code>addOshi</code> ضمن JS، نستبدل السطر المخصص لتأكيد الإدخال فقط بعملية الإضافة إلى المصفوفة وإعادة رسم القائمة. في <code>oshiItems.push({ name: name, genre: genre, comment: comment })</code>، يمثل الطرف الأيسر اسم حقل البيانات، بينما يمثل الطرف الأيمن المتغير المقروء من حقل الإدخال."
+    },
+    {
+      "source": "次に<code>renderOshiList</code>を呼びます。この関数は<code>innerHTML</code>で行を置き直した後に、<code>textContent</code>の設定とクリックの登録をやり直します。古い行に登録したイベントは、新しい行へ自動では移らないためです。",
+      "translation": "بعد ذلك، نستدعي <code>renderOshiList</code>. تقوم هذه الدالة بإعادة تعيين <code>textContent</code> وإعادة تسجيل أحداث النقر بعد استبدال الصفوف باستخدام <code>innerHTML</code>. وذلك لأن الأحداث المسجلة في الصفوف القديمة لا تنتقل تلقائياً إلى الصفوف الجديدة."
+    },
+    {
+      "source": "その次の行で、一覧の下の <code>txt_selected</code> に <code>追加したもの：</code> と追加した名前を出します。STEP 00から、詳細を開いたときに <code>選択中：</code> と名前を出している欄です。一覧へ戻ったときに、どれを追加したかを行を探さずに確かめられるようにするためです。",
+      "translation": "في السطر التالي، نعرض <code>追加したもの：</code> مع الاسم المضاف في <code>txt_selected</code> أسفل القائمة. هذا هو الحقل الذي يعرض <code>選択中：</code> مع الاسم عند فتح التفاصيل منذ STEP 00. وذلك لكي تتمكن من التحقق من العنصر المضاف عند الرجوع إلى القائمة دون الحاجة للبحث في الصفوف."
+    },
+    {
+      "source": "最後に <code>popPage()</code> で入力画面を閉じます。一覧はその下に残っているので、新しい行が見えます。追加を始める直前にボタンを無効にしておくことで、戻る途中の連続操作でも同じ内容を二重に追加しません。",
+      "translation": "أخيراً، نغلق شاشة الإدخال باستخدام <code>popPage()</code>. وبما أن القائمة تظل موجودة أسفلها، فسيظهر الصف الجديد. ومن خلال تعطيل الزر مباشرة قبل بدء الإضافة، نتجنب إضافة نفس المحتوى مرتين حتى مع العمليات المتتالية أثناء الرجوع."
+    },
+    {
+      "source": "新しい好きなものを1件入力して追加します。一覧が4件になり、一覧の下に <code>追加したもの：</code> と入力した名前が出たことを確認します。",
+      "translation": "أدخل عنصراً مفضلاً جديداً واحداً وأضفه. تحقق من أن القائمة أصبحت 4 عناصر، وظهور <code>追加したもの：</code> مع الاسم المدخل أسفل القائمة."
+    },
+    {
+      "source": "追加した行を押し、名前・種類・好きな理由が入力どおりか確かめます。好きな理由に改行を入れた場合も確認します。",
+      "translation": "اضغط على الصف المضاف، وتحقق من تطابق الاسم والنوع وسبب التفضيل مع ما أدخلته. وتحقق أيضاً في حال إدخال فواصل أسطر في سبب التفضيل."
+    },
+    {
+      "source": "戻ってからプレビューを再読み込みします。配列はソースの初期データから作り直されるため、3件に戻ります。今日はこれで正解です。",
+      "translation": "ارجع ثم أعد تحميل المعاينة. تعود القائمة إلى 3 عناصر لأن المصفوفة يُعاد إنشاؤها من البيانات الأولية في الشيفرة المصدرية. هذا هو السلوك الصحيح لليوم."
+    },
+    {
+      "source": "<code>push</code>はJavaの<code>ArrayList.add</code>やSwiftの<code>Array.append</code>と同じ追加です。<code>popPage</code>はiOSで前の画面へ戻す操作に対応します。ここで変えたのは実行中の配列だけなので、ファイルに文字を保存したときや<code>SharedPreferences</code>／<code>UserDefaults</code>へ書いたときとは残り方が異なります。",
+      "translation": "<code>push</code> هي عملية إضافة مماثلة لـ <code>ArrayList.add</code> في Java و<code>Array.append</code> في Swift. وتتوافق <code>popPage</code> مع عملية الرجوع إلى الشاشة السابقة في iOS. ما قمنا بتغييره هنا هو المصفوفة قيد التشغيل فقط، لذا تختلف طريقة بقائها عما يحدث عند حفظ النصوص في ملف أو الكتابة في <code>SharedPreferences</code> / <code>UserDefaults</code>."
+    },
+    {
+      "source": "追加した行の詳細が入力と一致し、再読み込みでは初期データへ戻ることを確認できた。",
+      "translation": "تم التأكد من تطابق تفاصيل الصف المضاف مع الإدخال، والعودة إلى البيانات الأولية بعد إعادة التحميل."
+    },
+    {
+      "source": "STEP 04 · コマ5",
+      "translation": "STEP 04 · الحصة 5"
+    },
+    {
+      "source": "確認とアレンジ",
+      "translation": "التحقق والتخصيص"
+    },
+    {
+      "source": "今日の終わりは、作った範囲を使って自分の表現に変えます。コードはSTEP 03の状態です。下の全コードは照合用で、自分の変更を無条件に貼り戻すためのものではありません。",
+      "translation": "في نهاية درس اليوم، سنستخدم النطاق الذي أنشأناه لتحويله إلى تعبيرك الخاص. الشيفرة في حالة STEP 03. الشيفرة الكاملة أدناه مخصصة للمطابقة، وليست لإعادة لصقها دون شروط فوق تعديلاتك."
+    },
+    {
+      "source": "変える場所",
+      "translation": "موضع التغيير"
+    },
+    {
+      "source": "変わること",
+      "translation": "ما سيتغير"
+    },
+    {
+      "source": "HTMLの<code>placeholder</code>",
+      "translation": "<code>placeholder</code> في HTML"
+    },
+    {
+      "source": "入力前に見える記入例。",
+      "translation": "مثال تعبئة يظهر قبل الإدخال."
+    },
+    {
+      "source": "CSSの<code>app-input</code>の枠色・<code>padding</code>",
+      "translation": "لون إطار <code>app-input</code> و<code>padding</code> في CSS"
+    },
+    {
+      "source": "入力欄の見た目と内側の余白。",
+      "translation": "مظهر حقل الإدخال والهوامش الداخلية."
+    },
+    {
+      "source": "JSの<code>createInitialItems</code>",
+      "translation": "<code>createInitialItems</code> في JS"
+    },
+    {
+      "source": "再読み込み時に表示される自分の好きなものと理由。",
+      "translation": "أشياؤك المفضلة وأسبابها المعروضة عند إعادة التحميل."
+    },
+    {
+      "source": "入力例には、好きな音楽や食べ物、場所を使えます。ほかの人の個人情報や、共有したくない内容は例に入れません。名前だけでなく、なぜ好きなのかを自分の言葉にしましょう。",
+      "translation": "يمكنك استخدام الموسيقى أو الأطعمة أو الأماكن المفضلة كأمثلة للإدخال. لا تضع معلومات شخصية لأشخاص آخرين أو محتوى لا ترغب في مشاركته في الأمثلة. صغ بكلماتك الخاصة ليس الاسم فقط، بل سبب تفضيلك له أيضاً."
+    },
+    {
+      "source": "1か所変えたら保存・再読み込みし、入力・追加・詳細・戻るをもう一度試します。変えたファイル名と、画面のどこが変わったかを控えます。",
+      "translation": "عند تغيير موضع واحد، احفظ وأعد التحميل، ثم جرب الإدخال والإضافة والتفاصيل والرجوع مرة أخرى. واحتفظ بملاحظة لاسم الملف المعدل وأين ظهر التغيير على الشاشة."
+    },
+    {
+      "source": "HTMLは構造と記入例、CSSは装飾、JavaScriptはデータと動きというWeb基礎の役割分担を使います。画面に入力した値と、ソースの初期データの違いを、再読み込み後の結果で見分けます。",
+      "translation": "نستخدم تقسيم الأدوار المتبع في أساسيات الويب: HTML للبنية وأمثلة التعبئة، وCSS للتنسيق، وJavaScript للبيانات والسلوك. وميز بين القيم المدخلة على الشاشة والبيانات الأولية في الشيفرة المصدرية من خلال النتائج بعد إعادة التحميل."
+    },
+    {
+      "source": "アレンジした場所が画面に現れ、追加・詳細・戻るが引き続き動いた。",
+      "translation": "ظهرت المواضع المخصصة على الشاشة، واستمرت وظائف الإضافة والتفاصيل والرجوع في العمل."
+    },
+    {
+      "source": "STEP 05 · コマ6",
+      "translation": "STEP 05 · الحصة 6"
+    },
+    {
+      "source": "配列とJSONの違いを読む",
+      "translation": "قراءة الفرق بين المصفوفات وJSON"
+    },
+    {
+      "source": "このコマの開始時の全コード",
+      "translation": "الشيفرة الكاملة عند بدء هذه الحصة"
+    },
+    {
+      "source": "途中から合流する場合は、変更した文字と色を控えてから3ファイルをそろえます。順番に進めている人は、前の回の続きで構いません。",
+      "translation": "إذا كنت تنضم من منتصف الدرس، فاحتفظ بملاحظة للنصوص والألوان التي غيرتها قبل تجهيز الملفات الثلاثة. أما إذا كنت تتقدم بالترتيب، فيمكنك المتابعة من حيث توقفت في المرة السابقة."
+    },
+    {
+      "source": "Monaca クラウド IDEで同じ好きなものノートを開きます。開始状態は「入力して追加できるが、再読み込みすると初期データに戻る」です。保存する前に、画面で使う配列と、保存へ渡す文字列を区別します。",
+      "translation": "افتح نفس دفتر الأشياء المفضلة في Monaca クラウド IDE. الحالة الأولية هي «يمكنك الإدخال والإضافة، ولكن إعادة التحميل تعيده إلى البيانات الأولية». قبل الحفظ، نميز بين المصفوفة المستخدمة في الشاشة والسلسلة النصية الممررة إلى الحفظ."
+    },
+    {
+      "source": "<strong>JSONは、値を文字で表すための決まった形式</strong>です。JavaScriptの配列やオブジェクトそのものではありません。<code>JSON.stringify</code> は値をJSONの文字列にし、<code>JSON.parse</code> はJSONの文字列から値を復元します。今回の保存対象は文字列の3項目を持つオブジェクトの配列です。",
+      "translation": "<strong>تنسيق JSON هو صيغة محددة لتمثيل القيم كنصوص</strong>، وليس مصفوفات أو كائنات JavaScript نفسها. يحول <code>JSON.stringify</code> القيمة إلى سلسلة نصية بتنسيق JSON، بينما يستعيد <code>JSON.parse</code> القيمة من سلسلة JSON النصية. والمستهدف حفظه هذه المرة هو مصفوفة من الكائنات تحتوي كل منها على 3 عناصر نصية."
+    },
+    {
+      "source": "場面",
+      "translation": "الموقف"
+    },
+    {
+      "source": "値",
+      "translation": "القيمة"
+    },
+    {
+      "source": "型",
+      "translation": "النوع"
+    },
+    {
+      "source": "画面で使う1件の例",
+      "translation": "مثال لعنصر واحد مستخدم في الشاشة"
+    },
+    {
+      "source": "オブジェクト",
+      "translation": "كائن (Object)"
+    },
+    {
+      "source": "JSONで表した内容",
+      "translation": "المحتوى الممثل بتنسيق JSON"
+    },
+    {
+      "source": "この文字の並びを持つ文字列",
+      "translation": "سلسلة نصية تحتوي على هذا الترتيب من النصوص"
+    },
+    {
+      "source": "<code>parse</code>した後",
+      "translation": "بعد تنفيذ <code>parse</code>"
+    },
+    {
+      "source": "<code>item.name</code> を読める値",
+      "translation": "قيمة يمكن قراءة <code>item.name</code> منها"
+    },
+    {
+      "source": "再びオブジェクト",
+      "translation": "كائن مرة أخرى"
+    },
+    {
+      "source": "JSONではキーもダブルクォートで囲みます。コメントや末尾の余分なカンマは使えません。ただし、今回の保存文字列は手で組み立てず、<code>stringify</code>に作らせます。名前に引用符や改行があっても、必要な表現への変換を任せられます。",
+      "translation": "في JSON، يتم إحاطة المفاتيح أيضاً بعلامات اقتباس مزدوجة. ولا يمكن استخدام التعليقات أو الفواصل الزائدة في النهاية. ومع ذلك، لن نقوم بتركيب السلسلة النصية للحفظ يدوياً هذه المرة، بل نترك <code>stringify</code> ينشئها. حتى لو كان الاسم يحتوي على علامات اقتباس أو فواصل أسطر، يمكنك الاعتماد عليه في التحويل إلى التمثيل المطلوب."
+    },
+    {
+      "source": "次の3行は処理順を読むための抜粋です。まだ追加する必要はありません。次のSTEPで保存、STEP 07で読み込みへ組み込みます。",
+      "translation": "الأسطر الثلاثة التالية هي مقتطف لقراءة ترتيب المعالجة. لا داعي لإضافتها بعد. سندمج الحفظ في الـ STEP التالي، والقراءة في STEP 07."
+    },
+    {
+      "source": "配列のまま<code>setItem</code>へ渡すと、今回必要な構造を保持するJSONにはなりません。<code>String(oshiItems)</code> で一般的な文字列へ変えることとも区別しましょう。",
+      "translation": "إذا مررت المصفوفة كما هي إلى <code>setItem</code>، فلن تصبح JSON يحافظ على البنية المطلوبة هذه المرة. ودعنا نميز ذلك أيضاً عن التحويل إلى سلسلة نصية عامة باستخدام <code>String(oshiItems)</code>."
+    },
+    {
+      "source": "JavaやSwiftの配列・データオブジェクトをそのまま画面で使っていたときと、文字列を保存するときでは型が違います。この差をつなぐ表現として、今回はJSONを新しく扱います。配列の操作自体を学び直すのではなく、「配列→JSON文字列→配列」という変換の向きを確認します。",
+      "translation": "يختلف النوع عندما نستخدم مصفوفات وكائنات بيانات Java أو Swift مباشرة في الشاشة عما هو عليه عند حفظ السلاسل النصية. وللربط بين هذا الاختلاف، نتعامل هذه المرة مع JSON كمفهوم جديد. بدلاً من إعادة تعلم عمليات المصفوفات نفسها، سنتحقق من اتجاه التحويل: «المصفوفة ← سلسلة JSON النصية ← المصفوفة»."
+    },
+    {
+      "source": "JSONの文字列と配列を区別し、<code>stringify</code>と<code>parse</code>の向きを確認した。",
+      "translation": "تم التمييز بين سلاسل JSON النصية والمصفوفات، وتأكيد اتجاه استخدام <code>stringify</code> و<code>parse</code>."
+    },
+    {
+      "source": "STEP 06 · コマ6",
+      "translation": "STEP 06 · الحصة 6"
+    },
+    {
+      "source": "文字列にして保存する",
+      "translation": "التحويل إلى سلسلة نصية والحفظ"
+    },
+    {
+      "source": "このSTEPの3ファイルへ更新します。JSの先頭に <code>STORAGE_KEY</code> を置き、保存内容を探すための名前を1か所で管理します。この名前を途中で変更すると、以前のキーで保存した内容は見えなくなります。",
+      "translation": "حدث الملفات إلى الملفات الثلاثة الخاصة بهذا الـ STEP. نضع <code>STORAGE_KEY</code> في بداية JS، وندير الاسم المستخدم للبحث عن المحتوى المحفوظ في مكان واحد. وإذا قمت بتغيير هذا الاسم في المنتصف، فلن يعود بالإمكان رؤية المحتوى المحفوظ بالمفتاح السابق."
+    },
+    {
+      "source": "<code>addOshi</code>では、<code>oshiItems.slice()</code> で配列の浅いコピー<code>nextItems</code>を作り、そこへ新しい1件を追加します。この処理では既存のオブジェクトの項目は変更せず、配列へ追加するだけなので、配列のコピーで足ります。",
+      "translation": "في <code>addOshi</code>، ننشئ نسخة سطحية من المصفوفة باسم <code>nextItems</code> باستخدام <code>oshiItems.slice()</code>، ونضيف عنصراً جديداً واحداً إليها. في هذه المعالجة، لا نعدل عناصر الكائنات الموجودة بل نضيف فقط إلى المصفوفة، لذا تكفي نسخة المصفوفة هذه."
+    },
+    {
+      "source": "<code>localStorage.setItem(STORAGE_KEY, JSON.stringify(nextItems))</code> が、同じブラウザの同じ保存領域へ文字列を保存する行です。<code>localStorage</code>は同期APIなので、次の行へ進む前にこの呼び出しが終わります。今回は<code>Promise</code>や<code>async</code> / <code>await</code>を使いません。",
+      "translation": "السطر <code>localStorage.setItem(STORAGE_KEY, JSON.stringify(nextItems))</code> هو السطر الذي يحفظ السلسلة النصية في نفس مساحة التخزين لنفس المتصفح. ونظراً لأن <code>localStorage</code> هي واجهة برمجة تطبيقات متزامنة (synchronous API)، فإن هذا الاستدعاء ينتهي قبل الانتقال إلى السطر التالي. لا نستخدم <code>Promise</code> أو <code>async</code> / <code>await</code> هذه المرة."
+    },
+    {
+      "source": "保存設定や空き容量などの理由で書き込めないと例外が発生します。<code>try</code> 内の保存が成功したときだけ、<code>oshiItems</code>を<code>nextItems</code>へ替えて一覧を描き直します。<code>catch</code> 側では入力内容を残し、ボタンを戻してエラーを表示し、<code>return</code>します。",
+      "translation": "يحدث استثناء إذا تعذرت الكتابة بسبب إعدادات الحفظ أو المساحة الفارغة المتاحة أو غيرها. وفقط عند نجاح الحفظ داخل <code>try</code>، نستبدل <code>oshiItems</code> بـ <code>nextItems</code> ونعيد رسم القائمة. أما في جانب <code>catch</code>، فنبقي على المحتوى المدخل، ونعيد الزر إلى حالته، ونعرض رسالة الخطأ، ثم نقوم بـ <code>return</code>."
+    },
+    {
+      "source": "順番",
+      "translation": "الترتيب"
+    },
+    {
+      "source": "そうする理由",
+      "translation": "السبب وراء ذلك"
+    },
+    {
+      "source": "別の配列に追加",
+      "translation": "الإضافة إلى مصفوفة أخرى"
+    },
+    {
+      "source": "保存前に画面の元データを変えない。",
+      "translation": "عدم تغيير البيانات الأصلية للشاشة قبل الحفظ."
+    },
+    {
+      "source": "ボタンを無効化して保存",
+      "translation": "تعطيل الزر ثم الحفظ"
+    },
+    {
+      "source": "同じ入力を連続して処理しない。",
+      "translation": "تجنب معالجة نفس الإدخال بشكل متتالٍ."
+    },
+    {
+      "source": "成功したら配列更新・一覧再描画・戻る",
+      "translation": "عند النجاح: تحديث المصفوفة، وإعادة رسم القائمة، والرجوع"
+    },
+    {
+      "source": "保存失敗を「追加できた」と見せない。",
+      "translation": "عدم إظهار فشل الحفظ وكأنه «تمت الإضافة بنجاح»."
+    },
+    {
+      "source": "失敗したら画面に理由を出す",
+      "translation": "عند الفشل: إظهار السبب على الشاشة"
+    },
+    {
+      "source": "入力を消さず、次の確認や再試行につなげる。",
+      "translation": "عدم مسح الإدخال، وإتاحته للتحقق التالي أو إعادة المحاولة."
+    },
+    {
+      "source": "保存してよいかを表す <code>let canSave = true;</code> も加えます。<code>openAddPage</code>と<code>addOshi</code>の最初の条件で <code>!canSave</code> なら何もせずに戻り、一覧の<code>init</code>では <code>btn_open_add</code> の <code>disabled</code> を <code>!canSave</code> にします。このSTEPには <code>canSave</code> を<code>false</code>にする行がないので、常に<code>true</code>のままで、画面の動きは変わりません。<code>false</code>にするのは、次のSTEPで保存内容を読み込めなかったときです。そのまま追加できると、読めなかった保存内容を、初期データに1件足した配列で上書きしてしまいます。保存の処理を書くこのSTEPで、保存へ進む入口に確認を置いておけば、次のSTEPでは読み込みの処理を足すだけで済みます。",
+      "translation": "نضيف أيضاً <code>let canSave = true;</code> لتمثيل ما إذا كان الحفظ مسموحاً به. في الشرط الأول لـ <code>openAddPage</code> و<code>addOshi</code>، إذا كانت <code>!canSave</code>، فسيتم الرجوع دون فعل أي شيء، وفي حدث <code>init</code> الخاص بالقائمة، يتم ضبط خاصية <code>disabled</code> لـ <code>btn_open_add</code> على <code>!canSave</code>. ونظراً لعدم وجود سطر يضبط <code>canSave</code> على <code>false</code> في هذا الـ STEP، فإنها تبقى دائماً <code>true</code> ولا يتغير سلوك الشاشة. والوقت الذي نضبطها فيه على <code>false</code> هو عندما يتعذر قراءة المحتوى المحفوظ في الـ STEP التالي. فإذا كان بإمكانك الإضافة مباشرة، فسيتم الكتابة فوق المحتوى المحفوظ الذي تعذر قراءته بمصفوفة أضيف إليها عنصر واحد إلى البيانات الأولية. فإذا وضعنا التحقق عند مدخل عملية الحفظ في هذا الـ STEP الذي نكتب فيه معالجة الحفظ، فسيكفي فقط إضافة معالجة القراءة في الـ STEP التالي."
+    },
+    {
+      "source": "画面の文も、保存ができるようになったことに合わせて替えます。入力画面のボタンは <code>追加する</code> から <code>追加して保存</code> に変わります。押すと、配列への追加と一緒に保存まで行うことを、ボタンの文字で示すためです。STEP 01から出していた2つの文は、保存できるようになると事実と合わなくなるので、一覧の <code>txt_storage</code> は <code>保存はできますが、このSTEPではまだ読み込みません。</code> に、入力画面のボタンの下の注記は <code>保存先は、このブラウザの同じプレビューです。公開URLに入力内容は含まれません。</code> に替えます。保存した内容はこのブラウザにだけ残り、STEP 12で発行する公開URLから取り込んだ人には届かないためです。",
+      "translation": "نغير نصوص الشاشة أيضاً لتتناسب مع إمكانية الحفظ. يتغير زر شاشة الإدخال من <code>追加する</code> إلى <code>追加して保存</code>. وذلك لنوضح بنص الزر أن الضغط عليه يقوم بالحفظ مع الإضافة إلى المصفوفة في الوقت نفسه. النصان اللذان عُرضا منذ STEP 01 لن يعودا متطابقين مع الواقع عند إمكانية الحفظ، لذا نغير <code>txt_storage</code> في القائمة إلى <code>保存はできますが、このSTEPではまだ読み込みません。</code>، ونغير الملاحظة أسفل الزر في شاشة الإدخال إلى <code>保存先は、このブラウザの同じプレビューです。公開URLに入力内容は含まれません。</code>. وذلك لأن المحتوى المحفوظ يبقى في هذا المتصفح فقط، ولا يصل إلى الأشخاص الذين يستوردون المشروع من رابط الاستيراد الصادر في STEP 12."
+    },
+    {
+      "source": "入力画面のボタンが <code>追加して保存</code> になったことを確かめてから、1件追加して一覧へ戻り、<code>件をこのブラウザに保存しました。</code> の文を確かめます。このSTEPでは保存までなので、再読み込み時の表示はまだ初期データです。保存されていないと決めつけず、次のSTEPで読み込む側を作ります。また、このSTEPで再読み込みしてからもう一度追加すると、前に保存した内容は、ソースの初期データと新しい1件で上書きされます。保存した内容をまだ読み込んでいない配列に、新しい1件を足して保存するためです。次のSTEPで読み込めるのは、最後に保存した内容です。",
+      "translation": "بعد التأكد من أن زر شاشة الإدخال أصبح <code>追加して保存</code>، أضف عنصراً واحداً وارجع إلى القائمة، وتحقق من ظهور جملة <code>件をこのブラウザに保存しました。</code>. نظراً لأن هذا الـ STEP يقتصر على الحفظ فقط، فإن ما يُعرض عند إعادة التحميل يظل هو البيانات الأولية. لا تفترض أنه لم يُحفظ، فسننشئ جانب القراءة في الـ STEP التالي. إضافة إلى ذلك، إذا أعدت التحميل في هذا الـ STEP ثم أضفت عنصراً مرة أخرى، فسيتم الكتابة فوق المحتوى المحفوظ سابقاً بالبيانات الأولية من الشيفرة المصدرية مع العنصر الجديد. وذلك لأنك تضيف عنصراً جديداً إلى مصفوفة لم تقرأ المحتوى المحفوظ بعد وتقوم بحفظها. وما يمكنك قراءته في الـ STEP التالي هو آخر محتوى تم حفظه."
+    },
+    {
+      "source": "キーと値で保存する目的はAndroidの<code>SharedPreferences</code>やiOSの<code>UserDefaults</code>と同じです。<code>localStorage</code>の値は文字列に限るためJSONへ変換します。<code>slice</code>はJavaで<code>ArrayList</code>を複製したり、Swiftで配列の別の値を作ったりする操作と比較できます。<code>try</code> / <code>catch</code>はJavaの例外処理、Swiftの<code>do</code> / <code>catch</code>に対応し、今回は失敗後に表示中のデータを更新しない順序が要点です。<code>canSave</code>でボタンの <code>disabled</code> を切り替えるのは、Androidの<code>setEnabled(false)</code>やiOSの<code>isEnabled = false</code>で、条件がそろうまで操作を受け付けないのと同じです。",
+      "translation": "الهدف من الحفظ باستخدام المفتاح والقيمة هو نفسه في <code>SharedPreferences</code> لنظام Android و<code>UserDefaults</code> لنظام iOS. ونظراً لأن قيم <code>localStorage</code> تقتصر على السلاسل النصية، فإننا نحولها إلى JSON. ويمكن مقارنة <code>slice</code> بعملية نسخ <code>ArrayList</code> في Java أو إنشاء قيمة مصفوفة أخرى في Swift. وتتوافق <code>try</code> / <code>catch</code> مع معالجة الاستثناءات في Java و<code>do</code> / <code>catch</code> في Swift، والنقطة الأساسية هذه المرة هي الترتيب الذي لا يُحدّث البيانات المعروضة بعد الفشل. وتبديل حالة <code>disabled</code> للزر باستخدام <code>canSave</code> يشبه استخدام <code>setEnabled(false)</code> في Android أو <code>isEnabled = false</code> في iOS لعدم قبول العمليات حتى تكتمل الشروط."
+    },
+    {
+      "source": "保存成功の文を確認し、コピー・保存・表示更新の順番を確かめた。",
+      "translation": "تم التحقق من نص نجاح الحفظ، وتأكيد ترتيب النسخ ثم الحفظ ثم تحديث العرض."
+    },
+    {
+      "source": "STEP 07 · コマ6",
+      "translation": "STEP 07 · الحصة 6"
+    },
+    {
+      "source": "保存した配列を復元する",
+      "translation": "استعادة المصفوفة المحفوظة"
+    },
+    {
+      "source": "JSに<code>loadOshiItems</code>と<code>isValidItems</code>を加え、<code>page_list</code>の<code>init</code>で <strong>読み込み→一覧生成</strong> の順に呼びます。保存した値を読む前に行を作ると、初期データのまま表示されるためです。",
+      "translation": "أضف <code>loadOshiItems</code> و<code>isValidItems</code> إلى JS، واستدعهما في حدث <code>init</code> الخاص بـ <code>page_list</code> بالترتيب: <strong>القراءة ← إنشاء القائمة</strong>. وذلك لأنه إذا أنشئت الصفوف قبل قراءة القيمة المحفوظة، فستُعرض بالبيانات الأولية."
+    },
+    {
+      "source": "<code>getItem(STORAGE_KEY)</code> は、未保存なら <code>null</code> を返します。この場合は何も復元せず、ソースの初期データを使います。文字列があれば<code>JSON.parse</code>で値へ戻します。",
+      "translation": "تعيد <code>getItem(STORAGE_KEY)</code> القيمة <code>null</code> إذا لم يكن هناك حفظ. في هذه الحالة، لا نستعيد أي شيء ونستخدم البيانات الأولية من الشيفرة المصدرية. وإذا كانت هناك سلسلة نصية، فإننا نعيدها إلى قيمة باستخدام <code>JSON.parse</code>."
+    },
+    {
+      "source": "JSONとして読めることと、画面で使えることは別です。たとえば数値のJSONも<code>parse</code>できますが、今回欲しいのは文字列の項目を持つ配列です。<code>isValidItems</code>は次の順に確かめます。",
+      "translation": "إمكانية القراءة كـ JSON تختلف عن إمكانية الاستخدام في الشاشة. على سبيل المثال، يمكن لـ <code>parse</code> تحليل JSON الخاص بالأرقام أيضاً، لكن ما نريده هذه المرة هو مصفوفة تحتوي على عناصر نصية. تتحقق <code>isValidItems</code> بالترتيب التالي."
+    },
+    {
+      "source": "<code>Array.isArray</code> で配列か確認します。",
+      "translation": "التحقق مما إذا كانت مصفوفة باستخدام <code>Array.isArray</code>."
+    },
+    {
+      "source": "各<code>item</code>が<code>null</code>でなく、オブジェクトであるかを <code>typeof</code> と条件式で確認します。",
+      "translation": "التحقق مما إذا كان كل <code>item</code> ليس <code>null</code> وأنه كائن (object) باستخدام <code>typeof</code> والعبارة الشرطية."
+    },
+    {
+      "source": "<code>name</code>・<code>genre</code>・<code>comment</code>がすべて<code>string</code>で、<code>trim</code>後に空でないか確認します。先に型を確認するため、文字列でないものへ<code>trim</code>を呼びません。",
+      "translation": "التحقق من أن <code>name</code> و<code>genre</code> و<code>comment</code> كلها من نوع <code>string</code>، وليست فارغة بعد <code>trim</code>. ونظراً للتحقق من النوع أولاً، فإننا لا نستدعي <code>trim</code> على ما ليس بسلسلة نصية."
+    },
+    {
+      "source": "全部通れば<code>true</code>を返します。空の配列は有効な0件として扱います。",
+      "translation": "إرجاع <code>true</code> إذا اجتازت جميع الشروط. وتُعامل المصفوفة الفارغة على أنها 0 عناصر صالحة."
+    },
+    {
+      "source": "読み込みや<code>parse</code>が失敗したとき、または構造が違うときは<code>canSave</code>を<code>false</code>にします。保存済みの文字列を自動で消したり、初期データで上書きしたりしません。一覧には初期データと失敗メッセージを表示し、追加は止めます。次のSTEPで、本人が選んだときだけ初期化できる操作を作ります。失敗メッセージが案内する「初期の内容に戻す」ボタンも、そのときに作ります。このSTEPの画面には、まだありません。",
+      "translation": "عند فشل القراءة أو <code>parse</code>، أو عندما تكون البنية مختلفة، نضبط <code>canSave</code> على <code>false</code>. لا نقوم بمسح السلسلة النصية المحفوظة تلقائياً أو الكتابة فوقها بالبيانات الأولية. نعرض البيانات الأولية ورسالة الفشل في القائمة، ونوقف الإضافة. في الـ STEP التالي، سننشئ عملية تتيح التهيئة فقط عندما يختار المستخدم ذلك بنفسه. والزر «初期の内容に戻す» (الاستعادة إلى المحتوى الأولي) الذي تشير إليه رسالة الفشل سيتم إنشاؤه في ذلك الوقت أيضاً، ولا يوجد على شاشة هذا الـ STEP بعد."
+    },
+    {
+      "source": "名前に引用符や山かっこ、好きな理由に改行を入れて1件追加します。",
+      "translation": "أضف عنصراً واحداً مع وضع علامات اقتباس أو أقواس زاوية في الاسم، وفواصل أسطر في سبب التفضيل."
+    },
+    {
+      "source": "同じプレビューを再読み込みし、保存した件数と追加した行が戻ることを確かめます。",
+      "translation": "أعد تحميل المعاينة نفسها، وتحقق من استعادة عدد العناصر المحفوظة والصف المضاف."
+    },
+    {
+      "source": "詳細を開き、文字・改行が入力どおりに戻ったことを確認します。",
+      "translation": "افتح التفاصيل، وتحقق من استعادة النصوص وفواصل الأسطر تماماً كما أدخلتها."
+    },
+    {
+      "source": "保存領域はブラウザやプレビューの場所に結び付きます。別の端末・別のブラウザ・別のプロジェクトのコピーへ、内容が自動で移る仕組みではありません。",
+      "translation": "ترتبط مساحة التخزين بموقع المتصفح أو المعاينة. وليست آلية ينتقل فيها المحتوى تلقائياً إلى جهاز آخر أو متصفح آخر أو نسخة مشروع أخرى."
+    },
+    {
+      "source": "保存を読むタイミングは、Androidの<code>onCreate</code>やiOSの<code>viewDidLoad</code>で保存値を画面へ戻すときに対応します。Javaの型検査やSwiftの型確認と同じ目的で、今回はJavaScriptの<code>Array.isArray</code>と<code>typeof</code>を使います。<code>JSON.parse</code>の結果を信頼し切らず、画面に必要な項目と型を確かめる点が違いです。",
+      "translation": "يتوافق توقيت قراءة الحفظ مع استعادة القيم المحفوظة إلى الشاشة في <code>onCreate</code> لنظام Android أو <code>viewDidLoad</code> لنظام iOS. ولتحقيق نفس الغرض من فحص الأنواع في Java أو التحقق من الأنواع في Swift، نستخدم هذه المرة <code>Array.isArray</code> و<code>typeof</code> في JavaScript. والفرق هو عدم الوثوق الكامل بنتيجة <code>JSON.parse</code>، بل التحقق من العناصر والأنواع المطلوبة للشاشة."
+    },
+    {
+      "source": "追加した内容を再読み込み後にも一覧・詳細で読め、<code>null</code>・不正データ・空配列の扱いを区別できた。",
+      "translation": "تمكنت من قراءة المحتوى المضاف في القائمة والتفاصيل حتى بعد إعادة التحميل، وميزت بين معالجة <code>null</code> والبيانات غير الصالحة والمصفوفة الفارغة."
+    },
+    {
+      "source": "STEP 08 · コマ6",
+      "translation": "STEP 08 · الحصة 6"
+    },
+    {
+      "source": "初期化の確認と失敗への対応",
+      "translation": "تأكيد التهيئة والتعامل مع الفشل"
+    },
+    {
+      "source": "HTMLに初期化ボタンと確認欄、JSにそのイベントと<code>resetOshiItems</code>を加えます。<code>初期の内容に戻す</code> を押すと、<code>is-hidden</code>を<code>remove</code>して確認欄を見せます。<code>やめる</code> ではクラスを<code>add</code>し、欄を閉じるだけです。確認欄を囲む <code>reset-section</code> は上に区切りの線を引き、<code>#panel_reset ons-button</code> は確認欄の2つのボタンの上を12px空けます。この2つと <code>is-hidden</code> はSTEP 01のCSSに入れてあり、このSTEPのHTMLで初めて要素に当たります。",
+      "translation": "أضف زر التهيئة وحقل التأكيد إلى HTML، وأضف الحدث الخاص به و<code>resetOshiItems</code> إلى JS. عند الضغط على <code>初期の内容に戻す</code>، نقوم بـ <code>remove</code> لـ <code>is-hidden</code> لإظهار حقل التأكيد. وعند <code>やめる</code>، نقوم بـ <code>add</code> للفئة ونغلق الحقل فقط. يرسم <code>reset-section</code> المحيط بحقل التأكيد خط فاصل في الأعلى، ويترك <code>#panel_reset ons-button</code> مسافة 12px أعلى الزرين في حقل التأكيد. هذان التعيينان بالإضافة إلى <code>is-hidden</code> قد تم وضعها في CSS الخاص بـ STEP 01، وتنطبق على العناصر لأول مرة في HTML الخاص بهذا الـ STEP."
+    },
+    {
+      "source": "実際の削除は <code>削除して初期の内容に戻す</code> を押した場合だけです。<code>localStorage.removeItem(STORAGE_KEY)</code> で、このアプリのキー1つだけを削除します。保存領域全体を空にする<code>clear</code>は使いません。",
+      "translation": "يتم الحذف الفعلي فقط عند الضغط على <code>削除して初期の内容に戻す</code>. نقوم بحذف مفتاح واحد فقط خاص بهذا التطبيق باستخدام <code>localStorage.removeItem(STORAGE_KEY)</code>. ولا نستخدم <code>clear</code> التي تفرغ مساحة التخزين بأكملها."
+    },
+    {
+      "source": "削除に成功したら<code>createInitialItems</code>で新しい初期配列を作り、<code>canSave</code>を<code>true</code>へ戻し、一覧と文を更新します。削除に失敗したら画面の配列も変更せず、削除できなかったと表示します。初期化が終わると、以前入力した内容は戻せません。",
+      "translation": "عند نجاح الحذف، ننشئ مصفوفة أولية جديدة باستخدام <code>createInitialItems</code>، ونعيد <code>canSave</code> إلى <code>true</code>، ونحدث القائمة والنصوص. وإذا فشل الحذف، فلا نغير مصفوفة الشاشة ونعرض رسالة تفيد بتعذر الحذف. بمجرد انتهاء التهيئة، لا يمكن استعادة المحتوى المدخل سابقاً."
+    },
+    {
+      "source": "検証用に追加したデータを使い、初期化の確認欄を開いて <code>やめる</code> を押します。件数が変わらないことを確認します。",
+      "translation": "باستخدام البيانات المضافة للتحقق، افتح قسم تأكيد التهيئة واضغط على <code>やめる</code>. وتحقق من عدم تغير عدد العناصر."
+    },
+    {
+      "source": "残す必要のある内容は控えてから、もう一度確認欄を開き、削除するボタンを押します。",
+      "translation": "احتفظ بملاحظة للمحتوى الذي تحتاج إلى إبقائه، ثم افتح قسم التأكيد مرة أخرى واضغط على زر الحذف."
+    },
+    {
+      "source": "一覧がソースの初期データに戻り、再読み込みしてもその初期データになることを確かめます。",
+      "translation": "تحقق من عودة القائمة إلى البيانات الأولية من الشيفرة المصدرية، وبقائها على تلك البيانات الأولية حتى بعد إعادة التحميل."
+    },
+    {
+      "source": "通常の操作で保存・読込に失敗した場合は、表示された文を先生と確認します。教材の確認のために、ブラウザのセキュリティ設定を変更する必要はありません。",
+      "translation": "إذا فشل الحفظ أو القراءة أثناء العمليات العادية، فتحقق من النص المعروض مع المعلم. لا حاجة لتغيير إعدادات أمان المتصفح من أجل التحقق من المواد التعليمية."
+    },
+    {
+      "source": "Web基礎の<code>classList.add</code> / <code>remove</code>で表示クラスを切り替えます。キー1つの削除は、Androidの<code>SharedPreferences.Editor.remove</code>やSwiftの<code>UserDefaults.removeObject</code>に対応します。データを消す前に選び直せる画面を用意する点は、ネイティブアプリの確認操作と同じです。",
+      "translation": "نقوم بتبديل فئة العرض باستخدام <code>classList.add</code> / <code>remove</code> من أساسيات الويب. ويتوافق حذف مفتاح واحد مع <code>SharedPreferences.Editor.remove</code> في Android و<code>UserDefaults.removeObject</code> في Swift. وتوفير شاشة تتيح إعادة الاختيار قبل حذف البيانات يماثل عمليات التأكيد في التطبيقات الأصلية."
+    },
+    {
+      "source": "初期化を中止したときは内容が残り、確定したときだけ初期の内容へ戻った。",
+      "translation": "تم التأكد من بقاء المحتوى عند إلغاء التهيئة، والعودة إلى المحتوى الأولي فقط عند التأكيد."
+    },
+    {
+      "source": "STEP 09 · コマ6",
+      "translation": "STEP 09 · الحصة 6"
+    },
+    {
+      "source": "保存を確かめてアレンジする",
+      "translation": "التحقق من الحفظ وتخصيص التطبيق"
+    },
+    {
+      "source": "入力→追加→詳細→戻る→再読み込みの順で動かし、保存した内容が復元されることを確認します。次に、ソースの初期データを自分の言葉へ変えます。",
+      "translation": "شغّل بالترتيب: الإدخال ← الإضافة ← التفاصيل ← الرجوع ← إعادة التحميل، وتحقق من استعادة المحتوى المحفوظ. بعد ذلك، غيّر البيانات الأولية في الشيفرة المصدرية إلى كلماتك الخاصة."
+    },
+    {
+      "source": "<strong>保存データがあると、ソースの初期データより優先して表示されます。</strong> <code>createInitialItems</code>を書き換えても画面が変わらない場合は、変更したコードのミスとは限りません。必要な入力を控えたうえで、アプリ内の初期化を使ってソースの内容を確認します。",
+      "translation": "<strong>إذا كانت هناك بيانات محفوظة، فستُعرض بأولوية على البيانات الأولية في الشيفرة المصدرية.</strong> إذا لم تتغير الشاشة حتى بعد إعادة كتابة <code>createInitialItems</code>، فهذا لا يعني بالضرورة وجود خطأ في الشيفرة المعدلة. احتفظ بملاحظة للإدخالات الضرورية، ثم استخدم التهيئة داخل التطبيق للتحقق من محتوى الشيفرة المصدرية."
+    },
+    {
+      "source": "アレンジする場所",
+      "translation": "موضع التخصيص"
+    },
+    {
+      "source": "確かめること",
+      "translation": "ما يجب التحقق منه"
+    },
+    {
+      "source": "<code>createInitialItems</code>の<code>name</code>・<code>genre</code>・<code>comment</code>",
+      "translation": "<code>name</code> و<code>genre</code> و<code>comment</code> في <code>createInitialItems</code>"
+    },
+    {
+      "source": "初期化後の一覧と詳細が自分の好きなものになる。",
+      "translation": "أن تصبح القائمة والتفاصيل بعد التهيئة هي أشياؤك المفضلة."
+    },
+    {
+      "source": "HTMLの案内文・<code>placeholder</code>",
+      "translation": "النصوص الإرشادية و<code>placeholder</code> في HTML"
+    },
+    {
+      "source": "何を入力するアプリか伝わる。",
+      "translation": "أن يتضح ما يجب إدخاله في التطبيق."
+    },
+    {
+      "source": "CSSの色・枠・余白",
+      "translation": "الألوان والإطارات والهوامش في CSS"
+    },
+    {
+      "source": "長い日本語や改行も読める。",
+      "translation": "إمكانية قراءة النصوص اليابانية الطويلة وفواصل الأسطر دون مشكلة."
+    },
+    {
+      "source": "保存キーは変えず、まず文字や色を変えましょう。保存して再読み込みし、どの変更がソースに残り、どの内容がブラウザだけに残るかを確かめます。",
+      "translation": "دون تغيير مفتاح الحفظ، دعنا نغير النصوص والألوان أولاً. احفظ وأعد التحميل، وتحقق من التعديلات التي تبقى في الشيفرة المصدرية والمحتوى الذي يبقى في المتصفح فقط."
+    },
+    {
+      "source": "ネイティブアプリでも、コードに書いた既定値より保存済みの設定を優先することがあります。同じ区別を、<code>createInitialItems</code>と<code>getItem</code>のどちらが最終的な<code>oshiItems</code>になるかで追います。アレンジは既習のデータと装飾の変更だけで行います。",
+      "translation": "حتى في التطبيقات الأصلية، قد تُعطى الأولوية للإعدادات المحفوظة على القيم الافتراضية المكتوبة في الشيفرة. ونتتبع نفس هذا التمييز من خلال معرفة ما إذا كانت <code>createInitialItems</code> أو <code>getItem</code> هي التي ستصبح في النهاية <code>oshiItems</code>. وقم بإجراء التخصيص فقط بتعديل البيانات والتنسيقات التي تمت دراستها مسبقاً."
+    },
+    {
+      "source": "保存・復元の一連の操作ができ、ソースのアレンジと入力データの保存先を確かめた。",
+      "translation": "تمكنت من تنفيذ سلسلة عمليات الحفظ والاستعادة، وتأكدت من وجهة حفظ تخصيص الشيفرة المصدرية والبيانات المدخلة."
+    },
+    {
+      "source": "STEP 10 · コマ7",
+      "translation": "STEP 10 · الحصة 7"
+    },
+    {
+      "source": "授業内でFlutterの準備を始める",
+      "translation": "بدء التحضير لـ Flutter أثناء الحصة"
+    },
+    {
+      "source": "今日は好きなものノートを仕上げて提出します。最初の10分で、後半に使うFlutter SDKのダウンロードと既存のiOS環境の確認を始めます。授業前に取得しておく必要はありません。",
+      "translation": "اليوم سنكمل دفتر الأشياء المفضلة ونسلمه. في الدقائق العشر الأولى، سنبدأ بتنزيل Flutter SDK المستخدم في النصف الثاني والتحقق من بيئة iOS الحالية. لا داعي لتنزيلها قبل الدرس."
+    },
+    {
+      "source": "<a1>共通資料のSTEP 4〜7</a1>を別のタブで開きます。",
+      "translation": "افتح <a1>STEP 4〜7 في المواد المشتركة</a1> في علامة تبويب أخرى."
+    },
+    {
+      "source": "Apple Silicon用のFlutter 3.47.5 / Dart 3.13.4を取得します。既にその版を用意できている場合は、版を確認して重複取得を避けます。",
+      "translation": "قم بتنزيل Flutter 3.47.5 / Dart 3.13.4 المخصص لـ Apple Silicon. وإذا كان هذا الإصدار جاهزاً لديك بالفعل، فتحقق من الإصدار لتجنب التنزيل المكرر."
+    },
+    {
+      "source": "別科目で使っているXcodeのiOS環境を確認します。利用できるランタイムは再利用します。<code>xcodebuild -downloadPlatform iOS</code> は全員必須ではありません。",
+      "translation": "تحقق من بيئة iOS في Xcode المستخدمة في مادة دراسية أخرى. وأعد استخدام بيئات التشغيل (runtimes) المتاحة. الأمر <code>xcodebuild -downloadPlatform iOS</code> ليس إلزامياً للجميع."
+    },
+    {
+      "source": "不足分だけ先生と確認して取得を始め、この教科書へ戻ります。Flutter専用のiOS資材は共通資料の <code>flutter precache --ios</code> で用意します。",
+      "translation": "تحقق مع المعلم من الأجزاء الناقصة فقط وابدأ تنزيلها، ثم ارجع إلى هذا الكتاب التعليمي. ويتم تجهيز موارد iOS الخاصة بـ Flutter باستخدام <code>flutter precache --ios</code> في المواد المشتركة."
+    },
+    {
+      "source": "取得待ちは好きなものノートのアレンジに使います。コマ8の冒頭にも準備確認の時間があります。家庭での作業が済んでいることを前提にはしません。",
+      "translation": "استغل وقت انتظار التنزيل في تخصيص دفتر الأشياء المفضلة. وسيكون هناك وقت لتأكيد التحضير في بداية الحصة 8 أيضاً. لا نفترض إتمام العمل في المنزل مسبقاً."
+    },
+    {
+      "source": "Android StudioやXcodeでも、開発用SDKとアプリのソースは別です。今回はFlutter SDKと既存のiOS環境を組み合わせます。MonacaのソースをFlutterへ変換する操作ではなく、後半に使う道具の準備です。",
+      "translation": "حتى في Android Studio وXcode، يكون SDK الخاص بالتطوير منفصلاً عن الشيفرة المصدرية للتطبيق. هذه المرة سنجمع بين Flutter SDK وبيئة iOS الحالية. هذه ليست عملية تحويل لشيفرة Monaca إلى Flutter، بل هي تحضير للأدوات المستخدمة في النصف الثاني."
+    },
+    {
+      "source": "指定SDKの取得を開始または版を確認し、既存iOS環境の状態を先生へ伝えられる。",
+      "translation": "بدأت بتنزيل SDK المحدد أو تحققت من الإصدار، وأستطيع إبلاغ المعلم بحالة بيئة iOS الحالية."
+    },
+    {
+      "source": "STEP 11 · コマ7",
+      "translation": "STEP 11 · الحصة 7"
+    },
+    {
+      "source": "提出に残るアレンジを作る",
+      "translation": "إنشاء تخصيص يبقى في التسليم"
+    },
+    {
+      "source": "Monaca クラウド IDEへ戻り、自分の好きなものノートを仕上げます。既に扱った文字・色・初期データから変更箇所を選び、どんなものが好きで、なぜ好きなのかが伝わる内容にします。",
+      "translation": "عد إلى Monaca クラウド IDE وأكمل دفتر الأشياء المفضلة الخاص بك. اختر مواضع التعديل من النصوص والألوان والبيانات الأولية التي تمت دراستها مسبقاً، واجعل المحتوى يوضح ما تفضله ولماذا تفضله."
+    },
+    {
+      "source": "確認方法",
+      "translation": "طريقة التحقق"
+    },
+    {
+      "source": "<code>createInitialItems</code>の配列",
+      "translation": "المصفوفة في <code>createInitialItems</code>"
+    },
+    {
+      "source": "最初に読める好きなものとその理由。",
+      "translation": "الأشياء المفضلة وأسبابها المقروءة في البداية."
+    },
+    {
+      "source": "必要な保存内容を控えて初期化し、全件の詳細を開く。",
+      "translation": "الاحتفاظ بملاحظة للمحتوى المحفوظ الضروري والتهيئة، ثم فتح تفاصيل جميع العناصر."
+    },
+    {
+      "source": "HTMLの見出し・案内文・入力例",
+      "translation": "العناوين والنصوص الإرشادية وأمثلة الإدخال في HTML"
+    },
+    {
+      "source": "自分の題材が画面から伝わる。",
+      "translation": "أن يتضح موضوعك المختار من الشاشة."
+    },
+    {
+      "source": "入力画面を開き、迷わず入力できるか読む。",
+      "translation": "افتح شاشة الإدخال، واقرأ لترى ما إذا كان بإمكانك الإدخال دون تردد."
+    },
+    {
+      "source": "CSSの文字色・枠色・余白",
+      "translation": "لون النص ولون الإطار والهوامش في CSS"
+    },
+    {
+      "source": "カードと入力欄の印象。",
+      "translation": "انطباع البطاقات وحقول الإدخال."
+    },
+    {
+      "source": "長い日本語を入れて、文字が切れないか見る。",
+      "translation": "أدخل نصوصاً يابانية طويلة، وتأكد من عدم اقتطاع الأحرف."
+    },
+    {
+      "source": "<strong>画面から追加して保存したデータは、公開URLへ含まれません。</strong> 先生が新しく取り込んだときに見えるアレンジは、ソースへ書きます。入力例として見せたい好きなものも、<code>createInitialItems</code>に書いて保存します。",
+      "translation": "<strong>لا يتم تضمين البيانات المضافة والمحفوظة من الشاشة في رابط الاستيراد.</strong> التخصيصات التي يراها المعلم عند استيراد المشروع حديثاً يجب كتابتها في الشيفرة المصدرية. والأشياء المفضلة التي تريد إظهارها كأمثلة للإدخال اكتبها أيضاً في <code>createInitialItems</code> واحفظها."
+    },
+    {
+      "source": "ソースを変えても以前の保存内容が表示される場合はSTEP 09を確認します。保存キーを変えて見えなくする方法で済ませず、残す内容を控えてからアプリ内の初期化を使います。",
+      "translation": "إذا استمر عرض المحتوى المحفوظ سابقاً حتى بعد تغيير الشيفرة المصدرية، فراجع STEP 09. لا تكتفِ بتغيير مفتاح الحفظ لإخفائه، بل احتفظ بملاحظة للمحتوى الذي تريد إبقاءه ثم استخدم ميزة التهيئة داخل التطبيق."
+    },
+    {
+      "source": "JavaやSwiftでコードの初期値を変えることと、実行中に端末へ保存した内容を変えることは別です。公開URLで渡すのはソースなので、ブラウザの入力内容だけを変えても相手の初期画面には反映されません。",
+      "translation": "يختلف تغيير القيم الأولية في الشيفرة عن تغيير المحتوى المحفوظ على الجهاز أثناء التشغيل في Java أو Swift. ما تمرره عبر رابط الاستيراد هو الشيفرة المصدرية، لذا فإن تغيير محتوى الإدخال في المتصفح فقط لن ينعكس على الشاشة الأولية للطرف الآخر."
+    },
+    {
+      "source": "自分の題材に合わせた変更をソースへ保存し、初期状態から確認できた。",
+      "translation": "تم حفظ التعديلات المتناسبة مع موضوعي الخاص في الشيفرة المصدرية، والتأكد منها بدءاً من الحالة الأولية."
+    },
+    {
+      "source": "STEP 12 · コマ7",
+      "translation": "STEP 12 · الحصة 7"
+    },
+    {
+      "source": "操作と公開URLを確認する",
+      "translation": "التحقق من العمليات ورابط الاستيراد"
+    },
+    {
+      "source": "ソースの初期の内容が表示された状態から完成確認を始めます。必要な入力は内容を控えて、先生と確認してから初期化します。",
+      "translation": "ابدأ التحقق من الاكتمال من الحالة التي يُعرض فيها المحتوى الأولي من الشيفرة المصدرية. احتفظ بملاحظة للإدخالات الضرورية، وتأكد مع المعلم قبل إجراء التهيئة."
+    },
+    {
+      "source": "一覧の各行から詳細へ進み、名前・種類・理由が一致することを確認します。",
+      "translation": "انتقل إلى التفاصيل من كل صف في القائمة، وتحقق من تطابق الاسم والنوع وسبب التفضيل."
+    },
+    {
+      "source": "追加画面で空欄を試し、同じ画面に案内が出ることを確認します。",
+      "translation": "جرب ترك الحقول فارغة في شاشة الإضافة، وتحقق من ظهور الإرشادات على الشاشة نفسها."
+    },
+    {
+      "source": "確認用の1件を追加し、成功の文・件数・詳細・再読み込み後の復元を確認します。",
+      "translation": "أضف عنصراً واحداً للتحقق، وتأكد من نص النجاح وعدد العناصر والتفاصيل واستعادة البيانات بعد إعادة التحميل."
+    },
+    {
+      "source": "初期化で <code>やめる</code> を選び、データが残ることを確かめます。必要な内容を控えた後に初期化し、ソースのデータへ戻します。",
+      "translation": "اختر <code>やめる</code> في التهيئة، وتحقق من بقاء البيانات. وبعد الاحتفاظ بملاحظة للمحتوى الضروري، قم بإجراء التهيئة للعودة إلى بيانات الشيفرة المصدرية."
+    },
+    {
+      "source": "iPhone系・Android系のプレビューで入力・戻る・ボタンの見た目を比べます。比較用の <code>ons.platform.select(\"android\")</code> を有効にした場合は、最後にコメントへ戻します。",
+      "translation": "قارن مظهر الإدخال وزر الرجوع والأزرار في معاينة نمط iPhone ونمط Android. وإذا قمت بتفعيل <code>ons.platform.select(\"android\")</code> للمقارنة، فأعدها إلى تعليق برمجياً في النهاية."
+    },
+    {
+      "source": "クラウド IDEの <code>プロジェクト → 公開…</code> を開き、自分の作品であることを確かめ、公開URLを発行します。",
+      "translation": "افتح <code>プロジェクト → 公開…</code> (مشروع ← نشر…) في بيئة التطوير السحابية، وتأكد من أنه عملك الخاص، ثم أصدر رابط الاستيراد."
+    },
+    {
+      "source": "提出するのは <code>https://monaca.mobi/ja/directimport?pid=…</code> という形の、実際に発行されたURLです。クラウド IDEやプレビューのアドレス、先生の完成見本URLを代わりに貼りません。相手のMonacaへソースを取り込むためのURLです。",
+      "translation": "ما تقدمه هو الرابط الصادر فعلياً بالصيغة <code>https://monaca.mobi/ja/directimport?pid=…</code>. لا تقم بلصق عنوان بيئة التطوير السحابية أو عنوان المعاينة أو رابط نموذج المعلم المكتمل بدلاً منه. فهذا الرابط مخصص لاستيراد الشيفرة المصدرية إلى Monaca الخاص بالطرف الآخر."
+    },
+    {
+      "source": "発行したURLを開き、対象のプロジェクトを確かめます。取り込みを確定するとコピーが増えるため、繰り返して枠を埋めないようにします。教員側で新しく取り込んだ状態の動作も確認します。",
+      "translation": "افتح الرابط الذي أصدرته، وتحقق من المشروع المستهدف. وبما أن تأكيد الاستيراد ينشئ نسخة إضافية، فتجنب تكرار ذلك حتى لا تستهلك المساحات المتاحة لديك. وتحقق أيضاً من عمل المشروع في الحالة التي يتم استيرادها حديثاً من جانب المعلم."
+    },
+    {
+      "source": "OSの見た目が変わっても入力・保存の処理は同じです。ネイティブアプリのビルド成果物を渡す方法と違い、ここではソースを相手の開発環境へコピーします。ブラウザの保存領域まで渡す操作ではありません。",
+      "translation": "حتى لو تغير مظهر نظام التشغيل، فإن معالجة الإدخال والحفظ تبقى كما هي. وعلى عكس طريقة تسليم مخرجات البناء في التطبيقات الأصلية، فإننا ننسخ الشيفرة المصدرية إلى بيئة التطوير الخاصة بالطرف الآخر هنا. وهذه ليست عملية لنقل مساحة تخزين المتصفح أيضاً."
+    },
+    {
+      "source": "初期状態と追加後の操作を確認し、自分の作品の取り込み用公開URLを発行できた。",
+      "translation": "تم التحقق من الحالة الأولية والعمليات بعد الإضافة، وإصدار رابط استيراد عام لعملي الخاص بنجاح."
+    },
+    {
+      "source": "STEP 13 · コマ7",
+      "translation": "STEP 13 · الحصة 7"
+    },
+    {
+      "source": "提出と準備状況を確認する",
+      "translation": "التحقق من التسليم وحالة التحضير"
+    },
+    {
+      "source": "先生が授業中に案内する提出先・締め切りを確認し、自分の好きなものノートで発行した公開URLを提出します。まだ案内がない場合は、URLを控えて先生へ確認します。",
+      "translation": "تحقق من وجهة التسليم والموعد النهائي الذي يعلن عنه المعلم أثناء الحصة، وسلّم رابط الاستيراد الصادر من دفتر الأشياء المفضلة الخاص بك. وإذا لم تكن هناك إرشادات بعد، فاحتفظ بالرابط وتحقق مع المعلم."
+    },
+    {
+      "source": "通常版MonacaのFreeプランではZIPを学生の提出物にしません。先生は公開URLから取り込み、初期データと操作を確認します。公開中の自分のプロジェクトは提出後に削除しません。",
+      "translation": "في خطة Free للنسخة القياسية من Monaca، لا يتم جعل ملفات ZIP مخرجات لتسليم الطلاب. يستورد المعلم المشروع من رابط الاستيراد ويتحقق من البيانات الأولية والعمليات. ولا تحذف مشروعك المنشور بعد التسليم."
+    },
+    {
+      "source": "Flutter準備のタブへ戻り、取得が終わったか、SDKの版、<code>flutter doctor</code>で止まっている項目を確認します。終わっていない項目はその場で先生へ伝え、コマ8へ引き継ぎます。授業外で終わらせることを条件にはしません。",
+      "translation": "عد إلى علامة تبويب التحضير لـ Flutter، وتحقق مما إذا كان التنزيل قد انتهى، وإصدار SDK، والعناصر المتوقفة في <code>flutter doctor</code>. وأبلغ المعلم في مكانك بالعناصر غير المنتهية لتمريرها إلى الحصة 8. ولا نشترط إنهاء ذلك خارج وقت الحصة."
+    },
+    {
+      "source": "ソースを共有する提出と、端末に保存したデータを見せることを区別します。Android／iOSの実行環境を確認するときと同様に、準備済みの項目とまだ使えない項目を具体的に記録します。",
+      "translation": "ميز بين التسليم الذي يشارك الشيفرة المصدرية وإظهار البيانات المحفوظة على الجهاز. ومثلما تفعل عند التحقق من بيئة تشغيل Android / iOS، سجل بدقة العناصر الجاهزة والعناصر التي لا يمكن استخدامها بعد."
+    },
+    {
+      "source": "指定先へ自分の公開URLを提出し、Flutter準備の状態も先生へ伝えた。",
+      "translation": "تم تسليم رابط الاستيراد الخاص بي إلى الوجهة المحددة، وإبلاغ المعلم بحالة التحضير لـ Flutter أيضاً."
+    },
+    {
+      "source": "STEP 14 · コマ7",
+      "translation": "STEP 14 · الحصة 7"
+    },
+    {
+      "source": "アレンジできる場所を確かめる",
+      "translation": "التحقق من المواضع القابلة للتخصيص"
+    },
+    {
+      "source": "最後に提出したソースを見ながら、次の3点を確かめます。",
+      "translation": "أخيراً، وأثناء النظر إلى الشيفرة المصدرية المسلمة، تحقق من النقاط الثلاث التالية."
+    },
+    {
+      "source": "どのファイルの、どの文字・色・初期データを変更したか。",
+      "translation": "أي نصوص أو ألوان أو بيانات أولية قمت بتعديلها، وفي أي ملف."
+    },
+    {
+      "source": "その変更が一覧・入力・詳細のどこに現れるか。",
+      "translation": "أين تظهر تلك التعديلات في القائمة أو شاشة الإدخال أو التفاصيل."
+    },
+    {
+      "source": "入力した保存データがない相手にも、アレンジが伝わるか。",
+      "translation": "هل ينتقل التخصيص ويكون واضحاً للطرف الآخر الذي ليس لديه بيانات محفوظة مدخلة."
+    },
+    {
+      "source": "余裕があれば、既に扱った範囲で記入例を分かりやすくしたり、余白を調整したりします。いまある画面で、自分の「好き」が伝わる状態を確かめましょう。変更したら保存し、一覧・追加・詳細・再読み込みを確認してから公開内容を確かめます。",
+      "translation": "إذا كان لديك وقت فائض، يمكنك جعل أمثلة التعبئة أوضح أو تعديل الهوامش ضمن النطاق الذي تمت دراسته مسبقاً. ودعنا نتأكد من أن الشاشة الحالية تنقل ما تفضله بوضوح. وإذا قمت بالتغيير، فاحفظ وتحقق من القائمة والإضافة والتفاصيل وإعادة التحميل قبل التأكد من المحتوى المنشور."
+    },
+    {
+      "source": "全コードは見本との比較用です。自分の変更を消して見本に戻す必要はありません。動かなくなった部分や、変更した場所と結果の関係を確かめるために使います。",
+      "translation": "الشيفرة الكاملة مخصصة للمقارنة مع النموذج فقط. ولا داعي لمسح تعديلاتك الخاصة والعودة إلى النموذج. بل تُستخدم للتأكد من الأجزاء التي توقفت عن العمل، أو لمعرفة العلاقة بين موضع التعديل والنتيجة."
+    },
+    {
+      "source": "HTML・CSS・JavaScriptの役割分担はWeb基礎と同じで、変更した場所はファイルの種類から見つけられます。保存があるアプリでは、ソースの初期値と保存値の両方を見ます。<code>SharedPreferences</code>／<code>UserDefaults</code>を使うアプリで、コードに書いた初期値と端末に残る保存値が別にあるのと同じです。",
+      "translation": "تقسيم الأدوار بين HTML وCSS وJavaScript يماثل أساسيات الويب، ويمكنك العثور على موضع التعديل من خلال نوع الملف. وفي التطبيقات التي تتضمن الحفظ، ننظر إلى كل من القيم الأولية في الشيفرة المصدرية والقيم المحفوظة. وهذا يشبه التطبيقات التي تستخدم <code>SharedPreferences</code> / <code>UserDefaults</code>، حيث توجد قيم أولية مكتوبة في الشيفرة بشكل منفصل عن القيم المحفوظة المتبقية على الجهاز."
+    },
+    {
+      "source": "自分の変更箇所が画面に現れ、初期状態からも伝わる作品にできた。",
+      "translation": "ظهرت مواضع تعديلي على الشاشة، وتمكنت من جعل العمل ينقل فكرتي بوضوح حتى من الحالة الأولية."
+    },
+    {
+      "source": "見えること",
+      "translation": "ما يظهر على الشاشة"
+    },
+    {
+      "source": "確認すること",
+      "translation": "ما يجب التحقق منه"
+    },
+    {
+      "source": "入力画面が開かない",
+      "translation": "شاشة الإدخال لا تفتح"
+    },
+    {
+      "source": "3ファイルが同じSTEPか、保存したかを確認。読込失敗の表示が出ていればSTEP 08へ。",
+      "translation": "تحقق مما إذا كانت الملفات الثلاثة في نفس الـ STEP وما إذا كانت محفوظة. وإذا ظهرت رسالة فشل القراءة، فانتقل إلى STEP 08."
+    },
+    {
+      "source": "追加した文字が消えた",
+      "translation": "النصوص المضافة اختفت"
+    },
+    {
+      "source": "コマ5では未保存が正常。コマ6以降は保存成功の文、同じブラウザ・同じプレビューかを確認。",
+      "translation": "في الحصة 5، عدم الحفظ هو السلوك الطبيعي. وبدءاً من الحصة 6 فصاعداً، تحقق من نص نجاح الحفظ، وما إذا كنت تستخدم المتصفح نفسه والمعاينة نفسها."
+    },
+    {
+      "source": "初期データを書き換えても古い内容が出る",
+      "translation": "ظهور المحتوى القديم حتى بعد إعادة كتابة البيانات الأولية"
+    },
+    {
+      "source": "保存データが優先される。必要な内容を控えたうえで、アプリ内の「初期の内容に戻す」を使う。",
+      "translation": "تُعطى الأولوية للبيانات المحفوظة. احتفظ بملاحظة للمحتوى الضروري ثم استخدم «初期の内容に戻す» (الاستعادة إلى المحتوى الأولي) داخل التطبيق."
+    },
+    {
+      "source": "保存・読込失敗と出る",
+      "translation": "ظهور رسالة تفيد بفشل الحفظ أو القراءة"
+    },
+    {
+      "source": "その表示を先生へ見せる。読込に失敗したデータは自動で上書きしない。ブラウザ設定を無理に変更しない。",
+      "translation": "أظهر تلك الرسالة للمعلم. لا تتم الكتابة فوق البيانات التي فشلت قراءتها تلقائياً. لا تغير إعدادات المتصفح قسراً."
+    },
+    {
+      "source": "提出URLが先生の見本と同じ",
+      "translation": "رابط التسليم مطابق لنموذج المعلم"
+    },
+    {
+      "source": "自分のプロジェクトで発行したURLか確認。クラウド IDEのアドレスやプレビューURLでは提出しない。",
+      "translation": "تحقق مما إذا كان الرابط صادراً من مشروعك الخاص. ولا تسلّم باستخدام عنوان بيئة التطوير السحابية أو رابط المعاينة."
+    },
+    {
+      "source": "JEC / ハイブリッドアプリ開発技法 · M02OshiSave",
+      "translation": "JEC / تقنيات تطوير التطبيقات الهجينة · M02OshiSave"
+    }
+  ]
+}
