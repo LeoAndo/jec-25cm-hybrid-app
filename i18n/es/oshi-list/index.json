@@ -127,12 +127,12 @@
       "translation": "Solución de problemas"
     },
     {
-      "source": "完成プロジェクトを開く",
-      "translation": "Abrir el proyecto terminado"
-    },
-    {
       "source": "共通：はじめの準備",
       "translation": "Común: Preparación inicial"
+    },
+    {
+      "source": "共通：困ったとき",
+      "translation": "Común: Solución de problemas"
     },
     {
       "source": "コマ1〜4 · 各90分",
@@ -185,14 +185,6 @@
     {
       "source": "詳細へ値を渡し、戻る操作まで完成させる。",
       "translation": "Pasar valores a la pantalla de detalle y completar hasta la acción de volver."
-    },
-    {
-      "source": "先生が見本を使うと案内したら、配布フォルダの <code>~/Documents/hybrid-app-student-materials-日付/samples/M01OshiList</code> をFinderで開きます。<code>M01OshiList</code> の完成プロジェクトで、<code>www/index.html</code>・<code>www/css/style.css</code>・<code>www/js/app.js</code> を自分のコードと読み比べるために使います。自分の制作を始めるにはSTEP 00へ進みます。",
-      "translation": "Si tu docente te indica que uses el ejemplo, abre <code>~/Documents/hybrid-app-student-materials-日付/samples/M01OshiList</code> (日付 = fecha) de la carpeta de distribución en el Finder. Es el proyecto terminado de <code>M01OshiList</code> y lo usarás para comparar <code>www/index.html</code>, <code>www/css/style.css</code> y <code>www/js/app.js</code> con tu propio código. Para comenzar con tu propio trabajo, avanza al STEP 00."
-    },
-    {
-      "source": "Monaca クラウド IDEは、Macのフォルダをそのまま開けません。見本をMonacaで動かすときは、先生がZIPにして公開した<a1>M01OshiListの取り込み用URL</a1>を、通常版Monacaへログインした状態で開き、取り込みます。取り込みにもFreeプランの3枠のうち1枠を使うので、空きを確かめてからURLを1回だけ開き、自分の作品は削除しません。取り込み用URLがあっても、Freeプランの制限（プロジェクトの数や、対応するCordovaの版）で、取り込めない、または取り込んだ見本を開けないことがあります。そのときは無理に取り込まず、先生に知らせてください。見本のコードは配布フォルダの <code>samples</code> で読めるので、取り込めなくても授業は進められます。",
-      "translation": "Monaca クラウド IDE no puede abrir directamente una carpeta de tu Mac. Para ejecutar el ejemplo en Monaca, abre la <a1>URL de importación de M01OshiList</a1> que tu docente publicó en formato ZIP habiendo iniciado sesión en la versión estándar de Monaca, e impórtala. Como la importación también consume 1 de los 3 espacios del plan Free, verifica que tengas espacio disponible, abre la URL una sola vez y no elimines tus propios proyectos. Incluso si dispones de la URL de importación, las limitaciones del plan Free (la cantidad de proyectos o la versión compatible de Cordova) podrían impedirte importarlo o abrir el ejemplo importado. En ese caso, no intentes forzar la importación y avísale a tu docente. Como puedes leer el código del ejemplo en la carpeta <code>samples</code> de la distribución, podrás continuar con la clase aunque no puedas importarlo."
     },
     {
       "source": "STEP 00 · コマ1",
@@ -1169,6 +1161,10 @@
     {
       "source": "<code>ons.platform.select</code> を <code>app.js</code> の先頭で実行しているか。画面内の戻るではなく、プレビューの <code>Reload</code> を押したか。端末選択で比べるときは、コードの指定をコメントに戻したか。",
       "translation": "¿Se ejecuta <code>ons.platform.select</code> al inicio de <code>app.js</code>? ¿Presionaste <code>Reload</code> en la vista previa y no el botón de volver dentro de la pantalla? Al comparar mediante la selección de dispositivos, ¿convertiste nuevamente la especificación en código a comentario?"
+    },
+    {
+      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」を参照してください。",
+      "translation": "Si no logras resolver el error, consulta «Comprobar el proyecto terminado (ejemplo)» en <a1>Material común: Solución de problemas</a1>."
     },
     {
       "source": "JEC / ハイブリッドアプリ開発技法 · M01OshiList",

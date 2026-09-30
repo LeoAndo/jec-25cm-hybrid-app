@@ -127,12 +127,12 @@
       "translation": "Solución de problemas"
     },
     {
-      "source": "完成プロジェクトを開く",
-      "translation": "Abrir el proyecto terminado"
-    },
-    {
       "source": "共通：はじめの準備",
       "translation": "Común: Preparación inicial"
+    },
+    {
+      "source": "共通：困ったとき",
+      "translation": "Común: Solución de problemas"
     },
     {
       "source": "コマ12〜15 · 各90分",
@@ -1115,12 +1115,8 @@
       "translation": "¿Usaste la versión normal <code>release</code> de <code>flutter build apk</code> y no <code>debug</code>? Verifica el tamaño de <code>app-release.apk</code>."
     },
     {
-      "source": "配布フォルダの<code>~/Documents/hybrid-app-student-materials-日付/samples/F02StampRelease</code>をFinderで開き、そのフォルダをVisual Studio Codeの<code>File &gt; Open Folder…</code>で開きます。<code>pubspec.yaml</code>が入っている階層を選びます。展開は済んでいるので、ZIPのダウンロードは要りません。自分の制作フォルダへ上書きしません。",
-      "translation": "Abre en Finder <code>~/Documents/hybrid-app-student-materials-日付/samples/F02StampRelease</code> (日付 = fecha) dentro de la carpeta distribuida, y abre esa carpeta en Visual Studio Code mediante <code>File &gt; Open Folder…</code>. Elige el nivel donde se encuentra <code>pubspec.yaml</code>. Como ya está descomprimido, no es necesario descargar el archivo ZIP. No sobrescribas tu propia carpeta de trabajo."
-    },
-    {
-      "source": "<code>Terminal &gt; New Terminal</code>で<code>flutter pub get</code>と<code>flutter analyze</code>を実行します。<code>Flutter: Launch Emulator</code>で既存端末を起動し、<code>flutter devices</code>でIDを確認して<code>flutter run -d 端末ID</code>で実行します。APKの作成・実APKの確認は本文のSTEP 11〜12にあります。",
-      "translation": "Ejecuta <code>flutter pub get</code> y <code>flutter analyze</code> desde <code>Terminal &gt; New Terminal</code>. Inicia el dispositivo existente con <code>Flutter: Launch Emulator</code>, confirma el ID con <code>flutter devices</code> y ejecútalo con <code>flutter run -d 端末ID</code> (端末ID = ID del dispositivo). La creación del APK y la comprobación del APK real se encuentran en los STEP 11–12 del texto principal."
+      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」を参照してください。",
+      "translation": "Si no logras resolver el error, consulta «Comprobar el proyecto terminado (ejemplo)» en <a1>Material común: Solución de problemas</a1>."
     },
     {
       "source": "JEC / ハイブリッドアプリ開発技法 · F02StampRelease",

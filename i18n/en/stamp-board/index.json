@@ -127,12 +127,12 @@
       "translation": "Troubleshooting"
     },
     {
-      "source": "完成プロジェクトを開く",
-      "translation": "Open the completed project"
-    },
-    {
       "source": "共通：はじめの準備",
       "translation": "Shared: Getting ready for class"
+    },
+    {
+      "source": "共通：困ったとき",
+      "translation": "Shared: Troubleshooting"
     },
     {
       "source": "コマ8〜11 · 各90分",
@@ -931,12 +931,8 @@
       "translation": "You lowered <code>stampGoal</code> while a count was above the goal, then hot reloaded. Hot restart to go back to 0."
     },
     {
-      "source": "配布フォルダの<code>~/Documents/hybrid-app-student-materials-日付/samples/F01StampBoard</code>をFinderで開き、そのフォルダをVisual Studio Codeの<code>File &gt; Open Folder…</code>で開きます。<code>pubspec.yaml</code>が入っている階層を選びます。展開は済んでいるので、ZIPのダウンロードは要りません。自分の制作フォルダと混ぜず、見比べるために使います。",
-      "translation": "In Finder, open <code>~/Documents/hybrid-app-student-materials-日付/samples/F01StampBoard</code> (日付 = date) in the distribution folder, then open that folder with <code>File &gt; Open Folder…</code> in Visual Studio Code. Choose the level that contains <code>pubspec.yaml</code>. The files are already extracted, so you do not need to download a ZIP. Keep it separate from your own work folder, and use it for comparison."
-    },
-    {
-      "source": "<code>Terminal &gt; New Terminal</code>で<code>flutter pub get</code>、<code>flutter analyze</code>を実行します。<code>Flutter: Launch Emulator</code>から既存iOSシミュレータを選び、<code>flutter devices</code>でIDを見て、<code>flutter run -d 端末ID</code>で実行します。端末IDは表示された値に置き換えます。",
-      "translation": "Run <code>flutter pub get</code> and <code>flutter analyze</code> from <code>Terminal &gt; New Terminal</code>. Choose an existing iOS simulator from <code>Flutter: Launch Emulator</code>, find the ID with <code>flutter devices</code>, and run <code>flutter run -d 端末ID</code> (端末ID = device ID). Replace 端末ID with the value that was shown."
+      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」を参照してください。",
+      "translation": "If you cannot resolve an error, refer to \"Checking the completed project (sample)\" in <a1>Shared Guide: Troubleshooting</a1>."
     },
     {
       "source": "JEC / ハイブリッドアプリ開発技法 · F01StampBoard",

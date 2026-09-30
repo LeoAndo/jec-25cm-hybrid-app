@@ -127,12 +127,12 @@
       "translation": "عند مواجهة مشكلة"
     },
     {
-      "source": "完成プロジェクトを開く",
-      "translation": "فتح المشروع المكتمل"
-    },
-    {
       "source": "共通：はじめの準備",
       "translation": "المشترك: الإعداد الأولي"
+    },
+    {
+      "source": "共通：困ったとき",
+      "translation": "مشترك: عند مواجهة مشكلة"
     },
     {
       "source": "コマ12〜15 · 各90分",
@@ -1115,12 +1115,8 @@
       "translation": "هل استخدمت <code>release</code> العادي لـ <code>flutter build apk</code> بدلاً من <code>debug</code>؟ تحقق من حجم <code>app-release.apk</code>."
     },
     {
-      "source": "配布フォルダの<code>~/Documents/hybrid-app-student-materials-日付/samples/F02StampRelease</code>をFinderで開き、そのフォルダをVisual Studio Codeの<code>File &gt; Open Folder…</code>で開きます。<code>pubspec.yaml</code>が入っている階層を選びます。展開は済んでいるので、ZIPのダウンロードは要りません。自分の制作フォルダへ上書きしません。",
-      "translation": "افتح مجلد <code>~/Documents/hybrid-app-student-materials-日付/samples/F02StampRelease</code> (日付 = التاريخ) من مجلد التوزيع في Finder، ثم افتح ذلك المجلد من <code>File &gt; Open Folder…</code> في Visual Studio Code. اختر المستوى الذي يحتوي على <code>pubspec.yaml</code>. وبما أن فك الضغط قد تم بالفعل، فلا حاجة لتنزيل ملف ZIP. ولا تستبدل مجلد عملك الخاص."
-    },
-    {
-      "source": "<code>Terminal &gt; New Terminal</code>で<code>flutter pub get</code>と<code>flutter analyze</code>を実行します。<code>Flutter: Launch Emulator</code>で既存端末を起動し、<code>flutter devices</code>でIDを確認して<code>flutter run -d 端末ID</code>で実行します。APKの作成・実APKの確認は本文のSTEP 11〜12にあります。",
-      "translation": "نفّذ <code>flutter pub get</code> و<code>flutter analyze</code> من <code>Terminal &gt; New Terminal</code>. وشغّل الجهاز الموجود لديك عبر <code>Flutter: Launch Emulator</code>، ثم تحقق من المعرّف عبر <code>flutter devices</code> وشغّل التطبيق بـ <code>flutter run -d 端末ID</code> (معرّف الجهاز = 端末ID). وتجد خطوات إنشاء ملف APK والتحقق من ملف APK الفعلي في STEP 11〜12 من النص الأساسي."
+      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」を参照してください。",
+      "translation": "إذا لم تُحل المشكلة، يُرجى الرجوع إلى \"فحص المشروع المكتمل (النموذج)\" في <a1>المواد المشتركة: عند مواجهة مشكلة</a1>."
     },
     {
       "source": "JEC / ハイブリッドアプリ開発技法 · F02StampRelease",

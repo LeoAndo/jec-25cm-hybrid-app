@@ -1,0 +1,142 @@
+{
+  "source": "docs/common/help.html",
+  "language": "zh-Hans",
+  "entries": [
+    {
+      "source": "困ったとき | ハイブリッドアプリ開発技法",
+      "translation": "遇到问题时 | 混合应用开发技术"
+    },
+    {
+      "source": "本文へ移動",
+      "translation": "跳转到正文"
+    },
+    {
+      "source": "JEC / ハイブリッドアプリ開発技法",
+      "translation": "JEC / 混合应用开发技术"
+    },
+    {
+      "source": "もとの教科書へ戻る",
+      "translation": "返回原来的课本"
+    },
+    {
+      "source": "共通資料 · 授業サポート",
+      "translation": "通用资料 · 课堂支持"
+    },
+    {
+      "source": "困ったとき",
+      "translation": "遇到问题时"
+    },
+    {
+      "source": "コードが赤くなった、画面が出ない、動作しない、原因が分からない。<br>エラーに向き合い、自分で解決するための調べ方をまとめています。",
+      "translation": "代码变红了、界面不显示、无法运行、不知道原因是什么。<br>这里总结了面对错误并自行查找解决方法的方法。"
+    },
+    {
+      "source": "このページの内容",
+      "translation": "本页内容"
+    },
+    {
+      "source": "1. エラーが起きたときの調べ方",
+      "translation": "1. 出现错误时的排查方法"
+    },
+    {
+      "source": "2. 開発環境別の確認ポイント",
+      "translation": "2. 各开发环境的确认要点"
+    },
+    {
+      "source": "3. どうしても解決しないときは（完成プロジェクトの確認）",
+      "translation": "3. 实在无法解决时（查看完成项目）"
+    },
+    {
+      "source": "プログラミングでエラーが出るのは自然なことです。エラーメッセージには「どのファイルの何行目で、何が問題か」が書かれています。焦らずに上から順に確認しましょう。",
+      "translation": "编程中出现错误是很正常的。错误信息中一定会写明“哪个文件的哪一行有什么问题”。不要慌张，从上到下依次确认。"
+    },
+    {
+      "source": "<strong>各単元の「困ったとき」表を確認する</strong><br>教科書の末尾にある「困ったとき」には、その単元でよくある状態と確認場所がまとまっています。",
+      "translation": "<strong>查看各单元的“遇到问题时”表格</strong><br>教科书末尾的“遇到问题时”总结了该单元的常见情况和确认位置。"
+    },
+    {
+      "source": "<strong>最初の赤い行を見る</strong><br>エラーが複数出ているときは、一番上の「最初の赤い行」を直します。最初の1つを直すと、あとのエラーがまとめて消えることがよくあります。",
+      "translation": "<strong>查看第一行红字</strong><br>出现多行错误时，先修改最上面的“第一行红字”。修改了第一个错误后，后面的错误往往会一起消失。"
+    },
+    {
+      "source": "<strong>直前のSTEPと見比べる</strong><br>手順を1つ飛ばしていないか、大文字・小文字やスペル（綴り）、全角スペースが混ざっていないかを確認します。",
+      "translation": "<strong>与前一个STEP对比</strong><br>确认是否跳过了一步，大小写、拼写或是否混入了全角空格。"
+    },
+    {
+      "source": "<strong>先生に質問するときは</strong><br>「STEP番号・編集したファイル・最初の赤い行・実行した操作」を伝えると、原因が早く分かります。",
+      "translation": "<strong>向老师提问时</strong><br>告知“STEP编号、修改的文件、第一行红字、执行的操作”，能更快找出原因。"
+    },
+    {
+      "source": "開発環境",
+      "translation": "开发环境"
+    },
+    {
+      "source": "確認するポイント",
+      "translation": "确认要点"
+    },
+    {
+      "source": "参考資料",
+      "translation": "参考资料"
+    },
+    {
+      "source": "Monaca クラウド IDE",
+      "translation": "Monaca クラウド IDE（云端 IDE）"
+    },
+    {
+      "source": "プレビュー画面下の「デバッグログ」やブラウザの開発者ツール（F12/右クリック→検証）のConsoleタブを確認します。JavaScriptの構文エラーやファイル読み込みエラーが赤く表示されます。",
+      "translation": "确认预览界面下方的“调试日志”或浏览器开发者工具（F12 / 右键→检查）的 Console 标签页。JavaScript 语法错误和文件加载错误将以红色显示。"
+    },
+    {
+      "source": "共通：準備（Monaca）",
+      "translation": "通用：准备（Monaca）"
+    },
+    {
+      "source": "ターミナル（Terminal）のエラー出力や、エディタ下部の「PROBLEMS（問題）」タブを確認します。<code>flutter pub get</code> の実行漏れやパッケージの指定誤りを確認します。",
+      "translation": "确认终端（Terminal）的错误输出或编辑器下方的“PROBLEMS（问题）”标签页。确认是否遗漏执行 <code>flutter pub get</code> 或写错了包名。"
+    },
+    {
+      "source": "共通：準備（Flutter）",
+      "translation": "通用：准备（Flutter）"
+    },
+    {
+      "source": "どうしても自分のコードの間違いが見つからないときや、アプリ本来の動きを確認したいときは、先生が用意した<strong>完成プロジェクト（見本）</strong>を開いて自分のコードと見比べることができます。",
+      "translation": "如果实在找不到自己代码中的错误，或者想确认应用本来的运行效果，可以打开老师准备的<strong>完成项目（示例）</strong>，与自己的代码进行比对。"
+    },
+    {
+      "source": "完成プロジェクトは「答え合わせ用」です",
+      "translation": "完成项目用于“核对答案”"
+    },
+    {
+      "source": "完成プロジェクトからコードをそのままコピーしたり、完成プロジェクトを改造して提出しても、自分の課題の提出にはなりません。見本で違いを確認したら、必ず<strong>自分で作ったプロジェクトに戻り、自分の手で修正</strong>してください。",
+      "translation": "直接从完成项目中复制代码，或者修改完成项目后提交，都不能算作提交了自己的作业。在示例中确认差异后，请务必<strong>返回自己创建的项目，亲自动手修改</strong>。"
+    },
+    {
+      "source": "見本の場所と開き方",
+      "translation": "示例的位置与打开方法"
+    },
+    {
+      "source": "Finderで <code>書類</code>（<code>~/Documents</code>）にある配布フォルダ（<code>hybrid-app-student-materials-日付</code>）を開きます。",
+      "translation": "在 Finder 中打开位于 <code>書類</code>（<code>~/Documents</code>）中的分发文件夹（<code>hybrid-app-student-materials-日付</code>）。"
+    },
+    {
+      "source": "その中にある <code>samples</code> フォルダから、該当する単元のフォルダ（例：<code>M01OshiList</code>、<code>F01StampBoard</code> など）を確認します。",
+      "translation": "在其中的 <code>samples</code> 文件夹中，找到对应单元的文件夹（例如：<code>M01OshiList</code>、<code>F01StampBoard</code> 等）。"
+    },
+    {
+      "source": "<strong>Monaca単元（M01・M02）</strong>：<code>samples</code> の中にあるHTML/CSS/JSファイルをテキストエディタで開き、自分のコードと見比べます。Monaca クラウド IDE上で見本を動かして確かめたいときは、先生がZIPにして公開した取り込み用URL（<a1>M01OshiList</a1> / <a2>M02OshiSave</a2>）を通常版Monacaへログインした状態で開いて取り込みます。取り込むとFreeプランの枠を1枠使います。Freeプランの制限で取り込めない場合でも、<code>samples</code> のコードを直接読めば進められます。",
+      "translation": "<strong>Monaca 单元（M01、M02）</strong>：使用文本编辑器打开 <code>samples</code> 中的 HTML/CSS/JS 文件，与自己的代码进行比对。如果想在 Monaca クラウド IDE 上运行并确认示例，可在登录通常版 Monaca 的状态下打开老师打包公开的导入链接（<a1>M01OshiList</a1> / <a2>M02OshiSave</a2>）进行导入。导入会占用 Free 方案的 1 个名额。即使因 Free 方案限制无法导入，直接阅读 <code>samples</code> 的代码也可以继续学习。"
+    },
+    {
+      "source": "<strong>Flutter単元（F01・F02）</strong>：Visual Studio Code の <code>File → Open Folder…</code> で該当フォルダを選んで開きます。見本でコードや動作を確認したら、自分の制作フォルダ（<code>~/Documents/HybridApp</code>）を開き直して作業を続けます。",
+      "translation": "<strong>Flutter 单元（F01、F02）</strong>：在 Visual Studio Code 中通过 <code>File → Open Folder…</code> 选择对应文件夹并打开。在示例中确认代码或运行效果后，重新打开自己的制作文件夹（<code>~/Documents/HybridApp</code>）继续完成作业。"
+    },
+    {
+      "source": "取り違えに注意",
+      "translation": "注意不要混淆"
+    },
+    {
+      "source": "見本と自分のアプリは同じプロジェクト名です。ウィンドウ上部やタブに表示されるフォルダパスを確認し、見本のほうを編集してしまわないよう注意しましょう。",
+      "translation": "示例和自己的应用具有相同的项目名称。请注意查看窗口顶部或标签页中显示的文件夹路径，以免误编辑了示例。"
+    }
+  ]
+}

@@ -127,12 +127,12 @@
       "translation": "Асуудал гарвал"
     },
     {
-      "source": "完成プロジェクトを開く",
-      "translation": "Бэлэн төслийг нээх"
-    },
-    {
       "source": "共通：はじめの準備",
       "translation": "Ерөнхий: Эхлэх бэлтгэл"
+    },
+    {
+      "source": "共通：困ったとき",
+      "translation": "Нийтлэг: Асуудал гарвал"
     },
     {
       "source": "コマ8〜11 · 各90分",
@@ -931,12 +931,8 @@
       "translation": "Тоо нь зорилтоос хэтэрсэн хэвээр байхад <code>stampGoal</code>-ийг багасгаж hot reload хийсэн байна. Hot restart хийж 0 рүү буцаана уу."
     },
     {
-      "source": "配布フォルダの<code>~/Documents/hybrid-app-student-materials-日付/samples/F01StampBoard</code>をFinderで開き、そのフォルダをVisual Studio Codeの<code>File &gt; Open Folder…</code>で開きます。<code>pubspec.yaml</code>が入っている階層を選びます。展開は済んでいるので、ZIPのダウンロードは要りません。自分の制作フォルダと混ぜず、見比べるために使います。",
-      "translation": "Түгээх хавтас дахь <code>~/Documents/hybrid-app-student-materials-日付/samples/F01StampBoard</code> (日付 = огноо) хавтсыг Finder-ээр нээж, уг хавтсыг Visual Studio Code-ийн <code>File &gt; Open Folder…</code> цэсээр нээнэ үү. <code>pubspec.yaml</code> агуулсан түвшнийг сонгоно уу. Архивыг задлаад бэлтгэсэн тул ZIP файлыг татаж авах шаардлагагүй. Өөрийн бүтээлийн хавтастай холихгүйгээр зөвхөн харьцуулж харахад ашиглана уу."
-    },
-    {
-      "source": "<code>Terminal &gt; New Terminal</code>で<code>flutter pub get</code>、<code>flutter analyze</code>を実行します。<code>Flutter: Launch Emulator</code>から既存iOSシミュレータを選び、<code>flutter devices</code>でIDを見て、<code>flutter run -d 端末ID</code>で実行します。端末IDは表示された値に置き換えます。",
-      "translation": "<code>Terminal &gt; New Terminal</code> цэсээр <code>flutter pub get</code>, <code>flutter analyze</code> тушаалыг ажиллуулна уу. <code>Flutter: Launch Emulator</code> цэсээс байгаа iOS симуляторыг сонгож, <code>flutter devices</code> дээрх ID-г хараад, <code>flutter run -d 端末ID</code> тушаалаар ажиллуулна уу. 端末ID (төхөөрөмжийн ID)-ийг дэлгэцэнд гарсан утгаар орлуулна уу."
+      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」を参照してください。",
+      "translation": "Алдаа шийдэгдэхгүй байвал <a1>Нийтлэг заавар: Асуудал гарвал</a1> хэсгийн «Бэлэн төсөл (жишээ)-ийг шалгах» тайлбарыг үзнэ үү."
     },
     {
       "source": "JEC / ハイブリッドアプリ開発技法 · F01StampBoard",
