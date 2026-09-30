@@ -211,16 +211,60 @@
       "translation": "<a1>အထွေထွေလမ်းညွှန်၏ STEP 1–3</a1> တွင် သင်ခန်းစာဖိုင်များကို ရယူခြင်း၊ ပုံမှန် Monaca တွင် စာရင်းသွင်းခြင်းနှင့် log in ဝင်ခြင်း၊ project နေရာလွတ် ရှိမရှိ စစ်ဆေးခြင်းတို့ကို ပြုလုပ်ပြီးနောက် ဤစာမျက်နှာသို့ ပြန်လာပါ။ ပထမဆုံးအကြိမ် စာရင်းသွင်းခြင်းနှင့် download ပြုလုပ်ခြင်းကိုလည်း အတန်းချိန်အတွင်း၌ပင် လုပ်ဆောင်ပါမည်။"
     },
     {
-      "source": "Monacaのプロジェクト一覧から新規作成に進み、<code>最小限のテンプレート</code> を選びます。プロジェクト名を <code>M01OshiList</code> として作成し、開きます。既に自分の同名プロジェクトがあれば、その続きを開きます。",
-      "translation": "Monaca ၏ project စာရင်းမှ အသစ်ဖန်တီးခြင်းသို့ သွားပြီး <code>最小限のテンプレート</code> (Minimal template) ကို ရွေးချယ်ပါ။ project အမည်ကို <code>M01OshiList</code> အဖြစ် ဖန်တီးပြီး ဖွင့်ပါ။ အမည်တူ project မိမိထံတွင် ရှိပြီးသားဖြစ်ပါက ၎င်း၏ ဆက်လက်လုပ်ဆောင်မှုကို ဖွင့်ပါ။"
+      "source": "プロジェクト一覧から新規作成に進み、<code>最小限のテンプレート</code> を選びます。",
+      "translation": "project စာရင်းမှ အသစ်ဖန်တီးခြင်းသို့ သွားပြီး <code>最小限のテンプレート</code> (အနည်းဆုံး template) ကို ရွေးချယ်ပါ။"
     },
     {
-      "source": "ファイル一覧で <code>www/index.html</code> と <code>www/css/style.css</code> を探します。<code>components</code>、<code>res</code>、設定ファイルはそのまま使います。",
-      "translation": "ဖိုင်စာရင်းတွင် <code>www/index.html</code> နှင့် <code>www/css/style.css</code> ကို ရှာပါ။ <code>components</code>၊ <code>res</code> နှင့် configuration ဖိုင်များကို မူလအတိုင်း ထားရှိပါ။"
+      "source": "「新しいプロジェクトを作る」画面で最小限のテンプレートを選択",
+      "translation": "\"ပရောဂျက်အသစ် ဖန်တီးခြင်း\" မျက်နှာပြင်တွင် အနည်းဆုံး template ကို ရွေးချယ်ခြင်း"
     },
     {
-      "source": "下の全コードを開き、2ファイルの内容をそれぞれ置き換えて保存します。プレビューを再読み込みし、<strong>好きなものノートを作ります。</strong>を確認します。",
-      "translation": "အောက်ပါ ကုဒ်အပြည့်အစုံကို ဖွင့်ပြီး ဖိုင် ၂ ခု၏ အကြောင်းအရာများကို အသီးသီး အစားထိုး၍ သိမ်းဆည်းပါ။ preview ကို reload လုပ်ပြီး <strong>好きなものノートを作ります。</strong> (We will make a favorites notebook.) ကို စစ်ဆေးပါ။"
+      "source": "「新しいプロジェクトを作る」画面で、一番右にある <code>最小限のテンプレート</code> を選びます。",
+      "translation": "\"ပရောဂျက်အသစ် ဖန်တီးခြင်း\" မျက်နှာပြင်တွင် အစွန်ဆုံးညာဘက်ရှိ <code>最小限のテンプレート</code> (အနည်းဆုံး template) ကို ရွေးချယ်ပါ။"
+    },
+    {
+      "source": "プロジェクト名に <code>M01OshiList</code> と入力し、<code>作成</code> を選びます。",
+      "translation": "project အမည်တွင် <code>M01OshiList</code> ဟု ရိုက်ထည့်ပြီး <code>作成</code> (ဖန်တီးရန်) ကို ရွေးပါ။"
+    },
+    {
+      "source": "プロジェクト名にM01OshiListを入力し作成ボタンを押す画面",
+      "translation": "project အမည်တွင် M01OshiList ဟု ရိုက်ထည့်ပြီး Create ခလုတ်ကို နှိပ်သည့် မျက်နှာပြင်"
+    },
+    {
+      "source": "プロジェクト一覧から <code>M01OshiList</code> を選び、<code>クラウドIDEで開く</code> を押します。既に自分の同名プロジェクトがあれば、その続きを開きます。",
+      "translation": "project စာရင်းမှ <code>M01OshiList</code> ကို ရွေးချယ်ပြီး <code>クラウドIDEで開く</code> (Cloud IDE တွင် ဖွင့်ရန်) ကို နှိပ်ပါ။ မိမိ၏ အမည်တူ project ရှိပြီးဖြစ်ပါက ၎င်းကို ဆက်လက်ဖွင့်ပါ။"
+    },
+    {
+      "source": "プロジェクト一覧でM01OshiListのクラウドIDEで開くを選ぶ画面",
+      "translation": "project စာရင်းတွင် M01OshiList အတွက် Cloud IDE ဖြင့် ဖွင့်ရန်ကို ရွေးချယ်သည့် မျက်နှာပြင်"
+    },
+    {
+      "source": "プロジェクト一覧から <code>M01OshiList</code> を選び、<code>クラウドIDEで開く</code> を押します。",
+      "translation": "project စာရင်းမှ <code>M01OshiList</code> ကို ရွေးချယ်ပြီး <code>クラウドIDEで開く</code> (Cloud IDE တွင် ဖွင့်ရန်) ကို နှိပ်ပါ။"
+    },
+    {
+      "source": "クラウドIDEが開いたら、左側のファイル一覧で <code>www/index.html</code> と <code>www/css/style.css</code> を探します。<code>components</code>、<code>res</code>、設定ファイルはそのまま使います。",
+      "translation": "Cloud IDE ပွင့်လာပါက ဘယ်ဘက်ရှိ file စာရင်းတွင် <code>www/index.html</code> နှင့် <code>www/css/style.css</code> ကို ရှာပါ။ <code>components</code>၊ <code>res</code> နှင့် configuration file များကို မူလအတိုင်း အသုံးပြုပါမည်။"
+    },
+    {
+      "source": "Monaca クラウド IDEの初期画面。左側にファイル一覧、右側にindex.htmlのエディタが表示されている",
+      "translation": "Monaca クラウド IDE ၏ ကနဦးမျက်နှာပြင်။ ဘယ်ဘက်တွင် file စာရင်းနှင့် ညာဘက်တွင် index.html ၏ editor ကို ပြသထားသည်"
+    },
+    {
+      "source": "クラウドIDEが開きます。左側のファイル一覧で <code>www/index.html</code> や <code>www/css/style.css</code> を確認します。",
+      "translation": "Cloud IDE ပွင့်လာပါမည်။ ဘယ်ဘက်ရှိ file စာရင်းတွင် <code>www/index.html</code> နှင့် <code>www/css/style.css</code> ကို စစ်ဆေးပါ။"
+    },
+    {
+      "source": "下の全コードを開き、2ファイルの内容をそれぞれ置き換えて保存します。プレビューを再読み込みし、<strong>好きなものノートを作ります。</strong>を確認します。プレビューが表示されないときは、上部メニューの <code>表示</code> → <code>プレビュータブを表示</code> や <code>レイアウトをリセット</code> を選びます。",
+      "translation": "အောက်ဖော်ပြပါ code အပြည့်အစုံကို ဖွင့်ပြီး file ၂ ခု၏ အကြောင်းအရာများကို အသီးသီး အစားထိုး၍ save လုပ်ပါ။ preview ကို reload လုပ်ပြီး <strong>好きなものノートを作ります。</strong> (နှစ်သက်ရာ ပစ္စည်းများ မှတ်စုစာအုပ် ပြုလုပ်ပါမည်။) ပေါ်လာသည်ကို စစ်ဆေးပါ။ preview မပေါ်ပါက အပေါ်ဘက် menu ရှိ <code>表示</code> (View) → <code>プレビュータブを表示</code> (Preview tab ကို ပြသရန်) သို့မဟုတ် <code>レイアウトをリセット</code> (Layout ကို reset လုပ်ရန်) ကို ရွေးချယ်ပါ။"
+    },
+    {
+      "source": "クラウドIDEのメニューバー「表示」から「プレビュータブを表示」「レイアウトをリセット」を選ぶ画面",
+      "translation": "Cloud IDE ၏ menu bar \"表示\" (View) မှ \"プレビュータブを表示\" (Preview tab ကို ပြသရန်) နှင့် \"レイアウトをリセット\" (Layout ကို reset လုပ်ရန်) ကို ရွေးချယ်သည့် မျက်နှာပြင်"
+    },
+    {
+      "source": "プレビューが表示されないときは、上部メニューの <code>表示</code> → <code>プレビュータブを表示</code> や <code>レイアウトをリセット</code> を選びます。",
+      "translation": "preview မပေါ်ပါက အပေါ်ဘက် menu ရှိ <code>表示</code> (View) → <code>プレビュータブを表示</code> (Preview tab ကို ပြသရန်) သို့မဟုတ် <code>レイアウトをリセット</code> (Layout ကို reset လုပ်ရန်) ကို ရွေးချယ်ပါ။"
     },
     {
       "source": "以後、本文のパスはプロジェクト内の位置です。「全コード」は指定ファイルの中身をすべて置き換えるためのものです。先に比較と説明を読み、貼り付けた後は確認欄の操作まで行いましょう。",

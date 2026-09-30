@@ -211,16 +211,60 @@
       "translation": "按照<a1>通用资料的 STEP 1～3</a1>，领取教材、注册并登录标准版 Monaca、确认空余名额，然后回到本页。首次注册和下载也在课堂上进行。"
     },
     {
-      "source": "Monacaのプロジェクト一覧から新規作成に進み、<code>最小限のテンプレート</code> を選びます。プロジェクト名を <code>M01OshiList</code> として作成し、開きます。既に自分の同名プロジェクトがあれば、その続きを開きます。",
-      "translation": "从 Monaca 的项目列表进入新建项目，选择 <code>最小限のテンプレート</code>（最小模板）。以 <code>M01OshiList</code> 为项目名创建并打开。如果已经有自己的同名项目，就接着打开它。"
+      "source": "プロジェクト一覧から新規作成に進み、<code>最小限のテンプレート</code> を選びます。",
+      "translation": "从项目列表中点击新建，选择 <code>最小限のテンプレート</code>（最小模板）。"
     },
     {
-      "source": "ファイル一覧で <code>www/index.html</code> と <code>www/css/style.css</code> を探します。<code>components</code>、<code>res</code>、設定ファイルはそのまま使います。",
-      "translation": "在文件列表中找到 <code>www/index.html</code> 和 <code>www/css/style.css</code>。<code>components</code>、<code>res</code> 和配置文件保持原样使用。"
+      "source": "「新しいプロジェクトを作る」画面で最小限のテンプレートを選択",
+      "translation": "在“新建项目”界面中选择最小模板"
     },
     {
-      "source": "下の全コードを開き、2ファイルの内容をそれぞれ置き換えて保存します。プレビューを再読み込みし、<strong>好きなものノートを作ります。</strong>を確認します。",
-      "translation": "展开下面的完整代码，分别替换2个文件的内容并保存。重新加载预览，确认显示了 <strong>好きなものノートを作ります。</strong>（意为“我们来制作喜爱笔记”）。"
+      "source": "「新しいプロジェクトを作る」画面で、一番右にある <code>最小限のテンプレート</code> を選びます。",
+      "translation": "在“新建项目”界面中，选择最右侧的 <code>最小限のテンプレート</code>（最小模板）。"
+    },
+    {
+      "source": "プロジェクト名に <code>M01OshiList</code> と入力し、<code>作成</code> を選びます。",
+      "translation": "项目名称输入 <code>M01OshiList</code>，然后选择 <code>作成</code>（创建）。"
+    },
+    {
+      "source": "プロジェクト名にM01OshiListを入力し作成ボタンを押す画面",
+      "translation": "在项目名称中输入 M01OshiList 并点击创建按钮的画面"
+    },
+    {
+      "source": "プロジェクト一覧から <code>M01OshiList</code> を選び、<code>クラウドIDEで開く</code> を押します。既に自分の同名プロジェクトがあれば、その続きを開きます。",
+      "translation": "从项目列表中选择 <code>M01OshiList</code>，点击 <code>クラウドIDEで開く</code>（在云端IDE中打开）。如果已有自己的同名项目，则继续打开该项目。"
+    },
+    {
+      "source": "プロジェクト一覧でM01OshiListのクラウドIDEで開くを選ぶ画面",
+      "translation": "在项目列表中为 M01OshiList 选择在云端IDE中打开的画面"
+    },
+    {
+      "source": "プロジェクト一覧から <code>M01OshiList</code> を選び、<code>クラウドIDEで開く</code> を押します。",
+      "translation": "从项目列表中选择 <code>M01OshiList</code>，点击 <code>クラウドIDEで開く</code>（在云端IDE中打开）。"
+    },
+    {
+      "source": "クラウドIDEが開いたら、左側のファイル一覧で <code>www/index.html</code> と <code>www/css/style.css</code> を探します。<code>components</code>、<code>res</code>、設定ファイルはそのまま使います。",
+      "translation": "云端IDE打开后，在左侧文件列表中找到 <code>www/index.html</code> 和 <code>www/css/style.css</code>。<code>components</code>、<code>res</code> 和配置文件保持原样使用。"
+    },
+    {
+      "source": "Monaca クラウド IDEの初期画面。左側にファイル一覧、右側にindex.htmlのエディタが表示されている",
+      "translation": "Monaca クラウド IDE 的初始画面。左侧显示文件列表，右侧显示 index.html 的编辑器"
+    },
+    {
+      "source": "クラウドIDEが開きます。左側のファイル一覧で <code>www/index.html</code> や <code>www/css/style.css</code> を確認します。",
+      "translation": "云端IDE打开。在左侧文件列表中确认 <code>www/index.html</code> 和 <code>www/css/style.css</code>。"
+    },
+    {
+      "source": "下の全コードを開き、2ファイルの内容をそれぞれ置き換えて保存します。プレビューを再読み込みし、<strong>好きなものノートを作ります。</strong>を確認します。プレビューが表示されないときは、上部メニューの <code>表示</code> → <code>プレビュータブを表示</code> や <code>レイアウトをリセット</code> を選びます。",
+      "translation": "展开下方的完整代码，分别替换这两个文件的内容并保存。重新加载预览，确认显示 <strong>好きなものノートを作ります。</strong>（制作喜欢的物品笔记本。）。如果未显示预览，请从顶部菜单选择 <code>表示</code>（显示）→ <code>プレビュータブを表示</code>（显示预览标签页）或 <code>レイアウトをリセット</code>（重置布局）。"
+    },
+    {
+      "source": "クラウドIDEのメニューバー「表示」から「プレビュータブを表示」「レイアウトをリセット」を選ぶ画面",
+      "translation": "从云端IDE菜单栏的“表示”（显示）中选择“プレビュータブを表示”（显示预览标签页）或“レイアウトをリセット”（重置布局）的画面"
+    },
+    {
+      "source": "プレビューが表示されないときは、上部メニューの <code>表示</code> → <code>プレビュータブを表示</code> や <code>レイアウトをリセット</code> を選びます。",
+      "translation": "如果未显示预览，请从顶部菜单选择 <code>表示</code>（显示）→ <code>プレビュータブを表示</code>（显示预览标签页）或 <code>レイアウトをリセット</code>（重置布局）。"
     },
     {
       "source": "以後、本文のパスはプロジェクト内の位置です。「全コード」は指定ファイルの中身をすべて置き換えるためのものです。先に比較と説明を読み、貼り付けた後は確認欄の操作まで行いましょう。",
