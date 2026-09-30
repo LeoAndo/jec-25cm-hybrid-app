@@ -385,11 +385,11 @@ def check_sources(root: Path, project: dict, errors: list[str]) -> None:
 
 
 def check_import_url(root: Path, project: dict, errors: list[str]) -> None:
-    """Monacaの取り込み用URL（import_url）が、学生用の教科書に載っているか確かめる。
+    """Monacaの取り込み用URL（import_url）が、学生用資料（教科書または共通の困ったとき）に載っているか確かめる。
 
     import_url は、先生が完成プロジェクトをMonacaで「公開」して発行したURL
     （https://monaca.mobi/ja/directimport?pid=…）。学生はこのURLから見本を取り込むので、
-    設定にだけ書いて教科書に載せ忘れると、学生は見本を開けない。
+    設定にだけ書いて資料に載せ忘れると、学生は見本を開けない。
     書いていない単元（まだ公開していない単元）では何もしない。
     """
     if "import_url" not in project:
@@ -404,11 +404,12 @@ def check_import_url(root: Path, project: dict, errors: list[str]) -> None:
             f"{project['name']}のimport_urlは文字列で書いてください: {url!r}")
         return
     textbook = root / project["docs"][0]
-    if not textbook.is_file():
-        return  # 教科書がないことは check_project が報告する。
-    content = read(textbook)
-    if url not in content and html.escape(url) not in content:
-        add(errors, root, textbook, 1, f"学生用の教科書に、取り込み用のURL（import_url）がありません: {url}")
+    help_doc = root / "docs/common/help.html"
+    textbook_content = read(textbook) if textbook.is_file() else ""
+    help_content = read(help_doc) if help_doc.is_file() else ""
+    target_docs = textbook_content + help_content
+    if url not in target_docs and html.escape(url) not in target_docs:
+        add(errors, root, textbook, 1, f"学生用の教科書または共通資料に、取り込み用のURL（import_url）がありません: {url}")
 
 
 def check_project(root: Path, project: dict, errors: list[str]) -> None:

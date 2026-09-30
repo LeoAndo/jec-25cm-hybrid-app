@@ -457,6 +457,16 @@ class TeachingMaterialsCheckTest(unittest.TestCase):
             self._update_project(root, import_url=self.IMPORT_URL)
             self.assertEqual(CHECKER.validate(root), [])
 
+    def test_import_url_in_help_doc_is_accepted(self):
+        """取り込み用のURLが共通資料（help.html）に載っていれば、何も言わない。"""
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._repository(root)
+            link = f'<p><a href="{html.escape(self.IMPORT_URL)}">見本を取り込む</a></p>'
+            self._write(root, "docs/common/help.html", f"<!doctype html><html><body>{link}</body></html>")
+            self._update_project(root, import_url=self.IMPORT_URL)
+            self.assertEqual(CHECKER.validate(root), [])
+
     def test_import_url_missing_from_textbook_is_rejected(self):
         """設定にだけ書いて教科書に載せ忘れると、学生は見本を取り込めないので検出する。"""
         with tempfile.TemporaryDirectory() as temporary:
