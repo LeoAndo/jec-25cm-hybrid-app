@@ -1,9 +1,6 @@
 // 本文はJavaScriptなしでも読めます。記録はこのブラウザ内だけに保存します。
 (() => {
   const defaults = {
-    copy: 'コピー', copy_label: '{title}のコードをコピー', copied: 'コピーしました',
-    copy_success: 'コードをコピーしました。エディタに貼り付けてください。',
-    copy_shortcut: '⌘ Cでコピー', copy_selected: 'コードを選択しました。⌘ Cでコピーしてください。',
     progress: '{count} / {total} ステップ確認済み'
   };
   let messages = defaults;
@@ -89,32 +86,6 @@
   });
   update();
 
-  document.querySelectorAll('pre').forEach(pre => {
-    const heading = pre.previousElementSibling;
-    if (!heading?.classList.contains('code-head')) return;
-    const button = document.createElement('button');
-    button.type = 'button';
-    button.textContent = message('copy');
-    button.setAttribute('aria-label', message('copy_label', { title: heading.textContent.trim() }));
-    heading.append(button);
-    button.addEventListener('click', async () => {
-      const status = document.querySelector('[data-copy-status]');
-      try {
-        await navigator.clipboard.writeText(pre.textContent);
-        button.textContent = message('copied');
-        if (status) status.textContent = message('copy_success');
-      } catch {
-        const range = document.createRange();
-        range.selectNodeContents(pre);
-        const selection = window.getSelection();
-        selection.removeAllRanges();
-        selection.addRange(range);
-        button.textContent = message('copy_shortcut');
-        if (status) status.textContent = message('copy_selected');
-      }
-      setTimeout(() => { button.textContent = message('copy'); }, 3000);
-    });
-  });
 
   const links = [...document.querySelectorAll('.sidebar a[href^="#"]')];
   if ('IntersectionObserver' in window) {
