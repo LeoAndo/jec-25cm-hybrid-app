@@ -127,12 +127,12 @@
       "translation": "အခက်အခဲရှိသည့်အခါ"
     },
     {
-      "source": "完成プロジェクトを開く",
-      "translation": "ပြီးစီးပြီးသော project ကို ဖွင့်ရန်"
-    },
-    {
       "source": "共通：はじめの準備",
       "translation": "အထွေထွေ: အတန်းမစမီ ပြင်ဆင်ရန်"
+    },
+    {
+      "source": "共通：困ったとき",
+      "translation": "အထွေထွေ: အခက်အခဲရှိသည့်အခါ"
     },
     {
       "source": "コマ12〜15 · 各90分",
@@ -1115,12 +1115,8 @@
       "translation": "<code>debug</code> မဟုတ်ဘဲ <code>flutter build apk</code> ၏ ပုံမှန် <code>release</code> ကို အသုံးပြုခဲ့ပါသလား။ <code>app-release.apk</code> ၏ ဖိုင်အရွယ်အစားကို စစ်ဆေးပါ။"
     },
     {
-      "source": "配布フォルダの<code>~/Documents/hybrid-app-student-materials-日付/samples/F02StampRelease</code>をFinderで開き、そのフォルダをVisual Studio Codeの<code>File &gt; Open Folder…</code>で開きます。<code>pubspec.yaml</code>が入っている階層を選びます。展開は済んでいるので、ZIPのダウンロードは要りません。自分の制作フォルダへ上書きしません。",
-      "translation": "ဖြန့်ဝေထားသော folder ရှိ <code>~/Documents/hybrid-app-student-materials-日付/samples/F02StampRelease</code> (日付 = date) ကို Finder တွင် ဖွင့်ပြီး ထို folder ကို Visual Studio Code ၏ <code>File &gt; Open Folder…</code> ဖြင့် ဖွင့်ပါ။ <code>pubspec.yaml</code> ပါဝင်သော အဆင့် (directory) ကို ရွေးချယ်ပါ။ ဖြည်ထားပြီးဖြစ်သောကြောင့် ZIP ကို download လုပ်ရန် မလိုပါ။ မိမိ၏ လက်ရာ folder ပေါ်သို့ overwrite မလုပ်ပါနှင့်။"
-    },
-    {
-      "source": "<code>Terminal &gt; New Terminal</code>で<code>flutter pub get</code>と<code>flutter analyze</code>を実行します。<code>Flutter: Launch Emulator</code>で既存端末を起動し、<code>flutter devices</code>でIDを確認して<code>flutter run -d 端末ID</code>で実行します。APKの作成・実APKの確認は本文のSTEP 11〜12にあります。",
-      "translation": "<code>Terminal &gt; New Terminal</code> တွင် <code>flutter pub get</code> နှင့် <code>flutter analyze</code> ကို run လုပ်ပါ။ <code>Flutter: Launch Emulator</code> ဖြင့် ရှိပြီးသား စက်ကို စတင်ဖွင့်ပြီး <code>flutter devices</code> ဖြင့် ID ကို စစ်ဆေးကာ <code>flutter run -d 端末ID</code> (端末ID = device ID) ဖြင့် run လုပ်ပါ။ APK ပြုလုပ်ခြင်းနှင့် လက်တွေ့ APK ကို စစ်ဆေးခြင်းတို့သည် အဓိကစာသား၏ STEP 11–12 တွင် ရှိပါသည်။"
+      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」を参照してください。",
+      "translation": "Error မပြေလည်ပါက <a1>အထွေထွေလမ်းညွှန် - အခက်အခဲရှိသည့်အခါ</a1> ၏ “ပြီးစီးထားသော project (နမူနာ) ကို စစ်ဆေးခြင်း” ကို ကိုးကားပါ။"
     },
     {
       "source": "JEC / ハイブリッドアプリ開発技法 · F02StampRelease",

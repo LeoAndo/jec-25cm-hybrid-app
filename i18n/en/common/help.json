@@ -1,0 +1,142 @@
+{
+  "source": "docs/common/help.html",
+  "language": "en",
+  "entries": [
+    {
+      "source": "困ったとき | ハイブリッドアプリ開発技法",
+      "translation": "Troubleshooting | Hybrid App Development"
+    },
+    {
+      "source": "本文へ移動",
+      "translation": "Skip to main content"
+    },
+    {
+      "source": "JEC / ハイブリッドアプリ開発技法",
+      "translation": "JEC / Hybrid App Development"
+    },
+    {
+      "source": "もとの教科書へ戻る",
+      "translation": "Back to the textbook you came from"
+    },
+    {
+      "source": "共通資料 · 授業サポート",
+      "translation": "Shared Guide · Class Support"
+    },
+    {
+      "source": "困ったとき",
+      "translation": "Troubleshooting"
+    },
+    {
+      "source": "コードが赤くなった、画面が出ない、動作しない、原因が分からない。<br>エラーに向き合い、自分で解決するための調べ方をまとめています。",
+      "translation": "Your code turned red, the screen doesn't appear, it doesn't work, or you don't know the cause.<br>Here is a guide on how to face errors and look up solutions on your own."
+    },
+    {
+      "source": "このページの内容",
+      "translation": "Contents of this page"
+    },
+    {
+      "source": "1. エラーが起きたときの調べ方",
+      "translation": "1. How to investigate when an error occurs"
+    },
+    {
+      "source": "2. 開発環境別の確認ポイント",
+      "translation": "2. Checkpoints by development environment"
+    },
+    {
+      "source": "3. どうしても解決しないときは（完成プロジェクトの確認）",
+      "translation": "3. When you still cannot resolve it (Checking the completed project)"
+    },
+    {
+      "source": "プログラミングでエラーが出るのは自然なことです。エラーメッセージには「どのファイルの何行目で、何が問題か」が書かれています。焦らずに上から順に確認しましょう。",
+      "translation": "Errors are a natural part of programming. Error messages always tell you \"which line of which file has what problem.\" Stay calm and check from top to bottom."
+    },
+    {
+      "source": "<strong>各単元の「困ったとき」表を確認する</strong><br>教科書の末尾にある「困ったとき」には、その単元でよくある状態と確認場所がまとまっています。",
+      "translation": "<strong>Check the “Troubleshooting” table in each unit</strong><br>The “Troubleshooting” section at the end of each textbook summarizes common conditions and where to check for that unit."
+    },
+    {
+      "source": "<strong>最初の赤い行を見る</strong><br>エラーが複数出ているときは、一番上の「最初の赤い行」を直します。最初の1つを直すと、あとのエラーがまとめて消えることがよくあります。",
+      "translation": "<strong>Look at the first red line</strong><br>When multiple errors appear, fix the topmost \"first red line.\" Fixing the first one often clears the rest of the errors all at once."
+    },
+    {
+      "source": "<strong>直前のSTEPと見比べる</strong><br>手順を1つ飛ばしていないか、大文字・小文字やスペル（綴り）、全角スペースが混ざっていないかを確認します。",
+      "translation": "<strong>Compare with the previous STEP</strong><br>Check if you skipped a step, or if uppercase/lowercase, spelling, or full-width spaces are mixed in."
+    },
+    {
+      "source": "<strong>先生に質問するときは</strong><br>「STEP番号・編集したファイル・最初の赤い行・実行した操作」を伝えると、原因が早く分かります。",
+      "translation": "<strong>When asking the teacher</strong><br>Explaining \"STEP number, edited file, first red line, and the actions you performed\" helps find the cause quickly."
+    },
+    {
+      "source": "開発環境",
+      "translation": "Development environment"
+    },
+    {
+      "source": "確認するポイント",
+      "translation": "Points to check"
+    },
+    {
+      "source": "参考資料",
+      "translation": "Reference materials"
+    },
+    {
+      "source": "Monaca クラウド IDE",
+      "translation": "Monaca クラウド IDE (cloud IDE)"
+    },
+    {
+      "source": "プレビュー画面下の「デバッグログ」やブラウザの開発者ツール（F12/右クリック→検証）のConsoleタブを確認します。JavaScriptの構文エラーやファイル読み込みエラーが赤く表示されます。",
+      "translation": "Check the \"Debug Log\" under the preview screen or the Console tab of your browser's developer tools (F12 / right-click → Inspect). JavaScript syntax errors and file loading errors will appear in red."
+    },
+    {
+      "source": "共通：準備（Monaca）",
+      "translation": "Shared: Preparation (Monaca)"
+    },
+    {
+      "source": "ターミナル（Terminal）のエラー出力や、エディタ下部の「PROBLEMS（問題）」タブを確認します。<code>flutter pub get</code> の実行漏れやパッケージの指定誤りを確認します。",
+      "translation": "Check the terminal error output or the \"PROBLEMS\" tab at the bottom of the editor. Check for omitted execution of <code>flutter pub get</code> or incorrectly specified packages."
+    },
+    {
+      "source": "共通：準備（Flutter）",
+      "translation": "Shared: Preparation (Flutter)"
+    },
+    {
+      "source": "どうしても自分のコードの間違いが見つからないときや、アプリ本来の動きを確認したいときは、先生が用意した<strong>完成プロジェクト（見本）</strong>を開いて自分のコードと見比べることができます。",
+      "translation": "When you cannot find mistakes in your own code or want to check the intended behavior of the app, you can open the <strong>completed project (sample)</strong> prepared by the teacher and compare it with your code."
+    },
+    {
+      "source": "完成プロジェクトは「答え合わせ用」です",
+      "translation": "The completed project is for “checking your work”"
+    },
+    {
+      "source": "完成プロジェクトからコードをそのままコピーしたり、完成プロジェクトを改造して提出しても、自分の課題の提出にはなりません。見本で違いを確認したら、必ず<strong>自分で作ったプロジェクトに戻り、自分の手で修正</strong>してください。",
+      "translation": "Copying code directly from the completed project or modifying and submitting the completed project does not count as submitting your own assignment. Once you check the differences with the sample, always <strong>return to the project you created yourself and fix it by hand</strong>."
+    },
+    {
+      "source": "見本の場所と開き方",
+      "translation": "Where samples are located and how to open them"
+    },
+    {
+      "source": "Finderで <code>書類</code>（<code>~/Documents</code>）にある配布フォルダ（<code>hybrid-app-student-materials-日付</code>）を開きます。",
+      "translation": "In Finder, open the distribution folder (<code>hybrid-app-student-materials-日付</code>) in <code>書類</code> (<code>~/Documents</code>)."
+    },
+    {
+      "source": "その中にある <code>samples</code> フォルダから、該当する単元のフォルダ（例：<code>M01OshiList</code>、<code>F01StampBoard</code> など）を確認します。",
+      "translation": "From the <code>samples</code> folder inside, locate the folder for the relevant unit (such as <code>M01OshiList</code>, <code>F01StampBoard</code>, etc.)."
+    },
+    {
+      "source": "<strong>Monaca単元（M01・M02）</strong>：<code>samples</code> の中にあるHTML/CSS/JSファイルをテキストエディタで開き、自分のコードと見比べます。Monaca クラウド IDE上で見本を動かして確かめたいときは、先生がZIPにして公開した取り込み用URL（<a1>M01OshiList</a1> / <a2>M02OshiSave</a2>）を通常版Monacaへログインした状態で開いて取り込みます。取り込むとFreeプランの枠を1枠使います。Freeプランの制限で取り込めない場合でも、<code>samples</code> のコードを直接読めば進められます。",
+      "translation": "<strong>Monaca units (M01, M02)</strong>: Open HTML/CSS/JS files in <code>samples</code> with a text editor to compare with your code. If you want to run and check the sample on Monaca クラウド IDE, open the import URL published by your teacher as a ZIP (<a1>M01OshiList</a1> / <a2>M02OshiSave</a2>) while logged into standard Monaca and import it. Importing uses 1 slot of the Free plan. Even if you cannot import due to Free plan limits, you can proceed by directly reading the code in <code>samples</code>."
+    },
+    {
+      "source": "<strong>Flutter単元（F01・F02）</strong>：Visual Studio Code の <code>File → Open Folder…</code> で該当フォルダを選んで開きます。見本でコードや動作を確認したら、自分の制作フォルダ（<code>~/Documents/HybridApp</code>）を開き直して作業を続けます。",
+      "translation": "<strong>Flutter units (F01, F02)</strong>: In Visual Studio Code, choose <code>File → Open Folder…</code> to select and open the relevant folder. Once you have checked the code or behavior with the sample, reopen your own work folder (<code>~/Documents/HybridApp</code>) and continue working."
+    },
+    {
+      "source": "取り違えに注意",
+      "translation": "Be careful not to mix them up"
+    },
+    {
+      "source": "見本と自分のアプリは同じプロジェクト名です。ウィンドウ上部やタブに表示されるフォルダパスを確認し、見本のほうを編集してしまわないよう注意しましょう。",
+      "translation": "The sample and your own app have the same project name. Check the folder path displayed at the top of the window or in tabs to avoid accidentally editing the sample."
+    }
+  ]
+}

@@ -127,12 +127,12 @@
       "translation": "အခက်အခဲရှိသည့်အခါ"
     },
     {
-      "source": "完成プロジェクトを開く",
-      "translation": "ပြီးစီးပြီးသော project ကို ဖွင့်ရန်"
-    },
-    {
       "source": "共通：はじめの準備",
       "translation": "အထွေထွေ: အတန်းမစမီ ပြင်ဆင်ရန်"
+    },
+    {
+      "source": "共通：困ったとき",
+      "translation": "အထွေထွေ: အခက်အခဲရှိသည့်အခါ"
     },
     {
       "source": "コマ8〜11 · 各90分",
@@ -931,12 +931,8 @@
       "translation": "အကြိမ်အရေအတွက် ပန်းတိုင်ထက် ကျော်လွန်နေစဉ် <code>stampGoal</code> ကို လျှော့ချပြီး hot reload ပြုလုပ်ခဲ့သည်။ Hot restart ဖြင့် 0 သို့ ပြန်လည်ရောက်ရှိစေပါ။"
     },
     {
-      "source": "配布フォルダの<code>~/Documents/hybrid-app-student-materials-日付/samples/F01StampBoard</code>をFinderで開き、そのフォルダをVisual Studio Codeの<code>File &gt; Open Folder…</code>で開きます。<code>pubspec.yaml</code>が入っている階層を選びます。展開は済んでいるので、ZIPのダウンロードは要りません。自分の制作フォルダと混ぜず、見比べるために使います。",
-      "translation": "ဖြန့်ဝေထားသော folder ဖြစ်သည့် <code>~/Documents/hybrid-app-student-materials-日付/samples/F01StampBoard</code> ကို Finder တွင် ဖွင့်ပြီး ထို folder ကို Visual Studio Code ၏ <code>File &gt; Open Folder…</code> ဖြင့် ဖွင့်ပါ (日付 ကို သက်ဆိုင်ရာ ရက်စွဲဖြင့် ဖတ်ရှုပါ)။ <code>pubspec.yaml</code> ပါဝင်သော အဆင့်ကို ရွေးချယ်ပါ။ ဖြည်ချပြီးဖြစ်သောကြောင့် ZIP ဒေါင်းလုဒ်ဆွဲရန် မလိုအပ်ပါ။ မိမိ လုပ်ဆောင်နေသော folder နှင့် မရောထွေးစေဘဲ နှိုင်းယှဉ်ကြည့်ရန်အတွက်သာ အသုံးပြုပါ။"
-    },
-    {
-      "source": "<code>Terminal &gt; New Terminal</code>で<code>flutter pub get</code>、<code>flutter analyze</code>を実行します。<code>Flutter: Launch Emulator</code>から既存iOSシミュレータを選び、<code>flutter devices</code>でIDを見て、<code>flutter run -d 端末ID</code>で実行します。端末IDは表示された値に置き換えます。",
-      "translation": "<code>Terminal &gt; New Terminal</code> တွင် <code>flutter pub get</code>၊ <code>flutter analyze</code> တို့ကို run ပါ။ <code>Flutter: Launch Emulator</code> မှ လက်ရှိ iOS simulator ကို ရွေးချယ်ပြီး <code>flutter devices</code> ဖြင့် ID ကို ကြည့်ရှုကာ <code>flutter run -d 端末ID</code> ဖြင့် run ပါ။ 端末ID (စက် ID) ကို ပြသထားသော တန်ဖိုးဖြင့် အစားထိုးပါ။"
+      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」を参照してください。",
+      "translation": "Error မပြေလည်ပါက <a1>အထွေထွေလမ်းညွှန် - အခက်အခဲရှိသည့်အခါ</a1> ၏ “ပြီးစီးထားသော project (နမူနာ) ကို စစ်ဆေးခြင်း” ကို ကိုးကားပါ။"
     },
     {
       "source": "JEC / ハイブリッドアプリ開発技法 · F01StampBoard",

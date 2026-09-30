@@ -127,12 +127,12 @@
       "translation": "عند مواجهة مشكلة"
     },
     {
-      "source": "完成プロジェクトを開く",
-      "translation": "فتح المشروع المكتمل"
-    },
-    {
       "source": "共通：はじめの準備",
       "translation": "المشترك: الإعداد الأولي"
+    },
+    {
+      "source": "共通：困ったとき",
+      "translation": "مشترك: عند مواجهة مشكلة"
     },
     {
       "source": "コマ8〜11 · 各90分",
@@ -931,12 +931,8 @@
       "translation": "تم تقليل <code>stampGoal</code> وإجراء Hot Reload بينما تجاوز عدد المرات الهدف. أعِده إلى 0 عبر Hot Restart."
     },
     {
-      "source": "配布フォルダの<code>~/Documents/hybrid-app-student-materials-日付/samples/F01StampBoard</code>をFinderで開き、そのフォルダをVisual Studio Codeの<code>File &gt; Open Folder…</code>で開きます。<code>pubspec.yaml</code>が入っている階層を選びます。展開は済んでいるので、ZIPのダウンロードは要りません。自分の制作フォルダと混ぜず、見比べるために使います。",
-      "translation": "افتح <code>~/Documents/hybrid-app-student-materials-日付/samples/F01StampBoard</code> (日付 = التاريخ) في مجلد التوزيع باستخدام Finder، ثم افتح ذلك المجلد عبر <code>File &gt; Open Folder…</code> في Visual Studio Code. اختر المستوى الذي يحتوي على <code>pubspec.yaml</code>. نظرًا لأنه مفكوك الضغط بالفعل، فلن تحتاج لتنزيل ملف ZIP. استخدمه للمقارنة دون خلطه بمجلد عملك الخاص."
-    },
-    {
-      "source": "<code>Terminal &gt; New Terminal</code>で<code>flutter pub get</code>、<code>flutter analyze</code>を実行します。<code>Flutter: Launch Emulator</code>から既存iOSシミュレータを選び、<code>flutter devices</code>でIDを見て、<code>flutter run -d 端末ID</code>で実行します。端末IDは表示された値に置き換えます。",
-      "translation": "نفّذ <code>flutter pub get</code> و<code>flutter analyze</code> من <code>Terminal &gt; New Terminal</code>. اختر محاكي iOS الموجود لديك من <code>Flutter: Launch Emulator</code>، واطلع على المعرّف في <code>flutter devices</code>، ثم نفّذ <code>flutter run -d 端末ID</code>. استبدل 端末ID بالقيمة المعروضة."
+      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」を参照してください。",
+      "translation": "إذا لم تُحل المشكلة، يُرجى الرجوع إلى \"فحص المشروع المكتمل (النموذج)\" في <a1>المواد المشتركة: عند مواجهة مشكلة</a1>."
     },
     {
       "source": "JEC / ハイブリッドアプリ開発技法 · F01StampBoard",

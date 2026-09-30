@@ -127,12 +127,12 @@
       "translation": "遇到问题时"
     },
     {
-      "source": "完成プロジェクトを開く",
-      "translation": "打开完成项目"
-    },
-    {
       "source": "共通：はじめの準備",
       "translation": "通用：上课前的准备"
+    },
+    {
+      "source": "共通：困ったとき",
+      "translation": "通用：遇到问题时"
     },
     {
       "source": "コマ8〜11 · 各90分",
@@ -931,12 +931,8 @@
       "translation": "在次数超过目标的状态下减小了 <code>stampGoal</code> 并热重载了。用热重启恢复为0。"
     },
     {
-      "source": "配布フォルダの<code>~/Documents/hybrid-app-student-materials-日付/samples/F01StampBoard</code>をFinderで開き、そのフォルダをVisual Studio Codeの<code>File &gt; Open Folder…</code>で開きます。<code>pubspec.yaml</code>が入っている階層を選びます。展開は済んでいるので、ZIPのダウンロードは要りません。自分の制作フォルダと混ぜず、見比べるために使います。",
-      "translation": "在 Finder 中打开分发文件夹中的 <code>~/Documents/hybrid-app-student-materials-日付/samples/F01StampBoard</code>（日付 表示日期），再用 Visual Studio Code 的 <code>File &gt; Open Folder…</code> 打开这个文件夹。选择包含 <code>pubspec.yaml</code> 的那一层。文件已经解压好了，不需要下载 ZIP。不要和自己的制作文件夹混在一起，只用来对照。"
-    },
-    {
-      "source": "<code>Terminal &gt; New Terminal</code>で<code>flutter pub get</code>、<code>flutter analyze</code>を実行します。<code>Flutter: Launch Emulator</code>から既存iOSシミュレータを選び、<code>flutter devices</code>でIDを見て、<code>flutter run -d 端末ID</code>で実行します。端末IDは表示された値に置き換えます。",
-      "translation": "通过 <code>Terminal &gt; New Terminal</code> 执行 <code>flutter pub get</code> 和 <code>flutter analyze</code>。从 <code>Flutter: Launch Emulator</code> 选择现有的 iOS 模拟器，用 <code>flutter devices</code> 查看 ID，再用 <code>flutter run -d 端末ID</code> 运行。把「端末ID」（设备 ID）替换为显示出来的值。"
+      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」を参照してください。",
+      "translation": "如果错误仍未解决，请参考<a1>通用资料：遇到问题时</a1>中的“查看完成项目（示例）”。"
     },
     {
       "source": "JEC / ハイブリッドアプリ開発技法 · F01StampBoard",

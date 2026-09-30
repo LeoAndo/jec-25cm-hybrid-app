@@ -127,12 +127,12 @@
       "translation": "Troubleshooting"
     },
     {
-      "source": "完成プロジェクトを開く",
-      "translation": "Open the completed project"
-    },
-    {
       "source": "共通：はじめの準備",
       "translation": "Shared: Getting ready for class"
+    },
+    {
+      "source": "共通：困ったとき",
+      "translation": "Shared: Troubleshooting"
     },
     {
       "source": "コマ1〜4 · 各90分",
@@ -185,14 +185,6 @@
     {
       "source": "詳細へ値を渡し、戻る操作まで完成させる。",
       "translation": "Pass values to the detail screen and finish the app, including going back."
-    },
-    {
-      "source": "先生が見本を使うと案内したら、配布フォルダの <code>~/Documents/hybrid-app-student-materials-日付/samples/M01OshiList</code> をFinderで開きます。<code>M01OshiList</code> の完成プロジェクトで、<code>www/index.html</code>・<code>www/css/style.css</code>・<code>www/js/app.js</code> を自分のコードと読み比べるために使います。自分の制作を始めるにはSTEP 00へ進みます。",
-      "translation": "If your teacher says to use the sample, open <code>~/Documents/hybrid-app-student-materials-日付/samples/M01OshiList</code> (日付 = date) in the distribution folder in Finder. It is the completed project of <code>M01OshiList</code>; use it to read <code>www/index.html</code>, <code>www/css/style.css</code>, and <code>www/js/app.js</code> side by side with your own code. To start building your own, go to STEP 00."
-    },
-    {
-      "source": "Monaca クラウド IDEは、Macのフォルダをそのまま開けません。見本をMonacaで動かすときは、先生がZIPにして公開した<a1>M01OshiListの取り込み用URL</a1>を、通常版Monacaへログインした状態で開き、取り込みます。取り込みにもFreeプランの3枠のうち1枠を使うので、空きを確かめてからURLを1回だけ開き、自分の作品は削除しません。取り込み用URLがあっても、Freeプランの制限（プロジェクトの数や、対応するCordovaの版）で、取り込めない、または取り込んだ見本を開けないことがあります。そのときは無理に取り込まず、先生に知らせてください。見本のコードは配布フォルダの <code>samples</code> で読めるので、取り込めなくても授業は進められます。",
-      "translation": "Monaca クラウド IDE cannot open a folder on your Mac directly. To run the sample in Monaca, open the <a1>import URL for M01OshiList</a1>, which your teacher made by zipping the project and publishing it, while logged in to standard Monaca, and import it. Importing also uses one of the three slots of the Free plan, so check that you have a free slot, open the URL only once, and do not delete your own work. Even with the import URL, the limits of the Free plan (the number of projects, or the supported Cordova version) may prevent you from importing it or from opening the imported sample. In that case, do not force the import; tell your teacher. You can read the sample code in <code>samples</code> in the distribution folder, so the class can go on even if you cannot import it."
     },
     {
       "source": "STEP 00 · コマ1",
@@ -1169,6 +1161,10 @@
     {
       "source": "<code>ons.platform.select</code> を <code>app.js</code> の先頭で実行しているか。画面内の戻るではなく、プレビューの <code>Reload</code> を押したか。端末選択で比べるときは、コードの指定をコメントに戻したか。",
       "translation": "Is <code>ons.platform.select</code> run at the top of <code>app.js</code>? Did you click <code>Reload</code> in the preview, not the back button on the screen? When comparing with the device selector, did you turn the setting in the code back into a comment?"
+    },
+    {
+      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」を参照してください。",
+      "translation": "If you cannot resolve an error, refer to \"Checking the completed project (sample)\" in <a1>Shared Guide: Troubleshooting</a1>."
     },
     {
       "source": "JEC / ハイブリッドアプリ開発技法 · M01OshiList",

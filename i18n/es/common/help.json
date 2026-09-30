@@ -1,0 +1,142 @@
+{
+  "source": "docs/common/help.html",
+  "language": "es",
+  "entries": [
+    {
+      "source": "困ったとき | ハイブリッドアプリ開発技法",
+      "translation": "Solución de problemas | Desarrollo de aplicaciones híbridas"
+    },
+    {
+      "source": "本文へ移動",
+      "translation": "Ir al contenido principal"
+    },
+    {
+      "source": "JEC / ハイブリッドアプリ開発技法",
+      "translation": "JEC / Desarrollo de aplicaciones híbridas"
+    },
+    {
+      "source": "もとの教科書へ戻る",
+      "translation": "Volver al libro de texto original"
+    },
+    {
+      "source": "共通資料 · 授業サポート",
+      "translation": "Material común · Apoyo para la clase"
+    },
+    {
+      "source": "困ったとき",
+      "translation": "Solución de problemas"
+    },
+    {
+      "source": "コードが赤くなった、画面が出ない、動作しない、原因が分からない。<br>エラーに向き合い、自分で解決するための調べ方をまとめています。",
+      "translation": "El código se marcó en rojo, la pantalla no aparece, no funciona o no sabes cuál es la causa.<br>Aquí se resumen formas de afrontar los errores y buscar soluciones por ti mismo."
+    },
+    {
+      "source": "このページの内容",
+      "translation": "Contenido de esta página"
+    },
+    {
+      "source": "1. エラーが起きたときの調べ方",
+      "translation": "1. Cómo investigar cuando ocurre un error"
+    },
+    {
+      "source": "2. 開発環境別の確認ポイント",
+      "translation": "2. Puntos a verificar según el entorno de desarrollo"
+    },
+    {
+      "source": "3. どうしても解決しないときは（完成プロジェクトの確認）",
+      "translation": "3. Si de verdad no logras resolverlo (Comprobar el proyecto terminado)"
+    },
+    {
+      "source": "プログラミングでエラーが出るのは自然なことです。エラーメッセージには「どのファイルの何行目で、何が問題か」が書かれています。焦らずに上から順に確認しましょう。",
+      "translation": "Tener errores al programar es completamente natural. En los mensajes de error siempre se indica «qué problema hay en qué línea de qué archivo». Mantén la calma y comprueba en orden de arriba a abajo."
+    },
+    {
+      "source": "<strong>各単元の「困ったとき」表を確認する</strong><br>教科書の末尾にある「困ったとき」には、その単元でよくある状態と確認場所がまとまっています。",
+      "translation": "<strong>Consulta la tabla «Solución de problemas» de cada unidad</strong><br>Al final de cada libro de texto, en «Solución de problemas», se recopilan las situaciones frecuentes y los lugares a revisar para esa unidad."
+    },
+    {
+      "source": "<strong>最初の赤い行を見る</strong><br>エラーが複数出ているときは、一番上の「最初の赤い行」を直します。最初の1つを直すと、あとのエラーがまとめて消えることがよくあります。",
+      "translation": "<strong>Mira la primera línea roja</strong><br>Cuando aparezcan varios errores, corrige la «primera línea roja» de más arriba. Al corregir la primera, los errores siguientes suelen desaparecer juntos."
+    },
+    {
+      "source": "<strong>直前のSTEPと見比べる</strong><br>手順を1つ飛ばしていないか、大文字・小文字やスペル（綴り）、全角スペースが混ざっていないかを確認します。",
+      "translation": "<strong>Compara con el STEP anterior</strong><br>Comprueba si te saltaste un paso, o si las mayúsculas, minúsculas, la ortografía o espacios de ancho completo se han mezclado."
+    },
+    {
+      "source": "<strong>先生に質問するときは</strong><br>「STEP番号・編集したファイル・最初の赤い行・実行した操作」を伝えると、原因が早く分かります。",
+      "translation": "<strong>Al hacer preguntas al profesor</strong><br>Indica «el número de STEP, el archivo editado, la primera línea roja y las operaciones realizadas» para que la causa se pueda averiguar más rápido."
+    },
+    {
+      "source": "開発環境",
+      "translation": "Entorno de desarrollo"
+    },
+    {
+      "source": "確認するポイント",
+      "translation": "Puntos a verificar"
+    },
+    {
+      "source": "参考資料",
+      "translation": "Materiales de referencia"
+    },
+    {
+      "source": "Monaca クラウド IDE",
+      "translation": "Monaca クラウド IDE (IDE en la nube)"
+    },
+    {
+      "source": "プレビュー画面下の「デバッグログ」やブラウザの開発者ツール（F12/右クリック→検証）のConsoleタブを確認します。JavaScriptの構文エラーやファイル読み込みエラーが赤く表示されます。",
+      "translation": "Revisa el «Registro de depuración» debajo de la pantalla de vista previa o la pestaña Console de las herramientas para desarrolladores del navegador (F12 / clic derecho → Inspeccionar). Los errores de sintaxis de JavaScript y de carga de archivos se mostrarán en rojo."
+    },
+    {
+      "source": "共通：準備（Monaca）",
+      "translation": "Común: Preparación (Monaca)"
+    },
+    {
+      "source": "ターミナル（Terminal）のエラー出力や、エディタ下部の「PROBLEMS（問題）」タブを確認します。<code>flutter pub get</code> の実行漏れやパッケージの指定誤りを確認します。",
+      "translation": "Revisa la salida de error en la terminal (Terminal) o la pestaña «PROBLEMS (Problemas)» en la parte inferior del editor. Comprueba si olvidaste ejecutar <code>flutter pub get</code> o si especificaste mal algún paquete."
+    },
+    {
+      "source": "共通：準備（Flutter）",
+      "translation": "Común: Preparación (Flutter)"
+    },
+    {
+      "source": "どうしても自分のコードの間違いが見つからないときや、アプリ本来の動きを確認したいときは、先生が用意した<strong>完成プロジェクト（見本）</strong>を開いて自分のコードと見比べることができます。",
+      "translation": "Cuando de ninguna forma encuentres el error en tu código o quieras comprobar el funcionamiento previsto de la aplicación, puedes abrir el <strong>proyecto terminado (ejemplo)</strong> preparado por el profesor y compararlo con tu código."
+    },
+    {
+      "source": "完成プロジェクトは「答え合わせ用」です",
+      "translation": "El proyecto terminado es para «comprobar las respuestas»"
+    },
+    {
+      "source": "完成プロジェクトからコードをそのままコピーしたり、完成プロジェクトを改造して提出しても、自分の課題の提出にはなりません。見本で違いを確認したら、必ず<strong>自分で作ったプロジェクトに戻り、自分の手で修正</strong>してください。",
+      "translation": "Copiar directamente el código del proyecto terminado o modificar el proyecto terminado para entregarlo no cuenta como entregar tu propia tarea. Tras comprobar las diferencias con el ejemplo, asegúrate de <strong>volver al proyecto que creaste tú mismo y corregirlo con tus propias manos</strong>."
+    },
+    {
+      "source": "見本の場所と開き方",
+      "translation": "Ubicación de los ejemplos y cómo abrirlos"
+    },
+    {
+      "source": "Finderで <code>書類</code>（<code>~/Documents</code>）にある配布フォルダ（<code>hybrid-app-student-materials-日付</code>）を開きます。",
+      "translation": "En Finder, abre la carpeta de distribución (<code>hybrid-app-student-materials-日付</code>) que está en <code>書類</code> (<code>~/Documents</code>)."
+    },
+    {
+      "source": "その中にある <code>samples</code> フォルダから、該当する単元のフォルダ（例：<code>M01OshiList</code>、<code>F01StampBoard</code> など）を確認します。",
+      "translation": "Dentro de la carpeta <code>samples</code> que contiene, localiza la carpeta de la unidad correspondiente (por ejemplo: <code>M01OshiList</code>, <code>F01StampBoard</code>, etc.)."
+    },
+    {
+      "source": "<strong>Monaca単元（M01・M02）</strong>：<code>samples</code> の中にあるHTML/CSS/JSファイルをテキストエディタで開き、自分のコードと見比べます。Monaca クラウド IDE上で見本を動かして確かめたいときは、先生がZIPにして公開した取り込み用URL（<a1>M01OshiList</a1> / <a2>M02OshiSave</a2>）を通常版Monacaへログインした状態で開いて取り込みます。取り込むとFreeプランの枠を1枠使います。Freeプランの制限で取り込めない場合でも、<code>samples</code> のコードを直接読めば進められます。",
+      "translation": "<strong>Unidades Monaca (M01, M02)</strong>: Abre los archivos HTML/CSS/JS dentro de <code>samples</code> con un editor de texto y compáralos con tu código. Si deseas ejecutar y comprobar el ejemplo en Monaca クラウド IDE, abre e importa la URL de importación publicada en formato ZIP por el profesor (<a1>M01OshiList</a1> / <a2>M02OshiSave</a2>) habiendo iniciado sesión en Monaca normal. Al importar, se utilizará 1 espacio del plan Free. Incluso si no puedes importarlo debido a las limitaciones del plan Free, puedes avanzar leyendo directamente el código en <code>samples</code>."
+    },
+    {
+      "source": "<strong>Flutter単元（F01・F02）</strong>：Visual Studio Code の <code>File → Open Folder…</code> で該当フォルダを選んで開きます。見本でコードや動作を確認したら、自分の制作フォルダ（<code>~/Documents/HybridApp</code>）を開き直して作業を続けます。",
+      "translation": "<strong>Unidades Flutter (F01, F02)</strong>: En Visual Studio Code, elige <code>File → Open Folder…</code> para seleccionar y abrir la carpeta correspondiente. Tras verificar el código o el funcionamiento con el ejemplo, vuelve a abrir tu propia carpeta de trabajo (<code>~/Documents/HybridApp</code>) y continúa trabajando."
+    },
+    {
+      "source": "取り違えに注意",
+      "translation": "Cuidado con confundir los proyectos"
+    },
+    {
+      "source": "見本と自分のアプリは同じプロジェクト名です。ウィンドウ上部やタブに表示されるフォルダパスを確認し、見本のほうを編集してしまわないよう注意しましょう。",
+      "translation": "El ejemplo y tu propia aplicación tienen el mismo nombre de proyecto. Comprueba la ruta de la carpeta que aparece en la parte superior de la ventana o en las pestañas para no editar el ejemplo por error."
+    }
+  ]
+}

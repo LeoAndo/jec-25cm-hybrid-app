@@ -127,12 +127,12 @@
       "translation": "遇到问题时"
     },
     {
-      "source": "完成プロジェクトを開く",
-      "translation": "打开完成项目"
-    },
-    {
       "source": "共通：はじめの準備",
       "translation": "通用：上课前的准备"
+    },
+    {
+      "source": "共通：困ったとき",
+      "translation": "通用：遇到问题时"
     },
     {
       "source": "コマ1〜4 · 各90分",
@@ -185,14 +185,6 @@
     {
       "source": "詳細へ値を渡し、戻る操作まで完成させる。",
       "translation": "向详情传值，并完成返回操作。"
-    },
-    {
-      "source": "先生が見本を使うと案内したら、配布フォルダの <code>~/Documents/hybrid-app-student-materials-日付/samples/M01OshiList</code> をFinderで開きます。<code>M01OshiList</code> の完成プロジェクトで、<code>www/index.html</code>・<code>www/css/style.css</code>・<code>www/js/app.js</code> を自分のコードと読み比べるために使います。自分の制作を始めるにはSTEP 00へ進みます。",
-      "translation": "老师说明要使用示例时，在 Finder 中打开分发文件夹中的 <code>~/Documents/hybrid-app-student-materials-日付/samples/M01OshiList</code>（日付 表示日期）。这是 <code>M01OshiList</code> 的完成项目，用来把 <code>www/index.html</code>、<code>www/css/style.css</code>、<code>www/js/app.js</code> 与自己的代码对照阅读。要开始自己的制作，请前往 STEP 00。"
-    },
-    {
-      "source": "Monaca クラウド IDEは、Macのフォルダをそのまま開けません。見本をMonacaで動かすときは、先生がZIPにして公開した<a1>M01OshiListの取り込み用URL</a1>を、通常版Monacaへログインした状態で開き、取り込みます。取り込みにもFreeプランの3枠のうち1枠を使うので、空きを確かめてからURLを1回だけ開き、自分の作品は削除しません。取り込み用URLがあっても、Freeプランの制限（プロジェクトの数や、対応するCordovaの版）で、取り込めない、または取り込んだ見本を開けないことがあります。そのときは無理に取り込まず、先生に知らせてください。見本のコードは配布フォルダの <code>samples</code> で読めるので、取り込めなくても授業は進められます。",
-      "translation": "Monaca クラウド IDE 不能直接打开 Mac 上的文件夹。要在 Monaca 中运行示例时，请在已登录标准版 Monaca 的状态下，打开老师把项目打包成 ZIP 后公开的<a1>M01OshiList 的导入链接</a1>，进行导入。导入也会占用 Free 方案3个名额中的1个，所以请先确认有空余名额，只打开一次链接，不要删除自己的作品。即使有导入链接，也可能因为 Free 方案的限制（项目数量、支持的 Cordova 版本）而无法导入，或者无法打开导入的示例。这时不要勉强导入，请告诉老师。示例的代码可以在分发文件夹的 <code>samples</code> 中阅读，所以即使无法导入，也能继续上课。"
     },
     {
       "source": "STEP 00 · コマ1",
@@ -1169,6 +1161,10 @@
     {
       "source": "<code>ons.platform.select</code> を <code>app.js</code> の先頭で実行しているか。画面内の戻るではなく、プレビューの <code>Reload</code> を押したか。端末選択で比べるときは、コードの指定をコメントに戻したか。",
       "translation": "是否在 <code>app.js</code> 的开头执行了 <code>ons.platform.select</code>。按的是否是预览的 <code>Reload</code>，而不是页面内的返回。用设备选择比较时，是否把代码中的指定恢复成了注释。"
+    },
+    {
+      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」を参照してください。",
+      "translation": "如果错误仍未解决，请参考<a1>通用资料：遇到问题时</a1>中的“查看完成项目（示例）”。"
     },
     {
       "source": "JEC / ハイブリッドアプリ開発技法 · M01OshiList",
