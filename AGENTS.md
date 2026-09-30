@@ -295,20 +295,20 @@ Freeプランの利用規約は「法人による商用でのアプリ開発」�
 
 - PR本文は「概要／変更内容／判断したこと／検証／実績」の順に書き、`Closes #<番号>` を入れる。検証の節に「※ リポジトリの方針により、Unit Test は対象外です。」と書く。
   - PR本文に書くときは、Closes #<番号> をバッククォートで囲まず、地の文として書く。コードスパンの中に入れるとGitHubが閉じる指示として扱わないので、マージしてもissueが開いたままになる。ここでコード表記にしてあるのは読みやすさのためで、その囲みごと写さない。
-  - **PR本文は、Draftのうちに完成版まで仕上げる。** 初回レビューを依頼する前に本文を完成させる。Draft解除後のpushでも再レビューや本文要約の更新が起こり得るため、Draftを本文作成の段階として使う。仕上げたら `gh pr view <番号> --json body` で読み直し、書いた内容が残っていることを確かめてから `gh pr ready` する。
-  - **Draft解除後に本文を直すときは、botのチェックが終わるのを待つ。** レビュー中に `gh pr edit --body` すると、コマンドは成功したように見えて本文が黙ってひな形へ巻き戻ることがある。待ってから `gh pr view <番号> --json body` で現在の本文を取り出し、botが足した要約ブロックを残したまま該当箇所だけ置き換えて、書き換えたあともう一度読み直す。
+  - **PR本文は、Draftのうちに完成版まで仕上げる。** 初回レビューを依頼する前に本文を完成させる。Draftを外すとCodexがレビューを始め、そのあとのpushではレビューし直さない（下の「PR #146 での Codex の観測」）ため、Draftを本文作成の段階として使う。仕上げたら `gh pr view <番号> --json body` で読み直し、書いた内容が残っていることを確かめてから `gh pr ready` する。
+  - **Draft解除後に本文を直すときは、botのレビューが終わるのを待つ。** レビュー中に `gh pr edit --body` すると、コマンドは成功したように見えて本文が黙ってひな形へ巻き戻ることがある。待ってから `gh pr view <番号> --json body` で現在の本文を取り出し、botが足した要約ブロックがあれば残したまま、該当箇所だけ置き換えて、書き換えたあともう一度読み直す。
 - ラベル：教材の追加は `enhancement`、誤記・不具合の修正は `bug`。学生に関係しないPR（CI・スクリプト・開発ルール）は `skip-release-notes`。issueと同じ `size:*`・`area:*` も付ける。
 - 教材のレビューは `skills/teaching-materials-review/SKILL.md` に従う。
-- 自動レビューの指摘は、そのまま実行しない。現在のソースと検査結果で再確認してから判断する。**チェックが `SUCCESS` でも、そのbotがレビューしたとは限らない。** 上限やトライアル終了で未実施のまま `SUCCESS` になるbotがある。
-  - **チェックの状態ではなく、投稿されたレビューの中身を読んで判断する。** 指摘があるときほどチェックが `SUCCESS` にならないbotもある。**Draftではレビューを省略するbotがある**ので、検証を済ませてDraftを外してからレビューを待つ。上限やトライアル終了で止まっているときは、マージ可否の報告にそう書く。
-  - **いま動いているレビューbotと契約（2026-09-26 オーナー決定）。** アカウント全体の契約で、このリポジトリだけの設定ではない。下の「PR #2 での初回観測」と「59本の集計」は、この変更より前の記録として残す。挙動が食い違ったら、この表を直す。
+- 自動レビューの指摘は、そのまま実行しない。現在のソースと検査結果で再確認してから判断する。**チェックが `SUCCESS` でも、そのbotがレビューしたとは限らない。** 上限やトライアル終了で未実施のまま `SUCCESS` になるbotがあった（CodeRabbit・Devin Review。下の集計）。
+  - **チェックの状態ではなく、投稿されたレビューの中身を読んで判断する。** Codexはチェックもstatusも出さないので、チェックの一覧だけを見ても、レビューが届いたかは分からない。**CodexはDraftのあいだレビューしない**ので、検証を済ませてDraftを外してからレビューを待つ。上限やトライアル終了で止まっているときは、マージ可否の報告にそう書く。
+  - **いま動いているレビューbotと契約（2026-09-26 オーナー決定、2026-09-30 更新）。** アカウント全体の契約で、このリポジトリだけの設定ではない。2026-09-30 にCodeRabbitとCursor Bugbotも外したので、表のうち契約が残っているのはCodexとGitHub Copilotだけになった（Copilotは #36 以降、痕跡がない。下の集計）。下の「PR #146 での Codex の観測」「PR #2 での初回観測」「59本の集計」は、外す前の記録として残す（CodeRabbit・Cursor Bugbot・Devin・Qodoの記述も含む）。挙動が食い違ったら、この表を直す。
 
-    | bot | 契約（2026-09-26） | 動き方と、このリポジトリでの扱い |
+    | bot | 契約（2026-09-30） | 動き方と、このリポジトリでの扱い |
     | --- | --- | --- |
-    | CodeRabbit | Essentials | Draftではレビューせず、「Draft PR not reviewed」のコメントだけを置く（PR #146 でも同じ）。直近7日のレビュー件数が多いと1時間あたりの枠が減り、枠がないときは「Review paused — included plan limit reached」「Review rate limited」と書いたまま、statusは `success` になる。修正後の差分のincremental reviewは、この枠で止まることが多い。**CodeRabbitのコメントにあるチェックボックス（オンデマンドレビュー、手動レビューの起動など）は押さない。** 同じPRに短い間隔でpushを重ねると、「Reviews paused」（`auto_pause_after_reviewed_commits`）として自動のレビューを止める（PR #146 で、5回目のpushの `5fe296c` をレビューしたあと）。**止まったときの「Resume reviews」「Trigger review」のチェックボックスも押さない。** |
-    | Cursor Bugbot | CursorはPro+。Bugbotは、Cursorのプランとは別の、月額固定の席課金 | Draftを外したあと、最新headで動く。指摘がないときは、チェックの出力に「Bugbot completed review - no issues found!」とだけ出て、レビューは投稿しない。指摘があるとチェックが `neutral` になり、インラインで投稿する。使用量課金（Cursorの画面の見積で1回約 $1.20）に切り替えるかはオーナーが決める。エージェントは切り替えない。 |
     | Codex | ChatGPT ProのCodexで、GitHubの自動レビューを有効にした | 新しいPRが開かれたときにレビューし、PRのコメントの `@codex review` でも呼べる。GitHubではP0・P1だけを指摘し、このファイルの末尾の、見出しがちょうど `## Code Review Rules` の節に従う（[Codexの説明](https://developers.openai.com/codex/integrations/github)、[Custom Code Review rules for Codex](https://developers.openai.com/blog/custom-code-review-rules-for-codex)）。以前の名前は `## Review guidelines` で、この名前にはしない。Draftのあいだは何もせず、Draftを外すとレビューする。チェックもstatusも出さず、レビュー（`COMMENTED`）とインラインのコメントだけを投稿する。レビュー本文によれば、指摘がないときは👍のリアクションだけを付ける。Codexの説明の範囲はP0・P1で、P2以下はその外にある。ただし、PR #146 ではP2のバッジの付いた指摘が1件出た。この観測は、`## Code Review Rules` の基準（P1として指摘するもの）を変えない。P2以下の指摘が出たら、ほかのbotの指摘と同じく中身を確かめ、この節の「指摘には、各スレッドにインラインで返信する」の書式で判断を返す。このリポジトリでの観測は下の「PR #146 での Codex の観測」。 |
     | GitHub Copilot | 教員の無償プラン | 月の枠を使い切ると、未実施の通知だけをレビュー（`COMMENTED`）として投稿する。この通知はレビューに数えない。枠は毎月1日 09:00（日本時間）に戻る。 |
+    | CodeRabbit | **2026-09-30 に解約し、GitHub Appも外した** | 過去のPRに残るコメント（「Draft PR not reviewed」、要約、チェックボックスなど）とstatusは、外す前の記録として読む。Essentialsのときは、直近7日のレビュー件数で1時間あたりの枠が減り、枠がないときは「Review paused」「Review rate limited」のまま、statusが `success` になっていた（下の集計）。 |
+    | Cursor Bugbot | **2026-09-30 に停止し、GitHub AppからCursorも外した** | 過去のPRに残るチェック（`Cursor Bugbot`）とコメントは、外す前の記録として読む。外す直前の #156・#157・#159 では、「Bugbot couldn't run - usage limit reached」のコメントだけを置き、チェックは `neutral` だった。 |
     | Devin Review | **2026-09-26 に解約し、GitHub Appも外した** | 過去のPRに残る「Full review skipped: trial expired and no credits remaining」のstatusは、レビューに数えない。 |
     | Qodo | **2026-09-26 に解約し、GitHub Appも外した** | このリポジトリの59本のPRには、動いた跡がなかった（下の集計）。 |
 
