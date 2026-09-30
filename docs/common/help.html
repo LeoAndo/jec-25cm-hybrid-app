@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>困ったとき | ハイブリッドアプリ開発技法</title>
+  <link rel="stylesheet" href="../assets/textbook.css">
+  <script src="../assets/textbook.js" defer></script>
+</head>
+<body class="plain">
+<a class="skip" href="#main">本文へ移動</a>
+<header class="topbar"><span class="brand">JEC / ハイブリッドアプリ開発技法</span><a href="../oshi-list/index.html" data-back>もとの教科書へ戻る</a></header>
+<main id="main">
+  <div class="hero">
+    <p class="eyebrow">共通資料 · 授業サポート</p>
+    <h1>困ったとき</h1>
+    <p class="lede">コードが赤くなった、画面が出ない、動作しない、原因が分からない。<br>エラーに向き合い、自分で解決するための調べ方をまとめています。</p>
+    <nav aria-label="このページの内容"><ol>
+      <li><a href="#how-to-debug">1. エラーが起きたときの調べ方</a></li>
+      <li><a href="#environment-trouble">2. 開発環境別の確認ポイント</a></li>
+      <li><a href="#sample-project">3. どうしても解決しないときは（完成プロジェクトの確認）</a></li>
+    </ol></nav>
+  </div>
+
+  <section id="how-to-debug">
+    <h2>1. エラーが起きたときの調べ方</h2>
+    <p>プログラミングでエラーが出るのは自然なことです。エラーメッセージには「どのファイルの何行目で、何が問題か」が書かれています。焦らずに上から順に確認しましょう。</p>
+    <ol>
+      <li><strong>各単元の「困ったとき」表を確認する</strong><br>教科書の末尾にある「困ったとき」には、その単元でよくある状態と確認場所がまとまっています。</li>
+      <li><strong>最初の赤い行を見る</strong><br>エラーが複数出ているときは、一番上の「最初の赤い行」を直します。最初の1つを直すと、あとのエラーがまとめて消えることがよくあります。</li>
+      <li><strong>直前のSTEPと見比べる</strong><br>手順を1つ飛ばしていないか、大文字・小文字やスペル（綴り）、全角スペースが混ざっていないかを確認します。</li>
+      <li><strong>先生に質問するときは</strong><br>「STEP番号・編集したファイル・最初の赤い行・実行した操作」を伝えると、原因が早く分かります。</li>
+    </ol>
+  </section>
+
+  <section id="environment-trouble">
+    <h2>2. 開発環境別の確認ポイント</h2>
+    <table><thead><tr><th>開発環境</th><th>確認するポイント</th><th>参考資料</th></tr></thead><tbody>
+      <tr><td>Monaca クラウド IDE</td><td>プレビュー画面下の「デバッグログ」やブラウザの開発者ツール（F12/右クリック→検証）のConsoleタブを確認します。JavaScriptの構文エラーやファイル読み込みエラーが赤く表示されます。</td><td><a href="setup.html#step-2" data-keep-from>共通：準備（Monaca）</a></td></tr>
+      <tr><td>Flutter / Visual Studio Code</td><td>ターミナル（Terminal）のエラー出力や、エディタ下部の「PROBLEMS（問題）」タブを確認します。<code>flutter pub get</code> の実行漏れやパッケージの指定誤りを確認します。</td><td><a href="setup.html#step-4" data-keep-from>共通：準備（Flutter）</a></td></tr>
+    </tbody></table>
+  </section>
+
+  <section id="sample-project">
+    <h2>3. どうしても解決しないときは（完成プロジェクトの確認）</h2>
+    <p>どうしても自分のコードの間違いが見つからないときや、アプリ本来の動きを確認したいときは、先生が用意した<strong>完成プロジェクト（見本）</strong>を開いて自分のコードと見比べることができます。</p>
+
+    <div class="note"><p class="box-title">完成プロジェクトは「答え合わせ用」です</p>
+    <p>完成プロジェクトからコードをそのままコピーしたり、完成プロジェクトを改造して提出しても、自分の課題の提出にはなりません。見本で違いを確認したら、必ず<strong>自分で作ったプロジェクトに戻り、自分の手で修正</strong>してください。</p></div>
+
+    <h3>見本の場所と開き方</h3>
+    <ol>
+      <li>Finderで <code>書類</code>（<code>~/Documents</code>）にある配布フォルダ（<code>hybrid-app-student-materials-日付</code>）を開きます。</li>
+      <li>その中にある <code>samples</code> フォルダから、該当する単元のフォルダ（例：<code>M01OshiList</code>、<code>F01StampBoard</code> など）を確認します。</li>
+      <li><strong>Monaca単元（M01・M02）</strong>：<code>samples</code> の中にあるHTML/CSS/JSファイルをテキストエディタで開き、自分のコードと見比べます。Monaca クラウド IDE上で見本を動かして確かめたいときは、先生がZIPにして公開した取り込み用URL（<a href="https://monaca.mobi/ja/directimport?pid=6ab62c99e7888517430a0ae6">M01OshiList</a> / <a href="https://monaca.mobi/ja/directimport?pid=6ab62caae788858e561a0da3">M02OshiSave</a>）を通常版Monacaへログインした状態で開いて取り込みます。取り込むとFreeプランの枠を1枠使います。Freeプランの制限で取り込めない場合でも、<code>samples</code> のコードを直接読めば進められます。</li>
+      <li><strong>Flutter単元（F01・F02）</strong>：Visual Studio Code の <code>File → Open Folder…</code> で該当フォルダを選んで開きます。見本でコードや動作を確認したら、自分の制作フォルダ（<code>~/Documents/HybridApp</code>）を開き直して作業を続けます。</li>
+    </ol>
+
+    <div class="check"><p class="box-title">取り違えに注意</p>
+    <p>見本と自分のアプリは同じプロジェクト名です。ウィンドウ上部やタブに表示されるフォルダパスを確認し、見本のほうを編集してしまわないよう注意しましょう。</p></div>
+  </section>
+</main></body></html>

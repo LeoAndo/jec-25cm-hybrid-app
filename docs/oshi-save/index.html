@@ -27,14 +27,13 @@
 <li><a href="#step-13">13 提出と準備状況の確認</a></li>
 <li><a href="#step-14">14 アレンジ箇所を確かめる</a></li>
 </ol></nav>
-<div class="resources"><a href="#help">困ったとき</a><a href="#sample-project">完成プロジェクトを開く</a><a href="../oshi-list/index.html">M01：OshiList</a><span aria-current="page">M02：OshiSave</span><a href="../stamp-board/index.html">F01：StampBoard</a><a href="../stamp-release/index.html">F02：StampRelease</a><a href="../common/setup.html?from=oshi-save">共通：はじめの準備</a></div>
+<div class="resources"><a href="#help">困ったとき</a><a href="../oshi-list/index.html">M01：OshiList</a><span aria-current="page">M02：OshiSave</span><a href="../stamp-board/index.html">F01：StampBoard</a><a href="../stamp-release/index.html">F02：StampRelease</a><a href="../common/setup.html?from=oshi-save">共通：はじめの準備</a><a href="../common/help.html?from=oshi-save">共通：困ったとき</a></div>
 </div></aside><main id="main"><div class="hero"><div class="unit">M02</div><p class="eyebrow">コマ5〜7 · 各90分</p><h1>好きなものノート：追加して、残そう。</h1>
 <p class="lede">日常の中で見つけた好きなものと、好きな理由を画面から追加します。再読み込みしても自分の記録が戻る仕組みを作り、ソースにアレンジを残して公開URLを提出します。</p>
 <div class="tags"><span>Monaca クラウド IDE / Google Chrome</span><span>Onsen UI 2.12.9</span><span>HTML / CSS / JavaScript</span></div>
 <div class="goal"><p class="box-title">この単元で分かること</p><p>新しい考え方は<strong>JSON</strong>です。画面で使う配列を保存用の文字列にし、読み込んだ文字列を配列へ戻します。保存先はJavaの<code>SharedPreferences</code>・Swiftの<code>UserDefaults</code>と比較します。</p></div>
 <p>完成見本の名前は <code>M02OshiSave</code> です。学生は自分の好きなものノートを同じ1プロジェクトで育てます。まだプロジェクトがない場合の作り方も、一覧・詳細の開始コードも、この本文にあります。</p>
 <table><thead><tr><th>コマ</th><th>到達点</th></tr></thead><tbody><tr><td>5</td><td>入力した好きなものを一覧へ追加し、詳細を読める。</td></tr><tr><td>6</td><td>JSONと<code>localStorage</code>で保存・復元できる。初期化には確認を挟む。</td></tr><tr><td>7</td><td>授業内でFlutter準備を開始し、待ち時間に好きなものノートをアレンジ・確認・提出する。</td></tr></tbody></table></div>
-<section id="sample-project"><h2>完成プロジェクトを開く</h2><p>配布フォルダの <code>~/Documents/hybrid-app-student-materials-日付/samples/M02OshiSave</code> をFinderで開きます。<code>M02OshiSave</code> の完成見本で、自分のコードと読み比べるために使います。自分の作品を見本で上書きしません。自分の制作を始める人は、STEP 00へ進みます。</p><p>Monaca クラウド IDEは、Macのフォルダをそのまま開けません。見本をMonacaで動かすときは、先生がZIPにして公開した<a href="https://monaca.mobi/ja/directimport?pid=6ab62caae788858e561a0da3">M02OshiSaveの取り込み用URL</a>を開いて取り込みます。これはアプリを動かすURLではなく、完成見本のソースを自分のMonacaへ取り込むURLで、Freeプランの3枠のうち1枠を使います。空きを確かめてから1回だけ開きます。取り込み用URLがあっても、Freeプランの制限（プロジェクトの数や、対応するCordovaの版）で、取り込めない、または取り込んだ見本を開けないことがあります。そのときは無理に取り込まず、先生に知らせてください。見本のコードは配布フォルダの <code>samples</code> で読めるので、取り込めなくても授業は進められます。</p></section>
 <section id="step-0"><p class="step-meta">STEP 00 · コマ5</p><h2>自分の好きなものノートを開く</h2>
 <p>Google Chromeで通常版Monacaへログインし、自分の好きなものノートを開きます。続けて使っているプロジェクトは、名前が <code>M01OshiList</code> のままで構いません。今日のためにコピーを増やしたり、削除したりしません。</p>
 <ol><li>まだ自分の好きなものノートがない人だけ、ダッシュボードで新規作成し、<code>最小限のテンプレート</code> を選び、<code>M02OshiSave</code> と名付けます。登録や空き枠が不明なら、<a href="../common/setup.html?from=oshi-save#step-2">共通資料のSTEP 2〜3</a>で確認して戻ります。</li><li><code>www/index.html</code>・<code>www/css/style.css</code> を開きます。<code>www/js/app.js</code> がなければ、ファイル一覧の作成操作で <code>www</code> の下に <code>js</code> フォルダ、その中に <code>app.js</code> ファイルを作ります。</li><li>自分のアレンジがある場合は、変えた文字と色を控えます。下の開始コード3ファイルをそろえ、保存してプレビューを再読み込みします。<code>components</code> や <code>res</code> は変更しません。</li><li>3件の名前を押して詳細を開き、左上の戻るボタンで一覧へ戻ります。戻るボタンは、iOS向けの見た目では「＜ 戻る」、Android向けの見た目では左向きの矢印「←」だけです。タイトルと詳細の組み合わせを確かめます。</li></ol>
@@ -4960,4 +4959,4 @@ function resetOshiItems() {
 <tr><td>初期データを書き換えても古い内容が出る</td><td>保存データが優先される。必要な内容を控えたうえで、アプリ内の「初期の内容に戻す」を使う。</td></tr>
 <tr><td>保存・読込失敗と出る</td><td>その表示を先生へ見せる。読込に失敗したデータは自動で上書きしない。ブラウザ設定を無理に変更しない。</td></tr>
 <tr><td>提出URLが先生の見本と同じ</td><td>自分のプロジェクトで発行したURLか確認。クラウド IDEのアドレスやプレビューURLでは提出しない。</td></tr>
-</tbody></table></section><p class="footer">JEC / ハイブリッドアプリ開発技法 · M02OshiSave</p><p class="sr-only" role="status" aria-live="polite" data-copy-status></p></main></div></body></html>
+</tbody></table><p>エラーが解決しないときは、<a href="../common/help.html?from=oshi-save">共通資料：困ったとき</a>の「完成プロジェクト（見本）の確認」を参照してください。</p></section><p class="footer">JEC / ハイブリッドアプリ開発技法 · M02OshiSave</p><p class="sr-only" role="status" aria-live="polite" data-copy-status></p></main></div></body></html>

@@ -17,7 +17,7 @@ JEC（25CM）の「ハイブリッドアプリ開発技法」で使う教材で�
 
 **Monacaの題材はM01・M02とも「好きなものノート」に統一します（2026-09-24 オーナー決定）。** 好きな音楽・食べ物・場所など、身近なものの名前・種類・好きな理由を記録します。留学生にも意味をつかみやすい表現を使い、個人的な話の開示は求めません。コマ数と学習内容は維持します。既存の配布リンクと保存データを引き継ぐため、プロジェクト名・URL・コード内の識別子は継続して使います。
 
-[共通資料：授業を始めるまでの準備](docs/common/setup.html)では、教材の受け取り、Monacaのアカウント作成、Flutter 3.47.5の準備を授業内で進めます。M01では、静的なカードからOnsen UIの一覧・詳細へ進み、auto-stylingによるOSごとの見た目を比べます。M02では入力・JSON保存・復元へ進み、コマ7に公開URLを提出します。F01では空のFlutterプロジェクトから一覧・状態更新・詳細を作ります。F02では入力・非同期保存・復元を加え、確認した通常APKをコマ15に提出します。
+[共通資料：授業を始めるまでの準備](docs/common/setup.html)では、教材の受け取り、Monacaのアカウント作成、Flutter 3.47.5の準備を授業内で進めます。[共通資料：困ったとき](docs/common/help.html)では、トラブル時の調べ方や完成プロジェクト（見本）の開き方をまとめています。M01では、静的なカードからOnsen UIの一覧・詳細へ進み、auto-stylingによるOSごとの見た目を比べます。M02では入力・JSON保存・復元へ進み、コマ7に公開URLを提出します。F01では空のFlutterプロジェクトから一覧・状態更新・詳細を作ります。F02では入力・非同期保存・復元を加え、確認した通常APKをコマ15に提出します。
 
 15コマの割り当ては下の「15コマ計画」にあります。教科書・教員用ガイド・`config/teaching-materials.json` への登録は、単元ごとのissueで行います（[AGENTS.md](AGENTS.md) §9、[単元追加用skill](skills/add-teaching-unit/SKILL.md)）。
 
@@ -35,7 +35,7 @@ JEC（25CM）の「ハイブリッドアプリ開発技法」で使う教材で�
 
 展開後、はじめて授業を受ける学生は [共通資料：授業を始めるまでの準備](docs/common/setup.html) をブラウザで開き、第1コマにSTEP 1〜3、第7コマにSTEP 4〜7を進めます（同梱の `はじめに.txt` でも、単元一覧より前に案内しています）。準備が済んだら、その日の単元の教科書をブラウザで開きます。
 
-学生用ZIPには `docs` 一式と、開き方・版情報を収録します。**いまは日本語・英語（`en`）・中国語（簡体）（`zh-Hans`）・広東語（繁体・香港）（`zh-Hant-HK`）・台湾華語（`zh-Hant-TW`）・韓国語（`ko`）・スペイン語（`es`）・ミャンマー語（`my`）・アラビア語（`ar`）・モンゴル語（キリル文字）（`mn`）の全10言語（日本語＋9言語）で配布します。** 展開してできたフォルダには `docs` / `samples` / `はじめに.txt` / `VERSION.json` があります。現在の登録単元は `M01OshiList`・`M02OshiSave`・`F01StampBoard`・`F02StampRelease` で、`samples/` に各完成見本を展開済みで収録します。`samples` はコードを読み比べるために使い、Monacaで動かすときは教科書の取り込み用URLから取り込みます。展開したフォルダは `~/Documents`（書類）の直下に置き（`~/Documents/hybrid-app-student-materials-日付`）、学生自身が作るプロジェクトは配布フォルダの外の `~/Documents/HybridApp` に置きます（2026-09-25 先生レビュー、#135）。フォルダの直下には言語を選ぶ入口の `index.html` があり、`はじめに.txt` にも各言語の案内が付きます。入口に並ぶのは、`config/i18n.json` で `distribute: true` の言語だけです（「多言語展開」）。全9言語の翻訳と照合が完了し、入口に全言語が揃っています。`teacher` フォルダとテンプレート原本（`MonacaTemplate`・`MonacaMinimumTemplate`）は収録しません。GitHubが自動で表示する **Source code (zip)** はリポジトリ全体のため、学生用ZIPには使いません。なお、このリポジトリ自体はPublicなので、教員用ファイルもGitHub上では閲覧できます。
+学生用ZIPには `docs` 一式と、開き方・版情報を収録します。**いまは日本語・英語（`en`）・中国語（簡体）（`zh-Hans`）・広東語（繁体・香港）（`zh-Hant-HK`）・台湾華語（`zh-Hant-TW`）・韓国語（`ko`）・スペイン語（`es`）・ミャンマー語（`my`）・アラビア語（`ar`）・モンゴル語（キリル文字）（`mn`）の全10言語（日本語＋9言語）で配布します。** 展開してできたフォルダには `docs` / `samples` / `はじめに.txt` / `VERSION.json` があります。現在の登録単元は `M01OshiList`・`M02OshiSave`・`F01StampBoard`・`F02StampRelease` で、`samples/` に各完成見本を展開済みで収録します。`samples` は自力での解決が難しいときにコードを読み比べるために使い、開き方は共通資料の [困ったとき](docs/common/help.html) で案内します。Monacaで動かすときは困ったときに記載の取り込み用URLから取り込みます。展開したフォルダは `~/Documents`（書類）の直下に置き（`~/Documents/hybrid-app-student-materials-日付`）、学生自身が作るプロジェクトは配布フォルダの外の `~/Documents/HybridApp` に置きます（2026-09-25 先生レビュー、#135）。フォルダの直下には言語を選ぶ入口の `index.html` があり、`はじめに.txt` にも各言語の案内が付きます。入口に並ぶのは、`config/i18n.json` で `distribute: true` の言語だけです（「多言語展開」）。全9言語の翻訳と照合が完了し、入口に全言語が揃っています。`teacher` フォルダとテンプレート原本（`MonacaTemplate`・`MonacaMinimumTemplate`）は収録しません。GitHubが自動で表示する **Source code (zip)** はリポジトリ全体のため、学生用ZIPには使いません。なお、このリポジトリ自体はPublicなので、教員用ファイルもGitHub上では閲覧できます。
 
 授業中は教員が指定した版を使います。授業ごとの案内には、内容が固定された個別リリースのURLを使ってください。更新版も `~/Documents` の直下に別フォルダとして展開し、学生自身のプロジェクト（`~/Documents/HybridApp`）は上書きしません。
 
@@ -43,7 +43,7 @@ JEC（25CM）の「ハイブリッドアプリ開発技法」で使う教材で�
 
 | 系統 | 学生が受け取る形 |
 | --- | --- |
-| Monaca | 配布フォルダの `samples/<プロジェクト名>` をFinderで開いて、コードを読み比べます。Monaca クラウド IDEはMacのフォルダをそのまま開けないので、動かすときは教科書に載せた**取り込み用のURL**（教員がZIPにして公開した `https://monaca.mobi/ja/directimport?pid=…`）を開き、学生のMonacaにプロジェクトを取り込みます（Freeプランの1枠を使う）。2026-09-25 の先生レビュー時点ではこのURLがリンク切れ（Project Not Found）でしたが、同日に #132（PR #136）で公開し直した新しいURLに差し替えてあります。URLがあっても Free プランの制限（プロジェクト数、対応する Cordova の版）で学生が取り込めない可能性があるので、教科書にはその旨と「取り込めなくても `samples` で進められる」ことを書いてあります（2026-09-25 オーナー指示） |
+| Monaca | 配布フォルダの `samples/<プロジェクト名>` をFinderで開いて、コードを読み比べます。Monaca クラウド IDEはMacのフォルダをそのまま開けないので、動かすときは共通資料「困ったとき」に載せた**取り込み用のURL**（教員がZIPにして公開した `https://monaca.mobi/ja/directimport?pid=…`）を開き、学生のMonacaにプロジェクトを取り込みます（Freeプランの1枠を使う）。2026-09-25 の先生レビュー時点ではこのURLがリンク切れ（Project Not Found）でしたが、同日に #132（PR #136）で公開し直した新しいURLに差し替えてあります。URLがあっても Free プランの制限（プロジェクト数、対応する Cordova の版）で学生が取り込めない可能性があるので、共通資料にはその旨と「取り込めなくても `samples` で進められる」ことを書いてあります（2026-09-25 オーナー指示） |
 | Flutter | 配布フォルダ（`~/Documents/hybrid-app-student-materials-日付/`）の `samples/<プロジェクト名>` をFinderで開き、Visual Studio Code の `File > Open Folder…` で選びます。展開は済んでいるので、教科書からZIPをダウンロードさせません |
 
 ### Monacaのプランと、そこから来る制約
@@ -108,7 +108,7 @@ Freeプランの制限が、そのまま教材の設計を縛ります。詳細�
 | `docs/stamp-board/` / `teacher/stamp-board/` | F01の教科書・完成ZIP・教員用ガイドと照合コード |
 | `F02StampRelease/` | [スタンプ帳の入力・保存・APK提出の完成ソース](F02StampRelease/README.md) |
 | `docs/stamp-release/` / `teacher/stamp-release/` | F02の教科書・完成ZIP・教員用ガイドと照合コード |
-| `docs/common/` | 学生向けの共通準備資料 |
+| `docs/common/` | 学生向けの共通準備資料・サポート資料（準備、困ったとき） |
 | `docs/assets/` | 教科書の共通CSS・操作機能 |
 | `MonacaMinimumTemplate/` | [通常版の最小限テンプレート4.0.0と出所・比較記録](MonacaMinimumTemplate/README.md) |
 | `MonacaTemplate/` | 既存のCordova11テンプレート。比較用に保持 |
