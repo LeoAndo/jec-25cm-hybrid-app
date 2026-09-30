@@ -325,7 +325,7 @@ class PackageStudentMaterialsTest(unittest.TestCase):
                 self.assertIn(f'<html lang="{language["code"]}"{page_dir}>', page)
                 # 注記、UIと全言語の導線はカタログの有無に左右されない。
                 self.assertIn(language['translation_notice'], page)
-                self.assertIn(language['ui']['copy'], page)
+                self.assertIn(language['ui']['progress'], page)
                 self.assertEqual(page.count('hreflang='), len(config['languages']) + 1)
                 self.assertIn(f'<span lang="ja"{japanese_dir}>未翻訳の文', page)
                 # 言語の切り替えでは、どのページでも、言語名をその言語の向きで出す。

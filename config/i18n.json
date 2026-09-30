@@ -8,12 +8,6 @@
       "name": "English",
       "distribute": true,
       "ui": {
-        "copy": "Copy",
-        "copy_label": "Copy the code for {title}",
-        "copied": "Copied",
-        "copy_success": "Code copied. Paste it into your editor.",
-        "copy_shortcut": "Copy with ⌘ C",
-        "copy_selected": "Code selected. Press ⌘ C to copy.",
         "progress": "{count} / {total} steps checked"
       },
       "language_label": "Language",
@@ -28,12 +22,6 @@
       "distribute": true,
       "han": true,
       "ui": {
-        "copy": "复制",
-        "copy_label": "复制{title}的代码",
-        "copied": "已复制",
-        "copy_success": "代码已复制。请粘贴到编辑器中。",
-        "copy_shortcut": "按 ⌘ C 复制",
-        "copy_selected": "已选中代码。请按 ⌘ C 复制。",
         "progress": "已确认 {count} / {total} 个步骤"
       },
       "language_label": "语言",
@@ -48,12 +36,6 @@
       "distribute": true,
       "han": true,
       "ui": {
-        "copy": "複製",
-        "copy_label": "複製{title}的程式碼",
-        "copied": "已複製",
-        "copy_success": "已複製程式碼。請貼上至編輯器。",
-        "copy_shortcut": "按 ⌘ C 複製",
-        "copy_selected": "已選取程式碼。請按 ⌘ C 複製。",
         "progress": "已確認 {count} / {total} 個步驟"
       },
       "language_label": "語言",
@@ -68,12 +50,6 @@
       "distribute": true,
       "han": true,
       "ui": {
-        "copy": "複製",
-        "copy_label": "複製{title}的程式碼",
-        "copied": "已複製",
-        "copy_success": "已複製程式碼。請貼到編輯器中。",
-        "copy_shortcut": "按 ⌘ C 複製",
-        "copy_selected": "已選取程式碼。請按 ⌘ C 複製。",
         "progress": "已確認 {count} / {total} 個步驟"
       },
       "language_label": "語言",
@@ -87,12 +63,6 @@
       "name": "한국어",
       "distribute": true,
       "ui": {
-        "copy": "복사",
-        "copy_label": "{title}의 코드 복사",
-        "copied": "복사했습니다",
-        "copy_success": "코드를 복사했습니다. 편집기에 붙여 넣으십시오.",
-        "copy_shortcut": "⌘ C로 복사",
-        "copy_selected": "코드를 선택했습니다. ⌘ C를 눌러 복사하십시오.",
         "progress": "{total} 단계 중 {count} 단계 확인함"
       },
       "language_label": "언어",
@@ -106,12 +76,6 @@
       "name": "မြန်မာဘာသာ",
       "distribute": true,
       "ui": {
-        "copy": "ကူးယူမည်",
-        "copy_label": "{title} အတွက် ကုဒ်ကို ကူးယူမည်",
-        "copied": "ကူးယူပြီးပါပြီ",
-        "copy_success": "ကုဒ်ကို ကူးယူပြီးပါပြီ။ အယ်ဒီတာတွင် ထည့်ပါ။",
-        "copy_shortcut": "⌘ C ဖြင့် ကူးယူပါ",
-        "copy_selected": "ကုဒ်ကို ရွေးထားပါသည်။ ကူးယူရန် ⌘ C ကို နှိပ်ပါ။",
         "progress": "အဆင့် {total} ခုအနက် {count} ခု စစ်ဆေးပြီး"
       },
       "language_label": "ဘာသာစကား",
@@ -125,12 +89,6 @@
       "name": "Español",
       "distribute": true,
       "ui": {
-        "copy": "Copiar",
-        "copy_label": "Copiar el código de {title}",
-        "copied": "Copiado",
-        "copy_success": "Código copiado. Pégalo en tu editor.",
-        "copy_shortcut": "Copia con ⌘ C",
-        "copy_selected": "Código seleccionado. Presiona ⌘ C para copiarlo.",
         "progress": "{count} / {total} pasos verificados"
       },
       "language_label": "Idioma",
@@ -145,12 +103,6 @@
       "distribute": true,
       "dir": "rtl",
       "ui": {
-        "copy": "نسخ",
-        "copy_label": "نسخ شيفرة {title}",
-        "copied": "تم النسخ",
-        "copy_success": "تم نسخ الشيفرة. الصقها في المحرر.",
-        "copy_shortcut": "انسخ باستخدام ⌘ C",
-        "copy_selected": "تم تحديد الشيفرة. اضغط ⌘ C لنسخها.",
         "progress": "الخطوات التي تم التحقق منها: {count} / {total}"
       },
       "language_label": "اللغة",
@@ -164,12 +116,6 @@
       "name": "Монгол",
       "distribute": true,
       "ui": {
-        "copy": "Хуулах",
-        "copy_label": "Кодыг хуулах: {title}",
-        "copied": "Хуулсан",
-        "copy_success": "Кодыг хууллаа. Засварлагчдаа буулгана уу.",
-        "copy_shortcut": "⌘ C дарж хуулна уу",
-        "copy_selected": "Кодыг сонголоо. Хуулахын тулд ⌘ C дарна уу.",
         "progress": "Шалгасан алхам: {count} / {total}"
       },
       "language_label": "Хэл",
@@ -180,12 +126,6 @@
     }
   ],
   "source_ui": {
-    "copy": "コピー",
-    "copy_label": "{title}のコードをコピー",
-    "copied": "コピーしました",
-    "copy_success": "コードをコピーしました。エディタに貼り付けてください。",
-    "copy_shortcut": "⌘ Cでコピー",
-    "copy_selected": "コードを選択しました。⌘ Cでコピーしてください。",
     "progress": "{count} / {total} ステップ確認済み"
   }
 }

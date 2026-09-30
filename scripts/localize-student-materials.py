@@ -50,7 +50,7 @@ SKIPPED = {"pre", "script", "style"}
 TRANSLATED_ATTRIBUTES = ("alt", "aria-label", "title", "placeholder")
 LINK_ATTRIBUTES = ("href", "src")
 # 教科書のUI文言（docs/assets/textbook.js の既定値と同じ項目）。配布物と確認用ページの両方に渡す。
-UI_KEYS = ("copy", "copy_label", "copied", "copy_success", "copy_shortcut", "copy_selected", "progress")
+UI_KEYS = ("progress",)
 BODY = re.compile(r"<body\b[^>]*>", re.I)
 
 # ひらがな・カタカナ・漢字。「・」（U+30FB）は、英字だけの文にも区切りとして出てくるので含めない。

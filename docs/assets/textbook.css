@@ -94,8 +94,6 @@ code { background: #eef1f3; border-radius: 3px; padding: .13em .3em; font-size: 
 pre { background: #192635; color: #edf4fc; border-radius: 0 0 9px 9px; padding: 1.2rem; margin: 0 0 1.2rem; overflow-x: auto; line-height: 1.65; font-size: .82rem; tab-size: 4; }
 pre code { padding: 0; background: transparent; color: inherit; font-size: inherit; overflow-wrap: inherit; }
 .code-head { background: #293c51; color: #edf4fc; border-radius: 9px 9px 0 0; padding: .5rem .8rem; display: flex; gap: 1rem; justify-content: space-between; align-items: center; margin-top: .8rem; font-size: .78rem; }
-.code-head button { border: 1px solid #a6bed5; border-radius: 5px; padding: .15rem .6rem; color: white; background: transparent; white-space: nowrap; font-size: .75rem; }
-.code-head button:hover { background: #435a73; }
 /* 既知の技術（Web基礎の HTML / CSS / JavaScript、Java、Swift）との比較ブロック。
    その単元で書く言語（Monaca系は HTML / CSS / JavaScript、Flutter系は Dart）を先頭に置き、
    横に並べて見比べる。先頭は、日本語のページでは左端、右から左の言語のページでは右端になる。
@@ -167,7 +165,7 @@ details[open] > summary { margin-bottom: 1rem; }
 @media print {
   @page { margin: 16mm; }
   body { color: black; background: white; font-size: 10pt; line-height: 1.65; }
-  .topbar, .sidebar, .skip, .next, .code-head button, .no-print { display: none !important; }
+  .topbar, .sidebar, .skip, .next, .no-print { display: none !important; }
   .shell { display: block; }
   main, .plain main { padding: 0; max-width: none; }
   .hero { padding-bottom: 1rem; }
