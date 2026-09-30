@@ -211,16 +211,60 @@
       "translation": "En los <a1>STEP 1〜3 de los materiales comunes</a1>, recibe los materiales, regístrate e inicia sesión en la versión estándar de Monaca, verifica los espacios disponibles y regresa a esta página. Tanto el primer registro como la descarga se realizan dentro de la clase."
     },
     {
-      "source": "Monacaのプロジェクト一覧から新規作成に進み、<code>最小限のテンプレート</code> を選びます。プロジェクト名を <code>M01OshiList</code> として作成し、開きます。既に自分の同名プロジェクトがあれば、その続きを開きます。",
-      "translation": "Ve a la creación de un nuevo proyecto desde la lista de proyectos de Monaca y selecciona <code>最小限のテンプレート</code> (Plantilla mínima). Crea el proyecto con el nombre <code>M01OshiList</code> y ábrelo. Si ya tienes un proyecto propio con el mismo nombre, abre ese para continuar."
+      "source": "プロジェクト一覧から新規作成に進み、<code>最小限のテンプレート</code> を選びます。",
+      "translation": "Ve a la creación de un nuevo proyecto desde la lista de proyectos y elige <code>最小限のテンプレート</code> (Plantilla mínima)."
     },
     {
-      "source": "ファイル一覧で <code>www/index.html</code> と <code>www/css/style.css</code> を探します。<code>components</code>、<code>res</code>、設定ファイルはそのまま使います。",
-      "translation": "En la lista de archivos, busca <code>www/index.html</code> y <code>www/css/style.css</code>. Deja tal como están <code>components</code>, <code>res</code> y los archivos de configuración."
+      "source": "「新しいプロジェクトを作る」画面で最小限のテンプレートを選択",
+      "translation": "Selección de la plantilla mínima en la pantalla Crear nuevo proyecto"
     },
     {
-      "source": "下の全コードを開き、2ファイルの内容をそれぞれ置き換えて保存します。プレビューを再読み込みし、<strong>好きなものノートを作ります。</strong>を確認します。",
-      "translation": "Abre el código completo que se muestra abajo, reemplaza el contenido de cada uno de los dos archivos y guárdalos. Recarga la vista previa y comprueba que aparezca <strong>好きなものノートを作ります。</strong> (Crearemos un cuaderno de favoritos.)."
+      "source": "「新しいプロジェクトを作る」画面で、一番右にある <code>最小限のテンプレート</code> を選びます。",
+      "translation": "En la pantalla \"Crear nuevo proyecto\", elige <code>最小限のテンプレート</code> (Plantilla mínima) en el extremo derecho."
+    },
+    {
+      "source": "プロジェクト名に <code>M01OshiList</code> と入力し、<code>作成</code> を選びます。",
+      "translation": "Escribe <code>M01OshiList</code> como nombre del proyecto y elige <code>作成</code> (Crear)."
+    },
+    {
+      "source": "プロジェクト名にM01OshiListを入力し作成ボタンを押す画面",
+      "translation": "Pantalla donde se ingresa M01OshiList en el nombre del proyecto y se pulsa el botón Crear"
+    },
+    {
+      "source": "プロジェクト一覧から <code>M01OshiList</code> を選び、<code>クラウドIDEで開く</code> を押します。既に自分の同名プロジェクトがあれば、その続きを開きます。",
+      "translation": "En la lista de proyectos, selecciona <code>M01OshiList</code> y pulsa <code>クラウドIDEで開く</code> (Abrir en el IDE en la nube). Si ya tienes tu propio proyecto con el mismo nombre, continúa abriendo ese."
+    },
+    {
+      "source": "プロジェクト一覧でM01OshiListのクラウドIDEで開くを選ぶ画面",
+      "translation": "Pantalla para seleccionar Abrir en el IDE en la nube para M01OshiList en la lista de proyectos"
+    },
+    {
+      "source": "プロジェクト一覧から <code>M01OshiList</code> を選び、<code>クラウドIDEで開く</code> を押します。",
+      "translation": "Selecciona <code>M01OshiList</code> de la lista de proyectos y pulsa <code>クラウドIDEで開く</code> (Abrir en el IDE en la nube)."
+    },
+    {
+      "source": "クラウドIDEが開いたら、左側のファイル一覧で <code>www/index.html</code> と <code>www/css/style.css</code> を探します。<code>components</code>、<code>res</code>、設定ファイルはそのまま使います。",
+      "translation": "Cuando se abra el IDE en la nube, busca <code>www/index.html</code> y <code>www/css/style.css</code> en la lista de archivos de la izquierda. Deja <code>components</code>, <code>res</code> y los archivos de configuración tal como están."
+    },
+    {
+      "source": "Monaca クラウド IDEの初期画面。左側にファイル一覧、右側にindex.htmlのエディタが表示されている",
+      "translation": "Pantalla inicial de Monaca クラウド IDE. Muestra la lista de archivos a la izquierda y el editor de index.html a la derecha"
+    },
+    {
+      "source": "クラウドIDEが開きます。左側のファイル一覧で <code>www/index.html</code> や <code>www/css/style.css</code> を確認します。",
+      "translation": "Se abre el IDE en la nube. Revisa <code>www/index.html</code> y <code>www/css/style.css</code> en la lista de archivos de la izquierda."
+    },
+    {
+      "source": "下の全コードを開き、2ファイルの内容をそれぞれ置き換えて保存します。プレビューを再読み込みし、<strong>好きなものノートを作ります。</strong>を確認します。プレビューが表示されないときは、上部メニューの <code>表示</code> → <code>プレビュータブを表示</code> や <code>レイアウトをリセット</code> を選びます。",
+      "translation": "Abre el código completo a continuación, reemplaza el contenido de los 2 archivos y guárdalos. Recarga la vista previa y comprueba que aparezca <strong>好きなものノートを作ります。</strong> (Haremos un cuaderno de cosas favoritas.). Si no se muestra la vista previa, elige en el menú superior <code>表示</code> (Ver) → <code>プレビュータブを表示</code> (Mostrar pestaña de vista previa) o <code>レイアウトをリセット</code> (Restablecer diseño)."
+    },
+    {
+      "source": "クラウドIDEのメニューバー「表示」から「プレビュータブを表示」「レイアウトをリセット」を選ぶ画面",
+      "translation": "Pantalla para elegir Mostrar pestaña de vista previa o Restablecer diseño en el menú \"表示\" (Ver) del IDE en la nube"
+    },
+    {
+      "source": "プレビューが表示されないときは、上部メニューの <code>表示</code> → <code>プレビュータブを表示</code> や <code>レイアウトをリセット</code> を選びます。",
+      "translation": "Si no se muestra la vista previa, elige en el menú superior <code>表示</code> (Ver) → <code>プレビュータブを表示</code> (Mostrar pestaña de vista previa) o <code>レイアウトをリセット</code> (Restablecer diseño)."
     },
     {
       "source": "以後、本文のパスはプロジェクト内の位置です。「全コード」は指定ファイルの中身をすべて置き換えるためのものです。先に比較と説明を読み、貼り付けた後は確認欄の操作まで行いましょう。",
