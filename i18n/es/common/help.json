@@ -43,10 +43,6 @@
       "translation": "2. Puntos a verificar según el entorno de desarrollo"
     },
     {
-      "source": "3. どうしても解決しないときは（完成プロジェクトの確認）",
-      "translation": "3. Si de verdad no logras resolverlo (Comprobar el proyecto terminado)"
-    },
-    {
       "source": "プログラミングでエラーが出るのは自然なことです。エラーメッセージには「どのファイルの何行目で、何が問題か」が書かれています。焦らずに上から順に確認しましょう。",
       "translation": "Tener errores al programar es completamente natural. En los mensajes de error siempre se indica «qué problema hay en qué línea de qué archivo». Mantén la calma y comprueba en orden de arriba a abajo."
     },
@@ -97,46 +93,6 @@
     {
       "source": "共通：準備（Flutter）",
       "translation": "Común: Preparación (Flutter)"
-    },
-    {
-      "source": "どうしても自分のコードの間違いが見つからないときや、アプリ本来の動きを確認したいときは、先生が用意した<strong>完成プロジェクト（見本）</strong>を開いて自分のコードと見比べることができます。",
-      "translation": "Cuando de ninguna forma encuentres el error en tu código o quieras comprobar el funcionamiento previsto de la aplicación, puedes abrir el <strong>proyecto terminado (ejemplo)</strong> preparado por el profesor y compararlo con tu código."
-    },
-    {
-      "source": "完成プロジェクトは「答え合わせ用」です",
-      "translation": "El proyecto terminado es para «comprobar las respuestas»"
-    },
-    {
-      "source": "完成プロジェクトからコードをそのままコピーしたり、完成プロジェクトを改造して提出しても、自分の課題の提出にはなりません。見本で違いを確認したら、必ず<strong>自分で作ったプロジェクトに戻り、自分の手で修正</strong>してください。",
-      "translation": "Copiar directamente el código del proyecto terminado o modificar el proyecto terminado para entregarlo no cuenta como entregar tu propia tarea. Tras comprobar las diferencias con el ejemplo, asegúrate de <strong>volver al proyecto que creaste tú mismo y corregirlo con tus propias manos</strong>."
-    },
-    {
-      "source": "見本の場所と開き方",
-      "translation": "Ubicación de los ejemplos y cómo abrirlos"
-    },
-    {
-      "source": "Finderで <code>書類</code>（<code>~/Documents</code>）にある配布フォルダ（<code>hybrid-app-student-materials-日付</code>）を開きます。",
-      "translation": "En Finder, abre la carpeta de distribución (<code>hybrid-app-student-materials-日付</code>) que está en <code>書類</code> (<code>~/Documents</code>)."
-    },
-    {
-      "source": "その中にある <code>samples</code> フォルダから、該当する単元のフォルダ（例：<code>M01OshiList</code>、<code>F01StampBoard</code> など）を確認します。",
-      "translation": "Dentro de la carpeta <code>samples</code> que contiene, localiza la carpeta de la unidad correspondiente (por ejemplo: <code>M01OshiList</code>, <code>F01StampBoard</code>, etc.)."
-    },
-    {
-      "source": "<strong>Monaca単元（M01・M02）</strong>：<code>samples</code> の中にあるHTML/CSS/JSファイルをテキストエディタで開き、自分のコードと見比べます。Monaca クラウド IDE上で見本を動かして確かめたいときは、先生がZIPにして公開した取り込み用URL（<a1>M01OshiList</a1> / <a2>M02OshiSave</a2>）を通常版Monacaへログインした状態で開いて取り込みます。取り込むとFreeプランの枠を1枠使います。Freeプランの制限で取り込めない場合でも、<code>samples</code> のコードを直接読めば進められます。",
-      "translation": "<strong>Unidades Monaca (M01, M02)</strong>: Abre los archivos HTML/CSS/JS dentro de <code>samples</code> con un editor de texto y compáralos con tu código. Si deseas ejecutar y comprobar el ejemplo en Monaca クラウド IDE, abre e importa la URL de importación publicada en formato ZIP por el profesor (<a1>M01OshiList</a1> / <a2>M02OshiSave</a2>) habiendo iniciado sesión en Monaca normal. Al importar, se utilizará 1 espacio del plan Free. Incluso si no puedes importarlo debido a las limitaciones del plan Free, puedes avanzar leyendo directamente el código en <code>samples</code>."
-    },
-    {
-      "source": "<strong>Flutter単元（F01・F02）</strong>：Visual Studio Code の <code>File → Open Folder…</code> で該当フォルダを選んで開きます。見本でコードや動作を確認したら、自分の制作フォルダ（<code>~/Documents/HybridApp</code>）を開き直して作業を続けます。",
-      "translation": "<strong>Unidades Flutter (F01, F02)</strong>: En Visual Studio Code, elige <code>File → Open Folder…</code> para seleccionar y abrir la carpeta correspondiente. Tras verificar el código o el funcionamiento con el ejemplo, vuelve a abrir tu propia carpeta de trabajo (<code>~/Documents/HybridApp</code>) y continúa trabajando."
-    },
-    {
-      "source": "取り違えに注意",
-      "translation": "Cuidado con confundir los proyectos"
-    },
-    {
-      "source": "見本と自分のアプリは同じプロジェクト名です。ウィンドウ上部やタブに表示されるフォルダパスを確認し、見本のほうを編集してしまわないよう注意しましょう。",
-      "translation": "El ejemplo y tu propia aplicación tienen el mismo nombre de proyecto. Comprueba la ruta de la carpeta que aparece en la parte superior de la ventana o en las pestañas para no editar el ejemplo por error."
     }
   ]
 }

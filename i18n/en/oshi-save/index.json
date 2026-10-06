@@ -135,8 +135,8 @@
       "translation": "The new idea is <strong>JSON</strong>. You turn the array used on screen into a string for saving, and turn a loaded string back into an array. The save location is compared with <code>SharedPreferences</code> in Java and <code>UserDefaults</code> in Swift."
     },
     {
-      "source": "完成見本の名前は <code>M02OshiSave</code> です。学生は自分の好きなものノートを同じ1プロジェクトで育てます。まだプロジェクトがない場合の作り方も、一覧・詳細の開始コードも、この本文にあります。",
-      "translation": "The completed sample is named <code>M02OshiSave</code>. Students grow their own favorites notebook in the same single project. How to create a project if you do not have one yet, and the starting code for the list and detail screens, are both in this text."
+      "source": "この単元の名前は <code>M02OshiSave</code> です。学生は自分の好きなものノートを同じ1プロジェクトで育てます。まだプロジェクトがない場合の作り方も、一覧・詳細の開始コードも、この本文にあります。",
+      "translation": "The project for this unit is named <code>M02OshiSave</code>. Students grow their own favorites notebook in the same single project. How to create a project if you do not have one yet, and the starting code for the list and detail screens, are both in this text."
     },
     {
       "source": "コマ",
@@ -991,8 +991,8 @@
       "translation": "Open <code>プロジェクト → 公開…</code> (Project → Publish…) in the cloud IDE, confirm that it is your own work, and issue the import URL."
     },
     {
-      "source": "提出するのは <code>https://monaca.mobi/ja/directimport?pid=…</code> という形の、実際に発行されたURLです。クラウド IDEやプレビューのアドレス、先生の完成見本URLを代わりに貼りません。相手のMonacaへソースを取り込むためのURLです。",
-      "translation": "What you submit is the URL that was actually issued, in the form <code>https://monaca.mobi/ja/directimport?pid=…</code>. Do not paste the address of the cloud IDE or the preview, or your teacher's completed sample URL, instead. It is a URL for importing the source into the other person's Monaca."
+      "source": "提出するのは <code>https://monaca.mobi/ja/directimport?pid=…</code> という形の、実際に発行されたURLです。クラウド IDEやプレビューのアドレスを代わりに貼りません。相手のMonacaへソースを取り込むためのURLです。",
+      "translation": "What you submit is the URL that was actually issued, in the form <code>https://monaca.mobi/ja/directimport?pid=…</code>. Do not paste the address of the cloud IDE or the preview instead. It is a URL for importing the source into the other person's Monaca."
     },
     {
       "source": "発行したURLを開き、対象のプロジェクトを確かめます。取り込みを確定するとコピーが増えるため、繰り返して枠を埋めないようにします。教員側で新しく取り込んだ状態の動作も確認します。",
@@ -1063,8 +1063,8 @@
       "translation": "If you have time, make the example entries clearer or adjust the spacing, within what you have already worked with. Make sure that the screen as it is now conveys what you like. After changing, save, check the list, add, details, and reload, and then check the published content."
     },
     {
-      "source": "全コードは見本との比較用です。自分の変更を消して見本に戻す必要はありません。動かなくなった部分や、変更した場所と結果の関係を確かめるために使います。",
-      "translation": "The full code is for comparison with the sample. You do not need to erase your changes and go back to the sample. Use it to check parts that stopped working, and the relation between what you changed and the result."
+      "source": "下の全コードは、自分のコードと見比べるためのものです。自分の変更を消して全コードに戻す必要はありません。動かなくなった部分や、変更した場所と結果の関係を確かめるために使います。",
+      "translation": "The full code below is for comparison with your own code. You do not need to erase your changes and go back to the full code. Use it to check parts that stopped working, and the relation between what you changed and the result."
     },
     {
       "source": "HTML・CSS・JavaScriptの役割分担はWeb基礎と同じで、変更した場所はファイルの種類から見つけられます。保存があるアプリでは、ソースの初期値と保存値の両方を見ます。<code>SharedPreferences</code>／<code>UserDefaults</code>を使うアプリで、コードに書いた初期値と端末に残る保存値が別にあるのと同じです。",
@@ -1115,16 +1115,16 @@
       "translation": "Show that message to your teacher. Data that failed to load is not overwritten automatically. Do not force changes to the browser settings."
     },
     {
-      "source": "提出URLが先生の見本と同じ",
-      "translation": "The submission URL is the same as the teacher's sample"
+      "source": "提出するURLが自分の作品のものか分からない",
+      "translation": "You are unsure whether the URL you submit belongs to your own work"
     },
     {
       "source": "自分のプロジェクトで発行したURLか確認。クラウド IDEのアドレスやプレビューURLでは提出しない。",
       "translation": "Check that it is the URL issued from your own project. Do not submit the address of the cloud IDE or the preview URL."
     },
     {
-      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」を参照してください。",
-      "translation": "If you cannot resolve an error, refer to \"Checking the completed project (sample)\" in <a1>Shared Guide: Troubleshooting</a1>."
+      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の調べ方を試してください。それでも解決しないときは、STEP番号と画面を先生に見せましょう。",
+      "translation": "If the error is not resolved, try the troubleshooting steps in <a1>Shared Guide: Troubleshooting</a1>. If it is still not resolved, show your teacher the STEP number and your screen."
     },
     {
       "source": "JEC / ハイブリッドアプリ開発技法 · M02OshiSave",

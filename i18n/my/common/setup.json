@@ -95,40 +95,12 @@
       "translation": "ဖြည်ထားသော folder ကို Finder ၏ <code>書類</code> (Documents, <code>~/Documents</code>) အောက်သို့ တိုက်ရိုက်ရွှေ့ပါ။ ဤအတန်း၏ သင်ခန်းစာဖိုင်များ သိမ်းဆည်းမည့်နေရာမှာ <code>~/Documents/hybrid-app-student-materials-日付</code> (日付 = ရက်စွဲ) ဖြစ်ပါသည်။ သင်ခန်းစာစာအုပ်တွင် 「配布フォルダ」 (distribution folder) ဟု ရေးထားသည်မှာ ဤ folder ကို ဆိုလိုခြင်း ဖြစ်ပါသည်။"
     },
     {
-      "source": "中に <code>docs</code>、<code>はじめに.txt</code>、<code>VERSION.json</code> があることを確かめます。完成見本が同梱されている版には <code>samples</code> もあります。言語を選ぶ <code>index.html</code> がある版では、そこから教科書を開けます。",
-      "translation": "အတွင်းတွင် <code>docs</code>၊ <code>はじめに.txt</code> နှင့် <code>VERSION.json</code> ရှိမရှိ စစ်ဆေးပါ။ နမူနာပြီးစီး project ပါရှိသော version တွင် <code>samples</code> လည်း ရှိပါမည်။ ဘာသာစကားရွေးချယ်ရန် <code>index.html</code> ပါရှိသော version တွင် ထိုနေရာမှ သင်ခန်းစာစာအုပ်ကို ဖွင့်နိုင်ပါသည်။"
+      "source": "中に <code>docs</code>、<code>はじめに.txt</code>、<code>VERSION.json</code> があることを確かめます。言語を選ぶ <code>index.html</code> がある版では、そこから教科書を開けます。",
+      "translation": "အတွင်းတွင် <code>docs</code>၊ <code>はじめに.txt</code>၊ <code>VERSION.json</code> ရှိမရှိ စစ်ဆေးပါ။ ဘာသာစကားရွေးချယ်နိုင်သော <code>index.html</code> ပါရှိသည့် ဗားရှင်းတွင် ထိုနေရာမှ သင်ခန်းစာစာအုပ်ကို ဖွင့်နိုင်ပါသည်။"
     },
     {
       "source": "<code>docs/common/setup.html</code> をGoogle Chromeで開きます。今読んでいるページが、この共通資料です。",
       "translation": "<code>docs/common/setup.html</code> ကို Google Chrome ဖြင့် ဖွင့်ပါ။ ယခုဖတ်နေသော စာမျက်နှာသည် ဤအထွေထွေလမ်းညွှန် ဖြစ်ပါသည်။"
-    },
-    {
-      "source": "完成見本が配られたら、次の方法で開きます。共通資料だけの版には <code>samples</code> がなくても問題ありません。",
-      "translation": "နမူနာပြီးစီး project ကို ဖြန့်ဝေပေးပါက အောက်ပါနည်းလမ်းဖြင့် ဖွင့်ပါ။ အထွေထွေလမ်းညွှန်သာပါသော version တွင် <code>samples</code> မရှိသော်လည်း ပြဿနာမရှိပါ။"
-    },
-    {
-      "source": "配布された見本",
-      "translation": "ဖြန့်ဝေထားသော နမူနာ"
-    },
-    {
-      "source": "開き方",
-      "translation": "ဖွင့်နည်း"
-    },
-    {
-      "source": "Monacaの完成プロジェクト",
-      "translation": "Monaca ၏ နမူနာပြီးစီး project"
-    },
-    {
-      "source": "<code>samples</code> の中の、教科書が指定するフォルダ（<code>samples/M01OshiList</code> など）をFinderで開き、コードを読み比べます。Monaca クラウド IDEは、Macのフォルダをそのまま開けません。Monacaで動かすときは、先生がZIPにして公開した取り込み用URL（<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」にあります）を開いて取り込みます。取り込むと、Freeプランの3枠のうち1枠を使います。URLがあっても、Freeプランの制限で取り込めない・開けないことがあります。そのときは先生に知らせ、<code>samples</code> のコードを読んで進めます。",
-      "translation": "Finder တွင် <code>samples</code> အတွင်းရှိ သင်ခန်းစာစာအုပ်က သတ်မှတ်ထားသော folder (<code>samples/M01OshiList</code> စသည်) ကိုဖွင့်ပြီး code များကို နှိုင်းယှဉ်ဖတ်ရှုပါ။ Monaca クラウド IDE (cloud IDE) သည် Mac ပေါ်ရှိ folder များကို တိုက်ရိုက်မဖွင့်နိုင်ပါ။ Monaca တွင် run လုပ်လိုပါက ဆရာက ZIP အဖြစ် publish လုပ်ထားသော import URL (<a1>အထွေထွေလမ်းညွှန် - အခက်အခဲရှိသည့်အခါ</a1> ၏ “ပြီးစီးထားသော project (နမူနာ) ကို စစ်ဆေးခြင်း” တွင် ရှိပါသည်) ကိုဖွင့်၍ import လုပ်ပါ။ import လုပ်ပါက Free plan ၏ slot ၃ ခုအနက် ၁ ခုကို အသုံးပြုပါမည်။ URL ရှိသော်လည်း Free plan ၏ ကန့်သတ်ချက်များကြောင့် import လုပ်၍မရခြင်း သို့မဟုတ် ဖွင့်၍မရခြင်းများ ဖြစ်နိုင်ပါသည်။ ထိုအခါ ဆရာ့ကို အသိပေးပြီး <code>samples</code> အတွင်းရှိ code ကို ဖတ်ရှုကာ ဆက်လက်လုပ်ဆောင်ပါ။"
-    },
-    {
-      "source": "Flutterの完成プロジェクト",
-      "translation": "Flutter ၏ နမူနာပြီးစီး project"
-    },
-    {
-      "source": "<code>samples</code> の中の、教科書が指定するフォルダ（<code>samples/F01StampBoard</code> など）をFinderで開き、そのフォルダを Visual Studio Code の <code>File → Open Folder…</code> で開きます。<code>pubspec.yaml</code> が入っている階層を選びます。展開は済んでいるので、ZIPのダウンロードは要りません。",
-      "translation": "Finder တွင် <code>samples</code> အတွင်းရှိ သင်ခန်းစာစာအုပ်က သတ်မှတ်ထားသော folder (<code>samples/F01StampBoard</code> စသည်) ကိုဖွင့်ပြီး ထို folder ကို Visual Studio Code ၏ <code>File → Open Folder…</code> ဖြင့် ဖွင့်ပါ။ <code>pubspec.yaml</code> ပါရှိသော folder အဆင့်ကို ရွေးချယ်ပါ။ ဖိုင်ဖြည်ပြီးသားဖြစ်သဖြင့် ZIP ကို download လုပ်ရန် မလိုပါ။"
     },
     {
       "source": "更新版も <code>書類</code> の直下に、別のフォルダとして置きます。同じ日に配り直された版は名前が同じになるため、先生の案内を確かめてから入れ替えてください。自分で作るプロジェクトは、配布フォルダの中ではなく <code>~/Documents/HybridApp</code> に置きます（作り方は、その日の教科書にあります）。質問するときは、フォルダ名の日付と <code>VERSION.json</code> の <code>version</code> を伝えます。",
@@ -215,12 +187,12 @@
       "translation": "Android Studio နှင့် Xcode တို့၏ project များနှင့် ကွာခြားချက်"
     },
     {
-      "source": "Macのフォルダを増やすときとは違い、Monacaはアカウントの3枠を使います。完成見本を取り込んだときにも1枠を使うので、URLを何度も開く前に、今あるプロジェクトと空きを確かめます。",
-      "translation": "Mac တွင် folder များ တိုးပွားစေခြင်းနှင့် မတူဘဲ Monaca သည် account ၏ slot ၃ ခုကို အသုံးပြုပါသည်။ နမူနာပြီးစီး project ကို import လုပ်ရာတွင်လည်း slot ၁ ခု အသုံးပြုမည်ဖြစ်သောကြောင့် URL ကို အကြိမ်ကြိမ် မဖွင့်မီ လက်ရှိ project များနှင့် နေရာလွတ်ကို စစ်ဆေးပါ။"
+      "source": "Macのフォルダを増やすときとは違い、Monacaはアカウントの3枠を使います。プロジェクトを1つ作るたびに1枠を使うので、新しく作る前に、今あるプロジェクトと空きを確かめます。",
+      "translation": "Mac တွင် folder အသစ်များတိုးခြင်းနှင့်မတူဘဲ Monaca သည် account ၏ နေရာလွတ် ၃ ခုကို အသုံးပြုပါသည်။ Project တစ်ခုဖန်တီးတိုင်း နေရာလွတ် ၁ ခုကို အသုံးပြုသောကြောင့် အသစ်မဖန်တီးမီ လက်ရှိ project များနှင့် နေရာလွတ်များကို စစ်ဆေးပါ။"
     },
     {
-      "source": "この授業では、1つのプロジェクトを何回かの授業で育てます。見本をすべて取り込んで3枠を埋める必要はありません。Freeプランでは作品をZIPへ書き出せないため、<strong>自分の作品を削除して空きを作ろうとしないでください。</strong>",
-      "translation": "ဤအတန်းတွင် project တစ်ခုကို အတန်းချိန်ပေါင်းများစွာ အသုံးပြု၍ အဆင့်ဆင့် ဖန်တီးတည်ဆောက်သွားမည် ဖြစ်ပါသည်။ နမူနာအားလုံးကို import လုပ်ပြီး slot ၃ ခုလုံး ပြည့်သွားအောင် ပြုလုပ်ရန် မလိုပါ။ Free plan တွင် မိမိလက်ရာများကို ZIP သို့ export မလုပ်နိုင်သောကြောင့် <strong>မိမိလက်ရာများကို delete လုပ်၍ နေရာလွတ် ပြုလုပ်ရန် မကြိုးစားပါနှင့်။</strong>"
+      "source": "この授業では、1つのプロジェクトを何回かの授業で育てます。単元ごとに新しいプロジェクトを作って3枠を埋める必要はありません。Freeプランでは作品をZIPへ書き出せないため、<strong>自分の作品を削除して空きを作ろうとしないでください。</strong>",
+      "translation": "ဤအတန်းတွင် project တစ်ခုတည်းကို သင်ကြားမှုအကြိမ်ပေါင်းများစွာတစ်လျှောက် တိုးတက်အောင်ပြုလုပ်သွားမည်ဖြစ်ပါသည်။ သင်ခန်းစာတစ်ခုစီတိုင်းအတွက် project အသစ်တစ်ခုစီဖန်တီးပြီး နေရာလွတ် ၃ ခုလုံးကို ပြည့်အောင်လုပ်ရန် မလိုအပ်ပါ။ Free plan တွင် လက်ရာများကို ZIP ဖိုင်အဖြစ် export မလုပ်နိုင်သောကြောင့် <strong>နေရာလွတ်ရစေရန် မိမိ၏လက်ရာများကို မဖျက်ပါနှင့်။</strong>"
     },
     {
       "source": "提出には、通常版Monacaで発行する取り込み用の公開URLを使います。このURLは、見る人のMonacaへプロジェクトを取り込むためのもので、完成アプリをWebで動かすURLではありません。公開と提出の操作は、提出を扱う授業で行います。",

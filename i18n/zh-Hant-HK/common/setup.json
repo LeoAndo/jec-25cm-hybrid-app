@@ -95,40 +95,12 @@
       "translation": "在 Finder 中，將解壓縮後的資料夾移到 <code>書類</code>（文件，<code>~/Documents</code>）的正下方。本課程教材的存放位置為 <code>~/Documents/hybrid-app-student-materials-日付</code>（日付 代表日期）。教科書中所寫的「分發資料夾」（配布フォルダ），指的就是這個資料夾。"
     },
     {
-      "source": "中に <code>docs</code>、<code>はじめに.txt</code>、<code>VERSION.json</code> があることを確かめます。完成見本が同梱されている版には <code>samples</code> もあります。言語を選ぶ <code>index.html</code> がある版では、そこから教科書を開けます。",
-      "translation": "確認裏面包含 <code>docs</code>、<code>はじめに.txt</code>、<code>VERSION.json</code>。附帶完成範本的版本還會有 <code>samples</code>。在含有選擇語言的 <code>index.html</code> 的版本中，可以從該處開啟教科書。"
+      "source": "中に <code>docs</code>、<code>はじめに.txt</code>、<code>VERSION.json</code> があることを確かめます。言語を選ぶ <code>index.html</code> がある版では、そこから教科書を開けます。",
+      "translation": "確認裡面有 <code>docs</code>、<code>はじめに.txt</code>、<code>VERSION.json</code>。在帶有選擇語言的 <code>index.html</code> 的版本中，可以從那裡打開教科書。"
     },
     {
       "source": "<code>docs/common/setup.html</code> をGoogle Chromeで開きます。今読んでいるページが、この共通資料です。",
       "translation": "使用 Google Chrome 開啟 <code>docs/common/setup.html</code>。現在正在閱讀的頁面，就是這份通用資料。"
-    },
-    {
-      "source": "完成見本が配られたら、次の方法で開きます。共通資料だけの版には <code>samples</code> がなくても問題ありません。",
-      "translation": "派發了完成範本時，請按照以下方法開啟。僅有通用資料的版本沒有 <code>samples</code> 也沒有問題。"
-    },
-    {
-      "source": "配布された見本",
-      "translation": "派發的範本"
-    },
-    {
-      "source": "開き方",
-      "translation": "開啟方法"
-    },
-    {
-      "source": "Monacaの完成プロジェクト",
-      "translation": "Monaca 的完成專案"
-    },
-    {
-      "source": "<code>samples</code> の中の、教科書が指定するフォルダ（<code>samples/M01OshiList</code> など）をFinderで開き、コードを読み比べます。Monaca クラウド IDEは、Macのフォルダをそのまま開けません。Monacaで動かすときは、先生がZIPにして公開した取り込み用URL（<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」にあります）を開いて取り込みます。取り込むと、Freeプランの3枠のうち1枠を使います。URLがあっても、Freeプランの制限で取り込めない・開けないことがあります。そのときは先生に知らせ、<code>samples</code> のコードを読んで進めます。",
-      "translation": "在 Finder 中開啟 <code>samples</code> 內教科書指定的資料夾（例如 <code>samples/M01OshiList</code>），對照閱讀程式碼。Monaca クラウド IDE 無法直接開啟 Mac 上的資料夾。要在 Monaca 中執行時，開啟老師打包成 ZIP 後公開的匯入連結（位於<a1>共用資料：遇到問題時</a1>的「查看完成專案（範例）」中）進行匯入。匯入後會佔用 Free 方案 3 個名額中的 1 個。即使有連結，也可能因 Free 方案的限制而無法匯入或開啟。遇到這種情況請通知老師，並閱讀 <code>samples</code> 中的程式碼繼續學習。"
-    },
-    {
-      "source": "Flutterの完成プロジェクト",
-      "translation": "Flutter 的完成專案"
-    },
-    {
-      "source": "<code>samples</code> の中の、教科書が指定するフォルダ（<code>samples/F01StampBoard</code> など）をFinderで開き、そのフォルダを Visual Studio Code の <code>File → Open Folder…</code> で開きます。<code>pubspec.yaml</code> が入っている階層を選びます。展開は済んでいるので、ZIPのダウンロードは要りません。",
-      "translation": "在 Finder 中開啟 <code>samples</code> 內教科書指定的資料夾（例如 <code>samples/F01StampBoard</code>），然後使用 Visual Studio Code 的 <code>File → Open Folder…</code> 開啟該資料夾。選擇包含 <code>pubspec.yaml</code> 的那一層。檔案已經解壓縮完成，因此不需要下載 ZIP。"
     },
     {
       "source": "更新版も <code>書類</code> の直下に、別のフォルダとして置きます。同じ日に配り直された版は名前が同じになるため、先生の案内を確かめてから入れ替えてください。自分で作るプロジェクトは、配布フォルダの中ではなく <code>~/Documents/HybridApp</code> に置きます（作り方は、その日の教科書にあります）。質問するときは、フォルダ名の日付と <code>VERSION.json</code> の <code>version</code> を伝えます。",
@@ -215,12 +187,12 @@
       "translation": "與 Android Studio 及 Xcode 專案的分別"
     },
     {
-      "source": "Macのフォルダを増やすときとは違い、Monacaはアカウントの3枠を使います。完成見本を取り込んだときにも1枠を使うので、URLを何度も開く前に、今あるプロジェクトと空きを確かめます。",
-      "translation": "與在 Mac 上新增資料夾不同，Monaca 使用的是帳戶的 3 個名額。匯入完成範本時亦會佔用 1 個名額，因此在多次開啟連結之前，請先確認現有的專案與剩餘名額。"
+      "source": "Macのフォルダを増やすときとは違い、Monacaはアカウントの3枠を使います。プロジェクトを1つ作るたびに1枠を使うので、新しく作る前に、今あるプロジェクトと空きを確かめます。",
+      "translation": "與在 Mac 上增加資料夾不同，Monaca 使用帳號的 3 個名額。每建立 1 個專案就會佔用 1 個名額，所以在建立新專案之前，請先確認現有的專案和剩餘名額。"
     },
     {
-      "source": "この授業では、1つのプロジェクトを何回かの授業で育てます。見本をすべて取り込んで3枠を埋める必要はありません。Freeプランでは作品をZIPへ書き出せないため、<strong>自分の作品を削除して空きを作ろうとしないでください。</strong>",
-      "translation": "在本課程中，一個專案會在數堂課中逐步完善。不需要將所有範本全部匯入並佔滿 3 個名額。Free 方案無法將作品匯出為 ZIP，因此<strong>請不要為了騰出名額而刪除自己的作品。</strong>"
+      "source": "この授業では、1つのプロジェクトを何回かの授業で育てます。単元ごとに新しいプロジェクトを作って3枠を埋める必要はありません。Freeプランでは作品をZIPへ書き出せないため、<strong>自分の作品を削除して空きを作ろうとしないでください。</strong>",
+      "translation": "這門課程中，我們會在幾次課中完善同一個專案。沒有必要為每個單元建立新專案把 3 個名額佔滿。由於 Free 計劃無法將作品匯出為 ZIP，<strong>請不要為了騰出空位而刪除自己的作品。</strong>"
     },
     {
       "source": "提出には、通常版Monacaで発行する取り込み用の公開URLを使います。このURLは、見る人のMonacaへプロジェクトを取り込むためのもので、完成アプリをWebで動かすURLではありません。公開と提出の操作は、提出を扱う授業で行います。",

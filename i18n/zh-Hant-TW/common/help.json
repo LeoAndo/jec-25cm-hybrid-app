@@ -43,10 +43,6 @@
       "translation": "2. 各開發環境的確認重點"
     },
     {
-      "source": "3. どうしても解決しないときは（完成プロジェクトの確認）",
-      "translation": "3. 實在無法解決時（確認完成專案）"
-    },
-    {
       "source": "プログラミングでエラーが出るのは自然なことです。エラーメッセージには「どのファイルの何行目で、何が問題か」が書かれています。焦らずに上から順に確認しましょう。",
       "translation": "在寫程式時出現錯誤是很正常的。錯誤訊息中一定會註明「哪個檔案的哪一行有什麼問題」。不要慌張，從上到下依序確認。"
     },
@@ -97,46 +93,6 @@
     {
       "source": "共通：準備（Flutter）",
       "translation": "共用：準備（Flutter）"
-    },
-    {
-      "source": "どうしても自分のコードの間違いが見つからないときや、アプリ本来の動きを確認したいときは、先生が用意した<strong>完成プロジェクト（見本）</strong>を開いて自分のコードと見比べることができます。",
-      "translation": "如果實在找不到自己程式碼中的錯誤，或者想確認應用程式原本的運作效果，可以打開老師準備的<strong>完成專案（範本）</strong>，與自己的程式碼進行比對。"
-    },
-    {
-      "source": "完成プロジェクトは「答え合わせ用」です",
-      "translation": "完成專案用於「核對答案」"
-    },
-    {
-      "source": "完成プロジェクトからコードをそのままコピーしたり、完成プロジェクトを改造して提出しても、自分の課題の提出にはなりません。見本で違いを確認したら、必ず<strong>自分で作ったプロジェクトに戻り、自分の手で修正</strong>してください。",
-      "translation": "直接從完成專案中複製程式碼，或者修改完成專案後繳交，都不能算作繳交了自己的作業。在範本中確認差異後，請務必<strong>返回自己建立的專案，親自動手修改</strong>。"
-    },
-    {
-      "source": "見本の場所と開き方",
-      "translation": "範本的位置與開啟方法"
-    },
-    {
-      "source": "Finderで <code>書類</code>（<code>~/Documents</code>）にある配布フォルダ（<code>hybrid-app-student-materials-日付</code>）を開きます。",
-      "translation": "在 Finder 中開啟位於 <code>書類</code>（<code>~/Documents</code>）中的發布資料夾（<code>hybrid-app-student-materials-日付</code>）。"
-    },
-    {
-      "source": "その中にある <code>samples</code> フォルダから、該当する単元のフォルダ（例：<code>M01OshiList</code>、<code>F01StampBoard</code> など）を確認します。",
-      "translation": "在其中的 <code>samples</code> 資料夾中，找到對應單元的資料夾（例如：<code>M01OshiList</code>、<code>F01StampBoard</code> 等）。"
-    },
-    {
-      "source": "<strong>Monaca単元（M01・M02）</strong>：<code>samples</code> の中にあるHTML/CSS/JSファイルをテキストエディタで開き、自分のコードと見比べます。Monaca クラウド IDE上で見本を動かして確かめたいときは、先生がZIPにして公開した取り込み用URL（<a1>M01OshiList</a1> / <a2>M02OshiSave</a2>）を通常版Monacaへログインした状態で開いて取り込みます。取り込むとFreeプランの枠を1枠使います。Freeプランの制限で取り込めない場合でも、<code>samples</code> のコードを直接読めば進められます。",
-      "translation": "<strong>Monaca 單元（M01、M02）</strong>：使用文字編輯器開啟 <code>samples</code> 中的 HTML/CSS/JS 檔案，與自己的程式碼進行比對。如果想在 Monaca クラウド IDE 上執行並確認範本，可在登入通常版 Monaca 的狀態下開啟老師打包公開的匯入連結（<a1>M01OshiList</a1> / <a2>M02OshiSave</a2>）進行匯入。匯入後會佔用 Free 方案的 1 個名額。即使因 Free 方案限制無法匯入，直接閱讀 <code>samples</code> 的程式碼也可以繼續學習。"
-    },
-    {
-      "source": "<strong>Flutter単元（F01・F02）</strong>：Visual Studio Code の <code>File → Open Folder…</code> で該当フォルダを選んで開きます。見本でコードや動作を確認したら、自分の制作フォルダ（<code>~/Documents/HybridApp</code>）を開き直して作業を続けます。",
-      "translation": "<strong>Flutter 單元（F01、F02）</strong>：在 Visual Studio Code 中透過 <code>File → Open Folder…</code> 選取對應資料夾並開啟。在範本中確認程式碼或運作效果後，重新開啟自己的製作資料夾（<code>~/Documents/HybridApp</code>）繼續作業。"
-    },
-    {
-      "source": "取り違えに注意",
-      "translation": "注意不要混淆"
-    },
-    {
-      "source": "見本と自分のアプリは同じプロジェクト名です。ウィンドウ上部やタブに表示されるフォルダパスを確認し、見本のほうを編集してしまわないよう注意しましょう。",
-      "translation": "範本與自己的應用程式專案名稱相同。請確認視窗上方或標籤頁中顯示的資料夾路徑，避免誤編輯了範本。"
     }
   ]
 }

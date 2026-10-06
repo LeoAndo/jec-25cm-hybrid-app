@@ -147,8 +147,8 @@
       "translation": "Build an app that turns the habits you want to keep up into cards and lets you add a stamp when you have done one. See the difference between changing UI elements one by one and building the screen from values."
     },
     {
-      "source": "完成見本は<code>F01StampBoard</code>です。この教科書だけで、新規作成から一覧・スタンプ・詳細の実行まで進められます。Web基礎とJava／Swiftの知識を比べながら読みます。",
-      "translation": "The completed sample is <code>F01StampBoard</code>. With this textbook alone, you can go from creating a new project to running the list, the stamps, and the detail screen. Read it while comparing with what you know from Web Basics and Java / Swift."
+      "source": "この単元で作るプロジェクトは<code>F01StampBoard</code>です。この教科書だけで、新規作成から一覧・スタンプ・詳細の実行まで進められます。Web基礎とJava／Swiftの知識を比べながら読みます。",
+      "translation": "The project built in this unit is <code>F01StampBoard</code>. With this textbook alone, you can go from creating a new project to running the list, the stamps, and the detail screen. Read it while comparing with what you know from Web Basics and Java / Swift."
     },
     {
       "source": "STEP 00 · コマ8",
@@ -931,8 +931,8 @@
       "translation": "You lowered <code>stampGoal</code> while a count was above the goal, then hot reloaded. Hot restart to go back to 0."
     },
     {
-      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」を参照してください。",
-      "translation": "If you cannot resolve an error, refer to \"Checking the completed project (sample)\" in <a1>Shared Guide: Troubleshooting</a1>."
+      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の調べ方を試してください。それでも解決しないときは、STEP番号と画面を先生に見せましょう。",
+      "translation": "If the error is not resolved, try the troubleshooting steps in <a1>Shared Guide: Troubleshooting</a1>. If it is still not resolved, show your teacher the STEP number and your screen."
     },
     {
       "source": "JEC / ハイブリッドアプリ開発技法 · F01StampBoard",

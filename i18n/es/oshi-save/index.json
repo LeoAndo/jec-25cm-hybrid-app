@@ -135,8 +135,8 @@
       "translation": "El concepto nuevo es <strong>JSON</strong>. Convierte el arreglo que usas en pantalla en una cadena de texto para guardarlo y vuelve a convertir la cadena leída en un arreglo. El destino de guardado se compara con <code>SharedPreferences</code> de Java y <code>UserDefaults</code> de Swift."
     },
     {
-      "source": "完成見本の名前は <code>M02OshiSave</code> です。学生は自分の好きなものノートを同じ1プロジェクトで育てます。まだプロジェクトがない場合の作り方も、一覧・詳細の開始コードも、この本文にあります。",
-      "translation": "El nombre del ejemplo terminado es <code>M02OshiSave</code>. Cada estudiante desarrolla su propio cuaderno de favoritos en el mismo único proyecto. En este texto encontrarás tanto cómo crearlo si aún no tienes un proyecto, como el código inicial de la lista y el detalle."
+      "source": "この単元の名前は <code>M02OshiSave</code> です。学生は自分の好きなものノートを同じ1プロジェクトで育てます。まだプロジェクトがない場合の作り方も、一覧・詳細の開始コードも、この本文にあります。",
+      "translation": "El nombre de esta unidad es <code>M02OshiSave</code>. Cada estudiante desarrollará su propio cuaderno de favoritos en el mismo proyecto único. Tanto la forma de crear el proyecto si aún no tienes uno como el código inicial de la lista y el detalle se encuentran en este texto."
     },
     {
       "source": "コマ",
@@ -991,8 +991,8 @@
       "translation": "Abre <code>プロジェクト → 公開…</code> (Proyecto → Publicar…) en el IDE en la nube, confirma que sea tu propio trabajo y genera la URL de importación."
     },
     {
-      "source": "提出するのは <code>https://monaca.mobi/ja/directimport?pid=…</code> という形の、実際に発行されたURLです。クラウド IDEやプレビューのアドレス、先生の完成見本URLを代わりに貼りません。相手のMonacaへソースを取り込むためのURLです。",
-      "translation": "Lo que debes entregar es la URL emitida con el formato <code>https://monaca.mobi/ja/directimport?pid=…</code>. No pegues en su lugar la dirección del IDE en la nube ni de la vista previa, ni la URL del ejemplo terminado de tu docente. Es una URL para importar el código fuente al Monaca de la otra persona."
+      "source": "提出するのは <code>https://monaca.mobi/ja/directimport?pid=…</code> という形の、実際に発行されたURLです。クラウド IDEやプレビューのアドレスを代わりに貼りません。相手のMonacaへソースを取り込むためのURLです。",
+      "translation": "Lo que debes entregar es la URL emitida realmente, con el formato <code>https://monaca.mobi/ja/directimport?pid=…</code>. No pegues en su lugar la dirección del IDE en la nube ni de la vista previa. Es una URL para importar el código fuente en el Monaca del destinatario."
     },
     {
       "source": "発行したURLを開き、対象のプロジェクトを確かめます。取り込みを確定するとコピーが増えるため、繰り返して枠を埋めないようにします。教員側で新しく取り込んだ状態の動作も確認します。",
@@ -1063,8 +1063,8 @@
       "translation": "Si tienes tiempo, aclara los ejemplos de llenado o ajusta los márgenes dentro de lo que ya hemos visto. Asegúrate de que la pantalla actual transmita lo que te gusta. Si realizas cambios, guarda, comprueba la lista, agregar, el detalle y la recarga, y luego verifica el contenido publicado."
     },
     {
-      "source": "全コードは見本との比較用です。自分の変更を消して見本に戻す必要はありません。動かなくなった部分や、変更した場所と結果の関係を確かめるために使います。",
-      "translation": "El código completo es para compararlo con el ejemplo. No es necesario borrar tus cambios para volver al ejemplo. Úsalo para revisar las partes que hayan dejado de funcionar y la relación entre los lugares modificados y los resultados."
+      "source": "下の全コードは、自分のコードと見比べるためのものです。自分の変更を消して全コードに戻す必要はありません。動かなくなった部分や、変更した場所と結果の関係を確かめるために使います。",
+      "translation": "El código completo de abajo sirve para compararlo con tu propio código. No es necesario que borres tus cambios y vuelvas al código completo. Utilízalo para comprobar las partes que dejaron de funcionar y la relación entre lo que modificaste y el resultado."
     },
     {
       "source": "HTML・CSS・JavaScriptの役割分担はWeb基礎と同じで、変更した場所はファイルの種類から見つけられます。保存があるアプリでは、ソースの初期値と保存値の両方を見ます。<code>SharedPreferences</code>／<code>UserDefaults</code>を使うアプリで、コードに書いた初期値と端末に残る保存値が別にあるのと同じです。",
@@ -1115,16 +1115,16 @@
       "translation": "Muestra ese mensaje a tu docente. Los datos cuya lectura falló no se sobrescribirán automáticamente. No intentes modificar la configuración del navegador a la fuerza."
     },
     {
-      "source": "提出URLが先生の見本と同じ",
-      "translation": "La URL de entrega es igual a la del ejemplo del docente"
+      "source": "提出するURLが自分の作品のものか分からない",
+      "translation": "No saber si la URL a entregar pertenece a tu propio trabajo"
     },
     {
       "source": "自分のプロジェクトで発行したURLか確認。クラウド IDEのアドレスやプレビューURLでは提出しない。",
       "translation": "Verifica si es la URL generada desde tu propio proyecto. No entregues la dirección del IDE en la nube ni la URL de la vista previa."
     },
     {
-      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」を参照してください。",
-      "translation": "Si no logras resolver el error, consulta «Comprobar el proyecto terminado (ejemplo)» en <a1>Material común: Solución de problemas</a1>."
+      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の調べ方を試してください。それでも解決しないときは、STEP番号と画面を先生に見せましょう。",
+      "translation": "Si el error no se resuelve, prueba los pasos indicados en <a1>Guía común: Solución de problemas</a1>. Si aun así no se soluciona, muestra al profesor el número de STEP y tu pantalla."
     },
     {
       "source": "JEC / ハイブリッドアプリ開発技法 · M02OshiSave",

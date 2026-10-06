@@ -1163,8 +1163,8 @@
       "translation": "¿Se ejecuta <code>ons.platform.select</code> al inicio de <code>app.js</code>? ¿Presionaste <code>Reload</code> en la vista previa y no el botón de volver dentro de la pantalla? Al comparar mediante la selección de dispositivos, ¿convertiste nuevamente la especificación en código a comentario?"
     },
     {
-      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」を参照してください。",
-      "translation": "Si no logras resolver el error, consulta «Comprobar el proyecto terminado (ejemplo)» en <a1>Material común: Solución de problemas</a1>."
+      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の調べ方を試してください。それでも解決しないときは、STEP番号と画面を先生に見せましょう。",
+      "translation": "Si el error no se resuelve, prueba los pasos indicados en <a1>Guía común: Solución de problemas</a1>. Si aun así no se soluciona, muestra al profesor el número de STEP y tu pantalla."
     },
     {
       "source": "JEC / ハイブリッドアプリ開発技法 · M01OshiList",

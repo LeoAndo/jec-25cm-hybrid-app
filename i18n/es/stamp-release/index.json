@@ -147,8 +147,8 @@
       "translation": "Guarda en el dispositivo los hábitos ingresados y las estampas para que puedas continuar incluso después de reiniciar la aplicación. Lee el procesamiento que espera a que termine el guardado, verifica el archivo APK generado y entrégalo."
     },
     {
-      "source": "完成見本は<code>F02StampRelease</code>です。この教科書に開始コードと作成・実行手順を掲載しています。既に作っている自分のスタンプ帳から続けても構いません。Web基礎とJava／Swiftの知識を比べながら読みます。",
-      "translation": "El ejemplo terminado es <code>F02StampRelease</code>. En este libro de texto se incluye el código inicial y los pasos de creación y ejecución. También puedes continuar a partir del tablero de estampas que ya hayas creado. Léelo comparándolo con tus conocimientos de Fundamentos web y Java/Swift."
+      "source": "この単元のプロジェクトは<code>F02StampRelease</code>です。この教科書に開始コードと作成・実行手順を掲載しています。既に作っている自分のスタンプ帳から続けても構いません。Web基礎とJava／Swiftの知識を比べながら読みます。",
+      "translation": "El proyecto de esta unidad es <code>F02StampRelease</code>. En este libro de texto se incluye el código inicial y los pasos de creación y ejecución. También puedes continuar a partir del tablero de estampas que ya hayas creado. Léelo comparándolo con tus conocimientos de Fundamentos web y Java/Swift."
     },
     {
       "source": "STEP 00 · コマ12",
@@ -719,8 +719,8 @@
       "translation": "Si tiene éxito, se creará <code>build/app/outputs/flutter-apk/app-release.apk</code>. Verifica el tamaño del archivo y la fecha de modificación en Finder. Aunque el límite de la plataforma de entrega sea de 100 MB o más, o sin límite, comprueba el tamaño de tu propio APK final."
     },
     {
-      "source": "完成見本の実測は約48.7MBでした。この値は見本の結果で、学生の素材や変更後の容量を保証する値ではありません。APKが生成されただけでは提出前の動作確認は終わりません。",
-      "translation": "El tamaño medido del ejemplo terminado fue de aproximadamente 48.7 MB. Este valor corresponde al resultado del ejemplo y no garantiza el tamaño posterior con los recursos y cambios de cada estudiante. El simple hecho de generar el APK no concluye la verificación de funcionamiento antes de la entrega."
+      "source": "先生の環境でこの教科書のとおりに作ったときの実測は約48.7MBでした。この値は先生の環境での結果で、学生の素材や変更後の容量を保証する値ではありません。APKが生成されただけでは提出前の動作確認は終わりません。",
+      "translation": "El tamaño medido al crearlo siguiendo este libro de texto en el entorno del profesor fue de aproximadamente 48.7 MB. Este valor corresponde al resultado en el entorno del profesor y no garantiza el tamaño posterior con los recursos y cambios de cada estudiante. El simple hecho de generar el APK no concluye la verificación de funcionamiento antes de la entrega."
     },
     {
       "source": "DartソースとAPKは、Androidのソースとビルド成果物の関係と同じです。普段の<code>flutter run</code>は開発用の実行なので、提出する<code>release</code> APKそのものを次のSTEPで確認します。",
@@ -1115,8 +1115,8 @@
       "translation": "¿Usaste la versión normal <code>release</code> de <code>flutter build apk</code> y no <code>debug</code>? Verifica el tamaño de <code>app-release.apk</code>."
     },
     {
-      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」を参照してください。",
-      "translation": "Si no logras resolver el error, consulta «Comprobar el proyecto terminado (ejemplo)» en <a1>Material común: Solución de problemas</a1>."
+      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の調べ方を試してください。それでも解決しないときは、STEP番号と画面を先生に見せましょう。",
+      "translation": "Si el error no se resuelve, prueba los pasos indicados en <a1>Guía común: Solución de problemas</a1>. Si aun así no se soluciona, muestra al profesor el número de STEP y tu pantalla."
     },
     {
       "source": "JEC / ハイブリッドアプリ開発技法 · F02StampRelease",

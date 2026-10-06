@@ -43,10 +43,6 @@
       "translation": "2. Checkpoints by development environment"
     },
     {
-      "source": "3. どうしても解決しないときは（完成プロジェクトの確認）",
-      "translation": "3. When you still cannot resolve it (Checking the completed project)"
-    },
-    {
       "source": "プログラミングでエラーが出るのは自然なことです。エラーメッセージには「どのファイルの何行目で、何が問題か」が書かれています。焦らずに上から順に確認しましょう。",
       "translation": "Errors are a natural part of programming. Error messages always tell you \"which line of which file has what problem.\" Stay calm and check from top to bottom."
     },
@@ -97,46 +93,6 @@
     {
       "source": "共通：準備（Flutter）",
       "translation": "Shared: Preparation (Flutter)"
-    },
-    {
-      "source": "どうしても自分のコードの間違いが見つからないときや、アプリ本来の動きを確認したいときは、先生が用意した<strong>完成プロジェクト（見本）</strong>を開いて自分のコードと見比べることができます。",
-      "translation": "When you cannot find mistakes in your own code or want to check the intended behavior of the app, you can open the <strong>completed project (sample)</strong> prepared by the teacher and compare it with your code."
-    },
-    {
-      "source": "完成プロジェクトは「答え合わせ用」です",
-      "translation": "The completed project is for “checking your work”"
-    },
-    {
-      "source": "完成プロジェクトからコードをそのままコピーしたり、完成プロジェクトを改造して提出しても、自分の課題の提出にはなりません。見本で違いを確認したら、必ず<strong>自分で作ったプロジェクトに戻り、自分の手で修正</strong>してください。",
-      "translation": "Copying code directly from the completed project or modifying and submitting the completed project does not count as submitting your own assignment. Once you check the differences with the sample, always <strong>return to the project you created yourself and fix it by hand</strong>."
-    },
-    {
-      "source": "見本の場所と開き方",
-      "translation": "Where samples are located and how to open them"
-    },
-    {
-      "source": "Finderで <code>書類</code>（<code>~/Documents</code>）にある配布フォルダ（<code>hybrid-app-student-materials-日付</code>）を開きます。",
-      "translation": "In Finder, open the distribution folder (<code>hybrid-app-student-materials-日付</code>) in <code>書類</code> (<code>~/Documents</code>)."
-    },
-    {
-      "source": "その中にある <code>samples</code> フォルダから、該当する単元のフォルダ（例：<code>M01OshiList</code>、<code>F01StampBoard</code> など）を確認します。",
-      "translation": "From the <code>samples</code> folder inside, locate the folder for the relevant unit (such as <code>M01OshiList</code>, <code>F01StampBoard</code>, etc.)."
-    },
-    {
-      "source": "<strong>Monaca単元（M01・M02）</strong>：<code>samples</code> の中にあるHTML/CSS/JSファイルをテキストエディタで開き、自分のコードと見比べます。Monaca クラウド IDE上で見本を動かして確かめたいときは、先生がZIPにして公開した取り込み用URL（<a1>M01OshiList</a1> / <a2>M02OshiSave</a2>）を通常版Monacaへログインした状態で開いて取り込みます。取り込むとFreeプランの枠を1枠使います。Freeプランの制限で取り込めない場合でも、<code>samples</code> のコードを直接読めば進められます。",
-      "translation": "<strong>Monaca units (M01, M02)</strong>: Open HTML/CSS/JS files in <code>samples</code> with a text editor to compare with your code. If you want to run and check the sample on Monaca クラウド IDE, open the import URL published by your teacher as a ZIP (<a1>M01OshiList</a1> / <a2>M02OshiSave</a2>) while logged into standard Monaca and import it. Importing uses 1 slot of the Free plan. Even if you cannot import due to Free plan limits, you can proceed by directly reading the code in <code>samples</code>."
-    },
-    {
-      "source": "<strong>Flutter単元（F01・F02）</strong>：Visual Studio Code の <code>File → Open Folder…</code> で該当フォルダを選んで開きます。見本でコードや動作を確認したら、自分の制作フォルダ（<code>~/Documents/HybridApp</code>）を開き直して作業を続けます。",
-      "translation": "<strong>Flutter units (F01, F02)</strong>: In Visual Studio Code, choose <code>File → Open Folder…</code> to select and open the relevant folder. Once you have checked the code or behavior with the sample, reopen your own work folder (<code>~/Documents/HybridApp</code>) and continue working."
-    },
-    {
-      "source": "取り違えに注意",
-      "translation": "Be careful not to mix them up"
-    },
-    {
-      "source": "見本と自分のアプリは同じプロジェクト名です。ウィンドウ上部やタブに表示されるフォルダパスを確認し、見本のほうを編集してしまわないよう注意しましょう。",
-      "translation": "The sample and your own app have the same project name. Check the folder path displayed at the top of the window or in tabs to avoid accidentally editing the sample."
     }
   ]
 }
