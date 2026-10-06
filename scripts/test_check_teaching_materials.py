@@ -1966,15 +1966,17 @@ class SampleGuidanceTest(unittest.TestCase):
         self.assertIn("docs/one/index.html:4", errors[0])
 
     def test_link_to_project_archive_is_rejected(self):
-        """完成プロジェクトZIPへのリンクは、文言や引用符にかかわらず検出する。別ページからの相対パスも解決する。"""
+        """完成プロジェクトZIPへのリンクは、文言や引用符にかかわらず検出する。別ページからの相対パスや絶対URLも解決する。"""
         errors = self._errors({
             "docs/one/index.html": '<a href="downloads/M01One.zip" download>答え</a>\n<a href=\'downloads/M01One.zip\'>答え</a>',
             "docs/common/help.html": '<a href="../one/downloads/M01One.zip?from=x">見本</a>',
+            "docs/common/setup.html": '<a href="https://example.com/downloads/M01One.zip">見本</a>',
         })
-        self.assertEqual(len(errors), 3, errors)
+        self.assertEqual(len(errors), 4, errors)
         self.assertIn("docs/common/help.html:1", errors[0])
-        self.assertIn("docs/one/index.html:1", errors[1])
-        self.assertIn("docs/one/index.html:2", errors[2])
+        self.assertIn("docs/common/setup.html:1", errors[1])
+        self.assertIn("docs/one/index.html:1", errors[2])
+        self.assertIn("docs/one/index.html:2", errors[3])
         self.assertTrue(all("完成プロジェクトZIPへリンク" in error for error in errors), errors)
 
     def test_teacher_import_url_is_rejected(self):

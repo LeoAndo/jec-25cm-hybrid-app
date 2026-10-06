@@ -554,20 +554,22 @@ class StudentReleaseTest(unittest.TestCase):
         self.assertNotIn("samples", text)
 
     def test_release_notes_drop_lines_that_mention_samples(self):
-        """PRタイトルやコミットの件名に完成プロジェクトの語があれば、その行だけを除く（#168）。"""
+        """PRタイトルやコミットの件名、学生向け補足から完成プロジェクトの語があれば、その行だけを除く（#168）。"""
         def notes(path, payload=None):
             if path.endswith("/generate-notes"):
-                return {"body": "* 教科書から完成プロジェクトへの案内を撤去 #9\n* M01の説明を修正 #10"}
+                return {"body": "* 教科書から完成プロジェクトへの案内を撤去 #9\n* 見本の取り込み用URLを更新 #11\n* M01の説明を修正 #10"}
             return self.api_response(path, payload)
 
         self.api.side_effect = notes
         log = "- samples の構成を変更 (abc123)\n- STEP 4の誤記を修正 (def456)"
-        with patch.object(release.subprocess, "check_output", return_value=log):
+        with patch.object(release.subprocess, "check_output", return_value=log), \
+                patch.dict(os.environ, {"STUDENT_NOTES": "通常修正\nsamples/M01 を開く"}):
             release.prepare(self.repo, self.metadata)
         text = (self.dist / "release-notes.md").read_text(encoding="utf-8")
         self.assertIn("* M01の説明を修正 #10", text)
         self.assertIn("- STEP 4の誤記を修正 (def456)", text)
-        for word in ("samples", "完成プロジェクト"):
+        self.assertIn("通常修正", text)
+        for word in ("samples", "完成プロジェクト", "見本", "取り込み用URL"):
             self.assertNotIn(word, text)
 
     def test_release_notes_follow_in_class_setup_schedule(self):

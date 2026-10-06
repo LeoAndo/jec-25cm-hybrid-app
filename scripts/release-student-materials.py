@@ -18,9 +18,9 @@ CHECKSUMS = "SHA256SUMS.txt"
 # 配布ZIPの名前は版ごとに変わるので、release-metadata.jsonから受け取る。
 ASSET_PATTERN = re.compile(r"hybrid-app-student-materials-\d{4}-\d{2}-\d{2}\.zip")
 MATERIALS_CONFIG = "config/teaching-materials.json"
-# 学生向けのリリースノートにも、完成プロジェクトへの案内を載せない（README「授業用教科書の基本方針」13）。
-# check-teaching-materials.py の SAMPLE_GUIDANCE_WORDS と同じ語。
-SAMPLE_GUIDANCE_WORDS = ("完成プロジェクト", "samples")
+# 学生向けのリリースノートにも、完成プロジェクトや見本への案内を載せない（README「授業用教科書の基本方針」13）。
+# コミット件名やPRタイトル、学生向け補足から、これらを含む行を除く。
+SAMPLE_GUIDANCE_WORDS = ("完成プロジェクト", "samples", "見本", "取り込み用URL", "取り込み用", "directimport")
 
 
 def without_sample_guidance(text):
@@ -195,7 +195,7 @@ def prepare(repo, metadata):
     commits = without_sample_guidance(subprocess.check_output(
         ["git", "log", "--no-merges", "--format=- %s (%h)", commit_range], cwd=ROOT, text=True,
     ).strip())
-    student_notes = os.environ.get("STUDENT_NOTES", "").strip()
+    student_notes = without_sample_guidance(os.environ.get("STUDENT_NOTES", "").strip())
     projects = load_projects()
     body = (
         f"# ハイブリッドアプリ開発技法 教材 {version}\n\n"
