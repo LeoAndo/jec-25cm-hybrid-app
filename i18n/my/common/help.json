@@ -43,10 +43,6 @@
       "translation": "၂။ Development environment အလိုက် စစ်ဆေးရမည့်အချက်များ"
     },
     {
-      "source": "3. どうしても解決しないときは（完成プロジェクトの確認）",
-      "translation": "၃။ မည်သို့မျှ ဖြေရှင်းမရသည့်အခါ (ပြီးစီးထားသော project ကို စစ်ဆေးခြင်း)"
-    },
-    {
       "source": "プログラミングでエラーが出るのは自然なことです。エラーメッセージには「どのファイルの何行目で、何が問題か」が書かれています。焦らずに上から順に確認しましょう。",
       "translation": "Programming တွင် error များ ဖြစ်ပေါ်ခြင်းသည် သဘာဝကျသော အရာတစ်ခု ဖြစ်သည်။ Error message များတွင် “မည်သည့် file ၏ မည်သည့်စာကြောင်းတွင် မည်သည့်ပြဿနာရှိသည်” ကို ရေးသားထားပါသည်။ စိတ်မလောဘဲ အပေါ်မှ အောက်သို့ အစဉ်လိုက် စစ်ဆေးကြည့်ပါ။"
     },
@@ -97,46 +93,6 @@
     {
       "source": "共通：準備（Flutter）",
       "translation": "အထွေထွေ: ပြင်ဆင်ခြင်း (Flutter)"
-    },
-    {
-      "source": "どうしても自分のコードの間違いが見つからないときや、アプリ本来の動きを確認したいときは、先生が用意した<strong>完成プロジェクト（見本）</strong>を開いて自分のコードと見比べることができます。",
-      "translation": "မိမိ code ၏ အမှားကို မည်သို့မျှ ရှာမတွေ့သည့်အခါ သို့မဟုတ် app ၏ မူလလုပ်ဆောင်ပုံကို စစ်ဆေးလိုသည့်အခါ ဆရာ ပြင်ဆင်ထားသော <strong>ပြီးစီးထားသော project (နမူနာ)</strong> ကို ဖွင့်ပြီး မိမိ code နှင့် နှိုင်းယှဉ်ကြည့်နိုင်ပါသည်။"
-    },
-    {
-      "source": "完成プロジェクトは「答え合わせ用」です",
-      "translation": "ပြီးစီးထားသော project သည် “အဖြေတိုက်စစ်ရန်အတွက်” ဖြစ်ပါသည်"
-    },
-    {
-      "source": "完成プロジェクトからコードをそのままコピーしたり、完成プロジェクトを改造して提出しても、自分の課題の提出にはなりません。見本で違いを確認したら、必ず<strong>自分で作ったプロジェクトに戻り、自分の手で修正</strong>してください。",
-      "translation": "ပြီးစီးထားသော project မှ code များကို တိုက်ရိုက်ကူးယူခြင်း သို့မဟုတ် ပြီးစီးထားသော project ကို ပြုပြင်ပြီး တင်သွင်းခြင်းသည် မိမိ၏ လေ့ကျင့်ခန်း တင်သွင်းမှု မမြောက်ပါ။ နမူနာဖြင့် ကွဲလွဲချက်များကို စစ်ဆေးပြီးပါက <strong>မိမိကိုယ်တိုင် ဖန်တီးထားသော project သို့ ပြန်သွားပြီး မိမိလက်ဖြင့် ပြင်ဆင်ပါ</strong>။"
-    },
-    {
-      "source": "見本の場所と開き方",
-      "translation": "နမူနာရှိသည့်နေရာနှင့် ဖွင့်နည်း"
-    },
-    {
-      "source": "Finderで <code>書類</code>（<code>~/Documents</code>）にある配布フォルダ（<code>hybrid-app-student-materials-日付</code>）を開きます。",
-      "translation": "Finder တွင် <code>書類</code> (<code>~/Documents</code>) ထဲရှိ ဖြန့်ဝေထားသော folder (<code>hybrid-app-student-materials-日付</code>) ကို ဖွင့်ပါ။"
-    },
-    {
-      "source": "その中にある <code>samples</code> フォルダから、該当する単元のフォルダ（例：<code>M01OshiList</code>、<code>F01StampBoard</code> など）を確認します。",
-      "translation": "၎င်းထဲရှိ <code>samples</code> folder မှ သက်ဆိုင်ရာ သင်ခန်းစာ၏ folder (ဥပမာ - <code>M01OshiList</code>, <code>F01StampBoard</code> စသည်) ကို စစ်ဆေးပါ။"
-    },
-    {
-      "source": "<strong>Monaca単元（M01・M02）</strong>：<code>samples</code> の中にあるHTML/CSS/JSファイルをテキストエディタで開き、自分のコードと見比べます。Monaca クラウド IDE上で見本を動かして確かめたいときは、先生がZIPにして公開した取り込み用URL（<a1>M01OshiList</a1> / <a2>M02OshiSave</a2>）を通常版Monacaへログインした状態で開いて取り込みます。取り込むとFreeプランの枠を1枠使います。Freeプランの制限で取り込めない場合でも、<code>samples</code> のコードを直接読めば進められます。",
-      "translation": "<strong>Monaca သင်ခန်းစာများ (M01, M02)</strong> - <code>samples</code> ထဲရှိ HTML/CSS/JS file များကို text editor ဖြင့်ဖွင့်ပြီး မိမိ code နှင့် နှိုင်းယှဉ်ကြည့်ပါ။ Monaca クラウド IDE ပေါ်တွင် နမူနာကို run ၍ စစ်ဆေးလိုပါက standard Monaca သို့ log in ဝင်ထားသည့် အခြေအနေဖြင့် ဆရာက ZIP အဖြစ် publish လုပ်ထားသော import URL (<a1>M01OshiList</a1> / <a2>M02OshiSave</a2>) ကို ဖွင့်ပြီး import လုပ်ပါ။ import လုပ်ပါက Free plan ၏ slot ၁ ခုကို အသုံးပြုပါမည်။ Free plan ၏ ကန့်သတ်ချက်များကြောင့် import မလုပ်နိုင်လျှင်လည်း <code>samples</code> ထဲရှိ code များကို တိုက်ရိုက်ဖတ်ရှု၍ ဆက်လက်လုပ်ဆောင်နိုင်ပါသည်။"
-    },
-    {
-      "source": "<strong>Flutter単元（F01・F02）</strong>：Visual Studio Code の <code>File → Open Folder…</code> で該当フォルダを選んで開きます。見本でコードや動作を確認したら、自分の制作フォルダ（<code>~/Documents/HybridApp</code>）を開き直して作業を続けます。",
-      "translation": "<strong>Flutter သင်ခန်းစာများ (F01, F02)</strong> - Visual Studio Code ၏ <code>File → Open Folder…</code> ဖြင့် သက်ဆိုင်ရာ folder ကို ရွေးချယ်ဖွင့်ပါ။ နမူနာဖြင့် code နှင့် လုပ်ဆောင်ပုံကို စစ်ဆေးပြီးပါက မိမိ၏ လုပ်ငန်း folder (<code>~/Documents/HybridApp</code>) ကို ပြန်ဖွင့်ကာ ဆက်လက်လုပ်ဆောင်ပါ။"
-    },
-    {
-      "source": "取り違えに注意",
-      "translation": "မှားယွင်းမှု မဖြစ်စေရန် သတိပြုပါ"
-    },
-    {
-      "source": "見本と自分のアプリは同じプロジェクト名です。ウィンドウ上部やタブに表示されるフォルダパスを確認し、見本のほうを編集してしまわないよう注意しましょう。",
-      "translation": "နမူနာနှင့် မိမိ၏ app သည် project အမည် တူညီပါသည်။ Window အပေါ်ဘက် သို့မဟုတ် tab များတွင် ပြသထားသော folder လမ်းကြောင်းကို စစ်ဆေးပြီး နမူနာဘက်ကို မတော်တဆ ပြင်ဆင်မိခြင်း မရှိစေရန် သတိပြုပါ။"
     }
   ]
 }

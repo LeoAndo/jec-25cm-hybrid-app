@@ -147,8 +147,8 @@
       "translation": "Save the habits and stamps you enter on the device, so you can continue after a restart. Read the code that waits for saving to finish, then check the generated APK itself and submit it."
     },
     {
-      "source": "完成見本は<code>F02StampRelease</code>です。この教科書に開始コードと作成・実行手順を掲載しています。既に作っている自分のスタンプ帳から続けても構いません。Web基礎とJava／Swiftの知識を比べながら読みます。",
-      "translation": "The completed sample is <code>F02StampRelease</code>. This textbook includes the starting code and the steps to create and run it. You may also continue from the stamp board you have already made. Read it while comparing with what you know from Web Basics and Java / Swift."
+      "source": "この単元のプロジェクトは<code>F02StampRelease</code>です。この教科書に開始コードと作成・実行手順を掲載しています。既に作っている自分のスタンプ帳から続けても構いません。Web基礎とJava／Swiftの知識を比べながら読みます。",
+      "translation": "The project for this unit is <code>F02StampRelease</code>. This textbook includes the starting code and the steps to create and run it. You may also continue from the stamp board you have already made. Read it while comparing with what you know from Web Basics and Java / Swift."
     },
     {
       "source": "STEP 00 · コマ12",
@@ -719,8 +719,8 @@
       "translation": "On success, <code>build/app/outputs/flutter-apk/app-release.apk</code> is created. Check the file size and modification time in Finder. The limit of the submission site is 100MB or more, or there is no limit, but check the size of your own final APK as well."
     },
     {
-      "source": "完成見本の実測は約48.7MBでした。この値は見本の結果で、学生の素材や変更後の容量を保証する値ではありません。APKが生成されただけでは提出前の動作確認は終わりません。",
-      "translation": "The measured size of the completed sample was about 48.7MB. This value is the result for the sample; it does not guarantee the size after your own assets and changes. Just generating the APK does not complete the pre-submission check of its behavior."
+      "source": "先生の環境でこの教科書のとおりに作ったときの実測は約48.7MBでした。この値は先生の環境での結果で、学生の素材や変更後の容量を保証する値ではありません。APKが生成されただけでは提出前の動作確認は終わりません。",
+      "translation": "The measured size when created as described in this textbook in your teacher's environment was about 48.7MB. This value is the result in your teacher's environment; it does not guarantee the size after your own assets and changes. Just generating the APK does not complete the pre-submission check of its behavior."
     },
     {
       "source": "DartソースとAPKは、Androidのソースとビルド成果物の関係と同じです。普段の<code>flutter run</code>は開発用の実行なので、提出する<code>release</code> APKそのものを次のSTEPで確認します。",
@@ -1115,8 +1115,8 @@
       "translation": "Did you use the normal <code>release</code> build of <code>flutter build apk</code>, not <code>debug</code>? Check the size of <code>app-release.apk</code>."
     },
     {
-      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」を参照してください。",
-      "translation": "If you cannot resolve an error, refer to \"Checking the completed project (sample)\" in <a1>Shared Guide: Troubleshooting</a1>."
+      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の調べ方を試してください。それでも解決しないときは、STEP番号と画面を先生に見せましょう。",
+      "translation": "If the error is not resolved, try the troubleshooting steps in <a1>Shared Guide: Troubleshooting</a1>. If it is still not resolved, show your teacher the STEP number and your screen."
     },
     {
       "source": "JEC / ハイブリッドアプリ開発技法 · F02StampRelease",
