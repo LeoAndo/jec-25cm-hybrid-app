@@ -40,7 +40,7 @@ description: Add a new teaching unit to this hybrid app course repository - a Mo
    python3 scripts/package-project.py --project M01HelloMonaca --output docs/hello-monaca/downloads/M01HelloMonaca.zip
    ```
 
-8. **Monaca単元で `import_url` を書いてある場合**：URLの先にあるのは、オーナーのMonacaにある前のコマの形のプロジェクトである。オーナーに、新しいZIPを取り込んで公開し直してもらい、configの `import_url` と教科書の「完成プロジェクトを開く」のURLを新しいものに替える。エージェントはこれをPR本文に「未確認（オーナー作業）」として書く。
+8. **Monaca単元で `import_url` を書いてある場合**：URLの先にあるのは、オーナーのMonacaにある前のコマの形のプロジェクトである。このURLは学生へ配らない教員用の記録なので（READMEの「授業用教科書の基本方針」13、2026-10-06 #168）、学生のために公開し直す必要はない。オーナーが公開し直したときだけ、configの `import_url` と教員用ガイドの記録を新しいURLに替える。教科書（`docs/`）には載せない（載せると検査が落ちる）。
 
 **`projects` に新しい項目を足さない。** 単元が増えないので、サイドバーの単元一覧・topbar・GitHubのラベルは変わらない。`docs/` に新しいスラッグのフォルダも作らない。最後に、この下の「検証」を同じように通す。
 
@@ -91,8 +91,8 @@ description: Add a new teaching unit to this hybrid app course repository - a Mo
    python3 scripts/package-project.py --project M0NXxx --output ~/Documents/jec-25cm-hybrid-app-verification-deliverables/M0NXxx.zip
    ```
 
-   このZIPの形（単元のフォルダで1階層包んだもの）をMonacaのインポートが受け付けるかは、最初のMonaca単元で確かめる。教科書のスクリーンショットはこのプレビューで撮る。教員のFreeプランの3枠は、完成プロジェクトの公開用に2枠、採点・一時確認用に1枠を使う。公開用の2件は残し、一時確認用のプロジェクトは確認後にオーナーが削除して枠を空ける。**エージェントが確かめられない段は「未確認」としてPR本文に書く。** 1段目を飛ばして「Monacaで動くはず」と書かない。
-7. **取り込み用URL（`import_url`）を配るとき。** オーナーが完成プロジェクトを **プロジェクト → 公開…** で公開すると、`https://monaca.mobi/ja/directimport?pid=…` の形のURLが発行される。**実際に発行されたURLをそのまま**configの `import_url` に書き、教科書の「完成プロジェクトを開く」にも同じURLを載せる。`pid` の桁数を固定して書かず、IDやURLを推測で作らない。公開用の2枠にあるプロジェクトは配布中も保持する。
+   このZIPの形（単元のフォルダで1階層包んだもの）をMonacaのインポートが受け付けるかは、最初のMonaca単元で確かめる。教科書のスクリーンショットはこのプレビューで撮る。教員のFreeプランの3枠では、確認が済んだ一時コピーをオーナーが削除して枠を空ける。公開中の完成見本を残すかはオーナーが決める（学生へは配らない。AGENTS.md §0-A）。**エージェントが確かめられない段は「未確認」としてPR本文に書く。** 1段目を飛ばして「Monacaで動くはず」と書かない。
+7. **取り込み用URL（`import_url`）を記録するとき。** オーナーが完成プロジェクトを **プロジェクト → 公開…** で公開すると、`https://monaca.mobi/ja/directimport?pid=…` の形のURLが発行される。記録するなら、**実際に発行されたURLをそのまま**configの `import_url` に書く。`pid` の桁数を固定して書かず、IDやURLを推測で作らない。**このURLは教員用の記録で、教科書（`docs/`）には載せない**（READMEの「授業用教科書の基本方針」13。載せると `scripts/check-teaching-materials.py` が落ちる）。
 
 ### Flutter系（`kind: "flutter"`）
 
@@ -164,7 +164,7 @@ description: Add a new teaching unit to this hybrid app course repository - a Mo
   ```
 
   ZIPはGitで管理しているファイルから作るので、新しいファイルは先に `git add` する。
-- **「完成プロジェクトを開く」（`#sample-project`）は、どちらの系統も配布フォルダ `~/Documents/hybrid-app-student-materials-日付/samples/<単元名>` をFinderで開くところから書く**（2026-09-25 先生レビュー、#135）。Monaca系は、そのフォルダでコードを読み比べ、Monaca クラウド IDEで動かすときは教員がZIPにして公開した取り込み用URL（`import_url`。実際に発行して開けることを確かめたURLだけを載せる。まだ無ければ、教員が案内すると書く）から取り込む、と書く。Flutter系は、そのフォルダを Visual Studio Code の `File > Open Folder…` で開く手順にし、ZIPのダウンロードリンクは置かない。
+- **教科書から完成プロジェクトへは案内しない**（READMEの「授業用教科書の基本方針」13、2026-10-06 #168）。「完成プロジェクトを開く」の節（`#sample-project`）は作らず、配布フォルダの `samples/` の開き方、完成版ZIPへのリンク、教員が公開したMonacaの取り込み用URL（`import_url`）も書かない。「完成プロジェクト」「samples」の語、`archive` へのリンク、configの `import_url` は `scripts/check-teaching-materials.py` が落とす。「先生が作った見本」のような言い換えも書かない。学生の提出に使う、学生自身の作品の取り込み用公開URLの説明は対象外。
 - `docs/<スラッグ>/images/` は、**その教科書で実際に使うスクリーンショットがあるときだけ**作る。Monaca系はMonaca クラウド IDEのプレビュー、Flutter系はシミュレータ／エミュレータで撮る。「ここに画像を入れる」のようなプレースホルダは置かない。`<img>` には実寸の `width` と `height` を書く。
 - コードのスニペットは、`<pre id="code-…"><code>` に置き、**ソースからHTMLエスケープして差し込む**。configの `snippets` がバイト単位で照合するので、手で写して直さない。
 
@@ -218,7 +218,7 @@ description: Add a new teaching unit to this hybrid app course repository - a Mo
 
 - `app_id` は `config.xml` の `<widget id>` と同じ値（検査が照合する）。`entry` は `<content src>` が指すファイルのリポジトリ上のパスで、`www/` の下に実在する必要がある。
 - `sources` は1つ以上。Monaca系は `www/` の下、Flutter系の `.dart` は `lib/` の下に置く。CRを含むと検査が落ちる。
-- `import_url` は任意。オーナーがMonacaで公開したら書き、まだなら**キーごと省く**（上の「Monaca系」7）。書いたら、教科書（`docs` の1つ目）に同じURLが無いと検査が落ちる。**URLを推測で書かない。**
+- `import_url` は任意で、Monaca系だけに書ける教員用の記録。オーナーがMonacaで公開して記録するなら書き、まだなら**キーごと省く**（上の「Monaca系」7）。**教科書（`docs/` の下）に同じURLがあると検査が落ちる。** **URLを推測で書かない。**
 - `mirrors` は任意。
 
 Flutter単元なら次の形になる（`F01HelloFlutter` を足す場合）。
@@ -269,19 +269,19 @@ Flutter単元なら次の形になる（`F01HelloFlutter` を足す場合）。
 - 表示名は `<番号>：<ラベル>`。単元名から先頭の番号を切り離し、全角コロンでつなぐ（`M01HelloMonaca` → **`M01：HelloMonaca`**、`F01HelloFlutter` → **`F01：HelloFlutter`**。`M01：M01HelloMonaca` にしない）。
 - ほかの単元は `<a href="../<スラッグ>/index.html">`、**自単元は `<span aria-current="page">`**。
 - 単元の項目は、**文字だけの `<a>` か `<span>`**。中に `<strong>` などの別タグを入れない。
-- 位置は「完成プロジェクトを開く」のあと、共通資料の前。「困ったとき」「完成プロジェクトを開く」と共通資料へのリンクは、単元として数えない。共通資料へのリンクには `?from=<自分のスラッグ>` を付ける。
+- 位置は「困ったとき」のあと、共通資料の前。「困ったとき」と共通資料へのリンクは、単元として数えない。共通資料へのリンクには `?from=<自分のスラッグ>` を付ける。
 - 複数コマにまたがる単元にコマを足しても、単元の項目は増えない。
 
 **既存の M01 の教科書（`docs/hello-monaca/index.html`）に F01 を足す**
 
 ```html
-<div class="resources"><a href="#help">困ったとき</a><a href="#sample-project">完成プロジェクトを開く</a><span aria-current="page">M01：HelloMonaca</span><a href="../hello-flutter/index.html">F01：HelloFlutter</a><a href="../common/setup.html?from=hello-monaca">共通：はじめの準備</a></div>
+<div class="resources"><a href="#help">困ったとき</a><span aria-current="page">M01：HelloMonaca</span><a href="../hello-flutter/index.html">F01：HelloFlutter</a><a href="../common/setup.html?from=hello-monaca">共通：はじめの準備</a></div>
 ```
 
 **新しい F01 の教科書（`docs/hello-flutter/index.html`）には、全単元を並べる**
 
 ```html
-<div class="resources"><a href="#help">困ったとき</a><a href="#sample-project">完成プロジェクトを開く</a><a href="../hello-monaca/index.html">M01：HelloMonaca</a><span aria-current="page">F01：HelloFlutter</span><a href="../common/setup.html?from=hello-flutter">共通：はじめの準備</a></div>
+<div class="resources"><a href="#help">困ったとき</a><a href="../hello-monaca/index.html">M01：HelloMonaca</a><span aria-current="page">F01：HelloFlutter</span><a href="../common/setup.html?from=hello-flutter">共通：はじめの準備</a></div>
 ```
 
 共通資料は、`docs/common/` にあるページだけを並べる（上の例は `setup.html` だけの場合）。
@@ -342,4 +342,4 @@ python3 scripts/package-student-materials.py
 - **Monaca単元**：`python3 -m http.server` とChromeで画面と操作を確かめる（エージェントが行う）。Monacaへのインポートとプレビューは、PR本文に「未確認（オーナー作業）」と書く。
 - **Flutter単元**：`flutter analyze` が何も出さないことと、iOSシミュレータかAndroidエミュレータで動くことを確かめる。
 
-`package-student-materials.py` が作った配布ZIPを展開し、入口から教科書・完成プロジェクト・共通資料へのリンクがたどれることも確かめる。commitする前に `git diff --cached --name-only` を見て、系統ごとの所定の位置にある生成物やローカル設定が紛れ込んでいないことを確かめる（AGENTS.md §5）。除外は `scripts/project_files.py` の系統（`kind`）とプロジェクトからの相対パスに従う。Monacaなら直下の `node_modules/`・`platforms/`・`plugins/`、Flutterなら直下の `.dart_tool/`・`build/` や `android/local.properties` などが対象で、`lib/build/`・`lib/plugins/`・`www/plugins/` のような同名のソース用フォルダまで除外しない。`.DS_Store` など両系統のローカルファイルも含めない。
+`package-student-materials.py` が作った配布ZIPを展開し、入口から教科書・共通資料へのリンクがたどれることと、`samples/` に単元の完成プロジェクトが同梱されていること（教科書や `はじめに.txt` からは案内しない。READMEの「授業用教科書の基本方針」13）も確かめる。commitする前に `git diff --cached --name-only` を見て、系統ごとの所定の位置にある生成物やローカル設定が紛れ込んでいないことを確かめる（AGENTS.md §5）。除外は `scripts/project_files.py` の系統（`kind`）とプロジェクトからの相対パスに従う。Monacaなら直下の `node_modules/`・`platforms/`・`plugins/`、Flutterなら直下の `.dart_tool/`・`build/` や `android/local.properties` などが対象で、`lib/build/`・`lib/plugins/`・`www/plugins/` のような同名のソース用フォルダまで除外しない。`.DS_Store` など両系統のローカルファイルも含めない。

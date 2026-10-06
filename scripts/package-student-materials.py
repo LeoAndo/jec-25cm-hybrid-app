@@ -1,4 +1,7 @@
-"""学生向けのdocs一式と、展開済みの完成プロジェクト（samples）をZIPにまとめる。完成プロジェクトのZIPは再生成する。"""
+"""学生向けのdocs一式と、展開済みの完成プロジェクト（samples）をZIPにまとめる。完成プロジェクトのZIPは再生成する。
+
+完成プロジェクトはZIPに収録するが、はじめに.txt では案内しない（README「授業用教科書の基本方針」13）。
+"""
 
 import argparse
 from datetime import datetime, timedelta, timezone
@@ -53,16 +56,6 @@ def archive_targets(projects):
         if target not in targets:
             targets.append(target)
     return targets
-
-
-def sample_example(projects):
-    """はじめに.txt の「File > Open Folder…」の例に挙げる見本。
-
-    フォルダーを開いて使うのはFlutterの単元の見本だけ（Monacaの見本は取り込み用のURLから取り込む）。
-    projects の先頭はMonacaの単元なので、先頭を挙げるとFlutterの案内にMonacaの見本が出てしまう。
-    """
-    roots = [project["root"] for project in projects if project.get("kind") == "flutter"]
-    return f"samples/{roots[0]}" if roots else "samples/<プロジェクト名>"
 
 
 class LocalLinks(HTMLParser):
@@ -207,9 +200,9 @@ def build(output_dir):
     languages = add_localized_materials(files)
     check_links(files)
 
-    # 完成プロジェクトを、展開済みの見本として samples/ にも収録する。Flutterの単元は、学生がダウンロードも
-    # 展開もせず、Visual Studio Code の「File > Open Folder…」で選ぶだけになる。Monacaの単元の見本は、
-    # 取り込み用のURLから取り込むので、samples/ の中身はコードを読み比べるための写しになる。
+    # 完成プロジェクトを、展開済みの見本として samples/ にも収録する。教員が見せると判断したときに、
+    # ダウンロードも展開もせずに開ける。ただし、はじめに.txt・教科書からは案内しない
+    # （README「授業用教科書の基本方針」13）。
     # 中身は配布物に入れるZIPと同じなので、新たにcommitするファイルはない。
     # リンク検査のあとで足すので、検査の対象は教科書と多言語の入口で、samples の中は検査しない。
     executables = set()
@@ -241,11 +234,7 @@ def build(output_dir):
         "   教材の置き場所とMonacaアカウントを準備し、Flutterのダウンロードも授業時間内に行います。\n"
         "   Flutterの初回実行は単元の教科書で行います。準備済みの項目は確認してから次へ進みます。\n"
         "3. 授業で使う単元の教科書をブラウザで開きます。\n"
-        f"{unit_lines}"
-        "4. 完成プロジェクト（先生が作った見本）を含む版には、samples フォルダがあります。\n"
-        f"   Flutterの単元は、Visual Studio Code の「File > Open Folder…」で {sample_example(projects)} のように選ぶだけで開けます。\n"
-        "   Monacaの単元は、教科書に載っている取り込み用のURLからMonacaへ取り込みます。\n"
-        "   samples フォルダの中身は、コードを読み比べるための写しです。\n\n"
+        f"{unit_lines}\n"
         "教科書はオフラインで利用できます。Monacaはブラウザから使うサービスなので、ネット接続が必要です。\n"
         "Flutterの準備とビルドにもネット接続が必要です。\n"
         "教材を更新するときは ~/Documents の直下に別のフォルダとして展開し、自分で作ったプロジェクト（~/Documents/HybridApp の中）を上書きしないでください。\n"
