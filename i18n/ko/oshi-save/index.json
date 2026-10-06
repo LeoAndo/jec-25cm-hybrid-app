@@ -992,7 +992,7 @@
     },
     {
       "source": "提出するのは <code>https://monaca.mobi/ja/directimport?pid=…</code> という形の、実際に発行されたURLです。クラウド IDEやプレビューのアドレスを代わりに貼りません。相手のMonacaへソースを取り込むためのURLです。",
-      "translation": "제출하는 것은 <code>https://monaca.mobi/ja/directimport?pid=…</code> 형태의 실제로 발행된 URL입니다. 클라우드 IDE나 미리보기 주소를 대신 붙여넣지 않습니다. 상대방의 Monaca로 소스를 가져오기 위한 URL입니다."
+      "translation": "제출하는 것은 <code>https://monaca.mobi/ja/directimport?pid=…</code> 형식의 실제로 발행된 URL입니다. 대신 クラウド IDE(클라우드 IDE)나 プレビュー(미리보기)의 주소를 붙여넣지 마세요. 상대방의 Monaca로 소스를 가져오기 위한 URL입니다."
     },
     {
       "source": "発行したURLを開き、対象のプロジェクトを確かめます。取り込みを確定するとコピーが増えるため、繰り返して枠を埋めないようにします。教員側で新しく取り込んだ状態の動作も確認します。",
