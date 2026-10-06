@@ -446,49 +446,53 @@ class TeachingMaterialsCheckTest(unittest.TestCase):
             self.assertIn("M01HelloMonaca/config.xml:1", errors[0])
             self.assertIn("Monacaの完成コードがM01HelloMonaca/www/の下にありません", errors[0])
 
-    def test_import_url_in_textbook_is_accepted(self):
-        """取り込み用のURLが学生用の教科書に載っていれば、何も言わない。"""
+    def test_import_url_in_textbook_is_rejected(self):
+        """先生が公開した取り込み用のURLが教科書に載っていたら検出する（#168）。"""
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
             self._repository(root)
-            link = f'<p><a href="{html.escape(self.IMPORT_URL)}">見本を取り込む</a></p>'
+            link = f'<p><a href="{html.escape(self.IMPORT_URL)}">取り込む</a></p>'
             self._write(root, "docs/hello-monaca/index.html",
                         self._unit_textbook("monaca", ("monaca",), extra=link))
             self._update_project(root, import_url=self.IMPORT_URL)
-            self.assertEqual(CHECKER.validate(root), [])
+            errors = CHECKER.validate(root)
+            self.assertEqual(len(errors), 1, errors)
+            self.assertIn("docs/hello-monaca/index.html:", errors[0])
+            self.assertIn(f"先生が公開した取り込み用のURL（import_url）があります", errors[0])
+            self.assertIn(self.IMPORT_URL, errors[0])
 
-    def test_import_url_in_help_doc_is_accepted(self):
-        """取り込み用のURLが共通資料（help.html）に載っていれば、何も言わない。"""
+    def test_import_url_in_help_doc_is_rejected(self):
+        """共通資料に本文として書いても、行番号つきで検出する。"""
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
             self._repository(root)
-            link = f'<p><a href="{html.escape(self.IMPORT_URL)}">見本を取り込む</a></p>'
-            self._write(root, "docs/common/help.html", f"<!doctype html><html><body>{link}</body></html>")
-            self._update_project(root, import_url=self.IMPORT_URL)
-            self.assertEqual(CHECKER.validate(root), [])
-
-    def test_import_url_missing_from_textbook_is_rejected(self):
-        """設定にだけ書いて教科書に載せ忘れると、学生は見本を取り込めないので検出する。"""
-        with tempfile.TemporaryDirectory() as temporary:
-            root = Path(temporary)
-            self._repository(root)
+            self._write(root, "docs/common/help.html",
+                        f"<!doctype html>\n<html><body>\n<p>{self.IMPORT_URL}</p>\n</body></html>")
             self._update_project(root, import_url=self.IMPORT_URL)
             errors = CHECKER.validate(root)
             self.assertEqual(len(errors), 1, errors)
-            self.assertIn("docs/hello-monaca/index.html:1", errors[0])
-            self.assertIn(f"取り込み用のURL（import_url）がありません: {self.IMPORT_URL}", errors[0])
+            self.assertIn("docs/common/help.html:3", errors[0])
 
-    def test_import_url_only_in_teacher_doc_is_rejected(self):
-        """URLを見るのは学生なので、教員用ガイドにだけ載っていても通さない。"""
+    def test_import_url_only_in_config_and_teacher_doc_is_accepted(self):
+        """import_url は教員用の記録。configと教員用ガイドにあるだけなら、何も言わない。"""
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
             self._repository(root)
             self._write(root, "teacher/hello-monaca/index.html",
                         self._teacher_doc("M01HelloMonaca", self.IDE, extra=f"<p>{self.IMPORT_URL}</p>"))
             self._update_project(root, import_url=self.IMPORT_URL)
-            errors = CHECKER.validate(root)
-            self.assertEqual(len(errors), 1, errors)
-            self.assertIn("docs/hello-monaca/index.html:1", errors[0])
+            self.assertEqual(CHECKER.validate(root), [])
+
+    def test_submission_url_format_is_accepted(self):
+        """学生が自分で発行する提出用のURLの形は、説明に要るので教科書に書いてよい。"""
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._repository(root)
+            extra = "<p>提出するのは <code>https://monaca.mobi/ja/directimport?pid=…</code> の形のURLです。</p>"
+            self._write(root, "docs/hello-monaca/index.html",
+                        self._unit_textbook("monaca", ("monaca",), extra=extra))
+            self._update_project(root, import_url=self.IMPORT_URL)
+            self.assertEqual(CHECKER.validate(root), [])
 
     def test_import_url_must_be_text(self):
         with tempfile.TemporaryDirectory() as temporary:
@@ -1910,6 +1914,80 @@ class ProgressKeyTest(unittest.TestCase):
                 errors = self._check(root)
                 self.assertEqual(len(errors), 1, errors)
                 self.assertIn(f"data-progress-keyの形が違います: {key}", errors[0])
+
+
+class SampleGuidanceTest(unittest.TestCase):
+    """教科書から完成プロジェクトへ案内していないかの検査（#168、README「授業用教科書の基本方針」13）。"""
+
+    ARCHIVE = "docs/one/downloads/M01One.zip"
+    IMPORT_URL = "https://monaca.mobi/ja/directimport?pid=0123456789abcdef0123456789abcdef"
+
+    def _errors(self, pages: dict[str, str], import_url: str | None = None) -> list[str]:
+        """docs/ にページを書き出して、完成プロジェクトへの案内についてのエラーだけを返す。"""
+        with tempfile.TemporaryDirectory() as name:
+            root = Path(name)
+            for page, content in pages.items():
+                (root / page).parent.mkdir(parents=True, exist_ok=True)
+                (root / page).write_text(content, encoding="utf-8")
+            project = {"name": "M01One", "kind": "monaca", "archive": self.ARCHIVE}
+            if import_url is not None:
+                project["import_url"] = import_url
+            errors: list[str] = []
+            CHECKER.check_no_sample_guidance(root, {"projects": [project]}, errors)
+            return errors
+
+    def test_textbook_without_sample_guidance_is_accepted(self):
+        """画像の置き場所（downloads/）へのリンクや、属性の中の語は案内にあたらない。"""
+        errors = self._errors({
+            "docs/one/index.html": ('<p><a href="downloads/title.png">画像</a></p>\n'
+                                    '<img src="images/samples.png" alt="">\n'
+                                    '<p>自分のプロジェクトで発行した <code>https://monaca.mobi/ja/directimport?pid=…</code> を提出します。</p>'),
+        }, import_url=self.IMPORT_URL)
+        self.assertEqual(errors, [])
+
+    def test_sample_guidance_words_are_rejected(self):
+        """本文に「完成プロジェクト」「samples」が出たら、共通資料でも行番号つきで検出する。"""
+        errors = self._errors({
+            "docs/one/index.html": "<p>見比べるときは</p>\n<p>完成プロジェクトを開きます。</p>",
+            "docs/common/help.html": "<p><code>samples</code> フォルダを開きます。</p>",
+        })
+        self.assertEqual(len(errors), 2, errors)
+        self.assertIn("docs/common/help.html:1", errors[0])
+        self.assertIn("samples", errors[0])
+        self.assertIn("docs/one/index.html:2", errors[1])
+        self.assertIn("完成プロジェクト", errors[1])
+
+    def test_line_number_survives_a_tag_spanning_lines(self):
+        """タグが2行にまたがっても、本文の行番号がずれず、属性の値も本文と取り違えない。"""
+        errors = self._errors({
+            "docs/one/index.html": '<p>はじめ</p>\n<img\n  alt="samples">\n<p>完成プロジェクト</p>',
+        })
+        self.assertEqual(len(errors), 1, errors)
+        self.assertIn("docs/one/index.html:4", errors[0])
+
+    def test_link_to_project_archive_is_rejected(self):
+        """完成プロジェクトZIPへのリンクは、文言や引用符にかかわらず検出する。別ページからの相対パスも解決する。"""
+        errors = self._errors({
+            "docs/one/index.html": '<a href="downloads/M01One.zip" download>答え</a>\n<a href=\'downloads/M01One.zip\'>答え</a>',
+            "docs/common/help.html": '<a href="../one/downloads/M01One.zip?from=x">見本</a>',
+        })
+        self.assertEqual(len(errors), 3, errors)
+        self.assertIn("docs/common/help.html:1", errors[0])
+        self.assertIn("docs/one/index.html:1", errors[1])
+        self.assertIn("docs/one/index.html:2", errors[2])
+        self.assertTrue(all("完成プロジェクトZIPへリンク" in error for error in errors), errors)
+
+    def test_teacher_import_url_is_rejected(self):
+        """先生が公開した取り込み用のURLは、リンクでも本文でも検出する。"""
+        escaped = self.IMPORT_URL.replace("?", "&#63;")
+        errors = self._errors({
+            "docs/one/index.html": f'<p>はじめ</p>\n<a href="{self.IMPORT_URL}">取り込む</a>',
+            "docs/common/help.html": f"<p>{escaped}</p>",
+        }, import_url=self.IMPORT_URL)
+        self.assertEqual(len(errors), 2, errors)
+        self.assertIn("docs/common/help.html:1", errors[0])
+        self.assertIn("docs/one/index.html:2", errors[1])
+        self.assertTrue(all("取り込み用のURL（import_url）があります" in error for error in errors), errors)
 
 
 if __name__ == "__main__":

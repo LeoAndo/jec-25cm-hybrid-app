@@ -18,6 +18,19 @@ CHECKSUMS = "SHA256SUMS.txt"
 # 配布ZIPの名前は版ごとに変わるので、release-metadata.jsonから受け取る。
 ASSET_PATTERN = re.compile(r"hybrid-app-student-materials-\d{4}-\d{2}-\d{2}\.zip")
 MATERIALS_CONFIG = "config/teaching-materials.json"
+# 学生向けのリリースノートにも、完成プロジェクトへの案内を載せない（README「授業用教科書の基本方針」13）。
+# check-teaching-materials.py の SAMPLE_GUIDANCE_WORDS と同じ語。
+SAMPLE_GUIDANCE_WORDS = ("完成プロジェクト", "samples")
+
+
+def without_sample_guidance(text):
+    """PRタイトルやコミットの件名のうち、完成プロジェクトに触れる行を除く。
+
+    自動生成ノートとコミット一覧は、PRタイトルとコミットの件名をそのまま並べる。
+    教科書から案内をなくしても、この経路で「完成プロジェクトがZIPに入っている」ことが学生に届くので、
+    その行だけを落とす。変更そのものは、教員がGitHubのPR一覧で追える。
+    """
+    return "\n".join(line for line in text.splitlines() if not any(word in line for word in SAMPLE_GUIDANCE_WORDS))
 
 
 def split_unit(name):
@@ -36,16 +49,6 @@ def load_projects():
     if not path.is_file():
         raise ValueError(f"設定ファイルがありません：{MATERIALS_CONFIG}")
     return json.loads(path.read_text(encoding="utf-8")).get("projects", [])
-
-
-def sample_example(projects):
-    """リリースノートの「File > Open Folder…」の例に挙げる見本。
-
-    フォルダーを開いて使うのはFlutterの単元の見本だけ（Monacaの見本は取り込み用のURLから取り込む）。
-    projects の先頭はMonacaの単元なので、先頭を挙げるとFlutterの案内にMonacaの見本が出てしまう。
-    """
-    roots = [project["root"] for project in projects if project.get("kind") == "flutter"]
-    return f"samples/{roots[0]}" if roots else "samples/<プロジェクト名>"
 
 
 def unit_list(projects):
@@ -188,10 +191,10 @@ def prepare(repo, metadata):
         # 過去のrunを再実行した場合、最新の配布版より古い変更履歴を作らない。
         subprocess.run(["git", "merge-base", "--is-ancestor", base, revision], cwd=ROOT, check=True)
         commit_range = f"{base}..{revision}"
-    generated = api(f"repos/{repo}/releases/generate-notes", payload)["body"]
-    commits = subprocess.check_output(
+    generated = without_sample_guidance(api(f"repos/{repo}/releases/generate-notes", payload)["body"])
+    commits = without_sample_guidance(subprocess.check_output(
         ["git", "log", "--no-merges", "--format=- %s (%h)", commit_range], cwd=ROOT, text=True,
-    ).strip()
+    ).strip())
     student_notes = os.environ.get("STUDENT_NOTES", "").strip()
     projects = load_projects()
     body = (
@@ -202,10 +205,6 @@ def prepare(repo, metadata):
         "   Flutterのダウンロードも授業時間内に行います。Flutterの初回実行は単元の教科書で行います。\n"
         "3. 授業で使う単元の教科書をブラウザで開きます。\n\n"
         f"{unit_list(projects)}\n\n"
-        "4. 完成プロジェクト（先生が作った見本）を含む版には、`samples` フォルダがあります。\n"
-        f"   Flutterの単元は、Visual Studio Code の「File > Open Folder…」で `{sample_example(projects)}` のように選ぶだけで開けます。\n"
-        "   Monacaの単元は、教科書に載っている取り込み用のURLからMonacaへ取り込みます。\n"
-        "   `samples` フォルダの中身は、コードを読み比べるための写しです。\n\n"
         "教材を更新するときは `~/Documents` の直下に別のフォルダとして展開し、自分で作ったプロジェクト（`~/Documents/HybridApp` の中）を上書きしないでください。\n"
         "授業中は先生が指定した版を使ってください。\n\n"
         f"{localized_download_guidance(report, asset)}"

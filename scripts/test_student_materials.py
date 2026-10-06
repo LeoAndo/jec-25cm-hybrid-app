@@ -222,24 +222,21 @@ class PackageStudentMaterialsTest(unittest.TestCase):
         self.assertIn("  M01 HelloMonaca：docs/hello-monaca/index.html", instructions)
         self.assertIn("  M02 TapCounter：docs/tap-counter/index.html", instructions)
         self.assertIn("  F01 HelloFlutter：docs/hello-flutter/index.html", instructions)
-        self.assertIn("Visual Studio Code", instructions)
+        self.assertIn("Flutter", instructions)
         self.assertIn(f"できたフォルダ {FIXTURE_STEM} を ~/Documents（書類）の直下に置きます", instructions)
-        self.assertIn("取り込み用のURL", instructions)
         for word in ("Kotlin", "IntelliJ IDEA", "Android Studio"):
             self.assertNotIn(word, instructions)
 
-    def test_instructions_open_a_flutter_sample_as_the_folder_example(self):
-        """「File > Open Folder…」の例は、先頭のMonacaの見本ではなく、最初のFlutterの見本にする。"""
+    def test_instructions_do_not_guide_to_samples(self):
+        """完成プロジェクトは samples/ に収録するが、はじめに.txt では案内しない（#168）。"""
         self.assertEqual(self.package().returncode, 0)
         with ZipFile(self.archive) as archive:
             instructions = archive.read(f"{FIXTURE_STEM}/はじめに.txt").decode()
-        self.assertIn("「File > Open Folder…」で samples/F01HelloFlutter のように", instructions)
-        self.assertNotIn("samples/M01HelloMonaca のように", instructions)
-
-    def test_sample_example_without_flutter_unit(self):
-        """Flutterの単元がまだないうちは、例のフォルダ名を決めつけない。"""
-        self.assertEqual(packager.sample_example(FIXTURE_PROJECTS[:2]), "samples/<プロジェクト名>")
-        self.assertEqual(packager.sample_example(FIXTURE_PROJECTS), "samples/F01HelloFlutter")
+            bundled = archive.namelist()
+        for word in ("samples", "完成プロジェクト", "見本", "取り込み用"):
+            self.assertNotIn(word, instructions)
+        self.assertIn(f"{FIXTURE_STEM}/samples/F01HelloFlutter/lib/main.dart", bundled)
+        self.assertIn(f"{FIXTURE_STEM}/samples/M01HelloMonaca/www/index.html", bundled)
 
     def test_added_unit_appears_without_touching_the_script(self):
         """単元を設定に足すだけで、配布物の案内にも見本にも反映される。"""
@@ -540,10 +537,10 @@ class StudentReleaseTest(unittest.TestCase):
         self.assertIn("- `M01 HelloMonaca：docs/hello-monaca/index.html`", text)
         self.assertIn("- `M02 TapCounter：docs/tap-counter/index.html`", text)
         self.assertIn("- `F01 HelloFlutter：docs/hello-flutter/index.html`", text)
-        # 「File > Open Folder…」の例は、先頭のMonacaの見本ではなく、最初のFlutterの見本にする。
-        self.assertIn("「File > Open Folder…」で `samples/F01HelloFlutter`", text)
         self.assertIn(f"できたフォルダ `{self.metadata['asset'].removesuffix('.zip')}` を `~/Documents`（書類）の直下に置きます", text)
-        self.assertIn("取り込み用のURL", text)
+        # 完成プロジェクトは samples/ に収録するが、リリースノートでは触れない（#168）。
+        for word in ("samples", "完成プロジェクト", "見本", "取り込み用"):
+            self.assertNotIn(word, text)
         for word in ("Kotlin", "IntelliJ IDEA", "Android Studio"):
             self.assertNotIn(word, text)
 
@@ -554,9 +551,24 @@ class StudentReleaseTest(unittest.TestCase):
             release.prepare(self.repo, self.metadata)
         text = (self.dist / "release-notes.md").read_text(encoding="utf-8")
         self.assertIn("   - （教科書はまだありません）", text)
-        self.assertIn("`samples/<プロジェクト名>`", text)
-        self.assertIn("見本）を含む版には、`samples` フォルダがあります", text)
-        self.assertNotIn("見本）は、`samples` フォルダに入っています", text)
+        self.assertNotIn("samples", text)
+
+    def test_release_notes_drop_lines_that_mention_samples(self):
+        """PRタイトルやコミットの件名に完成プロジェクトの語があれば、その行だけを除く（#168）。"""
+        def notes(path, payload=None):
+            if path.endswith("/generate-notes"):
+                return {"body": "* 教科書から完成プロジェクトへの案内を撤去 #9\n* M01の説明を修正 #10"}
+            return self.api_response(path, payload)
+
+        self.api.side_effect = notes
+        log = "- samples の構成を変更 (abc123)\n- STEP 4の誤記を修正 (def456)"
+        with patch.object(release.subprocess, "check_output", return_value=log):
+            release.prepare(self.repo, self.metadata)
+        text = (self.dist / "release-notes.md").read_text(encoding="utf-8")
+        self.assertIn("* M01の説明を修正 #10", text)
+        self.assertIn("- STEP 4の誤記を修正 (def456)", text)
+        for word in ("samples", "完成プロジェクト"):
+            self.assertNotIn(word, text)
 
     def test_release_notes_follow_in_class_setup_schedule(self):
         """共通準備で全環境と初回実行を一度に済ませる旧案内へ戻さない。"""

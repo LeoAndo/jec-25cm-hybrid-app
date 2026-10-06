@@ -32,7 +32,7 @@
 <p class="lede">日常の中で見つけた好きなものと、好きな理由を画面から追加します。再読み込みしても自分の記録が戻る仕組みを作り、ソースにアレンジを残して公開URLを提出します。</p>
 <div class="tags"><span>Monaca クラウド IDE / Google Chrome</span><span>Onsen UI 2.12.9</span><span>HTML / CSS / JavaScript</span></div>
 <div class="goal"><p class="box-title">この単元で分かること</p><p>新しい考え方は<strong>JSON</strong>です。画面で使う配列を保存用の文字列にし、読み込んだ文字列を配列へ戻します。保存先はJavaの<code>SharedPreferences</code>・Swiftの<code>UserDefaults</code>と比較します。</p></div>
-<p>完成見本の名前は <code>M02OshiSave</code> です。学生は自分の好きなものノートを同じ1プロジェクトで育てます。まだプロジェクトがない場合の作り方も、一覧・詳細の開始コードも、この本文にあります。</p>
+<p>この単元の名前は <code>M02OshiSave</code> です。学生は自分の好きなものノートを同じ1プロジェクトで育てます。まだプロジェクトがない場合の作り方も、一覧・詳細の開始コードも、この本文にあります。</p>
 <table><thead><tr><th>コマ</th><th>到達点</th></tr></thead><tbody><tr><td>5</td><td>入力した好きなものを一覧へ追加し、詳細を読める。</td></tr><tr><td>6</td><td>JSONと<code>localStorage</code>で保存・復元できる。初期化には確認を挟む。</td></tr><tr><td>7</td><td>授業内でFlutter準備を開始し、待ち時間に好きなものノートをアレンジ・確認・提出する。</td></tr></tbody></table></div>
 <section id="step-0"><p class="step-meta">STEP 00 · コマ5</p><h2>自分の好きなものノートを開く</h2>
 <p>Google Chromeで通常版Monacaへログインし、自分の好きなものノートを開きます。続けて使っているプロジェクトは、名前が <code>M01OshiList</code> のままで構いません。今日のためにコピーを増やしたり、削除したりしません。</p>
@@ -4503,7 +4503,7 @@ function resetOshiItems() {
 <section id="step-12"><p class="step-meta">STEP 12 · コマ7</p><h2>操作と公開URLを確認する</h2>
 <p>ソースの初期の内容が表示された状態から完成確認を始めます。必要な入力は内容を控えて、先生と確認してから初期化します。</p>
 <ol><li>一覧の各行から詳細へ進み、名前・種類・理由が一致することを確認します。</li><li>追加画面で空欄を試し、同じ画面に案内が出ることを確認します。</li><li>確認用の1件を追加し、成功の文・件数・詳細・再読み込み後の復元を確認します。</li><li>初期化で <code>やめる</code> を選び、データが残ることを確かめます。必要な内容を控えた後に初期化し、ソースのデータへ戻します。</li><li>iPhone系・Android系のプレビューで入力・戻る・ボタンの見た目を比べます。比較用の <code>ons.platform.select("android")</code> を有効にした場合は、最後にコメントへ戻します。</li><li>クラウド IDEの <code>プロジェクト → 公開…</code> を開き、自分の作品であることを確かめ、公開URLを発行します。</li></ol>
-<p>提出するのは <code>https://monaca.mobi/ja/directimport?pid=…</code> という形の、実際に発行されたURLです。クラウド IDEやプレビューのアドレス、先生の完成見本URLを代わりに貼りません。相手のMonacaへソースを取り込むためのURLです。</p>
+<p>提出するのは <code>https://monaca.mobi/ja/directimport?pid=…</code> という形の、実際に発行されたURLです。クラウド IDEやプレビューのアドレスを代わりに貼りません。相手のMonacaへソースを取り込むためのURLです。</p>
 <p>発行したURLを開き、対象のプロジェクトを確かめます。取り込みを確定するとコピーが増えるため、繰り返して枠を埋めないようにします。教員側で新しく取り込んだ状態の動作も確認します。</p>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>OSの見た目が変わっても入力・保存の処理は同じです。ネイティブアプリのビルド成果物を渡す方法と違い、ここではソースを相手の開発環境へコピーします。ブラウザの保存領域まで渡す操作ではありません。</p></div>
 
@@ -4519,7 +4519,7 @@ function resetOshiItems() {
 <p>最後に提出したソースを見ながら、次の3点を確かめます。</p>
 <ol><li>どのファイルの、どの文字・色・初期データを変更したか。</li><li>その変更が一覧・入力・詳細のどこに現れるか。</li><li>入力した保存データがない相手にも、アレンジが伝わるか。</li></ol>
 <p>余裕があれば、既に扱った範囲で記入例を分かりやすくしたり、余白を調整したりします。いまある画面で、自分の「好き」が伝わる状態を確かめましょう。変更したら保存し、一覧・追加・詳細・再読み込みを確認してから公開内容を確かめます。</p>
-<p>全コードは見本との比較用です。自分の変更を消して見本に戻す必要はありません。動かなくなった部分や、変更した場所と結果の関係を確かめるために使います。</p>
+<p>下の全コードは、自分のコードと見比べるためのものです。自分の変更を消して全コードに戻す必要はありません。動かなくなった部分や、変更した場所と結果の関係を確かめるために使います。</p>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>HTML・CSS・JavaScriptの役割分担はWeb基礎と同じで、変更した場所はファイルの種類から見つけられます。保存があるアプリでは、ソースの初期値と保存値の両方を見ます。<code>SharedPreferences</code>／<code>UserDefaults</code>を使うアプリで、コードに書いた初期値と端末に残る保存値が別にあるのと同じです。</p></div>
 <details><summary>このSTEPの全コード（照合・合流用）</summary><div class="code-head">www/index.html · 全文</div>
 <pre id="code-14-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
@@ -4958,5 +4958,5 @@ function resetOshiItems() {
 <tr><td>追加した文字が消えた</td><td>コマ5では未保存が正常。コマ6以降は保存成功の文、同じブラウザ・同じプレビューかを確認。</td></tr>
 <tr><td>初期データを書き換えても古い内容が出る</td><td>保存データが優先される。必要な内容を控えたうえで、アプリ内の「初期の内容に戻す」を使う。</td></tr>
 <tr><td>保存・読込失敗と出る</td><td>その表示を先生へ見せる。読込に失敗したデータは自動で上書きしない。ブラウザ設定を無理に変更しない。</td></tr>
-<tr><td>提出URLが先生の見本と同じ</td><td>自分のプロジェクトで発行したURLか確認。クラウド IDEのアドレスやプレビューURLでは提出しない。</td></tr>
-</tbody></table><p>エラーが解決しないときは、<a href="../common/help.html?from=oshi-save">共通資料：困ったとき</a>の「完成プロジェクト（見本）の確認」を参照してください。</p></section><p class="footer">JEC / ハイブリッドアプリ開発技法 · M02OshiSave</p><p class="sr-only" role="status" aria-live="polite" data-copy-status></p></main></div></body></html>
+<tr><td>提出するURLが自分の作品のものか分からない</td><td>自分のプロジェクトで発行したURLか確認。クラウド IDEのアドレスやプレビューURLでは提出しない。</td></tr>
+</tbody></table><p>エラーが解決しないときは、<a href="../common/help.html?from=oshi-save">共通資料：困ったとき</a>の調べ方を試してください。それでも解決しないときは、STEP番号と画面を先生に見せましょう。</p></section><p class="footer">JEC / ハイブリッドアプリ開発技法 · M02OshiSave</p><p class="sr-only" role="status" aria-live="polite" data-copy-status></p></main></div></body></html>

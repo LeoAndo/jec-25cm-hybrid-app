@@ -385,12 +385,13 @@ def check_sources(root: Path, project: dict, errors: list[str]) -> None:
 
 
 def check_import_url(root: Path, project: dict, errors: list[str]) -> None:
-    """Monacaの取り込み用URL（import_url）が、学生用資料（教科書または共通の困ったとき）に載っているか確かめる。
+    """Monacaの取り込み用URL（import_url）の書き方を確かめる。
 
     import_url は、先生が完成プロジェクトをMonacaで「公開」して発行したURL
-    （https://monaca.mobi/ja/directimport?pid=…）。学生はこのURLから見本を取り込むので、
-    設定にだけ書いて資料に載せ忘れると、学生は見本を開けない。
-    書いていない単元（まだ公開していない単元）では何もしない。
+    （https://monaca.mobi/ja/directimport?pid=…）。2026-10-06 に、このURLから学生へ見本を
+    取り込ませる仕組みを廃止した（#168）。いまは、取り込めることを確かめた教員用の記録として残し、
+    教科書（docs/）に載っていないことを check_no_sample_guidance が確かめる。
+    書いていない単元では何もしない。
     """
     if "import_url" not in project:
         return
@@ -402,14 +403,6 @@ def check_import_url(root: Path, project: dict, errors: list[str]) -> None:
     if not isinstance(url, str) or not url:
         add(errors, root, CONFIG.as_posix(), 1,
             f"{project['name']}のimport_urlは文字列で書いてください: {url!r}")
-        return
-    textbook = root / project["docs"][0]
-    help_doc = root / "docs/common/help.html"
-    textbook_content = read(textbook) if textbook.is_file() else ""
-    help_content = read(help_doc) if help_doc.is_file() else ""
-    target_docs = textbook_content + help_content
-    if url not in target_docs and html.escape(url) not in target_docs:
-        add(errors, root, textbook, 1, f"学生用の教科書または共通資料に、取り込み用のURL（import_url）がありません: {url}")
 
 
 def check_project(root: Path, project: dict, errors: list[str]) -> None:
@@ -823,6 +816,65 @@ def check_project_layout(root: Path, config: dict, errors: list[str]) -> None:
                 add(errors, root, name, 1, "Git管理してはいけないファイルです")
 
 
+# 教科書の本文に出してはいけない語。完成プロジェクトの存在や置き場所を知らせることになる。
+# release-student-materials.py の SAMPLE_GUIDANCE_WORDS も同じ語にする。
+SAMPLE_GUIDANCE_WORDS = ("完成プロジェクト", "samples")
+SAMPLE_GUIDANCE_RULE = "README「授業用教科書の基本方針」13"
+# href・src の値。二重引用符でも単一引用符でも拾う。
+LINK_ATTRIBUTE = re.compile(r"""\b(?:href|src)\s*=\s*(?:"([^"]*)"|'([^']*)')""")
+TAG = re.compile(r"<[^>]*>")
+
+
+def check_no_sample_guidance(root: Path, config: dict, errors: list[str]) -> None:
+    """教科書（docs/ のHTML）から完成プロジェクトへ案内していないか確かめる（#168）。
+
+    完成プロジェクトは学生用ZIPに同梱する（samples/ と docs/<スラッグ>/downloads/ のZIP）が、
+    教科書からは案内しない（README「授業用教科書の基本方針」13）。次のどれかがあれば落とす。
+    - 本文（タグの外）の SAMPLE_GUIDANCE_WORDS。属性の中（画像のファイル名など）は本文ではないので見ない。
+    - 完成プロジェクトZIP（projects[].archive）へのリンク。文言にかかわらず落とす。
+    - 教員が公開した取り込み用URL（projects[].import_url）。リンクでも本文でも落とす。
+      学生が自分で発行する提出用のURLの形（directimport?pid=…）は、説明に要るので落とさない。
+    タグが2行にまたがっても行番号がずれないよう、タグはその中の改行だけを残して消す。
+    """
+    docs = root / "docs"
+    if not docs.is_dir():
+        return
+    archives = {project["archive"] for project in config["projects"]
+                if isinstance(project.get("archive"), str) and project["archive"]}
+    import_urls = sorted({project["import_url"] for project in config["projects"]
+                          if isinstance(project.get("import_url"), str) and project["import_url"]})
+    for path in sorted(docs.rglob("*.html")):
+        if any(part in IGNORED_PARTS for part in path.relative_to(root).parts):
+            continue
+        name = display(root, path)
+        try:
+            text = read(path)
+        except (OSError, UnicodeDecodeError):
+            continue
+        body = TAG.sub(lambda match: "\n" * match.group(0).count("\n"), text)
+        for line_number, line in enumerate(body.splitlines(), 1):
+            line = html.unescape(line)
+            for word in SAMPLE_GUIDANCE_WORDS:
+                if word in line:
+                    add(errors, root, path, line_number,
+                        f"教科書から完成プロジェクトへは案内しません（{SAMPLE_GUIDANCE_RULE}）: {word}")
+        for match in LINK_ATTRIBUTE.finditer(text):
+            value = match.group(1) if match.group(1) is not None else match.group(2)
+            target = re.split(r"[?#]", html.unescape(value), maxsplit=1)[0]
+            if not target or "://" in target:
+                continue
+            resolved = posixpath.normpath(posixpath.join(posixpath.dirname(name), target))
+            if resolved in archives:
+                add(errors, root, path, text.count("\n", 0, match.start()) + 1,
+                    f"教科書から完成プロジェクトZIPへリンクしています（{SAMPLE_GUIDANCE_RULE}）: {value}")
+        unescaped = html.unescape(text)
+        for url in import_urls:
+            if url in text or url in unescaped:
+                found = text if url in text else unescaped
+                add(errors, root, path, found.count("\n", 0, found.index(url)) + 1,
+                    f"教科書に、先生が公開した取り込み用のURL（import_url）があります（{SAMPLE_GUIDANCE_RULE}）: {url}")
+
+
 class ProgressKey(HTMLParser):
     """<body> の data-progress-key と、ページ内の data-check の数を数える。"""
 
@@ -905,6 +957,7 @@ def validate(root: Path) -> list[str]:
     check_sidebar_units(root, config, errors)
     check_project_layout(root, config, errors)
     check_progress_keys(root, errors)
+    check_no_sample_guidance(root, config, errors)
     for project in config["projects"]:
         check_project(root, project, errors)
         check_mirrors(root, project, errors)
