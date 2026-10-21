@@ -166,7 +166,12 @@ description: Add a new teaching unit to this hybrid app course repository - a Mo
   ZIPはGitで管理しているファイルから作るので、新しいファイルは先に `git add` する。
 - **教科書から完成プロジェクトへは案内しない**（READMEの「授業用教科書の基本方針」13、2026-10-06 #168）。「完成プロジェクトを開く」の節（`#sample-project`）は作らず、配布フォルダの `samples/` の開き方、完成版ZIPへのリンク、教員が公開したMonacaの取り込み用URL（`import_url`）も書かない。「完成プロジェクト」「samples」の語、`archive` へのリンク、configの `import_url` は `scripts/check-teaching-materials.py` が落とす。「先生が作った見本」のような言い換えも書かない。学生の提出に使う、学生自身の作品の取り込み用公開URLの説明は対象外。
 - `docs/<スラッグ>/images/` は、**その教科書で実際に使うスクリーンショットがあるときだけ**作る。Monaca系はMonaca クラウド IDEのプレビュー、Flutter系はシミュレータ／エミュレータで撮る。「ここに画像を入れる」のようなプレースホルダは置かない。`<img>` には実寸の `width` と `height` を書く。
-- コードのスニペットは、`<pre id="code-…"><code>` に置き、**ソースからHTMLエスケープして差し込む**。configの `snippets` がバイト単位で照合するので、手で写して直さない。
+- **コードは、前のSTEPのコードからの変更箇所だけを見せる**（READMEの「授業用教科書の基本方針」14、#172）。「このSTEPの全コード（照合・合流用）」のような全文の折りたたみは置かない。
+  - コード欄の見出し（`<div class="code-head">`）は `<ファイルのパス> · 追加 · <場所>`、`<ファイルのパス> · 置き換え · <範囲>`、`<ファイルのパス> · 全体を置き換える` のどれか。本文に、どの行の下（上）に足すか、どこからどこまでを置き換えて何を残すかを書く。
+  - コードが変わらないSTEPにはコード欄を置かず、「コードは変えません」と書く。
+  - 全文を載せるのは、新しく作るファイル、変更が多くて部分では追えないとき、前の教科書なしで始める単元（M02・F02）のSTEP 00の開始コードだけ。
+  - 断片は、前のSTEPと次のSTEPの照合コード（`teacher/<スラッグ>/code/NN-…`）の差分から作る。本文の説明どおりに断片を前のSTEPのコードへ当てると、そのSTEPの照合コードと同じになることを確かめる。
+- コードのスニペットは、`<pre id="code-…"><code>` に置き、**ソースからHTMLエスケープして差し込む**。configの `snippets` が照合するので、手で写して直さない。全文は `"match"` を書かずに登録し、バイト単位で照合される。断片は `"match": "contains"` を付けて、`source` にそのSTEPの照合コードを書く。断片の行が、`source` の中に字下げごと同じ順で連続して並んでいれば通る（行末の空白だけはそろえる）。
 
   ```sh
   python3 -c 'import html, pathlib, sys; print(html.escape(pathlib.Path(sys.argv[1]).read_text(encoding="utf-8").rstrip()), end="")' M01HelloMonaca/www/js/app.js
@@ -207,7 +212,8 @@ description: Add a new teaching unit to this hybrid app course repository - a Mo
   "docs": ["docs/hello-monaca/index.html", "teacher/hello-monaca/index.html"],
   "sources": ["M01HelloMonaca/www/index.html", "M01HelloMonaca/www/js/app.js"],
   "snippets": [
-    { "html": "docs/hello-monaca/index.html", "id": "code-app-js", "source": "M01HelloMonaca/www/js/app.js" }
+    { "html": "docs/hello-monaca/index.html", "id": "code-app-js", "source": "M01HelloMonaca/www/js/app.js" },
+    { "html": "docs/hello-monaca/index.html", "id": "code-02-app-js-click", "source": "teacher/hello-monaca/code/02-app.js", "match": "contains" }
   ],
   "mirrors": [
     { "source": "M01HelloMonaca/www/index.html", "copy": "teacher/hello-monaca/code/01-index.html" }
@@ -219,6 +225,7 @@ description: Add a new teaching unit to this hybrid app course repository - a Mo
 - `app_id` は `config.xml` の `<widget id>` と同じ値（検査が照合する）。`entry` は `<content src>` が指すファイルのリポジトリ上のパスで、`www/` の下に実在する必要がある。
 - `sources` は1つ以上。Monaca系は `www/` の下、Flutter系の `.dart` は `lib/` の下に置く。CRを含むと検査が落ちる。
 - `import_url` は任意で、Monaca系だけに書ける教員用の記録。オーナーがMonacaで公開して記録するなら書き、まだなら**キーごと省く**（上の「Monaca系」7）。**教科書（`docs/` の下）に同じURLがあると検査が落ちる。** **URLを推測で書かない。**
+- `snippets` の `match` は任意で、書けるのは `exact`（既定、全文の一致）と `contains`（前のSTEPからの断片）だけ。ほかの値と、空の断片は検査が落ちる。
 - `mirrors` は任意。
 
 Flutter単元なら次の形になる（`F01HelloFlutter` を足す場合）。

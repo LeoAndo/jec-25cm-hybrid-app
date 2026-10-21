@@ -37,6 +37,9 @@ REQUIRED_KIND_KEYS = {
 }
 REQUIRED_MIRROR_KEYS = ("source", "copy")
 REQUIRED_TARGET_KEYS = ("path", "requires")
+# 教科書のコード（snippets）の照合のしかた。exact はファイル全体、contains は前のSTEPからの
+# 追加・置き換えの断片で、source のファイルの連続した行としてそのまま含まれていればよい。
+SNIPPET_MATCHES = ("exact", "contains")
 # Monacaの config.xml は、既定の名前空間を持つ。名前空間なしで探すと、どの要素も見つからない。
 WIDGET_NAMESPACE = "http://www.w3.org/ns/widgets"
 WIDGET_TAG = f"{{{WIDGET_NAMESPACE}}}widget"
@@ -125,6 +128,19 @@ def archive_sources(root: Path, project_root: str, kind: str | None = None) -> s
 def add(errors: list[str], root: Path, path: Path | str, line: int, message: str) -> None:
     shown = path if isinstance(path, str) else display(root, path)
     errors.append(f"{shown}:{line}: {message}")
+
+
+def contains_lines(source: str, fragment: str) -> bool:
+    """fragment の行が、source の中に同じ順で連続して並んでいるか。
+
+    前のSTEPからの追加・置き換えの断片（snippets の match: contains）を照合する。
+    行の途中から始まる一致は認めない。字下げも照合したいので、行頭の空白は残し、
+    行末の空白だけをそろえる。
+    """
+    lines = [line.rstrip() for line in source.split("\n")]
+    part = [line.rstrip() for line in fragment.split("\n")]
+    return any(lines[start:start + len(part)] == part
+               for start in range(len(lines) - len(part) + 1))
 
 
 def check_config(config: dict) -> list[str]:
@@ -441,10 +457,22 @@ def check_project(root: Path, project: dict, errors: list[str]) -> None:
         if not match:
             add(errors, root, html_path, 1, f"コードスニペットがありません: {snippet['id']}")
             continue
+        line = line_of(document, f'id="{snippet["id"]}"')
+        mode = snippet.get("match", "exact")
+        if mode not in SNIPPET_MATCHES:
+            add(errors, root, CONFIG.as_posix(), 1,
+                f"snippetsの{snippet['id']}のmatchは{'・'.join(SNIPPET_MATCHES)}のどちらかで書いてください: {mode!r}")
+            continue
         expected = read(source_path).rstrip()
         actual = html.unescape(match.group(1)).rstrip()
-        if actual != expected:
-            add(errors, root, html_path, line_of(document, f'id="{snippet["id"]}"'), f"{snippet['id']}と{snippet['source']}が一致しません")
+        if mode == "exact":
+            if actual != expected:
+                add(errors, root, html_path, line, f"{snippet['id']}と{snippet['source']}が一致しません")
+        elif not actual.strip():
+            add(errors, root, html_path, line, f"{snippet['id']}のコードが空です")
+        elif not contains_lines(expected, actual):
+            add(errors, root, html_path, line,
+                f"{snippet['id']}が{snippet['source']}の連続した行として見つかりません")
 
     archive_path = root / project["archive"]
     if not archive_path.is_file():

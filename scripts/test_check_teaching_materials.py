@@ -1100,6 +1100,56 @@ class TeachingMaterialsCheckTest(unittest.TestCase):
             self.assertEqual(len(errors), 1, errors)
             self.assertIn("code-final-appとM01HelloMonaca/www/js/app.jsが一致しません", errors[0])
 
+    def _contains_errors(self, fragment: str, match: str = "contains") -> list[str]:
+        """前のSTEPからの断片を1つ足した教科書を検査し、その断片についてのエラーを返す。"""
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._repository(root)
+            unit = self.UNITS["monaca"]
+            extra = f'<pre id="code-part-app"><code>{html.escape(fragment)}</code></pre>'
+            self._write(root, "docs/hello-monaca/index.html", self._textbook(
+                unit["name"], [(unit["folder"], unit["name"])], unit["folder"],
+                snippet=("code-final-app", self.MONACA_JS), tool=self.IDE, extra=extra))
+            config = self._read_config(root)
+            config["projects"][0]["snippets"].append({
+                "html": "docs/hello-monaca/index.html", "id": "code-part-app",
+                "source": "M01HelloMonaca/www/js/app.js", "match": match})
+            self._write_config(root, config)
+            return [error for error in CHECKER.validate(root) if "code-part-app" in error]
+
+    def test_contains_snippet_accepts_consecutive_lines(self):
+        """追加・置き換えの断片は、ソースの連続した行なら、字下げごと一致すれば通す。"""
+        lines = self.MONACA_JS.rstrip().split("\n")
+        self.assertGreater(len(lines), 1)
+        self.assertEqual(self._contains_errors("\n".join(lines[-2:])), [])
+
+    def test_contains_snippet_rejects_changed_or_partial_lines(self):
+        """断片の文字が違うもの、行の途中から始まるもの、字下げの違うものは検出する。"""
+        indented = next(line for line in self.MONACA_JS.split("\n") if line.startswith("  "))
+        cases = {
+            "文字が違う": indented.replace("こんにちは", "おはよう"),
+            "行の途中から": indented[4:],
+            "字下げが違う": indented.lstrip(),
+        }
+        for label, fragment in cases.items():
+            with self.subTest(label):
+                errors = self._contains_errors(fragment)
+                self.assertEqual(len(errors), 1, errors)
+                self.assertIn("code-part-appがM01HelloMonaca/www/js/app.jsの連続した行として見つかりません",
+                              errors[0])
+
+    def test_contains_snippet_must_not_be_empty(self):
+        """空の断片は、どのファイルにも含まれてしまうので検出する。"""
+        errors = self._contains_errors("\n  \n")
+        self.assertEqual(len(errors), 1, errors)
+        self.assertIn("code-part-appのコードが空です", errors[0])
+
+    def test_unknown_snippet_match_is_rejected(self):
+        """match の書き間違いは、全文一致として黙って扱わずに検出する。"""
+        errors = self._contains_errors(self.MONACA_JS, match="partial")
+        self.assertEqual(len(errors), 1, errors)
+        self.assertIn("snippetsのcode-part-appのmatchはexact・containsのどちらかで書いてください", errors[0])
+
     def test_missing_snippet_is_rejected(self):
         """設定に書いたスニペットが、教科書から消えていたら検出する。"""
         with tempfile.TemporaryDirectory() as temporary:
