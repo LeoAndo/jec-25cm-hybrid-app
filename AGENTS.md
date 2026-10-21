@@ -383,7 +383,7 @@ Freeプランの利用規約は「法人による商用でのアプリ開発」�
    - `projects` は単元番号順の位置に足す（サイドバーの検査がこの並びを基準にする。§4）。**M→Fの順を崩さない。**
    - `kind` は `"monaca"` か `"flutter"` のどちらか。ほかの値はエラーになる。
    - `sessions` は、その単元に割くコマ数。**`projects` の `sessions` の合計が `course.total_sessions`（15）を超えるとエラー。** 未満は、まだ単元化していないだけなので通る。
-   - `snippets` は `<pre id="…">` とソースをバイト単位で照合するので、コードは手で写さずソースから生成する。
+   - `snippets` は `<pre id="…">` とソースを照合するので、コードは手で写さずソースから生成する。全文はバイト単位、前のSTEPからの追加・置き換えの断片は `"match": "contains"` で、そのSTEPの照合コードの連続した行として照合する（READMEの「授業用教科書の基本方針」14）。
 5. `README.md`：教科書リンク、完成プロジェクトのリンク、教員用リンク、15コマ計画表、フォルダ表。
 6. 単元どうしのリンク（§4）。サイドバーは、**既存の全単元の教科書**に新しい単元へのリンクを単元番号順の位置へ足し、新しい単元の教科書には全単元を並べる（自単元は `<span aria-current="page">`）。1冊でも直し忘れると、`scripts/check-teaching-materials.py` が落ちる。topbarは、新しい単元に直前の単元へのリンクを置く。topbarは検査されないので、目で確かめる。既存の教科書のサイドバーは、issueの「触る範囲」に挙がっていなくても、登録に必要な変更なので同じPRで直す（§6）。
 7. GitHubのラベル `area:M<NN>` / `area:F<NN>`。
@@ -492,6 +492,7 @@ Codex の自動レビューは、この節で指摘するかどうかを決め�
 - Monaca系で、Freeプランでは成り立たない手順を書いている（ZIPのエクスポートや提出、Monaca Education の「Web公開」や `Monaca for Study`、コアプラグイン以外のCordovaプラグイン、全員が授業中にクラウドビルドする回）。完成コードが Cordovaプラグインに依存する、`console.log` や `alert` で結果を見せる、`getElementById`・`addEventListener`・`classList` 以外の書き方に変わっている
 - Flutter系で、§0-B の固定値と食い違っている（Flutter 3.47.5 以外の版の手順、`flutter create` の `--empty`・`--platforms=ios,android` の抜け、`package:material_ui`・`package:cupertino_ui` の混在、`go_router` や名前付きルート、未説明の dot shorthand）。通信を扱うのに `android/app/src/main/AndroidManifest.xml` に `INTERNET` がなく、releaseのAPKで通信できない。`// ignore:` で警告を隠している。結果を `print`・`debugPrint` だけで見せる
 - `config/teaching-materials.json` と教材の食い違い（サイドバーの並び、`snippets` のバイト一致、配布ZIPの中身、正式表記）で、検査が素通りしている
+- 教科書の追加・置き換えのコードを、本文の置き場所の説明（どの行の下か、どこからどこまでか、何を残すか）どおりに前のSTEPのコードへ当てても、そのSTEPの照合コード（`teacher/<スラッグ>/code/`）にならない。`snippets` の `"match": "contains"` は断片がどこかにあることしか見ないので、検査は通る。「このSTEPの全コード」のような全文の折りたたみが残っている（READMEの「授業用教科書の基本方針」14）
 - `scripts/`・`.github/`・`docs/assets/textbook.js` の不具合で、配布ZIP・リリースノート・翻訳ページ・教科書の画面の動きが壊れる、または検査が素通りする（必要な設定ファイルがない場合を含む）
 - 文書どうしの食い違いで、学生や作業者が別の手順を踏む（教科書と教員用ガイド、AGENTS.md と `skills/`、学生向けリリースノートや `はじめに.txt` と準備手順。削除した課題が残っている、決まりの例外の数が合わない、`flutter devices` を起動コマンドとして書いている、など）
 - 完成プロジェクトの `README.md` や教員用ガイドの検証記録が、実際に確かめた範囲と合わない（確かめていないことを確認済みと書いている、確かめた結果が抜けている）

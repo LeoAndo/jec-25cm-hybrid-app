@@ -27,7 +27,7 @@ description: Review teaching materials of this hybrid app course (Monaca units i
 
 2. 検査が失敗した場合は、PRを承認可能と判断しない。
 3. `config/teaching-materials.json` の `terms` の正式表記を基準にし、禁止表記を個別に修正する。
-4. 教材の完成コードとプロジェクトの実ファイルが一致することを確認する。`snippets` はバイト単位で照合されるので、教科書のコードを手で写して直していないかを見る。
+4. 教材の完成コードとプロジェクトの実ファイルが一致することを確認する。`snippets` は照合されるので、教科書のコードを手で写して直していないかを見る。全文（`match` なし）はバイト単位、前のSTEPからの断片（`"match": "contains"`）は照合コードの連続した行として照合される。**断片の検査は「その行がどこかにある」ことしか見ない**ので、本文の置き場所の説明（どの行の下か、どこからどこまでを置き換えるか）どおりに前のSTEPのコードへ当てると、そのSTEPの照合コードと同じになるかを確かめる。「このSTEPの全コード」のような全文の折りたたみが残っていないか、コードが変わらないSTEPにコード欄がないかも見る（READMEの「授業用教科書の基本方針」14）。
 5. ZIPの内容が現行ソースと一致し、IDE設定・SDK設定・ビルド生成物を含まないことを確認する。除外は `scripts/project_files.py` の系統（`kind`）とプロジェクトからの相対パスに従う。Monacaは直下の `node_modules/`・`platforms/`・`plugins/`、Flutterは直下の `.dart_tool/`・`build/`、`android/.gradle/`・`android/app/build/`・`android/local.properties`・`ios/Pods/` など、所定の位置にあるものを除外する。名前だけで `lib/build/`・`lib/plugins/`・`www/plugins/` のようなソース用フォルダを落としていたら「対応が必要」とする。`.idea`・`.DS_Store` など両系統のローカル設定も含めない。`project_layout` の `untracked_parts` と `untracked_names` は共通のローカル設定の検査用である。
 6. 下の「未習事項ゲート」を行う。
 7. PRレビュー指摘には、妥当性・再現性・デグレの可能性・修正コスト・既存仕様への影響を確認したうえで、対応が必要、任意対応、対応不要のいずれかを明記する。
