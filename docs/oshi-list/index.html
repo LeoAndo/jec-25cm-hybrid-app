@@ -52,7 +52,7 @@
 <p class="lede">日常の中で見つけた好きなものをカードに並べ、好きな理由を開いて読めるアプリを作ります。静的なカードから始め、Onsen UIの一覧、配列、詳細画面へ進みます。</p>
 <div class="tags"><span>Monaca クラウド IDE / Google Chrome</span><span>Onsen UI 2.12.9</span><span>HTML / CSS / JavaScript</span></div>
 <div class="goal"><p class="box-title">この単元で分かること</p><p>新しい考え方は <strong>auto-styling</strong> です。1つのHTMLから、OSに合った部品の見た目が選ばれる仕組みを確かめます。配列・イベント・画面の切り替えは、Web基礎・Android・iOSと比べて書き方を読みます。</p></div>
-<p>使うプロジェクトは <code>M01OshiList</code> です。各STEPの「全コード」は開いてコピーでき、各コマの最初には開始時のコードもあります。前から順に作る場合は、説明されたファイルを更新します。途中から合流する場合は、開始時のファイルをすべてそろえてから進みます。</p>
+<p>使うプロジェクトは <code>M01OshiList</code> です。各STEPのコードは、前のSTEPのコードから変える箇所だけを載せています。前から順に、本文が示す場所を書き換えて進みます。授業を休んだなどで途中から合流するときは、先生に伝えて、前のSTEPまでのコードを受け取ってから進みます。</p>
 <table><thead><tr><th>コマ</th><th>この回の到達点</th></tr></thead><tbody><tr><td>1</td><td>通常版Monacaで静的なカードを表示する。</td></tr><tr><td>2</td><td>Onsen UIの一覧とauto-stylingを確認する。</td></tr><tr><td>3</td><td>配列から一覧を作り、押した名前を表示する。</td></tr><tr><td>4</td><td>詳細へ値を渡し、戻る操作まで完成させる。</td></tr></tbody></table>
 </div>
 <section id="step-0">
@@ -72,14 +72,11 @@
 <li>クラウドIDEが開いたら、左側のファイル一覧で <code>www/index.html</code> と <code>www/css/style.css</code> を探します。<code>components</code>、<code>res</code>、設定ファイルはそのまま使います。
 <figure><img src="images/monaca-ide-initial.png" width="1024" height="449" alt="Monaca クラウド IDEの初期画面。左側にファイル一覧、右側にindex.htmlのエディタが表示されている"><figcaption>クラウドIDEが開きます。左側のファイル一覧で <code>www/index.html</code> や <code>www/css/style.css</code> を確認します。</figcaption></figure>
 </li>
-<li>下の全コードを開き、2ファイルの内容をそれぞれ置き換えて保存します。プレビューを再読み込みし、<strong>好きなものノートを作ります。</strong>を確認します。プレビューが表示されないときは、上部メニューの <code>表示</code> → <code>プレビュータブを表示</code> や <code>レイアウトをリセット</code> を選びます。
+<li><code>www/index.html</code> と <code>www/css/style.css</code> の中身を、下のコードでそれぞれすべて置き換えて保存します。テンプレートに最初から書かれている内容は残しません。プレビューを再読み込みし、<strong>好きなものノートを作ります。</strong>を確認します。プレビューが表示されないときは、上部メニューの <code>表示</code> → <code>プレビュータブを表示</code> や <code>レイアウトをリセット</code> を選びます。
 <figure><img src="images/monaca-ide-view-menu.png" width="738" height="400" alt="クラウドIDEのメニューバー「表示」から「プレビュータブを表示」「レイアウトをリセット」を選ぶ画面"><figcaption>プレビューが表示されないときは、上部メニューの <code>表示</code> → <code>プレビュータブを表示</code> や <code>レイアウトをリセット</code> を選びます。</figcaption></figure>
 </li>
 </ol>
-<p>以後、本文のパスはプロジェクト内の位置です。「全コード」は指定ファイルの中身をすべて置き換えるためのものです。先に比較と説明を読み、貼り付けた後は確認欄の操作まで行いましょう。</p>
-<div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎でHTMLとCSSを別ファイルに置いたときと同じです。今回はファイルの置き場所がMacのフォルダからMonacaのプロジェクトへ変わります。Android StudioやXcodeで1つのプロジェクトを開くように、4コマとも同じ <code>M01OshiList</code> を開きます。</p></div>
-<details><summary>このSTEPの全コード（照合・合流用）</summary>
-<div class="code-head">www/index.html · 全文</div>
+<div class="code-head">www/index.html · 全体を置き換える</div>
 <pre id="code-00-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;ja&quot;&gt;
 &lt;head&gt;
@@ -95,79 +92,36 @@
   &lt;p&gt;好きなものノートを作ります。&lt;/p&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-<div class="code-head">www/css/style.css · 全文</div>
+<div class="code-head">www/css/style.css · 全体を置き換える</div>
 <pre id="code-00-style-css" tabindex="0"><code>/* このコマで見た目を整えます。 */</code></pre>
-</details>
+<p>以後、本文のパスはプロジェクト内の位置です。コード欄の見出しには、ファイルのパスと、変え方を書きます。「追加」は、本文が示す行の下（または上）に書き足します。「置き換え」は、本文が示す範囲だけを書き換え、ほかの行は残します。「全体を置き換える」は、そのファイルの中身をすべて置き換えます。先に比較と説明を読み、書き換えた後は確認欄の操作まで行いましょう。</p>
+<div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎でHTMLとCSSを別ファイルに置いたときと同じです。今回はファイルの置き場所がMacのフォルダからMonacaのプロジェクトへ変わります。Android StudioやXcodeで1つのプロジェクトを開くように、4コマとも同じ <code>M01OshiList</code> を開きます。</p></div>
 <div class="check"><label><input type="checkbox" data-check="oshi-list-00"><span>通常版Monacaで自分の <code>M01OshiList</code> を開き、準備用の文字を表示できた。</span></label></div>
 
 </section>
 <section id="step-1">
 <p class="step-meta">STEP 01 · コマ1</p><h2>HTMLで1枚のカードを作る</h2>
-<p><code>www/index.html</code> を、このSTEPの全文に置き換えます。まず <code>body</code> の中を読みます。<code>main</code> は画面の主な内容、<code>article</code> は1件のカードです。カードには種類・名前・ひとことを置きます。</p>
-<p><code>class</code> 属性は、次のSTEPでCSSを対応させるための名前です。この時点では装飾がなくても正解です。保存してプレビューを再読み込みし、音楽・好きな音楽・ひとことがこの順に並ぶことを確かめます。</p>
-<p><code>head</code> の読み込みと設定は残します。最小限のテンプレートが持つ <code>components/loader.js</code> などは、この単元で中身を書き換えるファイルではありません。</p>
-<div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎の <code>h1</code>・<code>p</code> を組み合わせたページと同じ書き方です。AndroidやiOSでラベルを3つ置く代わりに、HTMLではタグの並びで文章の構造を表します。まだクリックの処理は付けません。</p></div>
-<details><summary>このSTEPの全コード（照合・合流用）</summary>
-<div class="code-head">www/index.html · 全文</div>
-<pre id="code-01-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;ja&quot;&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot;&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;
-  &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src * data: gap: content: https://ssl.gstatic.com; style-src * &#x27;unsafe-inline&#x27;; script-src * &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27;&quot;&gt;
-  &lt;title&gt;好きなものノート&lt;/title&gt;
-  &lt;script src=&quot;components/loader.js&quot;&gt;&lt;/script&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;components/loader.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;main class=&quot;app-section&quot;&gt;
+<p><code>www/index.html</code> の <code>body</code> の中にある <code>&lt;p&gt;好きなものノートを作ります。&lt;/p&gt;</code> の1行を、次のコードに置き換えます。<code>&lt;body&gt;</code> と <code>&lt;/body&gt;</code> の行は残します。</p>
+<div class="code-head">www/index.html · 置き換え · &lt;p&gt;好きなものノートを作ります。&lt;/p&gt; の1行</div>
+<pre id="code-01-index-html" tabindex="0"><code>  &lt;main class=&quot;app-section&quot;&gt;
     &lt;h1 class=&quot;app-heading&quot;&gt;好きなものノート&lt;/h1&gt;
     &lt;article class=&quot;oshi-card&quot;&gt;
       &lt;p class=&quot;app-caption&quot;&gt;音楽&lt;/p&gt;
       &lt;h2 class=&quot;oshi-name&quot;&gt;好きな音楽&lt;/h2&gt;
       &lt;p&gt;通学中に聴くと、元気になります。&lt;br&gt;好きな曲を何度も聴いています。&lt;/p&gt;
     &lt;/article&gt;
-  &lt;/main&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-<div class="code-head">www/css/style.css · 全文</div>
-<pre id="code-01-style-css" tabindex="0"><code>/* このコマで見た目を整えます。 */</code></pre>
-</details>
+  &lt;/main&gt;</code></pre>
+<p>まず <code>body</code> の中を読みます。<code>main</code> は画面の主な内容、<code>article</code> は1件のカードです。カードには種類・名前・ひとことを置きます。</p>
+<p><code>class</code> 属性は、次のSTEPでCSSを対応させるための名前です。この時点では装飾がなくても正解です。保存してプレビューを再読み込みし、音楽・好きな音楽・ひとことがこの順に並ぶことを確かめます。</p>
+<p><code>head</code> の読み込みと設定は残します。最小限のテンプレートが持つ <code>components/loader.js</code> などは、この単元で中身を書き換えるファイルではありません。</p>
+<div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎の <code>h1</code>・<code>p</code> を組み合わせたページと同じ書き方です。AndroidやiOSでラベルを3つ置く代わりに、HTMLではタグの並びで文章の構造を表します。まだクリックの処理は付けません。</p></div>
 <div class="check"><label><input type="checkbox" data-check="oshi-list-01"><span>装飾前のカードに種類・名前・ひとことが表示された。</span></label></div>
 
 </section>
 <section id="step-2">
 <p class="step-meta">STEP 02 · コマ1</p><h2>CSSでカードの余白と色を整える</h2>
-<p><code>www/css/style.css</code> を全文に置き換えます。HTMLはSTEP 01のままです。<code>.oshi-card</code> はカード全体、<code>.oshi-name</code> は名前に適用されます。</p>
-<table><thead><tr><th>書く場所</th><th>画面での変化</th></tr></thead><tbody><tr><td><code>padding: 16px</code></td><td>枠の内側に空間ができる。</td></tr><tr><td><code>margin: 0 0 16px</code></td><td>カードの下側に空間ができる。</td></tr><tr><td><code>border-radius: 12px</code></td><td>枠の角が丸くなる。</td></tr><tr><td><code>overflow-wrap: anywhere</code></td><td>長い名前を折り返して表示できる。</td></tr></tbody></table>
-<p>保存して、カードの白と背景の薄い色、枠、余白を見分けます。CSSが反映されないときは、HTMLの <code>css/style.css</code> というパスと、ファイルを保存したかを確認します。</p>
-<div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎のクラスセレクタをそのまま使います。HTMLの <code>class="oshi-card"</code> とCSSの <code>.oshi-card</code> は同じ名前で対応します。Androidのレイアウトで余白を設定するのと同じ目的ですが、Webでは外側が <code>margin</code>、内側が <code>padding</code> です。</p></div>
-<details><summary>このSTEPの全コード（照合・合流用）</summary>
-<div class="code-head">www/index.html · 全文</div>
-<pre id="code-02-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;ja&quot;&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot;&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;
-  &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src * data: gap: content: https://ssl.gstatic.com; style-src * &#x27;unsafe-inline&#x27;; script-src * &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27;&quot;&gt;
-  &lt;title&gt;好きなものノート&lt;/title&gt;
-  &lt;script src=&quot;components/loader.js&quot;&gt;&lt;/script&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;components/loader.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;main class=&quot;app-section&quot;&gt;
-    &lt;h1 class=&quot;app-heading&quot;&gt;好きなものノート&lt;/h1&gt;
-    &lt;article class=&quot;oshi-card&quot;&gt;
-      &lt;p class=&quot;app-caption&quot;&gt;音楽&lt;/p&gt;
-      &lt;h2 class=&quot;oshi-name&quot;&gt;好きな音楽&lt;/h2&gt;
-      &lt;p&gt;通学中に聴くと、元気になります。&lt;br&gt;好きな曲を何度も聴いています。&lt;/p&gt;
-    &lt;/article&gt;
-  &lt;/main&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-<div class="code-head">www/css/style.css · 全文</div>
+<p><code>www/css/style.css</code> には、STEP 00で書いたコメントの1行だけがあります。この中身を、次のコードですべて置き換えます。HTMLは変えません。</p>
+<div class="code-head">www/css/style.css · 全体を置き換える</div>
 <pre id="code-02-style-css" tabindex="0"><code>body {
   margin: 0;
   background-color: #f6f1eb;
@@ -204,38 +158,18 @@
   font-size: 20px;
   overflow-wrap: anywhere;
 }</code></pre>
-</details>
+<p><code>.oshi-card</code> はカード全体、<code>.oshi-name</code> は名前に適用されます。</p>
+<table><thead><tr><th>書く場所</th><th>画面での変化</th></tr></thead><tbody><tr><td><code>padding: 16px</code></td><td>枠の内側に空間ができる。</td></tr><tr><td><code>margin: 0 0 16px</code></td><td>カードの下側に空間ができる。</td></tr><tr><td><code>border-radius: 12px</code></td><td>枠の角が丸くなる。</td></tr><tr><td><code>overflow-wrap: anywhere</code></td><td>長い名前を折り返して表示できる。</td></tr></tbody></table>
+<p>保存して、カードの白と背景の薄い色、枠、余白を見分けます。CSSが反映されないときは、HTMLの <code>css/style.css</code> というパスと、ファイルを保存したかを確認します。</p>
+<div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎のクラスセレクタをそのまま使います。HTMLの <code>class="oshi-card"</code> とCSSの <code>.oshi-card</code> は同じ名前で対応します。Androidのレイアウトで余白を設定するのと同じ目的ですが、Webでは外側が <code>margin</code>、内側が <code>padding</code> です。</p></div>
 <div class="check"><label><input type="checkbox" data-check="oshi-list-02"><span>背景・カード・内側の余白を見分けられた。</span></label></div>
 
 </section>
 <section id="step-3">
 <p class="step-meta">STEP 03 · コマ1</p><h2>同じ構造のカードを3枚にする</h2>
-<p><code>www/index.html</code> の全文を更新します。1つ目と同じ <code>article</code> を2つ増やし、名前と種類を変えています。CSSは共通なので、3枚とも同じ形になります。</p>
-<ol><li>プレビューで3件あることと、音楽・食べ物・場所の順になっていることを確かめます。</li><li>画面の幅を狭くして、名前がカードの外へはみ出さず、縦に読めることを確かめます。</li><li>3枚目だけ違う形なら、<code>article</code> の開始・終了タグ、<code>class</code> の名前を見比べます。</li></ol>
-<p>同じHTMLを増やす方式は、3件なら見通せます。件数が増えると書き換える場所も増えるので、第3コマでは配列を使ってこの繰り返しをまとめます。</p>
-<div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎で同じクラスを複数の要素へ付けたときと同じです。JavaやSwiftのループなら同じ処理を繰り返せますが、今日はHTMLに3件を直接書き、表示の構造を先に確かめます。</p></div>
-<details><summary>このSTEPの全コード（照合・合流用）</summary>
-<div class="code-head">www/index.html · 全文</div>
-<pre id="code-03-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;ja&quot;&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot;&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;
-  &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src * data: gap: content: https://ssl.gstatic.com; style-src * &#x27;unsafe-inline&#x27;; script-src * &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27;&quot;&gt;
-  &lt;title&gt;好きなものノート&lt;/title&gt;
-  &lt;script src=&quot;components/loader.js&quot;&gt;&lt;/script&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;components/loader.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;main class=&quot;app-section&quot;&gt;
-    &lt;h1 class=&quot;app-heading&quot;&gt;好きなものノート&lt;/h1&gt;
-    &lt;article class=&quot;oshi-card&quot;&gt;
-      &lt;p class=&quot;app-caption&quot;&gt;音楽&lt;/p&gt;
-      &lt;h2 class=&quot;oshi-name&quot;&gt;好きな音楽&lt;/h2&gt;
-      &lt;p&gt;通学中に聴くと、元気になります。&lt;br&gt;好きな曲を何度も聴いています。&lt;/p&gt;
-    &lt;/article&gt;
-    &lt;article class=&quot;oshi-card&quot;&gt;
+<p><code>www/index.html</code> で、1枚目のカードを閉じる <code>&lt;/article&gt;</code> の下、<code>&lt;/main&gt;</code> の上に、次のコードを追加します。1つ目と同じ形の <code>article</code> を2つ増やし、名前と種類を変えています。CSSは変えません。CSSは共通なので、3枚とも同じ形になります。</p>
+<div class="code-head">www/index.html · 追加 · 1枚目の &lt;/article&gt; の下</div>
+<pre id="code-03-index-html" tabindex="0"><code>    &lt;article class=&quot;oshi-card&quot;&gt;
       &lt;p class=&quot;app-caption&quot;&gt;食べ物&lt;/p&gt;
       &lt;h2 class=&quot;oshi-name&quot;&gt;カレー&lt;/h2&gt;
       &lt;p&gt;自分の好きな辛さを選べるところが好きです。&lt;br&gt;お店ごとの味の違いも楽しめます。&lt;/p&gt;
@@ -244,412 +178,67 @@
       &lt;p class=&quot;app-caption&quot;&gt;場所&lt;/p&gt;
       &lt;h2 class=&quot;oshi-name&quot;&gt;公園&lt;/h2&gt;
       &lt;p&gt;ゆっくり歩いて、気分を変えられます。&lt;br&gt;季節によって景色が変わるところも好きです。&lt;/p&gt;
-    &lt;/article&gt;
-  &lt;/main&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-<div class="code-head">www/css/style.css · 全文</div>
-<pre id="code-03-style-css" tabindex="0"><code>body {
-  margin: 0;
-  background-color: #f6f1eb;
-  color: #333333;
-  font-family: sans-serif;
-}
-
-.app-section {
-  padding: 20px 16px;
-}
-
-.app-heading {
-  margin: 0 0 16px;
-  font-size: 24px;
-}
-
-.oshi-card {
-  margin: 0 0 16px;
-  padding: 16px;
-  border: 1px solid #d8c9bd;
-  border-radius: 12px;
-  background-color: #ffffff;
-}
-
-.app-caption {
-  margin: 0 0 12px;
-  color: #765744;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.oshi-name {
-  margin: 0 0 12px;
-  font-size: 20px;
-  overflow-wrap: anywhere;
-}</code></pre>
-</details>
+    &lt;/article&gt;</code></pre>
+<ol><li>プレビューで3件あることと、音楽・食べ物・場所の順になっていることを確かめます。</li><li>画面の幅を狭くして、名前がカードの外へはみ出さず、縦に読めることを確かめます。</li><li>3枚目だけ違う形なら、<code>article</code> の開始・終了タグ、<code>class</code> の名前を見比べます。</li></ol>
+<p>同じHTMLを増やす方式は、3件なら見通せます。件数が増えると書き換える場所も増えるので、第3コマでは配列を使ってこの繰り返しをまとめます。</p>
+<div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎で同じクラスを複数の要素へ付けたときと同じです。JavaやSwiftのループなら同じ処理を繰り返せますが、今日はHTMLに3件を直接書き、表示の構造を先に確かめます。</p></div>
 <div class="check"><label><input type="checkbox" data-check="oshi-list-03"><span>3枚のカードが同じ形で並び、狭い幅でも読めた。</span></label></div>
 
 </section>
 <section id="step-4">
 <p class="step-meta">STEP 04 · コマ1</p><h2>第1コマの確認とアレンジ</h2>
-<p>下の全コードが第1コマ終了時の基準です。自分の内容に変える前に、3枚が表示されることを確かめます。カードはまだ押しても何も起きません。</p>
+<p>コードは変えません。STEP 03まで書いたコードが、第1コマ終了時の基準です。自分の内容に変える前に、3枚が表示されることを確かめます。カードはまだ押しても何も起きません。</p>
 <ol><li>自分の好きなものを1つ選び、1枚目の名前・種類・好きな理由を自分の言葉へ変えます。</li><li><code>.app-caption</code> の <code>color</code> を変え、種類の文字だけが変化することを確かめます。</li><li>画面を再読み込みし、書いたHTMLの内容が残っていることを確かめます。次回も同じプロジェクトを開きます。</li></ol>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎と同じく、画面に表示する文章はHTML、色はCSSで変えます。同じクラスの色を1か所直すと、3枚全部の種類へ反映されます。複数の画面部品へ同じ見た目の設定を適用する考え方はAndroid・iOSでも共通です。</p></div>
-<details><summary>このSTEPの全コード（照合・合流用）</summary>
-<div class="code-head">www/index.html · 全文</div>
-<pre id="code-04-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;ja&quot;&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot;&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;
-  &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src * data: gap: content: https://ssl.gstatic.com; style-src * &#x27;unsafe-inline&#x27;; script-src * &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27;&quot;&gt;
-  &lt;title&gt;好きなものノート&lt;/title&gt;
-  &lt;script src=&quot;components/loader.js&quot;&gt;&lt;/script&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;components/loader.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;main class=&quot;app-section&quot;&gt;
-    &lt;h1 class=&quot;app-heading&quot;&gt;好きなものノート&lt;/h1&gt;
-    &lt;article class=&quot;oshi-card&quot;&gt;
-      &lt;p class=&quot;app-caption&quot;&gt;音楽&lt;/p&gt;
-      &lt;h2 class=&quot;oshi-name&quot;&gt;好きな音楽&lt;/h2&gt;
-      &lt;p&gt;通学中に聴くと、元気になります。&lt;br&gt;好きな曲を何度も聴いています。&lt;/p&gt;
-    &lt;/article&gt;
-    &lt;article class=&quot;oshi-card&quot;&gt;
-      &lt;p class=&quot;app-caption&quot;&gt;食べ物&lt;/p&gt;
-      &lt;h2 class=&quot;oshi-name&quot;&gt;カレー&lt;/h2&gt;
-      &lt;p&gt;自分の好きな辛さを選べるところが好きです。&lt;br&gt;お店ごとの味の違いも楽しめます。&lt;/p&gt;
-    &lt;/article&gt;
-    &lt;article class=&quot;oshi-card&quot;&gt;
-      &lt;p class=&quot;app-caption&quot;&gt;場所&lt;/p&gt;
-      &lt;h2 class=&quot;oshi-name&quot;&gt;公園&lt;/h2&gt;
-      &lt;p&gt;ゆっくり歩いて、気分を変えられます。&lt;br&gt;季節によって景色が変わるところも好きです。&lt;/p&gt;
-    &lt;/article&gt;
-  &lt;/main&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-<div class="code-head">www/css/style.css · 全文</div>
-<pre id="code-04-style-css" tabindex="0"><code>body {
-  margin: 0;
-  background-color: #f6f1eb;
-  color: #333333;
-  font-family: sans-serif;
-}
-
-.app-section {
-  padding: 20px 16px;
-}
-
-.app-heading {
-  margin: 0 0 16px;
-  font-size: 24px;
-}
-
-.oshi-card {
-  margin: 0 0 16px;
-  padding: 16px;
-  border: 1px solid #d8c9bd;
-  border-radius: 12px;
-  background-color: #ffffff;
-}
-
-.app-caption {
-  margin: 0 0 12px;
-  color: #765744;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.oshi-name {
-  margin: 0 0 12px;
-  font-size: 20px;
-  overflow-wrap: anywhere;
-}</code></pre>
-</details>
 <div class="check"><label><input type="checkbox" data-check="oshi-list-04"><span>自分の題材と色を試し、同じプロジェクトで次回へ進める。</span></label></div>
 <div class="task"><p class="box-title">アレンジできる場所</p><p>カードの名前・種類・ひとこと、背景色、角丸の数値を変えられます。自分の好きなものと、その理由を自分の言葉で書きましょう。1か所変えるたびに保存・再読み込みをし、何が変わったかを確かめます。</p></div>
 </section>
 <section id="step-5">
 <p class="step-meta">STEP 05 · コマ2</p><h2>Onsen UIを同じ版で読み込む</h2>
-<details><summary>このコマから合流する人：開始時の全コード</summary><p>同じ <code>M01OshiList</code> を開き、各ファイルを次の内容にそろえて保存します。前のコマのアレンジを残したい人は、その文字や色を控えてから進みます。</p>
-<div class="code-head">www/index.html · 全文</div>
-<pre id="start-04-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;ja&quot;&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot;&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;
-  &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src * data: gap: content: https://ssl.gstatic.com; style-src * &#x27;unsafe-inline&#x27;; script-src * &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27;&quot;&gt;
-  &lt;title&gt;好きなものノート&lt;/title&gt;
-  &lt;script src=&quot;components/loader.js&quot;&gt;&lt;/script&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;components/loader.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;main class=&quot;app-section&quot;&gt;
-    &lt;h1 class=&quot;app-heading&quot;&gt;好きなものノート&lt;/h1&gt;
-    &lt;article class=&quot;oshi-card&quot;&gt;
-      &lt;p class=&quot;app-caption&quot;&gt;音楽&lt;/p&gt;
-      &lt;h2 class=&quot;oshi-name&quot;&gt;好きな音楽&lt;/h2&gt;
-      &lt;p&gt;通学中に聴くと、元気になります。&lt;br&gt;好きな曲を何度も聴いています。&lt;/p&gt;
-    &lt;/article&gt;
-    &lt;article class=&quot;oshi-card&quot;&gt;
-      &lt;p class=&quot;app-caption&quot;&gt;食べ物&lt;/p&gt;
-      &lt;h2 class=&quot;oshi-name&quot;&gt;カレー&lt;/h2&gt;
-      &lt;p&gt;自分の好きな辛さを選べるところが好きです。&lt;br&gt;お店ごとの味の違いも楽しめます。&lt;/p&gt;
-    &lt;/article&gt;
-    &lt;article class=&quot;oshi-card&quot;&gt;
-      &lt;p class=&quot;app-caption&quot;&gt;場所&lt;/p&gt;
-      &lt;h2 class=&quot;oshi-name&quot;&gt;公園&lt;/h2&gt;
-      &lt;p&gt;ゆっくり歩いて、気分を変えられます。&lt;br&gt;季節によって景色が変わるところも好きです。&lt;/p&gt;
-    &lt;/article&gt;
-  &lt;/main&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-<div class="code-head">www/css/style.css · 全文</div>
-<pre id="start-04-style-css" tabindex="0"><code>body {
-  margin: 0;
-  background-color: #f6f1eb;
-  color: #333333;
-  font-family: sans-serif;
-}
-
-.app-section {
-  padding: 20px 16px;
-}
-
-.app-heading {
-  margin: 0 0 16px;
-  font-size: 24px;
-}
-
-.oshi-card {
-  margin: 0 0 16px;
-  padding: 16px;
-  border: 1px solid #d8c9bd;
-  border-radius: 12px;
-  background-color: #ffffff;
-}
-
-.app-caption {
-  margin: 0 0 12px;
-  color: #765744;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.oshi-name {
-  margin: 0 0 12px;
-  font-size: 20px;
-  overflow-wrap: anywhere;
-}</code></pre></details><p>第2コマでは、同じHTMLからOSに合った見た目を作る <strong>auto-styling</strong> を確かめます。使うのは <strong>Onsen UI 2.12.9</strong> です。Onsen UIはHTMLに画面部品を加えるUIライブラリで、この授業では素のJavaScriptから操作します。</p>
-<ol><li><code>www</code> の中に <code>js</code> フォルダを作り、その中に <code>app.js</code> を作ります。既にあれば再利用します。</li><li>このSTEPの3ファイルを全文どおりに保存します。HTMLではOnsen UIのCSS2本とJavaScript1本を、版番号付きのURLで読み込んでいます。</li><li>自分の <code>js/app.js</code> はOnsen UIのJavaScriptより後に読み込みます。まずはコメントだけなので、カードの形は前のコマとほぼ同じです。ただし、Onsen UIのCSSを読み込むと、ページ全体はスクロールしなくなります。プレビューの高さが低いと、下のカードが切れて見えることがあります。次のSTEPでカードを <code>ons-page</code> に入れると、ページの中でスクロールできるようになります。</li></ol>
-<p>CDNはライブラリをインターネット経由で読み込む配布先です。授業中にアクセスできる回線が必要です。URLの <code>@2.12.9</code> を消したり、別の版へ変えたりしません。</p>
-<div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎で自分のCSSを <code>link</code>、JavaScriptを <code>script</code> で読み込んだ書き方と同じです。今回はURLが外部ファイルを指します。AndroidやiOSでUIライブラリを使うように、画面部品の実装を借ります。自分の処理を後に読むのは、先にOnsen UIを使える状態にするためです。</p></div>
-<details><summary>このSTEPの全コード（照合・合流用）</summary>
-<div class="code-head">www/index.html · 全文</div>
-<pre id="code-05-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;ja&quot;&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot;&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;
-  &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src * data: gap: content: https://ssl.gstatic.com; style-src * &#x27;unsafe-inline&#x27;; script-src * &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27;&quot;&gt;
-  &lt;title&gt;好きなものノート&lt;/title&gt;
-  &lt;script src=&quot;components/loader.js&quot;&gt;&lt;/script&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;components/loader.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsenui.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsen-css-components.min.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
-  &lt;script src=&quot;https://unpkg.com/onsenui@2.12.9/js/onsenui.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;js/app.js&quot;&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;main class=&quot;app-section&quot;&gt;
-    &lt;h1 class=&quot;app-heading&quot;&gt;好きなものノート&lt;/h1&gt;
-    &lt;article class=&quot;oshi-card&quot;&gt;
-      &lt;p class=&quot;app-caption&quot;&gt;音楽&lt;/p&gt;
-      &lt;h2 class=&quot;oshi-name&quot;&gt;好きな音楽&lt;/h2&gt;
-      &lt;p&gt;通学中に聴くと、元気になります。&lt;br&gt;好きな曲を何度も聴いています。&lt;/p&gt;
-    &lt;/article&gt;
-    &lt;article class=&quot;oshi-card&quot;&gt;
-      &lt;p class=&quot;app-caption&quot;&gt;食べ物&lt;/p&gt;
-      &lt;h2 class=&quot;oshi-name&quot;&gt;カレー&lt;/h2&gt;
-      &lt;p&gt;自分の好きな辛さを選べるところが好きです。&lt;br&gt;お店ごとの味の違いも楽しめます。&lt;/p&gt;
-    &lt;/article&gt;
-    &lt;article class=&quot;oshi-card&quot;&gt;
-      &lt;p class=&quot;app-caption&quot;&gt;場所&lt;/p&gt;
-      &lt;h2 class=&quot;oshi-name&quot;&gt;公園&lt;/h2&gt;
-      &lt;p&gt;ゆっくり歩いて、気分を変えられます。&lt;br&gt;季節によって景色が変わるところも好きです。&lt;/p&gt;
-    &lt;/article&gt;
-  &lt;/main&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-<div class="code-head">www/css/style.css · 全文</div>
-<pre id="code-05-style-css" tabindex="0"><code>body {
-  margin: 0;
-  background-color: #f6f1eb;
-  color: #333333;
-  font-family: sans-serif;
-}
-
-.app-section {
-  padding: 20px 16px;
-}
-
-.app-heading {
-  margin: 0 0 16px;
-  font-size: 24px;
-}
-
-.oshi-card {
-  margin: 0 0 16px;
-  padding: 16px;
-  border: 1px solid #d8c9bd;
-  border-radius: 12px;
-  background-color: #ffffff;
-}
-
-.app-caption {
-  margin: 0 0 12px;
-  color: #765744;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.oshi-name {
-  margin: 0 0 12px;
-  font-size: 20px;
-  overflow-wrap: anywhere;
-}</code></pre>
-<div class="code-head">www/js/app.js · 全文</div>
+<p>第2コマでは、同じHTMLからOSに合った見た目を作る <strong>auto-styling</strong> を確かめます。使うのは <strong>Onsen UI 2.12.9</strong> です。Onsen UIはHTMLに画面部品を加えるUIライブラリで、この授業では素のJavaScriptから操作します。</p>
+<ol><li><code>www</code> の中に <code>js</code> フォルダを作り、その中に <code>app.js</code> を作ります。既にあれば再利用します。<code>app.js</code> の中身を、次のコードですべて置き換えます。
+<div class="code-head">www/js/app.js · 全体を置き換える</div>
 <pre id="code-05-app-js" tabindex="0"><code>// 見た目の比較では、次の行を有効にして再読み込みする。
 // OSの指定は、Onsen UIが画面を作る前に行う。
-// ons.platform.select(&quot;android&quot;);
-</code></pre>
-</details>
+// ons.platform.select(&quot;android&quot;);</code></pre>
+</li><li><code>www/index.html</code> の <code>head</code> に、Onsen UIのCSS2本を追加します。<code>components/loader.css</code> を読み込む <code>link</code> の下、<code>css/style.css</code> を読み込む <code>link</code> の上です。
+<div class="code-head">www/index.html · 追加 · components/loader.css の link の下</div>
+<pre id="code-05-index-html-css" tabindex="0"><code>  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsenui.css&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsen-css-components.min.css&quot;&gt;</code></pre>
+</li><li>続けて、<code>css/style.css</code> を読み込む <code>link</code> の下、<code>&lt;/head&gt;</code> の上に、Onsen UIのJavaScript1本と自分の <code>js/app.js</code> を読み込む <code>script</code> を追加します。CSSのファイルは変えません。
+<div class="code-head">www/index.html · 追加 · css/style.css の link の下</div>
+<pre id="code-05-index-html-js" tabindex="0"><code>  &lt;script src=&quot;https://unpkg.com/onsenui@2.12.9/js/onsenui.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;js/app.js&quot;&gt;&lt;/script&gt;</code></pre>
+</li><li>どのURLにも、版番号の <code>@2.12.9</code> が入っています。自分の <code>js/app.js</code> はOnsen UIのJavaScriptより後に読み込みます。まずはコメントだけなので、カードの形は前のコマとほぼ同じです。ただし、Onsen UIのCSSを読み込むと、ページ全体はスクロールしなくなります。プレビューの高さが低いと、下のカードが切れて見えることがあります。次のSTEPでカードを <code>ons-page</code> に入れると、ページの中でスクロールできるようになります。</li></ol>
+<p>CDNはライブラリをインターネット経由で読み込む配布先です。授業中にアクセスできる回線が必要です。URLの <code>@2.12.9</code> を消したり、別の版へ変えたりしません。</p>
+<div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎で自分のCSSを <code>link</code>、JavaScriptを <code>script</code> で読み込んだ書き方と同じです。今回はURLが外部ファイルを指します。AndroidやiOSでUIライブラリを使うように、画面部品の実装を借ります。自分の処理を後に読むのは、先にOnsen UIを使える状態にするためです。</p></div>
 <div class="check"><label><input type="checkbox" data-check="oshi-list-05"><span>版番号付きの3本の読み込みと、自分の <code>app.js</code> の位置を確認した。</span></label></div>
 
 </section>
 <section id="step-6">
 <p class="step-meta">STEP 06 · コマ2</p><h2>ページとツールバーをOnsen UIへ置き換える</h2>
-<p><code>www/index.html</code> を全文に置き換えます。<code>body</code> の中を <code>ons-page</code> で囲み、その先頭に <code>ons-toolbar</code> を置きます。カードはまだ前のコマのHTMLです。</p>
+<p><code>www/index.html</code> の <code>body</code> の中を <code>ons-page</code> で囲み、その先頭に <code>ons-toolbar</code> を置きます。カードはまだ前のコマのHTMLです。CSSと <code>app.js</code> は変えません。</p>
+<p>まず、<code>&lt;body&gt;</code> の下、<code>&lt;main class="app-section"&gt;</code> の上に追加します。</p>
+<div class="code-head">www/index.html · 追加 · &lt;body&gt; の下</div>
+<pre id="code-06-index-html-open" tabindex="0"><code>  &lt;ons-page id=&quot;page_list&quot;&gt;
+    &lt;ons-toolbar&gt;
+      &lt;div class=&quot;center&quot;&gt;好きなものノート&lt;/div&gt;
+    &lt;/ons-toolbar&gt;</code></pre>
+<p>次に、<code>&lt;/main&gt;</code> の下、<code>&lt;/body&gt;</code> の上に、<code>ons-page</code> を閉じるタグを追加します。<code>main</code> から <code>&lt;/main&gt;</code> までの字下げは、そのままでかまいません。</p>
+<div class="code-head">www/index.html · 追加 · &lt;/main&gt; の下</div>
+<pre id="code-06-index-html-close" tabindex="0"><code>  &lt;/ons-page&gt;</code></pre>
 <p><code>ons-</code> で始まるタグはOnsen UIが提供する画面部品です。ブラウザの標準タグだけではなく、STEP 05で読み込んだJavaScriptとCSSが表示を整えています。ツールバーの <code>class="center"</code> は、Onsen UIが決めた領域名です。文字が常に画面の厳密な中央にあるという意味ではありません。</p>
 <p>保存して再読み込みし、上部のツールバーに「好きなものノート」が出ていることを確認します。カードはツールバーの下に表示されます。タグ名がそのまま文字になったら、全角の記号や閉じタグの不足を確認します。</p>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎の <code>div</code> にCSSを付けて領域を作る代わりに、<code>ons-page</code> と <code>ons-toolbar</code> という部品を使います。Androidの <code>Toolbar</code>、iOSのナビゲーションバーと、画面の題名を置く役割は対応します。今回はHTMLで同じ部品の役割を指定します。</p></div>
-<details><summary>このSTEPの全コード（照合・合流用）</summary>
-<div class="code-head">www/index.html · 全文</div>
-<pre id="code-06-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;ja&quot;&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot;&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;
-  &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src * data: gap: content: https://ssl.gstatic.com; style-src * &#x27;unsafe-inline&#x27;; script-src * &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27;&quot;&gt;
-  &lt;title&gt;好きなものノート&lt;/title&gt;
-  &lt;script src=&quot;components/loader.js&quot;&gt;&lt;/script&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;components/loader.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsenui.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsen-css-components.min.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
-  &lt;script src=&quot;https://unpkg.com/onsenui@2.12.9/js/onsenui.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;js/app.js&quot;&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;ons-page id=&quot;page_list&quot;&gt;
-    &lt;ons-toolbar&gt;
-      &lt;div class=&quot;center&quot;&gt;好きなものノート&lt;/div&gt;
-    &lt;/ons-toolbar&gt;
-  &lt;main class=&quot;app-section&quot;&gt;
-    &lt;h1 class=&quot;app-heading&quot;&gt;好きなものノート&lt;/h1&gt;
-    &lt;article class=&quot;oshi-card&quot;&gt;
-      &lt;p class=&quot;app-caption&quot;&gt;音楽&lt;/p&gt;
-      &lt;h2 class=&quot;oshi-name&quot;&gt;好きな音楽&lt;/h2&gt;
-      &lt;p&gt;通学中に聴くと、元気になります。&lt;br&gt;好きな曲を何度も聴いています。&lt;/p&gt;
-    &lt;/article&gt;
-    &lt;article class=&quot;oshi-card&quot;&gt;
-      &lt;p class=&quot;app-caption&quot;&gt;食べ物&lt;/p&gt;
-      &lt;h2 class=&quot;oshi-name&quot;&gt;カレー&lt;/h2&gt;
-      &lt;p&gt;自分の好きな辛さを選べるところが好きです。&lt;br&gt;お店ごとの味の違いも楽しめます。&lt;/p&gt;
-    &lt;/article&gt;
-    &lt;article class=&quot;oshi-card&quot;&gt;
-      &lt;p class=&quot;app-caption&quot;&gt;場所&lt;/p&gt;
-      &lt;h2 class=&quot;oshi-name&quot;&gt;公園&lt;/h2&gt;
-      &lt;p&gt;ゆっくり歩いて、気分を変えられます。&lt;br&gt;季節によって景色が変わるところも好きです。&lt;/p&gt;
-    &lt;/article&gt;
-  &lt;/main&gt;
-  &lt;/ons-page&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-<div class="code-head">www/css/style.css · 全文</div>
-<pre id="code-06-style-css" tabindex="0"><code>body {
-  margin: 0;
-  background-color: #f6f1eb;
-  color: #333333;
-  font-family: sans-serif;
-}
-
-.app-section {
-  padding: 20px 16px;
-}
-
-.app-heading {
-  margin: 0 0 16px;
-  font-size: 24px;
-}
-
-.oshi-card {
-  margin: 0 0 16px;
-  padding: 16px;
-  border: 1px solid #d8c9bd;
-  border-radius: 12px;
-  background-color: #ffffff;
-}
-
-.app-caption {
-  margin: 0 0 12px;
-  color: #765744;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.oshi-name {
-  margin: 0 0 12px;
-  font-size: 20px;
-  overflow-wrap: anywhere;
-}</code></pre>
-<div class="code-head">www/js/app.js · 全文</div>
-<pre id="code-06-app-js" tabindex="0"><code>// 見た目の比較では、次の行を有効にして再読み込みする。
-// OSの指定は、Onsen UIが画面を作る前に行う。
-// ons.platform.select(&quot;android&quot;);
-</code></pre>
-</details>
 <div class="check"><label><input type="checkbox" data-check="oshi-list-06"><span>ツールバーの下に3枚のカードが表示された。</span></label></div>
 
 </section>
 <section id="step-7">
 <p class="step-meta">STEP 07 · コマ2</p><h2>カードをOnsen UIの一覧へ置き換える</h2>
-<p>このSTEPのHTMLとCSSを全文に置き換えます。JavaScriptはコメントだけのままです。カード用のHTMLをOnsen UIの部品へ置き換え、<code>ons-list</code> の中へ3個の <code>ons-list-item</code> を置きます。それぞれに <code>class="oshi-card"</code> を付け、第1コマで使ったカードの見た目を引き継ぎます。一覧の上の見出しと、一覧の下の「まだ選択していません」の文も、このSTEPで加わります。</p>
-<table><thead><tr><th>部品・指定</th><th>役割</th></tr></thead><tbody><tr><td><code>ons-list</code></td><td>一覧全体。</td></tr><tr><td><code>ons-list-item</code></td><td>一覧の1行。</td></tr><tr><td><code>tappable</code></td><td>押したときの見た目を付ける。</td></tr><tr><td><code>modifier="chevron"</code></td><td>行の右端に目印（＞）を付ける。</td></tr><tr><td><code>list-item__title</code> / <code>list-item__subtitle</code></td><td>主な文字と補足の文字。Onsen UIが用意するクラス名。</td></tr><tr><td><code>app-caption</code>・<code>app-heading</code>・<code>app-description</code></td><td>一覧の上の小見出し・見出し・説明文。アプリ名はツールバーに出ているので、ここでは何を記録するノートかを示す。</td></tr><tr><td><code>txt_selected</code>（<code>app-selection</code>）</td><td>押した名前を出す欄。このSTEPでは最初の文「まだ選択していません」だけを出し、書き換える処理は第3コマで書く。</td></tr></tbody></table>
-<p><code>oshi-card</code> は、好きなものを1枚ずつ区切るための自分のクラスです。第1コマと同じ <code>border</code>・<code>border-radius</code> で、枠と角丸を付けます。一覧は、左右に余白のある <code>app-section</code> の外に置くので、<code>margin</code> を左右16px・下12pxに変え、<code>width: auto</code> で画面の幅に収めます。カードの内側の余白は <code>ons-list-item</code> が持つ余白を使うので、<code>padding</code> の指定は外します。一覧の1行としての役割はOnsen UI、カードの外枠は自分のCSSが担当します。<code>#list_oshi</code> と <code>.oshi-card .list-item__center</code> では、標準の区切り線を消してカードの外枠だけを見せます。後者は、カードの中にある中央領域だけを指定するCSSの子孫セレクタです。後者では右の余白も30px空けます。長い名前を折り返したときに、行の終わりが右端の目印「＞」と重ならないようにするためです（Onsen UIが目印の横に空ける幅と同じ値です）。ツールバーや押したときの反応など、OSによる部品の違いは引き続き比べられます。<code>oshi-name</code>・<code>oshi-genre</code> は自分のCSSで折り返しを指定するために加えた名前です。保存・再読み込みをして、名前と種類が各行に表示されることを確かめます。好きな理由は一覧に出さず、第4コマで作る詳細画面に出します。押した見た目は付きますが、選択の処理は第3コマで書きます。</p>
-<p>一覧の上の <code>app-caption</code> は、第1コマでカードの種類の文字に使ったクラスです。種類は <code>list-item__subtitle</code> で出すようになったので、ここでは小見出しに使います。CSSの先頭にあった <code>body</code> の指定（余白・背景色・文字色・フォント）は外します。STEP 06で <code>ons-page</code> に入れてからは、画面の背景と文字にOnsen UIのページの指定が使われていて、<code>body</code> の指定は画面に出ていないためです。外しても、画面の色や文字は変わりません。</p>
-<div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎の <code>ul</code> と <code>li</code> のように、一覧全体と1行を分けます。第1コマの <code>article</code> に付けた <code>oshi-card</code> を、ここでは <code>ons-list-item</code> に付け、既習のCSSでカードの形を再利用します。Androidのリストの行やiOSのテーブルのセルと同じ役割です。<code>tappable</code> はクリック処理そのものではありません。見た目とイベント処理を分ける点は、Webのボタンと <code>addEventListener</code> の関係と同じです。</p></div>
-<details><summary>このSTEPの全コード（照合・合流用）</summary>
-<div class="code-head">www/index.html · 全文</div>
-<pre id="code-07-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;ja&quot;&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot;&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;
-  &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src * data: gap: content: https://ssl.gstatic.com; style-src * &#x27;unsafe-inline&#x27;; script-src * &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27;&quot;&gt;
-  &lt;title&gt;好きなものノート&lt;/title&gt;
-  &lt;script src=&quot;components/loader.js&quot;&gt;&lt;/script&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;components/loader.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsenui.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsen-css-components.min.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
-  &lt;script src=&quot;https://unpkg.com/onsenui@2.12.9/js/onsenui.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;js/app.js&quot;&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;ons-page id=&quot;page_list&quot;&gt;
+<p>このSTEPでは、HTMLとCSSを書き換えます。JavaScriptはコメントだけのままです。カード用のHTMLをOnsen UIの部品へ置き換え、<code>ons-list</code> の中へ3個の <code>ons-list-item</code> を置きます。それぞれに <code>class="oshi-card"</code> を付け、第1コマで使ったカードの見た目を引き継ぎます。一覧の上の見出しと、一覧の下の「まだ選択していません」の文も、このSTEPで加わります。</p>
+<p><code>www/index.html</code> では、<code>body</code> の中の <code>&lt;ons-page id="page_list"&gt;</code> の行から <code>&lt;/ons-page&gt;</code> の行までを、次のコードに置き換えます。<code>main</code> と3枚の <code>article</code> は残しません。<code>head</code> と、<code>&lt;body&gt;</code>・<code>&lt;/body&gt;</code> の行は残します。ツールバーの部分は前のSTEPと同じ内容で、字下げだけをそろえています。</p>
+<div class="code-head">www/index.html · 置き換え · &lt;ons-page id="page_list"&gt; から &lt;/ons-page&gt; まで</div>
+<pre id="code-07-index-html" tabindex="0"><code>    &lt;ons-page id=&quot;page_list&quot;&gt;
       &lt;ons-toolbar&gt;
         &lt;div class=&quot;center&quot;&gt;好きなものノート&lt;/div&gt;
       &lt;/ons-toolbar&gt;
@@ -681,10 +270,9 @@
         &lt;/ons-list-item&gt;
       &lt;/ons-list&gt;
       &lt;p id=&quot;txt_selected&quot; class=&quot;app-section app-selection&quot; aria-live=&quot;polite&quot;&gt;まだ選択していません&lt;/p&gt;
-    &lt;/ons-page&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-<div class="code-head">www/css/style.css · 全文</div>
+    &lt;/ons-page&gt;</code></pre>
+<p><code>www/css/style.css</code> は、カードの指定の多くが変わるので、中身を次のコードですべて置き換えます。第1コマでアレンジした色や余白を残したい人は、その値を控えてから置き換えます。</p>
+<div class="code-head">www/css/style.css · 全体を置き換える</div>
 <pre id="code-07-style-css" tabindex="0"><code>.app-section {
   padding: 20px 16px;
 }
@@ -742,641 +330,61 @@
 .oshi-genre {
   overflow-wrap: anywhere;
 }</code></pre>
-<div class="code-head">www/js/app.js · 全文</div>
-<pre id="code-07-app-js" tabindex="0"><code>// 見た目の比較では、次の行を有効にして再読み込みする。
-// OSの指定は、Onsen UIが画面を作る前に行う。
-// ons.platform.select(&quot;android&quot;);
-</code></pre>
-</details>
+<table><thead><tr><th>部品・指定</th><th>役割</th></tr></thead><tbody><tr><td><code>ons-list</code></td><td>一覧全体。</td></tr><tr><td><code>ons-list-item</code></td><td>一覧の1行。</td></tr><tr><td><code>tappable</code></td><td>押したときの見た目を付ける。</td></tr><tr><td><code>modifier="chevron"</code></td><td>行の右端に目印（＞）を付ける。</td></tr><tr><td><code>list-item__title</code> / <code>list-item__subtitle</code></td><td>主な文字と補足の文字。Onsen UIが用意するクラス名。</td></tr><tr><td><code>app-caption</code>・<code>app-heading</code>・<code>app-description</code></td><td>一覧の上の小見出し・見出し・説明文。アプリ名はツールバーに出ているので、ここでは何を記録するノートかを示す。</td></tr><tr><td><code>txt_selected</code>（<code>app-selection</code>）</td><td>押した名前を出す欄。このSTEPでは最初の文「まだ選択していません」だけを出し、書き換える処理は第3コマで書く。</td></tr></tbody></table>
+<p><code>oshi-card</code> は、好きなものを1枚ずつ区切るための自分のクラスです。第1コマと同じ <code>border</code>・<code>border-radius</code> で、枠と角丸を付けます。一覧は、左右に余白のある <code>app-section</code> の外に置くので、<code>margin</code> を左右16px・下12pxに変え、<code>width: auto</code> で画面の幅に収めます。カードの内側の余白は <code>ons-list-item</code> が持つ余白を使うので、<code>padding</code> の指定は外します。一覧の1行としての役割はOnsen UI、カードの外枠は自分のCSSが担当します。<code>#list_oshi</code> と <code>.oshi-card .list-item__center</code> では、標準の区切り線を消してカードの外枠だけを見せます。後者は、カードの中にある中央領域だけを指定するCSSの子孫セレクタです。後者では右の余白も30px空けます。長い名前を折り返したときに、行の終わりが右端の目印「＞」と重ならないようにするためです（Onsen UIが目印の横に空ける幅と同じ値です）。ツールバーや押したときの反応など、OSによる部品の違いは引き続き比べられます。<code>oshi-name</code>・<code>oshi-genre</code> は自分のCSSで折り返しを指定するために加えた名前です。保存・再読み込みをして、名前と種類が各行に表示されることを確かめます。好きな理由は一覧に出さず、第4コマで作る詳細画面に出します。押した見た目は付きますが、選択の処理は第3コマで書きます。</p>
+<p>一覧の上の <code>app-caption</code> は、第1コマでカードの種類の文字に使ったクラスです。種類は <code>list-item__subtitle</code> で出すようになったので、ここでは小見出しに使います。CSSの先頭にあった <code>body</code> の指定（余白・背景色・文字色・フォント）は外します。STEP 06で <code>ons-page</code> に入れてからは、画面の背景と文字にOnsen UIのページの指定が使われていて、<code>body</code> の指定は画面に出ていないためです。外しても、画面の色や文字は変わりません。</p>
+<div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎の <code>ul</code> と <code>li</code> のように、一覧全体と1行を分けます。第1コマの <code>article</code> に付けた <code>oshi-card</code> を、ここでは <code>ons-list-item</code> に付け、既習のCSSでカードの形を再利用します。Androidのリストの行やiOSのテーブルのセルと同じ役割です。<code>tappable</code> はクリック処理そのものではありません。見た目とイベント処理を分ける点は、Webのボタンと <code>addEventListener</code> の関係と同じです。</p></div>
 <div class="check"><label><input type="checkbox" data-check="oshi-list-07"><span>3件がカード状の一覧になり、上に見出し、下に「まだ選択していません」が出た。カードのCSS、押す見た目、選択処理を区別できる。</span></label></div>
 
 </section>
 <section id="step-8">
 <p class="step-meta">STEP 08 · コマ2</p><h2>同じHTMLでiOSとAndroidの見た目を比べる</h2>
 <p>この単元の新概念は <strong>auto-styling</strong> です。Onsen UIは実行環境に応じ、同じ <code>ons-toolbar</code> や <code>ons-list-item</code> をiOS向け・Android向けの見た目へ切り替えます。自分でOSごとに2組の画面を作る必要はありません。</p>
-<ol><li><code>www/js/app.js</code> を、このSTEPの全文に置き換えます。先頭の <code>ons.platform.select("android");</code> が有効になっています。保存して<strong>プレビュー全体を再読み込み</strong>します。</li><li>ツールバーの高さ・題名の位置、行を押した反応、右端の目印を見ます。右端の目印「＞」は、iOS向けとAndroid向けのどちらにも出ます。</li><li><code>"android"</code> を <code>"ios"</code> へ書き換え、保存してプレビュー全体を再読み込みします。HTMLと自分のCSSは変更せず、同じ箇所を比べます。</li><li>違いを1つ、共通する内容を1つ、見つけます。</li></ol>
+<ol><li><code>www/js/app.js</code> の3行目、<code>// ons.platform.select("android");</code> の1行を、次のように置き換えます。先頭の <code>//</code> を消し、この行を有効にします。上の2行のコメントは残します。HTMLとCSSは変えません。保存して<strong>プレビュー全体を再読み込み</strong>します。
+<div class="code-head">www/js/app.js · 置き換え · // ons.platform.select("android"); の1行</div>
+<pre id="code-08-app-js" tabindex="0"><code>ons.platform.select(&quot;android&quot;);</code></pre>
+</li><li>ツールバーの高さ・題名の位置、行を押した反応、右端の目印を見ます。右端の目印「＞」は、iOS向けとAndroid向けのどちらにも出ます。</li><li><code>"android"</code> を <code>"ios"</code> へ書き換え、保存してプレビュー全体を再読み込みします。HTMLと自分のCSSは変更せず、同じ箇所を比べます。</li><li>違いを1つ、共通する内容を1つ、見つけます。</li></ol>
 <p>OSの指定はOnsen UIが画面を作る前に必要です。<code>app.js</code> の先頭で行い、後のイベント処理の中へ移しません。この指定は<strong>表示スタイルの比較</strong>であり、ブラウザをAndroidやiOSの実機に変える操作ではありません。</p>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎では、CSSを自分で書き換えると見た目が変わりました。ここではHTMLを変えず、Onsen UIがOSに合った部品の見た目を選びます。Androidで作ったツールバーとiOSで作ったナビゲーションバーには違いがありました。その違いを、共通のHTMLへライブラリが適用する仕組みがauto-stylingです。</p></div>
-<details><summary>このSTEPの全コード（照合・合流用）</summary>
-<div class="code-head">www/index.html · 全文</div>
-<pre id="code-08-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;ja&quot;&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot;&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;
-  &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src * data: gap: content: https://ssl.gstatic.com; style-src * &#x27;unsafe-inline&#x27;; script-src * &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27;&quot;&gt;
-  &lt;title&gt;好きなものノート&lt;/title&gt;
-  &lt;script src=&quot;components/loader.js&quot;&gt;&lt;/script&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;components/loader.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsenui.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsen-css-components.min.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
-  &lt;script src=&quot;https://unpkg.com/onsenui@2.12.9/js/onsenui.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;js/app.js&quot;&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;ons-page id=&quot;page_list&quot;&gt;
-      &lt;ons-toolbar&gt;
-        &lt;div class=&quot;center&quot;&gt;好きなものノート&lt;/div&gt;
-      &lt;/ons-toolbar&gt;
-
-      &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p class=&quot;app-caption&quot;&gt;わたしの好きなもの&lt;/p&gt;
-        &lt;h1 class=&quot;app-heading&quot;&gt;好きな理由を集めよう。&lt;/h1&gt;
-        &lt;p class=&quot;app-description&quot;&gt;音楽、食べ物、場所。好きなものと理由の記録。&lt;/p&gt;
-      &lt;/div&gt;
-
-      &lt;ons-list id=&quot;list_oshi&quot;&gt;
-        &lt;ons-list-item class=&quot;oshi-card&quot; tappable modifier=&quot;chevron&quot;&gt;
-          &lt;div class=&quot;center&quot;&gt;
-            &lt;span class=&quot;list-item__title oshi-name&quot;&gt;好きな音楽&lt;/span&gt;
-            &lt;span class=&quot;list-item__subtitle oshi-genre&quot;&gt;音楽&lt;/span&gt;
-          &lt;/div&gt;
-        &lt;/ons-list-item&gt;
-        &lt;ons-list-item class=&quot;oshi-card&quot; tappable modifier=&quot;chevron&quot;&gt;
-          &lt;div class=&quot;center&quot;&gt;
-            &lt;span class=&quot;list-item__title oshi-name&quot;&gt;カレー&lt;/span&gt;
-            &lt;span class=&quot;list-item__subtitle oshi-genre&quot;&gt;食べ物&lt;/span&gt;
-          &lt;/div&gt;
-        &lt;/ons-list-item&gt;
-        &lt;ons-list-item class=&quot;oshi-card&quot; tappable modifier=&quot;chevron&quot;&gt;
-          &lt;div class=&quot;center&quot;&gt;
-            &lt;span class=&quot;list-item__title oshi-name&quot;&gt;公園&lt;/span&gt;
-            &lt;span class=&quot;list-item__subtitle oshi-genre&quot;&gt;場所&lt;/span&gt;
-          &lt;/div&gt;
-        &lt;/ons-list-item&gt;
-      &lt;/ons-list&gt;
-      &lt;p id=&quot;txt_selected&quot; class=&quot;app-section app-selection&quot; aria-live=&quot;polite&quot;&gt;まだ選択していません&lt;/p&gt;
-    &lt;/ons-page&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-<div class="code-head">www/css/style.css · 全文</div>
-<pre id="code-08-style-css" tabindex="0"><code>.app-section {
-  padding: 20px 16px;
-}
-
-.app-caption {
-  margin: 0 0 12px;
-  color: #765744;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.app-heading {
-  margin: 0 0 16px;
-  font-size: 24px;
-  line-height: 1.5;
-  overflow-wrap: anywhere;
-}
-
-.app-description {
-  margin: 0;
-  color: #555555;
-  font-size: 15px;
-  line-height: 1.7;
-}
-
-.app-selection {
-  margin: 0;
-  color: #765744;
-  line-height: 1.7;
-  overflow-wrap: anywhere;
-}
-
-#list_oshi {
-  background-color: transparent;
-  background-image: none;
-}
-
-.oshi-card {
-  /* 左右の余白を足しても、カードを画面の幅に収める。 */
-  width: auto;
-  margin: 0 16px 12px;
-  border: 1px solid #d8c9bd;
-  border-radius: 12px;
-  background-color: #ffffff;
-}
-
-.oshi-card .list-item__center {
-  /* 一覧の既定罫線を外し、カードの枠で区切る。 */
-  background-image: none;
-  /* 右端の目印（＞）の分を空け、長い名前が目印と重ならないようにする。 */
-  padding-right: 30px;
-}
-
-.oshi-name,
-.oshi-genre {
-  overflow-wrap: anywhere;
-}</code></pre>
-<div class="code-head">www/js/app.js · 全文</div>
-<pre id="code-08-app-js" tabindex="0"><code>// 見た目の比較では、次の行を有効にして再読み込みする。
-// OSの指定は、Onsen UIが画面を作る前に行う。
-ons.platform.select(&quot;android&quot;);
-</code></pre>
-</details>
 <div class="check"><label><input type="checkbox" data-check="oshi-list-08"><span>同じHTMLのままiOS向けとAndroid向けの差を確認した。</span></label></div>
 
 </section>
 <section id="step-9">
 <p class="step-meta">STEP 09 · コマ2</p><h2>自動のスタイルへ戻してアレンジする</h2>
-<p><code>app.js</code> の指定行の先頭へ <code>//</code> を付け、このSTEPの全文と同じコメントに戻します。保存してプレビュー全体を再読み込みします。これで特定のOSを強制せず、実行環境に応じてスタイルが選ばれます。</p>
+<p><code>www/js/app.js</code> の3行目、<code>ons.platform.select(…);</code> の1行を、次のように置き換えます。先頭へ <code>//</code> を付けてコメントに戻します。STEP 08で <code>"ios"</code> に書き換えたままの人も、<code>"android"</code> に戻してからコメントにします。保存してプレビュー全体を再読み込みします。</p>
+<div class="code-head">www/js/app.js · 置き換え · ons.platform.select("android"); の1行</div>
+<pre id="code-09-app-js" tabindex="0"><code>// ons.platform.select(&quot;android&quot;);</code></pre>
+<p>これで特定のOSを強制せず、実行環境に応じてスタイルが選ばれます。</p>
 <p>Monacaのプレビューでも、端末を選んで見た目を比べられます。<code>app.js</code> の強制指定がコメントになっていることを確かめ、次の順に操作します。</p>
 <ol><li>Monacaのプレビューの端末選択で <code>iPhone 15</code> を選び、プレビューの <code>Reload</code> を押します。</li><li>ツールバーと一覧を確認します。</li><li>端末選択で <code>Pixel 8</code> を選び、もう一度 <code>Reload</code> を押します。同じ一覧で違いを確かめます。</li></ol><p>端末を選ぶだけでは前の表示が残ることがあるので、毎回 <code>Reload</code> まで行います。この操作はプレビューの比較であり、実機を使った確認ではありません。STEP 08のコードによる強制指定と同時には使わず、強制指定をコメントへ戻してから試します。</p>
 <p>CSSの <code>.app-caption</code> の色や、HTMLに直接書いた3件の名前を変えます。Onsen UIのクラス名はそのままにし、自分のクラスの値から試しましょう。</p>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎のJavaScriptと同じく、<code>//</code> 以降は実行されないコメントです。CSSの色を変える操作は自分で決める見た目、OSの自動選択はOnsen UIが決める見た目です。どちらによる変化なのかを、1回に1か所ずつ変えて確かめます。</p></div>
-<details><summary>このSTEPの全コード（照合・合流用）</summary>
-<div class="code-head">www/index.html · 全文</div>
-<pre id="code-09-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;ja&quot;&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot;&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;
-  &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src * data: gap: content: https://ssl.gstatic.com; style-src * &#x27;unsafe-inline&#x27;; script-src * &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27;&quot;&gt;
-  &lt;title&gt;好きなものノート&lt;/title&gt;
-  &lt;script src=&quot;components/loader.js&quot;&gt;&lt;/script&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;components/loader.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsenui.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsen-css-components.min.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
-  &lt;script src=&quot;https://unpkg.com/onsenui@2.12.9/js/onsenui.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;js/app.js&quot;&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;ons-page id=&quot;page_list&quot;&gt;
-      &lt;ons-toolbar&gt;
-        &lt;div class=&quot;center&quot;&gt;好きなものノート&lt;/div&gt;
-      &lt;/ons-toolbar&gt;
-
-      &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p class=&quot;app-caption&quot;&gt;わたしの好きなもの&lt;/p&gt;
-        &lt;h1 class=&quot;app-heading&quot;&gt;好きな理由を集めよう。&lt;/h1&gt;
-        &lt;p class=&quot;app-description&quot;&gt;音楽、食べ物、場所。好きなものと理由の記録。&lt;/p&gt;
-      &lt;/div&gt;
-
-      &lt;ons-list id=&quot;list_oshi&quot;&gt;
-        &lt;ons-list-item class=&quot;oshi-card&quot; tappable modifier=&quot;chevron&quot;&gt;
-          &lt;div class=&quot;center&quot;&gt;
-            &lt;span class=&quot;list-item__title oshi-name&quot;&gt;好きな音楽&lt;/span&gt;
-            &lt;span class=&quot;list-item__subtitle oshi-genre&quot;&gt;音楽&lt;/span&gt;
-          &lt;/div&gt;
-        &lt;/ons-list-item&gt;
-        &lt;ons-list-item class=&quot;oshi-card&quot; tappable modifier=&quot;chevron&quot;&gt;
-          &lt;div class=&quot;center&quot;&gt;
-            &lt;span class=&quot;list-item__title oshi-name&quot;&gt;カレー&lt;/span&gt;
-            &lt;span class=&quot;list-item__subtitle oshi-genre&quot;&gt;食べ物&lt;/span&gt;
-          &lt;/div&gt;
-        &lt;/ons-list-item&gt;
-        &lt;ons-list-item class=&quot;oshi-card&quot; tappable modifier=&quot;chevron&quot;&gt;
-          &lt;div class=&quot;center&quot;&gt;
-            &lt;span class=&quot;list-item__title oshi-name&quot;&gt;公園&lt;/span&gt;
-            &lt;span class=&quot;list-item__subtitle oshi-genre&quot;&gt;場所&lt;/span&gt;
-          &lt;/div&gt;
-        &lt;/ons-list-item&gt;
-      &lt;/ons-list&gt;
-      &lt;p id=&quot;txt_selected&quot; class=&quot;app-section app-selection&quot; aria-live=&quot;polite&quot;&gt;まだ選択していません&lt;/p&gt;
-    &lt;/ons-page&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-<div class="code-head">www/css/style.css · 全文</div>
-<pre id="code-09-style-css" tabindex="0"><code>.app-section {
-  padding: 20px 16px;
-}
-
-.app-caption {
-  margin: 0 0 12px;
-  color: #765744;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.app-heading {
-  margin: 0 0 16px;
-  font-size: 24px;
-  line-height: 1.5;
-  overflow-wrap: anywhere;
-}
-
-.app-description {
-  margin: 0;
-  color: #555555;
-  font-size: 15px;
-  line-height: 1.7;
-}
-
-.app-selection {
-  margin: 0;
-  color: #765744;
-  line-height: 1.7;
-  overflow-wrap: anywhere;
-}
-
-#list_oshi {
-  background-color: transparent;
-  background-image: none;
-}
-
-.oshi-card {
-  /* 左右の余白を足しても、カードを画面の幅に収める。 */
-  width: auto;
-  margin: 0 16px 12px;
-  border: 1px solid #d8c9bd;
-  border-radius: 12px;
-  background-color: #ffffff;
-}
-
-.oshi-card .list-item__center {
-  /* 一覧の既定罫線を外し、カードの枠で区切る。 */
-  background-image: none;
-  /* 右端の目印（＞）の分を空け、長い名前が目印と重ならないようにする。 */
-  padding-right: 30px;
-}
-
-.oshi-name,
-.oshi-genre {
-  overflow-wrap: anywhere;
-}</code></pre>
-<div class="code-head">www/js/app.js · 全文</div>
-<pre id="code-09-app-js" tabindex="0"><code>// 見た目の比較では、次の行を有効にして再読み込みする。
-// OSの指定は、Onsen UIが画面を作る前に行う。
-// ons.platform.select(&quot;android&quot;);
-</code></pre>
-</details>
 <div class="check"><label><input type="checkbox" data-check="oshi-list-09"><span>OSの強制指定をコメントへ戻し、文字と色のアレンジを確認した。</span></label></div>
 <div class="task"><p class="box-title">アレンジできる場所</p><p>名前・種類、冒頭の説明、<code>.app-caption</code> の色、<code>.app-section</code> の余白を変えられます。自分の好きなものが伝わる名前と種類を考えましょう。auto-stylingの違いを確かめるときは自分のCSSを固定し、OS指定だけを切り替えます。</p></div>
 </section>
 <section id="step-10">
 <p class="step-meta">STEP 10 · コマ3</p><h2>ページができた時点で処理する</h2>
-<details><summary>このコマから合流する人：開始時の全コード</summary><p>同じ <code>M01OshiList</code> を開き、各ファイルを次の内容にそろえて保存します。前のコマのアレンジを残したい人は、その文字や色を控えてから進みます。</p>
-<div class="code-head">www/index.html · 全文</div>
-<pre id="start-09-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;ja&quot;&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot;&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;
-  &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src * data: gap: content: https://ssl.gstatic.com; style-src * &#x27;unsafe-inline&#x27;; script-src * &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27;&quot;&gt;
-  &lt;title&gt;好きなものノート&lt;/title&gt;
-  &lt;script src=&quot;components/loader.js&quot;&gt;&lt;/script&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;components/loader.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsenui.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsen-css-components.min.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
-  &lt;script src=&quot;https://unpkg.com/onsenui@2.12.9/js/onsenui.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;js/app.js&quot;&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;ons-page id=&quot;page_list&quot;&gt;
-      &lt;ons-toolbar&gt;
-        &lt;div class=&quot;center&quot;&gt;好きなものノート&lt;/div&gt;
-      &lt;/ons-toolbar&gt;
-
-      &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p class=&quot;app-caption&quot;&gt;わたしの好きなもの&lt;/p&gt;
-        &lt;h1 class=&quot;app-heading&quot;&gt;好きな理由を集めよう。&lt;/h1&gt;
-        &lt;p class=&quot;app-description&quot;&gt;音楽、食べ物、場所。好きなものと理由の記録。&lt;/p&gt;
-      &lt;/div&gt;
-
-      &lt;ons-list id=&quot;list_oshi&quot;&gt;
-        &lt;ons-list-item class=&quot;oshi-card&quot; tappable modifier=&quot;chevron&quot;&gt;
-          &lt;div class=&quot;center&quot;&gt;
-            &lt;span class=&quot;list-item__title oshi-name&quot;&gt;好きな音楽&lt;/span&gt;
-            &lt;span class=&quot;list-item__subtitle oshi-genre&quot;&gt;音楽&lt;/span&gt;
-          &lt;/div&gt;
-        &lt;/ons-list-item&gt;
-        &lt;ons-list-item class=&quot;oshi-card&quot; tappable modifier=&quot;chevron&quot;&gt;
-          &lt;div class=&quot;center&quot;&gt;
-            &lt;span class=&quot;list-item__title oshi-name&quot;&gt;カレー&lt;/span&gt;
-            &lt;span class=&quot;list-item__subtitle oshi-genre&quot;&gt;食べ物&lt;/span&gt;
-          &lt;/div&gt;
-        &lt;/ons-list-item&gt;
-        &lt;ons-list-item class=&quot;oshi-card&quot; tappable modifier=&quot;chevron&quot;&gt;
-          &lt;div class=&quot;center&quot;&gt;
-            &lt;span class=&quot;list-item__title oshi-name&quot;&gt;公園&lt;/span&gt;
-            &lt;span class=&quot;list-item__subtitle oshi-genre&quot;&gt;場所&lt;/span&gt;
-          &lt;/div&gt;
-        &lt;/ons-list-item&gt;
-      &lt;/ons-list&gt;
-      &lt;p id=&quot;txt_selected&quot; class=&quot;app-section app-selection&quot; aria-live=&quot;polite&quot;&gt;まだ選択していません&lt;/p&gt;
-    &lt;/ons-page&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-<div class="code-head">www/css/style.css · 全文</div>
-<pre id="start-09-style-css" tabindex="0"><code>.app-section {
-  padding: 20px 16px;
-}
-
-.app-caption {
-  margin: 0 0 12px;
-  color: #765744;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.app-heading {
-  margin: 0 0 16px;
-  font-size: 24px;
-  line-height: 1.5;
-  overflow-wrap: anywhere;
-}
-
-.app-description {
-  margin: 0;
-  color: #555555;
-  font-size: 15px;
-  line-height: 1.7;
-}
-
-.app-selection {
-  margin: 0;
-  color: #765744;
-  line-height: 1.7;
-  overflow-wrap: anywhere;
-}
-
-#list_oshi {
-  background-color: transparent;
-  background-image: none;
-}
-
-.oshi-card {
-  /* 左右の余白を足しても、カードを画面の幅に収める。 */
-  width: auto;
-  margin: 0 16px 12px;
-  border: 1px solid #d8c9bd;
-  border-radius: 12px;
-  background-color: #ffffff;
-}
-
-.oshi-card .list-item__center {
-  /* 一覧の既定罫線を外し、カードの枠で区切る。 */
-  background-image: none;
-  /* 右端の目印（＞）の分を空け、長い名前が目印と重ならないようにする。 */
-  padding-right: 30px;
-}
-
-.oshi-name,
-.oshi-genre {
-  overflow-wrap: anywhere;
-}</code></pre>
-<div class="code-head">www/js/app.js · 全文</div>
-<pre id="start-09-app-js" tabindex="0"><code>// 見た目の比較では、次の行を有効にして再読み込みする。
-// OSの指定は、Onsen UIが画面を作る前に行う。
-// ons.platform.select(&quot;android&quot;);
-</code></pre></details><p>第3コマでは、配列に書いたデータから一覧を作り、押した名前を表示します。まず、このSTEPの <code>www/js/app.js</code> に置き換えます。HTMLとCSSは開始時のままです。</p>
-<p><code>document.addEventListener("init", function(event) { ... });</code> は、Onsen UIのページが初期化されたときに処理を行います。<code>event.target</code> は、そのとき初期化された <code>ons-page</code> です。<code>page.id</code> が <code>page_list</code> のときだけ、一覧用の処理をします。</p>
-<p>保存・再読み込みすると、一覧の下が「一覧を準備しました」になります。<code>getElementById</code> は画面に要素ができてから使う必要があります。HTMLの <code>head</code> で読む <code>app.js</code> では、先にイベントを登録し、実際の要素を使う処理を <code>init</code> の中へ置きます。</p>
-<div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎で <code>click</code> が起きたときの関数を登録したのと同じ <code>addEventListener</code> です。今回は操作の通知ではなく、Onsen UIのページ準備の通知を受け取ります。Androidでビューを用意してから部品を参照する、iOSで <code>viewDidLoad</code> からビューを設定する順序と対応します。通知の名前と対象が違うため、ページの <code>id</code> も確かめます。</p></div>
-<details><summary>このSTEPの全コード（照合・合流用）</summary>
-<div class="code-head">www/index.html · 全文</div>
-<pre id="code-10-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;ja&quot;&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot;&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;
-  &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src * data: gap: content: https://ssl.gstatic.com; style-src * &#x27;unsafe-inline&#x27;; script-src * &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27;&quot;&gt;
-  &lt;title&gt;好きなものノート&lt;/title&gt;
-  &lt;script src=&quot;components/loader.js&quot;&gt;&lt;/script&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;components/loader.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsenui.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsen-css-components.min.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
-  &lt;script src=&quot;https://unpkg.com/onsenui@2.12.9/js/onsenui.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;js/app.js&quot;&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;ons-page id=&quot;page_list&quot;&gt;
-      &lt;ons-toolbar&gt;
-        &lt;div class=&quot;center&quot;&gt;好きなものノート&lt;/div&gt;
-      &lt;/ons-toolbar&gt;
-
-      &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p class=&quot;app-caption&quot;&gt;わたしの好きなもの&lt;/p&gt;
-        &lt;h1 class=&quot;app-heading&quot;&gt;好きな理由を集めよう。&lt;/h1&gt;
-        &lt;p class=&quot;app-description&quot;&gt;音楽、食べ物、場所。好きなものと理由の記録。&lt;/p&gt;
-      &lt;/div&gt;
-
-      &lt;ons-list id=&quot;list_oshi&quot;&gt;
-        &lt;ons-list-item class=&quot;oshi-card&quot; tappable modifier=&quot;chevron&quot;&gt;
-          &lt;div class=&quot;center&quot;&gt;
-            &lt;span class=&quot;list-item__title oshi-name&quot;&gt;好きな音楽&lt;/span&gt;
-            &lt;span class=&quot;list-item__subtitle oshi-genre&quot;&gt;音楽&lt;/span&gt;
-          &lt;/div&gt;
-        &lt;/ons-list-item&gt;
-        &lt;ons-list-item class=&quot;oshi-card&quot; tappable modifier=&quot;chevron&quot;&gt;
-          &lt;div class=&quot;center&quot;&gt;
-            &lt;span class=&quot;list-item__title oshi-name&quot;&gt;カレー&lt;/span&gt;
-            &lt;span class=&quot;list-item__subtitle oshi-genre&quot;&gt;食べ物&lt;/span&gt;
-          &lt;/div&gt;
-        &lt;/ons-list-item&gt;
-        &lt;ons-list-item class=&quot;oshi-card&quot; tappable modifier=&quot;chevron&quot;&gt;
-          &lt;div class=&quot;center&quot;&gt;
-            &lt;span class=&quot;list-item__title oshi-name&quot;&gt;公園&lt;/span&gt;
-            &lt;span class=&quot;list-item__subtitle oshi-genre&quot;&gt;場所&lt;/span&gt;
-          &lt;/div&gt;
-        &lt;/ons-list-item&gt;
-      &lt;/ons-list&gt;
-      &lt;p id=&quot;txt_selected&quot; class=&quot;app-section app-selection&quot; aria-live=&quot;polite&quot;&gt;まだ選択していません&lt;/p&gt;
-    &lt;/ons-page&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-<div class="code-head">www/css/style.css · 全文</div>
-<pre id="code-10-style-css" tabindex="0"><code>.app-section {
-  padding: 20px 16px;
-}
-
-.app-caption {
-  margin: 0 0 12px;
-  color: #765744;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.app-heading {
-  margin: 0 0 16px;
-  font-size: 24px;
-  line-height: 1.5;
-  overflow-wrap: anywhere;
-}
-
-.app-description {
-  margin: 0;
-  color: #555555;
-  font-size: 15px;
-  line-height: 1.7;
-}
-
-.app-selection {
-  margin: 0;
-  color: #765744;
-  line-height: 1.7;
-  overflow-wrap: anywhere;
-}
-
-#list_oshi {
-  background-color: transparent;
-  background-image: none;
-}
-
-.oshi-card {
-  /* 左右の余白を足しても、カードを画面の幅に収める。 */
-  width: auto;
-  margin: 0 16px 12px;
-  border: 1px solid #d8c9bd;
-  border-radius: 12px;
-  background-color: #ffffff;
-}
-
-.oshi-card .list-item__center {
-  /* 一覧の既定罫線を外し、カードの枠で区切る。 */
-  background-image: none;
-  /* 右端の目印（＞）の分を空け、長い名前が目印と重ならないようにする。 */
-  padding-right: 30px;
-}
-
-.oshi-name,
-.oshi-genre {
-  overflow-wrap: anywhere;
-}</code></pre>
-<div class="code-head">www/js/app.js · 全文</div>
-<pre id="code-10-app-js" tabindex="0"><code>// 見た目の比較では、次の行を有効にして再読み込みする。
-// OSの指定は、Onsen UIが画面を作る前に行う。
-// ons.platform.select(&quot;android&quot;);
-
-// ページの要素が使えるようになってから処理する。
+<p>第3コマでは、配列に書いたデータから一覧を作り、押した名前を表示します。第2コマの終わりのコードから始めます。まず、<code>www/js/app.js</code> の3行目、<code>// ons.platform.select("android");</code> の下に、1行空けて次のコードを追加します。ファイルの末尾になります。HTMLとCSSは変えません。</p>
+<div class="code-head">www/js/app.js · 追加 · // ons.platform.select("android"); の下</div>
+<pre id="code-10-app-js" tabindex="0"><code>// ページの要素が使えるようになってから処理する。
 document.addEventListener(&quot;init&quot;, function(event) {
   const page = event.target;
 
   if (page.id === &quot;page_list&quot;) {
     document.getElementById(&quot;txt_selected&quot;).textContent = &quot;一覧を準備しました&quot;;
   }
-});
-</code></pre>
-</details>
+});</code></pre>
+<p><code>document.addEventListener("init", function(event) { ... });</code> は、Onsen UIのページが初期化されたときに処理を行います。<code>event.target</code> は、そのとき初期化された <code>ons-page</code> です。<code>page.id</code> が <code>page_list</code> のときだけ、一覧用の処理をします。</p>
+<p>保存・再読み込みすると、一覧の下が「一覧を準備しました」になります。<code>getElementById</code> は画面に要素ができてから使う必要があります。HTMLの <code>head</code> で読む <code>app.js</code> では、先にイベントを登録し、実際の要素を使う処理を <code>init</code> の中へ置きます。</p>
+<div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎で <code>click</code> が起きたときの関数を登録したのと同じ <code>addEventListener</code> です。今回は操作の通知ではなく、Onsen UIのページ準備の通知を受け取ります。Androidでビューを用意してから部品を参照する、iOSで <code>viewDidLoad</code> からビューを設定する順序と対応します。通知の名前と対象が違うため、ページの <code>id</code> も確かめます。</p></div>
 <div class="check"><label><input type="checkbox" data-check="oshi-list-10"><span><code>init</code> で一覧ページを判定し、画面の文字を変更できた。</span></label></div>
 
 </section>
 <section id="step-11">
 <p class="step-meta">STEP 11 · コマ3</p><h2>3件のデータを配列へまとめる</h2>
-<p><code>www/js/app.js</code> を全文に置き換えます。<code>oshiItems</code> は3件の配列です。1件は <code>name</code>・<code>genre</code>・<code>comment</code> を持つオブジェクトにします。配列とオブジェクトはWeb基礎の書き方です。</p>
-<table><thead><tr><th>コード</th><th>読み方</th></tr></thead><tbody><tr><td><code>oshiItems[0].name</code></td><td>0番目の名前。</td></tr><tr><td><code>oshiItems.length</code></td><td>配列にある件数。</td></tr><tr><td><code>comment</code> 内の <code>\n</code></td><td>文字列内の改行。この理由文は第4コマで表示する。</td></tr></tbody></table>
-<p>保存・再読み込みして、一覧の下に「登録件数：3」が出ることを確認します。いまはHTMLにも同じ名前があります。まだ配列から一覧を作っていないため、配列だけ変更しても一覧の名前は変わりません。次のSTEPでデータの置き場所を配列へそろえます。</p>
-<div class="note"><p class="box-title">既知の技術と比べる</p><p>JavaやSwiftでも、1件分の値をまとめたデータを配列で持ちました。JavaScriptでは <code>{ name: "…", genre: "…" }</code> のようにプロパティ名と値を書き、<code>.name</code> で参照します。Javaの配列の <code>length</code> と同じ目的で件数を読みます。ここで別の保存形式への変換は行いません。</p></div>
-<details><summary>このSTEPの全コード（照合・合流用）</summary>
-<div class="code-head">www/index.html · 全文</div>
-<pre id="code-11-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;ja&quot;&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot;&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;
-  &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src * data: gap: content: https://ssl.gstatic.com; style-src * &#x27;unsafe-inline&#x27;; script-src * &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27;&quot;&gt;
-  &lt;title&gt;好きなものノート&lt;/title&gt;
-  &lt;script src=&quot;components/loader.js&quot;&gt;&lt;/script&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;components/loader.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsenui.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsen-css-components.min.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
-  &lt;script src=&quot;https://unpkg.com/onsenui@2.12.9/js/onsenui.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;js/app.js&quot;&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;ons-page id=&quot;page_list&quot;&gt;
-      &lt;ons-toolbar&gt;
-        &lt;div class=&quot;center&quot;&gt;好きなものノート&lt;/div&gt;
-      &lt;/ons-toolbar&gt;
-
-      &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p class=&quot;app-caption&quot;&gt;わたしの好きなもの&lt;/p&gt;
-        &lt;h1 class=&quot;app-heading&quot;&gt;好きな理由を集めよう。&lt;/h1&gt;
-        &lt;p class=&quot;app-description&quot;&gt;音楽、食べ物、場所。好きなものと理由の記録。&lt;/p&gt;
-      &lt;/div&gt;
-
-      &lt;ons-list id=&quot;list_oshi&quot;&gt;
-        &lt;ons-list-item class=&quot;oshi-card&quot; tappable modifier=&quot;chevron&quot;&gt;
-          &lt;div class=&quot;center&quot;&gt;
-            &lt;span class=&quot;list-item__title oshi-name&quot;&gt;好きな音楽&lt;/span&gt;
-            &lt;span class=&quot;list-item__subtitle oshi-genre&quot;&gt;音楽&lt;/span&gt;
-          &lt;/div&gt;
-        &lt;/ons-list-item&gt;
-        &lt;ons-list-item class=&quot;oshi-card&quot; tappable modifier=&quot;chevron&quot;&gt;
-          &lt;div class=&quot;center&quot;&gt;
-            &lt;span class=&quot;list-item__title oshi-name&quot;&gt;カレー&lt;/span&gt;
-            &lt;span class=&quot;list-item__subtitle oshi-genre&quot;&gt;食べ物&lt;/span&gt;
-          &lt;/div&gt;
-        &lt;/ons-list-item&gt;
-        &lt;ons-list-item class=&quot;oshi-card&quot; tappable modifier=&quot;chevron&quot;&gt;
-          &lt;div class=&quot;center&quot;&gt;
-            &lt;span class=&quot;list-item__title oshi-name&quot;&gt;公園&lt;/span&gt;
-            &lt;span class=&quot;list-item__subtitle oshi-genre&quot;&gt;場所&lt;/span&gt;
-          &lt;/div&gt;
-        &lt;/ons-list-item&gt;
-      &lt;/ons-list&gt;
-      &lt;p id=&quot;txt_selected&quot; class=&quot;app-section app-selection&quot; aria-live=&quot;polite&quot;&gt;まだ選択していません&lt;/p&gt;
-    &lt;/ons-page&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-<div class="code-head">www/css/style.css · 全文</div>
-<pre id="code-11-style-css" tabindex="0"><code>.app-section {
-  padding: 20px 16px;
-}
-
-.app-caption {
-  margin: 0 0 12px;
-  color: #765744;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.app-heading {
-  margin: 0 0 16px;
-  font-size: 24px;
-  line-height: 1.5;
-  overflow-wrap: anywhere;
-}
-
-.app-description {
-  margin: 0;
-  color: #555555;
-  font-size: 15px;
-  line-height: 1.7;
-}
-
-.app-selection {
-  margin: 0;
-  color: #765744;
-  line-height: 1.7;
-  overflow-wrap: anywhere;
-}
-
-#list_oshi {
-  background-color: transparent;
-  background-image: none;
-}
-
-.oshi-card {
-  /* 左右の余白を足しても、カードを画面の幅に収める。 */
-  width: auto;
-  margin: 0 16px 12px;
-  border: 1px solid #d8c9bd;
-  border-radius: 12px;
-  background-color: #ffffff;
-}
-
-.oshi-card .list-item__center {
-  /* 一覧の既定罫線を外し、カードの枠で区切る。 */
-  background-image: none;
-  /* 右端の目印（＞）の分を空け、長い名前が目印と重ならないようにする。 */
-  padding-right: 30px;
-}
-
-.oshi-name,
-.oshi-genre {
-  overflow-wrap: anywhere;
-}</code></pre>
-<div class="code-head">www/js/app.js · 全文</div>
-<pre id="code-11-app-js" tabindex="0"><code>// 見た目の比較では、次の行を有効にして再読み込みする。
-// OSの指定は、Onsen UIが画面を作る前に行う。
-// ons.platform.select(&quot;android&quot;);
-
-let oshiItems = [
+<p><code>www/js/app.js</code> を2か所変えます。HTMLとCSSは変えません。まず、3行目の <code>// ons.platform.select("android");</code> と、STEP 10で追加した <code>// ページの要素が使えるようになってから処理する。</code> の間に、次のコードを追加します。前後は1行ずつ空けます。</p>
+<div class="code-head">www/js/app.js · 追加 · // ons.platform.select("android"); の下</div>
+<pre id="code-11-app-js-items" tabindex="0"><code>let oshiItems = [
   {
     name: &quot;好きな音楽&quot;,
     genre: &quot;音楽&quot;,
@@ -1392,152 +400,29 @@ let oshiItems = [
     genre: &quot;場所&quot;,
     comment: &quot;ゆっくり歩いて、気分を変えられます。\n季節によって景色が変わるところも好きです。&quot;
   }
-];
-
-// ページの要素が使えるようになってから処理する。
-document.addEventListener(&quot;init&quot;, function(event) {
-  const page = event.target;
-
-  if (page.id === &quot;page_list&quot;) {
-    document.getElementById(&quot;txt_selected&quot;).textContent = &quot;登録件数：&quot; + oshiItems.length;
-  }
-});
-</code></pre>
-</details>
+];</code></pre>
+<p>次に、<code>init</code> の中で <code>txt_selected</code> に「一覧を準備しました」を入れている1行を、次の1行に置き換えます。</p>
+<div class="code-head">www/js/app.js · 置き換え · txt_selected に文字を入れる1行</div>
+<pre id="code-11-app-js-count" tabindex="0"><code>    document.getElementById(&quot;txt_selected&quot;).textContent = &quot;登録件数：&quot; + oshiItems.length;</code></pre>
+<p><code>oshiItems</code> は3件の配列です。1件は <code>name</code>・<code>genre</code>・<code>comment</code> を持つオブジェクトにします。配列とオブジェクトはWeb基礎の書き方です。</p>
+<table><thead><tr><th>コード</th><th>読み方</th></tr></thead><tbody><tr><td><code>oshiItems[0].name</code></td><td>0番目の名前。</td></tr><tr><td><code>oshiItems.length</code></td><td>配列にある件数。</td></tr><tr><td><code>comment</code> 内の <code>\n</code></td><td>文字列内の改行。この理由文は第4コマで表示する。</td></tr></tbody></table>
+<p>保存・再読み込みして、一覧の下に「登録件数：3」が出ることを確認します。いまはHTMLにも同じ名前があります。まだ配列から一覧を作っていないため、配列だけ変更しても一覧の名前は変わりません。次のSTEPでデータの置き場所を配列へそろえます。</p>
+<div class="note"><p class="box-title">既知の技術と比べる</p><p>JavaやSwiftでも、1件分の値をまとめたデータを配列で持ちました。JavaScriptでは <code>{ name: "…", genre: "…" }</code> のようにプロパティ名と値を書き、<code>.name</code> で参照します。Javaの配列の <code>length</code> と同じ目的で件数を読みます。ここで別の保存形式への変換は行いません。</p></div>
 <div class="check"><label><input type="checkbox" data-check="oshi-list-11"><span>配列の件数を画面へ表示し、1件の <code>name</code>・<code>genre</code>・<code>comment</code> を読み取れた。</span></label></div>
 
 </section>
 <section id="step-12">
 <p class="step-meta">STEP 12 · コマ3</p><h2>配列から行を作り、文字を入れる</h2>
-<p>このSTEPのHTMLとJavaScriptを全文に置き換えます。CSSは変わりません。HTMLの <code>ons-list</code> は空になり、JavaScriptの <code>renderOshiList</code> が一覧を組み立てます。</p>
-<ol><li><code>createOshiRowHtml(index)</code> を読みます。カード用の <code>class="oshi-card"</code> を含む1行分のタグを文字列で返し、番号を足して <code>item_oshi_0</code>・<code>txt_name_0</code> のように重複しないidを作ります。</li><li>1回目の <code>for</code> で、行のHTMLを <code>html</code> にまとめます。ループ後に1回だけ <code>listOshi.innerHTML = html;</code> として全行を置きます。</li><li>2回目の <code>for</code> で、配置した各行の名前・種類を <code>textContent</code> へ代入します。</li><li>保存・再読み込みして3件の表示を確認し、配列の1件目の名前を一時的に <code>&lt;好きなもの&gt;</code> に変えます。山かっこを含む文字がそのまま表示されたら、元へ戻します。</li></ol>
-<p>タグを作る文字列には自分で決めた固定の構造と番号だけを入れます。名前を <code>innerHTML</code> の文字列へ混ぜません。データを文字として表示する場所には <code>textContent</code> を使います。</p>
-<div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎の <code>for</code>、文字列の <code>+</code>、関数の戻り値を組み合わせます。Androidの <code>TextView.setText</code> やiOSの <code>UILabel.text</code> と同じように、文字は文字用のプロパティへ渡します。<code>innerHTML</code> はタグとして解釈されるので役割が異なります。行の構造とデータの表示を分ける理由がここにあります。</p></div>
-<details><summary>このSTEPの全コード（照合・合流用）</summary>
-<div class="code-head">www/index.html · 全文</div>
-<pre id="code-12-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;ja&quot;&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot;&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;
-  &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src * data: gap: content: https://ssl.gstatic.com; style-src * &#x27;unsafe-inline&#x27;; script-src * &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27;&quot;&gt;
-  &lt;title&gt;好きなものノート&lt;/title&gt;
-  &lt;script src=&quot;components/loader.js&quot;&gt;&lt;/script&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;components/loader.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsenui.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsen-css-components.min.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
-  &lt;script src=&quot;https://unpkg.com/onsenui@2.12.9/js/onsenui.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;js/app.js&quot;&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;ons-page id=&quot;page_list&quot;&gt;
-      &lt;ons-toolbar&gt;
-        &lt;div class=&quot;center&quot;&gt;好きなものノート&lt;/div&gt;
-      &lt;/ons-toolbar&gt;
-
-      &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p class=&quot;app-caption&quot;&gt;わたしの好きなもの&lt;/p&gt;
-        &lt;h1 class=&quot;app-heading&quot;&gt;好きな理由を集めよう。&lt;/h1&gt;
-        &lt;p class=&quot;app-description&quot;&gt;音楽、食べ物、場所。好きなものと理由の記録。&lt;/p&gt;
-      &lt;/div&gt;
-
-      &lt;ons-list id=&quot;list_oshi&quot;&gt;&lt;/ons-list&gt;
-      &lt;p id=&quot;txt_selected&quot; class=&quot;app-section app-selection&quot; aria-live=&quot;polite&quot;&gt;まだ選択していません&lt;/p&gt;
-    &lt;/ons-page&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-<div class="code-head">www/css/style.css · 全文</div>
-<pre id="code-12-style-css" tabindex="0"><code>.app-section {
-  padding: 20px 16px;
-}
-
-.app-caption {
-  margin: 0 0 12px;
-  color: #765744;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.app-heading {
-  margin: 0 0 16px;
-  font-size: 24px;
-  line-height: 1.5;
-  overflow-wrap: anywhere;
-}
-
-.app-description {
-  margin: 0;
-  color: #555555;
-  font-size: 15px;
-  line-height: 1.7;
-}
-
-.app-selection {
-  margin: 0;
-  color: #765744;
-  line-height: 1.7;
-  overflow-wrap: anywhere;
-}
-
-#list_oshi {
-  background-color: transparent;
-  background-image: none;
-}
-
-.oshi-card {
-  /* 左右の余白を足しても、カードを画面の幅に収める。 */
-  width: auto;
-  margin: 0 16px 12px;
-  border: 1px solid #d8c9bd;
-  border-radius: 12px;
-  background-color: #ffffff;
-}
-
-.oshi-card .list-item__center {
-  /* 一覧の既定罫線を外し、カードの枠で区切る。 */
-  background-image: none;
-  /* 右端の目印（＞）の分を空け、長い名前が目印と重ならないようにする。 */
-  padding-right: 30px;
-}
-
-.oshi-name,
-.oshi-genre {
-  overflow-wrap: anywhere;
-}</code></pre>
-<div class="code-head">www/js/app.js · 全文</div>
-<pre id="code-12-app-js" tabindex="0"><code>// 見た目の比較では、次の行を有効にして再読み込みする。
-// OSの指定は、Onsen UIが画面を作る前に行う。
-// ons.platform.select(&quot;android&quot;);
-
-let oshiItems = [
-  {
-    name: &quot;好きな音楽&quot;,
-    genre: &quot;音楽&quot;,
-    comment: &quot;通学中に聴くと、元気になります。\n好きな曲を何度も聴いています。&quot;
-  },
-  {
-    name: &quot;カレー&quot;,
-    genre: &quot;食べ物&quot;,
-    comment: &quot;自分の好きな辛さを選べるところが好きです。\nお店ごとの味の違いも楽しめます。&quot;
-  },
-  {
-    name: &quot;公園&quot;,
-    genre: &quot;場所&quot;,
-    comment: &quot;ゆっくり歩いて、気分を変えられます。\n季節によって景色が変わるところも好きです。&quot;
-  }
-];
-
-// ページの要素が使えるようになってから処理する。
-document.addEventListener(&quot;init&quot;, function(event) {
-  const page = event.target;
-
-  if (page.id === &quot;page_list&quot;) {
-    renderOshiList();
-  }
-});
-
-function createOshiRowHtml(index) {
+<p>このSTEPでは、HTMLとJavaScriptを書き換えます。CSSは変えません。HTMLの <code>ons-list</code> は空になり、JavaScriptの <code>renderOshiList</code> が一覧を組み立てます。</p>
+<p><code>www/index.html</code> では、<code>&lt;ons-list id="list_oshi"&gt;</code> の行から <code>&lt;/ons-list&gt;</code> の行までを、次の1行に置き換えます。中の3個の <code>ons-list-item</code> は残しません。STEP 09で名前や種類をアレンジした人は、その文字を控えておき、STEP 14で配列に書きます。</p>
+<div class="code-head">www/index.html · 置き換え · &lt;ons-list id="list_oshi"&gt; から &lt;/ons-list&gt; まで</div>
+<pre id="code-12-index-html" tabindex="0"><code>      &lt;ons-list id=&quot;list_oshi&quot;&gt;&lt;/ons-list&gt;</code></pre>
+<p><code>www/js/app.js</code> では、<code>init</code> の中の「登録件数：」を入れている1行を、<code>renderOshiList</code> を呼ぶ1行に置き換えます。</p>
+<div class="code-head">www/js/app.js · 置き換え · 「登録件数：」の1行</div>
+<pre id="code-12-app-js-call" tabindex="0"><code>    renderOshiList();</code></pre>
+<p>続けて、ファイルの末尾、<code>init</code> の処理を閉じる <code>});</code> の下に、1行空けて次の2つの関数を追加します。</p>
+<div class="code-head">www/js/app.js · 追加 · ファイルの末尾</div>
+<pre id="code-12-app-js-render" tabindex="0"><code>function createOshiRowHtml(index) {
   return &#x27;&lt;ons-list-item id=&quot;item_oshi_&#x27; + index +
     &#x27;&quot; class=&quot;oshi-card&quot; tappable modifier=&quot;chevron&quot;&gt;&#x27; +
     &#x27;&lt;div class=&quot;center&quot;&gt;&#x27; +
@@ -1566,740 +451,65 @@ function renderOshiList() {
     document.getElementById(&quot;txt_genre_&quot; + i).textContent = oshiItems[i].genre;
 
   }
-}
-</code></pre>
-</details>
+}</code></pre>
+<ol><li><code>createOshiRowHtml(index)</code> を読みます。カード用の <code>class="oshi-card"</code> を含む1行分のタグを文字列で返し、番号を足して <code>item_oshi_0</code>・<code>txt_name_0</code> のように重複しないidを作ります。</li><li>1回目の <code>for</code> で、行のHTMLを <code>html</code> にまとめます。ループ後に1回だけ <code>listOshi.innerHTML = html;</code> として全行を置きます。</li><li>2回目の <code>for</code> で、配置した各行の名前・種類を <code>textContent</code> へ代入します。</li><li>保存・再読み込みして3件の表示を確認し、配列の1件目の名前を一時的に <code>&lt;好きなもの&gt;</code> に変えます。山かっこを含む文字がそのまま表示されたら、元へ戻します。</li></ol>
+<p>タグを作る文字列には自分で決めた固定の構造と番号だけを入れます。名前を <code>innerHTML</code> の文字列へ混ぜません。データを文字として表示する場所には <code>textContent</code> を使います。</p>
+<div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎の <code>for</code>、文字列の <code>+</code>、関数の戻り値を組み合わせます。Androidの <code>TextView.setText</code> やiOSの <code>UILabel.text</code> と同じように、文字は文字用のプロパティへ渡します。<code>innerHTML</code> はタグとして解釈されるので役割が異なります。行の構造とデータの表示を分ける理由がここにあります。</p></div>
 <div class="check"><label><input type="checkbox" data-check="oshi-list-12"><span>配列の3件から一覧ができ、山かっこを含む名前も文字として表示された。</span></label></div>
 
 </section>
 <section id="step-13">
 <p class="step-meta">STEP 13 · コマ3</p><h2>押した行の名前を表示する</h2>
-<p><code>www/js/app.js</code> を全文に置き換えます。2回目の <code>for</code> の末尾へ、各行の <code>click</code> イベントが増えました。押された行に対応する <code>oshiItems[i]</code> を、<code>selectOshi</code> へ渡します。</p>
+<p><code>www/js/app.js</code> を2か所変えます。HTMLとCSSは変えません。<code>renderOshiList</code> の2回目の <code>for</code> の中では、<code>txt_genre_</code> の行の下が空行になっています。その空行の下、<code>for</code> を閉じる <code>}</code> の上に、各行の <code>click</code> イベントを追加します。押された行に対応する <code>oshiItems[i]</code> を、<code>selectOshi</code> へ渡します。</p>
+<div class="code-head">www/js/app.js · 追加 · 2回目の for の中、空行の下</div>
+<pre id="code-13-app-js-click" tabindex="0"><code>    const itemOshi = document.getElementById(&quot;item_oshi_&quot; + i);
+    itemOshi.addEventListener(&quot;click&quot;, function() {
+      selectOshi(oshiItems[i]);
+    });</code></pre>
+<p>次に、ファイルの末尾、<code>renderOshiList</code> を閉じる <code>}</code> の下に、1行空けて <code>selectOshi</code> を追加します。</p>
+<div class="code-head">www/js/app.js · 追加 · ファイルの末尾</div>
+<pre id="code-13-app-js-select" tabindex="0"><code>function selectOshi(oshi) {
+  document.getElementById(&quot;txt_selected&quot;).textContent = &quot;選択中：&quot; + oshi.name;
+}</code></pre>
 <p><code>for (let i = 0; ...)</code> の <code>let</code> により、登録した関数はその回の番号を使えます。3つの行に同じ0番のデータを渡さず、各回の <code>i</code> で選ぶ点を確認します。</p>
 <p>保存・再読み込みして、3件を順に1回ずつ押します。一覧の下が「選択中：押した名前」に変われば成功です。画面遷移はまだありません。文字だけを変えられることを先に確かめます。</p>
 <p>イベントを付けるのは <code>innerHTML = html</code> の後です。行を置き直すと前の行に登録したイベントも失われるため、全行の配置を終えてから登録します。</p>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎の <code>btn.addEventListener("click", function() { ... });</code> と同じです。AndroidのクリックリスナーやiOSのボタンのアクションのように、押されたときに行う処理を登録します。今回は1個のボタンではなく、番号の違う各行へ同じ形の処理を登録し、その行のデータを引数で渡します。</p></div>
-<details><summary>このSTEPの全コード（照合・合流用）</summary>
-<div class="code-head">www/index.html · 全文</div>
-<pre id="code-13-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;ja&quot;&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot;&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;
-  &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src * data: gap: content: https://ssl.gstatic.com; style-src * &#x27;unsafe-inline&#x27;; script-src * &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27;&quot;&gt;
-  &lt;title&gt;好きなものノート&lt;/title&gt;
-  &lt;script src=&quot;components/loader.js&quot;&gt;&lt;/script&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;components/loader.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsenui.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsen-css-components.min.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
-  &lt;script src=&quot;https://unpkg.com/onsenui@2.12.9/js/onsenui.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;js/app.js&quot;&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;ons-page id=&quot;page_list&quot;&gt;
-      &lt;ons-toolbar&gt;
-        &lt;div class=&quot;center&quot;&gt;好きなものノート&lt;/div&gt;
-      &lt;/ons-toolbar&gt;
-
-      &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p class=&quot;app-caption&quot;&gt;わたしの好きなもの&lt;/p&gt;
-        &lt;h1 class=&quot;app-heading&quot;&gt;好きな理由を集めよう。&lt;/h1&gt;
-        &lt;p class=&quot;app-description&quot;&gt;音楽、食べ物、場所。好きなものと理由の記録。&lt;/p&gt;
-      &lt;/div&gt;
-
-      &lt;ons-list id=&quot;list_oshi&quot;&gt;&lt;/ons-list&gt;
-      &lt;p id=&quot;txt_selected&quot; class=&quot;app-section app-selection&quot; aria-live=&quot;polite&quot;&gt;まだ選択していません&lt;/p&gt;
-    &lt;/ons-page&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-<div class="code-head">www/css/style.css · 全文</div>
-<pre id="code-13-style-css" tabindex="0"><code>.app-section {
-  padding: 20px 16px;
-}
-
-.app-caption {
-  margin: 0 0 12px;
-  color: #765744;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.app-heading {
-  margin: 0 0 16px;
-  font-size: 24px;
-  line-height: 1.5;
-  overflow-wrap: anywhere;
-}
-
-.app-description {
-  margin: 0;
-  color: #555555;
-  font-size: 15px;
-  line-height: 1.7;
-}
-
-.app-selection {
-  margin: 0;
-  color: #765744;
-  line-height: 1.7;
-  overflow-wrap: anywhere;
-}
-
-#list_oshi {
-  background-color: transparent;
-  background-image: none;
-}
-
-.oshi-card {
-  /* 左右の余白を足しても、カードを画面の幅に収める。 */
-  width: auto;
-  margin: 0 16px 12px;
-  border: 1px solid #d8c9bd;
-  border-radius: 12px;
-  background-color: #ffffff;
-}
-
-.oshi-card .list-item__center {
-  /* 一覧の既定罫線を外し、カードの枠で区切る。 */
-  background-image: none;
-  /* 右端の目印（＞）の分を空け、長い名前が目印と重ならないようにする。 */
-  padding-right: 30px;
-}
-
-.oshi-name,
-.oshi-genre {
-  overflow-wrap: anywhere;
-}</code></pre>
-<div class="code-head">www/js/app.js · 全文</div>
-<pre id="code-13-app-js" tabindex="0"><code>// 見た目の比較では、次の行を有効にして再読み込みする。
-// OSの指定は、Onsen UIが画面を作る前に行う。
-// ons.platform.select(&quot;android&quot;);
-
-let oshiItems = [
-  {
-    name: &quot;好きな音楽&quot;,
-    genre: &quot;音楽&quot;,
-    comment: &quot;通学中に聴くと、元気になります。\n好きな曲を何度も聴いています。&quot;
-  },
-  {
-    name: &quot;カレー&quot;,
-    genre: &quot;食べ物&quot;,
-    comment: &quot;自分の好きな辛さを選べるところが好きです。\nお店ごとの味の違いも楽しめます。&quot;
-  },
-  {
-    name: &quot;公園&quot;,
-    genre: &quot;場所&quot;,
-    comment: &quot;ゆっくり歩いて、気分を変えられます。\n季節によって景色が変わるところも好きです。&quot;
-  }
-];
-
-// ページの要素が使えるようになってから処理する。
-document.addEventListener(&quot;init&quot;, function(event) {
-  const page = event.target;
-
-  if (page.id === &quot;page_list&quot;) {
-    renderOshiList();
-  }
-});
-
-function createOshiRowHtml(index) {
-  return &#x27;&lt;ons-list-item id=&quot;item_oshi_&#x27; + index +
-    &#x27;&quot; class=&quot;oshi-card&quot; tappable modifier=&quot;chevron&quot;&gt;&#x27; +
-    &#x27;&lt;div class=&quot;center&quot;&gt;&#x27; +
-    &#x27;&lt;span class=&quot;list-item__title oshi-name&quot; id=&quot;txt_name_&#x27; +
-    index + &#x27;&quot;&gt;&lt;/span&gt;&#x27; +
-    &#x27;&lt;span class=&quot;list-item__subtitle oshi-genre&quot; id=&quot;txt_genre_&#x27; +
-    index + &#x27;&quot;&gt;&lt;/span&gt;&#x27; +
-    &#x27;&lt;/div&gt;&#x27; +
-    &#x27;&lt;/ons-list-item&gt;&#x27;;
-}
-
-function renderOshiList() {
-  const listOshi = document.getElementById(&quot;list_oshi&quot;);
-  let html = &quot;&quot;;
-
-  for (let i = 0; i &lt; oshiItems.length; i++) {
-    html += createOshiRowHtml(i);
-  }
-
-  // HTMLを作り直すとイベントも消えるため、全行を置いてから登録する。
-  listOshi.innerHTML = html;
-
-  for (let i = 0; i &lt; oshiItems.length; i++) {
-    // データに含まれる「&lt;」などを、HTMLではなく文字として表示する。
-    document.getElementById(&quot;txt_name_&quot; + i).textContent = oshiItems[i].name;
-    document.getElementById(&quot;txt_genre_&quot; + i).textContent = oshiItems[i].genre;
-
-    const itemOshi = document.getElementById(&quot;item_oshi_&quot; + i);
-    itemOshi.addEventListener(&quot;click&quot;, function() {
-      selectOshi(oshiItems[i]);
-    });
-  }
-}
-
-function selectOshi(oshi) {
-  document.getElementById(&quot;txt_selected&quot;).textContent = &quot;選択中：&quot; + oshi.name;
-}</code></pre>
-</details>
 <div class="check"><label><input type="checkbox" data-check="oshi-list-13"><span>どの行を押しても、その行の名前が選択中として表示された。</span></label></div>
 
 </section>
 <section id="step-14">
 <p class="step-meta">STEP 14 · コマ3</p><h2>データと表示の役割を確かめる</h2>
-<p>第3コマの基準コードです。HTMLは一覧を置く場所、CSSは見た目、JavaScriptの配列は内容、関数は行の作成と選択を担当しています。</p>
+<p>コードは変えません。STEP 13まで書いたコードが、第3コマの基準です。HTMLは一覧を置く場所、CSSは見た目、JavaScriptの配列は内容、関数は行の作成と選択を担当しています。</p>
 <ol><li>配列の2件目の名前と種類を書き換え、再読み込みします。一覧と選択中の両方へ同じ変更が出ることを確認します。</li><li>1件を複製して末尾へ加え、件数が4件になることを試します。オブジェクトの間のカンマに注意します。確認後は3件へ戻しても、自分の内容を残しても構いません。</li><li>行を押した後でプレビューを再読み込みします。「まだ選択していません」へ戻ることを確認します。</li></ol>
 <p>ソースに書いた配列は残りますが、今選んでいる項目は再読み込みでリセットされます。この単元には選択結果や入力内容の保存機能はありません。</p>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>Java・Swiftの配列と同じく、件数はデータの数で決まります。HTMLを4行へ手作業で増やさず、<code>oshiItems.length</code> の回数だけ作るため、配列の変更が一覧へ反映されます。実行中の変数と保存済みのソースが別である点も、これまで作ったアプリと同じです。</p></div>
-<details><summary>このSTEPの全コード（照合・合流用）</summary>
-<div class="code-head">www/index.html · 全文</div>
-<pre id="code-14-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;ja&quot;&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot;&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;
-  &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src * data: gap: content: https://ssl.gstatic.com; style-src * &#x27;unsafe-inline&#x27;; script-src * &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27;&quot;&gt;
-  &lt;title&gt;好きなものノート&lt;/title&gt;
-  &lt;script src=&quot;components/loader.js&quot;&gt;&lt;/script&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;components/loader.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsenui.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsen-css-components.min.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
-  &lt;script src=&quot;https://unpkg.com/onsenui@2.12.9/js/onsenui.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;js/app.js&quot;&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;ons-page id=&quot;page_list&quot;&gt;
-      &lt;ons-toolbar&gt;
-        &lt;div class=&quot;center&quot;&gt;好きなものノート&lt;/div&gt;
-      &lt;/ons-toolbar&gt;
-
-      &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p class=&quot;app-caption&quot;&gt;わたしの好きなもの&lt;/p&gt;
-        &lt;h1 class=&quot;app-heading&quot;&gt;好きな理由を集めよう。&lt;/h1&gt;
-        &lt;p class=&quot;app-description&quot;&gt;音楽、食べ物、場所。好きなものと理由の記録。&lt;/p&gt;
-      &lt;/div&gt;
-
-      &lt;ons-list id=&quot;list_oshi&quot;&gt;&lt;/ons-list&gt;
-      &lt;p id=&quot;txt_selected&quot; class=&quot;app-section app-selection&quot; aria-live=&quot;polite&quot;&gt;まだ選択していません&lt;/p&gt;
-    &lt;/ons-page&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-<div class="code-head">www/css/style.css · 全文</div>
-<pre id="code-14-style-css" tabindex="0"><code>.app-section {
-  padding: 20px 16px;
-}
-
-.app-caption {
-  margin: 0 0 12px;
-  color: #765744;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.app-heading {
-  margin: 0 0 16px;
-  font-size: 24px;
-  line-height: 1.5;
-  overflow-wrap: anywhere;
-}
-
-.app-description {
-  margin: 0;
-  color: #555555;
-  font-size: 15px;
-  line-height: 1.7;
-}
-
-.app-selection {
-  margin: 0;
-  color: #765744;
-  line-height: 1.7;
-  overflow-wrap: anywhere;
-}
-
-#list_oshi {
-  background-color: transparent;
-  background-image: none;
-}
-
-.oshi-card {
-  /* 左右の余白を足しても、カードを画面の幅に収める。 */
-  width: auto;
-  margin: 0 16px 12px;
-  border: 1px solid #d8c9bd;
-  border-radius: 12px;
-  background-color: #ffffff;
-}
-
-.oshi-card .list-item__center {
-  /* 一覧の既定罫線を外し、カードの枠で区切る。 */
-  background-image: none;
-  /* 右端の目印（＞）の分を空け、長い名前が目印と重ならないようにする。 */
-  padding-right: 30px;
-}
-
-.oshi-name,
-.oshi-genre {
-  overflow-wrap: anywhere;
-}</code></pre>
-<div class="code-head">www/js/app.js · 全文</div>
-<pre id="code-14-app-js" tabindex="0"><code>// 見た目の比較では、次の行を有効にして再読み込みする。
-// OSの指定は、Onsen UIが画面を作る前に行う。
-// ons.platform.select(&quot;android&quot;);
-
-let oshiItems = [
-  {
-    name: &quot;好きな音楽&quot;,
-    genre: &quot;音楽&quot;,
-    comment: &quot;通学中に聴くと、元気になります。\n好きな曲を何度も聴いています。&quot;
-  },
-  {
-    name: &quot;カレー&quot;,
-    genre: &quot;食べ物&quot;,
-    comment: &quot;自分の好きな辛さを選べるところが好きです。\nお店ごとの味の違いも楽しめます。&quot;
-  },
-  {
-    name: &quot;公園&quot;,
-    genre: &quot;場所&quot;,
-    comment: &quot;ゆっくり歩いて、気分を変えられます。\n季節によって景色が変わるところも好きです。&quot;
-  }
-];
-
-// ページの要素が使えるようになってから処理する。
-document.addEventListener(&quot;init&quot;, function(event) {
-  const page = event.target;
-
-  if (page.id === &quot;page_list&quot;) {
-    renderOshiList();
-  }
-});
-
-function createOshiRowHtml(index) {
-  return &#x27;&lt;ons-list-item id=&quot;item_oshi_&#x27; + index +
-    &#x27;&quot; class=&quot;oshi-card&quot; tappable modifier=&quot;chevron&quot;&gt;&#x27; +
-    &#x27;&lt;div class=&quot;center&quot;&gt;&#x27; +
-    &#x27;&lt;span class=&quot;list-item__title oshi-name&quot; id=&quot;txt_name_&#x27; +
-    index + &#x27;&quot;&gt;&lt;/span&gt;&#x27; +
-    &#x27;&lt;span class=&quot;list-item__subtitle oshi-genre&quot; id=&quot;txt_genre_&#x27; +
-    index + &#x27;&quot;&gt;&lt;/span&gt;&#x27; +
-    &#x27;&lt;/div&gt;&#x27; +
-    &#x27;&lt;/ons-list-item&gt;&#x27;;
-}
-
-function renderOshiList() {
-  const listOshi = document.getElementById(&quot;list_oshi&quot;);
-  let html = &quot;&quot;;
-
-  for (let i = 0; i &lt; oshiItems.length; i++) {
-    html += createOshiRowHtml(i);
-  }
-
-  // HTMLを作り直すとイベントも消えるため、全行を置いてから登録する。
-  listOshi.innerHTML = html;
-
-  for (let i = 0; i &lt; oshiItems.length; i++) {
-    // データに含まれる「&lt;」などを、HTMLではなく文字として表示する。
-    document.getElementById(&quot;txt_name_&quot; + i).textContent = oshiItems[i].name;
-    document.getElementById(&quot;txt_genre_&quot; + i).textContent = oshiItems[i].genre;
-
-    const itemOshi = document.getElementById(&quot;item_oshi_&quot; + i);
-    itemOshi.addEventListener(&quot;click&quot;, function() {
-      selectOshi(oshiItems[i]);
-    });
-  }
-}
-
-function selectOshi(oshi) {
-  document.getElementById(&quot;txt_selected&quot;).textContent = &quot;選択中：&quot; + oshi.name;
-}</code></pre>
-</details>
 <div class="check"><label><input type="checkbox" data-check="oshi-list-14"><span>配列の変更が一覧と選択に反映され、再読み込みで選択が戻ることを確認した。</span></label></div>
 <div class="task"><p class="box-title">アレンジできる場所</p><p><code>oshiItems</code> の名前・種類・件数、選択中の接頭辞、文字色を変えられます。自分の好きなものと、その理由を配列へ自分の言葉で書きましょう。長い名前や山かっこを含む名前を試し、画面幅を狭くしても内容を読めるか確かめましょう。</p></div>
 </section>
 <section id="step-15">
 <p class="step-meta">STEP 15 · コマ4</p><h2>一覧をnavigatorが管理するページにする</h2>
-<details><summary>このコマから合流する人：開始時の全コード</summary><p>同じ <code>M01OshiList</code> を開き、各ファイルを次の内容にそろえて保存します。前のコマのアレンジを残したい人は、その文字や色を控えてから進みます。</p>
-<div class="code-head">www/index.html · 全文</div>
-<pre id="start-14-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;ja&quot;&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot;&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;
-  &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src * data: gap: content: https://ssl.gstatic.com; style-src * &#x27;unsafe-inline&#x27;; script-src * &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27;&quot;&gt;
-  &lt;title&gt;好きなものノート&lt;/title&gt;
-  &lt;script src=&quot;components/loader.js&quot;&gt;&lt;/script&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;components/loader.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsenui.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsen-css-components.min.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
-  &lt;script src=&quot;https://unpkg.com/onsenui@2.12.9/js/onsenui.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;js/app.js&quot;&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;ons-page id=&quot;page_list&quot;&gt;
-      &lt;ons-toolbar&gt;
-        &lt;div class=&quot;center&quot;&gt;好きなものノート&lt;/div&gt;
-      &lt;/ons-toolbar&gt;
+<p>第4コマでは一覧から詳細を開き、戻れるようにします。第3コマの終わりのコードから始めます。このSTEPでは <code>www/index.html</code> だけを変えます。CSSとJavaScriptは変えません。</p>
+<p>まず、<code>&lt;body&gt;</code> の下、<code>&lt;ons-page id="page_list"&gt;</code> の上に追加します。</p>
+<div class="code-head">www/index.html · 追加 · &lt;body&gt; の下</div>
+<pre id="code-15-index-html-open" tabindex="0"><code>  &lt;ons-navigator id=&quot;nav_app&quot; page=&quot;list.html&quot;&gt;&lt;/ons-navigator&gt;
 
-      &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p class=&quot;app-caption&quot;&gt;わたしの好きなもの&lt;/p&gt;
-        &lt;h1 class=&quot;app-heading&quot;&gt;好きな理由を集めよう。&lt;/h1&gt;
-        &lt;p class=&quot;app-description&quot;&gt;音楽、食べ物、場所。好きなものと理由の記録。&lt;/p&gt;
-      &lt;/div&gt;
-
-      &lt;ons-list id=&quot;list_oshi&quot;&gt;&lt;/ons-list&gt;
-      &lt;p id=&quot;txt_selected&quot; class=&quot;app-section app-selection&quot; aria-live=&quot;polite&quot;&gt;まだ選択していません&lt;/p&gt;
-    &lt;/ons-page&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-<div class="code-head">www/css/style.css · 全文</div>
-<pre id="start-14-style-css" tabindex="0"><code>.app-section {
-  padding: 20px 16px;
-}
-
-.app-caption {
-  margin: 0 0 12px;
-  color: #765744;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.app-heading {
-  margin: 0 0 16px;
-  font-size: 24px;
-  line-height: 1.5;
-  overflow-wrap: anywhere;
-}
-
-.app-description {
-  margin: 0;
-  color: #555555;
-  font-size: 15px;
-  line-height: 1.7;
-}
-
-.app-selection {
-  margin: 0;
-  color: #765744;
-  line-height: 1.7;
-  overflow-wrap: anywhere;
-}
-
-#list_oshi {
-  background-color: transparent;
-  background-image: none;
-}
-
-.oshi-card {
-  /* 左右の余白を足しても、カードを画面の幅に収める。 */
-  width: auto;
-  margin: 0 16px 12px;
-  border: 1px solid #d8c9bd;
-  border-radius: 12px;
-  background-color: #ffffff;
-}
-
-.oshi-card .list-item__center {
-  /* 一覧の既定罫線を外し、カードの枠で区切る。 */
-  background-image: none;
-  /* 右端の目印（＞）の分を空け、長い名前が目印と重ならないようにする。 */
-  padding-right: 30px;
-}
-
-.oshi-name,
-.oshi-genre {
-  overflow-wrap: anywhere;
-}</code></pre>
-<div class="code-head">www/js/app.js · 全文</div>
-<pre id="start-14-app-js" tabindex="0"><code>// 見た目の比較では、次の行を有効にして再読み込みする。
-// OSの指定は、Onsen UIが画面を作る前に行う。
-// ons.platform.select(&quot;android&quot;);
-
-let oshiItems = [
-  {
-    name: &quot;好きな音楽&quot;,
-    genre: &quot;音楽&quot;,
-    comment: &quot;通学中に聴くと、元気になります。\n好きな曲を何度も聴いています。&quot;
-  },
-  {
-    name: &quot;カレー&quot;,
-    genre: &quot;食べ物&quot;,
-    comment: &quot;自分の好きな辛さを選べるところが好きです。\nお店ごとの味の違いも楽しめます。&quot;
-  },
-  {
-    name: &quot;公園&quot;,
-    genre: &quot;場所&quot;,
-    comment: &quot;ゆっくり歩いて、気分を変えられます。\n季節によって景色が変わるところも好きです。&quot;
-  }
-];
-
-// ページの要素が使えるようになってから処理する。
-document.addEventListener(&quot;init&quot;, function(event) {
-  const page = event.target;
-
-  if (page.id === &quot;page_list&quot;) {
-    renderOshiList();
-  }
-});
-
-function createOshiRowHtml(index) {
-  return &#x27;&lt;ons-list-item id=&quot;item_oshi_&#x27; + index +
-    &#x27;&quot; class=&quot;oshi-card&quot; tappable modifier=&quot;chevron&quot;&gt;&#x27; +
-    &#x27;&lt;div class=&quot;center&quot;&gt;&#x27; +
-    &#x27;&lt;span class=&quot;list-item__title oshi-name&quot; id=&quot;txt_name_&#x27; +
-    index + &#x27;&quot;&gt;&lt;/span&gt;&#x27; +
-    &#x27;&lt;span class=&quot;list-item__subtitle oshi-genre&quot; id=&quot;txt_genre_&#x27; +
-    index + &#x27;&quot;&gt;&lt;/span&gt;&#x27; +
-    &#x27;&lt;/div&gt;&#x27; +
-    &#x27;&lt;/ons-list-item&gt;&#x27;;
-}
-
-function renderOshiList() {
-  const listOshi = document.getElementById(&quot;list_oshi&quot;);
-  let html = &quot;&quot;;
-
-  for (let i = 0; i &lt; oshiItems.length; i++) {
-    html += createOshiRowHtml(i);
-  }
-
-  // HTMLを作り直すとイベントも消えるため、全行を置いてから登録する。
-  listOshi.innerHTML = html;
-
-  for (let i = 0; i &lt; oshiItems.length; i++) {
-    // データに含まれる「&lt;」などを、HTMLではなく文字として表示する。
-    document.getElementById(&quot;txt_name_&quot; + i).textContent = oshiItems[i].name;
-    document.getElementById(&quot;txt_genre_&quot; + i).textContent = oshiItems[i].genre;
-
-    const itemOshi = document.getElementById(&quot;item_oshi_&quot; + i);
-    itemOshi.addEventListener(&quot;click&quot;, function() {
-      selectOshi(oshiItems[i]);
-    });
-  }
-}
-
-function selectOshi(oshi) {
-  document.getElementById(&quot;txt_selected&quot;).textContent = &quot;選択中：&quot; + oshi.name;
-}</code></pre></details><p>第4コマでは一覧から詳細を開き、戻れるようにします。まず、このSTEPの <code>www/index.html</code> へ置き換えます。CSSとJavaScriptは開始時のままです。</p>
+  &lt;template id=&quot;list.html&quot;&gt;</code></pre>
+<p>次に、<code>&lt;/ons-page&gt;</code> の下、<code>&lt;/body&gt;</code> の上に、<code>template</code> を閉じるタグを追加します。<code>ons-page</code> から <code>&lt;/ons-page&gt;</code> までの字下げは、そのままでかまいません。</p>
+<div class="code-head">www/index.html · 追加 · &lt;/ons-page&gt; の下</div>
+<pre id="code-15-index-html-close" tabindex="0"><code>  &lt;/template&gt;</code></pre>
 <p><code>ons-navigator</code> は複数のページを重ねて管理する部品です。<code>page="list.html"</code> に、最初に出すページを指定します。この <code>list.html</code> は別ファイルではなく、同じHTML内の <code>template id="list.html"</code> の名前です。</p>
 <p><code>template</code> の中身は、書いた場所で直ちに表示されるのではなく、必要なときに使うHTMLのひな形です。中には1個の <code>ons-page</code> を置きます。<code>ons-navigator</code> が一覧ページを作ると <code>init</code> が通知され、第3コマと同じ関数が行を作ります。</p>
 <p>保存・再読み込みし、3件と選択表示が前と同じように動くことを確かめます。画面に変化がなくても、いまは管理の仕方を切り替えた段階なので正解です。</p>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>Androidで画面のレイアウトを用意して必要なときに表示する、iOSでビューコントローラをナビゲーションコントローラへ積む考え方と対応します。Web基礎の別ページへのリンクではなく、同じHTML内のひな形を <code>ons-navigator</code> が画面として管理します。要素を使う処理は、ひな形が実際に配置された後の <code>init</code> に置きます。</p></div>
-<details><summary>このSTEPの全コード（照合・合流用）</summary>
-<div class="code-head">www/index.html · 全文</div>
-<pre id="code-15-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;ja&quot;&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot;&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;
-  &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src * data: gap: content: https://ssl.gstatic.com; style-src * &#x27;unsafe-inline&#x27;; script-src * &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27;&quot;&gt;
-  &lt;title&gt;好きなものノート&lt;/title&gt;
-  &lt;script src=&quot;components/loader.js&quot;&gt;&lt;/script&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;components/loader.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsenui.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsen-css-components.min.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
-  &lt;script src=&quot;https://unpkg.com/onsenui@2.12.9/js/onsenui.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;js/app.js&quot;&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;ons-navigator id=&quot;nav_app&quot; page=&quot;list.html&quot;&gt;&lt;/ons-navigator&gt;
-
-  &lt;template id=&quot;list.html&quot;&gt;
-    &lt;ons-page id=&quot;page_list&quot;&gt;
-      &lt;ons-toolbar&gt;
-        &lt;div class=&quot;center&quot;&gt;好きなものノート&lt;/div&gt;
-      &lt;/ons-toolbar&gt;
-
-      &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p class=&quot;app-caption&quot;&gt;わたしの好きなもの&lt;/p&gt;
-        &lt;h1 class=&quot;app-heading&quot;&gt;好きな理由を集めよう。&lt;/h1&gt;
-        &lt;p class=&quot;app-description&quot;&gt;音楽、食べ物、場所。好きなものと理由の記録。&lt;/p&gt;
-      &lt;/div&gt;
-
-      &lt;ons-list id=&quot;list_oshi&quot;&gt;&lt;/ons-list&gt;
-      &lt;p id=&quot;txt_selected&quot; class=&quot;app-section app-selection&quot; aria-live=&quot;polite&quot;&gt;まだ選択していません&lt;/p&gt;
-    &lt;/ons-page&gt;
-  &lt;/template&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-<div class="code-head">www/css/style.css · 全文</div>
-<pre id="code-15-style-css" tabindex="0"><code>.app-section {
-  padding: 20px 16px;
-}
-
-.app-caption {
-  margin: 0 0 12px;
-  color: #765744;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.app-heading {
-  margin: 0 0 16px;
-  font-size: 24px;
-  line-height: 1.5;
-  overflow-wrap: anywhere;
-}
-
-.app-description {
-  margin: 0;
-  color: #555555;
-  font-size: 15px;
-  line-height: 1.7;
-}
-
-.app-selection {
-  margin: 0;
-  color: #765744;
-  line-height: 1.7;
-  overflow-wrap: anywhere;
-}
-
-#list_oshi {
-  background-color: transparent;
-  background-image: none;
-}
-
-.oshi-card {
-  /* 左右の余白を足しても、カードを画面の幅に収める。 */
-  width: auto;
-  margin: 0 16px 12px;
-  border: 1px solid #d8c9bd;
-  border-radius: 12px;
-  background-color: #ffffff;
-}
-
-.oshi-card .list-item__center {
-  /* 一覧の既定罫線を外し、カードの枠で区切る。 */
-  background-image: none;
-  /* 右端の目印（＞）の分を空け、長い名前が目印と重ならないようにする。 */
-  padding-right: 30px;
-}
-
-.oshi-name,
-.oshi-genre {
-  overflow-wrap: anywhere;
-}</code></pre>
-<div class="code-head">www/js/app.js · 全文</div>
-<pre id="code-15-app-js" tabindex="0"><code>// 見た目の比較では、次の行を有効にして再読み込みする。
-// OSの指定は、Onsen UIが画面を作る前に行う。
-// ons.platform.select(&quot;android&quot;);
-
-let oshiItems = [
-  {
-    name: &quot;好きな音楽&quot;,
-    genre: &quot;音楽&quot;,
-    comment: &quot;通学中に聴くと、元気になります。\n好きな曲を何度も聴いています。&quot;
-  },
-  {
-    name: &quot;カレー&quot;,
-    genre: &quot;食べ物&quot;,
-    comment: &quot;自分の好きな辛さを選べるところが好きです。\nお店ごとの味の違いも楽しめます。&quot;
-  },
-  {
-    name: &quot;公園&quot;,
-    genre: &quot;場所&quot;,
-    comment: &quot;ゆっくり歩いて、気分を変えられます。\n季節によって景色が変わるところも好きです。&quot;
-  }
-];
-
-// ページの要素が使えるようになってから処理する。
-document.addEventListener(&quot;init&quot;, function(event) {
-  const page = event.target;
-
-  if (page.id === &quot;page_list&quot;) {
-    renderOshiList();
-  }
-});
-
-function createOshiRowHtml(index) {
-  return &#x27;&lt;ons-list-item id=&quot;item_oshi_&#x27; + index +
-    &#x27;&quot; class=&quot;oshi-card&quot; tappable modifier=&quot;chevron&quot;&gt;&#x27; +
-    &#x27;&lt;div class=&quot;center&quot;&gt;&#x27; +
-    &#x27;&lt;span class=&quot;list-item__title oshi-name&quot; id=&quot;txt_name_&#x27; +
-    index + &#x27;&quot;&gt;&lt;/span&gt;&#x27; +
-    &#x27;&lt;span class=&quot;list-item__subtitle oshi-genre&quot; id=&quot;txt_genre_&#x27; +
-    index + &#x27;&quot;&gt;&lt;/span&gt;&#x27; +
-    &#x27;&lt;/div&gt;&#x27; +
-    &#x27;&lt;/ons-list-item&gt;&#x27;;
-}
-
-function renderOshiList() {
-  const listOshi = document.getElementById(&quot;list_oshi&quot;);
-  let html = &quot;&quot;;
-
-  for (let i = 0; i &lt; oshiItems.length; i++) {
-    html += createOshiRowHtml(i);
-  }
-
-  // HTMLを作り直すとイベントも消えるため、全行を置いてから登録する。
-  listOshi.innerHTML = html;
-
-  for (let i = 0; i &lt; oshiItems.length; i++) {
-    // データに含まれる「&lt;」などを、HTMLではなく文字として表示する。
-    document.getElementById(&quot;txt_name_&quot; + i).textContent = oshiItems[i].name;
-    document.getElementById(&quot;txt_genre_&quot; + i).textContent = oshiItems[i].genre;
-
-    const itemOshi = document.getElementById(&quot;item_oshi_&quot; + i);
-    itemOshi.addEventListener(&quot;click&quot;, function() {
-      selectOshi(oshiItems[i]);
-    });
-  }
-}
-
-function selectOshi(oshi) {
-  document.getElementById(&quot;txt_selected&quot;).textContent = &quot;選択中：&quot; + oshi.name;
-}</code></pre>
-</details>
 <div class="check"><label><input type="checkbox" data-check="oshi-list-15"><span><code>ons-navigator</code> と <code>template</code> へ移しても、一覧と選択が動いた。</span></label></div>
 
 </section>
 <section id="step-16">
 <p class="step-meta">STEP 16 · コマ4</p><h2>詳細画面を開き、戻る</h2>
-<p>このSTEPの3ファイルを全文に置き換えます。HTMLに <code>template id="detail.html"</code> を増やし、詳細のツールバーに <code>ons-back-button</code> を置きます。CSSには理由文用の余白と改行表示を追加します。</p>
-<p>JavaScriptでは、クリックしたときに呼ぶ関数を <code>selectOshi</code> から <code>openOshiDetail</code> へ変え、<code>navApp.pushPage("detail.html");</code> で詳細を重ねます。今回は名前や理由を詳細へまだ渡さないため、どの行を押しても「詳細画面の見本」が出ます。</p>
-<ol><li>一覧の1件を1回押し、詳細の見本を表示します。</li><li>詳細の左上にある戻るボタンを1回押し、一覧へ戻ります。ブラウザ自体の戻るボタンは使いません。</li><li>別の行でも、詳細を開く・戻るを確かめます。このSTEPでは連打せず、画面の動きが終わってから操作します。</li></ol>
-<p><code>ons-back-button</code> は、そのページを管理する <code>ons-navigator</code> の前のページへ戻す部品です。自分でクリック処理を追加しなくても動きます。ページの切り替わり方もOSのスタイルで変わるので、常に同じ方向へスライドするとは限りません。ボタンの見た目もOSのスタイルで変わります。iOS向けでは、HTMLに書いた文字を添えて「＜ 戻る」と表示されます。Android向けでは左向きの矢印「←」だけになり、「戻る」の文字は表示されません。どちらも同じ <code>ons-back-button</code> で、押したときの動きは同じです。</p>
-<div class="note"><p class="box-title">既知の技術と比べる</p><p>iOSのナビゲーションコントローラで次の画面をpushし、戻る操作でpopする構造と同じです。Androidで次の画面へ進んで戻る場合と同様、一覧を消して作り直す操作ではありません。Onsen UIでは <code>pushPage</code> で積み、<code>ons-back-button</code> に戻る操作を任せます。見た目も、iOSのナビゲーションバーの文字つきの戻るボタンと、Androidのツールバーの矢印だけの戻るボタンに合わせて、Onsen UIが描き分けます。</p></div>
-<details><summary>このSTEPの全コード（照合・合流用）</summary>
-<div class="code-head">www/index.html · 全文</div>
-<pre id="code-16-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;ja&quot;&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot;&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;
-  &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src * data: gap: content: https://ssl.gstatic.com; style-src * &#x27;unsafe-inline&#x27;; script-src * &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27;&quot;&gt;
-  &lt;title&gt;好きなものノート&lt;/title&gt;
-  &lt;script src=&quot;components/loader.js&quot;&gt;&lt;/script&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;components/loader.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsenui.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsen-css-components.min.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
-  &lt;script src=&quot;https://unpkg.com/onsenui@2.12.9/js/onsenui.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;js/app.js&quot;&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;ons-navigator id=&quot;nav_app&quot; page=&quot;list.html&quot;&gt;&lt;/ons-navigator&gt;
-
-  &lt;template id=&quot;list.html&quot;&gt;
-    &lt;ons-page id=&quot;page_list&quot;&gt;
-      &lt;ons-toolbar&gt;
-        &lt;div class=&quot;center&quot;&gt;好きなものノート&lt;/div&gt;
-      &lt;/ons-toolbar&gt;
-
-      &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p class=&quot;app-caption&quot;&gt;わたしの好きなもの&lt;/p&gt;
-        &lt;h1 class=&quot;app-heading&quot;&gt;好きな理由を集めよう。&lt;/h1&gt;
-        &lt;p class=&quot;app-description&quot;&gt;音楽、食べ物、場所。好きなものと理由の記録。&lt;/p&gt;
-      &lt;/div&gt;
-
-      &lt;ons-list id=&quot;list_oshi&quot;&gt;&lt;/ons-list&gt;
-      &lt;p id=&quot;txt_selected&quot; class=&quot;app-section app-selection&quot; aria-live=&quot;polite&quot;&gt;まだ選択していません&lt;/p&gt;
-    &lt;/ons-page&gt;
-  &lt;/template&gt;
-
-  &lt;template id=&quot;detail.html&quot;&gt;
+<p>このSTEPでは3ファイルを書き換えます。HTMLに <code>template id="detail.html"</code> を増やし、詳細のツールバーに <code>ons-back-button</code> を置きます。<code>www/index.html</code> の、STEP 15で追加した <code>&lt;/template&gt;</code> の下、<code>&lt;/body&gt;</code> の上に、1行空けて追加します。</p>
+<div class="code-head">www/index.html · 追加 · &lt;/template&gt; の下</div>
+<pre id="code-16-index-html" tabindex="0"><code>  &lt;template id=&quot;detail.html&quot;&gt;
     &lt;ons-page id=&quot;page_detail&quot;&gt;
       &lt;ons-toolbar&gt;
         &lt;div class=&quot;left&quot;&gt;
@@ -2315,43 +525,10 @@ function selectOshi(oshi) {
         &lt;p id=&quot;txt_detail_comment&quot; class=&quot;app-comment&quot;&gt;戻るボタンで一覧に戻れます。&lt;/p&gt;
       &lt;/div&gt;
     &lt;/ons-page&gt;
-  &lt;/template&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-<div class="code-head">www/css/style.css · 全文</div>
-<pre id="code-16-style-css" tabindex="0"><code>.app-section {
-  padding: 20px 16px;
-}
-
-.app-caption {
-  margin: 0 0 12px;
-  color: #765744;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.app-heading {
-  margin: 0 0 16px;
-  font-size: 24px;
-  line-height: 1.5;
-  overflow-wrap: anywhere;
-}
-
-.app-description {
-  margin: 0;
-  color: #555555;
-  font-size: 15px;
-  line-height: 1.7;
-}
-
-.app-selection {
-  margin: 0;
-  color: #765744;
-  line-height: 1.7;
-  overflow-wrap: anywhere;
-}
-
-.app-label {
+  &lt;/template&gt;</code></pre>
+<p>CSSには理由文用の余白と改行表示を追加します。<code>www/css/style.css</code> の <code>.app-selection { … }</code> の下、<code>#list_oshi {</code> の上に追加します。前後は1行ずつ空けます。</p>
+<div class="code-head">www/css/style.css · 追加 · #list_oshi の上</div>
+<pre id="code-16-style-css" tabindex="0"><code>.app-label {
   margin: 24px 0 8px;
   color: #555555;
   font-size: 14px;
@@ -2362,802 +539,114 @@ function selectOshi(oshi) {
   line-height: 1.8;
   white-space: pre-wrap;
   overflow-wrap: anywhere;
-}
-
-#list_oshi {
-  background-color: transparent;
-  background-image: none;
-}
-
-.oshi-card {
-  /* 左右の余白を足しても、カードを画面の幅に収める。 */
-  width: auto;
-  margin: 0 16px 12px;
-  border: 1px solid #d8c9bd;
-  border-radius: 12px;
-  background-color: #ffffff;
-}
-
-.oshi-card .list-item__center {
-  /* 一覧の既定罫線を外し、カードの枠で区切る。 */
-  background-image: none;
-  /* 右端の目印（＞）の分を空け、長い名前が目印と重ならないようにする。 */
-  padding-right: 30px;
-}
-
-.oshi-name,
-.oshi-genre {
-  overflow-wrap: anywhere;
 }</code></pre>
-<div class="code-head">www/js/app.js · 全文</div>
-<pre id="code-16-app-js" tabindex="0"><code>// 見た目の比較では、次の行を有効にして再読み込みする。
-// OSの指定は、Onsen UIが画面を作る前に行う。
-// ons.platform.select(&quot;android&quot;);
-
-let oshiItems = [
-  {
-    name: &quot;好きな音楽&quot;,
-    genre: &quot;音楽&quot;,
-    comment: &quot;通学中に聴くと、元気になります。\n好きな曲を何度も聴いています。&quot;
-  },
-  {
-    name: &quot;カレー&quot;,
-    genre: &quot;食べ物&quot;,
-    comment: &quot;自分の好きな辛さを選べるところが好きです。\nお店ごとの味の違いも楽しめます。&quot;
-  },
-  {
-    name: &quot;公園&quot;,
-    genre: &quot;場所&quot;,
-    comment: &quot;ゆっくり歩いて、気分を変えられます。\n季節によって景色が変わるところも好きです。&quot;
-  }
-];
-
-// ページの要素が使えるようになってから処理する。
-document.addEventListener(&quot;init&quot;, function(event) {
-  const page = event.target;
-
-  if (page.id === &quot;page_list&quot;) {
-    renderOshiList();
-  }
-});
-
-function createOshiRowHtml(index) {
-  return &#x27;&lt;ons-list-item id=&quot;item_oshi_&#x27; + index +
-    &#x27;&quot; class=&quot;oshi-card&quot; tappable modifier=&quot;chevron&quot;&gt;&#x27; +
-    &#x27;&lt;div class=&quot;center&quot;&gt;&#x27; +
-    &#x27;&lt;span class=&quot;list-item__title oshi-name&quot; id=&quot;txt_name_&#x27; +
-    index + &#x27;&quot;&gt;&lt;/span&gt;&#x27; +
-    &#x27;&lt;span class=&quot;list-item__subtitle oshi-genre&quot; id=&quot;txt_genre_&#x27; +
-    index + &#x27;&quot;&gt;&lt;/span&gt;&#x27; +
-    &#x27;&lt;/div&gt;&#x27; +
-    &#x27;&lt;/ons-list-item&gt;&#x27;;
-}
-
-function renderOshiList() {
-  const listOshi = document.getElementById(&quot;list_oshi&quot;);
-  let html = &quot;&quot;;
-
-  for (let i = 0; i &lt; oshiItems.length; i++) {
-    html += createOshiRowHtml(i);
-  }
-
-  // HTMLを作り直すとイベントも消えるため、全行を置いてから登録する。
-  listOshi.innerHTML = html;
-
-  for (let i = 0; i &lt; oshiItems.length; i++) {
-    // データに含まれる「&lt;」などを、HTMLではなく文字として表示する。
-    document.getElementById(&quot;txt_name_&quot; + i).textContent = oshiItems[i].name;
-    document.getElementById(&quot;txt_genre_&quot; + i).textContent = oshiItems[i].genre;
-
-    const itemOshi = document.getElementById(&quot;item_oshi_&quot; + i);
-    itemOshi.addEventListener(&quot;click&quot;, function() {
-      openOshiDetail(oshiItems[i]);
-    });
-  }
-}
-
-function openOshiDetail(oshi) {
+<p>JavaScriptでは、クリックしたときに呼ぶ関数を <code>selectOshi</code> から <code>openOshiDetail</code> へ変え、<code>navApp.pushPage("detail.html");</code> で詳細を重ねます。<code>www/js/app.js</code> の2回目の <code>for</code> の中にある、<code>selectOshi</code> を呼ぶ1行を、次の1行に置き換えます。</p>
+<div class="code-head">www/js/app.js · 置き換え · selectOshi を呼ぶ1行</div>
+<pre id="code-16-app-js-click" tabindex="0"><code>      openOshiDetail(oshiItems[i]);</code></pre>
+<p>続けて、ファイルの末尾の <code>function selectOshi(oshi) {</code> の行から、その関数を閉じる <code>}</code> までを、次のコードに置き換えます。今回は名前や理由を詳細へまだ渡さないため、どの行を押しても「詳細画面の見本」が出ます。</p>
+<div class="code-head">www/js/app.js · 置き換え · function selectOshi から、その閉じかっこまで</div>
+<pre id="code-16-app-js-open" tabindex="0"><code>function openOshiDetail(oshi) {
   const navApp = document.getElementById(&quot;nav_app&quot;);
   document.getElementById(&quot;txt_selected&quot;).textContent = &quot;選択中：&quot; + oshi.name;
   navApp.pushPage(&quot;detail.html&quot;);
 }</code></pre>
-</details>
+<ol><li>一覧の1件を1回押し、詳細の見本を表示します。</li><li>詳細の左上にある戻るボタンを1回押し、一覧へ戻ります。ブラウザ自体の戻るボタンは使いません。</li><li>別の行でも、詳細を開く・戻るを確かめます。このSTEPでは連打せず、画面の動きが終わってから操作します。</li></ol>
+<p><code>ons-back-button</code> は、そのページを管理する <code>ons-navigator</code> の前のページへ戻す部品です。自分でクリック処理を追加しなくても動きます。ページの切り替わり方もOSのスタイルで変わるので、常に同じ方向へスライドするとは限りません。ボタンの見た目もOSのスタイルで変わります。iOS向けでは、HTMLに書いた文字を添えて「＜ 戻る」と表示されます。Android向けでは左向きの矢印「←」だけになり、「戻る」の文字は表示されません。どちらも同じ <code>ons-back-button</code> で、押したときの動きは同じです。</p>
+<div class="note"><p class="box-title">既知の技術と比べる</p><p>iOSのナビゲーションコントローラで次の画面をpushし、戻る操作でpopする構造と同じです。Androidで次の画面へ進んで戻る場合と同様、一覧を消して作り直す操作ではありません。Onsen UIでは <code>pushPage</code> で積み、<code>ons-back-button</code> に戻る操作を任せます。見た目も、iOSのナビゲーションバーの文字つきの戻るボタンと、Androidのツールバーの矢印だけの戻るボタンに合わせて、Onsen UIが描き分けます。</p></div>
 <div class="check"><label><input type="checkbox" data-check="oshi-list-16"><span>詳細の見本を開き、画面内の戻るボタンで一覧へ戻れた。</span></label></div>
 
 </section>
 <section id="step-17">
 <p class="step-meta">STEP 17 · コマ4</p><h2>押した項目を詳細へ渡す</h2>
-<p><code>www/index.html</code> と <code>www/js/app.js</code> を全文に置き換えます。CSSは変わりません。詳細の名前・種類・理由はHTMLでは空にし、受け取ったデータを後から入れます。</p>
+<p>このSTEPでは、<code>www/index.html</code> と <code>www/js/app.js</code> を書き換えます。CSSは変えません。詳細の名前・種類・理由はHTMLでは空にし、受け取ったデータを後から入れます。</p>
+<p><code>www/index.html</code> の <code>template id="detail.html"</code> の中で、<code>txt_detail_genre</code> の行から <code>txt_detail_comment</code> の行までの4行を、次のコードに置き換えます。間の「好きな理由」の行は変わりません。</p>
+<div class="code-head">www/index.html · 置き換え · txt_detail_genre の行から txt_detail_comment の行まで</div>
+<pre id="code-17-index-html" tabindex="0"><code>        &lt;p id=&quot;txt_detail_genre&quot; class=&quot;app-caption&quot;&gt;&lt;/p&gt;
+        &lt;h1 id=&quot;txt_detail_name&quot; class=&quot;app-heading&quot;&gt;&lt;/h1&gt;
+        &lt;p class=&quot;app-label&quot;&gt;好きな理由&lt;/p&gt;
+        &lt;p id=&quot;txt_detail_comment&quot; class=&quot;app-comment&quot;&gt;&lt;/p&gt;</code></pre>
+<p><code>www/js/app.js</code> では、<code>// ページの要素が使えるようになってから処理する。</code> のコメントの行から、<code>init</code> の処理を閉じる <code>});</code> までを、次のコードに置き換えます。コメントの文も変わり、<code>page_detail</code> のときの処理が加わります。</p>
+<div class="code-head">www/js/app.js · 置き換え · init の処理（直前のコメントから }); まで）</div>
+<pre id="code-17-app-js-init" tabindex="0"><code>// templateの中身は、ページが作られてから取得する。
+document.addEventListener(&quot;init&quot;, function(event) {
+  const page = event.target;
+
+  if (page.id === &quot;page_list&quot;) {
+    renderOshiList();
+  }
+
+  if (page.id === &quot;page_detail&quot;) {
+    const oshi = page.data.oshi;
+
+    document.getElementById(&quot;txt_detail_name&quot;).textContent = oshi.name;
+    document.getElementById(&quot;txt_detail_genre&quot;).textContent = oshi.genre;
+    document.getElementById(&quot;txt_detail_comment&quot;).textContent = oshi.comment;
+  }
+});</code></pre>
+<p>続けて、ファイルの末尾の <code>function openOshiDetail(oshi) {</code> の行から、その関数を閉じる <code>}</code> までを、次のコードに置き換えます。</p>
+<div class="code-head">www/js/app.js · 置き換え · function openOshiDetail から、その閉じかっこまで</div>
+<pre id="code-17-app-js-open" tabindex="0"><code>function openOshiDetail(oshi) {
+  const navApp = document.getElementById(&quot;nav_app&quot;);
+
+  document.getElementById(&quot;txt_selected&quot;).textContent = &quot;選択中：&quot; + oshi.name;
+
+  navApp.pushPage(&quot;detail.html&quot;, {
+    data: {
+      oshi: oshi
+    }
+  });
+}</code></pre>
 <p><code>pushPage</code> の2番目の引数に <code>{ data: { oshi: oshi } }</code> を渡します。左側の <code>oshi</code> は受け渡す項目の名前、右側の <code>oshi</code> は関数の引数で受け取った好きなもの1件です。</p>
 <p>詳細ページの <code>init</code> では、<code>const oshi = page.data.oshi;</code> でその1件を取り出します。その後、<code>txt_detail_name</code>・<code>txt_detail_genre</code>・<code>txt_detail_comment</code> の <code>textContent</code> を設定します。</p>
 <ol><li>1件目を押し、名前・種類・理由が配列の1件目と一致することを確かめます。</li><li>戻って2件目、3件目でも確かめます。</li><li>理由の <code>\n</code> が改行になっていることを見ます。CSSの <code>white-space: pre-wrap</code> が、改行を保ちながら折り返します。</li></ol>
 <p>このSTEPも画面の動きが終わってから次を押します。画面の切り替えの途中に届いた2回目の操作は、Onsen UIの <code>ons-navigator</code> が受け付けないので、続けて押しても詳細は重なりません。次のSTEPでは、この仕組みに任せきりにせず、アプリの側でも開く途中かどうかを記録します。</p>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>Androidで次の画面へ値を渡す、iOSで遷移先に表示用の値を渡す目的と同じです。Onsen UIでは <code>ons-navigator</code> の <code>data</code> を渡し、作られたページの <code>page.data</code> から受け取ります。ここで渡すのは実行中のJavaScriptオブジェクトで、ファイルへ保存したり文字列へ変換したりしているわけではありません。</p></div>
-<details><summary>このSTEPの全コード（照合・合流用）</summary>
-<div class="code-head">www/index.html · 全文</div>
-<pre id="code-17-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;ja&quot;&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot;&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;
-  &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src * data: gap: content: https://ssl.gstatic.com; style-src * &#x27;unsafe-inline&#x27;; script-src * &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27;&quot;&gt;
-  &lt;title&gt;好きなものノート&lt;/title&gt;
-  &lt;script src=&quot;components/loader.js&quot;&gt;&lt;/script&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;components/loader.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsenui.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsen-css-components.min.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
-  &lt;script src=&quot;https://unpkg.com/onsenui@2.12.9/js/onsenui.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;js/app.js&quot;&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;ons-navigator id=&quot;nav_app&quot; page=&quot;list.html&quot;&gt;&lt;/ons-navigator&gt;
-
-  &lt;template id=&quot;list.html&quot;&gt;
-    &lt;ons-page id=&quot;page_list&quot;&gt;
-      &lt;ons-toolbar&gt;
-        &lt;div class=&quot;center&quot;&gt;好きなものノート&lt;/div&gt;
-      &lt;/ons-toolbar&gt;
-
-      &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p class=&quot;app-caption&quot;&gt;わたしの好きなもの&lt;/p&gt;
-        &lt;h1 class=&quot;app-heading&quot;&gt;好きな理由を集めよう。&lt;/h1&gt;
-        &lt;p class=&quot;app-description&quot;&gt;音楽、食べ物、場所。好きなものと理由の記録。&lt;/p&gt;
-      &lt;/div&gt;
-
-      &lt;ons-list id=&quot;list_oshi&quot;&gt;&lt;/ons-list&gt;
-      &lt;p id=&quot;txt_selected&quot; class=&quot;app-section app-selection&quot; aria-live=&quot;polite&quot;&gt;まだ選択していません&lt;/p&gt;
-    &lt;/ons-page&gt;
-  &lt;/template&gt;
-
-  &lt;template id=&quot;detail.html&quot;&gt;
-    &lt;ons-page id=&quot;page_detail&quot;&gt;
-      &lt;ons-toolbar&gt;
-        &lt;div class=&quot;left&quot;&gt;
-          &lt;ons-back-button&gt;戻る&lt;/ons-back-button&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;center&quot;&gt;詳細&lt;/div&gt;
-      &lt;/ons-toolbar&gt;
-
-      &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p id=&quot;txt_detail_genre&quot; class=&quot;app-caption&quot;&gt;&lt;/p&gt;
-        &lt;h1 id=&quot;txt_detail_name&quot; class=&quot;app-heading&quot;&gt;&lt;/h1&gt;
-        &lt;p class=&quot;app-label&quot;&gt;好きな理由&lt;/p&gt;
-        &lt;p id=&quot;txt_detail_comment&quot; class=&quot;app-comment&quot;&gt;&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/ons-page&gt;
-  &lt;/template&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-<div class="code-head">www/css/style.css · 全文</div>
-<pre id="code-17-style-css" tabindex="0"><code>.app-section {
-  padding: 20px 16px;
-}
-
-.app-caption {
-  margin: 0 0 12px;
-  color: #765744;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.app-heading {
-  margin: 0 0 16px;
-  font-size: 24px;
-  line-height: 1.5;
-  overflow-wrap: anywhere;
-}
-
-.app-description {
-  margin: 0;
-  color: #555555;
-  font-size: 15px;
-  line-height: 1.7;
-}
-
-.app-selection {
-  margin: 0;
-  color: #765744;
-  line-height: 1.7;
-  overflow-wrap: anywhere;
-}
-
-.app-label {
-  margin: 24px 0 8px;
-  color: #555555;
-  font-size: 14px;
-}
-
-.app-comment {
-  margin: 0;
-  line-height: 1.8;
-  white-space: pre-wrap;
-  overflow-wrap: anywhere;
-}
-
-#list_oshi {
-  background-color: transparent;
-  background-image: none;
-}
-
-.oshi-card {
-  /* 左右の余白を足しても、カードを画面の幅に収める。 */
-  width: auto;
-  margin: 0 16px 12px;
-  border: 1px solid #d8c9bd;
-  border-radius: 12px;
-  background-color: #ffffff;
-}
-
-.oshi-card .list-item__center {
-  /* 一覧の既定罫線を外し、カードの枠で区切る。 */
-  background-image: none;
-  /* 右端の目印（＞）の分を空け、長い名前が目印と重ならないようにする。 */
-  padding-right: 30px;
-}
-
-.oshi-name,
-.oshi-genre {
-  overflow-wrap: anywhere;
-}</code></pre>
-<div class="code-head">www/js/app.js · 全文</div>
-<pre id="code-17-app-js" tabindex="0"><code>// 見た目の比較では、次の行を有効にして再読み込みする。
-// OSの指定は、Onsen UIが画面を作る前に行う。
-// ons.platform.select(&quot;android&quot;);
-
-let oshiItems = [
-  {
-    name: &quot;好きな音楽&quot;,
-    genre: &quot;音楽&quot;,
-    comment: &quot;通学中に聴くと、元気になります。\n好きな曲を何度も聴いています。&quot;
-  },
-  {
-    name: &quot;カレー&quot;,
-    genre: &quot;食べ物&quot;,
-    comment: &quot;自分の好きな辛さを選べるところが好きです。\nお店ごとの味の違いも楽しめます。&quot;
-  },
-  {
-    name: &quot;公園&quot;,
-    genre: &quot;場所&quot;,
-    comment: &quot;ゆっくり歩いて、気分を変えられます。\n季節によって景色が変わるところも好きです。&quot;
-  }
-];
-
-// templateの中身は、ページが作られてから取得する。
-document.addEventListener(&quot;init&quot;, function(event) {
-  const page = event.target;
-
-  if (page.id === &quot;page_list&quot;) {
-    renderOshiList();
-  }
-
-  if (page.id === &quot;page_detail&quot;) {
-    const oshi = page.data.oshi;
-
-    document.getElementById(&quot;txt_detail_name&quot;).textContent = oshi.name;
-    document.getElementById(&quot;txt_detail_genre&quot;).textContent = oshi.genre;
-    document.getElementById(&quot;txt_detail_comment&quot;).textContent = oshi.comment;
-  }
-});
-
-function createOshiRowHtml(index) {
-  return &#x27;&lt;ons-list-item id=&quot;item_oshi_&#x27; + index +
-    &#x27;&quot; class=&quot;oshi-card&quot; tappable modifier=&quot;chevron&quot;&gt;&#x27; +
-    &#x27;&lt;div class=&quot;center&quot;&gt;&#x27; +
-    &#x27;&lt;span class=&quot;list-item__title oshi-name&quot; id=&quot;txt_name_&#x27; +
-    index + &#x27;&quot;&gt;&lt;/span&gt;&#x27; +
-    &#x27;&lt;span class=&quot;list-item__subtitle oshi-genre&quot; id=&quot;txt_genre_&#x27; +
-    index + &#x27;&quot;&gt;&lt;/span&gt;&#x27; +
-    &#x27;&lt;/div&gt;&#x27; +
-    &#x27;&lt;/ons-list-item&gt;&#x27;;
-}
-
-function renderOshiList() {
-  const listOshi = document.getElementById(&quot;list_oshi&quot;);
-  let html = &quot;&quot;;
-
-  for (let i = 0; i &lt; oshiItems.length; i++) {
-    html += createOshiRowHtml(i);
-  }
-
-  // HTMLを作り直すとイベントも消えるため、全行を置いてから登録する。
-  listOshi.innerHTML = html;
-
-  for (let i = 0; i &lt; oshiItems.length; i++) {
-    // データに含まれる「&lt;」などを、HTMLではなく文字として表示する。
-    document.getElementById(&quot;txt_name_&quot; + i).textContent = oshiItems[i].name;
-    document.getElementById(&quot;txt_genre_&quot; + i).textContent = oshiItems[i].genre;
-
-    const itemOshi = document.getElementById(&quot;item_oshi_&quot; + i);
-    itemOshi.addEventListener(&quot;click&quot;, function() {
-      openOshiDetail(oshiItems[i]);
-    });
-  }
-}
-
-function openOshiDetail(oshi) {
-  const navApp = document.getElementById(&quot;nav_app&quot;);
-
-  document.getElementById(&quot;txt_selected&quot;).textContent = &quot;選択中：&quot; + oshi.name;
-
-  navApp.pushPage(&quot;detail.html&quot;, {
-    data: {
-      oshi: oshi
-    }
-  });
-}</code></pre>
-</details>
 <div class="check"><label><input type="checkbox" data-check="oshi-list-17"><span>3件それぞれの名前・種類・理由が詳細へ渡り、改行も表示された。</span></label></div>
 
 </section>
 <section id="step-18">
 <p class="step-meta">STEP 18 · コマ4</p><h2>連続して押されても詳細を重ねない</h2>
-<p><code>www/js/app.js</code> を全文に置き換えます。完成版では <code>isOpeningDetail</code> という真偽値と、<code>ons-navigator</code> の現在のページを使って、詳細を重ねて開くことを防ぎます。Onsen UIの <code>ons-navigator</code> も、切り替えの途中に届いた2回目の <code>pushPage</code> は受け付けませんが、断られた呼び出しはエラーになります。アプリの側で開く途中かどうかを記録しておけば、2回目の呼び出しそのものをしないで済みます。</p>
+<p><code>www/js/app.js</code> を2か所変えます。HTMLとCSSは変えません。完成版では <code>isOpeningDetail</code> という真偽値と、<code>ons-navigator</code> の現在のページを使って、詳細を重ねて開くことを防ぎます。Onsen UIの <code>ons-navigator</code> も、切り替えの途中に届いた2回目の <code>pushPage</code> は受け付けませんが、断られた呼び出しはエラーになります。アプリの側で開く途中かどうかを記録しておけば、2回目の呼び出しそのものをしないで済みます。</p>
+<p>まず、配列 <code>oshiItems</code> を閉じる <code>];</code> の下に、1行空けて追加します。下の <code>// templateの中身は、ページが作られてから取得する。</code> との間も1行空けます。</p>
+<div class="code-head">www/js/app.js · 追加 · 配列 oshiItems の ]; の下</div>
+<pre id="code-18-app-js-flag" tabindex="0"><code>let isOpeningDetail = false;</code></pre>
+<p>次に、ファイルの末尾の <code>function openOshiDetail(oshi) {</code> の行から、その関数を閉じる <code>}</code> までを、次のコードに置き換えます。</p>
+<div class="code-head">www/js/app.js · 置き換え · function openOshiDetail から、その閉じかっこまで</div>
+<pre id="code-18-app-js-open" tabindex="0"><code>function openOshiDetail(oshi) {
+  const navApp = document.getElementById(&quot;nav_app&quot;);
+
+  // 続けて押しても、詳細画面を重ねて開かない。
+  if (isOpeningDetail || navApp.topPage.id !== &quot;page_list&quot;) {
+    return;
+  }
+
+  isOpeningDetail = true;
+  document.getElementById(&quot;txt_selected&quot;).textContent = &quot;選択中：&quot; + oshi.name;
+
+  navApp.pushPage(&quot;detail.html&quot;, {
+    data: {
+      oshi: oshi
+    },
+    callback: function() {
+      isOpeningDetail = false;
+    }
+  });
+}</code></pre>
 <table><thead><tr><th>場所</th><th>意味</th></tr></thead><tbody><tr><td><code>isOpeningDetail = false</code></td><td>まだ詳細を開く途中ではない。</td></tr><tr><td><code>if (isOpeningDetail || navApp.topPage.id !== "page_list")</code></td><td>開いている途中、または一覧が一番上でなければ処理を抜ける。</td></tr><tr><td><code>isOpeningDetail = true</code></td><td>次のクリックが来る前に、開く途中だと記録する。</td></tr><tr><td><code>callback: function() { ... }</code></td><td>ページを開く処理が終わったときに実行される関数。ここで真偽値を <code>false</code> へ戻す。</td></tr></tbody></table>
 <p><code>||</code> は「どちらか」、<code>!==</code> は「等しくない」、<code>return</code> はこの関数をそこで終える、というWeb基礎の書き方です。開き終わって真偽値が <code>false</code> になっても、詳細が一番上ならもう一度開きません。</p>
 <ol><li>保存して再読み込みし、同じ行を続けて2回押します。</li><li>詳細の左上の戻るボタンを1回押します。一覧に戻れば、詳細は重なっていません。</li><li>別の行を押し、別の詳細も開けることを確かめます。</li></ol>
 <p>画面の見た目は、STEP 17のときと同じです。ここでは、処理を足したあとも、今までどおり詳細が1枚だけ開き、戻れることを確かめます。</p>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎でクリック後の処理を関数として登録したのと同じく、<code>callback</code> へ「終わったら行う関数」を渡します。Androidのアニメーション終了の通知やiOSの完了ハンドラと対応します。最初に真偽値を変え、完了通知で戻すことで、画面の切り替えを待つ間だけ次の開始を止めます。</p></div>
-<details><summary>このSTEPの全コード（照合・合流用）</summary>
-<div class="code-head">www/index.html · 全文</div>
-<pre id="code-18-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;ja&quot;&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot;&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;
-  &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src * data: gap: content: https://ssl.gstatic.com; style-src * &#x27;unsafe-inline&#x27;; script-src * &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27;&quot;&gt;
-  &lt;title&gt;好きなものノート&lt;/title&gt;
-  &lt;script src=&quot;components/loader.js&quot;&gt;&lt;/script&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;components/loader.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsenui.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsen-css-components.min.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
-  &lt;script src=&quot;https://unpkg.com/onsenui@2.12.9/js/onsenui.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;js/app.js&quot;&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;ons-navigator id=&quot;nav_app&quot; page=&quot;list.html&quot;&gt;&lt;/ons-navigator&gt;
-
-  &lt;template id=&quot;list.html&quot;&gt;
-    &lt;ons-page id=&quot;page_list&quot;&gt;
-      &lt;ons-toolbar&gt;
-        &lt;div class=&quot;center&quot;&gt;好きなものノート&lt;/div&gt;
-      &lt;/ons-toolbar&gt;
-
-      &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p class=&quot;app-caption&quot;&gt;わたしの好きなもの&lt;/p&gt;
-        &lt;h1 class=&quot;app-heading&quot;&gt;好きな理由を集めよう。&lt;/h1&gt;
-        &lt;p class=&quot;app-description&quot;&gt;音楽、食べ物、場所。好きなものと理由の記録。&lt;/p&gt;
-      &lt;/div&gt;
-
-      &lt;ons-list id=&quot;list_oshi&quot;&gt;&lt;/ons-list&gt;
-      &lt;p id=&quot;txt_selected&quot; class=&quot;app-section app-selection&quot; aria-live=&quot;polite&quot;&gt;まだ選択していません&lt;/p&gt;
-    &lt;/ons-page&gt;
-  &lt;/template&gt;
-
-  &lt;template id=&quot;detail.html&quot;&gt;
-    &lt;ons-page id=&quot;page_detail&quot;&gt;
-      &lt;ons-toolbar&gt;
-        &lt;div class=&quot;left&quot;&gt;
-          &lt;ons-back-button&gt;戻る&lt;/ons-back-button&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;center&quot;&gt;詳細&lt;/div&gt;
-      &lt;/ons-toolbar&gt;
-
-      &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p id=&quot;txt_detail_genre&quot; class=&quot;app-caption&quot;&gt;&lt;/p&gt;
-        &lt;h1 id=&quot;txt_detail_name&quot; class=&quot;app-heading&quot;&gt;&lt;/h1&gt;
-        &lt;p class=&quot;app-label&quot;&gt;好きな理由&lt;/p&gt;
-        &lt;p id=&quot;txt_detail_comment&quot; class=&quot;app-comment&quot;&gt;&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/ons-page&gt;
-  &lt;/template&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-<div class="code-head">www/css/style.css · 全文</div>
-<pre id="code-18-style-css" tabindex="0"><code>.app-section {
-  padding: 20px 16px;
-}
-
-.app-caption {
-  margin: 0 0 12px;
-  color: #765744;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.app-heading {
-  margin: 0 0 16px;
-  font-size: 24px;
-  line-height: 1.5;
-  overflow-wrap: anywhere;
-}
-
-.app-description {
-  margin: 0;
-  color: #555555;
-  font-size: 15px;
-  line-height: 1.7;
-}
-
-.app-selection {
-  margin: 0;
-  color: #765744;
-  line-height: 1.7;
-  overflow-wrap: anywhere;
-}
-
-.app-label {
-  margin: 24px 0 8px;
-  color: #555555;
-  font-size: 14px;
-}
-
-.app-comment {
-  margin: 0;
-  line-height: 1.8;
-  white-space: pre-wrap;
-  overflow-wrap: anywhere;
-}
-
-#list_oshi {
-  background-color: transparent;
-  background-image: none;
-}
-
-.oshi-card {
-  /* 左右の余白を足しても、カードを画面の幅に収める。 */
-  width: auto;
-  margin: 0 16px 12px;
-  border: 1px solid #d8c9bd;
-  border-radius: 12px;
-  background-color: #ffffff;
-}
-
-.oshi-card .list-item__center {
-  /* 一覧の既定罫線を外し、カードの枠で区切る。 */
-  background-image: none;
-  /* 右端の目印（＞）の分を空け、長い名前が目印と重ならないようにする。 */
-  padding-right: 30px;
-}
-
-.oshi-name,
-.oshi-genre {
-  overflow-wrap: anywhere;
-}</code></pre>
-<div class="code-head">www/js/app.js · 全文</div>
-<pre id="code-18-app-js" tabindex="0"><code>// 見た目の比較では、次の行を有効にして再読み込みする。
-// OSの指定は、Onsen UIが画面を作る前に行う。
-// ons.platform.select(&quot;android&quot;);
-
-let oshiItems = [
-  {
-    name: &quot;好きな音楽&quot;,
-    genre: &quot;音楽&quot;,
-    comment: &quot;通学中に聴くと、元気になります。\n好きな曲を何度も聴いています。&quot;
-  },
-  {
-    name: &quot;カレー&quot;,
-    genre: &quot;食べ物&quot;,
-    comment: &quot;自分の好きな辛さを選べるところが好きです。\nお店ごとの味の違いも楽しめます。&quot;
-  },
-  {
-    name: &quot;公園&quot;,
-    genre: &quot;場所&quot;,
-    comment: &quot;ゆっくり歩いて、気分を変えられます。\n季節によって景色が変わるところも好きです。&quot;
-  }
-];
-
-let isOpeningDetail = false;
-
-// templateの中身は、ページが作られてから取得する。
-document.addEventListener(&quot;init&quot;, function(event) {
-  const page = event.target;
-
-  if (page.id === &quot;page_list&quot;) {
-    renderOshiList();
-  }
-
-  if (page.id === &quot;page_detail&quot;) {
-    const oshi = page.data.oshi;
-
-    document.getElementById(&quot;txt_detail_name&quot;).textContent = oshi.name;
-    document.getElementById(&quot;txt_detail_genre&quot;).textContent = oshi.genre;
-    document.getElementById(&quot;txt_detail_comment&quot;).textContent = oshi.comment;
-  }
-});
-
-function createOshiRowHtml(index) {
-  return &#x27;&lt;ons-list-item id=&quot;item_oshi_&#x27; + index +
-    &#x27;&quot; class=&quot;oshi-card&quot; tappable modifier=&quot;chevron&quot;&gt;&#x27; +
-    &#x27;&lt;div class=&quot;center&quot;&gt;&#x27; +
-    &#x27;&lt;span class=&quot;list-item__title oshi-name&quot; id=&quot;txt_name_&#x27; +
-    index + &#x27;&quot;&gt;&lt;/span&gt;&#x27; +
-    &#x27;&lt;span class=&quot;list-item__subtitle oshi-genre&quot; id=&quot;txt_genre_&#x27; +
-    index + &#x27;&quot;&gt;&lt;/span&gt;&#x27; +
-    &#x27;&lt;/div&gt;&#x27; +
-    &#x27;&lt;/ons-list-item&gt;&#x27;;
-}
-
-function renderOshiList() {
-  const listOshi = document.getElementById(&quot;list_oshi&quot;);
-  let html = &quot;&quot;;
-
-  for (let i = 0; i &lt; oshiItems.length; i++) {
-    html += createOshiRowHtml(i);
-  }
-
-  // HTMLを作り直すとイベントも消えるため、全行を置いてから登録する。
-  listOshi.innerHTML = html;
-
-  for (let i = 0; i &lt; oshiItems.length; i++) {
-    // データに含まれる「&lt;」などを、HTMLではなく文字として表示する。
-    document.getElementById(&quot;txt_name_&quot; + i).textContent = oshiItems[i].name;
-    document.getElementById(&quot;txt_genre_&quot; + i).textContent = oshiItems[i].genre;
-
-    const itemOshi = document.getElementById(&quot;item_oshi_&quot; + i);
-    itemOshi.addEventListener(&quot;click&quot;, function() {
-      openOshiDetail(oshiItems[i]);
-    });
-  }
-}
-
-function openOshiDetail(oshi) {
-  const navApp = document.getElementById(&quot;nav_app&quot;);
-
-  // 続けて押しても、詳細画面を重ねて開かない。
-  if (isOpeningDetail || navApp.topPage.id !== &quot;page_list&quot;) {
-    return;
-  }
-
-  isOpeningDetail = true;
-  document.getElementById(&quot;txt_selected&quot;).textContent = &quot;選択中：&quot; + oshi.name;
-
-  navApp.pushPage(&quot;detail.html&quot;, {
-    data: {
-      oshi: oshi
-    },
-    callback: function() {
-      isOpeningDetail = false;
-    }
-  });
-}</code></pre>
-</details>
 <div class="check"><label><input type="checkbox" data-check="oshi-list-18"><span>続けて2回押しても、戻る1回で一覧になり、次の項目も開けた。</span></label></div>
 
 </section>
 <section id="step-19">
 <p class="step-meta">STEP 19 · コマ4</p><h2>完成版を確認し、自分の好きなものノートにする</h2>
-<p>下の3ファイルは <code>M01OshiList</code> の完成版です。コードをそろえたら、順番に確認します。自分のアレンジを残す場合は、データや色の違いと、処理の違いを分けて見比べます。</p>
+<p>コードは変えません。STEP 18まで書いたコードが、<code>M01OshiList</code> の完成版です。順番に確認します。自分のアレンジを残す場合は、データや色の違いと、処理の違いを分けて見比べます。</p>
 <ol><li>再読み込み直後は3件と「まだ選択していません」が見えます。</li><li>3件を順に開き、それぞれの名前・種類・理由が正しいことを確かめます。戻ると一覧に選択した名前が残ります。</li><li>行を続けて押しても、戻る1回で一覧へ戻ることを確かめます。</li><li>先頭のOS強制指定がコメントになっていることを確認します。STEP 09と同じく、Monacaの端末選択で <code>iPhone 15</code>、<code>Pixel 8</code> を選び、それぞれ <code>Reload</code> を押して一覧・詳細・戻るを比べます。</li><li>長い名前と改行のある理由を試し、狭い幅でも読めることを確かめます。再読み込み後の選択は未選択へ戻ります。</li></ol>
 <h3>アレンジ箇所を記録する</h3><p>この単元は、変更したファイル・箇所と、画面での変化を記録して終えます。公開URLでの提出は、先生が案内するMonaca系の提出回に行います。自分のプロジェクトは残しておきます。</p>
 <p>公開URLで相手へ渡るのは、ソースに書いた配列・HTML・CSSです。今画面で選んでいる項目は渡りません。この単元には保存機能もありません。</p>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎で作ったHTML・CSS・JavaScriptの役割分担は、完成版でも同じです。画面間の移動と値の受け渡しはAndroid・iOSの経験と対応します。今回の新しい考え方は、OS別の見た目を共通のHTMLへ適用するauto-stylingです。自分で変えた内容と、OSによる違いを分けて確かめましょう。</p></div>
-<details><summary>このSTEPの全コード（照合・合流用）</summary>
-<div class="code-head">www/index.html · 全文</div>
-<pre id="code-19-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;ja&quot;&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot;&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;
-  &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src * data: gap: content: https://ssl.gstatic.com; style-src * &#x27;unsafe-inline&#x27;; script-src * &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27;&quot;&gt;
-  &lt;title&gt;好きなものノート&lt;/title&gt;
-  &lt;script src=&quot;components/loader.js&quot;&gt;&lt;/script&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;components/loader.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsenui.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/onsenui@2.12.9/css/onsen-css-components.min.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
-  &lt;script src=&quot;https://unpkg.com/onsenui@2.12.9/js/onsenui.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;js/app.js&quot;&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;ons-navigator id=&quot;nav_app&quot; page=&quot;list.html&quot;&gt;&lt;/ons-navigator&gt;
-
-  &lt;template id=&quot;list.html&quot;&gt;
-    &lt;ons-page id=&quot;page_list&quot;&gt;
-      &lt;ons-toolbar&gt;
-        &lt;div class=&quot;center&quot;&gt;好きなものノート&lt;/div&gt;
-      &lt;/ons-toolbar&gt;
-
-      &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p class=&quot;app-caption&quot;&gt;わたしの好きなもの&lt;/p&gt;
-        &lt;h1 class=&quot;app-heading&quot;&gt;好きな理由を集めよう。&lt;/h1&gt;
-        &lt;p class=&quot;app-description&quot;&gt;音楽、食べ物、場所。好きなものと理由の記録。&lt;/p&gt;
-      &lt;/div&gt;
-
-      &lt;ons-list id=&quot;list_oshi&quot;&gt;&lt;/ons-list&gt;
-      &lt;p id=&quot;txt_selected&quot; class=&quot;app-section app-selection&quot; aria-live=&quot;polite&quot;&gt;まだ選択していません&lt;/p&gt;
-    &lt;/ons-page&gt;
-  &lt;/template&gt;
-
-  &lt;template id=&quot;detail.html&quot;&gt;
-    &lt;ons-page id=&quot;page_detail&quot;&gt;
-      &lt;ons-toolbar&gt;
-        &lt;div class=&quot;left&quot;&gt;
-          &lt;ons-back-button&gt;戻る&lt;/ons-back-button&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;center&quot;&gt;詳細&lt;/div&gt;
-      &lt;/ons-toolbar&gt;
-
-      &lt;div class=&quot;app-section&quot;&gt;
-        &lt;p id=&quot;txt_detail_genre&quot; class=&quot;app-caption&quot;&gt;&lt;/p&gt;
-        &lt;h1 id=&quot;txt_detail_name&quot; class=&quot;app-heading&quot;&gt;&lt;/h1&gt;
-        &lt;p class=&quot;app-label&quot;&gt;好きな理由&lt;/p&gt;
-        &lt;p id=&quot;txt_detail_comment&quot; class=&quot;app-comment&quot;&gt;&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/ons-page&gt;
-  &lt;/template&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-<div class="code-head">www/css/style.css · 全文</div>
-<pre id="code-19-style-css" tabindex="0"><code>.app-section {
-  padding: 20px 16px;
-}
-
-.app-caption {
-  margin: 0 0 12px;
-  color: #765744;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.app-heading {
-  margin: 0 0 16px;
-  font-size: 24px;
-  line-height: 1.5;
-  overflow-wrap: anywhere;
-}
-
-.app-description {
-  margin: 0;
-  color: #555555;
-  font-size: 15px;
-  line-height: 1.7;
-}
-
-.app-selection {
-  margin: 0;
-  color: #765744;
-  line-height: 1.7;
-  overflow-wrap: anywhere;
-}
-
-.app-label {
-  margin: 24px 0 8px;
-  color: #555555;
-  font-size: 14px;
-}
-
-.app-comment {
-  margin: 0;
-  line-height: 1.8;
-  white-space: pre-wrap;
-  overflow-wrap: anywhere;
-}
-
-#list_oshi {
-  background-color: transparent;
-  background-image: none;
-}
-
-.oshi-card {
-  /* 左右の余白を足しても、カードを画面の幅に収める。 */
-  width: auto;
-  margin: 0 16px 12px;
-  border: 1px solid #d8c9bd;
-  border-radius: 12px;
-  background-color: #ffffff;
-}
-
-.oshi-card .list-item__center {
-  /* 一覧の既定罫線を外し、カードの枠で区切る。 */
-  background-image: none;
-  /* 右端の目印（＞）の分を空け、長い名前が目印と重ならないようにする。 */
-  padding-right: 30px;
-}
-
-.oshi-name,
-.oshi-genre {
-  overflow-wrap: anywhere;
-}</code></pre>
-<div class="code-head">www/js/app.js · 全文</div>
-<pre id="code-19-app-js" tabindex="0"><code>// 見た目の比較では、次の行を有効にして再読み込みする。
-// OSの指定は、Onsen UIが画面を作る前に行う。
-// ons.platform.select(&quot;android&quot;);
-
-let oshiItems = [
-  {
-    name: &quot;好きな音楽&quot;,
-    genre: &quot;音楽&quot;,
-    comment: &quot;通学中に聴くと、元気になります。\n好きな曲を何度も聴いています。&quot;
-  },
-  {
-    name: &quot;カレー&quot;,
-    genre: &quot;食べ物&quot;,
-    comment: &quot;自分の好きな辛さを選べるところが好きです。\nお店ごとの味の違いも楽しめます。&quot;
-  },
-  {
-    name: &quot;公園&quot;,
-    genre: &quot;場所&quot;,
-    comment: &quot;ゆっくり歩いて、気分を変えられます。\n季節によって景色が変わるところも好きです。&quot;
-  }
-];
-
-let isOpeningDetail = false;
-
-// templateの中身は、ページが作られてから取得する。
-document.addEventListener(&quot;init&quot;, function(event) {
-  const page = event.target;
-
-  if (page.id === &quot;page_list&quot;) {
-    renderOshiList();
-  }
-
-  if (page.id === &quot;page_detail&quot;) {
-    const oshi = page.data.oshi;
-
-    document.getElementById(&quot;txt_detail_name&quot;).textContent = oshi.name;
-    document.getElementById(&quot;txt_detail_genre&quot;).textContent = oshi.genre;
-    document.getElementById(&quot;txt_detail_comment&quot;).textContent = oshi.comment;
-  }
-});
-
-function createOshiRowHtml(index) {
-  return &#x27;&lt;ons-list-item id=&quot;item_oshi_&#x27; + index +
-    &#x27;&quot; class=&quot;oshi-card&quot; tappable modifier=&quot;chevron&quot;&gt;&#x27; +
-    &#x27;&lt;div class=&quot;center&quot;&gt;&#x27; +
-    &#x27;&lt;span class=&quot;list-item__title oshi-name&quot; id=&quot;txt_name_&#x27; +
-    index + &#x27;&quot;&gt;&lt;/span&gt;&#x27; +
-    &#x27;&lt;span class=&quot;list-item__subtitle oshi-genre&quot; id=&quot;txt_genre_&#x27; +
-    index + &#x27;&quot;&gt;&lt;/span&gt;&#x27; +
-    &#x27;&lt;/div&gt;&#x27; +
-    &#x27;&lt;/ons-list-item&gt;&#x27;;
-}
-
-function renderOshiList() {
-  const listOshi = document.getElementById(&quot;list_oshi&quot;);
-  let html = &quot;&quot;;
-
-  for (let i = 0; i &lt; oshiItems.length; i++) {
-    html += createOshiRowHtml(i);
-  }
-
-  // HTMLを作り直すとイベントも消えるため、全行を置いてから登録する。
-  listOshi.innerHTML = html;
-
-  for (let i = 0; i &lt; oshiItems.length; i++) {
-    // データに含まれる「&lt;」などを、HTMLではなく文字として表示する。
-    document.getElementById(&quot;txt_name_&quot; + i).textContent = oshiItems[i].name;
-    document.getElementById(&quot;txt_genre_&quot; + i).textContent = oshiItems[i].genre;
-
-    const itemOshi = document.getElementById(&quot;item_oshi_&quot; + i);
-    itemOshi.addEventListener(&quot;click&quot;, function() {
-      openOshiDetail(oshiItems[i]);
-    });
-  }
-}
-
-function openOshiDetail(oshi) {
-  const navApp = document.getElementById(&quot;nav_app&quot;);
-
-  // 続けて押しても、詳細画面を重ねて開かない。
-  if (isOpeningDetail || navApp.topPage.id !== &quot;page_list&quot;) {
-    return;
-  }
-
-  isOpeningDetail = true;
-  document.getElementById(&quot;txt_selected&quot;).textContent = &quot;選択中：&quot; + oshi.name;
-
-  navApp.pushPage(&quot;detail.html&quot;, {
-    data: {
-      oshi: oshi
-    },
-    callback: function() {
-      isOpeningDetail = false;
-    }
-  });
-}</code></pre>
-</details>
 <div class="check"><label><input type="checkbox" data-check="oshi-list-19"><span>一覧・詳細・戻る・連続クリック・OSによる差を確認し、自分の変更箇所を記録した。</span></label></div>
 <div class="task"><p class="box-title">アレンジできる場所</p><p><code>oshiItems</code> の名前・種類・理由・件数、HTMLの見出し、CSSの色・余白・文字サイズを変えられます。自分の好きなものと、その理由を自分の言葉で書きます。次に1か所だけ見た目を変え、どのファイルの何を変え、どの画面へ反映されたかを確かめてください。</p></div>
 </section>
