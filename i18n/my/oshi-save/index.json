@@ -179,8 +179,24 @@
       "translation": "<code>www/index.html</code> နှင့် <code>www/css/style.css</code> ကို ဖွင့်ပါ။ အကယ်၍ <code>www/js/app.js</code> မရှိပါက file list ရှိ ဖန်တီးမှုလုပ်ဆောင်ချက်များကို အသုံးပြု၍ <code>www</code> အောက်တွင် <code>js</code> folder နှင့် ၎င်းအတွင်း၌ <code>app.js</code> file ကို ဖန်တီးပါ။"
     },
     {
+      "source": "自分のアレンジがある場合は、変えた文字と色を控えます。3ファイルの中身を、下の開始コードでそれぞれ全体を置き換え、保存してプレビューを再読み込みします。<code>components</code> や <code>res</code> は変更しません。",
+      "translation": "အကယ်၍ မိမိကိုယ်ပိုင် customize ပြုလုပ်ထားသည်များ ရှိပါက ပြောင်းလဲထားသော စာသားများနှင့် အရောင်များကို မှတ်ထားပါ။ ဖိုင် 3 ခု၏ အကြောင်းအရာကို အောက်ပါ starter code ဖြင့် အသီးသီး ဖိုင်တစ်ခုလုံး အစားထိုးပြီး သိမ်းဆည်းကာ preview ကို reload လုပ်ပါ။ <code>components</code> နှင့် <code>res</code> တို့ကို မပြောင်းလဲပါနှင့်။"
+    },
+    {
       "source": "3件の名前を押して詳細を開き、左上の戻るボタンで一覧へ戻ります。戻るボタンは、iOS向けの見た目では「＜ 戻る」、Android向けの見た目では左向きの矢印「←」だけです。タイトルと詳細の組み合わせを確かめます。",
       "translation": "အကြောင်းအရာ 3 ခု၏ အမည်များကို နှိပ်၍ အသေးစိတ်ကို ဖွင့်ပြီး ဘယ်ဘက်အပေါ်ရှိ back ခလုတ်ဖြင့် စာရင်းသို့ ပြန်သွားပါ။ back ခလုတ်သည် iOS ပုံစံတွင် 「＜ 戻る」 (Back) ဟု ပြသပြီး၊ Android ပုံစံတွင် ဘယ်ဘက်ညွှန်မြှား 「←」 သာ ဖြစ်ပါသည်။ ခေါင်းစဉ်နှင့် အသေးစိတ်တွဲဖက်မှု မှန်ကန်ခြင်း ရှိမရှိ စစ်ဆေးပါ။"
+    },
+    {
+      "source": "www/index.html · 全体を置き換える",
+      "translation": "www/index.html · ဖိုင်တစ်ခုလုံး အစားထိုးရန်"
+    },
+    {
+      "source": "www/css/style.css · 全体を置き換える",
+      "translation": "www/css/style.css · ဖိုင်တစ်ခုလုံး အစားထိုးရန်"
+    },
+    {
+      "source": "www/js/app.js · 全体を置き換える",
+      "translation": "www/js/app.js · ဖိုင်တစ်ခုလုံး အစားထိုးရန်"
     },
     {
       "source": "開始コードの役割を、次の順で追いましょう。新しいファイル名を <code>detail.html</code> として作る操作は不要です。これは <code>index.html</code> の中の <code>template</code> の<code>id</code>です。",
@@ -255,6 +271,30 @@
       "translation": "အချက်အလက်ထည့်သွင်းသည့် screen ပြုလုပ်ခြင်း"
     },
     {
+      "source": "HTMLに、一覧から入力画面を開くボタンと、入力画面の <code>add.html</code> の<code>template</code>を加えます。まず、一覧の説明文 <code>音楽、食べ物、場所。好きなものと理由の記録。</code> の行の下に、ボタンと案内用の段落を足します。",
+      "translation": "HTML တွင် စာရင်းမှ input screen ကို ဖွင့်မည့် ခလုတ်နှင့် input screen ဖြစ်သော <code>add.html</code> ၏ <code>template</code> ကို ထည့်ပါမည်။ ပထမဦးစွာ စာရင်း၏ ရှင်းလင်းချက်စာသား <code>音楽、食べ物、場所。好きなものと理由の記録。</code> လိုင်း၏ အောက်တွင် ခလုတ်နှင့် လမ်းညွှန်စာပိုဒ်ကို ထည့်ပါ။"
+    },
+    {
+      "source": "www/index.html · 追加 · 一覧の説明文 app-description の下",
+      "translation": "www/index.html · ထည့်ရန် · စာရင်း၏ ရှင်းလင်းချက်စာသား app-description ၏ အောက်"
+    },
+    {
+      "source": "続けて、<code>&lt;template id=\"detail.html\"&gt;</code> の行の上に、入力画面の<code>template</code>を足します。最後の <code>&lt;/template&gt;</code> の下に空行を1行入れ、詳細の<code>template</code>と分けます。名前・種類の <code>input</code> と、好きな理由の <code>textarea</code> を置きます。<code>label</code> の<code>for</code>と入力欄の<code>id</code>が対応します。",
+      "translation": "ဆက်လက်၍ <code>&lt;template id=\"detail.html\"&gt;</code> လိုင်း၏ အပေါ်တွင် input screen ၏ <code>template</code> ကို ထည့်ပါ။ နောက်ဆုံးရှိ <code>&lt;/template&gt;</code> ၏ အောက်တွင် လိုင်းအလွတ် တစ်လိုင်း ထည့်ပြီး detail screen ၏ <code>template</code> နှင့် ခွဲထားပါ။ အမည်နှင့် အမျိုးအစားအတွက် <code>input</code> တစ်ခုစီနှင့် ကြိုက်နှစ်သက်ရသည့် အကြောင်းပြချက်အတွက် <code>textarea</code> တစ်ခုကို ထားရှိပါ။ <code>label</code> ၏ <code>for</code> နှင့် input field ၏ <code>id</code> တို့သည် ကိုက်ညီမှု ရှိပါသည်။"
+    },
+    {
+      "source": "www/index.html · 追加 · &lt;template id=\"detail.html\"&gt; の上",
+      "translation": "www/index.html · ထည့်ရန် · &lt;template id=\"detail.html\"&gt; ၏ အပေါ်"
+    },
+    {
+      "source": "CSSは、ファイルの末尾（<code>.oshi-genre</code> を含む指定の閉じかっこの下）に、空行を1行あけて次の指定を足します。",
+      "translation": "CSS တွင် ဖိုင်၏ အဆုံး (<code>.oshi-genre</code> ပါဝင်သော သတ်မှတ်ချက်၏ အပိတ်ကွင်း၏ အောက်) တွင် လိုင်းအလွတ် တစ်လိုင်း ချန်ပြီး အောက်ပါ သတ်မှတ်ချက်များကို ထည့်ပါ။"
+    },
+    {
+      "source": "www/css/style.css · 追加 · ファイルの末尾",
+      "translation": "www/css/style.css · ထည့်ရန် · ဖိုင်၏ အဆုံး"
+    },
+    {
       "source": "CSSの <code>.app-input</code> は幅を100%にし、<code>box-sizing: border-box</code> で<code>padding</code>と枠をその幅の内側へ収めます。<code>font: inherit</code> で文字を周囲とそろえ、<code>focus</code>の<code>outline</code>で選択中の欄を見分けます。ほかに加わるクラスのうち、このSTEPの画面に当たる4つは次の表のとおりです。",
       "translation": "CSS ရှိ <code>.app-input</code> သည် width ကို 100% သတ်မှတ်ပေးပြီး <code>box-sizing: border-box</code> ဖြင့် <code>padding</code> နှင့် border ကို ထို width ၏ အတွင်းဘက်သို့ ထည့်သွင်းပေးပါသည်။ <code>font: inherit</code> ဖြင့် စာလုံးကို ပတ်ဝန်းကျင်နှင့် ကိုက်ညီစေပြီး <code>focus</code> ပေါ်ရှိ <code>outline</code> ဖြင့် ရွေးချယ်ထားသော field ကို ခွဲခြားသိရှိစေပါသည်။ ထပ်မံထည့်သွင်းထားသော အခြား class များအနက် ဤ STEP ၏ screen နှင့် သက်ဆိုင်သော 4 ခုမှာ အောက်ပါဇယားအတိုင်း ဖြစ်ပါသည်။"
     },
@@ -307,12 +347,48 @@
       "translation": "<code>.reset-section</code>၊ <code>#panel_reset ons-button</code> နှင့် <code>.is-hidden</code> ဟူသော သတ်မှတ်ချက် 3 ခုသည် STEP 08 တွင် ထည့်သွင်းမည့် reset အတည်ပြုချက် panel အတွက် ဖြစ်ပါသည်။ ဤ STEP ၏ HTML တွင် ၎င်းတို့နှင့် သက်ဆိုင်သော element များ မရှိသေးပါ။"
     },
     {
+      "source": "JavaScriptは4か所を変えます。まず、<code>let oshiItems = [</code> の行から <code>let isOpeningDetail = false;</code> の行までを、次のコードに置き換えます。初期データの配列を自分の好きなものに変えている場合は、控えてから置き換え、<code>createInitialItems</code> の中の配列へ書き戻します。",
+      "translation": "JavaScript တွင် နေရာ 4 ခုကို ပြောင်းလဲပါမည်။ ပထမဦးစွာ <code>let oshiItems = [</code> လိုင်းမှ <code>let isOpeningDetail = false;</code> လိုင်းအထိကို အောက်ပါ code ဖြင့် အစားထိုးပါ။ initial data ၏ array ကို မိမိကြိုက်နှစ်သက်သည့်အရာများသို့ ပြောင်းလဲထားပါက မှတ်ထားပြီးမှ အစားထိုးကာ <code>createInitialItems</code> အတွင်းရှိ array ထဲသို့ ပြန်ရေးပါ။"
+    },
+    {
+      "source": "www/js/app.js · 置き換え · let oshiItems = [ から let isOpeningDetail = false; まで",
+      "translation": "www/js/app.js · အစားထိုးရန် · let oshiItems = [ မှ let isOpeningDetail = false; အထိ"
+    },
+    {
       "source": "初期データは <code>createInitialItems</code> が新しい配列を返す形にまとめました。後で初期化したときにも同じ内容を作り直せるようにするためです。呼び出しのたびに新しい配列になる点を、<code>return</code>の位置と一緒に読みます。",
       "translation": "မူလ initial data ကို <code>createInitialItems</code> က array အသစ်တစ်ခု ပြန်ပေးသည့် ပုံစံဖြင့် စုစည်းထားပါသည်။ နောင်တွင် reset ပြုလုပ်သည့်အခါ တူညီသော အကြောင်းအရာကို ပြန်လည်ဖန်တီးနိုင်စေရန် ဖြစ်ပါသည်။ call လုပ်သည့် အကြိမ်တိုင်းတွင် array အသစ်တစ်ခု ဖြစ်ပေါ်လာသည့် အချက်ကို <code>return</code> ၏ တည်နေရာနှင့်အတူ လေ့လာဖတ်ရှုပါ။"
     },
     {
+      "source": "移動中の旗の名前は、STEP 00の <code>isOpeningDetail</code> から <code>isOpeningPage</code> に変えます。詳細を開くときだけでなく入力画面を開くときにも使うので、「詳細を開いている最中」ではなく「どちらかのページを開いている最中」と読める名前にするためです。宣言は上のコードで変えたので、残りは<code>openOshiDetail</code>の中の3か所です。",
+      "translation": "ကူးပြောင်းမှု flag ၏ အမည်ကို STEP 00 ရှိ <code>isOpeningDetail</code> မှ <code>isOpeningPage</code> သို့ ပြောင်းလဲပါမည်။ detail screen ကို ဖွင့်သည့်အခါသာမက input screen ကို ဖွင့်သည့်အခါတွင်လည်း အသုံးပြုသောကြောင့် \"detail screen ကို ဖွင့်နေစဉ်\" အစား \"မည်သည့် page ကိုမဆို ဖွင့်နေစဉ်\" ဟု အဓိပ္ပာယ်ရစေရန် ဖြစ်ပါသည်။ declaration ကို အပေါ်ရှိ code တွင် ပြောင်းလဲပြီးဖြစ်သောကြောင့် ကျန်ရှိသည်မှာ <code>openOshiDetail</code> အတွင်းရှိ နေရာ 3 ခု ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "次に、<code>init</code> の処理を、直前のコメント <code>// templateの中身は、ページが作られてから取得する。</code> の行から、閉じる <code>});</code> の行までを置き換えます。一覧の<code>init</code>では、<code>txt_storage</code> に文を入れ、<code>btn_open_add</code> へ<code>openAddPage</code>を登録します。詳細の<code>init</code>は、<code>const oshi</code> の下の空行がなくなるだけで、処理は変わりません。",
+      "translation": "ထို့နောက် <code>init</code> လုပ်ဆောင်ချက်ကို ၎င်း၏ ရှေ့ရှိ comment <code>// templateの中身は、ページが作られてから取得する。</code> လိုင်းမှ ပိတ်သော <code>});</code> လိုင်းအထိ အစားထိုးပါ။ စာရင်း၏ <code>init</code> တွင် <code>txt_storage</code> ထဲသို့ စာသားထည့်ပြီး <code>btn_open_add</code> တွင် <code>openAddPage</code> ကို မှတ်ပုံတင်ပါသည်။ detail ၏ <code>init</code> တွင် <code>const oshi</code> ၏ အောက်ရှိ လိုင်းအလွတ် ပျောက်သွားရုံသာ ဖြစ်ပြီး လုပ်ဆောင်ချက် မပြောင်းလဲပါ။"
+    },
+    {
+      "source": "www/js/app.js · 置き換え · init の処理（直前のコメントから }); まで）",
+      "translation": "www/js/app.js · အစားထိုးရန် · init လုပ်ဆောင်ချက် (ရှေ့ရှိ comment မှ }); အထိ)"
+    },
+    {
       "source": "一覧のボタンの下の <code>txt_storage</code> には <code>この段階では、追加した内容は保存されません。</code>、入力画面のボタンの下の注記には <code>この段階では、追加した内容は再読み込みすると消えます。</code> と出します。追加した内容がまだ残らないことを、画面で先に伝えるためです。保存を作るSTEP 06で、どちらの文も書き換えます。",
       "translation": "စာရင်းရှိ ခလုတ်အောက်မှ <code>txt_storage</code> တွင် <code>この段階では、追加した内容は保存されません。</code> (At this stage, added entries are not saved.) ဟု ပြသပြီး၊ input screen ရှိ ခလုတ်အောက်မှ မှတ်ချက်တွင် <code>この段階では、追加した内容は再読み込みすると消えます。</code> (At this stage, added entries disappear when you reload.) ဟု ပြသပါမည်။ ထည့်သွင်းထားသော အချက်အလက်များ မကျန်ရှိသေးကြောင်းကို screen ပေါ်တွင် ကြိုတင်အသိပေးရန် ဖြစ်ပါသည်။ သိမ်းဆည်းမှုကို ပြုလုပ်မည့် STEP 06 တွင် စာသားနှစ်ခုစလုံးကို ပြန်လည်ရေးသားပါမည်။"
+    },
+    {
+      "source": "3つ目に、<code>function openOshiDetail(oshi) {</code> の行から、その閉じかっこ <code>}</code> の行までを置き換えます。変わるのは、<code>isOpeningDetail</code> を <code>isOpeningPage</code> にした3行だけです。",
+      "translation": "တတိယအနေဖြင့် <code>function openOshiDetail(oshi) {</code> လိုင်းမှ ၎င်း၏ အပိတ်ကွင်း <code>}</code> လိုင်းအထိ အစားထိုးပါ။ ပြောင်းလဲသည်မှာ <code>isOpeningDetail</code> ကို <code>isOpeningPage</code> သို့ ပြောင်းထားသော လိုင်း 3 လိုင်းသာ ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "www/js/app.js · 置き換え · function openOshiDetail から、その閉じかっこまで",
+      "translation": "www/js/app.js · အစားထိုးရန် · function openOshiDetail မှ ၎င်း၏ အပိတ်ကွင်းအထိ"
+    },
+    {
+      "source": "最後に、ファイルの末尾（<code>openOshiDetail</code> の閉じかっこの下）に、空行を1行あけて <code>openAddPage</code> を足します。<code>pushPage(\"add.html\", ...)</code> で入力画面へ進みます。詳細と同じ移動中の旗を共有するため、片方を開いている最中にもう片方は開きません。",
+      "translation": "နောက်ဆုံးတွင် ဖိုင်၏ အဆုံး (<code>openOshiDetail</code> ၏ အပိတ်ကွင်း၏ အောက်) တွင် လိုင်းအလွတ် တစ်လိုင်း ချန်ပြီး <code>openAddPage</code> ကို ထည့်ပါ။ <code>pushPage(\"add.html\", ...)</code> ဖြင့် input screen သို့ သွားပါမည်။ detail screen နှင့် တူညီသော ကူးပြောင်းမှု flag ကို မျှဝေအသုံးပြုထားသောကြောင့် တစ်ဖက်ကို ဖွင့်နေစဉ် အခြားတစ်ဖက်ကို ဖွင့်၍မရပါ။"
+    },
+    {
+      "source": "www/js/app.js · 追加 · ファイルの末尾",
+      "translation": "www/js/app.js · ထည့်ရန် · ဖိုင်၏ အဆုံး"
     },
     {
       "source": "保存・再読み込み後に <code>好きなものを追加</code> を押します。",
@@ -341,6 +417,26 @@
     {
       "source": "入力した文字を確認する",
       "translation": "ထည့်သွင်းထားသော စာသားကို စစ်ဆေးခြင်း"
+    },
+    {
+      "source": "HTMLでは、入力画面の <code>btn_save_oshi</code> の1行を置き換えて、追加ボタンから <code>disabled</code> を外します。",
+      "translation": "HTML တွင် input screen ရှိ <code>btn_save_oshi</code> လိုင်း တစ်လိုင်းကို အစားထိုးပြီး ထည့်သွင်းသည့်ခလုတ်မှ <code>disabled</code> ကို ဖယ်ရှားပါ။"
+    },
+    {
+      "source": "www/index.html · 置き換え · btn_save_oshi の1行",
+      "translation": "www/index.html · အစားထိုးရန် · btn_save_oshi လိုင်း တစ်လိုင်း"
+    },
+    {
+      "source": "JSでは、<code>init</code> の処理の中の <code>if (page.id === \"page_detail\") {</code> の行の上に、<code>page_add</code> の<code>init</code>で<code>addOshi</code>を登録する処理を足します。足した <code>}</code> の下に空行を1行入れます。関数名を渡しているので、登録した瞬間ではなくボタンを押したときに動きます。",
+      "translation": "JS တွင် <code>init</code> လုပ်ဆောင်ချက်အတွင်းရှိ <code>if (page.id === \"page_detail\") {</code> လိုင်း၏ အပေါ်တွင် <code>page_add</code> ၏ <code>init</code> ၌ <code>addOshi</code> ကို မှတ်ပုံတင်သည့် code ကို ထည့်ပါ။ ထည့်လိုက်သော <code>}</code> ၏ အောက်တွင် လိုင်းအလွတ် တစ်လိုင်း ထည့်ပါ။ function အမည်ကို ပေးပို့ထားသောကြောင့် မှတ်ပုံတင်သည့်အချိန်တွင် မဟုတ်ဘဲ ခလုတ်ကို နှိပ်သည့်အခါမှ အလုပ်လုပ်ပါသည်။"
+    },
+    {
+      "source": "www/js/app.js · 追加 · if (page.id === \"page_detail\") { の上",
+      "translation": "www/js/app.js · ထည့်ရန် · if (page.id === \"page_detail\") { ၏ အပေါ်"
+    },
+    {
+      "source": "ファイルの末尾（<code>openAddPage</code> の閉じかっこの下）に、空行を1行あけて <code>addOshi</code> を足します。",
+      "translation": "ဖိုင်၏ အဆုံး (<code>openAddPage</code> ၏ အပိတ်ကွင်း၏ အောက်) တွင် လိုင်းအလွတ် တစ်လိုင်း ချန်ပြီး <code>addOshi</code> ကို ထည့်ပါ။"
     },
     {
       "source": "<code>addOshi</code>は、入力欄を<code>id</code>で取得し、<code>value</code> で今の文字を読みます。<code>trim()</code> は前後の空白を取り除きます。3つのどれかが空ならメッセージを表示して<code>return</code>し、残りの処理へ進みません。",
@@ -377,6 +473,18 @@
     {
       "source": "配列へ追加して戻る",
       "translation": "array ထဲသို့ ထည့်သွင်းပြီး ပြန်သွားခြင်း"
+    },
+    {
+      "source": "JSの<code>addOshi</code>で、最後の <code>txtMessage.textContent = \"入力を確認しました：\" + name;</code> の1行を、次の5行に置き換えます。入力確認だけの行を、配列へ追加して一覧を描き直す処理へ替えます。",
+      "translation": "JS ၏ <code>addOshi</code> တွင် နောက်ဆုံးရှိ <code>txtMessage.textContent = \"入力を確認しました：\" + name;</code> လိုင်း တစ်လိုင်းကို အောက်ပါ လိုင်း 5 လိုင်းဖြင့် အစားထိုးပါ။ ထည့်သွင်းမှုကို စစ်ဆေးရုံသာ လုပ်ဆောင်သည့် လိုင်းကို array ထဲသို့ ထည့်သွင်းပြီး စာရင်းကို ပြန်ဆွဲသည့် လုပ်ဆောင်ချက်ဖြင့် အစားထိုးပါသည်။"
+    },
+    {
+      "source": "www/js/app.js · 置き換え · 「入力を確認しました：」の1行",
+      "translation": "www/js/app.js · အစားထိုးရန် · 「入力を確認しました：」 (Input confirmed:) ပါသော လိုင်း တစ်လိုင်း"
+    },
+    {
+      "source": "<code>oshiItems.push({ name: name, genre: genre, comment: comment })</code> の左側はデータの項目名、右側は入力欄から読んだ変数です。",
+      "translation": "<code>oshiItems.push({ name: name, genre: genre, comment: comment })</code> ၏ ဘယ်ဘက်ခြမ်းသည် data field အမည်ဖြစ်ပြီး ညာဘက်ခြမ်းသည် input field မှ ဖတ်ရှုထားသော variable ဖြစ်ပါသည်။"
     },
     {
       "source": "次に<code>renderOshiList</code>を呼びます。この関数は<code>innerHTML</code>で行を置き直した後に、<code>textContent</code>の設定とクリックの登録をやり直します。古い行に登録したイベントは、新しい行へ自動では移らないためです。",
@@ -417,6 +525,10 @@
     {
       "source": "確認とアレンジ",
       "translation": "စစ်ဆေးခြင်းနှင့် customize ပြုလုပ်ခြင်း"
+    },
+    {
+      "source": "コードは変えません。STEP 03まで書いたコードが、第5コマ終了時の基準です。今日の終わりは、作った範囲を使って自分の表現に変えます。",
+      "translation": "code ကို မပြောင်းလဲပါ။ STEP 03 အထိ ရေးသားခဲ့သော code သည် အတန်းချိန် 5 ပြီးဆုံးချိန်ရှိ စံ ဖြစ်ပါသည်။ ယနေ့ အဆုံးပိုင်းတွင် ပြုလုပ်ခဲ့သည့် အပိုင်းအတွင်းမှ မိမိကိုယ်ပိုင် ဖော်ပြပုံသို့ ပြောင်းလဲပါမည်။"
     },
     {
       "source": "変える場所",
@@ -473,6 +585,10 @@
     {
       "source": "配列とJSONの違いを読む",
       "translation": "array နှင့် JSON အကြား ကွာခြားချက်ကို ဖတ်ရှုခြင်း"
+    },
+    {
+      "source": "Monaca クラウド IDEで同じ好きなものノートを開きます。開始状態は「入力して追加できるが、再読み込みすると初期データに戻る」です。このSTEPでは、コードは変えません。保存する前に、画面で使う配列と、保存へ渡す文字列を区別します。",
+      "translation": "Monaca クラウド IDE တွင် တူညီသော ကြိုက်နှစ်သက်ရာများ မှတ်စုကို ဖွင့်ပါ။ စတင်သည့် အခြေအနေမှာ \"ရိုက်ထည့်၍ ထည့်သွင်းနိုင်သော်လည်း reload ပြုလုပ်သည့်အခါ initial data သို့ ပြန်ရောက်သွားသည်\" ဖြစ်ပါသည်။ ဤ STEP တွင် code ကို မပြောင်းလဲပါ။ မသိမ်းဆည်းမီ screen တွင် အသုံးပြုမည့် array နှင့် storage သို့ ပေးပို့မည့် string တို့ကို ခွဲခြားသိရှိထားပါ။"
     },
     {
       "source": "<strong>JSONは、値を文字で表すための決まった形式</strong>です。JavaScriptの配列やオブジェクトそのものではありません。<code>JSON.stringify</code> は値をJSONの文字列にし、<code>JSON.parse</code> はJSONの文字列から値を復元します。今回の保存対象は文字列の3項目を持つオブジェクトの配列です。",
@@ -547,6 +663,50 @@
       "translation": "string အဖြစ် ပြောင်းလဲသိမ်းဆည်းခြင်း"
     },
     {
+      "source": "JSの先頭近く、<code>// 初期化のたびに新しい配列を返し、追加した内容と混ぜない。</code> の行の上に <code>STORAGE_KEY</code> を足し、その下に空行を1行入れます。保存内容を探すための名前を1か所で管理します。この名前を途中で変更すると、以前のキーで保存した内容は見えなくなります。",
+      "translation": "JS ၏ အစပိုင်းအနီးရှိ <code>// 初期化のたびに新しい配列を返し、追加した内容と混ぜない。</code> လိုင်း၏ အပေါ်တွင် <code>STORAGE_KEY</code> ကို ထည့်ပြီး ၎င်း၏ အောက်တွင် လိုင်းအလွတ် တစ်လိုင်း ထည့်ပါ။ သိမ်းဆည်းထားသော အကြောင်းအရာကို ရှာဖွေမည့် အမည်ကို နေရာတစ်ခုတည်းတွင် စီမံခန့်ခွဲပါသည်။ ဤအမည်ကို လမ်းခုလတ်တွင် ပြောင်းလဲလိုက်ပါက ယခင် key ဖြင့် သိမ်းဆည်းထားသော အရာများကို တွေ့မြင်နိုင်တော့မည် မဟုတ်ပါ။"
+    },
+    {
+      "source": "www/js/app.js · 追加 · // 初期化のたびに新しい配列を返し、追加した内容と混ぜない。 の上",
+      "translation": "www/js/app.js · ထည့်ရန် · // 初期化のたびに新しい配列を返し、追加した内容と混ぜない。 ၏ အပေါ်"
+    },
+    {
+      "source": "<code>let isOpeningPage = false;</code> の行の下に、保存してよいかを表す <code>let canSave = true;</code> を足します。",
+      "translation": "<code>let isOpeningPage = false;</code> လိုင်း၏ အောက်တွင် သိမ်းဆည်းခွင့် ရှိမရှိကို ဖော်ပြသည့် <code>let canSave = true;</code> ကို ထည့်ပါ။"
+    },
+    {
+      "source": "www/js/app.js · 追加 · let isOpeningPage = false; の下",
+      "translation": "www/js/app.js · ထည့်ရန် · let isOpeningPage = false; ၏ အောက်"
+    },
+    {
+      "source": "一覧の<code>init</code>は、<code>if (page.id === \"page_list\") {</code> の行から、その閉じかっこ <code>}</code> の行までを置き換えます。<code>txt_storage</code> の文を替え、<code>renderOshiList();</code> の下で <code>btn_open_add</code> の <code>disabled</code> を <code>!canSave</code> にします。",
+      "translation": "စာရင်း၏ <code>init</code> အတွက် <code>if (page.id === \"page_list\") {</code> လိုင်းမှ ၎င်း၏ အပိတ်ကွင်း <code>}</code> လိုင်းအထိ အစားထိုးပါ။ <code>txt_storage</code> ၏ စာသားကို ပြောင်းပြီး <code>renderOshiList();</code> ၏ အောက်တွင် <code>btn_open_add</code> ၏ <code>disabled</code> ကို <code>!canSave</code> ဟု သတ်မှတ်ပါသည်။"
+    },
+    {
+      "source": "www/js/app.js · 置き換え · if (page.id === \"page_list\") { から、その閉じかっこまで",
+      "translation": "www/js/app.js · အစားထိုးရန် · if (page.id === \"page_list\") { မှ ၎င်း၏ အပိတ်ကွင်းအထိ"
+    },
+    {
+      "source": "<code>function openAddPage() {</code> の行から、その閉じかっこ <code>}</code> の行までを置き換え、最初の条件に <code>!canSave</code> を加えます。",
+      "translation": "<code>function openAddPage() {</code> လိုင်းမှ ၎င်း၏ အပိတ်ကွင်း <code>}</code> လိုင်းအထိ အစားထိုးပြီး ပထမဆုံး condition တွင် <code>!canSave</code> ကို ထည့်ပါ။"
+    },
+    {
+      "source": "www/js/app.js · 置き換え · function openAddPage から、その閉じかっこまで",
+      "translation": "www/js/app.js · အစားထိုးရန် · function openAddPage မှ ၎င်း၏ အပိတ်ကွင်းအထိ"
+    },
+    {
+      "source": "<code>canSave</code> が <code>false</code> なら、<code>openAddPage</code>と<code>addOshi</code>の最初の条件で何もせずに戻ります。このSTEPには <code>canSave</code> を<code>false</code>にする行がないので、常に<code>true</code>のままで、画面の動きは変わりません。<code>false</code>にするのは、次のSTEPで保存内容を読み込めなかったときです。そのまま追加できると、読めなかった保存内容を、初期データに1件足した配列で上書きしてしまいます。保存の処理を書くこのSTEPで、保存へ進む入口に確認を置いておけば、次のSTEPでは読み込みの処理を足すだけで済みます。",
+      "translation": "<code>canSave</code> သည် <code>false</code> ဖြစ်ပါက <code>openAddPage</code> နှင့် <code>addOshi</code> ၏ ပထမဆုံး condition တွင် မည်သည့်အရာမျှ မလုပ်ဘဲ ပြန်ထွက်ပါမည်။ ဤ STEP တွင် <code>canSave</code> ကို <code>false</code> သတ်မှတ်သည့် လိုင်းမပါရှိသောကြောင့် အမြဲတမ်း <code>true</code> အဖြစ် ရှိနေပြီး screen ၏ လှုပ်ရှားဆောင်ရွက်မှု မပြောင်းလဲပါ။ <code>false</code> သို့ ပြောင်းလဲမည့်အချိန်မှာ နောက် STEP တွင် သိမ်းဆည်းထားသော အရာများကို ဖတ်ယူ၍မရသည့် အခါဖြစ်ပါသည်။ ထိုအခြေအနေတွင် တိုက်ရိုက် ထည့်သွင်းခွင့်ပြုလိုက်ပါက ဖတ်ယူ၍မရသော သိမ်းဆည်းထားသည့် အကြောင်းအရာများကို initial data ပေါ်တွင် 1 ခု ထပ်ပေါင်းထားသည့် array ဖြင့် overwrite လုပ်ပစ်မည် ဖြစ်ပါသည်။ သိမ်းဆည်းမှု ရေးသားသည့် ဤ STEP တွင် သိမ်းဆည်းမှုဆီသို့ သွားမည့် အဝင်ဝ၌ စစ်ဆေးချက် ထားရှိခြင်းဖြင့် နောက် STEP တွင် ဖတ်ယူမှု လုပ်ဆောင်ချက်ကို ထည့်သွင်းရုံဖြင့် လုံလောက်မည် ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "最後に、ファイルの末尾にある <code>function addOshi() {</code> の行から、その閉じかっこ <code>}</code> の行までを置き換えます。",
+      "translation": "နောက်ဆုံးတွင် ဖိုင်၏ အဆုံးရှိ <code>function addOshi() {</code> လိုင်းမှ ၎င်း၏ အပိတ်ကွင်း <code>}</code> လိုင်းအထိ အစားထိုးပါ။"
+    },
+    {
+      "source": "www/js/app.js · 置き換え · function addOshi から、その閉じかっこまで",
+      "translation": "www/js/app.js · အစားထိုးရန် · function addOshi မှ ၎င်း၏ အပိတ်ကွင်းအထိ"
+    },
+    {
       "source": "<code>addOshi</code>では、<code>oshiItems.slice()</code> で配列の浅いコピー<code>nextItems</code>を作り、そこへ新しい1件を追加します。この処理では既存のオブジェクトの項目は変更せず、配列へ追加するだけなので、配列のコピーで足ります。",
       "translation": "<code>addOshi</code> တွင် <code>oshiItems.slice()</code> ဖြင့် array ၏ shallow copy ဖြစ်သော <code>nextItems</code> ကို ပြုလုပ်ပြီး ၎င်းထဲသို့ item အသစ်တစ်ခုကို ထည့်သွင်းပါသည်။ ဤလုပ်ဆောင်ချက်တွင် ရှိပြီးသား object များ၏ field များကို ပြင်ဆင်ခြင်း မပြုဘဲ array ထဲသို့သာ ထည့်သွင်းသောကြောင့် array ၏ copy ပြုလုပ်ရုံဖြင့် လုံလောက်ပါသည်။"
     },
@@ -599,6 +759,18 @@
       "translation": "ထည့်သွင်းထားသည်များကို မဖျက်ဘဲ နောက်တစ်ကြိမ် စစ်ဆေးခြင်း သို့မဟုတ် ပြန်လည်ကြိုးစားခြင်း ပြုလုပ်နိုင်စေရန်။"
     },
     {
+      "source": "画面の文も、保存ができるようになったことに合わせて替えます。HTMLでは、入力画面の <code>btn_save_oshi</code> の行から、その下の <code>app-note</code> の行までの2行を置き換えます。",
+      "translation": "သိမ်းဆည်းနိုင်လာသည်နှင့်အမျှ screen ပေါ်ရှိ စာသားများကိုလည်း လိုက်လျောညီထွေ ပြောင်းလဲပါမည်။ HTML တွင် input screen ရှိ <code>btn_save_oshi</code> လိုင်းမှ ၎င်း၏ အောက်ရှိ <code>app-note</code> လိုင်းအထိ လိုင်း 2 လိုင်းကို အစားထိုးပါ။"
+    },
+    {
+      "source": "www/index.html · 置き換え · btn_save_oshi の行から app-note の行まで",
+      "translation": "www/index.html · အစားထိုးရန် · btn_save_oshi လိုင်းမှ app-note လိုင်းအထိ"
+    },
+    {
+      "source": "入力画面のボタンは <code>追加する</code> から <code>追加して保存</code> に変わります。押すと、配列への追加と一緒に保存まで行うことを、ボタンの文字で示すためです。STEP 01から出していた2つの文は、保存できるようになると事実と合わなくなるので、一覧の <code>txt_storage</code> は <code>保存はできますが、このSTEPではまだ読み込みません。</code> に（上で置き換えた一覧の<code>init</code>の中です）、入力画面のボタンの下の注記は <code>保存先は、このブラウザの同じプレビューです。公開URLに入力内容は含まれません。</code> に替えます。保存した内容はこのブラウザにだけ残り、STEP 12で発行する公開URLから取り込んだ人には届かないためです。",
+      "translation": "input screen ရှိ ခလုတ်သည် <code>追加する</code> (Add) မှ <code>追加して保存</code> (Add and save) သို့ ပြောင်းလဲသွားပါမည်။ နှိပ်လိုက်ပါက array ထဲသို့ ထည့်သွင်းခြင်းနှင့်အတူ သိမ်းဆည်းခြင်းကိုပါ လုပ်ဆောင်မည်ဖြစ်ကြောင်း ခလုတ်စာသားဖြင့် ဖော်ပြရန် ဖြစ်ပါသည်။ STEP 01 မှ ပြသထားသော စာသား 2 ခုသည် သိမ်းဆည်းနိုင်လာသည့်အခါ လက်တွေ့နှင့် ကိုက်ညီမှု မရှိတော့သောကြောင့် စာရင်းရှိ <code>txt_storage</code> ကို <code>保存はできますが、このSTEPではまだ読み込みません。</code> (Saving works, but this STEP does not load it yet.) သို့လည်းကောင်း (အပေါ်တွင် အစားထိုးခဲ့သော စာရင်း၏ <code>init</code> အတွင်း ဖြစ်ပါသည်)၊ input screen ရှိ ခလုတ်အောက်မှ မှတ်ချက်ကို <code>保存先は、このブラウザの同じプレビューです。公開URLに入力内容は含まれません。</code> (The save location is this same preview in this browser. Your input is not included in the import URL.) သို့လည်းကောင်း ပြောင်းလဲပါမည်။ သိမ်းဆည်းထားသော အကြောင်းအရာများသည် ဤ browser တွင်သာ ကျန်ရှိမည်ဖြစ်ပြီး STEP 12 တွင် ထုတ်ပေးမည့် import URL မှတစ်ဆင့် import လုပ်သူများထံသို့ ရောက်ရှိမည် မဟုတ်သောကြောင့် ဖြစ်ပါသည်။"
+    },
+    {
       "source": "入力画面のボタンが <code>追加して保存</code> になったことを確かめてから、1件追加して一覧へ戻り、<code>件をこのブラウザに保存しました。</code> の文を確かめます。このSTEPでは保存までなので、再読み込み時の表示はまだ初期データです。保存されていないと決めつけず、次のSTEPで読み込む側を作ります。また、このSTEPで再読み込みしてからもう一度追加すると、前に保存した内容は、ソースの初期データと新しい1件で上書きされます。保存した内容をまだ読み込んでいない配列に、新しい1件を足して保存するためです。次のSTEPで読み込めるのは、最後に保存した内容です。",
       "translation": "input screen ရှိ ခလုတ်သည် <code>追加して保存</code> (Add and save) သို့ ပြောင်းလဲသွားကြောင်း အတည်ပြုပြီးနောက် item တစ်ခု ထည့်သွင်းပြီး စာရင်းသို့ ပြန်သွားကာ <code>件をこのブラウザに保存しました。</code> (items saved in this browser.) ဟူသော စာသားကို စစ်ဆေးပါ။ ဤ STEP တွင် သိမ်းဆည်းခြင်းအထိသာ လုပ်ဆောင်ထားသဖြင့် reload ပြုလုပ်သည့်အခါ ပြသမည့်အရာမှာ initial data ပင် ဖြစ်နေပါသေးသည်။ သိမ်းဆည်းမှု မရှိဟု မယူဆပါနှင့်၊ ဖတ်ယူမည့်အပိုင်းကို နောက် STEP တွင် ပြုလုပ်ပါမည်။ ထို့အပြင် ဤ STEP တွင် reload လုပ်ပြီးမှ နောက်တစ်ကြိမ် ထပ်မံထည့်သွင်းပါက ယခင်က သိမ်းဆည်းထားသော အရာများကို source code ရှိ initial data နှင့် item အသစ်တစ်ခုဖြင့် overwrite လုပ်သွားပါမည်။ အဘယ်ကြောင့်ဆိုသော် သိမ်းဆည်းထားသော အကြောင်းအရာများကို ဖတ်ယူထားခြင်း မရှိသေးသည့် array ပေါ်တွင် item အသစ်ကို ထပ်ပေါင်း၍ သိမ်းဆည်းသောကြောင့် ဖြစ်ပါသည်။ နောက် STEP တွင် ဖတ်ယူနိုင်မည့် အရာမှာ နောက်ဆုံး သိမ်းဆည်းခဲ့သော အကြောင်းအရာ ဖြစ်ပါသည်။"
     },
@@ -617,6 +789,18 @@
     {
       "source": "保存した配列を復元する",
       "translation": "သိမ်းဆည်းထားသော array ကို ပြန်လည်ရယူခြင်း"
+    },
+    {
+      "source": "JSに<code>loadOshiItems</code>と<code>isValidItems</code>を加え、<code>page_list</code>の<code>init</code>で <strong>読み込み→一覧生成</strong> の順に呼びます。保存した値を読む前に行を作ると、初期データのまま表示されるためです。まず、一覧の<code>init</code>の中で <code>txt_storage</code> に文字を入れている1行を、<code>loadOshiItems();</code> に置き換えます。すぐ下の <code>renderOshiList();</code> は残します。",
+      "translation": "JS တွင် <code>loadOshiItems</code> နှင့် <code>isValidItems</code> တို့ကို ထည့်သွင်းပြီး <code>page_list</code> ၏ <code>init</code> တွင် <strong>load လုပ်ခြင်း → စာရင်းဖန်တီးခြင်း</strong> ဟူသော အစီအစဉ်အတိုင်း call လုပ်ပါ။ သိမ်းဆည်းထားသော တန်ဖိုးကို မဖတ်ယူမီ row များကို ဖန်တီးလိုက်ပါက initial data သာ screen ပေါ်တွင် ကျန်ရှိနေမည် ဖြစ်သောကြောင့် ဖြစ်ပါသည်။ ပထမဦးစွာ စာရင်း၏ <code>init</code> အတွင်း၌ <code>txt_storage</code> ထဲသို့ စာသားထည့်နေသော လိုင်း တစ်လိုင်းကို <code>loadOshiItems();</code> ဖြင့် အစားထိုးပါ။ ၎င်း၏ အောက်တည့်တည့်ရှိ <code>renderOshiList();</code> ကို ချန်ထားပါ။"
+    },
+    {
+      "source": "www/js/app.js · 置き換え · init の中の txt_storage に文字を入れる1行",
+      "translation": "www/js/app.js · အစားထိုးရန် · init အတွင်းရှိ txt_storage ထဲသို့ စာသားထည့်သည့် လိုင်း တစ်လိုင်း"
+    },
+    {
+      "source": "次に、ファイルの末尾（<code>addOshi</code> の閉じかっこの下）に、空行を1行あけて2つの関数を足します。<code>txt_storage</code> の文は、<code>loadOshiItems</code> の中で、読み込みの結果に合わせて出します。",
+      "translation": "ထို့နောက် ဖိုင်၏ အဆုံး (<code>addOshi</code> ၏ အပိတ်ကွင်း၏ အောက်) တွင် လိုင်းအလွတ် တစ်လိုင်း ချန်ပြီး function 2 ခုကို ထည့်ပါ။ <code>txt_storage</code> ၏ စာသားကို <code>loadOshiItems</code> အတွင်း၌ load လုပ်ခြင်း၏ ရလဒ်အလိုက် ပြသပါမည်။"
     },
     {
       "source": "<code>getItem(STORAGE_KEY)</code> は、未保存なら <code>null</code> を返します。この場合は何も復元せず、ソースの初期データを使います。文字列があれば<code>JSON.parse</code>で値へ戻します。",
@@ -679,6 +863,26 @@
       "translation": "reset ပြုလုပ်ရန် အတည်ပြုခြင်းနှင့် အမှားများကို ဖြေရှင်းခြင်း"
     },
     {
+      "source": "HTMLに初期化ボタンと確認欄、JSにそのイベントと<code>resetOshiItems</code>を加えます。HTMLでは、一覧の <code>txt_selected</code> の行（<code>まだ選択していません</code>）の下に、次のコードを足します。",
+      "translation": "HTML တွင် reset ခလုတ်နှင့် အတည်ပြုချက် panel၊ JS တွင် ၎င်း၏ event နှင့် <code>resetOshiItems</code> တို့ကို ထည့်ပါမည်။ HTML တွင် စာရင်းရှိ <code>まだ選択していません</code> (Nothing selected yet) ကို ပြသသော <code>txt_selected</code> လိုင်း၏ အောက်တွင် အောက်ပါ code ကို ထည့်ပါ။"
+    },
+    {
+      "source": "www/index.html · 追加 · txt_selected の行の下",
+      "translation": "www/index.html · ထည့်ရန် · txt_selected လိုင်း၏ အောက်"
+    },
+    {
+      "source": "JSでは、一覧の<code>init</code>を、<code>if (page.id === \"page_list\") {</code> の行から、その閉じかっこ <code>}</code> の行までを置き換えます。<code>openAddPage</code> を登録する行の下の空行の代わりに、3つのボタンのイベントを登録します。",
+      "translation": "JS တွင် စာရင်း၏ <code>init</code> ကို <code>if (page.id === \"page_list\") {</code> လိုင်းမှ ၎င်း၏ အပိတ်ကွင်း <code>}</code> လိုင်းအထိ အစားထိုးပါ။ <code>openAddPage</code> ကို မှတ်ပုံတင်သည့် လိုင်း၏ အောက်ရှိ လိုင်းအလွတ်အစား ခလုတ် 3 ခု၏ event များကို မှတ်ပုံတင်ပါသည်။"
+    },
+    {
+      "source": "ファイルの末尾（<code>isValidItems</code> の閉じかっこの下）に、空行を1行あけて <code>resetOshiItems</code> を足します。",
+      "translation": "ဖိုင်၏ အဆုံး (<code>isValidItems</code> ၏ အပိတ်ကွင်း၏ အောက်) တွင် လိုင်းအလွတ် တစ်လိုင်း ချန်ပြီး <code>resetOshiItems</code> ကို ထည့်ပါ။"
+    },
+    {
+      "source": "<code>初期の内容に戻す</code> を押すと、<code>is-hidden</code>を<code>remove</code>して確認欄を見せます。<code>やめる</code> ではクラスを<code>add</code>し、欄を閉じるだけです。確認欄を囲む <code>reset-section</code> は上に区切りの線を引き、<code>#panel_reset ons-button</code> は確認欄の2つのボタンの上を12px空けます。この2つと <code>is-hidden</code> はSTEP 01のCSSに入れてあり、このSTEPのHTMLで初めて要素に当たります。",
+      "translation": "<code>初期の内容に戻す</code> (Restore initial contents) ကို နှိပ်ပါက <code>is-hidden</code> အား <code>remove</code> လုပ်ပြီး အတည်ပြုချက် panel ကို ပြသပါမည်။ <code>やめる</code> (Cancel) တွင် class အား <code>add</code> လုပ်ပြီး panel ကို ပြန်ပိတ်ရုံသာ ဖြစ်ပါသည်။ အတည်ပြုချက် panel ကို ဝန်းရံထားသော <code>reset-section</code> သည် အပေါ်ဘက်တွင် ပိုင်းခြားမျဉ်းတစ်ခု ဆွဲပေးပြီး <code>#panel_reset ons-button</code> သည် panel အတွင်းရှိ ခလုတ် 2 ခု၏ အပေါ်ဘက်တွင် 12px နေရာလွတ် ချန်ထားပေးပါသည်။ ဤ 2 ခုနှင့် <code>is-hidden</code> တို့ကို STEP 01 ၏ CSS တွင် ထည့်သွင်းထားပြီး ဖြစ်ကာ ဤ STEP ၏ HTML တွင် ပထမဆုံးအကြိမ် element များနှင့် သက်ဆိုင်သွားခြင်း ဖြစ်ပါသည်။"
+    },
+    {
       "source": "実際の削除は <code>削除して初期の内容に戻す</code> を押した場合だけです。<code>localStorage.removeItem(STORAGE_KEY)</code> で、このアプリのキー1つだけを削除します。保存領域全体を空にする<code>clear</code>は使いません。",
       "translation": "အမှန်တကယ် ဖျက်ပစ်ခြင်းမှာ <code>削除して初期の内容に戻す</code> (Delete and restore initial contents) ကို နှိပ်သည့်အခါမှသာ ဖြစ်ပါသည်။ <code>localStorage.removeItem(STORAGE_KEY)</code> ဖြင့် ဤ app ၏ key တစ်ခုတည်းကိုသာ ဖျက်ပစ်ပါမည်။ storage တစ်ခုလုံးကို ရှင်းလင်းပစ်မည့် <code>clear</code> ကို အသုံးမပြုပါ။"
     },
@@ -717,6 +921,10 @@
     {
       "source": "保存を確かめてアレンジする",
       "translation": "သိမ်းဆည်းမှုကို စစ်ဆေးပြီး customize ပြုလုပ်ခြင်း"
+    },
+    {
+      "source": "コードは変えません。STEP 08まで書いたコードが、第6コマ終了時の基準です。入力→追加→詳細→戻る→再読み込みの順で動かし、保存した内容が復元されることを確認します。次に、ソースの初期データを自分の言葉へ変えます。",
+      "translation": "code ကို မပြောင်းလဲပါ။ STEP 08 အထိ ရေးသားခဲ့သော code သည် အတန်းချိန် 6 ပြီးဆုံးချိန်ရှိ စံ ဖြစ်ပါသည်။ ထည့်သွင်းခြင်း → အသစ်ထည့်ခြင်း → အသေးစိတ်ကြည့်ခြင်း → နောက်သို့ပြန်သွားခြင်း → reload လုပ်ခြင်း ဟူသော အစီအစဉ်အတိုင်း လုပ်ဆောင်ပြီး သိမ်းဆည်းထားသော အကြောင်းအရာများ ပြန်လည်ပေါ်လာခြင်း ရှိမရှိ အတည်ပြုပါ။ ထို့နောက် source code ရှိ initial data ကို မိမိကိုယ်ပိုင်စကားဖြင့် ပြောင်းလဲပါ။"
     },
     {
       "source": "<strong>保存データがあると、ソースの初期データより優先して表示されます。</strong> <code>createInitialItems</code>を書き換えても画面が変わらない場合は、変更したコードのミスとは限りません。必要な入力を控えたうえで、アプリ内の初期化を使ってソースの内容を確認します。",
@@ -775,6 +983,10 @@
       "translation": "အတန်းချိန်အတွင်း Flutter ပြင်ဆင်မှုကို စတင်ခြင်း"
     },
     {
+      "source": "今日は好きなものノートを仕上げて提出します。このコマでは、教科書のコードは変えません。STEP 08まで書いたコードに、自分のアレンジを加えて仕上げます。最初の10分で、後半に使うFlutter SDKのダウンロードと既存のiOS環境の確認を始めます。授業前に取得しておく必要はありません。",
+      "translation": "ယနေ့တွင် ကြိုက်နှစ်သက်ရာများ မှတ်စုကို အပြီးသတ်၍ ပေးပို့ပါမည်။ ဤအတန်းချိန်တွင် သင်ခန်းစာစာအုပ်ပါ code ကို မပြောင်းလဲပါ။ STEP 08 အထိ ရေးသားခဲ့သော code တွင် မိမိကိုယ်ပိုင် customize ပြုလုပ်ချက်များကို ထည့်၍ အပြီးသတ်ပါမည်။ ပထမ ၁၀ မိနစ်တွင် ဒုတိယပိုင်း၌ အသုံးပြုမည့် Flutter SDK ကို download လုပ်ခြင်းနှင့် ရှိပြီးသား iOS ပတ်ဝန်းကျင်ကို စစ်ဆေးခြင်းတို့ကို စတင်ပါမည်။ အတန်းမစမီ ကြိုတင်ရယူထားရန် မလိုအပ်ပါ။"
+    },
+    {
       "source": "<a1>共通資料のSTEP 4〜7</a1>を別のタブで開きます。",
       "translation": "<a1>အခြေခံလမ်းညွှန်၏ STEP 4〜7</a1> ကို tab အသစ်တစ်ခုတွင် ဖွင့်ပါ။"
     },
@@ -809,6 +1021,10 @@
     {
       "source": "提出に残るアレンジを作る",
       "translation": "ပေးပို့မည့်အလုပ်တွင် ပါဝင်မည့် customize ပြုလုပ်မှုများကို ဖန်တီးခြင်း"
+    },
+    {
+      "source": "コードは変えません。Monaca クラウド IDEへ戻り、自分の好きなものノートを仕上げます。既に扱った文字・色・初期データから変更箇所を選び、どんなものが好きで、なぜ好きなのかが伝わる内容にします。",
+      "translation": "code ကို မပြောင်းလဲပါ။ Monaca クラウド IDE သို့ ပြန်သွားပြီး မိမိ၏ ကြိုက်နှစ်သက်ရာများ မှတ်စုကို အပြီးသတ်ပါ။ ယခင်က အသုံးပြုခဲ့သော စာသားများ၊ အရောင်များနှင့် initial data များထဲမှ ပြောင်းလဲမည့် နေရာများကို ရွေးချယ်ပြီး မည်သည့်အရာများကို ကြိုက်နှစ်သက်ကြောင်းနှင့် အဘယ်ကြောင့် ကြိုက်နှစ်သက်ရကြောင်း ပေါ်လွင်စေမည့် အကြောင်းအရာများ ဖြစ်စေပါ။"
     },
     {
       "source": "確認方法",
@@ -875,6 +1091,10 @@
       "translation": "လုပ်ဆောင်ချက်များနှင့် import URL ကို စစ်ဆေးခြင်း"
     },
     {
+      "source": "コードは変えません。ソースの初期の内容が表示された状態から完成確認を始めます。必要な入力は内容を控えて、先生と確認してから初期化します。",
+      "translation": "code ကို မပြောင်းလဲပါ။ source code ၏ မူလ initial အကြောင်းအရာများကို ပြသထားသည့် အခြေအနေမှ စတင်၍ ပြီးပြည့်စုံမှု စစ်ဆေးခြင်းကို စတင်ပါ။ လိုအပ်သော ထည့်သွင်းချက်များကို မှတ်သားထားပြီး ဆရာနှင့် စစ်ဆေးပြီးမှ reset လုပ်ပါ။"
+    },
+    {
       "source": "一覧の各行から詳細へ進み、名前・種類・理由が一致することを確認します。",
       "translation": "စာရင်း၏ row တစ်ခုချင်းစီမှ အသေးစိတ်သို့ သွားပြီး အမည်၊ အမျိုးအစားနှင့် အကြောင်းပြချက်တို့ ကိုက်ညီမှု ရှိမရှိ စစ်ဆေးပါ။"
     },
@@ -923,6 +1143,10 @@
       "translation": "ပေးပို့ခြင်းနှင့် ပြင်ဆင်မှုအခြေအနေကို စစ်ဆေးခြင်း"
     },
     {
+      "source": "コードは変えません。先生が授業中に案内する提出先・締め切りを確認し、自分の好きなものノートで発行した公開URLを提出します。まだ案内がない場合は、URLを控えて先生へ確認します。",
+      "translation": "code ကို မပြောင်းလဲပါ။ ဆရာမှ အတန်းချိန်အတွင်း ကြေညာမည့် ပေးပို့ရမည့်နေရာနှင့် သတ်မှတ်ရက်ကို စစ်ဆေးပြီး မိမိ၏ ကြိုက်နှစ်သက်ရာများ မှတ်စုအတွက် ထုတ်ယူထားသော import URL ကို ပေးပို့ပါ။ ကြေညာချက် မရှိသေးပါက URL ကို မှတ်သားထားပြီး ဆရာ့ထံ မေးမြန်းစစ်ဆေးပါ။"
+    },
+    {
       "source": "通常版MonacaのFreeプランではZIPを学生の提出物にしません。先生は公開URLから取り込み、初期データと操作を確認します。公開中の自分のプロジェクトは提出後に削除しません。",
       "translation": "standard Monaca ၏ Free plan တွင် ကျောင်းသားများ၏ ပေးပို့မှုအဖြစ် ZIP ကို အသုံးမပြုပါ။ ဆရာသည် import URL မှတစ်ဆင့် import လုပ်ပြီး initial data နှင့် လုပ်ဆောင်ချက်များကို စစ်ဆေးပါမည်။ publish လုပ်ထားသော မိမိ၏ project ကို ပေးပို့ပြီးနောက် ဖျက်ပစ်ခြင်း မပြုလုပ်ပါနှင့်။"
     },
@@ -945,6 +1169,10 @@
     {
       "source": "アレンジできる場所を確かめる",
       "translation": "customize ပြုလုပ်နိုင်သော နေရာများကို စစ်ဆေးခြင်း"
+    },
+    {
+      "source": "コードは変えません。最後に提出したソースを見ながら、次の3点を確かめます。",
+      "translation": "code ကို မပြောင်းလဲပါ။ နောက်ဆုံးအနေဖြင့် ပေးပို့ထားသော source code ကို ကြည့်ရှုရင်း အောက်ပါအချက် 3 ချက်ကို စစ်ဆေးကြပါစို့။"
     },
     {
       "source": "どのファイルの、どの文字・色・初期データを変更したか。",

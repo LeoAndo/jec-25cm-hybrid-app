@@ -159,6 +159,10 @@
       "translation": "အတွေးအခေါ်အသစ်မှာ <strong>auto-styling</strong> ဖြစ်ပါသည်။ HTML တစ်ခုတည်းမှ OS နှင့် ကိုက်ညီသော UI အစိတ်အပိုင်းများ၏ ပုံစံကို ရွေးချယ်ပေးသည့် လုပ်ဆောင်ချက်ကို စစ်ဆေးမည် ဖြစ်ပါသည်။ array၊ event နှင့် မျက်နှာပြင်ပြောင်းလဲခြင်းများကို Web အခြေခံ၊ Android၊ iOS တို့နှင့် နှိုင်းယှဉ်ပြီး ရေးသားပုံကို လေ့လာပါမည်။"
     },
     {
+      "source": "使うプロジェクトは <code>M01OshiList</code> です。各STEPのコードは、前のSTEPのコードから変える箇所だけを載せています。前から順に、本文が示す場所を書き換えて進みます。授業を休んだなどで途中から合流するときは、先生に伝えて、前のSTEPまでのコードを受け取ってから進みます。",
+      "translation": "အသုံးပြုမည့် project မှာ <code>M01OshiList</code> ဖြစ်ပါသည်။ STEP တစ်ခုစီ၏ ကုဒ်တွင် ယခင် STEP ၏ ကုဒ်မှ ပြောင်းလဲရမည့် နေရာများကိုသာ ဖော်ပြထားပါသည်။ ရှေ့မှစ၍ အစဉ်လိုက် စာသားတွင် ညွှန်ပြထားသော နေရာများကို ပြင်ဆင်ရေးသားရင်း ဆက်သွားပါ။ အတန်းပျက်ခြင်း စသည့်အကြောင်းကြောင့် လမ်းခုလတ်မှ ပြန်ပါဝင်သည့်အခါ ဆရာကို အသိပေးပြီး ယခင် STEP အထိ ကုဒ်ကို လက်ခံရယူပြီးမှ ဆက်လုပ်ပါ။"
+    },
+    {
       "source": "コマ",
       "translation": "အတန်းချိန်"
     },
@@ -243,12 +247,28 @@
       "translation": "Cloud IDE ပွင့်လာပါမည်။ ဘယ်ဘက်ရှိ file စာရင်းတွင် <code>www/index.html</code> နှင့် <code>www/css/style.css</code> ကို စစ်ဆေးပါ။"
     },
     {
+      "source": "<code>www/index.html</code> と <code>www/css/style.css</code> の中身を、下のコードでそれぞれすべて置き換えて保存します。テンプレートに最初から書かれている内容は残しません。プレビューを再読み込みし、<strong>好きなものノートを作ります。</strong>を確認します。プレビューが表示されないときは、上部メニューの <code>表示</code> → <code>プレビュータブを表示</code> や <code>レイアウトをリセット</code> を選びます。",
+      "translation": "<code>www/index.html</code> နှင့် <code>www/css/style.css</code> ၏ အကြောင်းအရာများကို အောက်ပါကုဒ်ဖြင့် အသီးသီး အားလုံး အစားထိုးပြီး save လုပ်ပါ။ template တွင် မူလကတည်းက ရေးထားသော အကြောင်းအရာများကို မချန်ထားပါနှင့်။ preview ကို reload လုပ်ပြီး <strong>好きなものノートを作ります。</strong> (နှစ်သက်ရာ ပစ္စည်းများ မှတ်စုစာအုပ် ပြုလုပ်ပါမည်။) ပေါ်လာသည်ကို စစ်ဆေးပါ။ preview မပေါ်ပါက အပေါ်ဘက် menu ရှိ <code>表示</code> (View) → <code>プレビュータブを表示</code> (Preview tab ကို ပြသရန်) သို့မဟုတ် <code>レイアウトをリセット</code> (Layout ကို reset လုပ်ရန်) ကို ရွေးချယ်ပါ။"
+    },
+    {
       "source": "クラウドIDEのメニューバー「表示」から「プレビュータブを表示」「レイアウトをリセット」を選ぶ画面",
       "translation": "Cloud IDE ၏ menu bar \"表示\" (View) မှ \"プレビュータブを表示\" (Preview tab ကို ပြသရန်) နှင့် \"レイアウトをリセット\" (Layout ကို reset လုပ်ရန်) ကို ရွေးချယ်သည့် မျက်နှာပြင်"
     },
     {
       "source": "プレビューが表示されないときは、上部メニューの <code>表示</code> → <code>プレビュータブを表示</code> や <code>レイアウトをリセット</code> を選びます。",
       "translation": "preview မပေါ်ပါက အပေါ်ဘက် menu ရှိ <code>表示</code> (View) → <code>プレビュータブを表示</code> (Preview tab ကို ပြသရန်) သို့မဟုတ် <code>レイアウトをリセット</code> (Layout ကို reset လုပ်ရန်) ကို ရွေးချယ်ပါ။"
+    },
+    {
+      "source": "www/index.html · 全体を置き換える",
+      "translation": "www/index.html · ဖိုင်တစ်ခုလုံး အစားထိုးရန်"
+    },
+    {
+      "source": "www/css/style.css · 全体を置き換える",
+      "translation": "www/css/style.css · ဖိုင်တစ်ခုလုံး အစားထိုးရန်"
+    },
+    {
+      "source": "以後、本文のパスはプロジェクト内の位置です。コード欄の見出しには、ファイルのパスと、変え方を書きます。「追加」は、本文が示す行の下（または上）に書き足します。「置き換え」は、本文が示す範囲だけを書き換え、ほかの行は残します。「全体を置き換える」は、そのファイルの中身をすべて置き換えます。先に比較と説明を読み、書き換えた後は確認欄の操作まで行いましょう。",
+      "translation": "ယခုမှစ၍ စာသားထဲရှိ path များသည် project အတွင်းရှိ တည်နေရာများ ဖြစ်ပါသည်။ ကုဒ်ကွက်၏ ခေါင်းစဉ်တွင် ဖိုင်၏ path နှင့် ပြောင်းလဲပုံကို ရေးထားပါသည်။ “ထည့်ရန်” ဆိုလျှင် စာသားတွင် ညွှန်ပြထားသော လိုင်း၏ အောက် (သို့မဟုတ် အပေါ်) တွင် ထပ်ရေးပါ။ “အစားထိုးရန်” ဆိုလျှင် စာသားတွင် ညွှန်ပြထားသော အပိုင်းကိုသာ ပြင်ရေးပြီး အခြားလိုင်းများကို ချန်ထားပါ။ “ဖိုင်တစ်ခုလုံး အစားထိုးရန်” ဆိုလျှင် ထိုဖိုင်၏ အကြောင်းအရာအားလုံးကို အစားထိုးပါ။ နှိုင်းယှဉ်ချက်နှင့် ရှင်းလင်းချက်ကို အရင်ဖတ်ပြီး ပြင်ရေးပြီးနောက် စစ်ဆေးရန်အကွက်ရှိ လုပ်ဆောင်ချက်များအထိ လုပ်ဆောင်ကြပါစို့။"
     },
     {
       "source": "既知の技術と比べる",
@@ -269,6 +289,18 @@
     {
       "source": "HTMLで1枚のカードを作る",
       "translation": "HTML ဖြင့် card 1 ခု ပြုလုပ်ရန်"
+    },
+    {
+      "source": "<code>www/index.html</code> の <code>body</code> の中にある <code>&lt;p&gt;好きなものノートを作ります。&lt;/p&gt;</code> の1行を、次のコードに置き換えます。<code>&lt;body&gt;</code> と <code>&lt;/body&gt;</code> の行は残します。",
+      "translation": "<code>www/index.html</code> ၏ <code>body</code> အတွင်းရှိ <code>&lt;p&gt;好きなものノートを作ります。&lt;/p&gt;</code> လိုင်း တစ်လိုင်းကို အောက်ပါကုဒ်ဖြင့် အစားထိုးပါ။ <code>&lt;body&gt;</code> နှင့် <code>&lt;/body&gt;</code> လိုင်းများကို ချန်ထားပါ။"
+    },
+    {
+      "source": "www/index.html · 置き換え · &lt;p&gt;好きなものノートを作ります。&lt;/p&gt; の1行",
+      "translation": "www/index.html · အစားထိုးရန် · &lt;p&gt;好きなものノートを作ります。&lt;/p&gt; လိုင်း တစ်လိုင်း"
+    },
+    {
+      "source": "まず <code>body</code> の中を読みます。<code>main</code> は画面の主な内容、<code>article</code> は1件のカードです。カードには種類・名前・ひとことを置きます。",
+      "translation": "ပထမဦးစွာ <code>body</code> အတွင်းပိုင်းကို ဖတ်ပါ။ <code>main</code> သည် မျက်နှာပြင်၏ အဓိကအကြောင်းအရာဖြစ်ပြီး <code>article</code> သည် card တစ်ခု ဖြစ်ပါသည်။ card တွင် အမျိုးအစား၊ အမည်နှင့် မှတ်ချက်တိုတို့ကို ထားရှိပါမည်။"
     },
     {
       "source": "<code>class</code> 属性は、次のSTEPでCSSを対応させるための名前です。この時点では装飾がなくても正解です。保存してプレビューを再読み込みし、音楽・好きな音楽・ひとことがこの順に並ぶことを確かめます。",
@@ -293,6 +325,14 @@
     {
       "source": "CSSでカードの余白と色を整える",
       "translation": "CSS ဖြင့် card ၏ နေရာလွတ်နှင့် အရောင်ကို ချိန်ညှိရန်"
+    },
+    {
+      "source": "<code>www/css/style.css</code> には、STEP 00で書いたコメントの1行だけがあります。この中身を、次のコードですべて置き換えます。HTMLは変えません。",
+      "translation": "<code>www/css/style.css</code> တွင် STEP 00 တွင် ရေးခဲ့သော comment လိုင်း တစ်လိုင်းသာ ရှိပါသည်။ ၎င်း၏ အကြောင်းအရာကို အောက်ပါကုဒ်ဖြင့် အားလုံး အစားထိုးပါ။ HTML ကို မပြောင်းလဲပါ။"
+    },
+    {
+      "source": "<code>.oshi-card</code> はカード全体、<code>.oshi-name</code> は名前に適用されます。",
+      "translation": "<code>.oshi-card</code> သည် card တစ်ခုလုံးအတွက် သက်ရောက်ပြီး <code>.oshi-name</code> သည် အမည်အတွက် သက်ရောက်ပါသည်။"
     },
     {
       "source": "書く場所",
@@ -339,6 +379,14 @@
       "translation": "တူညီသော ဖွဲ့စည်းပုံရှိသည့် card ကို 3 ခု ပြုလုပ်ရန်"
     },
     {
+      "source": "<code>www/index.html</code> で、1枚目のカードを閉じる <code>&lt;/article&gt;</code> の下、<code>&lt;/main&gt;</code> の上に、次のコードを追加します。1つ目と同じ形の <code>article</code> を2つ増やし、名前と種類を変えています。CSSは変えません。CSSは共通なので、3枚とも同じ形になります。",
+      "translation": "<code>www/index.html</code> တွင် ပထမ card ကို ပိတ်သော <code>&lt;/article&gt;</code> ၏ အောက်၊ <code>&lt;/main&gt;</code> ၏ အပေါ်တွင် အောက်ပါကုဒ်ကို ထည့်ပါ။ ပထမတစ်ခုနှင့် ပုံစံတူသော <code>article</code> ၂ ခုကို ထပ်ထည့်ထားပြီး၊ အမည်နှင့် အမျိုးအစားကို ပြောင်းလဲထားပါသည်။ CSS ကို မပြောင်းလဲပါ။ CSS သည် အားလုံးအတွက် တူညီသောကြောင့် card ၃ ခုစလုံးသည် တူညီသော ပုံစံ ဖြစ်လာပါမည်။"
+    },
+    {
+      "source": "www/index.html · 追加 · 1枚目の &lt;/article&gt; の下",
+      "translation": "www/index.html · ထည့်ရန် · ပထမ card ရှိ &lt;/article&gt; ၏ အောက်"
+    },
+    {
       "source": "プレビューで3件あることと、音楽・食べ物・場所の順になっていることを確かめます。",
       "translation": "preview တွင် ၃ ခု ရှိနေခြင်းနှင့် 音楽 (Music)၊ 食べ物 (Food)၊ 場所 (Place) အစဉ်လိုက် ဖြစ်နေခြင်းကို စစ်ဆေးပါ။"
     },
@@ -369,6 +417,10 @@
     {
       "source": "第1コマの確認とアレンジ",
       "translation": "အတန်းချိန် 1 ၏ စစ်ဆေးခြင်းနှင့် customize ပြုလုပ်ခြင်း"
+    },
+    {
+      "source": "コードは変えません。STEP 03まで書いたコードが、第1コマ終了時の基準です。自分の内容に変える前に、3枚が表示されることを確かめます。カードはまだ押しても何も起きません。",
+      "translation": "ကုဒ်ကို မပြောင်းလဲပါ။ STEP 03 အထိ ရေးသားခဲ့သော ကုဒ်သည် အတန်းချိန် 1 ပြီးဆုံးချိန်ရှိ စံ ဖြစ်ပါသည်။ မိမိကိုယ်ပိုင် အကြောင်းအရာသို့ မပြောင်းလဲမီ card ၃ ခု ပေါ်နေသည်ကို စစ်ဆေးပါ။ card ကို click နှိပ်သော်လည်း ဘာမှ မဖြစ်သေးပါ။"
     },
     {
       "source": "自分の好きなものを1つ選び、1枚目の名前・種類・好きな理由を自分の言葉へ変えます。",
@@ -411,6 +463,34 @@
       "translation": "အတန်းချိန် 2 တွင် တူညီသော HTML မှ OS နှင့် ကိုက်ညီသော ပုံပန်းသဏ္ဌာန်ကို ဖန်တီးပေးသည့် <strong>auto-styling</strong> ကို စစ်ဆေးပါမည်။ အသုံးပြုမည့်အရာမှာ <strong>Onsen UI 2.12.9</strong> ဖြစ်ပါသည်။ Onsen UI သည် HTML တွင် UI အစိတ်အပိုင်းများကို ထည့်သွင်းပေးသော UI library ဖြစ်ပြီး၊ ဤသင်တန်းတွင် သာမန် JavaScript ဖြင့် ထိန်းချုပ်အသုံးပြုပါမည်။"
     },
     {
+      "source": "<code>www</code> の中に <code>js</code> フォルダを作り、その中に <code>app.js</code> を作ります。既にあれば再利用します。<code>app.js</code> の中身を、次のコードですべて置き換えます。",
+      "translation": "<code>www</code> အတွင်း၌ <code>js</code> folder ကို ဖန်တီးပြီး၊ ၎င်းအတွင်း၌ <code>app.js</code> ကို ဖန်တီးပါ။ ရှိပြီးသားဖြစ်ပါက ပြန်လည်အသုံးပြုပါ။ <code>app.js</code> ၏ အကြောင်းအရာကို အောက်ပါကုဒ်ဖြင့် အားလုံး အစားထိုးပါ။"
+    },
+    {
+      "source": "www/js/app.js · 全体を置き換える",
+      "translation": "www/js/app.js · ဖိုင်တစ်ခုလုံး အစားထိုးရန်"
+    },
+    {
+      "source": "<code>www/index.html</code> の <code>head</code> に、Onsen UIのCSS2本を追加します。<code>components/loader.css</code> を読み込む <code>link</code> の下、<code>css/style.css</code> を読み込む <code>link</code> の上です。",
+      "translation": "<code>www/index.html</code> ၏ <code>head</code> တွင် Onsen UI ၏ CSS ဖိုင် ၂ ခုကို ထည့်ပါ။ ထည့်ရမည့်နေရာမှာ <code>components/loader.css</code> ကို load လုပ်သော <code>link</code> ၏ အောက်၊ <code>css/style.css</code> ကို load လုပ်သော <code>link</code> ၏ အပေါ် ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "www/index.html · 追加 · components/loader.css の link の下",
+      "translation": "www/index.html · ထည့်ရန် · components/loader.css ရှိ link ၏ အောက်"
+    },
+    {
+      "source": "続けて、<code>css/style.css</code> を読み込む <code>link</code> の下、<code>&lt;/head&gt;</code> の上に、Onsen UIのJavaScript1本と自分の <code>js/app.js</code> を読み込む <code>script</code> を追加します。CSSのファイルは変えません。",
+      "translation": "ဆက်လက်၍ <code>css/style.css</code> ကို load လုပ်သော <code>link</code> ၏ အောက်၊ <code>&lt;/head&gt;</code> ၏ အပေါ်တွင် Onsen UI ၏ JavaScript ဖိုင် ၁ ခုနှင့် မိမိ၏ <code>js/app.js</code> ကို load လုပ်မည့် <code>script</code> များကို ထည့်ပါ။ CSS ဖိုင်ကို မပြောင်းလဲပါ။"
+    },
+    {
+      "source": "www/index.html · 追加 · css/style.css の link の下",
+      "translation": "www/index.html · ထည့်ရန် · css/style.css ရှိ link ၏ အောက်"
+    },
+    {
+      "source": "どのURLにも、版番号の <code>@2.12.9</code> が入っています。自分の <code>js/app.js</code> はOnsen UIのJavaScriptより後に読み込みます。まずはコメントだけなので、カードの形は前のコマとほぼ同じです。ただし、Onsen UIのCSSを読み込むと、ページ全体はスクロールしなくなります。プレビューの高さが低いと、下のカードが切れて見えることがあります。次のSTEPでカードを <code>ons-page</code> に入れると、ページの中でスクロールできるようになります。",
+      "translation": "URL တိုင်းတွင် ဗားရှင်းနံပါတ် <code>@2.12.9</code> ပါဝင်ပါသည်။ မိမိ၏ <code>js/app.js</code> ကို Onsen UI ၏ JavaScript နောက်မှ load လုပ်ပါမည်။ လောလောဆယ်တွင် comment သာ ပါဝင်သေးသောကြောင့် card များ၏ ပုံစံသည် ယခင်အတန်းချိန်နှင့် အတူတူနီးပါး ဖြစ်ပါသည်။ သို့သော် Onsen UI ၏ CSS ကို load လုပ်လိုက်ပါက စာမျက်နှာတစ်ခုလုံးသည် scroll မဖြစ်တော့ပါ။ preview ၏ အမြင့် နိမ့်ပါက အောက်ဘက်ရှိ card များ ပြတ်တောက်သွားသည်ကို တွေ့ရနိုင်ပါသည်။ နောက်တစ်ဆင့်တွင် card များကို <code>ons-page</code> ထဲသို့ ထည့်လိုက်ပါက စာမျက်နှာအတွင်း scroll ပြုလုပ်နိုင်မည် ဖြစ်ပါသည်။"
+    },
+    {
       "source": "CDNはライブラリをインターネット経由で読み込む配布先です。授業中にアクセスできる回線が必要です。URLの <code>@2.12.9</code> を消したり、別の版へ変えたりしません。",
       "translation": "CDN သည် အင်တာနက်မှတစ်ဆင့် library ကို load လုပ်နိုင်သော ဖြန့်ဝေရေးဆိုက် ဖြစ်ပါသည်။ အတန်းချိန်အတွင်း အသုံးပြုနိုင်သော အင်တာနက်လိုင်း လိုအပ်ပါသည်။ URL အတွင်းရှိ <code>@2.12.9</code> ကို မဖျက်ပါနှင့်၊ အခြားဗားရှင်းသို့လည်း မပြောင်းလဲပါနှင့်။"
     },
@@ -429,6 +509,26 @@
     {
       "source": "ページとツールバーをOnsen UIへ置き換える",
       "translation": "စာမျက်နှာနှင့် toolbar ကို Onsen UI သို့ အစားထိုးရန်"
+    },
+    {
+      "source": "<code>www/index.html</code> の <code>body</code> の中を <code>ons-page</code> で囲み、その先頭に <code>ons-toolbar</code> を置きます。カードはまだ前のコマのHTMLです。CSSと <code>app.js</code> は変えません。",
+      "translation": "<code>www/index.html</code> ၏ <code>body</code> အတွင်းပိုင်းကို <code>ons-page</code> ဖြင့် ဝန်းရံပြီး၊ ၎င်း၏ ထိပ်ဆုံးတွင် <code>ons-toolbar</code> ကို ထားရှိပါ။ card များသည် ယခင်အတန်းချိန်၏ HTML အတိုင်း ဆက်ရှိနေပါသေးသည်။ CSS နှင့် <code>app.js</code> ကို မပြောင်းလဲပါ။"
+    },
+    {
+      "source": "まず、<code>&lt;body&gt;</code> の下、<code>&lt;main class=\"app-section\"&gt;</code> の上に追加します。",
+      "translation": "ပထမဦးစွာ <code>&lt;body&gt;</code> ၏ အောက်၊ <code>&lt;main class=\"app-section\"&gt;</code> ၏ အပေါ်တွင် ထည့်ပါ။"
+    },
+    {
+      "source": "www/index.html · 追加 · &lt;body&gt; の下",
+      "translation": "www/index.html · ထည့်ရန် · &lt;body&gt; ၏ အောက်"
+    },
+    {
+      "source": "次に、<code>&lt;/main&gt;</code> の下、<code>&lt;/body&gt;</code> の上に、<code>ons-page</code> を閉じるタグを追加します。<code>main</code> から <code>&lt;/main&gt;</code> までの字下げは、そのままでかまいません。",
+      "translation": "ထို့နောက် <code>&lt;/main&gt;</code> ၏ အောက်၊ <code>&lt;/body&gt;</code> ၏ အပေါ်တွင် <code>ons-page</code> ကို ပိတ်သော tag ကို ထည့်ပါ။ <code>main</code> မှ <code>&lt;/main&gt;</code> အထိ indentation ကို မူလအတိုင်း ထားနိုင်ပါသည်။"
+    },
+    {
+      "source": "www/index.html · 追加 · &lt;/main&gt; の下",
+      "translation": "www/index.html · ထည့်ရန် · &lt;/main&gt; ၏ အောက်"
     },
     {
       "source": "<code>ons-</code> で始まるタグはOnsen UIが提供する画面部品です。ブラウザの標準タグだけではなく、STEP 05で読み込んだJavaScriptとCSSが表示を整えています。ツールバーの <code>class=\"center\"</code> は、Onsen UIが決めた領域名です。文字が常に画面の厳密な中央にあるという意味ではありません。",
@@ -453,6 +553,22 @@
     {
       "source": "カードをOnsen UIの一覧へ置き換える",
       "translation": "card များကို Onsen UI ၏ list သို့ အစားထိုးရန်"
+    },
+    {
+      "source": "このSTEPでは、HTMLとCSSを書き換えます。JavaScriptはコメントだけのままです。カード用のHTMLをOnsen UIの部品へ置き換え、<code>ons-list</code> の中へ3個の <code>ons-list-item</code> を置きます。それぞれに <code>class=\"oshi-card\"</code> を付け、第1コマで使ったカードの見た目を引き継ぎます。一覧の上の見出しと、一覧の下の「まだ選択していません」の文も、このSTEPで加わります。",
+      "translation": "ဤ STEP တွင် HTML နှင့် CSS ကို ပြင်ဆင်ရေးသားပါမည်။ JavaScript တွင် comment သာ ဆက်လက်ပါရှိနေမည် ဖြစ်ပါသည်။ card အတွက် HTML ကို Onsen UI ၏ အစိတ်အပိုင်းများဖြင့် အစားထိုးပြီး <code>ons-list</code> အတွင်းသို့ <code>ons-list-item</code> ၃ ခုကို ထားရှိပါ။ တစ်ခုစီတွင် <code>class=\"oshi-card\"</code> ကို ထည့်သွင်းပြီး အတန်းချိန် 1 တွင် အသုံးပြုခဲ့သော card ၏ ပုံပန်းသဏ္ဌာန်ကို ဆက်လက်ထိန်းသိမ်းပါမည်။ list ၏ အပေါ်ဘက်ရှိ ခေါင်းစဉ်နှင့် list ၏ အောက်ဘက်ရှိ 「まだ選択していません」 (Nothing selected yet) ဟူသော စာသားကိုလည်း ဤ STEP တွင် ပေါင်းထည့်ထားပါသည်။"
+    },
+    {
+      "source": "<code>www/index.html</code> では、<code>body</code> の中の <code>&lt;ons-page id=\"page_list\"&gt;</code> の行から <code>&lt;/ons-page&gt;</code> の行までを、次のコードに置き換えます。<code>main</code> と3枚の <code>article</code> は残しません。<code>head</code> と、<code>&lt;body&gt;</code>・<code>&lt;/body&gt;</code> の行は残します。ツールバーの部分は前のSTEPと同じ内容で、字下げだけをそろえています。",
+      "translation": "<code>www/index.html</code> တွင် <code>body</code> အတွင်းရှိ <code>&lt;ons-page id=\"page_list\"&gt;</code> လိုင်းမှ <code>&lt;/ons-page&gt;</code> လိုင်းအထိကို အောက်ပါကုဒ်ဖြင့် အစားထိုးပါ။ <code>main</code> နှင့် <code>article</code> ၃ ခုကို မချန်ထားပါနှင့်။ <code>head</code>၊ <code>&lt;body&gt;</code> နှင့် <code>&lt;/body&gt;</code> လိုင်းများကို ချန်ထားပါ။ toolbar အပိုင်းသည် ယခင် STEP နှင့် အကြောင်းအရာ တူညီပြီး indentation ကိုသာ ညှိထားပါသည်။"
+    },
+    {
+      "source": "www/index.html · 置き換え · &lt;ons-page id=\"page_list\"&gt; から &lt;/ons-page&gt; まで",
+      "translation": "www/index.html · အစားထိုးရန် · &lt;ons-page id=\"page_list\"&gt; မှ &lt;/ons-page&gt; အထိ"
+    },
+    {
+      "source": "<code>www/css/style.css</code> は、カードの指定の多くが変わるので、中身を次のコードですべて置き換えます。第1コマでアレンジした色や余白を残したい人は、その値を控えてから置き換えます。",
+      "translation": "<code>www/css/style.css</code> တွင် card ၏ သတ်မှတ်ချက် အများအပြား ပြောင်းလဲသွားသောကြောင့် အကြောင်းအရာကို အောက်ပါကုဒ်ဖြင့် အားလုံး အစားထိုးပါ။ အတန်းချိန် 1 တွင် customize ပြုလုပ်ခဲ့သော အရောင် သို့မဟုတ် နေရာလွတ်များကို ဆက်ထားလိုသူများသည် ထိုတန်ဖိုးများကို မှတ်ထားပြီးမှ အစားထိုးပါ။"
     },
     {
       "source": "部品・指定",
@@ -519,6 +635,14 @@
       "translation": "ဤယူနစ်၏ အတွေးအခေါ်အသစ်မှာ <strong>auto-styling</strong> ဖြစ်ပါသည်။ Onsen UI သည် run သည့် ပတ်ဝန်းကျင်အပေါ် မူတည်ပြီး တူညီသော <code>ons-toolbar</code> နှင့် <code>ons-list-item</code> ကို iOS အတွက် သို့မဟုတ် Android အတွက် ပုံပန်းသဏ္ဌာန်သို့ ပြောင်းလဲပေးပါသည်။ မိမိကိုယ်တိုင် OS တစ်ခုစီအတွက် မျက်နှာပြင် ၂ စုံ ပြုလုပ်ရန် မလိုအပ်ပါ။"
     },
     {
+      "source": "<code>www/js/app.js</code> の3行目、<code>// ons.platform.select(\"android\");</code> の1行を、次のように置き換えます。先頭の <code>//</code> を消し、この行を有効にします。上の2行のコメントは残します。HTMLとCSSは変えません。保存して<strong>プレビュー全体を再読み込み</strong>します。",
+      "translation": "<code>www/js/app.js</code> ၏ တတိယလိုင်းဖြစ်သော <code>// ons.platform.select(\"android\");</code> လိုင်း တစ်လိုင်းကို အောက်ပါအတိုင်း အစားထိုးပါ။ ရှေ့ဆုံးရှိ <code>//</code> ကို ဖျက်ပြီး ဤလိုင်းကို အလုပ်လုပ်စေပါ။ အပေါ်ရှိ comment လိုင်း ၂ လိုင်းကို ချန်ထားပါ။ HTML နှင့် CSS ကို မပြောင်းလဲပါ။ သိမ်းဆည်းပြီး <strong>preview တစ်ခုလုံးကို reload</strong> လုပ်ပါ။"
+    },
+    {
+      "source": "www/js/app.js · 置き換え · // ons.platform.select(\"android\"); の1行",
+      "translation": "www/js/app.js · အစားထိုးရန် · // ons.platform.select(\"android\"); လိုင်း တစ်လိုင်း"
+    },
+    {
       "source": "ツールバーの高さ・題名の位置、行を押した反応、右端の目印を見ます。右端の目印「＞」は、iOS向けとAndroid向けのどちらにも出ます。",
       "translation": "toolbar ၏ အမြင့်၊ ခေါင်းစဉ်တည်နေရာ၊ စာကြောင်းကို click နှိပ်သည့်အခါ တုံ့ပြန်မှုနှင့် ညာဘက်အစွန်းရှိ အမှတ်အသားတို့ကို ကြည့်ပါ။ ညာဘက်အစွန်းရှိ အမှတ်အသား 「＞」 သည် iOS ပုံစံနှင့် Android ပုံစံ နှစ်မျိုးစလုံးတွင် ပေါ်လာပါသည်။"
     },
@@ -549,6 +673,18 @@
     {
       "source": "自動のスタイルへ戻してアレンジする",
       "translation": "အလိုအလျောက် style သို့ ပြန်ပြောင်းပြီး customize ပြုလုပ်ရန်"
+    },
+    {
+      "source": "<code>www/js/app.js</code> の3行目、<code>ons.platform.select(…);</code> の1行を、次のように置き換えます。先頭へ <code>//</code> を付けてコメントに戻します。STEP 08で <code>\"ios\"</code> に書き換えたままの人も、<code>\"android\"</code> に戻してからコメントにします。保存してプレビュー全体を再読み込みします。",
+      "translation": "<code>www/js/app.js</code> ၏ တတိယလိုင်းဖြစ်သော <code>ons.platform.select(…);</code> လိုင်း တစ်လိုင်းကို အောက်ပါအတိုင်း အစားထိုးပါ။ ရှေ့ဆုံးတွင် <code>//</code> ကို ထည့်ပြီး comment သို့ ပြန်ပြောင်းပါ။ STEP 08 တွင် <code>\"ios\"</code> သို့ ပြောင်းရေးထားသည့်အတိုင်း ကျန်နေသူများလည်း <code>\"android\"</code> သို့ ပြန်ပြောင်းပြီးမှ comment အဖြစ် ပြောင်းပါ။ သိမ်းဆည်းပြီး preview တစ်ခုလုံးကို reload လုပ်ပါ။"
+    },
+    {
+      "source": "www/js/app.js · 置き換え · ons.platform.select(\"android\"); の1行",
+      "translation": "www/js/app.js · အစားထိုးရန် · ons.platform.select(\"android\"); လိုင်း တစ်လိုင်း"
+    },
+    {
+      "source": "これで特定のOSを強制せず、実行環境に応じてスタイルが選ばれます。",
+      "translation": "ယခုအခါ OS တစ်ခုခုကို အတင်းအကျပ် မသတ်မှတ်တော့ဘဲ run သည့် ပတ်ဝန်းကျင်အပေါ် မူတည်၍ style ကို ရွေးချယ်ပေးပါမည်။"
     },
     {
       "source": "Monacaのプレビューでも、端末を選んで見た目を比べられます。<code>app.js</code> の強制指定がコメントになっていることを確かめ、次の順に操作します。",
@@ -595,6 +731,14 @@
       "translation": "စာမျက်နှာ အဆင်သင့်ဖြစ်ချိန်တွင် ကုဒ်ကို run ရန်"
     },
     {
+      "source": "第3コマでは、配列に書いたデータから一覧を作り、押した名前を表示します。第2コマの終わりのコードから始めます。まず、<code>www/js/app.js</code> の3行目、<code>// ons.platform.select(\"android\");</code> の下に、1行空けて次のコードを追加します。ファイルの末尾になります。HTMLとCSSは変えません。",
+      "translation": "အတန်းချိန် 3 တွင် array ထဲ၌ ရေးထားသော data မှ list ကို ဖန်တီးပြီး click နှိပ်လိုက်သော အမည်ကို ပြသပါမည်။ အတန်းချိန် 2 အဆုံးရှိ ကုဒ်မှ စတင်ပါမည်။ ပထမဦးစွာ <code>www/js/app.js</code> ၏ တတိယလိုင်းဖြစ်သော <code>// ons.platform.select(\"android\");</code> ၏ အောက်တွင် လိုင်းအလွတ် တစ်လိုင်း ချန်ပြီး အောက်ပါကုဒ်ကို ထည့်ပါ။ ထိုနေရာသည် ဖိုင်၏ အဆုံး ဖြစ်ပါသည်။ HTML နှင့် CSS ကို မပြောင်းလဲပါ။"
+    },
+    {
+      "source": "www/js/app.js · 追加 · // ons.platform.select(\"android\"); の下",
+      "translation": "www/js/app.js · ထည့်ရန် · // ons.platform.select(\"android\"); ၏ အောက်"
+    },
+    {
       "source": "<code>document.addEventListener(\"init\", function(event) { ... });</code> は、Onsen UIのページが初期化されたときに処理を行います。<code>event.target</code> は、そのとき初期化された <code>ons-page</code> です。<code>page.id</code> が <code>page_list</code> のときだけ、一覧用の処理をします。",
       "translation": "<code>document.addEventListener(\"init\", function(event) { ... });</code> သည် Onsen UI ၏ စာမျက်နှာ initialize ဖြစ်သည့်အခါ ကုဒ်ကို run ပါသည်။ <code>event.target</code> သည် ထိုအချိန်တွင် initialize ဖြစ်ခဲ့သော <code>ons-page</code> ဖြစ်ပါသည်။ <code>page.id</code> သည် <code>page_list</code> ဖြစ်သည့်အခါမှသာ list အတွက် ကုဒ်ကို လုပ်ဆောင်ပါမည်။"
     },
@@ -617,6 +761,22 @@
     {
       "source": "3件のデータを配列へまとめる",
       "translation": "ဒေတာ ၃ ခုကို array အတွင်းသို့ စုစည်းရန်"
+    },
+    {
+      "source": "<code>www/js/app.js</code> を2か所変えます。HTMLとCSSは変えません。まず、3行目の <code>// ons.platform.select(\"android\");</code> と、STEP 10で追加した <code>// ページの要素が使えるようになってから処理する。</code> の間に、次のコードを追加します。前後は1行ずつ空けます。",
+      "translation": "<code>www/js/app.js</code> တွင် နေရာ ၂ ခုကို ပြောင်းလဲပါမည်။ HTML နှင့် CSS ကို မပြောင်းလဲပါ။ ပထမဦးစွာ တတိယလိုင်းဖြစ်သော <code>// ons.platform.select(\"android\");</code> နှင့် STEP 10 တွင် ထည့်ခဲ့သော <code>// ページの要素が使えるようになってから処理する。</code> တို့၏ ကြားတွင် အောက်ပါကုဒ်ကို ထည့်ပါ။ ရှေ့နှင့်နောက်တွင် လိုင်းအလွတ် တစ်လိုင်းစီ ချန်ပါ။"
+    },
+    {
+      "source": "次に、<code>init</code> の中で <code>txt_selected</code> に「一覧を準備しました」を入れている1行を、次の1行に置き換えます。",
+      "translation": "ထို့နောက် <code>init</code> အတွင်း၌ <code>txt_selected</code> ထဲသို့ 「一覧を準備しました」 (List ready) ကို ထည့်နေသော လိုင်း တစ်လိုင်းကို အောက်ပါ လိုင်း တစ်လိုင်းဖြင့် အစားထိုးပါ။"
+    },
+    {
+      "source": "www/js/app.js · 置き換え · txt_selected に文字を入れる1行",
+      "translation": "www/js/app.js · အစားထိုးရန် · txt_selected ထဲသို့ စာသားထည့်သည့် လိုင်း တစ်လိုင်း"
+    },
+    {
+      "source": "<code>oshiItems</code> は3件の配列です。1件は <code>name</code>・<code>genre</code>・<code>comment</code> を持つオブジェクトにします。配列とオブジェクトはWeb基礎の書き方です。",
+      "translation": "<code>oshiItems</code> သည် ဒေတာ ၃ ခုပါဝင်သော array ဖြစ်ပါသည်။ ဒေတာတစ်ခုစီသည် <code>name</code>၊ <code>genre</code>၊ <code>comment</code> တို့ ပါဝင်သော object တစ်ခု ဖြစ်ပါသည်။ array နှင့် object ရေးသားပုံသည် Web အခြေခံအတိုင်း ဖြစ်ပါသည်။"
     },
     {
       "source": "コード",
@@ -663,6 +823,34 @@
       "translation": "array မှ စာကြောင်းများကို ဖန်တီးပြီး စာသားထည့်သွင်းရန်"
     },
     {
+      "source": "このSTEPでは、HTMLとJavaScriptを書き換えます。CSSは変えません。HTMLの <code>ons-list</code> は空になり、JavaScriptの <code>renderOshiList</code> が一覧を組み立てます。",
+      "translation": "ဤ STEP တွင် HTML နှင့် JavaScript ကို ပြင်ဆင်ရေးသားပါမည်။ CSS ကို မပြောင်းလဲပါ။ HTML ရှိ <code>ons-list</code> သည် အလွတ်ဖြစ်သွားပြီး JavaScript ၏ <code>renderOshiList</code> က list ကို တည်ဆောက်ပေးမည် ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "<code>www/index.html</code> では、<code>&lt;ons-list id=\"list_oshi\"&gt;</code> の行から <code>&lt;/ons-list&gt;</code> の行までを、次の1行に置き換えます。中の3個の <code>ons-list-item</code> は残しません。STEP 09で名前や種類をアレンジした人は、その文字を控えておき、STEP 14で配列に書きます。",
+      "translation": "<code>www/index.html</code> တွင် <code>&lt;ons-list id=\"list_oshi\"&gt;</code> လိုင်းမှ <code>&lt;/ons-list&gt;</code> လိုင်းအထိကို အောက်ပါ လိုင်း တစ်လိုင်းဖြင့် အစားထိုးပါ။ အတွင်းရှိ <code>ons-list-item</code> ၃ ခုကို မချန်ထားပါနှင့်။ STEP 09 တွင် အမည် သို့မဟုတ် အမျိုးအစားကို customize ပြုလုပ်ခဲ့သူများသည် ထိုစာသားများကို မှတ်ထားပြီး STEP 14 တွင် array ထဲ၌ ရေးပါ။"
+    },
+    {
+      "source": "www/index.html · 置き換え · &lt;ons-list id=\"list_oshi\"&gt; から &lt;/ons-list&gt; まで",
+      "translation": "www/index.html · အစားထိုးရန် · &lt;ons-list id=\"list_oshi\"&gt; မှ &lt;/ons-list&gt; အထိ"
+    },
+    {
+      "source": "<code>www/js/app.js</code> では、<code>init</code> の中の「登録件数：」を入れている1行を、<code>renderOshiList</code> を呼ぶ1行に置き換えます。",
+      "translation": "<code>www/js/app.js</code> တွင် <code>init</code> အတွင်းရှိ 「登録件数：」 (Number of items:) ကို ထည့်နေသော လိုင်း တစ်လိုင်းကို <code>renderOshiList</code> ကို ခေါ်သည့် လိုင်း တစ်လိုင်းဖြင့် အစားထိုးပါ။"
+    },
+    {
+      "source": "www/js/app.js · 置き換え · 「登録件数：」の1行",
+      "translation": "www/js/app.js · အစားထိုးရန် · 「登録件数：」 (Number of items:) ပါသော လိုင်း တစ်လိုင်း"
+    },
+    {
+      "source": "続けて、ファイルの末尾、<code>init</code> の処理を閉じる <code>});</code> の下に、1行空けて次の2つの関数を追加します。",
+      "translation": "ဆက်လက်၍ ဖိုင်၏ အဆုံးရှိ <code>init</code> လုပ်ဆောင်ချက်ကို ပိတ်သော <code>});</code> ၏ အောက်တွင် လိုင်းအလွတ် တစ်လိုင်း ချန်ပြီး အောက်ပါ function ၂ ခုကို ထည့်ပါ။"
+    },
+    {
+      "source": "www/js/app.js · 追加 · ファイルの末尾",
+      "translation": "www/js/app.js · ထည့်ရန် · ဖိုင်၏ အဆုံး"
+    },
+    {
       "source": "<code>createOshiRowHtml(index)</code> を読みます。カード用の <code>class=\"oshi-card\"</code> を含む1行分のタグを文字列で返し、番号を足して <code>item_oshi_0</code>・<code>txt_name_0</code> のように重複しないidを作ります。",
       "translation": "<code>createOshiRowHtml(index)</code> ကို ဖတ်ပါ။ ၎င်းသည် card အတွက် <code>class=\"oshi-card\"</code> အပါအဝင် စာကြောင်းတစ်ကြောင်းစာ tag များကို string အဖြစ် ပြန်ပေးပြီး၊ နံပါတ်ကို ပေါင်းထည့်၍ <code>item_oshi_0</code>၊ <code>txt_name_0</code> ကဲ့သို့ ထပ်တူမကျသော သီးသန့် id များကို ဖန်တီးပေးပါသည်။"
     },
@@ -699,6 +887,18 @@
       "translation": "click နှိပ်လိုက်သော စာကြောင်း၏ အမည်ကို ပြသရန်"
     },
     {
+      "source": "<code>www/js/app.js</code> を2か所変えます。HTMLとCSSは変えません。<code>renderOshiList</code> の2回目の <code>for</code> の中では、<code>txt_genre_</code> の行の下が空行になっています。その空行の下、<code>for</code> を閉じる <code>}</code> の上に、各行の <code>click</code> イベントを追加します。押された行に対応する <code>oshiItems[i]</code> を、<code>selectOshi</code> へ渡します。",
+      "translation": "<code>www/js/app.js</code> တွင် နေရာ ၂ ခုကို ပြောင်းလဲပါမည်။ HTML နှင့် CSS ကို မပြောင်းလဲပါ။ <code>renderOshiList</code> ၏ ဒုတိယအကြိမ် <code>for</code> အတွင်း၌ <code>txt_genre_</code> လိုင်း၏ အောက်တွင် လိုင်းအလွတ် ရှိနေပါသည်။ ထိုလိုင်းအလွတ်၏ အောက်၊ <code>for</code> ကို ပိတ်သော <code>}</code> ၏ အပေါ်တွင် စာကြောင်းတစ်ခုစီ၏ <code>click</code> event ကို ထည့်ပါ။ click နှိပ်လိုက်သော စာကြောင်းနှင့် သက်ဆိုင်သည့် <code>oshiItems[i]</code> ကို <code>selectOshi</code> သို့ ပေးပို့ပါမည်။"
+    },
+    {
+      "source": "www/js/app.js · 追加 · 2回目の for の中、空行の下",
+      "translation": "www/js/app.js · ထည့်ရန် · ဒုတိယအကြိမ် for အတွင်း၊ လိုင်းအလွတ်၏ အောက်"
+    },
+    {
+      "source": "次に、ファイルの末尾、<code>renderOshiList</code> を閉じる <code>}</code> の下に、1行空けて <code>selectOshi</code> を追加します。",
+      "translation": "ထို့နောက် ဖိုင်၏ အဆုံးရှိ <code>renderOshiList</code> ကို ပိတ်သော <code>}</code> ၏ အောက်တွင် လိုင်းအလွတ် တစ်လိုင်း ချန်ပြီး <code>selectOshi</code> ကို ထည့်ပါ။"
+    },
+    {
       "source": "<code>for (let i = 0; ...)</code> の <code>let</code> により、登録した関数はその回の番号を使えます。3つの行に同じ0番のデータを渡さず、各回の <code>i</code> で選ぶ点を確認します。",
       "translation": "<code>for (let i = 0; ...)</code> ရှိ <code>let</code> ကြောင့် register လုပ်ထားသော function သည် ထိုအကြိမ်၏ နံပါတ်ကို အသုံးပြုနိုင်ပါသည်။ စာကြောင်း ၃ ခုစလုံးသို့ တူညီသော အညွှန်းနံပါတ် 0 ၏ data ကို မပေးပို့ဘဲ အကြိမ်တစ်ခုစီ၏ <code>i</code> ဖြင့် ရွေးချယ်ပေးပို့သည့်အချက်ကို စစ်ဆေးပါ။"
     },
@@ -725,6 +925,10 @@
     {
       "source": "データと表示の役割を確かめる",
       "translation": "ဒေတာနှင့် ပြသမှု၏ အခန်းကဏ္ဍများကို စစ်ဆေးရန်"
+    },
+    {
+      "source": "コードは変えません。STEP 13まで書いたコードが、第3コマの基準です。HTMLは一覧を置く場所、CSSは見た目、JavaScriptの配列は内容、関数は行の作成と選択を担当しています。",
+      "translation": "ကုဒ်ကို မပြောင်းလဲပါ။ STEP 13 အထိ ရေးသားခဲ့သော ကုဒ်သည် အတန်းချိန် 3 ၏ စံ ဖြစ်ပါသည်။ HTML သည် list ကို ထားရှိမည့်နေရာ၊ CSS သည် ပုံပန်းသဏ္ဌာန်၊ JavaScript ၏ array သည် အကြောင်းအရာ၊ function များသည် စာကြောင်းများ ဖန်တီးခြင်းနှင့် ရွေးချယ်ခြင်းတို့ကို တာဝန်ယူထားပါသည်။"
     },
     {
       "source": "配列の2件目の名前と種類を書き換え、再読み込みします。一覧と選択中の両方へ同じ変更が出ることを確認します。",
@@ -763,6 +967,22 @@
       "translation": "list ကို navigator က စီမံခန့်ခွဲသော စာမျက်နှာအဖြစ် ပြုလုပ်ရန်"
     },
     {
+      "source": "第4コマでは一覧から詳細を開き、戻れるようにします。第3コマの終わりのコードから始めます。このSTEPでは <code>www/index.html</code> だけを変えます。CSSとJavaScriptは変えません。",
+      "translation": "အတန်းချိန် 4 တွင် list မှ အသေးစိတ်မျက်နှာပြင်ကို ဖွင့်ပြီး ပြန်သွားသည့် လုပ်ဆောင်ချက်အထိ ပြီးစီးအောင် ပြုလုပ်ပါမည်။ အတန်းချိန် 3 အဆုံးရှိ ကုဒ်မှ စတင်ပါမည်။ ဤ STEP တွင် <code>www/index.html</code> ကိုသာ ပြောင်းလဲပါမည်။ CSS နှင့် JavaScript ကို မပြောင်းလဲပါ။"
+    },
+    {
+      "source": "まず、<code>&lt;body&gt;</code> の下、<code>&lt;ons-page id=\"page_list\"&gt;</code> の上に追加します。",
+      "translation": "ပထမဦးစွာ <code>&lt;body&gt;</code> ၏ အောက်၊ <code>&lt;ons-page id=\"page_list\"&gt;</code> ၏ အပေါ်တွင် ထည့်ပါ။"
+    },
+    {
+      "source": "次に、<code>&lt;/ons-page&gt;</code> の下、<code>&lt;/body&gt;</code> の上に、<code>template</code> を閉じるタグを追加します。<code>ons-page</code> から <code>&lt;/ons-page&gt;</code> までの字下げは、そのままでかまいません。",
+      "translation": "ထို့နောက် <code>&lt;/ons-page&gt;</code> ၏ အောက်၊ <code>&lt;/body&gt;</code> ၏ အပေါ်တွင် <code>template</code> ကို ပိတ်သော tag ကို ထည့်ပါ။ <code>ons-page</code> မှ <code>&lt;/ons-page&gt;</code> အထိ indentation ကို မူလအတိုင်း ထားနိုင်ပါသည်။"
+    },
+    {
+      "source": "www/index.html · 追加 · &lt;/ons-page&gt; の下",
+      "translation": "www/index.html · ထည့်ရန် · &lt;/ons-page&gt; ၏ အောက်"
+    },
+    {
       "source": "<code>ons-navigator</code> は複数のページを重ねて管理する部品です。<code>page=\"list.html\"</code> に、最初に出すページを指定します。この <code>list.html</code> は別ファイルではなく、同じHTML内の <code>template id=\"list.html\"</code> の名前です。",
       "translation": "<code>ons-navigator</code> သည် စာမျက်နှာများစွာကို stack ပုံစံဖြင့် ထပ်ဆင့်စီမံခန့်ခွဲပေးသော အစိတ်အပိုင်း ဖြစ်ပါသည်။ <code>page=\"list.html\"</code> တွင် ပထမဆုံး ပြသမည့် စာမျက်နှာကို သတ်မှတ်ပါသည်။ ဤ <code>list.html</code> သည် သီးခြားဖိုင်တစ်ခု မဟုတ်ဘဲ တူညီသော HTML အတွင်းရှိ <code>template id=\"list.html\"</code> ၏ အမည်ဖြစ်ပါသည်။"
     },
@@ -789,6 +1009,38 @@
     {
       "source": "詳細画面を開き、戻る",
       "translation": "အသေးစိတ်မျက်နှာပြင်ကို ဖွင့်ပြီး ပြန်သွားရန်"
+    },
+    {
+      "source": "このSTEPでは3ファイルを書き換えます。HTMLに <code>template id=\"detail.html\"</code> を増やし、詳細のツールバーに <code>ons-back-button</code> を置きます。<code>www/index.html</code> の、STEP 15で追加した <code>&lt;/template&gt;</code> の下、<code>&lt;/body&gt;</code> の上に、1行空けて追加します。",
+      "translation": "ဤ STEP တွင် ဖိုင် ၃ ခုကို ပြင်ဆင်ရေးသားပါမည်။ HTML တွင် <code>template id=\"detail.html\"</code> ကို တိုးချဲ့ထည့်သွင်းပြီး အသေးစိတ် toolbar တွင် <code>ons-back-button</code> ကို ထားရှိပါမည်။ <code>www/index.html</code> ၏ STEP 15 တွင် ထည့်ခဲ့သော <code>&lt;/template&gt;</code> ၏ အောက်၊ <code>&lt;/body&gt;</code> ၏ အပေါ်တွင် လိုင်းအလွတ် တစ်လိုင်း ချန်ပြီး ထည့်ပါ။"
+    },
+    {
+      "source": "www/index.html · 追加 · &lt;/template&gt; の下",
+      "translation": "www/index.html · ထည့်ရန် · &lt;/template&gt; ၏ အောက်"
+    },
+    {
+      "source": "CSSには理由文用の余白と改行表示を追加します。<code>www/css/style.css</code> の <code>.app-selection { … }</code> の下、<code>#list_oshi {</code> の上に追加します。前後は1行ずつ空けます。",
+      "translation": "CSS တွင် အကြောင်းရင်းစာသားအတွက် နေရာလွတ်နှင့် စာကြောင်းခွဲပြသမှု (line-break display) ကို ထည့်ပါမည်။ <code>www/css/style.css</code> ၏ <code>.app-selection { … }</code> ၏ အောက်၊ <code>#list_oshi {</code> ၏ အပေါ်တွင် ထည့်ပါ။ ရှေ့နှင့်နောက်တွင် လိုင်းအလွတ် တစ်လိုင်းစီ ချန်ပါ။"
+    },
+    {
+      "source": "www/css/style.css · 追加 · #list_oshi の上",
+      "translation": "www/css/style.css · ထည့်ရန် · #list_oshi ၏ အပေါ်"
+    },
+    {
+      "source": "JavaScriptでは、クリックしたときに呼ぶ関数を <code>selectOshi</code> から <code>openOshiDetail</code> へ変え、<code>navApp.pushPage(\"detail.html\");</code> で詳細を重ねます。<code>www/js/app.js</code> の2回目の <code>for</code> の中にある、<code>selectOshi</code> を呼ぶ1行を、次の1行に置き換えます。",
+      "translation": "JavaScript တွင် click နှိပ်သည့်အခါ ခေါ်ယူမည့် function ကို <code>selectOshi</code> မှ <code>openOshiDetail</code> သို့ ပြောင်းလဲပြီး <code>navApp.pushPage(\"detail.html\");</code> ဖြင့် အသေးစိတ်မျက်နှာပြင်ကို ထပ်ဆင့်ခေါ်ယူပါမည်။ <code>www/js/app.js</code> ၏ ဒုတိယအကြိမ် <code>for</code> အတွင်းရှိ <code>selectOshi</code> ကို ခေါ်သည့် လိုင်း တစ်လိုင်းကို အောက်ပါ လိုင်း တစ်လိုင်းဖြင့် အစားထိုးပါ။"
+    },
+    {
+      "source": "www/js/app.js · 置き換え · selectOshi を呼ぶ1行",
+      "translation": "www/js/app.js · အစားထိုးရန် · selectOshi ကို ခေါ်သည့် လိုင်း တစ်လိုင်း"
+    },
+    {
+      "source": "続けて、ファイルの末尾の <code>function selectOshi(oshi) {</code> の行から、その関数を閉じる <code>}</code> までを、次のコードに置き換えます。今回は名前や理由を詳細へまだ渡さないため、どの行を押しても「詳細画面の見本」が出ます。",
+      "translation": "ဆက်လက်၍ ဖိုင်၏ အဆုံးရှိ <code>function selectOshi(oshi) {</code> လိုင်းမှ ထို function ကို ပိတ်သော <code>}</code> အထိကို အောက်ပါကုဒ်ဖြင့် အစားထိုးပါ။ ယခုတစ်ကြိမ်တွင် အမည်နှင့် အကြောင်းရင်းကို အသေးစိတ်မျက်နှာပြင်သို့ မပေးပို့သေးသောကြောင့် မည်သည့်စာကြောင်းကို click နှိပ်သည်ဖြစ်စေ 「詳細画面の見本」 (Sample detail screen) သာ ပေါ်လာပါမည်။"
+    },
+    {
+      "source": "www/js/app.js · 置き換え · function selectOshi から、その閉じかっこまで",
+      "translation": "www/js/app.js · အစားထိုးရန် · function selectOshi မှ ၎င်း၏ အပိတ်ကွင်းအထိ"
     },
     {
       "source": "一覧の1件を1回押し、詳細の見本を表示します。",
@@ -821,6 +1073,34 @@
     {
       "source": "押した項目を詳細へ渡す",
       "translation": "click နှိပ်လိုက်သော item ကို အသေးစိတ်မျက်နှာပြင်သို့ ပေးပို့ရန်"
+    },
+    {
+      "source": "このSTEPでは、<code>www/index.html</code> と <code>www/js/app.js</code> を書き換えます。CSSは変えません。詳細の名前・種類・理由はHTMLでは空にし、受け取ったデータを後から入れます。",
+      "translation": "ဤ STEP တွင် <code>www/index.html</code> နှင့် <code>www/js/app.js</code> ကို ပြင်ဆင်ရေးသားပါမည်။ CSS ကို မပြောင်းလဲပါ။ အသေးစိတ်မျက်နှာပြင်ရှိ အမည်၊ အမျိုးအစား၊ အကြောင်းရင်းတို့ကို HTML တွင် အလွတ်ထားရှိပြီး လက်ခံရရှိသော data ကို နောက်မှ ထည့်သွင်းပါမည်။"
+    },
+    {
+      "source": "<code>www/index.html</code> の <code>template id=\"detail.html\"</code> の中で、<code>txt_detail_genre</code> の行から <code>txt_detail_comment</code> の行までの4行を、次のコードに置き換えます。間の「好きな理由」の行は変わりません。",
+      "translation": "<code>www/index.html</code> ၏ <code>template id=\"detail.html\"</code> အတွင်း၌ <code>txt_detail_genre</code> လိုင်းမှ <code>txt_detail_comment</code> လိုင်းအထိ လိုင်း ၄ လိုင်းကို အောက်ပါကုဒ်ဖြင့် အစားထိုးပါ။ ကြားရှိ 「好きな理由」 (Why I like it) လိုင်းသည် မပြောင်းလဲပါ။"
+    },
+    {
+      "source": "www/index.html · 置き換え · txt_detail_genre の行から txt_detail_comment の行まで",
+      "translation": "www/index.html · အစားထိုးရန် · txt_detail_genre လိုင်းမှ txt_detail_comment လိုင်းအထိ"
+    },
+    {
+      "source": "<code>www/js/app.js</code> では、<code>// ページの要素が使えるようになってから処理する。</code> のコメントの行から、<code>init</code> の処理を閉じる <code>});</code> までを、次のコードに置き換えます。コメントの文も変わり、<code>page_detail</code> のときの処理が加わります。",
+      "translation": "<code>www/js/app.js</code> တွင် <code>// ページの要素が使えるようになってから処理する。</code> comment လိုင်းမှ <code>init</code> လုပ်ဆောင်ချက်ကို ပိတ်သော <code>});</code> အထိကို အောက်ပါကုဒ်ဖြင့် အစားထိုးပါ။ comment စာသားလည်း ပြောင်းလဲသွားပြီး <code>page_detail</code> ဖြစ်သည့်အခါ လုပ်ဆောင်ချက်ကို ထပ်ထည့်ထားပါသည်။"
+    },
+    {
+      "source": "www/js/app.js · 置き換え · init の処理（直前のコメントから }); まで）",
+      "translation": "www/js/app.js · အစားထိုးရန် · init လုပ်ဆောင်ချက် (ရှေ့ရှိ comment မှ }); အထိ)"
+    },
+    {
+      "source": "続けて、ファイルの末尾の <code>function openOshiDetail(oshi) {</code> の行から、その関数を閉じる <code>}</code> までを、次のコードに置き換えます。",
+      "translation": "ဆက်လက်၍ ဖိုင်၏ အဆုံးရှိ <code>function openOshiDetail(oshi) {</code> လိုင်းမှ ထို function ကို ပိတ်သော <code>}</code> အထိကို အောက်ပါကုဒ်ဖြင့် အစားထိုးပါ။"
+    },
+    {
+      "source": "www/js/app.js · 置き換え · function openOshiDetail から、その閉じかっこまで",
+      "translation": "www/js/app.js · အစားထိုးရန် · function openOshiDetail မှ ၎င်း၏ အပိတ်ကွင်းအထိ"
     },
     {
       "source": "<code>pushPage</code> の2番目の引数に <code>{ data: { oshi: oshi } }</code> を渡します。左側の <code>oshi</code> は受け渡す項目の名前、右側の <code>oshi</code> は関数の引数で受け取った好きなもの1件です。",
@@ -861,6 +1141,22 @@
     {
       "source": "連続して押されても詳細を重ねない",
       "translation": "ဆက်တိုက် click နှိပ်သော်လည်း အသေးစိတ်မျက်နှာပြင်ကို ထပ်ဆင့်မဖွင့်စေရန်"
+    },
+    {
+      "source": "<code>www/js/app.js</code> を2か所変えます。HTMLとCSSは変えません。完成版では <code>isOpeningDetail</code> という真偽値と、<code>ons-navigator</code> の現在のページを使って、詳細を重ねて開くことを防ぎます。Onsen UIの <code>ons-navigator</code> も、切り替えの途中に届いた2回目の <code>pushPage</code> は受け付けませんが、断られた呼び出しはエラーになります。アプリの側で開く途中かどうかを記録しておけば、2回目の呼び出しそのものをしないで済みます。",
+      "translation": "<code>www/js/app.js</code> တွင် နေရာ ၂ ခုကို ပြောင်းလဲပါမည်။ HTML နှင့် CSS ကို မပြောင်းလဲပါ။ ပြီးစီးပြီးသော ဗားရှင်းတွင် <code>isOpeningDetail</code> ဟူသော boolean တန်ဖိုးနှင့် <code>ons-navigator</code> ၏ လက်ရှိစာမျက်နှာကို အသုံးပြု၍ အသေးစိတ်မျက်နှာပြင်များ တစ်ခုပေါ်တစ်ခု ထပ်ဆင့်ပွင့်သွားခြင်းမှ ကာကွယ်ပါမည်။ Onsen UI ၏ <code>ons-navigator</code> သည်လည်း ပြောင်းလဲနေစဉ်အတွင်း ရောက်ရှိလာသော ဒုတိယအကြိမ် <code>pushPage</code> ကို ငြင်းပယ်သော်လည်း ငြင်းပယ်ခံရသော ခေါ်ယူမှုသည် error ဖြစ်ပေါ်စေပါသည်။ app ဘက်မှ ဖွင့်ဆဲဖြစ်မဖြစ်ကို မှတ်တမ်းတင်ထားပါက ဒုတိယအကြိမ် ခေါ်ယူမှု လုံးဝမပြုလုပ်ဘဲ ရှောင်ရှားနိုင်မည် ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "まず、配列 <code>oshiItems</code> を閉じる <code>];</code> の下に、1行空けて追加します。下の <code>// templateの中身は、ページが作られてから取得する。</code> との間も1行空けます。",
+      "translation": "ပထမဦးစွာ array <code>oshiItems</code> ကို ပိတ်သော <code>];</code> ၏ အောက်တွင် လိုင်းအလွတ် တစ်လိုင်း ချန်ပြီး ထည့်ပါ။ အောက်ရှိ <code>// templateの中身は、ページが作られてから取得する。</code> နှင့် ကြားတွင်လည်း လိုင်းအလွတ် တစ်လိုင်း ချန်ပါ။"
+    },
+    {
+      "source": "www/js/app.js · 追加 · 配列 oshiItems の ]; の下",
+      "translation": "www/js/app.js · ထည့်ရန် · array oshiItems ကို ပိတ်သော ]; ၏ အောက်"
+    },
+    {
+      "source": "次に、ファイルの末尾の <code>function openOshiDetail(oshi) {</code> の行から、その関数を閉じる <code>}</code> までを、次のコードに置き換えます。",
+      "translation": "ထို့နောက် ဖိုင်၏ အဆုံးရှိ <code>function openOshiDetail(oshi) {</code> လိုင်းမှ ထို function ကို ပိတ်သော <code>}</code> အထိကို အောက်ပါကုဒ်ဖြင့် အစားထိုးပါ။"
     },
     {
       "source": "場所",
@@ -921,6 +1217,10 @@
     {
       "source": "完成版を確認し、自分の好きなものノートにする",
       "translation": "ပြီးစီးပြီးသော ဗားရှင်းကို စစ်ဆေးပြီး မိမိကိုယ်ပိုင် 「好きなものノート」 (Favorites notebook) ဖြစ်အောင် ပြုလုပ်ရန်"
+    },
+    {
+      "source": "コードは変えません。STEP 18まで書いたコードが、<code>M01OshiList</code> の完成版です。順番に確認します。自分のアレンジを残す場合は、データや色の違いと、処理の違いを分けて見比べます。",
+      "translation": "ကုဒ်ကို မပြောင်းလဲပါ။ STEP 18 အထိ ရေးသားခဲ့သော ကုဒ်သည် <code>M01OshiList</code> ၏ ပြီးစီးပြီးသော ဗားရှင်း ဖြစ်ပါသည်။ အစဉ်လိုက် စစ်ဆေးပါ။ မိမိ၏ customize ပြုလုပ်ချက်များကို ထိန်းသိမ်းထားလိုပါက data နှင့် အရောင် ကွဲပြားမှုများကို ကုဒ်လုပ်ဆောင်ချက် ကွဲပြားမှုများနှင့် သီးခြားစီ ခွဲခြားနှိုင်းယှဉ်ကြည့်ပါ။"
     },
     {
       "source": "再読み込み直後は3件と「まだ選択していません」が見えます。",
