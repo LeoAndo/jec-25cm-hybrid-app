@@ -223,14 +223,6 @@
       "translation": "En Dart, <code>main</code> también es el punto de inicio. Lo propio de Flutter es pasar el widget de nivel superior a <code>runApp</code>. <code>const</code> se usa para generar configuraciones que no cambian en tiempo de ejecución. <code>class</code> y <code>extends</code> corresponden a la herencia en Java, y <code>super.key</code> es una forma abreviada de pasar el argumento de identificación al padre."
     },
     {
-      "source": "このSTEPの全コード（照合・合流用）",
-      "translation": "Código completo de este STEP (para comparar o incorporarse)"
-    },
-    {
-      "source": "lib/main.dart · 全文",
-      "translation": "lib/main.dart · archivo completo"
-    },
-    {
       "source": "iOSでHello World!が表示され、入口のファイルを開けた。",
       "translation": "Se mostró Hello World! en iOS y pude abrir el archivo de punto de entrada."
     },
@@ -245,10 +237,6 @@
     {
       "source": "この単元の新概念は<strong>宣言的UI</strong>です。現在の値に対応する画面の構成を<code>build</code>で返します。既存の<code>View</code>やDOMを順番に探して書き換えるのではなく、「この値なら、この部品を置く」と記述します。",
       "translation": "El nuevo concepto en esta unidad es la <strong>UI declarativa</strong> (宣言的UI). En <code>build</code>, devuelves la estructura de la pantalla que corresponde a los valores actuales. En lugar de buscar y modificar <code>View</code>s o elementos del DOM existentes uno tras otro, describes: “si tiene este valor, coloca este componente”."
-    },
-    {
-      "source": "<code>lib/main.dart</code>をこのSTEPの全文へ更新します。<code>MaterialApp</code>はアプリの設定、<code>Scaffold</code>は画面の基本枠、<code>SafeArea</code>はOSの表示領域を避ける余白、<code>Center</code>は中央配置、<code>Text</code>は文字を担当します。<code>child:</code>は1つのWidget、後で使う<code>children:</code>は複数のWidgetのリストです。<code>MaterialApp</code>に加えた<code>debugShowCheckedModeBanner: false</code>は、STEP 01で画面の右上に出ていたDEBUGの帯を消す設定です。帯はデバッグ実行中を示す目印で、アプリの動きには関係しません。",
-      "translation": "Actualiza <code>lib/main.dart</code> con el código completo de este STEP. <code>MaterialApp</code> se encarga de la configuración de la aplicación, <code>Scaffold</code> de la estructura básica de la pantalla, <code>SafeArea</code> del margen para evitar el área de visualización del sistema operativo, <code>Center</code> de la alineación centrada y <code>Text</code> del texto. <code>child:</code> recibe un widget, mientras que <code>children:</code>, que usarás más adelante, es una lista de múltiples widgets. La propiedad <code>debugShowCheckedModeBanner: false</code> agregada a <code>MaterialApp</code> es una configuración para quitar la franja de DEBUG que aparecía en la esquina superior derecha de la pantalla en el STEP 01. La franja es solo una marca que indica que se está ejecutando en depuración y no afecta el funcionamiento de la aplicación."
     },
     {
       "source": "<code>Text('今日の小さな一歩', style: TextStyle(fontSize: 28))</code>では、最初の引数が文字、名前付き引数<code>style</code>が装飾です。括弧とカンマの対応をインデントで追いましょう。<code>@override</code>は親のメソッドを実装し直す印です。<code>build</code>へ渡される<code>BuildContext</code>は、そのWidgetがツリーのどこにあるかを表す情報です。",
@@ -327,10 +315,6 @@
       "translation": "El tamaño del texto."
     },
     {
-      "source": "保存し、ホットリロードして、全文が読めるか確認します。次回の合流のため、変えた文字・数値を控えておきます。全コードは見比べるための基準で、自分の変更を消すためのものではありません。",
-      "translation": "Guarda, haz hot reload y verifica que se pueda leer el texto completo. Anota el texto y los números que modificaste para poder retomarlo en la siguiente clase. El código completo es una referencia para comparar, no para borrar tus propios cambios."
-    },
-    {
       "source": "Web基礎では既存要素へ<code>textContent</code>を設定しました。Flutterでは表示する<code>Text</code>を返します。同じ「文字を変える」操作でも、画面の指定方法が違います。",
       "translation": "En Fundamentos web, establecías <code>textContent</code> en un elemento existente. En Flutter, devuelves el <code>Text</code> que deseas mostrar. Aunque se trate de la misma operación de “cambiar el texto”, la forma de especificar la pantalla es diferente."
     },
@@ -345,14 +329,6 @@
     {
       "source": "習慣を1枚のカードにする",
       "translation": "Convierte un hábito en una tarjeta"
-    },
-    {
-      "source": "このコマの開始コード",
-      "translation": "Código inicial de esta clase"
-    },
-    {
-      "source": "途中から合流する場合は、自分が変えた文字・色・数値を控えてから<code>lib/main.dart</code>をそろえます。",
-      "translation": "Si te integras a mitad de camino, anota el texto, los colores y los números que modificaste antes de igualar <code>lib/main.dart</code>."
     },
     {
       "source": "Visual Studio Codeで同じ<code>F01StampBoard</code>を開き、iOSで実行します。今日の開始状態は中央に1つの<code>Text</code>がある画面です。このSTEPでは<code>Center</code>の<code>child</code>を<code>Card</code>へ替え、習慣名・マーク・回数を1枚にまとめます。",
@@ -909,10 +885,6 @@
     {
       "source": "括弧のエラーが出た",
       "translation": "Apareció un error de paréntesis"
-    },
-    {
-      "source": "最初のエラーから確認。<code>child</code>は1つ、<code>children</code>はリスト。各STEPの全文で閉じ括弧を照合。",
-      "translation": "Verifica desde el primer error. <code>child</code> es uno solo, <code>children</code> es una lista. Coteja los paréntesis de cierre con el código completo de cada STEP."
     },
     {
       "source": "再起動すると0に戻った",

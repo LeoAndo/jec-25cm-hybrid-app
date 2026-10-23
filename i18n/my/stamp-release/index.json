@@ -219,14 +219,6 @@
       "translation": "Java တွင် model နှင့် <code>View</code> ကို update လုပ်သည့် ရည်ရွယ်ချက်နှင့် နှိုင်းယှဉ်ပါက Flutter တွင် <code>setState</code> ဖြင့် တန်ဖိုးပြောင်းလဲမှုကို အသိပေးပြီး ထိုတန်ဖိုးမှ Widget ကို ပြန်ပေးပါသည်။ Navigation သည် Swift ၏ Navigation Controller ကဲ့သို့ပင် screen များကို ထပ်ဆင့်စီတန်းပြီး argument များဖြင့် data ကို ပေးပို့ပါသည်။"
     },
     {
-      "source": "このSTEPの全コード（照合・合流用）",
-      "translation": "ဤ STEP ၏ ကုဒ်အပြည့်အစုံ (တိုက်စစ်ရန် သို့မဟုတ် ကြားမှ ပူးပေါင်းရန်)"
-    },
-    {
-      "source": "lib/main.dart · 全文",
-      "translation": "lib/main.dart · အပြည့်အစုံ"
-    },
-    {
       "source": "自分のプロジェクトで一覧・スタンプ・詳細の開始状態を確認できた。",
       "translation": "မိမိ၏ project တွင် စာရင်း၊ stamp များနှင့် အသေးစိတ် screen ၏ စတင်သည့် အခြေအနေကို စစ်ဆေးနိုင်ခဲ့ပါသည်။"
     },
@@ -255,10 +247,6 @@
       "translation": "နောက်သို့ ပြန်သွားသည့်ခလုတ်သည် <code>Navigator.pop</code> ဖြင့် input screen ကို ပိတ်ပါသည်။ <code>PopScope</code> ၏ <code>canPop</code> မှာ နောက်သို့ ပြန်သွားခွင့်ပြုရန် သတ်မှတ်ချက်ဖြစ်ပြီး ယခုအခါတွင် <code>true</code> ဖြစ်ပါသည်။ သိမ်းဆည်းခြင်းကို ထည့်သွင်းသည့် အဆင့်တွင် လုပ်ဆောင်နေစဉ် နောက်သို့ ပြန်သွားသည့် လုပ်ဆောင်ချက်ကို ထိန်းချုပ်ရန်အတွက် အသုံးပြုပါမည်။ စာသားထည့်သွင်း၍ ပြန်ထွက်ပြီးနောက် ထပ်မံဖွင့်ကြည့်ပါက <code>State</code> အသစ်ဖြစ်သောကြောင့် ကွက်လပ်များ ပြန်လည်ဗလာဖြစ်နေသည်ကို စစ်ဆေးပါ။"
     },
     {
-      "source": "全コードには、後のSTEPで使う部分も先に入れてあります。空欄を確かめて<code>message</code>へ文を入れる<code>submit</code>はSTEP 02で、入力画面から一覧へ習慣を渡す<code>onSave</code>と、渡された習慣を一覧へ加える<code>addHabit</code>はSTEP 03で使います。<code>onSave</code>は<code>AddHabitPage</code>の必須の名前付き引数なので、一覧の<code>openAdd</code>は今から<code>addHabit</code>を渡します。追加するボタンの<code>onPressed</code>が<code>null</code>なので、このSTEPではどれも呼ばれません。<code>TextField</code>の<code>enabled: true</code>は入力を受け付ける指定です。<code>canPop</code>と同じく今は<code>true</code>で、保存を入れる段階で、保存中の入力を止めるために使います。",
-      "translation": "Code အပြည့်အစုံတွင် နောက်ပိုင်း STEP များ၌ အသုံးပြုမည့် အစိတ်အပိုင်းများကိုလည်း ကြိုတင်ထည့်သွင်းထားပါသည်။ ကွက်လပ်များကို စစ်ဆေး၍ <code>message</code> ထဲသို့ စာကြောင်းထည့်ပေးသည့် <code>submit</code> ကို STEP 02 တွင် အသုံးပြုပြီး input screen မှ စာရင်းဆီသို့ အလေ့အထကို ပေးပို့သည့် <code>onSave</code> နှင့် ပေးပို့လာသော အလေ့အထကို စာရင်းထဲသို့ ထည့်သွင်းသည့် <code>addHabit</code> ကို STEP 03 တွင် အသုံးပြုပါမည်။ <code>onSave</code> သည် <code>AddHabitPage</code> ၏ မဖြစ်မနေလိုအပ်သော အမည်တပ် argument ဖြစ်သောကြောင့် စာရင်း၏ <code>openAdd</code> သည် ယခုမှစ၍ <code>addHabit</code> ကို ပေးပို့မည် ဖြစ်ပါသည်။ 「追加する」 (Add) ခလုတ်၏ <code>onPressed</code> မှာ <code>null</code> ဖြစ်နေသောကြောင့် ဤ STEP တွင် မည်သည့်အရာမျှ ခေါ်ဆိုမည် မဟုတ်ပါ။ <code>TextField</code> ၏ <code>enabled: true</code> မှာ ထည့်သွင်းမှုကို လက်ခံရန် သတ်မှတ်ချက် ဖြစ်ပါသည်။ <code>canPop</code> ကဲ့သို့ပင် ယခုအခါ <code>true</code> ဖြစ်နေပြီး သိမ်းဆည်းခြင်းကို ထည့်သွင်းသည့် အဆင့်တွင် သိမ်းဆည်းနေစဉ် ထည့်သွင်းမှုကို ရပ်တန့်ရန် အသုံးပြုပါမည်။"
-    },
-    {
       "source": "Androidの<code>EditText</code>やiOSの<code>UITextField</code>から文字を読む場面に対応します。Flutterでは<code>controller</code>を<code>State</code>に保持し、画面が終わるときに解放します。入力欄を開き直しても残したい場合は別の場所へ保存が必要ですが、まだ行いません。",
       "translation": "Android ၏ <code>EditText</code> သို့မဟုတ် iOS ၏ <code>UITextField</code> မှ စာသားကို ဖတ်ယူသည့် အခြေအနေနှင့် သက်ဆိုင်ပါသည်။ Flutter တွင် <code>controller</code> ကို <code>State</code> ထဲတွင် ထိန်းသိမ်းထားပြီး screen ပြီးဆုံးချိန်တွင် release လုပ်ပါသည်။ Input ကွက်လပ်ကို ပြန်ဖွင့်ချိန်တွင်လည်း ကျန်ရှိစေလိုပါက အခြားနေရာတစ်ခုတွင် သိမ်းဆည်းရန် လိုအပ်သော်လည်း ယခုအဆင့်တွင် မပြုလုပ်သေးပါ။"
     },
@@ -277,10 +265,6 @@
     {
       "source": "追加するボタンの<code>onPressed</code>へ<code>submit</code>を渡します。括弧を付けた<code>submit()</code>の実行結果ではなく、押したときに呼ぶ関数を渡します。",
       "translation": "「追加する」 (Add) ခလုတ်၏ <code>onPressed</code> သို့ <code>submit</code> ကို ပေးပို့ပါ။ လက်သည်းကွင်းပါသော <code>submit()</code> ၏ run ရလဒ်မဟုတ်ဘဲ နှိပ်သည့်အခါ ခေါ်ဆိုမည့် function ကို ပေးပို့ရပါမည်။"
-    },
-    {
-      "source": "<code>submit</code>では2つの<code>controller.text</code>を<code>trim</code>して前後の空白を除き、どちらかの<code>isEmpty</code>が<code>true</code>ならメッセージを表示して<code>return</code>します。今回は入力を確認しましたという文までで、一覧への追加は次のSTEPです。",
-      "translation": "<code>submit</code> တွင် <code>controller.text</code> နှစ်ခုကို <code>trim</code> လုပ်၍ ရှေ့နောက် space များကို ဖယ်ရှားပြီး တစ်ခုခု၏ <code>isEmpty</code> မှာ <code>true</code> ဖြစ်နေပါက message ကို ပြသပြီး <code>return</code> ပြန်ပါမည်။ ယခုတစ်ကြိမ်တွင် 「入力を確認しました」 (Input confirmed) ဟူသော စာကြောင်းအထိသာ ပြုလုပ်မည်ဖြစ်ပြီး စာရင်းထဲသို့ ထည့်သွင်းခြင်းမှာ နောက်ထပ် STEP တွင် ဖြစ်ပါသည်။"
     },
     {
       "source": "両方を空にして追加するを押します。",
@@ -317,10 +301,6 @@
     {
       "source": "入力確認後に<code>Habit</code>を作り、<code>widget.onSave</code>へ渡します。<code>onSave</code>は親が入力画面へ渡した関数で、この段階は<code>void Function(Habit)</code>型です。「<code>Habit</code>を受け取り、結果の値を返さない処理」という意味です。",
       "translation": "ထည့်သွင်းမှုကို အတည်ပြုပြီးနောက် <code>Habit</code> ကို ဖန်တီးပြီး <code>widget.onSave</code> သို့ ပေးပို့ပါ။ <code>onSave</code> သည် parent မှ input screen သို့ ပေးပို့ထားသော function ဖြစ်ပြီး ဤအဆင့်တွင် <code>void Function(Habit)</code> type ဖြစ်ပါသည်။ “<code>Habit</code> ကို လက်ခံရယူပြီး ရလဒ်တန်ဖိုး ပြန်မပေးသော လုပ်ဆောင်ချက်” ဟု အဓိပ္ပာယ်ရပါသည်။"
-    },
-    {
-      "source": "親の<code>addHabit</code>では<code>setState</code>の中で<code>habits.add</code>を呼びます。入力画面は<code>Navigator.pop</code>で閉じ、下に残っている一覧を表示します。<code>widget</code>はこの<code>State</code>に対応する<code>AddHabitPage</code>の設定を読むためのプロパティです。",
-      "translation": "Parent ၏ <code>addHabit</code> တွင် <code>setState</code> အတွင်း၌ <code>habits.add</code> ကို ခေါ်ဆိုပါသည်။ Input screen ကို <code>Navigator.pop</code> ဖြင့် ပိတ်ပြီး အောက်တွင် ကျန်ရှိနေသော စာရင်းကို ပြသပါမည်။ <code>widget</code> သည် ဤ <code>State</code> နှင့် သက်ဆိုင်သော <code>AddHabitPage</code> ၏ setting များကို ဖတ်ရှုရန် property ဖြစ်ပါသည်။"
     },
     {
       "source": "1件追加し、一覧が4件になったことを確認します。",
@@ -415,14 +395,6 @@
       "translation": "ပြီးစီးမှုကို စောင့်ဆိုင်းသည့် code ကို ဖတ်ရှုရန်"
     },
     {
-      "source": "このコマの開始コード",
-      "translation": "ဤအတန်းချိန်အတွက် စတင်သည့်ကုဒ်"
-    },
-    {
-      "source": "途中から合流する場合は、自分が変えた文字・色・数値を控えてから<code>lib/main.dart</code>をそろえます。",
-      "translation": "အလယ်အလတ်မှ ပြန်လည်ပူးပေါင်းပါက မိမိ ပြောင်းလဲထားသော စာသား၊ အရောင်နှင့် ကိန်းဂဏန်းများကို ဦးစွာ မှတ်သားထားပြီးမှ <code>lib/main.dart</code> ကို ကိုက်ညီအောင် ညှိယူပါ။"
-    },
-    {
       "source": "Visual Studio Codeで同じスタンプ帳を開きます。開始状態は「入力で追加できるが、再起動で消える」です。今日は記録を端末へ残します。",
       "translation": "Visual Studio Code တွင် တူညီသော Stamp board ကို ဖွင့်ပါ။ စတင်သည့် အခြေအနေမှာ “ထည့်သွင်း၍ ထပ်ပေါင်းနိုင်သော်လည်း restart ပြုလုပ်ချိန်တွင် ပျောက်ကွယ်သွားသည်” ဖြစ်ပါသည်။ ယနေ့တွင် မှတ်တမ်းများကို စက်ထဲသို့ သိမ်းဆည်းထားပါမည်။"
     },
@@ -433,10 +405,6 @@
     {
       "source": "<code>async</code>を付けた関数の中では<code>await</code>が使えます。<code>await</code>では、その処理の完了後に続きへ進みます。画面全体を同期的に止めて待つのではなく、待っている間も画面を表示できます。保存の完了前に「保存した」と表示したり、入力を消したりしない順番を作ります。",
       "translation": "<code>async</code> သတ်မှတ်ထားသော function အတွင်းတွင် <code>await</code> ကို အသုံးပြုနိုင်ပါသည်။ <code>await</code> တွင် ထိုလုပ်ဆောင်ချက် ပြီးစီးပြီးမှသာ နောက်တစ်ခုသို့ ဆက်လက်လုပ်ဆောင်ပါမည်။ Screen တစ်ခုလုံးကို synchronous နည်းလမ်းဖြင့် ရပ်တန့်၍ စောင့်ဆိုင်းခြင်း မဟုတ်ဘဲ စောင့်ဆိုင်းနေစဉ်အတွင်း၌လည်း screen ကို ဆက်လက်ပြသနိုင်ပါသည်။ သိမ်းဆည်းမှု မပြီးစီးမီ “သိမ်းဆည်းပြီးပါပြီ” ဟု ပြသခြင်း သို့မဟုတ် ထည့်သွင်းမှုများကို ဖျက်ပစ်ခြင်း မပြုလုပ်သည့် အစီအစဉ်ကို တည်ဆောက်ပါမည်။"
-    },
-    {
-      "source": "次は流れを読む抜粋で、このSTEPではまだ追加しません。次のSTEPでパッケージと全コードをそろえます。",
-      "translation": "အောက်ပါတို့သည် လုပ်ဆောင်မှု စီးဆင်းပုံကို ဖတ်ရှုရန် ကောက်နုတ်ချက်ဖြစ်ပြီး ဤ STEP တွင် မထည့်သွင်းသေးပါ။ နောက်ထပ် STEP တွင် package နှင့် code အပြည့်အစုံကို ထည့်သွင်းပါမည်။"
     },
     {
       "source": "Javaの同期的な戻り値と比較し、今回は<code>Future</code>の完了を待って結果を得る点を新しく扱います。Java／Swiftの非同期APIを履修済みとは仮定しません。既知の順次処理から「完了後の続き」と「待機中の画面」を区別します。",
@@ -453,14 +421,6 @@
     {
       "source": "文字列リストへ保存する",
       "translation": "string list သို့ သိမ်းဆည်းရန်"
-    },
-    {
-      "source": "まず<code>pubspec.yaml</code>の<code>dependencies</code>へ<code>shared_preferences: 2.5.5</code>を加えます。<code>dependencies</code>は既にあるので二重に作らず、Flutter SDKと同じ字下げで追加します。ほかの設定は残します。",
-      "translation": "ပထမဦးစွာ <code>pubspec.yaml</code> ၏ <code>dependencies</code> ထဲသို့ <code>shared_preferences: 2.5.5</code> ကို ထည့်သွင်းပါ။ <code>dependencies</code> သည် ရှိပြီးသားဖြစ်သောကြောင့် နှစ်ခါမဖန်တီးဘဲ Flutter SDK နှင့် တူညီသော indent ဖြင့် ထည့်သွင်းပါ။ အခြား setting များကို ချန်ထားပါ။"
-    },
-    {
-      "source": "実行中のアプリを<code>q</code>で終了し、<code>flutter pub get</code>を実行します。新しいネイティブプラグインを加えたのでホットリロードだけで済ませず、全コードを更新して<code>flutter run -d 端末ID</code>で起動し直します。",
-      "translation": "Run နေသော app ကို <code>q</code> ဖြင့် ရပ်တန့်ပြီး <code>flutter pub get</code> ကို run လုပ်ပါ။ Native plugin အသစ်ကို ထည့်သွင်းထားသောကြောင့် hot reload သာမက code အပြည့်အစုံကို update လုပ်ပြီး <code>flutter run -d 端末ID</code> (端末ID = device ID) ဖြင့် ပြန်လည်စတင်ပါ။"
     },
     {
       "source": "起動し直さずに<code>r</code>で反映すると、ターミナルにはエラーが出ませんが、スタンプを押しても習慣を追加しても「保存できませんでした。」で始まる文が出るだけで、保存できません。続けて<code>R</code>を押すと、画面全体が赤くなり<code>Bad state: The SharedPreferencesAsyncPlatform instance must be set.</code>と出ます。<code>r</code>と<code>R</code>はDartのコードを入れ替えるだけで、アプリのビルドをやり直しません。新しいプラグインは、ビルドし直したアプリにだけ組み込まれます。そのときは<code>q</code>で終了し、<code>flutter run -d 端末ID</code>で起動し直します。",
@@ -865,10 +825,6 @@
     {
       "source": "完成確認の順番を決める",
       "translation": "ပြီးစီးမှု စစ်ဆေးခြင်း အစီအစဉ်ကို ဆုံးဖြတ်ရန်"
-    },
-    {
-      "source": "Visual Studio Codeで自分のスタンプ帳を開きます。今日は新しい概念を追加せず、作品を仕上げて通常APKを提出します。アレンジ済みのコードがある場合は、合流用コードで上書きしません。",
-      "translation": "Visual Studio Code တွင် မိမိ၏ Stamp board ကို ဖွင့်ပါ။ ယနေ့တွင် သဘောတရားအသစ်များကို မထည့်သွင်းဘဲ လက်ရာကို အပြီးသတ်၍ ပုံမှန် APK ကို တင်သွင်းပါမည်။ စိတ်ကြိုက်ပြင်ဆင်ပြီးသား code ရှိပါက ကြားဖြတ်ပူးပေါင်းရန် code ဖြင့် overwrite မလုပ်ပါနှင့်။"
     },
     {
       "source": "確認順を決め、結果を短く控えます。必要な記録は初期化前に別に残します。",

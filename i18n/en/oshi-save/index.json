@@ -179,10 +179,6 @@
       "translation": "Open <code>www/index.html</code> and <code>www/css/style.css</code>. If <code>www/js/app.js</code> does not exist, use the create commands in the file list to make a <code>js</code> folder under <code>www</code> and an <code>app.js</code> file inside it."
     },
     {
-      "source": "自分のアレンジがある場合は、変えた文字と色を控えます。下の開始コード3ファイルをそろえ、保存してプレビューを再読み込みします。<code>components</code> や <code>res</code> は変更しません。",
-      "translation": "If you have your own customizations, note down the text and colors you changed. Bring the three files in line with the starting code below, save, and reload the preview. Do not change <code>components</code> or <code>res</code>."
-    },
-    {
       "source": "3件の名前を押して詳細を開き、左上の戻るボタンで一覧へ戻ります。戻るボタンは、iOS向けの見た目では「＜ 戻る」、Android向けの見た目では左向きの矢印「←」だけです。タイトルと詳細の組み合わせを確かめます。",
       "translation": "Tap the names of the 3 items to open their details, and go back to the list with the back button at the top left. In the iOS look, the back button reads 「＜ 戻る」 (Back); in the Android look, it is only a left-pointing arrow 「←」. Check that each title goes with the right details."
     },
@@ -247,22 +243,6 @@
       "translation": "The three-file structure is the same as in Web Basics, but the place where you work is the Monaca クラウド IDE. <code>init</code> is the timing that corresponds to setup after view creation on Android or <code>viewDidLoad</code> on iOS, and you receive it with <code>addEventListener</code> in JavaScript. The <code>data</code> of <code>pushPage</code> corresponds to passing a value to the next screen in a native app. Nothing has been converted to a string for saving yet."
     },
     {
-      "source": "このSTEPの全コード（照合・合流用）",
-      "translation": "Full code for this STEP (to compare with yours, or to join from here)"
-    },
-    {
-      "source": "www/index.html · 全文",
-      "translation": "www/index.html · full file"
-    },
-    {
-      "source": "www/css/style.css · 全文",
-      "translation": "www/css/style.css · full file"
-    },
-    {
-      "source": "www/js/app.js · 全文",
-      "translation": "www/js/app.js · full file"
-    },
-    {
       "source": "自分の1プロジェクトで3件の一覧・詳細・戻るを確認し、HTMLとJSの対応を追えた。",
       "translation": "The list, details, and back have been checked for the 3 items in your own single project, and you can follow how the HTML and JS correspond."
     },
@@ -273,10 +253,6 @@
     {
       "source": "入力画面を作る",
       "translation": "Build the input screen"
-    },
-    {
-      "source": "3ファイルをこのSTEPのコードへ更新します。HTMLに <code>add.html</code> の<code>template</code>を加え、名前・種類の <code>input</code> と、好きな理由の <code>textarea</code> を置きます。<code>label</code> の<code>for</code>と入力欄の<code>id</code>が対応します。",
-      "translation": "Update the three files to this STEP's code. In the HTML, add a <code>template</code> for <code>add.html</code>, and place an <code>input</code> each for the name and the type and a <code>textarea</code> for the reason you like it. The <code>for</code> of each <code>label</code> matches the <code>id</code> of its input field."
     },
     {
       "source": "CSSの <code>.app-input</code> は幅を100%にし、<code>box-sizing: border-box</code> で<code>padding</code>と枠をその幅の内側へ収めます。<code>font: inherit</code> で文字を周囲とそろえ、<code>focus</code>の<code>outline</code>で選択中の欄を見分けます。ほかに加わるクラスのうち、このSTEPの画面に当たる4つは次の表のとおりです。",
@@ -331,20 +307,12 @@
       "translation": "The three declarations <code>.reset-section</code>, <code>#panel_reset ons-button</code>, and <code>.is-hidden</code> are for the reset confirmation panel added in STEP 08. This STEP's HTML has no elements they apply to yet."
     },
     {
-      "source": "一覧の <code>btn_open_add</code> へ<code>openAddPage</code>を登録し、<code>pushPage(\"add.html\", ...)</code> で入力画面へ進みます。詳細と同じ移動中の旗を共有するため、片方を開いている最中にもう片方は開きません。",
-      "translation": "Register <code>openAddPage</code> on <code>btn_open_add</code> in the list, and go to the input screen with <code>pushPage(\"add.html\", ...)</code>. It shares the same navigating flag as the detail screen, so while one is opening, the other does not open."
-    },
-    {
-      "source": "この旗の名前は、STEP 00の <code>isOpeningDetail</code> から <code>isOpeningPage</code> に変えます。詳細を開くときだけでなく入力画面を開くときにも使うので、「詳細を開いている最中」ではなく「どちらかのページを開いている最中」と読める名前にするためです。宣言と<code>openOshiDetail</code>の中の3か所も、新しい名前にそろえます。",
-      "translation": "Rename this flag from <code>isOpeningDetail</code> in STEP 00 to <code>isOpeningPage</code>. It is now used not only when opening the detail screen but also when opening the input screen, so the name should read as \"while either page is opening\" rather than \"while the detail screen is opening\". Change the declaration and the 3 places inside <code>openOshiDetail</code> to the new name as well."
+      "source": "初期データは <code>createInitialItems</code> が新しい配列を返す形にまとめました。後で初期化したときにも同じ内容を作り直せるようにするためです。呼び出しのたびに新しい配列になる点を、<code>return</code>の位置と一緒に読みます。",
+      "translation": "The initial data is now organized so that <code>createInitialItems</code> returns a new array. This lets you recreate the same content later when you reset. Read the point that each call produces a new array, together with the position of <code>return</code>."
     },
     {
       "source": "一覧のボタンの下の <code>txt_storage</code> には <code>この段階では、追加した内容は保存されません。</code>、入力画面のボタンの下の注記には <code>この段階では、追加した内容は再読み込みすると消えます。</code> と出します。追加した内容がまだ残らないことを、画面で先に伝えるためです。保存を作るSTEP 06で、どちらの文も書き換えます。",
       "translation": "In <code>txt_storage</code> under the button on the list, show <code>この段階では、追加した内容は保存されません。</code> (At this stage, added entries are not saved.), and in the note under the button on the input screen, show <code>この段階では、追加した内容は再読み込みすると消えます。</code> (At this stage, added entries disappear when you reload.). This tells the user on screen, in advance, that added entries do not persist yet. Both messages are rewritten in STEP 06, where saving is built."
-    },
-    {
-      "source": "初期データは <code>createInitialItems</code> が新しい配列を返す形にまとめました。後で初期化したときにも同じ内容を作り直せるようにするためです。呼び出しのたびに新しい配列になる点を、<code>return</code>の位置と一緒に読みます。",
-      "translation": "The initial data is now organized so that <code>createInitialItems</code> returns a new array. This lets you recreate the same content later when you reset. Read the point that each call produces a new array, together with the position of <code>return</code>."
     },
     {
       "source": "保存・再読み込み後に <code>好きなものを追加</code> を押します。",
@@ -373,10 +341,6 @@
     {
       "source": "入力した文字を確認する",
       "translation": "Check the entered text"
-    },
-    {
-      "source": "HTMLの追加ボタンから <code>disabled</code> を外し、JSでは <code>page_add</code> の<code>init</code>で<code>addOshi</code>を登録します。関数名を渡しているので、登録した瞬間ではなくボタンを押したときに動きます。",
-      "translation": "Remove <code>disabled</code> from the add button in the HTML, and in the JS register <code>addOshi</code> in the <code>init</code> of <code>page_add</code>. Because you pass the function name, it runs when the button is pressed, not at the moment of registration."
     },
     {
       "source": "<code>addOshi</code>は、入力欄を<code>id</code>で取得し、<code>value</code> で今の文字を読みます。<code>trim()</code> は前後の空白を取り除きます。3つのどれかが空ならメッセージを表示して<code>return</code>し、残りの処理へ進みません。",
@@ -413,10 +377,6 @@
     {
       "source": "配列へ追加して戻る",
       "translation": "Add to the array and go back"
-    },
-    {
-      "source": "JSの<code>addOshi</code>で、入力確認だけの行を、配列へ追加して一覧を描き直す処理へ替えます。<code>oshiItems.push({ name: name, genre: genre, comment: comment })</code> の左側はデータの項目名、右側は入力欄から読んだ変数です。",
-      "translation": "In <code>addOshi</code> in the JS, replace the line that only confirms the input with processing that adds to the array and redraws the list. In <code>oshiItems.push({ name: name, genre: genre, comment: comment })</code>, the left side of each pair is the data field name and the right side is the variable read from the input field."
     },
     {
       "source": "次に<code>renderOshiList</code>を呼びます。この関数は<code>innerHTML</code>で行を置き直した後に、<code>textContent</code>の設定とクリックの登録をやり直します。古い行に登録したイベントは、新しい行へ自動では移らないためです。",
@@ -457,10 +417,6 @@
     {
       "source": "確認とアレンジ",
       "translation": "Check and customize"
-    },
-    {
-      "source": "今日の終わりは、作った範囲を使って自分の表現に変えます。コードはSTEP 03の状態です。下の全コードは照合用で、自分の変更を無条件に貼り戻すためのものではありません。",
-      "translation": "To end today, use what you have built so far to make it your own. The code is in the state of STEP 03. The full code below is for comparison; it is not meant to be pasted back over your changes unconditionally."
     },
     {
       "source": "変える場所",
@@ -517,18 +473,6 @@
     {
       "source": "配列とJSONの違いを読む",
       "translation": "Read the difference between arrays and JSON"
-    },
-    {
-      "source": "このコマの開始時の全コード",
-      "translation": "Full code at the start of this session"
-    },
-    {
-      "source": "途中から合流する場合は、変更した文字と色を控えてから3ファイルをそろえます。順番に進めている人は、前の回の続きで構いません。",
-      "translation": "If you are joining partway through, note down the text and colors you changed, then bring the three files in line. If you have been working in order, you can continue from the previous session."
-    },
-    {
-      "source": "Monaca クラウド IDEで同じ好きなものノートを開きます。開始状態は「入力して追加できるが、再読み込みすると初期データに戻る」です。保存する前に、画面で使う配列と、保存へ渡す文字列を区別します。",
-      "translation": "Open the same favorites notebook in the Monaca クラウド IDE. The starting state is \"you can enter and add, but a reload returns to the initial data\". Before saving, distinguish the array used on screen from the string passed to storage."
     },
     {
       "source": "<strong>JSONは、値を文字で表すための決まった形式</strong>です。JavaScriptの配列やオブジェクトそのものではありません。<code>JSON.stringify</code> は値をJSONの文字列にし、<code>JSON.parse</code> はJSONの文字列から値を復元します。今回の保存対象は文字列の3項目を持つオブジェクトの配列です。",
@@ -603,10 +547,6 @@
       "translation": "Save as a string"
     },
     {
-      "source": "このSTEPの3ファイルへ更新します。JSの先頭に <code>STORAGE_KEY</code> を置き、保存内容を探すための名前を1か所で管理します。この名前を途中で変更すると、以前のキーで保存した内容は見えなくなります。",
-      "translation": "Update to this STEP's three files. Put <code>STORAGE_KEY</code> at the top of the JS, so the name used to find the saved content is managed in one place. If you change this name partway through, content saved under the previous key is no longer visible."
-    },
-    {
       "source": "<code>addOshi</code>では、<code>oshiItems.slice()</code> で配列の浅いコピー<code>nextItems</code>を作り、そこへ新しい1件を追加します。この処理では既存のオブジェクトの項目は変更せず、配列へ追加するだけなので、配列のコピーで足ります。",
       "translation": "In <code>addOshi</code>, <code>oshiItems.slice()</code> makes a shallow copy of the array, <code>nextItems</code>, and the new item is added to it. This processing does not change the fields of the existing objects; it only adds to the array, so a copy of the array is enough."
     },
@@ -659,14 +599,6 @@
       "translation": "Keep the input, so the user can check or retry next."
     },
     {
-      "source": "保存してよいかを表す <code>let canSave = true;</code> も加えます。<code>openAddPage</code>と<code>addOshi</code>の最初の条件で <code>!canSave</code> なら何もせずに戻り、一覧の<code>init</code>では <code>btn_open_add</code> の <code>disabled</code> を <code>!canSave</code> にします。このSTEPには <code>canSave</code> を<code>false</code>にする行がないので、常に<code>true</code>のままで、画面の動きは変わりません。<code>false</code>にするのは、次のSTEPで保存内容を読み込めなかったときです。そのまま追加できると、読めなかった保存内容を、初期データに1件足した配列で上書きしてしまいます。保存の処理を書くこのSTEPで、保存へ進む入口に確認を置いておけば、次のSTEPでは読み込みの処理を足すだけで済みます。",
-      "translation": "Also add <code>let canSave = true;</code>, which shows whether saving is allowed. In the first condition of <code>openAddPage</code> and <code>addOshi</code>, if <code>!canSave</code>, return without doing anything, and in the list's <code>init</code>, set the <code>disabled</code> of <code>btn_open_add</code> to <code>!canSave</code>. This STEP has no line that sets <code>canSave</code> to <code>false</code>, so it always stays <code>true</code> and the screen behaves the same. It is set to <code>false</code> in the next STEP, when the saved content cannot be loaded. If adding were still allowed then, the saved content that could not be read would be overwritten with the initial data plus one item. By placing this check at the entrance to saving in this STEP, where the save processing is written, the next STEP only needs to add the load processing."
-    },
-    {
-      "source": "画面の文も、保存ができるようになったことに合わせて替えます。入力画面のボタンは <code>追加する</code> から <code>追加して保存</code> に変わります。押すと、配列への追加と一緒に保存まで行うことを、ボタンの文字で示すためです。STEP 01から出していた2つの文は、保存できるようになると事実と合わなくなるので、一覧の <code>txt_storage</code> は <code>保存はできますが、このSTEPではまだ読み込みません。</code> に、入力画面のボタンの下の注記は <code>保存先は、このブラウザの同じプレビューです。公開URLに入力内容は含まれません。</code> に替えます。保存した内容はこのブラウザにだけ残り、STEP 12で発行する公開URLから取り込んだ人には届かないためです。",
-      "translation": "The on-screen text also changes to match the fact that saving now works. The button on the input screen changes from <code>追加する</code> (Add) to <code>追加して保存</code> (Add and save). The button text shows that pressing it saves as well as adding to the array. The two messages shown since STEP 01 no longer match the facts once saving works, so change <code>txt_storage</code> on the list to <code>保存はできますが、このSTEPではまだ読み込みません。</code> (Saving works, but this STEP does not load it yet.), and the note under the button on the input screen to <code>保存先は、このブラウザの同じプレビューです。公開URLに入力内容は含まれません。</code> (The save location is this same preview in this browser. Your input is not included in the import URL.). This is because the saved content stays only in this browser and does not reach anyone who imports from the import URL you issue in STEP 12."
-    },
-    {
       "source": "入力画面のボタンが <code>追加して保存</code> になったことを確かめてから、1件追加して一覧へ戻り、<code>件をこのブラウザに保存しました。</code> の文を確かめます。このSTEPでは保存までなので、再読み込み時の表示はまだ初期データです。保存されていないと決めつけず、次のSTEPで読み込む側を作ります。また、このSTEPで再読み込みしてからもう一度追加すると、前に保存した内容は、ソースの初期データと新しい1件で上書きされます。保存した内容をまだ読み込んでいない配列に、新しい1件を足して保存するためです。次のSTEPで読み込めるのは、最後に保存した内容です。",
       "translation": "After confirming that the button on the input screen now reads <code>追加して保存</code> (Add and save), add one item, go back to the list, and check the message <code>件をこのブラウザに保存しました。</code> (items saved in this browser.). This STEP only goes as far as saving, so after a reload the display is still the initial data. Do not conclude that nothing was saved; the loading side is built in the next STEP. Also, if you reload in this STEP and then add again, the previously saved content is overwritten with the initial data from the source plus the new item. This is because the new item is added to an array that has not yet loaded the saved content, and then saved. What can be loaded in the next STEP is the content saved last."
     },
@@ -685,10 +617,6 @@
     {
       "source": "保存した配列を復元する",
       "translation": "Restore the saved array"
-    },
-    {
-      "source": "JSに<code>loadOshiItems</code>と<code>isValidItems</code>を加え、<code>page_list</code>の<code>init</code>で <strong>読み込み→一覧生成</strong> の順に呼びます。保存した値を読む前に行を作ると、初期データのまま表示されるためです。",
-      "translation": "Add <code>loadOshiItems</code> and <code>isValidItems</code> to the JS, and in the <code>init</code> of <code>page_list</code> call them in the order <strong>load → build the list</strong>. If you build the rows before reading the saved value, the initial data stays on the screen."
     },
     {
       "source": "<code>getItem(STORAGE_KEY)</code> は、未保存なら <code>null</code> を返します。この場合は何も復元せず、ソースの初期データを使います。文字列があれば<code>JSON.parse</code>で値へ戻します。",
@@ -751,10 +679,6 @@
       "translation": "Confirm the reset and handle failures"
     },
     {
-      "source": "HTMLに初期化ボタンと確認欄、JSにそのイベントと<code>resetOshiItems</code>を加えます。<code>初期の内容に戻す</code> を押すと、<code>is-hidden</code>を<code>remove</code>して確認欄を見せます。<code>やめる</code> ではクラスを<code>add</code>し、欄を閉じるだけです。確認欄を囲む <code>reset-section</code> は上に区切りの線を引き、<code>#panel_reset ons-button</code> は確認欄の2つのボタンの上を12px空けます。この2つと <code>is-hidden</code> はSTEP 01のCSSに入れてあり、このSTEPのHTMLで初めて要素に当たります。",
-      "translation": "Add a reset button and a confirmation panel to the HTML, and its event and <code>resetOshiItems</code> to the JS. Pressing <code>初期の内容に戻す</code> (Restore initial contents) does <code>remove</code> on <code>is-hidden</code> to show the confirmation panel. <code>やめる</code> (Cancel) only does <code>add</code> on the class and closes the panel. <code>reset-section</code>, which encloses the confirmation panel, draws a dividing line at the top, and <code>#panel_reset ons-button</code> leaves 12px above the two buttons in the panel. These two and <code>is-hidden</code> were included in the CSS in STEP 01, and this STEP's HTML is the first to have elements they apply to."
-    },
-    {
       "source": "実際の削除は <code>削除して初期の内容に戻す</code> を押した場合だけです。<code>localStorage.removeItem(STORAGE_KEY)</code> で、このアプリのキー1つだけを削除します。保存領域全体を空にする<code>clear</code>は使いません。",
       "translation": "The actual deletion happens only when <code>削除して初期の内容に戻す</code> (Delete and restore initial contents) is pressed. <code>localStorage.removeItem(STORAGE_KEY)</code> deletes only this app's single key. <code>clear</code>, which empties the whole storage area, is not used."
     },
@@ -793,10 +717,6 @@
     {
       "source": "保存を確かめてアレンジする",
       "translation": "Check saving and customize"
-    },
-    {
-      "source": "入力→追加→詳細→戻る→再読み込みの順で動かし、保存した内容が復元されることを確認します。次に、ソースの初期データを自分の言葉へ変えます。",
-      "translation": "Run through input → add → detail → back → reload, and confirm that the saved content is restored. Next, change the initial data in the source into your own words."
     },
     {
       "source": "<strong>保存データがあると、ソースの初期データより優先して表示されます。</strong> <code>createInitialItems</code>を書き換えても画面が変わらない場合は、変更したコードのミスとは限りません。必要な入力を控えたうえで、アプリ内の初期化を使ってソースの内容を確認します。",
@@ -855,10 +775,6 @@
       "translation": "Start preparing Flutter in class"
     },
     {
-      "source": "今日は好きなものノートを仕上げて提出します。最初の10分で、後半に使うFlutter SDKのダウンロードと既存のiOS環境の確認を始めます。授業前に取得しておく必要はありません。",
-      "translation": "Today you finish your favorites notebook and submit it. In the first 10 minutes, start downloading the Flutter SDK for the second half of the course and checking your existing iOS environment. You do not need to have obtained it before class."
-    },
-    {
       "source": "<a1>共通資料のSTEP 4〜7</a1>を別のタブで開きます。",
       "translation": "Open <a1>STEP 4–7 of the shared guide</a1> in another tab."
     },
@@ -893,10 +809,6 @@
     {
       "source": "提出に残るアレンジを作る",
       "translation": "Make customizations that stay in your submission"
-    },
-    {
-      "source": "Monaca クラウド IDEへ戻り、自分の好きなものノートを仕上げます。既に扱った文字・色・初期データから変更箇所を選び、どんなものが好きで、なぜ好きなのかが伝わる内容にします。",
-      "translation": "Go back to the Monaca クラウド IDE and finish your own favorites notebook. Choose what to change from the text, colors, and initial data you have already worked with, and make the content convey what you like and why you like it."
     },
     {
       "source": "確認方法",
@@ -963,10 +875,6 @@
       "translation": "Check the operations and the import URL"
     },
     {
-      "source": "ソースの初期の内容が表示された状態から完成確認を始めます。必要な入力は内容を控えて、先生と確認してから初期化します。",
-      "translation": "Start the final check from the state where the initial contents of the source are displayed. For any input you need, note down its content and reset after checking with your teacher."
-    },
-    {
       "source": "一覧の各行から詳細へ進み、名前・種類・理由が一致することを確認します。",
       "translation": "Go from each row of the list to its details, and check that the name, type, and reason match."
     },
@@ -1015,10 +923,6 @@
       "translation": "Submit and check preparation status"
     },
     {
-      "source": "先生が授業中に案内する提出先・締め切りを確認し、自分の好きなものノートで発行した公開URLを提出します。まだ案内がない場合は、URLを控えて先生へ確認します。",
-      "translation": "Check the submission site and deadline that your teacher announces in class, and submit the import URL you issued for your own favorites notebook. If there is no announcement yet, note down the URL and check with your teacher."
-    },
-    {
       "source": "通常版MonacaのFreeプランではZIPを学生の提出物にしません。先生は公開URLから取り込み、初期データと操作を確認します。公開中の自分のプロジェクトは提出後に削除しません。",
       "translation": "In the Free plan of standard Monaca, a ZIP is not used as the students' submission. The teacher imports from the import URL and checks the initial data and the operations. Do not delete your published project after submitting."
     },
@@ -1043,10 +947,6 @@
       "translation": "Check the places you can customize"
     },
     {
-      "source": "最後に提出したソースを見ながら、次の3点を確かめます。",
-      "translation": "Finally, while looking at the source you submitted, check the following 3 points."
-    },
-    {
       "source": "どのファイルの、どの文字・色・初期データを変更したか。",
       "translation": "Which text, colors, and initial data you changed, in which file."
     },
@@ -1061,10 +961,6 @@
     {
       "source": "余裕があれば、既に扱った範囲で記入例を分かりやすくしたり、余白を調整したりします。いまある画面で、自分の「好き」が伝わる状態を確かめましょう。変更したら保存し、一覧・追加・詳細・再読み込みを確認してから公開内容を確かめます。",
       "translation": "If you have time, make the example entries clearer or adjust the spacing, within what you have already worked with. Make sure that the screen as it is now conveys what you like. After changing, save, check the list, add, details, and reload, and then check the published content."
-    },
-    {
-      "source": "下の全コードは、自分のコードと見比べるためのものです。自分の変更を消して全コードに戻す必要はありません。動かなくなった部分や、変更した場所と結果の関係を確かめるために使います。",
-      "translation": "The full code below is for comparison with your own code. You do not need to erase your changes and go back to the full code. Use it to check parts that stopped working, and the relation between what you changed and the result."
     },
     {
       "source": "HTML・CSS・JavaScriptの役割分担はWeb基礎と同じで、変更した場所はファイルの種類から見つけられます。保存があるアプリでは、ソースの初期値と保存値の両方を見ます。<code>SharedPreferences</code>／<code>UserDefaults</code>を使うアプリで、コードに書いた初期値と端末に残る保存値が別にあるのと同じです。",

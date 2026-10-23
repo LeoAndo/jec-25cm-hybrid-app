@@ -219,14 +219,6 @@
       "translation": "相對於在 Java 中更新模型和 <code>View</code> 的做法，Flutter 中用 <code>setState</code> 通知值的變更，再根據該值回傳 Widget。畫面切換和 Swift 的 Navigation Controller 一樣，將畫面堆疊上去，並透過引數傳遞資料。"
     },
     {
-      "source": "このSTEPの全コード（照合・合流用）",
-      "translation": "本 STEP 的完整程式碼（用於對照與中途加入）"
-    },
-    {
-      "source": "lib/main.dart · 全文",
-      "translation": "lib/main.dart · 完整程式碼"
-    },
-    {
       "source": "自分のプロジェクトで一覧・スタンプ・詳細の開始状態を確認できた。",
       "translation": "已在自己的專案中確認了清單、印章、詳細資訊的起始狀態。"
     },
@@ -255,10 +247,6 @@
       "translation": "返回按鈕用 <code>Navigator.pop</code> 關閉輸入畫面。<code>PopScope</code> 的 <code>canPop</code> 是允許返回的指定，現在是 <code>true</code>。在加入儲存的階段，用來控制處理過程中的返回操作。輸入後返回，再次開啟時會是新的 <code>State</code>，確認欄位變為空白。"
     },
     {
-      "source": "全コードには、後のSTEPで使う部分も先に入れてあります。空欄を確かめて<code>message</code>へ文を入れる<code>submit</code>はSTEP 02で、入力画面から一覧へ習慣を渡す<code>onSave</code>と、渡された習慣を一覧へ加える<code>addHabit</code>はSTEP 03で使います。<code>onSave</code>は<code>AddHabitPage</code>の必須の名前付き引数なので、一覧の<code>openAdd</code>は今から<code>addHabit</code>を渡します。追加するボタンの<code>onPressed</code>が<code>null</code>なので、このSTEPではどれも呼ばれません。<code>TextField</code>の<code>enabled: true</code>は入力を受け付ける指定です。<code>canPop</code>と同じく今は<code>true</code>で、保存を入れる段階で、保存中の入力を止めるために使います。",
-      "translation": "完整程式碼中已經預先放入了後面 STEP 要使用的部分。檢查空白處並將文字放進 <code>message</code> 的 <code>submit</code> 在 STEP 02 使用；將習慣從輸入畫面傳給清單的 <code>onSave</code>，以及將傳入的習慣新增至清單的 <code>addHabit</code> 在 STEP 03 使用。<code>onSave</code> 是 <code>AddHabitPage</code> 的必填具名引數，所以清單的 <code>openAdd</code> 現在就傳入 <code>addHabit</code>。「追加する」（新增）按鈕的 <code>onPressed</code> 為 <code>null</code>，所以在這個 STEP 中它們都不會被呼叫。<code>TextField</code> 的 <code>enabled: true</code> 是接受輸入的指定。和 <code>canPop</code> 一樣，現在是 <code>true</code>，在加入儲存的階段，用來在儲存過程中停止輸入。"
-    },
-    {
       "source": "Androidの<code>EditText</code>やiOSの<code>UITextField</code>から文字を読む場面に対応します。Flutterでは<code>controller</code>を<code>State</code>に保持し、画面が終わるときに解放します。入力欄を開き直しても残したい場合は別の場所へ保存が必要ですが、まだ行いません。",
       "translation": "對應於從 Android 的 <code>EditText</code> 或 iOS 的 <code>UITextField</code> 讀取文字的情境。在 Flutter 中，將 <code>controller</code> 保持在 <code>State</code> 中，畫面結束時釋放。如果希望重新開啟輸入欄位後內容仍然保留，就需要儲存到別的地方，但現在先不進行。"
     },
@@ -277,10 +265,6 @@
     {
       "source": "追加するボタンの<code>onPressed</code>へ<code>submit</code>を渡します。括弧を付けた<code>submit()</code>の実行結果ではなく、押したときに呼ぶ関数を渡します。",
       "translation": "把 <code>submit</code> 傳給「追加する」（新增）按鈕的 <code>onPressed</code>。傳入的不是帶括號的 <code>submit()</code> 執行結果，而是按下時要呼叫的函式。"
-    },
-    {
-      "source": "<code>submit</code>では2つの<code>controller.text</code>を<code>trim</code>して前後の空白を除き、どちらかの<code>isEmpty</code>が<code>true</code>ならメッセージを表示して<code>return</code>します。今回は入力を確認しましたという文までで、一覧への追加は次のSTEPです。",
-      "translation": "在 <code>submit</code> 中，對 2 個 <code>controller.text</code> 執行 <code>trim</code> 去除前後空格，只要其中一個的 <code>isEmpty</code> 為 <code>true</code>，就顯示訊息並 <code>return</code>。這次只做到顯示「入力を確認しました」（已確認輸入）這句話，新增至清單放在下一個 STEP。"
     },
     {
       "source": "両方を空にして追加するを押します。",
@@ -317,10 +301,6 @@
     {
       "source": "入力確認後に<code>Habit</code>を作り、<code>widget.onSave</code>へ渡します。<code>onSave</code>は親が入力画面へ渡した関数で、この段階は<code>void Function(Habit)</code>型です。「<code>Habit</code>を受け取り、結果の値を返さない処理」という意味です。",
       "translation": "確認輸入後建立 <code>Habit</code>，傳給 <code>widget.onSave</code>。<code>onSave</code> 是父畫面傳給輸入畫面的函式，在這個階段是 <code>void Function(Habit)</code> 型別。意思是「接收 <code>Habit</code>、不回傳結果值的處理」。"
-    },
-    {
-      "source": "親の<code>addHabit</code>では<code>setState</code>の中で<code>habits.add</code>を呼びます。入力画面は<code>Navigator.pop</code>で閉じ、下に残っている一覧を表示します。<code>widget</code>はこの<code>State</code>に対応する<code>AddHabitPage</code>の設定を読むためのプロパティです。",
-      "translation": "父畫面的 <code>addHabit</code> 在 <code>setState</code> 中呼叫 <code>habits.add</code>。輸入畫面用 <code>Navigator.pop</code> 關閉，顯示留在下方的清單。<code>widget</code> 是用來讀取與這個 <code>State</code> 對應的 <code>AddHabitPage</code> 設定的屬性。"
     },
     {
       "source": "1件追加し、一覧が4件になったことを確認します。",
@@ -415,14 +395,6 @@
       "translation": "閱讀等待完成的處理"
     },
     {
-      "source": "このコマの開始コード",
-      "translation": "本堂課的起始程式碼"
-    },
-    {
-      "source": "途中から合流する場合は、自分が変えた文字・色・数値を控えてから<code>lib/main.dart</code>をそろえます。",
-      "translation": "如果是中途加入，請先記下自己修改過的文字、顏色和數值，再把 <code>lib/main.dart</code> 改成與這份程式碼一致。"
-    },
-    {
       "source": "Visual Studio Codeで同じスタンプ帳を開きます。開始状態は「入力で追加できるが、再起動で消える」です。今日は記録を端末へ残します。",
       "translation": "在 Visual Studio Code 中開啟同一個印章簿。起始狀態是「可以透過輸入新增，但重新啟動後會消失」。今天把記錄留在裝置上。"
     },
@@ -433,10 +405,6 @@
     {
       "source": "<code>async</code>を付けた関数の中では<code>await</code>が使えます。<code>await</code>では、その処理の完了後に続きへ進みます。画面全体を同期的に止めて待つのではなく、待っている間も画面を表示できます。保存の完了前に「保存した」と表示したり、入力を消したりしない順番を作ります。",
       "translation": "在加上 <code>async</code> 的函式中可以使用 <code>await</code>。<code>await</code> 會在該處理完成後再繼續往下執行。不是同步地讓整個畫面停下來等待，而是在等待期間畫面仍然可以顯示。這樣就能做到在儲存完成之前，既不顯示「已儲存」，也不清空輸入。"
-    },
-    {
-      "source": "次は流れを読む抜粋で、このSTEPではまだ追加しません。次のSTEPでパッケージと全コードをそろえます。",
-      "translation": "下面是用來閱讀流程的節錄，在這個 STEP 中還不新增。下一個 STEP 再準備好套件與完整程式碼。"
     },
     {
       "source": "Javaの同期的な戻り値と比較し、今回は<code>Future</code>の完了を待って結果を得る点を新しく扱います。Java／Swiftの非同期APIを履修済みとは仮定しません。既知の順次処理から「完了後の続き」と「待機中の画面」を区別します。",
@@ -453,14 +421,6 @@
     {
       "source": "文字列リストへ保存する",
       "translation": "儲存至字串清單"
-    },
-    {
-      "source": "まず<code>pubspec.yaml</code>の<code>dependencies</code>へ<code>shared_preferences: 2.5.5</code>を加えます。<code>dependencies</code>は既にあるので二重に作らず、Flutter SDKと同じ字下げで追加します。ほかの設定は残します。",
-      "translation": "首先在 <code>pubspec.yaml</code> 的 <code>dependencies</code> 中加入 <code>shared_preferences: 2.5.5</code>。<code>dependencies</code> 已經存在，不要重複建立，用和 Flutter SDK 相同的縮排新增。其他設定保留。"
-    },
-    {
-      "source": "実行中のアプリを<code>q</code>で終了し、<code>flutter pub get</code>を実行します。新しいネイティブプラグインを加えたのでホットリロードだけで済ませず、全コードを更新して<code>flutter run -d 端末ID</code>で起動し直します。",
-      "translation": "用 <code>q</code> 結束執行中的應用程式，執行 <code>flutter pub get</code>。因為加入了新的原生外掛程式，不能只靠熱重載，要更新完整程式碼後用 <code>flutter run -d 端末ID</code>（端末ID＝裝置 ID）重新啟動。"
     },
     {
       "source": "起動し直さずに<code>r</code>で反映すると、ターミナルにはエラーが出ませんが、スタンプを押しても習慣を追加しても「保存できませんでした。」で始まる文が出るだけで、保存できません。続けて<code>R</code>を押すと、画面全体が赤くなり<code>Bad state: The SharedPreferencesAsyncPlatform instance must be set.</code>と出ます。<code>r</code>と<code>R</code>はDartのコードを入れ替えるだけで、アプリのビルドをやり直しません。新しいプラグインは、ビルドし直したアプリにだけ組み込まれます。そのときは<code>q</code>で終了し、<code>flutter run -d 端末ID</code>で起動し直します。",
@@ -865,10 +825,6 @@
     {
       "source": "完成確認の順番を決める",
       "translation": "決定完成檢查的順序"
-    },
-    {
-      "source": "Visual Studio Codeで自分のスタンプ帳を開きます。今日は新しい概念を追加せず、作品を仕上げて通常APKを提出します。アレンジ済みのコードがある場合は、合流用コードで上書きしません。",
-      "translation": "在 Visual Studio Code 中開啟自己的印章簿。今天不新增新概念，完善作品並提交普通 APK。如果已經有自訂過的程式碼，不要用中途加入用的程式碼覆寫。"
     },
     {
       "source": "確認順を決め、結果を短く控えます。必要な記録は初期化前に別に残します。",

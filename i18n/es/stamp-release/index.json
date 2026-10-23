@@ -219,14 +219,6 @@
       "translation": "A diferencia de Java, donde se actualizan el modelo y la <code>View</code>, en Flutter se notifican los cambios de valor con <code>setState</code> y se devuelven widgets a partir de esos valores. La transición apila pantallas como el Navigation Controller de Swift y pasa datos a través de argumentos."
     },
     {
-      "source": "このSTEPの全コード（照合・合流用）",
-      "translation": "Código completo de este STEP (para comparar o incorporarse)"
-    },
-    {
-      "source": "lib/main.dart · 全文",
-      "translation": "lib/main.dart · archivo completo"
-    },
-    {
       "source": "自分のプロジェクトで一覧・スタンプ・詳細の開始状態を確認できた。",
       "translation": "Pudiste verificar el estado inicial de la lista, las estampas y los detalles en tu propio proyecto."
     },
@@ -255,10 +247,6 @@
       "translation": "El botón de regreso cierra la pantalla de entrada con <code>Navigator.pop</code>. <code>canPop</code> de <code>PopScope</code> especifica si se permite regresar, y por ahora es <code>true</code>. En la etapa de agregar el guardado, se usará para controlar la acción de regreso durante el procesamiento. Ingresa texto, regresa y vuelve a abrir la pantalla para comprobar que los campos están vacíos con un nuevo <code>State</code>."
     },
     {
-      "source": "全コードには、後のSTEPで使う部分も先に入れてあります。空欄を確かめて<code>message</code>へ文を入れる<code>submit</code>はSTEP 02で、入力画面から一覧へ習慣を渡す<code>onSave</code>と、渡された習慣を一覧へ加える<code>addHabit</code>はSTEP 03で使います。<code>onSave</code>は<code>AddHabitPage</code>の必須の名前付き引数なので、一覧の<code>openAdd</code>は今から<code>addHabit</code>を渡します。追加するボタンの<code>onPressed</code>が<code>null</code>なので、このSTEPではどれも呼ばれません。<code>TextField</code>の<code>enabled: true</code>は入力を受け付ける指定です。<code>canPop</code>と同じく今は<code>true</code>で、保存を入れる段階で、保存中の入力を止めるために使います。",
-      "translation": "En el código completo ya se han incluido de antemano partes que se usarán en pasos posteriores. <code>submit</code>, que comprueba los campos vacíos y coloca un texto en <code>message</code>, se usará en el STEP 02; <code>onSave</code>, que pasa el hábito desde la pantalla de entrada a la lista, y <code>addHabit</code>, que agrega a la lista el hábito recibido, se usarán en el STEP 03. Dado que <code>onSave</code> es un argumento con nombre obligatorio de <code>AddHabitPage</code>, el método <code>openAdd</code> de la lista le pasará <code>addHabit</code> desde ahora. Debido a que <code>onPressed</code> del botón 「追加する」 (Agregar) es <code>null</code>, ninguno de ellos se llama en este STEP. <code>enabled: true</code> de <code>TextField</code> especifica que se acepta la entrada. Al igual que <code>canPop</code>, por ahora es <code>true</code>, y se usará en la etapa de guardar para detener la entrada mientras se guarda."
-    },
-    {
       "source": "Androidの<code>EditText</code>やiOSの<code>UITextField</code>から文字を読む場面に対応します。Flutterでは<code>controller</code>を<code>State</code>に保持し、画面が終わるときに解放します。入力欄を開き直しても残したい場合は別の場所へ保存が必要ですが、まだ行いません。",
       "translation": "Esto corresponde a leer texto desde un <code>EditText</code> en Android o un <code>UITextField</code> en iOS. En Flutter, mantienes el <code>controller</code> en el <code>State</code> y lo liberas cuando termina la pantalla. Si deseas que los valores permanezcan al volver a abrir los campos de entrada, es necesario guardarlos en otro lugar, pero aún no lo haremos."
     },
@@ -277,10 +265,6 @@
     {
       "source": "追加するボタンの<code>onPressed</code>へ<code>submit</code>を渡します。括弧を付けた<code>submit()</code>の実行結果ではなく、押したときに呼ぶ関数を渡します。",
       "translation": "Pasa <code>submit</code> a <code>onPressed</code> del botón 「追加する」 (Agregar). Pasa la función que se llamará cuando se presione el botón, no el resultado de ejecución de <code>submit()</code> con paréntesis."
-    },
-    {
-      "source": "<code>submit</code>では2つの<code>controller.text</code>を<code>trim</code>して前後の空白を除き、どちらかの<code>isEmpty</code>が<code>true</code>ならメッセージを表示して<code>return</code>します。今回は入力を確認しましたという文までで、一覧への追加は次のSTEPです。",
-      "translation": "En <code>submit</code>, aplica <code>trim</code> a los dos valores de <code>controller.text</code> para eliminar los espacios en blanco iniciales y finales, y si <code>isEmpty</code> de cualquiera de ellos es <code>true</code>, muestra un mensaje y haz <code>return</code>. Esta vez solo llegamos hasta el mensaje de confirmación de entrada; la adición a la lista se hará en el siguiente STEP."
     },
     {
       "source": "両方を空にして追加するを押します。",
@@ -317,10 +301,6 @@
     {
       "source": "入力確認後に<code>Habit</code>を作り、<code>widget.onSave</code>へ渡します。<code>onSave</code>は親が入力画面へ渡した関数で、この段階は<code>void Function(Habit)</code>型です。「<code>Habit</code>を受け取り、結果の値を返さない処理」という意味です。",
       "translation": "Tras verificar la entrada, crea un <code>Habit</code> y pásalo a <code>widget.onSave</code>. <code>onSave</code> es la función que el widget padre pasó a la pantalla de entrada, y en esta etapa su tipo es <code>void Function(Habit)</code>. Significa “un procesamiento que recibe un <code>Habit</code> y no devuelve ningún valor de resultado”."
-    },
-    {
-      "source": "親の<code>addHabit</code>では<code>setState</code>の中で<code>habits.add</code>を呼びます。入力画面は<code>Navigator.pop</code>で閉じ、下に残っている一覧を表示します。<code>widget</code>はこの<code>State</code>に対応する<code>AddHabitPage</code>の設定を読むためのプロパティです。",
-      "translation": "En <code>addHabit</code> del widget padre, llama a <code>habits.add</code> dentro de <code>setState</code>. Cierra la pantalla de entrada con <code>Navigator.pop</code> para mostrar la lista que quedó debajo. <code>widget</code> es la propiedad para leer la configuración de <code>AddHabitPage</code> correspondiente a este <code>State</code>."
     },
     {
       "source": "1件追加し、一覧が4件になったことを確認します。",
@@ -415,14 +395,6 @@
       "translation": "Leer el procesamiento que espera la finalización"
     },
     {
-      "source": "このコマの開始コード",
-      "translation": "Código inicial de esta clase"
-    },
-    {
-      "source": "途中から合流する場合は、自分が変えた文字・色・数値を控えてから<code>lib/main.dart</code>をそろえます。",
-      "translation": "Si te integras a mitad de camino, anota el texto, los colores y los números que modificaste antes de igualar <code>lib/main.dart</code>."
-    },
-    {
       "source": "Visual Studio Codeで同じスタンプ帳を開きます。開始状態は「入力で追加できるが、再起動で消える」です。今日は記録を端末へ残します。",
       "translation": "Abre el mismo tablero de estampas en Visual Studio Code. El estado inicial es “se puede agregar mediante entrada, pero desaparece al reiniciar”. Hoy guardaremos los registros en el dispositivo."
     },
@@ -433,10 +405,6 @@
     {
       "source": "<code>async</code>を付けた関数の中では<code>await</code>が使えます。<code>await</code>では、その処理の完了後に続きへ進みます。画面全体を同期的に止めて待つのではなく、待っている間も画面を表示できます。保存の完了前に「保存した」と表示したり、入力を消したりしない順番を作ります。",
       "translation": "Dentro de una función con <code>async</code>, puedes usar <code>await</code>. Con <code>await</code>, la ejecución continúa después de que se complete ese procesamiento. En lugar de detener toda la pantalla de forma síncrona para esperar, la pantalla puede seguir mostrándose mientras se espera. Así se crea un orden en el que no se muestre “guardado” ni se borre la entrada antes de que se complete el guardado."
-    },
-    {
-      "source": "次は流れを読む抜粋で、このSTEPではまだ追加しません。次のSTEPでパッケージと全コードをそろえます。",
-      "translation": "A continuación se muestra un fragmento para leer el flujo; aún no lo agregues en este STEP. En el siguiente STEP agregaremos el paquete y el código completo."
     },
     {
       "source": "Javaの同期的な戻り値と比較し、今回は<code>Future</code>の完了を待って結果を得る点を新しく扱います。Java／Swiftの非同期APIを履修済みとは仮定しません。既知の順次処理から「完了後の続き」と「待機中の画面」を区別します。",
@@ -453,14 +421,6 @@
     {
       "source": "文字列リストへ保存する",
       "translation": "Guardar en una lista de cadenas"
-    },
-    {
-      "source": "まず<code>pubspec.yaml</code>の<code>dependencies</code>へ<code>shared_preferences: 2.5.5</code>を加えます。<code>dependencies</code>は既にあるので二重に作らず、Flutter SDKと同じ字下げで追加します。ほかの設定は残します。",
-      "translation": "Primero agrega <code>shared_preferences: 2.5.5</code> a <code>dependencies</code> en <code>pubspec.yaml</code>. Como <code>dependencies</code> ya existe, no lo crees por duplicado y agrégalo con la misma sangría que el Flutter SDK. Conserva las demás configuraciones."
-    },
-    {
-      "source": "実行中のアプリを<code>q</code>で終了し、<code>flutter pub get</code>を実行します。新しいネイティブプラグインを加えたのでホットリロードだけで済ませず、全コードを更新して<code>flutter run -d 端末ID</code>で起動し直します。",
-      "translation": "Finaliza la aplicación en ejecución con <code>q</code> y ejecuta <code>flutter pub get</code>. Dado que agregaste un nuevo plugin nativo, no te limites al hot reload: actualiza todo el código y vuelve a iniciarla con <code>flutter run -d 端末ID</code> (端末ID = ID del dispositivo)."
     },
     {
       "source": "起動し直さずに<code>r</code>で反映すると、ターミナルにはエラーが出ませんが、スタンプを押しても習慣を追加しても「保存できませんでした。」で始まる文が出るだけで、保存できません。続けて<code>R</code>を押すと、画面全体が赤くなり<code>Bad state: The SharedPreferencesAsyncPlatform instance must be set.</code>と出ます。<code>r</code>と<code>R</code>はDartのコードを入れ替えるだけで、アプリのビルドをやり直しません。新しいプラグインは、ビルドし直したアプリにだけ組み込まれます。そのときは<code>q</code>で終了し、<code>flutter run -d 端末ID</code>で起動し直します。",
@@ -865,10 +825,6 @@
     {
       "source": "完成確認の順番を決める",
       "translation": "Decidir el orden de la verificación final"
-    },
-    {
-      "source": "Visual Studio Codeで自分のスタンプ帳を開きます。今日は新しい概念を追加せず、作品を仕上げて通常APKを提出します。アレンジ済みのコードがある場合は、合流用コードで上書きしません。",
-      "translation": "Abre tu propio tablero de estampas en Visual Studio Code. Hoy no agregaremos conceptos nuevos; daremos los toques finales a la aplicación y entregaremos el APK normal. Si ya tienes código personalizado, no lo sobrescribas con el código de convergencia."
     },
     {
       "source": "確認順を決め、結果を短く控えます。必要な記録は初期化前に別に残します。",

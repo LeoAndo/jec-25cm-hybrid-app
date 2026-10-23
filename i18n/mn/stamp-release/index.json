@@ -219,14 +219,6 @@
       "translation": "Java дээр модел болон <code>View</code>-ийг шинэчилдэг зорилгын эсрэгээр, Flutter дээр <code>setState</code>-ээр утгын өөрчлөлтийг мэдэгдэж, тэрхүү утгаас Widget-ийг буцаадаг. Дэлгэц хоорондын шилжилт нь Swift-ийн Navigation Controller-той адил дэлгэцийг давхарлан өрж, аргументаар өгөгдлийг дамжуулдаг."
     },
     {
-      "source": "このSTEPの全コード（照合・合流用）",
-      "translation": "Энэ STEP-ийн бүх код (тулгах, нэгдэхэд зориулсан)"
-    },
-    {
-      "source": "lib/main.dart · 全文",
-      "translation": "lib/main.dart · Бүрэн эх"
-    },
-    {
       "source": "自分のプロジェクトで一覧・スタンプ・詳細の開始状態を確認できた。",
       "translation": "Өөрийн төсөлдөө жагсаалт, тамга, дэлгэрэнгүй дэлгэцийн эхлэлийн төлөвийг шалгаж чадсан."
     },
@@ -255,10 +247,6 @@
       "translation": "Буцах товч нь <code>Navigator.pop</code> тушаалаар оруулах дэлгэцийг хаана. <code>PopScope</code>-ийн <code>canPop</code> нь буцахыг зөвшөөрөх тохиргоо бөгөөд одоогоор <code>true</code> байна. Хадгалалтыг оруулах үе шатанд, үйлдэл хийгдэж байх үед буцах үйлдлийг хянахад ашиглана. Утга оруулаад буцаж, дахин нээхэд шинэ <code>State</code> төлөвт талбар хоосон болсныг шалгана уу."
     },
     {
-      "source": "全コードには、後のSTEPで使う部分も先に入れてあります。空欄を確かめて<code>message</code>へ文を入れる<code>submit</code>はSTEP 02で、入力画面から一覧へ習慣を渡す<code>onSave</code>と、渡された習慣を一覧へ加える<code>addHabit</code>はSTEP 03で使います。<code>onSave</code>は<code>AddHabitPage</code>の必須の名前付き引数なので、一覧の<code>openAdd</code>は今から<code>addHabit</code>を渡します。追加するボタンの<code>onPressed</code>が<code>null</code>なので、このSTEPではどれも呼ばれません。<code>TextField</code>の<code>enabled: true</code>は入力を受け付ける指定です。<code>canPop</code>と同じく今は<code>true</code>で、保存を入れる段階で、保存中の入力を止めるために使います。",
-      "translation": "Бүрэн кодонд дараагийн STEP-үүдэд ашиглах хэсгүүдийг ч мөн урьдчилан оруулсан байгаа. Хоосон талбарыг шалгаж <code>message</code>-д өгүүлбэр оруулах <code>submit</code>-ийг STEP 02-т, оруулах дэлгэцээс жагсаалтад зуршил дамжуулах <code>onSave</code> болон дамжуулагдсан зуршлыг жагсаалтад нэмэх <code>addHabit</code>-ийг STEP 03-т ашиглана. <code>onSave</code> нь <code>AddHabitPage</code>-ийн заавал байх нэрлэсэн аргумент тул жагсаалтын <code>openAdd</code> нь одооноос эхлэн <code>addHabit</code>-ийг дамжуулна. 「追加する」 (Нэмэх) товчны <code>onPressed</code> нь <code>null</code> тул энэ STEP-д эдгээрийн аль нь ч дуудагдахгүй. <code>TextField</code>-ийн <code>enabled: true</code> нь оролт хүлээн авах тохиргоо юм. <code>canPop</code>-ийн нэгэн адил одоогоор <code>true</code> бөгөөд хадгалалтыг оруулах үе шатанд хадгалж байх үеийн оролтыг зогсооход ашиглана."
-    },
-    {
       "source": "Androidの<code>EditText</code>やiOSの<code>UITextField</code>から文字を読む場面に対応します。Flutterでは<code>controller</code>を<code>State</code>に保持し、画面が終わるときに解放します。入力欄を開き直しても残したい場合は別の場所へ保存が必要ですが、まだ行いません。",
       "translation": "Энэ нь Android-ийн <code>EditText</code> болон iOS-ийн <code>UITextField</code>-ээс текст унших тохиолдолтой дүйцнэ. Flutter дээр <code>controller</code>-ийг <code>State</code>-д хадгалж, дэлгэц хаагдах үед чөлөөлдөг. Оруулах талбарыг дахин нээхэд ч утгыг хэвээр үлдээхийг хүсвэл өөр газарт хадгалах шаардлагатай боловч хараахан хийхгүй."
     },
@@ -277,10 +265,6 @@
     {
       "source": "追加するボタンの<code>onPressed</code>へ<code>submit</code>を渡します。括弧を付けた<code>submit()</code>の実行結果ではなく、押したときに呼ぶ関数を渡します。",
       "translation": "「追加する」 (Нэмэх) товчны <code>onPressed</code>-д <code>submit</code>-ийг дамжуулна уу. Хаалттай <code>submit()</code>-ийн ажилласан үр дүнг биш, товч дарахад дуудагдах функцийг дамжуулна."
-    },
-    {
-      "source": "<code>submit</code>では2つの<code>controller.text</code>を<code>trim</code>して前後の空白を除き、どちらかの<code>isEmpty</code>が<code>true</code>ならメッセージを表示して<code>return</code>します。今回は入力を確認しましたという文までで、一覧への追加は次のSTEPです。",
-      "translation": "<code>submit</code> функцэд хоёр <code>controller.text</code>-ийг <code>trim</code> хийж урд болон хойд талын хоосон зайг арилгаад, аль нэгнийх нь <code>isEmpty</code> нь <code>true</code> байвал зурвас харуулаад <code>return</code> хийнэ. Энэ удаад оруулсныг баталгаажуулсан өгүүлбэр харуулах хүртэл бөгөөд жагсаалтад нэмэх нь дараагийн STEP юм."
     },
     {
       "source": "両方を空にして追加するを押します。",
@@ -317,10 +301,6 @@
     {
       "source": "入力確認後に<code>Habit</code>を作り、<code>widget.onSave</code>へ渡します。<code>onSave</code>は親が入力画面へ渡した関数で、この段階は<code>void Function(Habit)</code>型です。「<code>Habit</code>を受け取り、結果の値を返さない処理」という意味です。",
       "translation": "Оролтыг шалгасны дараа <code>Habit</code> үүсгэж, <code>widget.onSave</code>-д дамжуулна. <code>onSave</code> нь эцэг Widget-ээс оруулах дэлгэцэнд дамжуулсан функц бөгөөд энэ үе шатанд <code>void Function(Habit)</code> төрөлтэй байна. Энэ нь «<code>Habit</code>-ийг хүлээн авч, үр дүнгийн утга буцаахгүй үйлдэл» гэсэн утгатай."
-    },
-    {
-      "source": "親の<code>addHabit</code>では<code>setState</code>の中で<code>habits.add</code>を呼びます。入力画面は<code>Navigator.pop</code>で閉じ、下に残っている一覧を表示します。<code>widget</code>はこの<code>State</code>に対応する<code>AddHabitPage</code>の設定を読むためのプロパティです。",
-      "translation": "Эцэг Widget-ийн <code>addHabit</code> функцэд <code>setState</code> дотор <code>habits.add</code>-ийг дуудна. Оруулах дэлгэцийг <code>Navigator.pop</code>-оор хааж, доор нь үлдсэн жагсаалтыг харуулна. <code>widget</code> нь энэхүү <code>State</code>-д харгалзах <code>AddHabitPage</code>-ийн тохиргоог уншихад зориулагдсан шинж чанар (property) юм."
     },
     {
       "source": "1件追加し、一覧が4件になったことを確認します。",
@@ -415,14 +395,6 @@
       "translation": "Дуусахыг хүлээх боловсруулалтыг унших"
     },
     {
-      "source": "このコマの開始コード",
-      "translation": "Энэ хичээлийн цагийн эхлэх код"
-    },
-    {
-      "source": "途中から合流する場合は、自分が変えた文字・色・数値を控えてから<code>lib/main.dart</code>をそろえます。",
-      "translation": "Дундаас нь нэгдэх тохиолдолд өөрийн өөрчилсөн текст, өнгө, тоон утгыг тэмдэглэж аваад <code>lib/main.dart</code> файлыг нийцүүлнэ үү."
-    },
-    {
       "source": "Visual Studio Codeで同じスタンプ帳を開きます。開始状態は「入力で追加できるが、再起動で消える」です。今日は記録を端末へ残します。",
       "translation": "Visual Studio Code дээр өмнөх тамганы дэвтрийг нээнэ үү. Эхлэлийн төлөв нь «оруулаад нэмж чадах боловч дахин эхлүүлэхэд арилдаг» байна. Өнөөдөр бүртгэлийг төхөөрөмжид хадгалж үлдээнэ."
     },
@@ -433,10 +405,6 @@
     {
       "source": "<code>async</code>を付けた関数の中では<code>await</code>が使えます。<code>await</code>では、その処理の完了後に続きへ進みます。画面全体を同期的に止めて待つのではなく、待っている間も画面を表示できます。保存の完了前に「保存した」と表示したり、入力を消したりしない順番を作ります。",
       "translation": "<code>async</code> түлхүүр үгтэй функц дотор <code>await</code>-ийг ашиглаж болно. <code>await</code> ашигласнаар тухайн үйлдэл дууссаны дараа дараагийн алхам руу шилжинэ. Бүхэл дэлгэцийг синхроноор зогсоож хүлээхийн оронд хүлээж байх хооронд ч дэлгэцийг харуулах боломжтой. Хадгалалт дуусахаас өмнө «хадгалсан» гэж харуулах эсвэл оруулсан утгыг арилгахгүй байх дарааллыг үүсгэнэ."
-    },
-    {
-      "source": "次は流れを読む抜粋で、このSTEPではまだ追加しません。次のSTEPでパッケージと全コードをそろえます。",
-      "translation": "Дараах код нь урсгалыг унших хэсэгчилсэн код бөгөөд энэ STEP-д хараахан нэмэхгүй. Дараагийн STEP-д багц болон бүрэн кодыг бэлэн болгоно."
     },
     {
       "source": "Javaの同期的な戻り値と比較し、今回は<code>Future</code>の完了を待って結果を得る点を新しく扱います。Java／Swiftの非同期APIを履修済みとは仮定しません。既知の順次処理から「完了後の続き」と「待機中の画面」を区別します。",
@@ -453,14 +421,6 @@
     {
       "source": "文字列リストへ保存する",
       "translation": "Тэмдэгт мөрийн жагсаалтад хадгалах"
-    },
-    {
-      "source": "まず<code>pubspec.yaml</code>の<code>dependencies</code>へ<code>shared_preferences: 2.5.5</code>を加えます。<code>dependencies</code>は既にあるので二重に作らず、Flutter SDKと同じ字下げで追加します。ほかの設定は残します。",
-      "translation": "Эхлээд <code>pubspec.yaml</code> файлын <code>dependencies</code> хэсэгт <code>shared_preferences: 2.5.5</code>-ийг нэмнэ үү. <code>dependencies</code> нь аль хэдийн байгаа тул давхардуулан үүсгэхгүйгээр Flutter SDK-тэй ижил догол мөрөөр нэмнэ. Бусад тохиргоог хэвээр үлдээнэ."
-    },
-    {
-      "source": "実行中のアプリを<code>q</code>で終了し、<code>flutter pub get</code>を実行します。新しいネイティブプラグインを加えたのでホットリロードだけで済ませず、全コードを更新して<code>flutter run -d 端末ID</code>で起動し直します。",
-      "translation": "Ажиллаж байгаа аппыг <code>q</code> товчоор дуусгаад <code>flutter pub get</code> тушаалыг ажиллуулна уу. Шинэ натив залгаас (plugin) нэмсэн тул зөвхөн hot reload хийхээр хязгаарлахгүйгээр, бүх кодыг шинэчлэн <code>flutter run -d 端末ID</code> (端末ID = төхөөрөмжийн ID) тушаалаар дахин эхлүүлнэ үү."
     },
     {
       "source": "起動し直さずに<code>r</code>で反映すると、ターミナルにはエラーが出ませんが、スタンプを押しても習慣を追加しても「保存できませんでした。」で始まる文が出るだけで、保存できません。続けて<code>R</code>を押すと、画面全体が赤くなり<code>Bad state: The SharedPreferencesAsyncPlatform instance must be set.</code>と出ます。<code>r</code>と<code>R</code>はDartのコードを入れ替えるだけで、アプリのビルドをやり直しません。新しいプラグインは、ビルドし直したアプリにだけ組み込まれます。そのときは<code>q</code>で終了し、<code>flutter run -d 端末ID</code>で起動し直します。",
@@ -865,10 +825,6 @@
     {
       "source": "完成確認の順番を決める",
       "translation": "Бүрэн дууссаныг шалгах дарааллыг шийдэх"
-    },
-    {
-      "source": "Visual Studio Codeで自分のスタンプ帳を開きます。今日は新しい概念を追加せず、作品を仕上げて通常APKを提出します。アレンジ済みのコードがある場合は、合流用コードで上書きしません。",
-      "translation": "Visual Studio Code дээр өөрийн тамганы дэвтрийг нээнэ үү. Өнөөдөр шинэ ойлголт нэмэхгүйгээр бүтээлээ гүйцээн дуусгаж, ердийн APK-г илгээнэ. Өөрчлөн тохируулсан код байгаа бол нийлүүлэх зориулалттай кодоор дарж бичихгүй."
     },
     {
       "source": "確認順を決め、結果を短く控えます。必要な記録は初期化前に別に残します。",

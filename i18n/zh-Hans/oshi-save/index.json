@@ -179,10 +179,6 @@
       "translation": "打开 <code>www/index.html</code>、<code>www/css/style.css</code>。如果没有 <code>www/js/app.js</code>，就用文件列表的新建操作，在 <code>www</code> 下创建 <code>js</code> 文件夹，再在其中创建 <code>app.js</code> 文件。"
     },
     {
-      "source": "自分のアレンジがある場合は、変えた文字と色を控えます。下の開始コード3ファイルをそろえ、保存してプレビューを再読み込みします。<code>components</code> や <code>res</code> は変更しません。",
-      "translation": "如果有自己做过的修改，先记下改过的文字和颜色。把下方的3个起始代码文件都准备好，保存后重新加载预览。不要改动 <code>components</code> 和 <code>res</code>。"
-    },
-    {
       "source": "3件の名前を押して詳細を開き、左上の戻るボタンで一覧へ戻ります。戻るボタンは、iOS向けの見た目では「＜ 戻る」、Android向けの見た目では左向きの矢印「←」だけです。タイトルと詳細の組み合わせを確かめます。",
       "translation": "点击3条数据的名称打开详情，再用左上角的返回按钮回到列表。返回按钮在 iOS 风格的外观中是「＜ 戻る」（返回），在 Android 风格的外观中只有一个向左的箭头「←」。确认标题与详情的组合是否正确。"
     },
@@ -247,22 +243,6 @@
       "translation": "文件结构与 Web 基础一样是3个文件，但操作的地方是 Monaca クラウド IDE。<code>init</code> 相当于 Android 中生成 View 之后进行设置、iOS 中 <code>viewDidLoad</code> 的时机，用 JavaScript 的 <code>addEventListener</code> 来接收。<code>pushPage</code> 的 <code>data</code> 对应原生应用中向下一个页面传值的操作。此时还没有转换成用于保存的字符串。"
     },
     {
-      "source": "このSTEPの全コード（照合・合流用）",
-      "translation": "本 STEP 的完整代码（用于核对与中途加入）"
-    },
-    {
-      "source": "www/index.html · 全文",
-      "translation": "www/index.html · 完整代码"
-    },
-    {
-      "source": "www/css/style.css · 全文",
-      "translation": "www/css/style.css · 完整代码"
-    },
-    {
-      "source": "www/js/app.js · 全文",
-      "translation": "www/js/app.js · 完整代码"
-    },
-    {
       "source": "自分の1プロジェクトで3件の一覧・詳細・戻るを確認し、HTMLとJSの対応を追えた。",
       "translation": "已在自己的一个项目中确认3条数据的列表、详情和返回，并能追踪 HTML 与 JS 的对应关系。"
     },
@@ -273,10 +253,6 @@
     {
       "source": "入力画面を作る",
       "translation": "制作输入页面"
-    },
-    {
-      "source": "3ファイルをこのSTEPのコードへ更新します。HTMLに <code>add.html</code> の<code>template</code>を加え、名前・種類の <code>input</code> と、好きな理由の <code>textarea</code> を置きます。<code>label</code> の<code>for</code>と入力欄の<code>id</code>が対応します。",
-      "translation": "把3个文件更新为本 STEP 的代码。在 HTML 中加入 <code>add.html</code> 的 <code>template</code>，放置名称、类别的 <code>input</code> 和喜欢的理由的 <code>textarea</code>。<code>label</code> 的 <code>for</code> 与输入框的 <code>id</code> 相对应。"
     },
     {
       "source": "CSSの <code>.app-input</code> は幅を100%にし、<code>box-sizing: border-box</code> で<code>padding</code>と枠をその幅の内側へ収めます。<code>font: inherit</code> で文字を周囲とそろえ、<code>focus</code>の<code>outline</code>で選択中の欄を見分けます。ほかに加わるクラスのうち、このSTEPの画面に当たる4つは次の表のとおりです。",
@@ -331,20 +307,12 @@
       "translation": "<code>.reset-section</code>、<code>#panel_reset ons-button</code>、<code>.is-hidden</code> 这3个是为 STEP 08 要添加的重置确认面板准备的设置。在本 STEP 的 HTML 中，还没有它们作用的元素。"
     },
     {
-      "source": "一覧の <code>btn_open_add</code> へ<code>openAddPage</code>を登録し、<code>pushPage(\"add.html\", ...)</code> で入力画面へ進みます。詳細と同じ移動中の旗を共有するため、片方を開いている最中にもう片方は開きません。",
-      "translation": "给列表中的 <code>btn_open_add</code> 注册 <code>openAddPage</code>，用 <code>pushPage(\"add.html\", ...)</code> 进入输入页面。因为与详情共用同一个表示正在跳转的标志，所以在打开其中一个的过程中不会打开另一个。"
-    },
-    {
-      "source": "この旗の名前は、STEP 00の <code>isOpeningDetail</code> から <code>isOpeningPage</code> に変えます。詳細を開くときだけでなく入力画面を開くときにも使うので、「詳細を開いている最中」ではなく「どちらかのページを開いている最中」と読める名前にするためです。宣言と<code>openOshiDetail</code>の中の3か所も、新しい名前にそろえます。",
-      "translation": "这个标志的名称从 STEP 00 的 <code>isOpeningDetail</code> 改为 <code>isOpeningPage</code>。因为它不仅在打开详情时使用，在打开输入页面时也会使用，所以要让名称读起来是“正在打开某个页面”，而不是“正在打开详情”。声明处和 <code>openOshiDetail</code> 中的3处也统一改成新名称。"
+      "source": "初期データは <code>createInitialItems</code> が新しい配列を返す形にまとめました。後で初期化したときにも同じ内容を作り直せるようにするためです。呼び出しのたびに新しい配列になる点を、<code>return</code>の位置と一緒に読みます。",
+      "translation": "初始数据整理成了由 <code>createInitialItems</code> 返回一个新数组的形式。这是为了之后重置时也能重新生成相同的内容。请结合 <code>return</code> 的位置，注意每次调用都会得到一个新数组这一点。"
     },
     {
       "source": "一覧のボタンの下の <code>txt_storage</code> には <code>この段階では、追加した内容は保存されません。</code>、入力画面のボタンの下の注記には <code>この段階では、追加した内容は再読み込みすると消えます。</code> と出します。追加した内容がまだ残らないことを、画面で先に伝えるためです。保存を作るSTEP 06で、どちらの文も書き換えます。",
       "translation": "在列表按钮下方的 <code>txt_storage</code> 中显示 <code>この段階では、追加した内容は保存されません。</code>（现阶段添加的内容不会保存。），在输入页面按钮下方的备注中显示 <code>この段階では、追加した内容は再読み込みすると消えます。</code>（现阶段添加的内容在重新加载后会消失。）。这是为了先在页面上告诉用户，添加的内容目前还不会保留。在制作保存功能的 STEP 06 中，这两句都会改写。"
-    },
-    {
-      "source": "初期データは <code>createInitialItems</code> が新しい配列を返す形にまとめました。後で初期化したときにも同じ内容を作り直せるようにするためです。呼び出しのたびに新しい配列になる点を、<code>return</code>の位置と一緒に読みます。",
-      "translation": "初始数据整理成了由 <code>createInitialItems</code> 返回一个新数组的形式。这是为了之后重置时也能重新生成相同的内容。请结合 <code>return</code> 的位置，注意每次调用都会得到一个新数组这一点。"
     },
     {
       "source": "保存・再読み込み後に <code>好きなものを追加</code> を押します。",
@@ -373,10 +341,6 @@
     {
       "source": "入力した文字を確認する",
       "translation": "检查输入的文字"
-    },
-    {
-      "source": "HTMLの追加ボタンから <code>disabled</code> を外し、JSでは <code>page_add</code> の<code>init</code>で<code>addOshi</code>を登録します。関数名を渡しているので、登録した瞬間ではなくボタンを押したときに動きます。",
-      "translation": "去掉 HTML 中添加按钮的 <code>disabled</code>，在 JS 中于 <code>page_add</code> 的 <code>init</code> 里注册 <code>addOshi</code>。因为传入的是函数名，所以它不会在注册的瞬间执行，而是在点击按钮时执行。"
     },
     {
       "source": "<code>addOshi</code>は、入力欄を<code>id</code>で取得し、<code>value</code> で今の文字を読みます。<code>trim()</code> は前後の空白を取り除きます。3つのどれかが空ならメッセージを表示して<code>return</code>し、残りの処理へ進みません。",
@@ -413,10 +377,6 @@
     {
       "source": "配列へ追加して戻る",
       "translation": "添加到数组并返回"
-    },
-    {
-      "source": "JSの<code>addOshi</code>で、入力確認だけの行を、配列へ追加して一覧を描き直す処理へ替えます。<code>oshiItems.push({ name: name, genre: genre, comment: comment })</code> の左側はデータの項目名、右側は入力欄から読んだ変数です。",
-      "translation": "在 JS 的 <code>addOshi</code> 中，把只做输入确认的那一行，换成添加到数组并重新绘制列表的处理。<code>oshiItems.push({ name: name, genre: genre, comment: comment })</code> 中，左侧是数据的属性名，右侧是从输入框读取的变量。"
     },
     {
       "source": "次に<code>renderOshiList</code>を呼びます。この関数は<code>innerHTML</code>で行を置き直した後に、<code>textContent</code>の設定とクリックの登録をやり直します。古い行に登録したイベントは、新しい行へ自動では移らないためです。",
@@ -457,10 +417,6 @@
     {
       "source": "確認とアレンジ",
       "translation": "确认与修改"
-    },
-    {
-      "source": "今日の終わりは、作った範囲を使って自分の表現に変えます。コードはSTEP 03の状態です。下の全コードは照合用で、自分の変更を無条件に貼り戻すためのものではありません。",
-      "translation": "今天的最后，在已经做好的范围内改成自己的表达。代码是 STEP 03 的状态。下方的完整代码用于核对，不是用来无条件地覆盖自己修改的。"
     },
     {
       "source": "変える場所",
@@ -517,18 +473,6 @@
     {
       "source": "配列とJSONの違いを読む",
       "translation": "理解数组与 JSON 的区别"
-    },
-    {
-      "source": "このコマの開始時の全コード",
-      "translation": "本节课开始时的完整代码"
-    },
-    {
-      "source": "途中から合流する場合は、変更した文字と色を控えてから3ファイルをそろえます。順番に進めている人は、前の回の続きで構いません。",
-      "translation": "中途加入的人，先记下改过的文字和颜色，再把3个文件都准备好。按顺序进行的人，接着上一节课的内容继续即可。"
-    },
-    {
-      "source": "Monaca クラウド IDEで同じ好きなものノートを開きます。開始状態は「入力して追加できるが、再読み込みすると初期データに戻る」です。保存する前に、画面で使う配列と、保存へ渡す文字列を区別します。",
-      "translation": "在 Monaca クラウド IDE 中打开同一个喜爱笔记。开始时的状态是“可以输入并添加，但重新加载后会回到初始数据”。在保存之前，先区分页面上使用的数组和交给保存的字符串。"
     },
     {
       "source": "<strong>JSONは、値を文字で表すための決まった形式</strong>です。JavaScriptの配列やオブジェクトそのものではありません。<code>JSON.stringify</code> は値をJSONの文字列にし、<code>JSON.parse</code> はJSONの文字列から値を復元します。今回の保存対象は文字列の3項目を持つオブジェクトの配列です。",
@@ -603,10 +547,6 @@
       "translation": "转为字符串并保存"
     },
     {
-      "source": "このSTEPの3ファイルへ更新します。JSの先頭に <code>STORAGE_KEY</code> を置き、保存内容を探すための名前を1か所で管理します。この名前を途中で変更すると、以前のキーで保存した内容は見えなくなります。",
-      "translation": "更新为本 STEP 的3个文件。在 JS 的开头放置 <code>STORAGE_KEY</code>，把用于查找保存内容的名称集中在一处管理。如果中途更改这个名称，用以前的键保存的内容就看不到了。"
-    },
-    {
       "source": "<code>addOshi</code>では、<code>oshiItems.slice()</code> で配列の浅いコピー<code>nextItems</code>を作り、そこへ新しい1件を追加します。この処理では既存のオブジェクトの項目は変更せず、配列へ追加するだけなので、配列のコピーで足ります。",
       "translation": "在 <code>addOshi</code> 中，用 <code>oshiItems.slice()</code> 创建数组的浅拷贝 <code>nextItems</code>，再把新的1条添加进去。这个处理不改变已有对象的属性，只是向数组添加，所以复制数组就足够了。"
     },
@@ -659,14 +599,6 @@
       "translation": "不清除输入，便于接下来确认或重试。"
     },
     {
-      "source": "保存してよいかを表す <code>let canSave = true;</code> も加えます。<code>openAddPage</code>と<code>addOshi</code>の最初の条件で <code>!canSave</code> なら何もせずに戻り、一覧の<code>init</code>では <code>btn_open_add</code> の <code>disabled</code> を <code>!canSave</code> にします。このSTEPには <code>canSave</code> を<code>false</code>にする行がないので、常に<code>true</code>のままで、画面の動きは変わりません。<code>false</code>にするのは、次のSTEPで保存内容を読み込めなかったときです。そのまま追加できると、読めなかった保存内容を、初期データに1件足した配列で上書きしてしまいます。保存の処理を書くこのSTEPで、保存へ進む入口に確認を置いておけば、次のSTEPでは読み込みの処理を足すだけで済みます。",
-      "translation": "还要加上表示是否可以保存的 <code>let canSave = true;</code>。在 <code>openAddPage</code> 和 <code>addOshi</code> 开头的条件中，如果 <code>!canSave</code> 就什么都不做直接返回；在列表的 <code>init</code> 中，把 <code>btn_open_add</code> 的 <code>disabled</code> 设为 <code>!canSave</code>。本 STEP 中没有把 <code>canSave</code> 设为 <code>false</code> 的行，所以它始终是 <code>true</code>，页面的行为不变。把它设为 <code>false</code> 的，是下一个 STEP 中读取不了保存内容的时候。如果那时仍然可以添加，就会用“初始数据加1条”的数组覆盖掉读取不了的保存内容。在编写保存处理的本 STEP 中，先在进入保存的入口放上检查，下一个 STEP 就只需要添加读取的处理。"
-    },
-    {
-      "source": "画面の文も、保存ができるようになったことに合わせて替えます。入力画面のボタンは <code>追加する</code> から <code>追加して保存</code> に変わります。押すと、配列への追加と一緒に保存まで行うことを、ボタンの文字で示すためです。STEP 01から出していた2つの文は、保存できるようになると事実と合わなくなるので、一覧の <code>txt_storage</code> は <code>保存はできますが、このSTEPではまだ読み込みません。</code> に、入力画面のボタンの下の注記は <code>保存先は、このブラウザの同じプレビューです。公開URLに入力内容は含まれません。</code> に替えます。保存した内容はこのブラウザにだけ残り、STEP 12で発行する公開URLから取り込んだ人には届かないためです。",
-      "translation": "页面上的文字也要配合已经可以保存这一点进行更换。输入页面的按钮从 <code>追加する</code>（添加）改为 <code>追加して保存</code>（添加并保存）。这是为了用按钮的文字表明，点击后在添加到数组的同时也会保存。从 STEP 01 起显示的两句话，在可以保存之后就与事实不符了，所以把列表的 <code>txt_storage</code> 改为 <code>保存はできますが、このSTEPではまだ読み込みません。</code>（可以保存，但本 STEP 还不会读取。），把输入页面按钮下方的备注改为 <code>保存先は、このブラウザの同じプレビューです。公開URLに入力内容は含まれません。</code>（保存位置是这个浏览器的同一个预览。导入链接中不包含输入的内容。）。因为保存的内容只留在这个浏览器中，不会传给通过 STEP 12 生成的导入链接导入项目的人。"
-    },
-    {
       "source": "入力画面のボタンが <code>追加して保存</code> になったことを確かめてから、1件追加して一覧へ戻り、<code>件をこのブラウザに保存しました。</code> の文を確かめます。このSTEPでは保存までなので、再読み込み時の表示はまだ初期データです。保存されていないと決めつけず、次のSTEPで読み込む側を作ります。また、このSTEPで再読み込みしてからもう一度追加すると、前に保存した内容は、ソースの初期データと新しい1件で上書きされます。保存した内容をまだ読み込んでいない配列に、新しい1件を足して保存するためです。次のSTEPで読み込めるのは、最後に保存した内容です。",
       "translation": "确认输入页面的按钮已变成 <code>追加して保存</code>（添加并保存）后，添加1条并回到列表，确认显示 <code>件をこのブラウザに保存しました。</code>（……条已保存到这个浏览器。）这句话。本 STEP 只做到保存，所以重新加载时显示的仍是初始数据。不要断定没有保存成功，下一个 STEP 会制作读取的一侧。另外，在本 STEP 中重新加载后再添加一次，之前保存的内容会被“源代码的初始数据加新的1条”覆盖。因为是在还没有读取保存内容的数组上加了新的1条再保存。下一个 STEP 能读取到的，是最后一次保存的内容。"
     },
@@ -685,10 +617,6 @@
     {
       "source": "保存した配列を復元する",
       "translation": "恢复保存的数组"
-    },
-    {
-      "source": "JSに<code>loadOshiItems</code>と<code>isValidItems</code>を加え、<code>page_list</code>の<code>init</code>で <strong>読み込み→一覧生成</strong> の順に呼びます。保存した値を読む前に行を作ると、初期データのまま表示されるためです。",
-      "translation": "在 JS 中加入 <code>loadOshiItems</code> 和 <code>isValidItems</code>，在 <code>page_list</code> 的 <code>init</code> 中按 <strong>读取→生成列表</strong> 的顺序调用。因为如果在读取保存的值之前就生成行，显示的仍会是初始数据。"
     },
     {
       "source": "<code>getItem(STORAGE_KEY)</code> は、未保存なら <code>null</code> を返します。この場合は何も復元せず、ソースの初期データを使います。文字列があれば<code>JSON.parse</code>で値へ戻します。",
@@ -751,10 +679,6 @@
       "translation": "重置的确认与失败处理"
     },
     {
-      "source": "HTMLに初期化ボタンと確認欄、JSにそのイベントと<code>resetOshiItems</code>を加えます。<code>初期の内容に戻す</code> を押すと、<code>is-hidden</code>を<code>remove</code>して確認欄を見せます。<code>やめる</code> ではクラスを<code>add</code>し、欄を閉じるだけです。確認欄を囲む <code>reset-section</code> は上に区切りの線を引き、<code>#panel_reset ons-button</code> は確認欄の2つのボタンの上を12px空けます。この2つと <code>is-hidden</code> はSTEP 01のCSSに入れてあり、このSTEPのHTMLで初めて要素に当たります。",
-      "translation": "在 HTML 中加入重置按钮和确认面板，在 JS 中加入对应的事件和 <code>resetOshiItems</code>。点击 <code>初期の内容に戻す</code>（恢复初始内容）时，<code>remove</code> 掉 <code>is-hidden</code>，显示确认面板。点击 <code>やめる</code>（取消）时，只是 <code>add</code> 这个 class，关闭面板。包住确认面板的 <code>reset-section</code> 在上方画一条分隔线，<code>#panel_reset ons-button</code> 在确认面板的2个按钮上方留出 12px。这2个和 <code>is-hidden</code> 已在 STEP 01 的 CSS 中写好，在本 STEP 的 HTML 中才第一次作用到元素上。"
-    },
-    {
       "source": "実際の削除は <code>削除して初期の内容に戻す</code> を押した場合だけです。<code>localStorage.removeItem(STORAGE_KEY)</code> で、このアプリのキー1つだけを削除します。保存領域全体を空にする<code>clear</code>は使いません。",
       "translation": "只有点击 <code>削除して初期の内容に戻す</code>（删除并恢复初始内容）时才会真正删除。用 <code>localStorage.removeItem(STORAGE_KEY)</code> 只删除这个应用的1个键。不使用会清空整个存储区域的 <code>clear</code>。"
     },
@@ -793,10 +717,6 @@
     {
       "source": "保存を確かめてアレンジする",
       "translation": "确认保存并进行修改"
-    },
-    {
-      "source": "入力→追加→詳細→戻る→再読み込みの順で動かし、保存した内容が復元されることを確認します。次に、ソースの初期データを自分の言葉へ変えます。",
-      "translation": "按输入→添加→详情→返回→重新加载的顺序操作，确认保存的内容被恢复。接着，把源代码的初始数据改成自己的话。"
     },
     {
       "source": "<strong>保存データがあると、ソースの初期データより優先して表示されます。</strong> <code>createInitialItems</code>を書き換えても画面が変わらない場合は、変更したコードのミスとは限りません。必要な入力を控えたうえで、アプリ内の初期化を使ってソースの内容を確認します。",
@@ -855,10 +775,6 @@
       "translation": "在课堂上开始准备 Flutter"
     },
     {
-      "source": "今日は好きなものノートを仕上げて提出します。最初の10分で、後半に使うFlutter SDKのダウンロードと既存のiOS環境の確認を始めます。授業前に取得しておく必要はありません。",
-      "translation": "今天要完成喜爱笔记并提交。在最初的10分钟里，开始下载后半程要用的 Flutter SDK，并确认现有的 iOS 环境。不需要在上课前提前下载。"
-    },
-    {
       "source": "<a1>共通資料のSTEP 4〜7</a1>を別のタブで開きます。",
       "translation": "在另一个标签页中打开<a1>通用资料的 STEP 4～7</a1>。"
     },
@@ -893,10 +809,6 @@
     {
       "source": "提出に残るアレンジを作る",
       "translation": "制作能保留到提交中的修改"
-    },
-    {
-      "source": "Monaca クラウド IDEへ戻り、自分の好きなものノートを仕上げます。既に扱った文字・色・初期データから変更箇所を選び、どんなものが好きで、なぜ好きなのかが伝わる内容にします。",
-      "translation": "回到 Monaca クラウド IDE，完成自己的喜爱笔记。从已经学过的文字、颜色、初始数据中选择要改的地方，让内容能传达出喜欢什么、为什么喜欢。"
     },
     {
       "source": "確認方法",
@@ -963,10 +875,6 @@
       "translation": "确认操作与导入链接"
     },
     {
-      "source": "ソースの初期の内容が表示された状態から完成確認を始めます。必要な入力は内容を控えて、先生と確認してから初期化します。",
-      "translation": "从显示源代码初始内容的状态开始进行完成确认。需要的输入内容先记下来，和老师确认后再重置。"
-    },
-    {
       "source": "一覧の各行から詳細へ進み、名前・種類・理由が一致することを確認します。",
       "translation": "从列表的每一行进入详情，确认名称、类别、理由一致。"
     },
@@ -1015,10 +923,6 @@
       "translation": "确认提交与准备情况"
     },
     {
-      "source": "先生が授業中に案内する提出先・締め切りを確認し、自分の好きなものノートで発行した公開URLを提出します。まだ案内がない場合は、URLを控えて先生へ確認します。",
-      "translation": "确认老师在课堂上告知的提交处和截止时间，提交为自己的喜爱笔记生成的导入链接。如果还没有通知，就先记下链接，向老师确认。"
-    },
-    {
       "source": "通常版MonacaのFreeプランではZIPを学生の提出物にしません。先生は公開URLから取り込み、初期データと操作を確認します。公開中の自分のプロジェクトは提出後に削除しません。",
       "translation": "在标准版 Monaca 的 Free 方案中，不以 ZIP 作为学生的提交物。老师通过导入链接导入，确认初始数据和操作。正在公开的自己的项目，提交后不要删除。"
     },
@@ -1043,10 +947,6 @@
       "translation": "确认可以修改的地方"
     },
     {
-      "source": "最後に提出したソースを見ながら、次の3点を確かめます。",
-      "translation": "最后，一边看提交的源代码，一边确认下面3点。"
-    },
-    {
       "source": "どのファイルの、どの文字・色・初期データを変更したか。",
       "translation": "改了哪个文件的哪些文字、颜色、初始数据。"
     },
@@ -1061,10 +961,6 @@
     {
       "source": "余裕があれば、既に扱った範囲で記入例を分かりやすくしたり、余白を調整したりします。いまある画面で、自分の「好き」が伝わる状態を確かめましょう。変更したら保存し、一覧・追加・詳細・再読み込みを確認してから公開内容を確かめます。",
       "translation": "如果还有时间，可以在已学过的范围内让输入示例更易懂，或者调整边距。在现有的页面上，确认自己的“喜欢”能传达出来。改动后保存，确认列表、添加、详情、重新加载之后，再确认公开的内容。"
-    },
-    {
-      "source": "下の全コードは、自分のコードと見比べるためのものです。自分の変更を消して全コードに戻す必要はありません。動かなくなった部分や、変更した場所と結果の関係を確かめるために使います。",
-      "translation": "下方的完整代码是用来和自己的代码进行比对的。没有必要抹掉自己的修改恢复成完整代码。请用它来确认停止运行的部分，以及修改位置与运行结果之间的对应关系。"
     },
     {
       "source": "HTML・CSS・JavaScriptの役割分担はWeb基礎と同じで、変更した場所はファイルの種類から見つけられます。保存があるアプリでは、ソースの初期値と保存値の両方を見ます。<code>SharedPreferences</code>／<code>UserDefaults</code>を使うアプリで、コードに書いた初期値と端末に残る保存値が別にあるのと同じです。",
