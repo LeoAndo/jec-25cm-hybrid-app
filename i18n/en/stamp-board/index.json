@@ -260,7 +260,7 @@
     },
     {
       "source": "<code>MaterialApp</code>はアプリの設定、<code>Scaffold</code>は画面の基本枠、<code>SafeArea</code>はOSの表示領域を避ける余白、<code>Center</code>は中央配置、<code>Text</code>は文字を担当します。<code>child:</code>は1つのWidget、後で使う<code>children:</code>は複数のWidgetのリストです。<code>MaterialApp</code>に加えた<code>debugShowCheckedModeBanner: false</code>は、STEP 01で画面の右上に出ていたDEBUGの帯を消す設定です。帯はデバッグ実行中を示す目印で、アプリの動きには関係しません。",
-      "translation": "<code>MaterialApp</code> holds the app settings, <code>Scaffold</code> is the basic frame of the screen, <code>SafeArea</code> is the margin that avoids the areas used by the OS display, <code>Center</code> centers its content, and <code>Text</code> shows text. <code>child:</code> takes one widget; <code>children:</code>, which you use later, takes a list of widgets. The <code>debugShowCheckedModeBanner: false</code> added to <code>MaterialApp</code> removes the DEBUG banner that appeared at the top right of the screen in STEP 01. The banner only marks that the app is running in debug mode; it does not affect how the app works."
+      "translation": "<code>MaterialApp</code> holds the app settings, <code>Scaffold</code> is the basic frame of the screen, <code>SafeArea</code> is the margin that keeps content out of the areas the OS reserves for its own display, <code>Center</code> centers its content, and <code>Text</code> shows text. <code>child:</code> takes one widget; <code>children:</code>, which you use later, takes a list of widgets. The <code>debugShowCheckedModeBanner: false</code> added to <code>MaterialApp</code> removes the DEBUG banner that appeared at the top right of the screen in STEP 01. The banner only marks that the app is running in debug mode; it does not affect how the app works."
     },
     {
       "source": "<code>Text('今日の小さな一歩', style: TextStyle(fontSize: 28))</code>では、最初の引数が文字、名前付き引数<code>style</code>が装飾です。括弧とカンマの対応をインデントで追いましょう。<code>@override</code>は親のメソッドを実装し直す印です。<code>build</code>へ渡される<code>BuildContext</code>は、そのWidgetがツリーのどこにあるかを表す情報です。",
@@ -568,7 +568,7 @@
     },
     {
       "source": "このSTEPでは、コードは変えません。STEP 09までのコードで、回数がどの表示につながっているかを読みます。",
-      "translation": "There are no code changes in this STEP. In the code up to STEP 09, read which displays the count is connected to."
+      "translation": "There are no code changes in this STEP. In the code up to STEP 09, read which parts of the screen the count is connected to."
     },
     {
       "source": "<code>Habit</code>の<code>count</code>、合計<code>total</code>、<code>StampMarks</code>の<code>count</code>がどうつながるかを先に読みます。数値・マーク・達成メッセージを別々に記憶せず、<code>count</code>を基準に計算します。初期データの<code>count</code>を一時的に1へ変えてホットリスタートし、複数の表示が同時に変わることを確かめ、0へ戻します。",

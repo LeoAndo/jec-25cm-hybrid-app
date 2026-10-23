@@ -428,7 +428,7 @@
     },
     {
       "source": "JSでは、<code>init</code> の処理の中の <code>if (page.id === \"page_detail\") {</code> の行の上に、<code>page_add</code> の<code>init</code>で<code>addOshi</code>を登録する処理を足します。足した <code>}</code> の下に空行を1行入れます。関数名を渡しているので、登録した瞬間ではなくボタンを押したときに動きます。",
-      "translation": "在 JS 中，于 <code>init</code> 处理中的 <code>if (page.id === \"page_detail\") {</code> 这一行上方，补上在 <code>page_add</code> 的 <code>init</code> 中注册 <code>addOshi</code> 的处理。在补上的 <code>}</code> 下方空1行。因为传入的是函数名，所以它不是在注册的那一刻运行，而是在点击按钮时运行。"
+      "translation": "在 JS 中，<code>init</code> 处理中的 <code>if (page.id === \"page_detail\") {</code> 这一行上方，补上在 <code>page_add</code> 的 <code>init</code> 中注册 <code>addOshi</code> 的处理。在补上的 <code>}</code> 下方空1行。因为传入的是函数名，所以它不是在注册的那一刻运行，而是在点击按钮时运行。"
     },
     {
       "source": "www/js/app.js · 追加 · if (page.id === \"page_detail\") { の上",
@@ -664,7 +664,7 @@
     },
     {
       "source": "JSの先頭近く、<code>// 初期化のたびに新しい配列を返し、追加した内容と混ぜない。</code> の行の上に <code>STORAGE_KEY</code> を足し、その下に空行を1行入れます。保存内容を探すための名前を1か所で管理します。この名前を途中で変更すると、以前のキーで保存した内容は見えなくなります。",
-      "translation": "在 JS 开头附近，于 <code>// 初期化のたびに新しい配列を返し、追加した内容と混ぜない。</code> 这一行上方补上 <code>STORAGE_KEY</code>，并在它下面空1行。把用于查找保存内容的名称集中在一处管理。如果中途更改这个名称，用以前的键保存的内容就看不到了。"
+      "translation": "在 JS 开头附近，<code>// 初期化のたびに新しい配列を返し、追加した内容と混ぜない。</code> 这一行上方补上 <code>STORAGE_KEY</code>，并在它下面空1行。把用于查找保存内容的名称集中在一处管理。如果中途更改这个名称，用以前的键保存的内容就看不到了。"
     },
     {
       "source": "www/js/app.js · 追加 · // 初期化のたびに新しい配列を返し、追加した内容と混ぜない。 の上",
@@ -864,7 +864,7 @@
     },
     {
       "source": "HTMLに初期化ボタンと確認欄、JSにそのイベントと<code>resetOshiItems</code>を加えます。HTMLでは、一覧の <code>txt_selected</code> の行（<code>まだ選択していません</code>）の下に、次のコードを足します。",
-      "translation": "在 HTML 中加入重置按钮和确认面板，在 JS 中加入对应的事件和 <code>resetOshiItems</code>。在 HTML 中，于列表的 <code>txt_selected</code> 这一行（<code>まだ選択していません</code>，意为“尚未选择”）下方，补上下面的代码。"
+      "translation": "在 HTML 中加入重置按钮和确认面板，在 JS 中加入对应的事件和 <code>resetOshiItems</code>。在 HTML 中，列表的 <code>txt_selected</code> 这一行（<code>まだ選択していません</code>，意为“尚未选择”）下方，补上下面的代码。"
     },
     {
       "source": "www/index.html · 追加 · txt_selected の行の下",

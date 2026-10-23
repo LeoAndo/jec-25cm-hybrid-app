@@ -348,7 +348,7 @@
     },
     {
       "source": "保存し、ホットリロードして、全文が読めるか確認します。次回の合流のため、変えた文字・数値を控えておきます。",
-      "translation": "Хадгалаад, hot reload хийж, бүтэн текст уншигдаж байгаа эсэхийг шалгана уу. Дараагийн хичээлд нэгтгэхэд бэлтгэж өөрчилсөн текст, тоон утгуудаа тэмдэглэж авна уу."
+      "translation": "Хадгалаад, hot reload хийж, бүтэн текст уншигдаж байгаа эсэхийг шалгана уу. Дараагийн хичээлийн цагт дундаас нь нэгдэх тохиолдолд хэрэг болохоор өөрчилсөн текст, тоон утгуудаа тэмдэглэж авна уу."
     },
     {
       "source": "Web基礎では既存要素へ<code>textContent</code>を設定しました。Flutterでは表示する<code>Text</code>を返します。同じ「文字を変える」操作でも、画面の指定方法が違います。",
@@ -616,7 +616,7 @@
     },
     {
       "source": "続けて、<code>habits</code>のリストを閉じる<code>];</code>の下に、1行空けて次のコードを追加します。下の<code>@override</code>との間も1行空けます。",
-      "translation": "Үргэлжлүүлэн <code>habits</code> жагсаалтыг хаах <code>];</code> мөрийн доор 1 хоосон мөр үлдээгээд дараах кодыг нэмнэ үү. Доорх <code>@override</code> мөрийн хооронд ч мөн 1 хоосон мөр үлдээнэ үү."
+      "translation": "Үргэлжлүүлэн <code>habits</code> жагсаалтыг хаах <code>];</code> мөрийн доор 1 хоосон мөр үлдээгээд дараах кодыг нэмнэ үү. Нэмсэн код болон доорх <code>@override</code> мөрийн хооронд ч мөн 1 хоосон мөр үлдээнэ үү."
     },
     {
       "source": "lib/main.dart · 追加 · habits のリストを閉じる ]; の下",
@@ -812,7 +812,7 @@
     },
     {
       "source": "<code>lib/main.dart</code>に3か所追加します。まず、<code>_StampBoardPageState</code>の中で、<code>changeStamp</code>の関数を閉じる<code>}</code>の下に、1行空けて次のコードを追加します。下の<code>@override</code>との間も1行空けます。",
-      "translation": "<code>lib/main.dart</code> файлд 3 газар нэмнэ. Эхлээд <code>_StampBoardPageState</code> дотор <code>changeStamp</code> функцийг хаах <code>}</code> мөрийн доор 1 хоосон мөр үлдээгээд дараах кодыг нэмнэ үү. Доорх <code>@override</code> мөрийн хооронд ч мөн 1 хоосон мөр үлдээнэ үү."
+      "translation": "<code>lib/main.dart</code> файлд 3 газар нэмнэ. Эхлээд <code>_StampBoardPageState</code> дотор <code>changeStamp</code> функцийг хаах <code>}</code> мөрийн доор 1 хоосон мөр үлдээгээд дараах кодыг нэмнэ үү. Нэмсэн код болон доорх <code>@override</code> мөрийн хооронд ч мөн 1 хоосон мөр үлдээнэ үү."
     },
     {
       "source": "lib/main.dart · 追加 · changeStamp の閉じかっこの下",

@@ -368,7 +368,7 @@
     },
     {
       "source": "www/js/app.js · 置き換え · init の処理（直前のコメントから }); まで）",
-      "translation": "www/js/app.js · reemplazar · el procesamiento de init (desde el comentario que lo precede hasta });)"
+      "translation": "www/js/app.js · reemplazar · el procesamiento de init, desde el comentario que lo precede hasta });"
     },
     {
       "source": "一覧のボタンの下の <code>txt_storage</code> には <code>この段階では、追加した内容は保存されません。</code>、入力画面のボタンの下の注記には <code>この段階では、追加した内容は再読み込みすると消えます。</code> と出します。追加した内容がまだ残らないことを、画面で先に伝えるためです。保存を作るSTEP 06で、どちらの文も書き換えます。",
@@ -384,7 +384,7 @@
     },
     {
       "source": "最後に、ファイルの末尾（<code>openOshiDetail</code> の閉じかっこの下）に、空行を1行あけて <code>openAddPage</code> を足します。<code>pushPage(\"add.html\", ...)</code> で入力画面へ進みます。詳細と同じ移動中の旗を共有するため、片方を開いている最中にもう片方は開きません。",
-      "translation": "Por último, al final del archivo (debajo de la llave de cierre de <code>openOshiDetail</code>), deja una línea en blanco y agrega <code>openAddPage</code>. Avanza a la pantalla de entrada con <code>pushPage(\"add.html\", ...)</code>. Como comparte la misma bandera de transición con el detalle, mientras se abre uno, el otro no se puede abrir."
+      "translation": "Por último, al final del archivo (debajo de la llave de cierre de <code>openOshiDetail</code>), deja una línea en blanco y agrega <code>openAddPage</code>. Con <code>pushPage(\"add.html\", ...)</code> se avanza a la pantalla de entrada. Como comparte la misma bandera de transición con el detalle, mientras se abre uno, el otro no se puede abrir."
     },
     {
       "source": "www/js/app.js · 追加 · ファイルの末尾",
@@ -528,7 +528,7 @@
     },
     {
       "source": "コードは変えません。STEP 03まで書いたコードが、第5コマ終了時の基準です。今日の終わりは、作った範囲を使って自分の表現に変えます。",
-      "translation": "Este STEP no tiene cambios de código. El código que escribiste hasta el STEP 03 es la referencia al finalizar la clase 5. Para terminar el día de hoy, usa lo que construiste para adaptarlo a tu propia expresión."
+      "translation": "Este STEP no tiene cambios de código. El código que escribiste hasta el STEP 03 es la referencia al finalizar la clase 5. Para terminar la clase de hoy, usa lo que construiste y cámbialo para expresarte a tu manera."
     },
     {
       "source": "変える場所",
@@ -664,7 +664,7 @@
     },
     {
       "source": "JSの先頭近く、<code>// 初期化のたびに新しい配列を返し、追加した内容と混ぜない。</code> の行の上に <code>STORAGE_KEY</code> を足し、その下に空行を1行入れます。保存内容を探すための名前を1か所で管理します。この名前を途中で変更すると、以前のキーで保存した内容は見えなくなります。",
-      "translation": "Cerca del inicio del JS, agrega <code>STORAGE_KEY</code> encima de la línea <code>// 初期化のたびに新しい配列を返し、追加した内容と混ぜない。</code> y deja una línea en blanco debajo de él. Así administras en un solo lugar el nombre con el que se buscan los datos guardados. Si cambias este nombre en el camino, ya no podrás ver los datos guardados con la clave anterior."
+      "translation": "Cerca del inicio del JS, agrega <code>STORAGE_KEY</code> encima de la línea <code>// 初期化のたびに新しい配列を返し、追加した内容と混ぜない。</code> y deja una línea en blanco debajo de él. Así administras en un solo lugar el nombre con el que se buscan los datos guardados. Si cambias este nombre más adelante, ya no podrás ver los datos guardados con la clave anterior."
     },
     {
       "source": "www/js/app.js · 追加 · // 初期化のたびに新しい配列を返し、追加した内容と混ぜない。 の上",

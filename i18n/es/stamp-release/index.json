@@ -356,7 +356,7 @@
     },
     {
       "source": "<code>lib/main.dart</code>で、<code>submit</code>の最後にある<code>setState(() {</code>の行から、<code>message = '入力を確認しました：$name';</code>の下の<code>});</code>の行までの3行を、次の2行に置き換えます。上の<code>if</code>で空欄を確かめる部分は残します。",
-      "translation": "En <code>lib/main.dart</code>, reemplaza por las siguientes dos líneas las tres líneas del final de <code>submit</code> que van desde <code>setState(() {</code> hasta <code>});</code>, debajo de <code>message = '入力を確認しました：$name';</code>. Conserva la parte de arriba que comprueba los campos vacíos con <code>if</code>."
+      "translation": "En <code>lib/main.dart</code>, reemplaza por las siguientes dos líneas las tres líneas del final de <code>submit</code> que van desde la línea <code>setState(() {</code> hasta la línea <code>});</code> que está debajo de <code>message = '入力を確認しました：$name';</code>. Conserva la parte de arriba que comprueba los campos vacíos con <code>if</code>."
     },
     {
       "source": "lib/main.dart · 置き換え · submit の最後の setState(() { から }); まで",
@@ -364,7 +364,7 @@
     },
     {
       "source": "STEP 01で書いた親の<code>addHabit</code>では、<code>setState</code>の中で<code>habits.add</code>を呼びます。入力画面は<code>Navigator.pop</code>で閉じ、下に残っている一覧を表示します。<code>widget</code>はこの<code>State</code>に対応する<code>AddHabitPage</code>の設定を読むためのプロパティです。",
-      "translation": "En el <code>addHabit</code> del widget padre que escribiste en el STEP 01, se llama a <code>habits.add</code> dentro de <code>setState</code>. Cierra la pantalla de entrada con <code>Navigator.pop</code> para mostrar la lista que quedó debajo. <code>widget</code> es la propiedad para leer la configuración de <code>AddHabitPage</code> correspondiente a este <code>State</code>."
+      "translation": "En el <code>addHabit</code> del widget padre que escribiste en el STEP 01, se llama a <code>habits.add</code> dentro de <code>setState</code>. La pantalla de entrada se cierra con <code>Navigator.pop</code> y se muestra la lista que quedó debajo. <code>widget</code> es la propiedad para leer la configuración de <code>AddHabitPage</code> correspondiente a este <code>State</code>."
     },
     {
       "source": "1件追加し、一覧が4件になったことを確認します。",
@@ -624,7 +624,7 @@
     },
     {
       "source": "2つの<code>TextField</code>にある<code>enabled: true,</code>の行を、どちらも次の1行に置き換えます。",
-      "translation": "Reemplaza las líneas <code>enabled: true,</code> de los dos <code>TextField</code>, ambas por la siguiente línea."
+      "translation": "Reemplaza por la siguiente línea las líneas <code>enabled: true,</code> de los dos <code>TextField</code>, en ambos casos."
     },
     {
       "source": "lib/main.dart · 置き換え · 2つの enabled: true, の行",
@@ -1092,7 +1092,7 @@
     },
     {
       "source": "このコマでは、教科書のコードは変えません。STEP 14までに自分でアレンジしたコードを、上書きせずにそのまま仕上げます。",
-      "translation": "En esta clase, el libro de texto no tiene cambios de código. Termina tal cual, sin sobrescribirlo, el código que personalizaste tú mismo hasta el STEP 14."
+      "translation": "En esta clase, el libro de texto no tiene cambios de código. Termina tal cual, sin sobrescribirlo, el código que personalizaste por tu cuenta hasta el STEP 14."
     },
     {
       "source": "確認順を決め、結果を短く控えます。必要な記録は初期化前に別に残します。",
@@ -1144,7 +1144,7 @@
     },
     {
       "source": "コードは変えません。STEP 15までのコードで、題材と見た目の値を自分で変えて仕上げます。",
-      "translation": "Este STEP no tiene cambios de código. Con el código hasta el STEP 15, cambia tú mismo el tema y los valores de la apariencia para darle los toques finales."
+      "translation": "Este STEP no tiene cambios de código. Con el código hasta el STEP 15, cambia por tu cuenta el tema y los valores de la apariencia para darle los toques finales."
     },
     {
       "source": "自分の題材に合う名前・理由・見出し・入力例をそろえます。「何を続けたい人が使うアプリか」が初期画面から伝わるようにします。本人の私生活を公開する必要はありません。",

@@ -248,7 +248,7 @@
     },
     {
       "source": "<code>www/index.html</code> と <code>www/css/style.css</code> の中身を、下のコードでそれぞれすべて置き換えて保存します。テンプレートに最初から書かれている内容は残しません。プレビューを再読み込みし、<strong>好きなものノートを作ります。</strong>を確認します。プレビューが表示されないときは、上部メニューの <code>表示</code> → <code>プレビュータブを表示</code> や <code>レイアウトをリセット</code> を選びます。",
-      "translation": "استبدل محتوى كل من <code>www/index.html</code> و<code>www/css/style.css</code> بالكامل بالشيفرة أدناه، ثم احفظهما. لا يبقى المحتوى المكتوب مسبقًا في القالب. أعد تحميل المعاينة وتأكد من ظهور <strong>好きなものノートを作ります。</strong> (سننشئ دفتر الأشياء المفضلة.). إذا لم تظهر المعاينة، فاختر من القائمة العلوية <code>表示</code> (عرض) ← <code>プレビュータブを表示</code> (إظهار علامة تبويب المعاينة) أو <code>レイアウトをリセット</code> (إعادة تعيين التخطيط)."
+      "translation": "استبدل محتوى كل من <code>www/index.html</code> و<code>www/css/style.css</code> بالكامل بالشيفرة أدناه، ثم احفظهما. لا يبقى المحتوى المكتوب مسبقًا في القالب. أعد تحميل المعاينة وتأكد من ظهور <strong>好きなものノートを作ります。</strong> (سننشئ دفتر المفضلات.). إذا لم تظهر المعاينة، فاختر من القائمة العلوية <code>表示</code> (عرض) ← <code>プレビュータブを表示</code> (إظهار علامة تبويب المعاينة) أو <code>レイアウトをリセット</code> (إعادة تعيين التخطيط)."
     },
     {
       "source": "クラウドIDEのメニューバー「表示」から「プレビュータブを表示」「レイアウトをリセット」を選ぶ画面",
@@ -1028,7 +1028,7 @@
     },
     {
       "source": "JavaScriptでは、クリックしたときに呼ぶ関数を <code>selectOshi</code> から <code>openOshiDetail</code> へ変え、<code>navApp.pushPage(\"detail.html\");</code> で詳細を重ねます。<code>www/js/app.js</code> の2回目の <code>for</code> の中にある、<code>selectOshi</code> を呼ぶ1行を、次の1行に置き換えます。",
-      "translation": "في JavaScript، نغير الدالة المستدعاة عند النقر من <code>selectOshi</code> إلى <code>openOshiDetail</code>، ونراكب التفاصيل باستخدام <code>navApp.pushPage(\"detail.html\");</code>. استبدل السطر الذي يستدعي <code>selectOshi</code> داخل حلقة <code>for</code> الثانية في <code>www/js/app.js</code> بالسطر التالي."
+      "translation": "في JavaScript، نغير الدالة المستدعاة عند النقر من <code>selectOshi</code> إلى <code>openOshiDetail</code>، ونضع صفحة التفاصيل فوق صفحة القائمة باستخدام <code>navApp.pushPage(\"detail.html\");</code>. استبدل السطر الذي يستدعي <code>selectOshi</code> داخل حلقة <code>for</code> الثانية في <code>www/js/app.js</code> بالسطر التالي."
     },
     {
       "source": "www/js/app.js · 置き換え · selectOshi を呼ぶ1行",

@@ -264,7 +264,7 @@
     },
     {
       "source": "<code>lib/main.dart</code>を3か所変えます。まず、<code>_StampBoardPageState</code>の中で、<code>changeStamp</code>の関数を閉じる<code>}</code>の下に、1行空けて次のコードを追加します。下の<code>openDetail</code>との間も1行空けます。",
-      "translation": "<code>lib/main.dart</code> файлын 3 газрыг өөрчилнө. Эхлээд <code>_StampBoardPageState</code> дотор <code>changeStamp</code> функцийг хаах <code>}</code> мөрийн доор 1 хоосон мөр үлдээгээд дараах кодыг нэмнэ үү. Доорх <code>openDetail</code> функцийн хооронд ч мөн 1 хоосон мөр үлдээнэ үү."
+      "translation": "<code>lib/main.dart</code> файлын 3 газрыг өөрчилнө. Эхлээд <code>_StampBoardPageState</code> дотор <code>changeStamp</code> функцийг хаах <code>}</code> мөрийн доор 1 хоосон мөр үлдээгээд дараах кодыг нэмнэ үү. Нэмсэн код болон доорх <code>openDetail</code> функцийн хооронд ч мөн 1 хоосон мөр үлдээнэ үү."
     },
     {
       "source": "lib/main.dart · 追加 · changeStamp の閉じかっこの下",
@@ -316,7 +316,7 @@
     },
     {
       "source": "STEP 01で書いた<code>submit</code>では、2つの<code>controller.text</code>を<code>trim</code>して前後の空白を除き、どちらかの<code>isEmpty</code>が<code>true</code>ならメッセージを表示して<code>return</code>します。今回は入力を確認しましたという文までで、一覧への追加は次のSTEPです。",
-      "translation": "STEP 01 дээр бичсэн <code>submit</code> функцэд хоёр <code>controller.text</code>-ийг <code>trim</code> хийж урд болон хойд талын хоосон зайг арилгаад, аль нэгнийх нь <code>isEmpty</code> нь <code>true</code> байвал зурвас харуулаад <code>return</code> хийнэ. Энэ удаад оруулсныг баталгаажуулсан өгүүлбэр харуулах хүртэл бөгөөд жагсаалтад нэмэх нь дараагийн STEP юм."
+      "translation": "STEP 01 дээр бичсэн <code>submit</code> функцэд хоёр <code>controller.text</code> утгыг <code>trim</code> хийж урд болон хойд талын хоосон зайг арилгаад, аль нэгнийх нь <code>isEmpty</code> нь <code>true</code> байвал зурвас харуулаад <code>return</code> хийнэ. Энэ удаад 「入力を確認しました」 (Оруулсныг баталгаажууллаа) гэсэн өгүүлбэр харуулах хүртэл бөгөөд жагсаалтад нэмэх нь дараагийн STEP юм."
     },
     {
       "source": "両方を空にして追加するを押します。",
@@ -500,7 +500,7 @@
     },
     {
       "source": "まず<code>pubspec.yaml</code>の<code>dependencies</code>へ<code>shared_preferences: 2.5.5</code>を加えます。<code>dependencies:</code>の行から<code>sdk: flutter</code>の行までの3行を、次の4行に置き換えます。<code>dependencies</code>は二重に作らず、<code>shared_preferences</code>の行は<code>flutter:</code>と同じ字下げにします。ほかの設定は残します。",
-      "translation": "Эхлээд <code>pubspec.yaml</code> файлын <code>dependencies</code> хэсэгт <code>shared_preferences: 2.5.5</code>-ийг нэмнэ үү. <code>dependencies:</code> мөрөөс <code>sdk: flutter</code> мөр хүртэлх 3 мөрийг дараах 4 мөрөөр солино уу. <code>dependencies</code> хэсгийг давхардуулан үүсгэхгүй бөгөөд <code>shared_preferences</code> мөрийг <code>flutter:</code> мөртэй ижил догол мөрөөр бичнэ. Бусад тохиргоог хэвээр үлдээнэ."
+      "translation": "Эхлээд <code>pubspec.yaml</code> файлын <code>dependencies</code> хэсэгт <code>shared_preferences: 2.5.5</code> мөрийг нэмнэ үү. <code>dependencies:</code> мөрөөс <code>sdk: flutter</code> мөр хүртэлх 3 мөрийг дараах 4 мөрөөр солино уу. <code>dependencies</code> хэсгийг давхардуулан үүсгэхгүй бөгөөд <code>shared_preferences</code> мөрийг <code>flutter:</code> мөртэй ижил догол мөрөөр бичнэ. Бусад тохиргоог хэвээр үлдээнэ."
     },
     {
       "source": "pubspec.yaml · 置き換え · dependencies: から sdk: flutter まで",
@@ -704,7 +704,7 @@
     },
     {
       "source": "次に、<code>createInitialHabits</code>の関数を閉じる<code>}</code>の下に、1行空けて次のコードを追加します。下の<code>saveHabits</code>との間も1行空けます。",
-      "translation": "Дараа нь <code>createInitialHabits</code> функцийг хаах <code>}</code> мөрийн доор 1 хоосон мөр үлдээгээд дараах кодыг нэмнэ үү. Доорх <code>saveHabits</code> функцийн хооронд ч мөн 1 хоосон мөр үлдээнэ үү."
+      "translation": "Дараа нь <code>createInitialHabits</code> функцийг хаах <code>}</code> мөрийн доор 1 хоосон мөр үлдээгээд дараах кодыг нэмнэ үү. Нэмсэн код болон доорх <code>saveHabits</code> функцийн хооронд ч мөн 1 хоосон мөр үлдээнэ үү."
     },
     {
       "source": "lib/main.dart · 追加 · createInitialHabits の閉じかっこの下",
@@ -764,7 +764,7 @@
     },
     {
       "source": "次に、<code>openAdd</code>の関数を閉じる<code>}</code>の下に、1行空けて次のコードを追加します。下の<code>openDetail</code>との間も1行空けます。",
-      "translation": "Дараа нь <code>openAdd</code> функцийг хаах <code>}</code> мөрийн доор 1 хоосон мөр үлдээгээд дараах кодыг нэмнэ үү. Доорх <code>openDetail</code> функцийн хооронд ч мөн 1 хоосон мөр үлдээнэ үү."
+      "translation": "Дараа нь <code>openAdd</code> функцийг хаах <code>}</code> мөрийн доор 1 хоосон мөр үлдээгээд дараах кодыг нэмнэ үү. Нэмсэн код болон доорх <code>openDetail</code> функцийн хооронд ч мөн 1 хоосон мөр үлдээнэ үү."
     },
     {
       "source": "lib/main.dart · 追加 · openAdd の閉じかっこの下",
@@ -1088,7 +1088,7 @@
     },
     {
       "source": "Visual Studio Codeで自分のスタンプ帳を開きます。今日は新しい概念を追加せず、作品を仕上げて通常APKを提出します。",
-      "translation": "Visual Studio Code дээр өөрийн тамганы дэвтрийг нээнэ үү. Өнөөдөр шинэ ойлголт нэмэхгүйгээр бүтээлээ гүйцээн дуусгаж, ердийн APK-г илгээнэ."
+      "translation": "Visual Studio Code дээр өөрийн тамганы дэвтрийг нээнэ үү. Өнөөдөр шинэ ойлголт нэмэхгүйгээр бүтээлээ гүйцээн дуусгаж, ердийн APK файлыг илгээнэ."
     },
     {
       "source": "このコマでは、教科書のコードは変えません。STEP 14までに自分でアレンジしたコードを、上書きせずにそのまま仕上げます。",

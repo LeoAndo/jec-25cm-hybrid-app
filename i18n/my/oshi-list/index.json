@@ -1012,7 +1012,7 @@
     },
     {
       "source": "このSTEPでは3ファイルを書き換えます。HTMLに <code>template id=\"detail.html\"</code> を増やし、詳細のツールバーに <code>ons-back-button</code> を置きます。<code>www/index.html</code> の、STEP 15で追加した <code>&lt;/template&gt;</code> の下、<code>&lt;/body&gt;</code> の上に、1行空けて追加します。",
-      "translation": "ဤ STEP တွင် ဖိုင် ၃ ခုကို ပြင်ဆင်ရေးသားပါမည်။ HTML တွင် <code>template id=\"detail.html\"</code> ကို တိုးချဲ့ထည့်သွင်းပြီး အသေးစိတ် toolbar တွင် <code>ons-back-button</code> ကို ထားရှိပါမည်။ <code>www/index.html</code> ၏ STEP 15 တွင် ထည့်ခဲ့သော <code>&lt;/template&gt;</code> ၏ အောက်၊ <code>&lt;/body&gt;</code> ၏ အပေါ်တွင် လိုင်းအလွတ် တစ်လိုင်း ချန်ပြီး ထည့်ပါ။"
+      "translation": "ဤ STEP တွင် ဖိုင် ၃ ခုကို ပြင်ဆင်ရေးသားပါမည်။ HTML တွင် <code>template id=\"detail.html\"</code> တစ်ခု ထပ်ထည့်ပြီး အသေးစိတ် toolbar တွင် <code>ons-back-button</code> ကို ထားရှိပါမည်။ <code>www/index.html</code> ၏ STEP 15 တွင် ထည့်ခဲ့သော <code>&lt;/template&gt;</code> ၏ အောက်၊ <code>&lt;/body&gt;</code> ၏ အပေါ်တွင် လိုင်းအလွတ် တစ်လိုင်း ချန်ပြီး ထည့်ပါ။"
     },
     {
       "source": "www/index.html · 追加 · &lt;/template&gt; の下",

@@ -368,7 +368,7 @@
     },
     {
       "source": "www/js/app.js · 置き換え · init の処理（直前のコメントから }); まで）",
-      "translation": "www/js/app.js · replace · the init handler (from the comment just before it to });)"
+      "translation": "www/js/app.js · replace · the init handler, from the comment just before it to });"
     },
     {
       "source": "一覧のボタンの下の <code>txt_storage</code> には <code>この段階では、追加した内容は保存されません。</code>、入力画面のボタンの下の注記には <code>この段階では、追加した内容は再読み込みすると消えます。</code> と出します。追加した内容がまだ残らないことを、画面で先に伝えるためです。保存を作るSTEP 06で、どちらの文も書き換えます。",
@@ -528,7 +528,7 @@
     },
     {
       "source": "コードは変えません。STEP 03まで書いたコードが、第5コマ終了時の基準です。今日の終わりは、作った範囲を使って自分の表現に変えます。",
-      "translation": "There are no code changes in this STEP. The code you have written up to STEP 03 is the reference at the end of session 5. At the end of today, you use what you have built to make the app express your own ideas."
+      "translation": "There are no code changes in this STEP. The code you have written up to STEP 03 is the reference at the end of session 5. At the end of today, you use what you have built so far to make the app your own."
     },
     {
       "source": "変える場所",
@@ -792,7 +792,7 @@
     },
     {
       "source": "JSに<code>loadOshiItems</code>と<code>isValidItems</code>を加え、<code>page_list</code>の<code>init</code>で <strong>読み込み→一覧生成</strong> の順に呼びます。保存した値を読む前に行を作ると、初期データのまま表示されるためです。まず、一覧の<code>init</code>の中で <code>txt_storage</code> に文字を入れている1行を、<code>loadOshiItems();</code> に置き換えます。すぐ下の <code>renderOshiList();</code> は残します。",
-      "translation": "Add <code>loadOshiItems</code> and <code>isValidItems</code> to the JS, and in the <code>init</code> of <code>page_list</code> call them in the order <strong>load → build the list</strong>. If you build the rows before reading the saved value, the initial data stays on the screen. First, inside the list's <code>init</code>, replace the line that puts text into <code>txt_storage</code> with <code>loadOshiItems();</code>. Keep <code>renderOshiList();</code> right below it."
+      "translation": "Add <code>loadOshiItems</code> and <code>isValidItems</code> to the JS, and in the <code>init</code> of <code>page_list</code> do <strong>load → build the list</strong> in that order. If you build the rows before reading the saved value, the initial data stays on the screen. First, inside the list's <code>init</code>, replace the line that puts text into <code>txt_storage</code> with <code>loadOshiItems();</code>. Keep <code>renderOshiList();</code> right below it."
     },
     {
       "source": "www/js/app.js · 置き換え · init の中の txt_storage に文字を入れる1行",

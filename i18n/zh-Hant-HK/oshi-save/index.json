@@ -360,7 +360,7 @@
     },
     {
       "source": "移動中の旗の名前は、STEP 00の <code>isOpeningDetail</code> から <code>isOpeningPage</code> に変えます。詳細を開くときだけでなく入力画面を開くときにも使うので、「詳細を開いている最中」ではなく「どちらかのページを開いている最中」と読める名前にするためです。宣言は上のコードで変えたので、残りは<code>openOshiDetail</code>の中の3か所です。",
-      "translation": "表示跳轉中的旗標名稱，從 STEP 00 的 <code>isOpeningDetail</code> 改為 <code>isOpeningPage</code>。因為它不僅在開啟詳細資訊時使用，在開啟輸入畫面時也會使用，所以要讓名稱讀起來是「正在開啟某個頁面」，而不是「正在開啟詳細資訊」。宣告已在上面的程式碼中改好，剩下的是 <code>openOshiDetail</code> 中的 3 處。"
+      "translation": "用來表示「跳轉中」的旗標，名稱從 STEP 00 的 <code>isOpeningDetail</code> 改為 <code>isOpeningPage</code>。因為它不僅在開啟詳細資訊時使用，在開啟輸入畫面時也會使用，所以要讓名稱讀起來是「正在開啟某個頁面」，而不是「正在開啟詳細資訊」。宣告已在上面的程式碼中改好，剩下的是 <code>openOshiDetail</code> 中的 3 處。"
     },
     {
       "source": "次に、<code>init</code> の処理を、直前のコメント <code>// templateの中身は、ページが作られてから取得する。</code> の行から、閉じる <code>});</code> の行までを置き換えます。一覧の<code>init</code>では、<code>txt_storage</code> に文を入れ、<code>btn_open_add</code> へ<code>openAddPage</code>を登録します。詳細の<code>init</code>は、<code>const oshi</code> の下の空行がなくなるだけで、処理は変わりません。",
@@ -588,7 +588,7 @@
     },
     {
       "source": "Monaca クラウド IDEで同じ好きなものノートを開きます。開始状態は「入力して追加できるが、再読み込みすると初期データに戻る」です。このSTEPでは、コードは変えません。保存する前に、画面で使う配列と、保存へ渡す文字列を区別します。",
-      "translation": "在 Monaca クラウド IDE 中開啟同一個喜愛筆記。開始時的狀態是「可以輸入並新增，但重新載入後會回到初始資料」。本 STEP 不修改程式碼。在儲存之前，先區分畫面上使用的陣列與傳遞給儲存的字串。"
+      "translation": "在 Monaca クラウド IDE 中開啟同一個喜愛筆記。開始時的狀態是「可以輸入並新增，但重新載入後會回到初始資料」。本 STEP 程式碼不變。在儲存之前，先區分畫面上使用的陣列與傳遞給儲存的字串。"
     },
     {
       "source": "<strong>JSONは、値を文字で表すための決まった形式</strong>です。JavaScriptの配列やオブジェクトそのものではありません。<code>JSON.stringify</code> は値をJSONの文字列にし、<code>JSON.parse</code> はJSONの文字列から値を復元します。今回の保存対象は文字列の3項目を持つオブジェクトの配列です。",
@@ -664,7 +664,7 @@
     },
     {
       "source": "JSの先頭近く、<code>// 初期化のたびに新しい配列を返し、追加した内容と混ぜない。</code> の行の上に <code>STORAGE_KEY</code> を足し、その下に空行を1行入れます。保存内容を探すための名前を1か所で管理します。この名前を途中で変更すると、以前のキーで保存した内容は見えなくなります。",
-      "translation": "在 JS 開頭附近、<code>// 初期化のたびに新しい配列を返し、追加した内容と混ぜない。</code> 那一行的上方加上 <code>STORAGE_KEY</code>，並在其下方插入 1 行空行。將用於尋找儲存內容的名稱集中於一處管理。若中途變更這個名稱，使用先前的索引鍵所儲存的內容就無法看見了。"
+      "translation": "在 JS 開頭附近、<code>// 初期化のたびに新しい配列を返し、追加した内容と混ぜない。</code> 那一行的上方加上 <code>STORAGE_KEY</code>，並在其下方插入 1 行空行。將用於尋找儲存內容的名稱集中於一處管理。若中途變更這個名稱，以先前的鍵所儲存的內容就看不到了。"
     },
     {
       "source": "www/js/app.js · 追加 · // 初期化のたびに新しい配列を返し、追加した内容と混ぜない。 の上",

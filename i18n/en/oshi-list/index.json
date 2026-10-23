@@ -1092,7 +1092,7 @@
     },
     {
       "source": "www/js/app.js · 置き換え · init の処理（直前のコメントから }); まで）",
-      "translation": "www/js/app.js · replace · the init handler (from the comment just before it to });)"
+      "translation": "www/js/app.js · replace · the init handler, from the comment just before it to });"
     },
     {
       "source": "続けて、ファイルの末尾の <code>function openOshiDetail(oshi) {</code> の行から、その関数を閉じる <code>}</code> までを、次のコードに置き換えます。",

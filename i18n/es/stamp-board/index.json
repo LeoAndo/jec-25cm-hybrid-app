@@ -284,7 +284,7 @@
     },
     {
       "source": "コードは変えません。STEP 02で書いたコードの文字と大きさを自分で変えて、ホットリロードを試します。",
-      "translation": "Este STEP no tiene cambios de código. Cambia tú mismo el texto y el tamaño en el código que escribiste en el STEP 02 y prueba el hot reload."
+      "translation": "Este STEP no tiene cambios de código. Cambia por tu cuenta el texto y el tamaño en el código que escribiste en el STEP 02 y prueba el hot reload."
     },
     {
       "source": "実行中のまま<code>Text</code>の文字を1か所変え、保存します。ターミナルから<code>flutter run</code>している場合は、その実行中のターミナルで<code>r</code>を押すとホットリロードします。Visual Studio Codeの実行機能を使っている場合は<code>Flutter: Hot Reload</code>を選べます。",
@@ -404,7 +404,7 @@
     },
     {
       "source": "コードは変えません。STEP 05で書いたカードのコードを読み、余白の値を自分で変えて確かめます。",
-      "translation": "Este STEP no tiene cambios de código. Lee el código de la tarjeta que escribiste en el STEP 05 y cambia tú mismo los valores de los márgenes para comprobar el efecto."
+      "translation": "Este STEP no tiene cambios de código. Lee el código de la tarjeta que escribiste en el STEP 05 y cambia por tu cuenta los valores de los márgenes para comprobar el efecto."
     },
     {
       "source": "<code>Column</code>は縦、<code>Row</code>は横に<code>children</code>を並べます。<code>Column</code>の<code>mainAxisSize: MainAxisSize.min</code>は主軸方向を必要な大きさに絞り、<code>crossAxisAlignment: CrossAxisAlignment.start</code>は横方向の開始側へ寄せます。型名を省略したdot shorthandは使いません。",
@@ -696,7 +696,7 @@
     },
     {
       "source": "コードは変えません。STEP 11で付けたボタンと<code>changeStamp</code>の範囲の確認を、操作して確かめます。",
-      "translation": "Este STEP no tiene cambios de código. Comprueba mediante la interacción los botones que agregaste en el STEP 11 y la verificación de rango de <code>changeStamp</code>."
+      "translation": "Este STEP no tiene cambios de código. Comprueba, usando la aplicación, los botones que agregaste en el STEP 11 y la verificación de rango de <code>changeStamp</code>."
     },
     {
       "source": "回数は0〜<code>stampGoal</code>に収めます。ボタン側では、上限なら<code>onPressed</code>を<code>null</code>にして押せない表示にし、関数側でも範囲外なら<code>return</code>します。表示の無効化とデータの範囲確認を両方置きます。",

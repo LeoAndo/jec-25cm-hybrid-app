@@ -1020,7 +1020,7 @@
     },
     {
       "source": "CSSには理由文用の余白と改行表示を追加します。<code>www/css/style.css</code> の <code>.app-selection { … }</code> の下、<code>#list_oshi {</code> の上に追加します。前後は1行ずつ空けます。",
-      "translation": "En el CSS añadimos espaciado y visualización de saltos de línea para el texto de la razón. Agrégalo en <code>www/css/style.css</code>, debajo de <code>.app-selection { … }</code> y encima de <code>#list_oshi {</code>. Deja una línea en blanco antes y después."
+      "translation": "En el CSS agregamos espaciado y visualización de saltos de línea para el texto de la razón. Agrégalo en <code>www/css/style.css</code>, debajo de <code>.app-selection { … }</code> y encima de <code>#list_oshi {</code>. Deja una línea en blanco antes y después."
     },
     {
       "source": "www/css/style.css · 追加 · #list_oshi の上",
@@ -1092,7 +1092,7 @@
     },
     {
       "source": "www/js/app.js · 置き換え · init の処理（直前のコメントから }); まで）",
-      "translation": "www/js/app.js · reemplazar · el procesamiento de init (desde el comentario que lo precede hasta });)"
+      "translation": "www/js/app.js · reemplazar · el procesamiento de init, desde el comentario que lo precede hasta });"
     },
     {
       "source": "続けて、ファイルの末尾の <code>function openOshiDetail(oshi) {</code> の行から、その関数を閉じる <code>}</code> までを、次のコードに置き換えます。",

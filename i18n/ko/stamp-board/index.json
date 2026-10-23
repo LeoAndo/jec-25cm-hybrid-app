@@ -616,7 +616,7 @@
     },
     {
       "source": "続けて、<code>habits</code>のリストを閉じる<code>];</code>の下に、1行空けて次のコードを追加します。下の<code>@override</code>との間も1行空けます。",
-      "translation": "이어서 <code>habits</code> 목록을 닫는 <code>];</code> 아래에 1줄을 비우고 다음 코드를 추가합니다. 아래의 <code>@override</code>와의 사이도 1줄 비웁니다."
+      "translation": "이어서 <code>habits</code> 목록을 닫는 <code>];</code> 아래에 한 줄 띄우고 다음 코드를 추가합니다. 아래의 <code>@override</code>와의 사이도 한 줄 띄웁니다."
     },
     {
       "source": "lib/main.dart · 追加 · habits のリストを閉じる ]; の下",
@@ -812,7 +812,7 @@
     },
     {
       "source": "<code>lib/main.dart</code>に3か所追加します。まず、<code>_StampBoardPageState</code>の中で、<code>changeStamp</code>の関数を閉じる<code>}</code>の下に、1行空けて次のコードを追加します。下の<code>@override</code>との間も1行空けます。",
-      "translation": "<code>lib/main.dart</code>에 3곳을 추가합니다. 먼저 <code>_StampBoardPageState</code> 안에서 <code>changeStamp</code> 함수를 닫는 <code>}</code> 아래에 1줄을 비우고 다음 코드를 추가합니다. 아래의 <code>@override</code>와의 사이도 1줄 비웁니다."
+      "translation": "<code>lib/main.dart</code>에 3곳을 추가합니다. 먼저 <code>_StampBoardPageState</code> 안에서 <code>changeStamp</code> 함수를 닫는 <code>}</code> 아래에 한 줄 띄우고 다음 코드를 추가합니다. 아래의 <code>@override</code>와의 사이도 한 줄 띄웁니다."
     },
     {
       "source": "lib/main.dart · 追加 · changeStamp の閉じかっこの下",
@@ -828,7 +828,7 @@
     },
     {
       "source": "最後に、ファイルの末尾に、1行空けて次のコードを追加します。詳細の画面の<code>HabitDetailPage</code>です。中身はSTEP 17で読みます。",
-      "translation": "마지막으로 파일 맨 끝에 1줄을 비우고 다음 코드를 추가합니다. 상세 화면인 <code>HabitDetailPage</code>입니다. 내용은 STEP 17에서 읽습니다."
+      "translation": "마지막으로 파일 맨 끝에 한 줄 띄우고 다음 코드를 추가합니다. 상세 화면인 <code>HabitDetailPage</code>입니다. 내용은 STEP 17에서 읽습니다."
     },
     {
       "source": "lib/main.dart · 追加 · ファイルの末尾",

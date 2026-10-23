@@ -792,7 +792,7 @@
     },
     {
       "source": "JSに<code>loadOshiItems</code>と<code>isValidItems</code>を加え、<code>page_list</code>の<code>init</code>で <strong>読み込み→一覧生成</strong> の順に呼びます。保存した値を読む前に行を作ると、初期データのまま表示されるためです。まず、一覧の<code>init</code>の中で <code>txt_storage</code> に文字を入れている1行を、<code>loadOshiItems();</code> に置き換えます。すぐ下の <code>renderOshiList();</code> は残します。",
-      "translation": "在 JS 中加入 <code>loadOshiItems</code> 與 <code>isValidItems</code>，在 <code>page_list</code> 的 <code>init</code> 中按 <strong>讀取→產生清單</strong> 的順序呼叫。因為如果在讀取儲存的值之前就建立資料列，顯示的仍會是初始資料。首先，請把清單的 <code>init</code> 中把文字放入 <code>txt_storage</code> 的那一行，替換為 <code>loadOshiItems();</code>。緊接在下方的 <code>renderOshiList();</code> 保留不動。"
+      "translation": "在 JS 中加入 <code>loadOshiItems</code> 與 <code>isValidItems</code>，在 <code>page_list</code> 的 <code>init</code> 中按 <strong>讀取→產生清單</strong> 的順序呼叫。因為如果在讀取儲存的值之前就建立資料列，顯示的仍會是初始資料。首先，請將清單的 <code>init</code> 中，在 <code>txt_storage</code> 放入文字的那一行，替換為 <code>loadOshiItems();</code>。緊接在下方的 <code>renderOshiList();</code> 保留不動。"
     },
     {
       "source": "www/js/app.js · 置き換え · init の中の txt_storage に文字を入れる1行",

@@ -248,15 +248,15 @@
     },
     {
       "source": "<code>www/index.html</code> と <code>www/css/style.css</code> の中身を、下のコードでそれぞれすべて置き換えて保存します。テンプレートに最初から書かれている内容は残しません。プレビューを再読み込みし、<strong>好きなものノートを作ります。</strong>を確認します。プレビューが表示されないときは、上部メニューの <code>表示</code> → <code>プレビュータブを表示</code> や <code>レイアウトをリセット</code> を選びます。",
-      "translation": "用下方的代码分别替换 <code>www/index.html</code> 和 <code>www/css/style.css</code> 的全部内容，然后保存。模板中原本写好的内容不保留。重新加载预览，确认显示 <strong>好きなものノートを作ります。</strong>（制作喜爱笔记。）。如果未显示预览，请从顶部菜单选择 <code>表示</code>（显示）→ <code>プレビュータブを表示</code>（显示预览标签页）或 <code>レイアウトをリセット</code>（重置布局）。"
+      "translation": "用下方的代码分别替换 <code>www/index.html</code> 和 <code>www/css/style.css</code> 的全部内容，然后保存。模板中原本写好的内容不保留。重新加载预览，确认显示 <strong>好きなものノートを作ります。</strong>（制作喜爱笔记。）。如果未显示预览，请从顶部菜单选择 <code>表示</code>（查看）→ <code>プレビュータブを表示</code>（显示预览标签页）或 <code>レイアウトをリセット</code>（重置布局）。"
     },
     {
       "source": "クラウドIDEのメニューバー「表示」から「プレビュータブを表示」「レイアウトをリセット」を選ぶ画面",
-      "translation": "从云端IDE菜单栏的“表示”（显示）中选择“プレビュータブを表示”（显示预览标签页）或“レイアウトをリセット”（重置布局）的画面"
+      "translation": "从云端IDE菜单栏的“表示”（查看）中选择“プレビュータブを表示”（显示预览标签页）或“レイアウトをリセット”（重置布局）的画面"
     },
     {
       "source": "プレビューが表示されないときは、上部メニューの <code>表示</code> → <code>プレビュータブを表示</code> や <code>レイアウトをリセット</code> を選びます。",
-      "translation": "如果未显示预览，请从顶部菜单选择 <code>表示</code>（显示）→ <code>プレビュータブを表示</code>（显示预览标签页）或 <code>レイアウトをリセット</code>（重置布局）。"
+      "translation": "如果未显示预览，请从顶部菜单选择 <code>表示</code>（查看）→ <code>プレビュータブを表示</code>（显示预览标签页）或 <code>レイアウトをリセット</code>（重置布局）。"
     },
     {
       "source": "www/index.html · 全体を置き換える",
@@ -380,7 +380,7 @@
     },
     {
       "source": "<code>www/index.html</code> で、1枚目のカードを閉じる <code>&lt;/article&gt;</code> の下、<code>&lt;/main&gt;</code> の上に、次のコードを追加します。1つ目と同じ形の <code>article</code> を2つ増やし、名前と種類を変えています。CSSは変えません。CSSは共通なので、3枚とも同じ形になります。",
-      "translation": "在 <code>www/index.html</code> 中，于结束第1张卡片的 <code>&lt;/article&gt;</code> 下方、<code>&lt;/main&gt;</code> 上方，添加下面的代码。这里增加了2个与第1个形式相同的 <code>article</code>，并改变了名称和类别。CSS 不变。CSS 是共用的，所以3张卡片形状相同。"
+      "translation": "在 <code>www/index.html</code> 中，结束第1张卡片的 <code>&lt;/article&gt;</code> 下方、<code>&lt;/main&gt;</code> 上方，添加下面的代码。这里增加了2个与第1个形式相同的 <code>article</code>，并改变了名称和类别。CSS 不变。CSS 是共用的，所以3张卡片形状相同。"
     },
     {
       "source": "www/index.html · 追加 · 1枚目の &lt;/article&gt; の下",
