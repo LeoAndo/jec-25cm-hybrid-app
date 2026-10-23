@@ -60,6 +60,11 @@
 | 画面遷移 | screen navigation | 文脈により navigating between screens。`Navigator` は `<code>` のまま |
 | 非同期 | asynchronous | `async` / `await` は `<code>` のまま |
 | コマ | class session | 1コマ＝90分の授業1回。「2コマ目」は session 2 |
+| 追加（コード欄の見出しの変え方） | add | 見出しは `<パス> · <変え方> · <範囲>` の形。パスと ` · ` と範囲の中のコードの断片は訳さない。見出しの変え方を説明する文（「コード欄の見出しには…」）のかぎかっこの中も、この3語にそろえる（#182） |
+| 置き換え（同上） | replace | |
+| 全体を置き換える（同上） | replace entire file | 以前の見出しの `· 全文`（full file）に代わる語。`全文` は見出しから消えた |
+| コード欄 | code block | |
+| コードは変えません。（STEPの冒頭の決まり文句） | There are no code changes in this STEP. | 教科書がそのSTEPで新しいコードを出さない、という意味。直後に学生が自分で値を変える文が続くことがあるので、「コードを変えるな」という禁止の言い方にしない（#182） |
 
 | ハイブリッドアプリ開発技法 | Hybrid App Development | 授業名。学生用ZIPの入口ページ（`package-student-materials.py`）と同じつづり。Techniques は付けない |
 | Web基礎 | Web Basics | 学生が履修済みの科目名 |
@@ -75,7 +80,6 @@
 | 完成プロジェクト | completed project | |
 | 開始コード | starting code | 各コマの最初にある合流用のコード |
 | 合流（する） | join partway through | 途中のSTEPから加わること |
-| 全文（コード見出しの `· 全文`） | full file | `www/index.html · full file` |
 | 単元 | unit | |
 | コマ（見出し） | Session N | `STEP 00 · Session 5`、`Sessions 5–7 · 90 minutes each`。本文の「第Nコマ」は session N |
 | アレンジ | customize / customization | jec-25cm-kotlin と同じ |

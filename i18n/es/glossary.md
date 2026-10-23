@@ -62,6 +62,11 @@
 | 画面遷移 | navegación entre pantallas | `Navigator` は `<code>` のまま |
 | 非同期 | asíncrono | `async` / `await` は `<code>` のまま |
 | コマ | clase | 1コマ＝90分の授業1回。「2コマ目」は clase 2 |
+| 追加（コード欄の見出しの変え方） | agregar | 見出しは `<パス> · <変え方> · <範囲>` の形。パスと ` · ` と範囲の中のコードの断片は訳さない。見出しの変え方を説明する文（「コード欄の見出しには…」）のかぎかっこの中も、この3語にそろえる（#182） |
+| 置き換え（同上） | reemplazar | |
+| 全体を置き換える（同上） | reemplazar todo el archivo | 以前の見出しの `· 全文`（archivo completo）に代わる語。`全文` は見出しから消えた |
+| コード欄 | bloque de código | |
+| コードは変えません。（STEPの冒頭の決まり文句） | Este STEP no tiene cambios de código. | 教科書がそのSTEPで新しいコードを出さない、という意味。直後に学生が自分で値を変える文が続くことがあるので、「コードを変えるな」という禁止の言い方にしない（#182） |
 
 ## Web基礎で習った用語
 

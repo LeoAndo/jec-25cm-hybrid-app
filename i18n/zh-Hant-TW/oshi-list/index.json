@@ -159,8 +159,8 @@
       "translation": "新的思路是 <strong>auto-styling</strong>。我們會確認這樣一種機制：從同一份 HTML 出發，自動選出符合各 OS 的元件外觀。陣列、事件和畫面切換，則與 Web 基礎、Android、iOS 比較著閱讀寫法。"
     },
     {
-      "source": "使うプロジェクトは <code>M01OshiList</code> です。各STEPの「全コード」は開いてコピーでき、各コマの最初には開始時のコードもあります。前から順に作る場合は、説明されたファイルを更新します。途中から合流する場合は、開始時のファイルをすべてそろえてから進みます。",
-      "translation": "使用的專案是 <code>M01OshiList</code>。每個 STEP 的「完整程式碼」都可以展開並複製，每堂課的開頭也有起始程式碼。從頭按順序製作時，請更新說明中提到的檔案。中途加入時，請先把起始時的檔案全部備齊再繼續。"
+      "source": "使うプロジェクトは <code>M01OshiList</code> です。各STEPのコードは、前のSTEPのコードから変える箇所だけを載せています。前から順に、本文が示す場所を書き換えて進みます。授業を休んだなどで途中から合流するときは、先生に伝えて、前のSTEPまでのコードを受け取ってから進みます。",
+      "translation": "使用的專案是 <code>M01OshiList</code>。各 STEP 的程式碼，只列出相對於上一個 STEP 的程式碼要修改的地方。請從頭依序改寫正文指出的位置來進行。如果因為缺課等原因從中途加入，請告訴老師，領取到上一個 STEP 為止的程式碼後再繼續。"
     },
     {
       "source": "コマ",
@@ -247,20 +247,28 @@
       "translation": "雲端IDE開啟。在左側檔案列表中確認 <code>www/index.html</code> 與 <code>www/css/style.css</code>。"
     },
     {
-      "source": "下の全コードを開き、2ファイルの内容をそれぞれ置き換えて保存します。プレビューを再読み込みし、<strong>好きなものノートを作ります。</strong>を確認します。プレビューが表示されないときは、上部メニューの <code>表示</code> → <code>プレビュータブを表示</code> や <code>レイアウトをリセット</code> を選びます。",
-      "translation": "展開下方的完整程式碼，分別替換這兩個檔案的內容並儲存。重新載入預覽，確認顯示 <strong>好きなものノートを作ります。</strong>（製作喜愛物品筆記本。）。若未顯示預覽，請從頂部選單選擇 <code>表示</code>（顯示）→ <code>プレビュータブを表示</code>（顯示預覽分頁）或 <code>レイアウトをリセット</code>（重設版面配置）。"
+      "source": "<code>www/index.html</code> と <code>www/css/style.css</code> の中身を、下のコードでそれぞれすべて置き換えて保存します。テンプレートに最初から書かれている内容は残しません。プレビューを再読み込みし、<strong>好きなものノートを作ります。</strong>を確認します。プレビューが表示されないときは、上部メニューの <code>表示</code> → <code>プレビュータブを表示</code> や <code>レイアウトをリセット</code> を選びます。",
+      "translation": "請用下方的程式碼，分別替換 <code>www/index.html</code> 和 <code>www/css/style.css</code> 的全部內容並儲存。範本中原本寫好的內容不要保留。重新載入預覽，確認顯示 <strong>好きなものノートを作ります。</strong>（製作喜愛物品筆記本。）。若未顯示預覽，請從頂部選單選擇 <code>表示</code>（檢視）→ <code>プレビュータブを表示</code>（顯示預覽分頁）或 <code>レイアウトをリセット</code>（重設版面配置）。"
     },
     {
       "source": "クラウドIDEのメニューバー「表示」から「プレビュータブを表示」「レイアウトをリセット」を選ぶ画面",
-      "translation": "從雲端IDE選單列的「表示」（顯示）中選擇「プレビュータブを表示」（顯示預覽分頁）或「レイアウトをリセット」（重設版面配置）的畫面"
+      "translation": "從雲端IDE選單列的「表示」（檢視）中選擇「プレビュータブを表示」（顯示預覽分頁）或「レイアウトをリセット」（重設版面配置）的畫面"
     },
     {
       "source": "プレビューが表示されないときは、上部メニューの <code>表示</code> → <code>プレビュータブを表示</code> や <code>レイアウトをリセット</code> を選びます。",
-      "translation": "若未顯示預覽，請從頂部選單選擇 <code>表示</code>（顯示）→ <code>プレビュータブを表示</code>（顯示預覽分頁）或 <code>レイアウトをリセット</code>（重設版面配置）。"
+      "translation": "若未顯示預覽，請從頂部選單選擇 <code>表示</code>（檢視）→ <code>プレビュータブを表示</code>（顯示預覽分頁）或 <code>レイアウトをリセット</code>（重設版面配置）。"
     },
     {
-      "source": "以後、本文のパスはプロジェクト内の位置です。「全コード」は指定ファイルの中身をすべて置き換えるためのものです。先に比較と説明を読み、貼り付けた後は確認欄の操作まで行いましょう。",
-      "translation": "此後，內文中的路徑都是專案內的位置。「完整程式碼」用於把指定檔案的內容全部取代。請先閱讀比較和說明，貼上之後，一直做到確認欄的操作為止。"
+      "source": "www/index.html · 全体を置き換える",
+      "translation": "www/index.html · 替換整個檔案"
+    },
+    {
+      "source": "www/css/style.css · 全体を置き換える",
+      "translation": "www/css/style.css · 替換整個檔案"
+    },
+    {
+      "source": "以後、本文のパスはプロジェクト内の位置です。コード欄の見出しには、ファイルのパスと、変え方を書きます。「追加」は、本文が示す行の下（または上）に書き足します。「置き換え」は、本文が示す範囲だけを書き換え、ほかの行は残します。「全体を置き換える」は、そのファイルの中身をすべて置き換えます。先に比較と説明を読み、書き換えた後は確認欄の操作まで行いましょう。",
+      "translation": "此後，正文中的路徑都是專案內的位置。程式碼欄的標題寫有檔案的路徑和修改方式。「新增」是在正文指出的那一行的下方（或上方）加寫程式碼。「替換」是只改寫正文指出的範圍，其他行保留不動。「替換整個檔案」是把該檔案的內容全部替換掉。請先閱讀比較和說明，改寫之後，一直做到確認欄的操作為止。"
     },
     {
       "source": "既知の技術と比べる",
@@ -269,18 +277,6 @@
     {
       "source": "Web基礎でHTMLとCSSを別ファイルに置いたときと同じです。今回はファイルの置き場所がMacのフォルダからMonacaのプロジェクトへ変わります。Android StudioやXcodeで1つのプロジェクトを開くように、4コマとも同じ <code>M01OshiList</code> を開きます。",
       "translation": "這和 Web 基礎中把 HTML 和 CSS 放在不同檔案裡時一樣。這次檔案的存放位置從 Mac 的資料夾變為 Monaca 的專案。就像在 Android Studio 或 Xcode 中開啟一個專案那樣，4 堂課都開啟同一個 <code>M01OshiList</code>。"
-    },
-    {
-      "source": "このSTEPの全コード（照合・合流用）",
-      "translation": "本 STEP 的完整程式碼（用於對照與中途加入）"
-    },
-    {
-      "source": "www/index.html · 全文",
-      "translation": "www/index.html · 完整程式碼"
-    },
-    {
-      "source": "www/css/style.css · 全文",
-      "translation": "www/css/style.css · 完整程式碼"
     },
     {
       "source": "通常版Monacaで自分の <code>M01OshiList</code> を開き、準備用の文字を表示できた。",
@@ -295,8 +291,16 @@
       "translation": "用 HTML 製作一張卡片"
     },
     {
-      "source": "<code>www/index.html</code> を、このSTEPの全文に置き換えます。まず <code>body</code> の中を読みます。<code>main</code> は画面の主な内容、<code>article</code> は1件のカードです。カードには種類・名前・ひとことを置きます。",
-      "translation": "請把 <code>www/index.html</code> 取代為本 STEP 的完整程式碼。請先閱讀 <code>body</code> 的內容。<code>main</code> 是畫面的主要內容，<code>article</code> 是一張卡片。卡片上放置類別、名稱和一句話。"
+      "source": "<code>www/index.html</code> の <code>body</code> の中にある <code>&lt;p&gt;好きなものノートを作ります。&lt;/p&gt;</code> の1行を、次のコードに置き換えます。<code>&lt;body&gt;</code> と <code>&lt;/body&gt;</code> の行は残します。",
+      "translation": "請把 <code>www/index.html</code> 的 <code>body</code> 中 <code>&lt;p&gt;好きなものノートを作ります。&lt;/p&gt;</code> 這一行，替換為以下程式碼。<code>&lt;body&gt;</code> 和 <code>&lt;/body&gt;</code> 這兩行保留不動。"
+    },
+    {
+      "source": "www/index.html · 置き換え · &lt;p&gt;好きなものノートを作ります。&lt;/p&gt; の1行",
+      "translation": "www/index.html · 替換 · &lt;p&gt;好きなものノートを作ります。&lt;/p&gt; 這一行"
+    },
+    {
+      "source": "まず <code>body</code> の中を読みます。<code>main</code> は画面の主な内容、<code>article</code> は1件のカードです。カードには種類・名前・ひとことを置きます。",
+      "translation": "請先閱讀 <code>body</code> 的內容。<code>main</code> 是畫面的主要內容，<code>article</code> 是一張卡片。卡片上放置類別、名稱和一句話。"
     },
     {
       "source": "<code>class</code> 属性は、次のSTEPでCSSを対応させるための名前です。この時点では装飾がなくても正解です。保存してプレビューを再読み込みし、音楽・好きな音楽・ひとことがこの順に並ぶことを確かめます。",
@@ -323,8 +327,12 @@
       "translation": "用 CSS 調整卡片的邊距和顏色"
     },
     {
-      "source": "<code>www/css/style.css</code> を全文に置き換えます。HTMLはSTEP 01のままです。<code>.oshi-card</code> はカード全体、<code>.oshi-name</code> は名前に適用されます。",
-      "translation": "請把 <code>www/css/style.css</code> 取代為完整程式碼。HTML 保持 STEP 01 的狀態。<code>.oshi-card</code> 套用於整張卡片，<code>.oshi-name</code> 套用於名稱。"
+      "source": "<code>www/css/style.css</code> には、STEP 00で書いたコメントの1行だけがあります。この中身を、次のコードですべて置き換えます。HTMLは変えません。",
+      "translation": "<code>www/css/style.css</code> 中只有 STEP 00 寫的那一行註解。請用以下程式碼替換其全部內容。HTML 不變。"
+    },
+    {
+      "source": "<code>.oshi-card</code> はカード全体、<code>.oshi-name</code> は名前に適用されます。",
+      "translation": "<code>.oshi-card</code> 套用於整張卡片，<code>.oshi-name</code> 套用於名稱。"
     },
     {
       "source": "書く場所",
@@ -371,8 +379,12 @@
       "translation": "把相同結構的卡片增至 3 張"
     },
     {
-      "source": "<code>www/index.html</code> の全文を更新します。1つ目と同じ <code>article</code> を2つ増やし、名前と種類を変えています。CSSは共通なので、3枚とも同じ形になります。",
-      "translation": "請更新 <code>www/index.html</code> 的完整程式碼。增加 2 個與第 1 個相同的 <code>article</code>，並改變名稱和類別。CSS 是共用的，所以 3 張卡片形狀相同。"
+      "source": "<code>www/index.html</code> で、1枚目のカードを閉じる <code>&lt;/article&gt;</code> の下、<code>&lt;/main&gt;</code> の上に、次のコードを追加します。1つ目と同じ形の <code>article</code> を2つ増やし、名前と種類を変えています。CSSは変えません。CSSは共通なので、3枚とも同じ形になります。",
+      "translation": "請在 <code>www/index.html</code> 中，結束第 1 張卡片的 <code>&lt;/article&gt;</code> 下方、<code>&lt;/main&gt;</code> 上方，新增以下程式碼。這是增加 2 個與第 1 個形狀相同的 <code>article</code>，並改變了名稱和類別。CSS 不變。CSS 是共用的，所以 3 張卡片形狀相同。"
+    },
+    {
+      "source": "www/index.html · 追加 · 1枚目の &lt;/article&gt; の下",
+      "translation": "www/index.html · 新增 · 第 1 張的 &lt;/article&gt; 下方"
     },
     {
       "source": "プレビューで3件あることと、音楽・食べ物・場所の順になっていることを確かめます。",
@@ -407,8 +419,8 @@
       "translation": "第1堂課的確認與自訂"
     },
     {
-      "source": "下の全コードが第1コマ終了時の基準です。自分の内容に変える前に、3枚が表示されることを確かめます。カードはまだ押しても何も起きません。",
-      "translation": "下方的完整程式碼是第 1 堂課結束時的基準。在改成自己的內容之前，先確認顯示了 3 張卡片。卡片現在點擊了也不會發生任何事。"
+      "source": "コードは変えません。STEP 03まで書いたコードが、第1コマ終了時の基準です。自分の内容に変える前に、3枚が表示されることを確かめます。カードはまだ押しても何も起きません。",
+      "translation": "程式碼不變。寫到 STEP 03 為止的程式碼，就是第 1 堂課結束時的基準。在改成自己的內容之前，先確認顯示了 3 張卡片。卡片現在點擊了也不會發生任何事。"
     },
     {
       "source": "自分の好きなものを1つ選び、1枚目の名前・種類・好きな理由を自分の言葉へ変えます。",
@@ -447,28 +459,36 @@
       "translation": "以相同版本載入 Onsen UI"
     },
     {
-      "source": "このコマから合流する人：開始時の全コード",
-      "translation": "從本堂課起中途加入的人：起始時的完整程式碼"
-    },
-    {
-      "source": "同じ <code>M01OshiList</code> を開き、各ファイルを次の内容にそろえて保存します。前のコマのアレンジを残したい人は、その文字や色を控えてから進みます。",
-      "translation": "請開啟同一個 <code>M01OshiList</code>，把各檔案調整為下方的內容並儲存。想保留上一堂課自訂的人，請先記下那些文字和顏色再繼續。"
-    },
-    {
       "source": "第2コマでは、同じHTMLからOSに合った見た目を作る <strong>auto-styling</strong> を確かめます。使うのは <strong>Onsen UI 2.12.9</strong> です。Onsen UIはHTMLに画面部品を加えるUIライブラリで、この授業では素のJavaScriptから操作します。",
       "translation": "第 2 堂課確認 <strong>auto-styling</strong>：從同一份 HTML 產生符合各 OS 的外觀。使用的是 <strong>Onsen UI 2.12.9</strong>。Onsen UI 是給 HTML 加入畫面元件的 UI 程式庫，本課程用純 JavaScript 來操作它。"
     },
     {
-      "source": "<code>www</code> の中に <code>js</code> フォルダを作り、その中に <code>app.js</code> を作ります。既にあれば再利用します。",
-      "translation": "請在 <code>www</code> 中建立 <code>js</code> 資料夾，並在其中建立 <code>app.js</code>。如果已經有了，就直接重用。"
+      "source": "<code>www</code> の中に <code>js</code> フォルダを作り、その中に <code>app.js</code> を作ります。既にあれば再利用します。<code>app.js</code> の中身を、次のコードですべて置き換えます。",
+      "translation": "請在 <code>www</code> 中建立 <code>js</code> 資料夾，並在其中建立 <code>app.js</code>。如果已經有了，就直接重用。請用以下程式碼替換 <code>app.js</code> 的全部內容。"
     },
     {
-      "source": "このSTEPの3ファイルを全文どおりに保存します。HTMLではOnsen UIのCSS2本とJavaScript1本を、版番号付きのURLで読み込んでいます。",
-      "translation": "請按完整程式碼儲存本 STEP 的 3 個檔案。HTML 中透過帶版本編號的 URL，載入了 Onsen UI 的 2 個 CSS 和 1 個 JavaScript。"
+      "source": "www/js/app.js · 全体を置き換える",
+      "translation": "www/js/app.js · 替換整個檔案"
     },
     {
-      "source": "自分の <code>js/app.js</code> はOnsen UIのJavaScriptより後に読み込みます。まずはコメントだけなので、カードの形は前のコマとほぼ同じです。ただし、Onsen UIのCSSを読み込むと、ページ全体はスクロールしなくなります。プレビューの高さが低いと、下のカードが切れて見えることがあります。次のSTEPでカードを <code>ons-page</code> に入れると、ページの中でスクロールできるようになります。",
-      "translation": "自己的 <code>js/app.js</code> 要在 Onsen UI 的 JavaScript 之後載入。目前只有註解，所以卡片的形狀和上一堂課幾乎相同。不過，載入 Onsen UI 的 CSS 之後，整個頁面不再捲動。預覽的高度較低時，下方的卡片可能顯得被截斷。下一個 STEP 把卡片放進 <code>ons-page</code> 後，就可以在頁面內捲動了。"
+      "source": "<code>www/index.html</code> の <code>head</code> に、Onsen UIのCSS2本を追加します。<code>components/loader.css</code> を読み込む <code>link</code> の下、<code>css/style.css</code> を読み込む <code>link</code> の上です。",
+      "translation": "請在 <code>www/index.html</code> 的 <code>head</code> 中，新增 2 個 Onsen UI 的 CSS。位置是載入 <code>components/loader.css</code> 的 <code>link</code> 下方、載入 <code>css/style.css</code> 的 <code>link</code> 上方。"
+    },
+    {
+      "source": "www/index.html · 追加 · components/loader.css の link の下",
+      "translation": "www/index.html · 新增 · components/loader.css 的 link 下方"
+    },
+    {
+      "source": "続けて、<code>css/style.css</code> を読み込む <code>link</code> の下、<code>&lt;/head&gt;</code> の上に、Onsen UIのJavaScript1本と自分の <code>js/app.js</code> を読み込む <code>script</code> を追加します。CSSのファイルは変えません。",
+      "translation": "接著，請在載入 <code>css/style.css</code> 的 <code>link</code> 下方、<code>&lt;/head&gt;</code> 上方，新增 <code>script</code>，載入 1 個 Onsen UI 的 JavaScript 和自己的 <code>js/app.js</code>。CSS 檔案不變。"
+    },
+    {
+      "source": "www/index.html · 追加 · css/style.css の link の下",
+      "translation": "www/index.html · 新增 · css/style.css 的 link 下方"
+    },
+    {
+      "source": "どのURLにも、版番号の <code>@2.12.9</code> が入っています。自分の <code>js/app.js</code> はOnsen UIのJavaScriptより後に読み込みます。まずはコメントだけなので、カードの形は前のコマとほぼ同じです。ただし、Onsen UIのCSSを読み込むと、ページ全体はスクロールしなくなります。プレビューの高さが低いと、下のカードが切れて見えることがあります。次のSTEPでカードを <code>ons-page</code> に入れると、ページの中でスクロールできるようになります。",
+      "translation": "每個 URL 中都包含版本編號 <code>@2.12.9</code>。自己的 <code>js/app.js</code> 要在 Onsen UI 的 JavaScript 之後載入。目前只有註解，所以卡片的形狀和上一堂課幾乎相同。不過，載入 Onsen UI 的 CSS 之後，整個頁面不再捲動。預覽的高度較低時，下方的卡片可能顯得被截斷。下一個 STEP 把卡片放進 <code>ons-page</code> 後，就可以在頁面內捲動了。"
     },
     {
       "source": "CDNはライブラリをインターネット経由で読み込む配布先です。授業中にアクセスできる回線が必要です。URLの <code>@2.12.9</code> を消したり、別の版へ変えたりしません。",
@@ -477,10 +497,6 @@
     {
       "source": "Web基礎で自分のCSSを <code>link</code>、JavaScriptを <code>script</code> で読み込んだ書き方と同じです。今回はURLが外部ファイルを指します。AndroidやiOSでUIライブラリを使うように、画面部品の実装を借ります。自分の処理を後に読むのは、先にOnsen UIを使える状態にするためです。",
       "translation": "寫法和 Web 基礎中用 <code>link</code> 載入自己的 CSS、用 <code>script</code> 載入 JavaScript 時相同。這次 URL 指向外部檔案。就像在 Android 或 iOS 中使用 UI 程式庫那樣，借用畫面元件的實作。把自己的處理放在後面載入，是為了先讓 Onsen UI 處於可用狀態。"
-    },
-    {
-      "source": "www/js/app.js · 全文",
-      "translation": "www/js/app.js · 完整程式碼"
     },
     {
       "source": "版番号付きの3本の読み込みと、自分の <code>app.js</code> の位置を確認した。",
@@ -495,8 +511,24 @@
       "translation": "把頁面和工具列換成 Onsen UI"
     },
     {
-      "source": "<code>www/index.html</code> を全文に置き換えます。<code>body</code> の中を <code>ons-page</code> で囲み、その先頭に <code>ons-toolbar</code> を置きます。カードはまだ前のコマのHTMLです。",
-      "translation": "請把 <code>www/index.html</code> 取代為完整程式碼。用 <code>ons-page</code> 包圍 <code>body</code> 的內容，並在其開頭放上 <code>ons-toolbar</code>。卡片仍是上一堂課的 HTML。"
+      "source": "<code>www/index.html</code> の <code>body</code> の中を <code>ons-page</code> で囲み、その先頭に <code>ons-toolbar</code> を置きます。カードはまだ前のコマのHTMLです。CSSと <code>app.js</code> は変えません。",
+      "translation": "請用 <code>ons-page</code> 包圍 <code>www/index.html</code> 中 <code>body</code> 的內容，並在其開頭放上 <code>ons-toolbar</code>。卡片仍是上一堂課的 HTML。CSS 和 <code>app.js</code> 不變。"
+    },
+    {
+      "source": "まず、<code>&lt;body&gt;</code> の下、<code>&lt;main class=\"app-section\"&gt;</code> の上に追加します。",
+      "translation": "首先，請在 <code>&lt;body&gt;</code> 下方、<code>&lt;main class=\"app-section\"&gt;</code> 上方新增程式碼。"
+    },
+    {
+      "source": "www/index.html · 追加 · &lt;body&gt; の下",
+      "translation": "www/index.html · 新增 · &lt;body&gt; 下方"
+    },
+    {
+      "source": "次に、<code>&lt;/main&gt;</code> の下、<code>&lt;/body&gt;</code> の上に、<code>ons-page</code> を閉じるタグを追加します。<code>main</code> から <code>&lt;/main&gt;</code> までの字下げは、そのままでかまいません。",
+      "translation": "接著，請在 <code>&lt;/main&gt;</code> 下方、<code>&lt;/body&gt;</code> 上方，新增結束 <code>ons-page</code> 的標籤。從 <code>main</code> 到 <code>&lt;/main&gt;</code> 的縮排維持原樣即可。"
+    },
+    {
+      "source": "www/index.html · 追加 · &lt;/main&gt; の下",
+      "translation": "www/index.html · 新增 · &lt;/main&gt; 下方"
     },
     {
       "source": "<code>ons-</code> で始まるタグはOnsen UIが提供する画面部品です。ブラウザの標準タグだけではなく、STEP 05で読み込んだJavaScriptとCSSが表示を整えています。ツールバーの <code>class=\"center\"</code> は、Onsen UIが決めた領域名です。文字が常に画面の厳密な中央にあるという意味ではありません。",
@@ -523,8 +555,20 @@
       "translation": "把卡片換成 Onsen UI 的列表"
     },
     {
-      "source": "このSTEPのHTMLとCSSを全文に置き換えます。JavaScriptはコメントだけのままです。カード用のHTMLをOnsen UIの部品へ置き換え、<code>ons-list</code> の中へ3個の <code>ons-list-item</code> を置きます。それぞれに <code>class=\"oshi-card\"</code> を付け、第1コマで使ったカードの見た目を引き継ぎます。一覧の上の見出しと、一覧の下の「まだ選択していません」の文も、このSTEPで加わります。",
-      "translation": "請把本 STEP 的 HTML 和 CSS 取代為完整程式碼。JavaScript 仍然只有註解。把卡片用的 HTML 換成 Onsen UI 的元件，在 <code>ons-list</code> 中放 3 個 <code>ons-list-item</code>。給每一個都加上 <code>class=\"oshi-card\"</code>，沿用第 1 堂課的卡片外觀。列表上方的標題，以及列表下方的「まだ選択していません」（尚未選取）這句話，也在本 STEP 中加入。"
+      "source": "このSTEPでは、HTMLとCSSを書き換えます。JavaScriptはコメントだけのままです。カード用のHTMLをOnsen UIの部品へ置き換え、<code>ons-list</code> の中へ3個の <code>ons-list-item</code> を置きます。それぞれに <code>class=\"oshi-card\"</code> を付け、第1コマで使ったカードの見た目を引き継ぎます。一覧の上の見出しと、一覧の下の「まだ選択していません」の文も、このSTEPで加わります。",
+      "translation": "本 STEP 要改寫 HTML 和 CSS。JavaScript 仍然只有註解。把卡片用的 HTML 換成 Onsen UI 的元件，在 <code>ons-list</code> 中放 3 個 <code>ons-list-item</code>。給每一個都加上 <code>class=\"oshi-card\"</code>，沿用第 1 堂課的卡片外觀。列表上方的標題，以及列表下方的「まだ選択していません」（尚未選取）這句話，也在本 STEP 中加入。"
+    },
+    {
+      "source": "<code>www/index.html</code> では、<code>body</code> の中の <code>&lt;ons-page id=\"page_list\"&gt;</code> の行から <code>&lt;/ons-page&gt;</code> の行までを、次のコードに置き換えます。<code>main</code> と3枚の <code>article</code> は残しません。<code>head</code> と、<code>&lt;body&gt;</code>・<code>&lt;/body&gt;</code> の行は残します。ツールバーの部分は前のSTEPと同じ内容で、字下げだけをそろえています。",
+      "translation": "在 <code>www/index.html</code> 中，請把 <code>body</code> 裡從 <code>&lt;ons-page id=\"page_list\"&gt;</code> 這一行到 <code>&lt;/ons-page&gt;</code> 這一行，替換為以下程式碼。<code>main</code> 和 3 個 <code>article</code> 不保留。<code>head</code>，以及 <code>&lt;body&gt;</code>、<code>&lt;/body&gt;</code> 這兩行保留不動。工具列的部分與上一個 STEP 內容相同，只是調整了縮排。"
+    },
+    {
+      "source": "www/index.html · 置き換え · &lt;ons-page id=\"page_list\"&gt; から &lt;/ons-page&gt; まで",
+      "translation": "www/index.html · 替換 · 從 &lt;ons-page id=\"page_list\"&gt; 到 &lt;/ons-page&gt;"
+    },
+    {
+      "source": "<code>www/css/style.css</code> は、カードの指定の多くが変わるので、中身を次のコードですべて置き換えます。第1コマでアレンジした色や余白を残したい人は、その値を控えてから置き換えます。",
+      "translation": "<code>www/css/style.css</code> 中卡片的指定大多會改變，所以請用以下程式碼替換其全部內容。想保留第 1 堂課自訂的顏色或邊距的人，請先記下那些值再替換。"
     },
     {
       "source": "部品・指定",
@@ -591,8 +635,12 @@
       "translation": "本單元的新概念是 <strong>auto-styling</strong>。Onsen UI 根據執行環境，把同一個 <code>ons-toolbar</code> 或 <code>ons-list-item</code> 切換為 iOS 導向或 Android 導向的外觀。不需要自己為每個 OS 製作 2 套畫面。"
     },
     {
-      "source": "<code>www/js/app.js</code> を、このSTEPの全文に置き換えます。先頭の <code>ons.platform.select(\"android\");</code> が有効になっています。保存して<strong>プレビュー全体を再読み込み</strong>します。",
-      "translation": "請把 <code>www/js/app.js</code> 取代為本 STEP 的完整程式碼。開頭的 <code>ons.platform.select(\"android\");</code> 已經生效。儲存後<strong>重新載入整個預覽</strong>。"
+      "source": "<code>www/js/app.js</code> の3行目、<code>// ons.platform.select(\"android\");</code> の1行を、次のように置き換えます。先頭の <code>//</code> を消し、この行を有効にします。上の2行のコメントは残します。HTMLとCSSは変えません。保存して<strong>プレビュー全体を再読み込み</strong>します。",
+      "translation": "請把 <code>www/js/app.js</code> 第 3 行的 <code>// ons.platform.select(\"android\");</code> 這一行，如下替換。刪除開頭的 <code>//</code>，讓這一行生效。上方 2 行註解保留不動。HTML 和 CSS 不變。儲存後<strong>重新載入整個預覽</strong>。"
+    },
+    {
+      "source": "www/js/app.js · 置き換え · // ons.platform.select(\"android\"); の1行",
+      "translation": "www/js/app.js · 替換 · // ons.platform.select(\"android\"); 這一行"
     },
     {
       "source": "ツールバーの高さ・題名の位置、行を押した反応、右端の目印を見ます。右端の目印「＞」は、iOS向けとAndroid向けのどちらにも出ます。",
@@ -627,8 +675,16 @@
       "translation": "恢復為自動樣式並自訂"
     },
     {
-      "source": "<code>app.js</code> の指定行の先頭へ <code>//</code> を付け、このSTEPの全文と同じコメントに戻します。保存してプレビュー全体を再読み込みします。これで特定のOSを強制せず、実行環境に応じてスタイルが選ばれます。",
-      "translation": "請在 <code>app.js</code> 中指定行的開頭加上 <code>//</code>，恢復為與本 STEP 完整程式碼相同的註解。儲存後請重新載入整個預覽。這樣就不再強制指定特定的 OS，而是根據執行環境選擇樣式。"
+      "source": "<code>www/js/app.js</code> の3行目、<code>ons.platform.select(…);</code> の1行を、次のように置き換えます。先頭へ <code>//</code> を付けてコメントに戻します。STEP 08で <code>\"ios\"</code> に書き換えたままの人も、<code>\"android\"</code> に戻してからコメントにします。保存してプレビュー全体を再読み込みします。",
+      "translation": "請把 <code>www/js/app.js</code> 第 3 行的 <code>ons.platform.select(…);</code> 這一行，如下替換。在開頭加上 <code>//</code>，恢復為註解。在 STEP 08 改寫為 <code>\"ios\"</code> 後沒有改回的人，也請先改回 <code>\"android\"</code> 再變成註解。儲存後重新載入整個預覽。"
+    },
+    {
+      "source": "www/js/app.js · 置き換え · ons.platform.select(\"android\"); の1行",
+      "translation": "www/js/app.js · 替換 · ons.platform.select(\"android\"); 這一行"
+    },
+    {
+      "source": "これで特定のOSを強制せず、実行環境に応じてスタイルが選ばれます。",
+      "translation": "這樣就不會強制指定特定的 OS，而是根據執行環境選擇樣式。"
     },
     {
       "source": "Monacaのプレビューでも、端末を選んで見た目を比べられます。<code>app.js</code> の強制指定がコメントになっていることを確かめ、次の順に操作します。",
@@ -675,8 +731,12 @@
       "translation": "在頁面產生時進行處理"
     },
     {
-      "source": "第3コマでは、配列に書いたデータから一覧を作り、押した名前を表示します。まず、このSTEPの <code>www/js/app.js</code> に置き換えます。HTMLとCSSは開始時のままです。",
-      "translation": "第 3 堂課從寫在陣列中的資料建立列表，並顯示點擊的名稱。首先，請取代為本 STEP 的 <code>www/js/app.js</code>。HTML 和 CSS 保持起始時的狀態。"
+      "source": "第3コマでは、配列に書いたデータから一覧を作り、押した名前を表示します。第2コマの終わりのコードから始めます。まず、<code>www/js/app.js</code> の3行目、<code>// ons.platform.select(\"android\");</code> の下に、1行空けて次のコードを追加します。ファイルの末尾になります。HTMLとCSSは変えません。",
+      "translation": "第 3 堂課要從寫在陣列中的資料建立列表，並顯示點擊的名稱。從第 2 堂課結束時的程式碼開始。首先，請在 <code>www/js/app.js</code> 第 3 行的 <code>// ons.platform.select(\"android\");</code> 下方，空一行後新增以下程式碼。這裡就是檔案的結尾。HTML 和 CSS 不變。"
+    },
+    {
+      "source": "www/js/app.js · 追加 · // ons.platform.select(\"android\"); の下",
+      "translation": "www/js/app.js · 新增 · // ons.platform.select(\"android\"); 下方"
     },
     {
       "source": "<code>document.addEventListener(\"init\", function(event) { ... });</code> は、Onsen UIのページが初期化されたときに処理を行います。<code>event.target</code> は、そのとき初期化された <code>ons-page</code> です。<code>page.id</code> が <code>page_list</code> のときだけ、一覧用の処理をします。",
@@ -703,8 +763,20 @@
       "translation": "把 3 筆資料整理到陣列中"
     },
     {
-      "source": "<code>www/js/app.js</code> を全文に置き換えます。<code>oshiItems</code> は3件の配列です。1件は <code>name</code>・<code>genre</code>・<code>comment</code> を持つオブジェクトにします。配列とオブジェクトはWeb基礎の書き方です。",
-      "translation": "請把 <code>www/js/app.js</code> 取代為完整程式碼。<code>oshiItems</code> 是有 3 筆的陣列。每一筆是擁有 <code>name</code>、<code>genre</code>、<code>comment</code> 的物件。陣列和物件是 Web 基礎中的寫法。"
+      "source": "<code>www/js/app.js</code> を2か所変えます。HTMLとCSSは変えません。まず、3行目の <code>// ons.platform.select(\"android\");</code> と、STEP 10で追加した <code>// ページの要素が使えるようになってから処理する。</code> の間に、次のコードを追加します。前後は1行ずつ空けます。",
+      "translation": "<code>www/js/app.js</code> 要修改 2 處。HTML 和 CSS 不變。首先，請在第 3 行的 <code>// ons.platform.select(\"android\");</code> 與 STEP 10 新增的 <code>// ページの要素が使えるようになってから処理する。</code> 之間，新增以下程式碼。前後各空一行。"
+    },
+    {
+      "source": "次に、<code>init</code> の中で <code>txt_selected</code> に「一覧を準備しました」を入れている1行を、次の1行に置き換えます。",
+      "translation": "接著，請將 <code>init</code> 中，在 <code>txt_selected</code> 放入「一覧を準備しました」（列表已準備好）的那一行，替換為以下這一行。"
+    },
+    {
+      "source": "www/js/app.js · 置き換え · txt_selected に文字を入れる1行",
+      "translation": "www/js/app.js · 替換 · 把文字放入 txt_selected 的那一行"
+    },
+    {
+      "source": "<code>oshiItems</code> は3件の配列です。1件は <code>name</code>・<code>genre</code>・<code>comment</code> を持つオブジェクトにします。配列とオブジェクトはWeb基礎の書き方です。",
+      "translation": "<code>oshiItems</code> 是有 3 筆的陣列。每一筆是擁有 <code>name</code>、<code>genre</code>、<code>comment</code> 的物件。陣列和物件是 Web 基礎中的寫法。"
     },
     {
       "source": "コード",
@@ -751,8 +823,32 @@
       "translation": "從陣列建立行，並填入文字"
     },
     {
-      "source": "このSTEPのHTMLとJavaScriptを全文に置き換えます。CSSは変わりません。HTMLの <code>ons-list</code> は空になり、JavaScriptの <code>renderOshiList</code> が一覧を組み立てます。",
-      "translation": "請把本 STEP 的 HTML 和 JavaScript 取代為完整程式碼。CSS 不變。HTML 中的 <code>ons-list</code> 變為空，由 JavaScript 的 <code>renderOshiList</code> 組裝列表。"
+      "source": "このSTEPでは、HTMLとJavaScriptを書き換えます。CSSは変えません。HTMLの <code>ons-list</code> は空になり、JavaScriptの <code>renderOshiList</code> が一覧を組み立てます。",
+      "translation": "本 STEP 要改寫 HTML 和 JavaScript。CSS 不變。HTML 中的 <code>ons-list</code> 變為空，由 JavaScript 的 <code>renderOshiList</code> 組裝列表。"
+    },
+    {
+      "source": "<code>www/index.html</code> では、<code>&lt;ons-list id=\"list_oshi\"&gt;</code> の行から <code>&lt;/ons-list&gt;</code> の行までを、次の1行に置き換えます。中の3個の <code>ons-list-item</code> は残しません。STEP 09で名前や種類をアレンジした人は、その文字を控えておき、STEP 14で配列に書きます。",
+      "translation": "在 <code>www/index.html</code> 中，請把從 <code>&lt;ons-list id=\"list_oshi\"&gt;</code> 這一行到 <code>&lt;/ons-list&gt;</code> 這一行，替換為以下這一行。裡面的 3 個 <code>ons-list-item</code> 不保留。在 STEP 09 自訂了名稱或類別的人，請先記下那些文字，在 STEP 14 寫進陣列。"
+    },
+    {
+      "source": "www/index.html · 置き換え · &lt;ons-list id=\"list_oshi\"&gt; から &lt;/ons-list&gt; まで",
+      "translation": "www/index.html · 替換 · 從 &lt;ons-list id=\"list_oshi\"&gt; 到 &lt;/ons-list&gt;"
+    },
+    {
+      "source": "<code>www/js/app.js</code> では、<code>init</code> の中の「登録件数：」を入れている1行を、<code>renderOshiList</code> を呼ぶ1行に置き換えます。",
+      "translation": "在 <code>www/js/app.js</code> 中，請把 <code>init</code> 裡放入「登録件数：」（登記筆數：）的那一行，替換為呼叫 <code>renderOshiList</code> 的一行。"
+    },
+    {
+      "source": "www/js/app.js · 置き換え · 「登録件数：」の1行",
+      "translation": "www/js/app.js · 替換 · 「登録件数：」（登記筆數：）這一行"
+    },
+    {
+      "source": "続けて、ファイルの末尾、<code>init</code> の処理を閉じる <code>});</code> の下に、1行空けて次の2つの関数を追加します。",
+      "translation": "接著，請在檔案的結尾、結束 <code>init</code> 處理的 <code>});</code> 下方，空一行後新增以下 2 個函式。"
+    },
+    {
+      "source": "www/js/app.js · 追加 · ファイルの末尾",
+      "translation": "www/js/app.js · 新增 · 檔案末尾"
     },
     {
       "source": "<code>createOshiRowHtml(index)</code> を読みます。カード用の <code>class=\"oshi-card\"</code> を含む1行分のタグを文字列で返し、番号を足して <code>item_oshi_0</code>・<code>txt_name_0</code> のように重複しないidを作ります。",
@@ -791,8 +887,16 @@
       "translation": "顯示點擊的行的名稱"
     },
     {
-      "source": "<code>www/js/app.js</code> を全文に置き換えます。2回目の <code>for</code> の末尾へ、各行の <code>click</code> イベントが増えました。押された行に対応する <code>oshiItems[i]</code> を、<code>selectOshi</code> へ渡します。",
-      "translation": "請把 <code>www/js/app.js</code> 取代為完整程式碼。在第 2 個 <code>for</code> 的結尾，增加了各行的 <code>click</code> 事件。把與被點擊的行對應的 <code>oshiItems[i]</code> 傳給 <code>selectOshi</code>。"
+      "source": "<code>www/js/app.js</code> を2か所変えます。HTMLとCSSは変えません。<code>renderOshiList</code> の2回目の <code>for</code> の中では、<code>txt_genre_</code> の行の下が空行になっています。その空行の下、<code>for</code> を閉じる <code>}</code> の上に、各行の <code>click</code> イベントを追加します。押された行に対応する <code>oshiItems[i]</code> を、<code>selectOshi</code> へ渡します。",
+      "translation": "<code>www/js/app.js</code> 要修改 2 處。HTML 和 CSS 不變。在 <code>renderOshiList</code> 的第 2 個 <code>for</code> 中，<code>txt_genre_</code> 那一行的下方是空行。請在該空行的下方、結束 <code>for</code> 的 <code>}</code> 上方，新增各行的 <code>click</code> 事件。把與被點擊的行對應的 <code>oshiItems[i]</code> 傳給 <code>selectOshi</code>。"
+    },
+    {
+      "source": "www/js/app.js · 追加 · 2回目の for の中、空行の下",
+      "translation": "www/js/app.js · 新增 · 第 2 個 for 中的空行下方"
+    },
+    {
+      "source": "次に、ファイルの末尾、<code>renderOshiList</code> を閉じる <code>}</code> の下に、1行空けて <code>selectOshi</code> を追加します。",
+      "translation": "接著，請在檔案的結尾、結束 <code>renderOshiList</code> 的 <code>}</code> 下方，空一行後新增 <code>selectOshi</code>。"
     },
     {
       "source": "<code>for (let i = 0; ...)</code> の <code>let</code> により、登録した関数はその回の番号を使えます。3つの行に同じ0番のデータを渡さず、各回の <code>i</code> で選ぶ点を確認します。",
@@ -823,8 +927,8 @@
       "translation": "確認資料與顯示的角色"
     },
     {
-      "source": "第3コマの基準コードです。HTMLは一覧を置く場所、CSSは見た目、JavaScriptの配列は内容、関数は行の作成と選択を担当しています。",
-      "translation": "這是第 3 堂課的基準程式碼。HTML 負責放置列表的位置，CSS 負責外觀，JavaScript 的陣列負責內容，函式負責建立行和選取。"
+      "source": "コードは変えません。STEP 13まで書いたコードが、第3コマの基準です。HTMLは一覧を置く場所、CSSは見た目、JavaScriptの配列は内容、関数は行の作成と選択を担当しています。",
+      "translation": "程式碼不變。寫到 STEP 13 為止的程式碼，就是第 3 堂課的基準。HTML 負責放置列表的位置，CSS 負責外觀，JavaScript 的陣列負責內容，函式負責建立行和選取。"
     },
     {
       "source": "配列の2件目の名前と種類を書き換え、再読み込みします。一覧と選択中の両方へ同じ変更が出ることを確認します。",
@@ -863,8 +967,20 @@
       "translation": "把列表變為由 navigator 管理的頁面"
     },
     {
-      "source": "第4コマでは一覧から詳細を開き、戻れるようにします。まず、このSTEPの <code>www/index.html</code> へ置き換えます。CSSとJavaScriptは開始時のままです。",
-      "translation": "第 4 堂課實作從列表開啟詳情，並能返回。首先，請取代為本 STEP 的 <code>www/index.html</code>。CSS 和 JavaScript 保持起始時的狀態。"
+      "source": "第4コマでは一覧から詳細を開き、戻れるようにします。第3コマの終わりのコードから始めます。このSTEPでは <code>www/index.html</code> だけを変えます。CSSとJavaScriptは変えません。",
+      "translation": "第 4 堂課實作從列表開啟詳情，並能返回。從第 3 堂課結束時的程式碼開始。本 STEP 只修改 <code>www/index.html</code>。CSS 和 JavaScript 不變。"
+    },
+    {
+      "source": "まず、<code>&lt;body&gt;</code> の下、<code>&lt;ons-page id=\"page_list\"&gt;</code> の上に追加します。",
+      "translation": "首先，請在 <code>&lt;body&gt;</code> 下方、<code>&lt;ons-page id=\"page_list\"&gt;</code> 上方新增程式碼。"
+    },
+    {
+      "source": "次に、<code>&lt;/ons-page&gt;</code> の下、<code>&lt;/body&gt;</code> の上に、<code>template</code> を閉じるタグを追加します。<code>ons-page</code> から <code>&lt;/ons-page&gt;</code> までの字下げは、そのままでかまいません。",
+      "translation": "接著，請在 <code>&lt;/ons-page&gt;</code> 下方、<code>&lt;/body&gt;</code> 上方，新增結束 <code>template</code> 的標籤。從 <code>ons-page</code> 到 <code>&lt;/ons-page&gt;</code> 的縮排維持原樣即可。"
+    },
+    {
+      "source": "www/index.html · 追加 · &lt;/ons-page&gt; の下",
+      "translation": "www/index.html · 新增 · &lt;/ons-page&gt; 下方"
     },
     {
       "source": "<code>ons-navigator</code> は複数のページを重ねて管理する部品です。<code>page=\"list.html\"</code> に、最初に出すページを指定します。この <code>list.html</code> は別ファイルではなく、同じHTML内の <code>template id=\"list.html\"</code> の名前です。",
@@ -895,12 +1011,36 @@
       "translation": "開啟詳情頁面並返回"
     },
     {
-      "source": "このSTEPの3ファイルを全文に置き換えます。HTMLに <code>template id=\"detail.html\"</code> を増やし、詳細のツールバーに <code>ons-back-button</code> を置きます。CSSには理由文用の余白と改行表示を追加します。",
-      "translation": "請把本 STEP 的 3 個檔案取代為完整程式碼。在 HTML 中增加 <code>template id=\"detail.html\"</code>，並在詳情的工具列中放上 <code>ons-back-button</code>。在 CSS 中加入理由文字用的邊距和換行顯示。"
+      "source": "このSTEPでは3ファイルを書き換えます。HTMLに <code>template id=\"detail.html\"</code> を増やし、詳細のツールバーに <code>ons-back-button</code> を置きます。<code>www/index.html</code> の、STEP 15で追加した <code>&lt;/template&gt;</code> の下、<code>&lt;/body&gt;</code> の上に、1行空けて追加します。",
+      "translation": "本 STEP 要改寫 3 個檔案。在 HTML 中增加 <code>template id=\"detail.html\"</code>，並在詳情的工具列中放上 <code>ons-back-button</code>。請在 <code>www/index.html</code> 中，STEP 15 新增的 <code>&lt;/template&gt;</code> 下方、<code>&lt;/body&gt;</code> 上方，空一行後新增程式碼。"
     },
     {
-      "source": "JavaScriptでは、クリックしたときに呼ぶ関数を <code>selectOshi</code> から <code>openOshiDetail</code> へ変え、<code>navApp.pushPage(\"detail.html\");</code> で詳細を重ねます。今回は名前や理由を詳細へまだ渡さないため、どの行を押しても「詳細画面の見本」が出ます。",
-      "translation": "在 JavaScript 中，把點擊時呼叫的函式從 <code>selectOshi</code> 改為 <code>openOshiDetail</code>，並用 <code>navApp.pushPage(\"detail.html\");</code> 堆疊顯示詳情。這次還沒有把名稱和理由傳給詳情，所以無論點擊哪一行，都會顯示「詳細画面の見本」（詳情頁面範例）。"
+      "source": "www/index.html · 追加 · &lt;/template&gt; の下",
+      "translation": "www/index.html · 新增 · &lt;/template&gt; 下方"
+    },
+    {
+      "source": "CSSには理由文用の余白と改行表示を追加します。<code>www/css/style.css</code> の <code>.app-selection { … }</code> の下、<code>#list_oshi {</code> の上に追加します。前後は1行ずつ空けます。",
+      "translation": "在 CSS 中加入理由文字用的邊距和換行顯示。請在 <code>www/css/style.css</code> 的 <code>.app-selection { … }</code> 下方、<code>#list_oshi {</code> 上方新增程式碼。前後各空一行。"
+    },
+    {
+      "source": "www/css/style.css · 追加 · #list_oshi の上",
+      "translation": "www/css/style.css · 新增 · #list_oshi 上方"
+    },
+    {
+      "source": "JavaScriptでは、クリックしたときに呼ぶ関数を <code>selectOshi</code> から <code>openOshiDetail</code> へ変え、<code>navApp.pushPage(\"detail.html\");</code> で詳細を重ねます。<code>www/js/app.js</code> の2回目の <code>for</code> の中にある、<code>selectOshi</code> を呼ぶ1行を、次の1行に置き換えます。",
+      "translation": "在 JavaScript 中，把點擊時呼叫的函式從 <code>selectOshi</code> 改為 <code>openOshiDetail</code>，並用 <code>navApp.pushPage(\"detail.html\");</code> 堆疊顯示詳情。請把 <code>www/js/app.js</code> 第 2 個 <code>for</code> 中呼叫 <code>selectOshi</code> 的那一行，替換為以下這一行。"
+    },
+    {
+      "source": "www/js/app.js · 置き換え · selectOshi を呼ぶ1行",
+      "translation": "www/js/app.js · 替換 · 呼叫 selectOshi 的那一行"
+    },
+    {
+      "source": "続けて、ファイルの末尾の <code>function selectOshi(oshi) {</code> の行から、その関数を閉じる <code>}</code> までを、次のコードに置き換えます。今回は名前や理由を詳細へまだ渡さないため、どの行を押しても「詳細画面の見本」が出ます。",
+      "translation": "接著，請把檔案末尾從 <code>function selectOshi(oshi) {</code> 這一行到結束該函式的 <code>}</code> 為止，替換為以下程式碼。這次還沒有把名稱和理由傳給詳情，所以無論點擊哪一行，都會顯示「詳細画面の見本」（詳情頁面範例）。"
+    },
+    {
+      "source": "www/js/app.js · 置き換え · function selectOshi から、その閉じかっこまで",
+      "translation": "www/js/app.js · 替換 · 從 function selectOshi 到其右大括號"
     },
     {
       "source": "一覧の1件を1回押し、詳細の見本を表示します。",
@@ -935,8 +1075,32 @@
       "translation": "把點擊的項目傳給詳情"
     },
     {
-      "source": "<code>www/index.html</code> と <code>www/js/app.js</code> を全文に置き換えます。CSSは変わりません。詳細の名前・種類・理由はHTMLでは空にし、受け取ったデータを後から入れます。",
-      "translation": "請把 <code>www/index.html</code> 和 <code>www/js/app.js</code> 取代為完整程式碼。CSS 不變。詳情的名稱、類別、理由在 HTML 中留空，之後再填入接收到的資料。"
+      "source": "このSTEPでは、<code>www/index.html</code> と <code>www/js/app.js</code> を書き換えます。CSSは変えません。詳細の名前・種類・理由はHTMLでは空にし、受け取ったデータを後から入れます。",
+      "translation": "本 STEP 要改寫 <code>www/index.html</code> 和 <code>www/js/app.js</code>。CSS 不變。詳情的名稱、類別、理由在 HTML 中留空，之後再填入接收到的資料。"
+    },
+    {
+      "source": "<code>www/index.html</code> の <code>template id=\"detail.html\"</code> の中で、<code>txt_detail_genre</code> の行から <code>txt_detail_comment</code> の行までの4行を、次のコードに置き換えます。間の「好きな理由」の行は変わりません。",
+      "translation": "請把 <code>www/index.html</code> 的 <code>template id=\"detail.html\"</code> 中，從 <code>txt_detail_genre</code> 這一行到 <code>txt_detail_comment</code> 這一行的 4 行，替換為以下程式碼。中間「好きな理由」（喜愛的理由）那一行沒有變化。"
+    },
+    {
+      "source": "www/index.html · 置き換え · txt_detail_genre の行から txt_detail_comment の行まで",
+      "translation": "www/index.html · 替換 · 從 txt_detail_genre 這一行到 txt_detail_comment 這一行"
+    },
+    {
+      "source": "<code>www/js/app.js</code> では、<code>// ページの要素が使えるようになってから処理する。</code> のコメントの行から、<code>init</code> の処理を閉じる <code>});</code> までを、次のコードに置き換えます。コメントの文も変わり、<code>page_detail</code> のときの処理が加わります。",
+      "translation": "在 <code>www/js/app.js</code> 中，請把從 <code>// ページの要素が使えるようになってから処理する。</code> 這一行註解，到結束 <code>init</code> 處理的 <code>});</code> 為止，替換為以下程式碼。註解的文字也會改變，並加入 <code>page_detail</code> 時的處理。"
+    },
+    {
+      "source": "www/js/app.js · 置き換え · init の処理（直前のコメントから }); まで）",
+      "translation": "www/js/app.js · 替換 · init 的處理（從前一行的註解到 });）"
+    },
+    {
+      "source": "続けて、ファイルの末尾の <code>function openOshiDetail(oshi) {</code> の行から、その関数を閉じる <code>}</code> までを、次のコードに置き換えます。",
+      "translation": "接著，請把檔案末尾從 <code>function openOshiDetail(oshi) {</code> 這一行到結束該函式的 <code>}</code> 為止，替換為以下程式碼。"
+    },
+    {
+      "source": "www/js/app.js · 置き換え · function openOshiDetail から、その閉じかっこまで",
+      "translation": "www/js/app.js · 替換 · 從 function openOshiDetail 到其右大括號"
     },
     {
       "source": "<code>pushPage</code> の2番目の引数に <code>{ data: { oshi: oshi } }</code> を渡します。左側の <code>oshi</code> は受け渡す項目の名前、右側の <code>oshi</code> は関数の引数で受け取った好きなもの1件です。",
@@ -979,8 +1143,20 @@
       "translation": "連續點擊也不堆疊詳情"
     },
     {
-      "source": "<code>www/js/app.js</code> を全文に置き換えます。完成版では <code>isOpeningDetail</code> という真偽値と、<code>ons-navigator</code> の現在のページを使って、詳細を重ねて開くことを防ぎます。Onsen UIの <code>ons-navigator</code> も、切り替えの途中に届いた2回目の <code>pushPage</code> は受け付けませんが、断られた呼び出しはエラーになります。アプリの側で開く途中かどうかを記録しておけば、2回目の呼び出しそのものをしないで済みます。",
-      "translation": "請把 <code>www/js/app.js</code> 取代為完整程式碼。完成版使用名為 <code>isOpeningDetail</code> 的布林值和 <code>ons-navigator</code> 的目前頁面，防止堆疊開啟詳情。Onsen UI 的 <code>ons-navigator</code> 雖然也不接受切換途中到達的第 2 次 <code>pushPage</code>，但被拒絕的呼叫會報錯。在應用程式一側記錄是否正在開啟，就可以不發出第 2 次呼叫。"
+      "source": "<code>www/js/app.js</code> を2か所変えます。HTMLとCSSは変えません。完成版では <code>isOpeningDetail</code> という真偽値と、<code>ons-navigator</code> の現在のページを使って、詳細を重ねて開くことを防ぎます。Onsen UIの <code>ons-navigator</code> も、切り替えの途中に届いた2回目の <code>pushPage</code> は受け付けませんが、断られた呼び出しはエラーになります。アプリの側で開く途中かどうかを記録しておけば、2回目の呼び出しそのものをしないで済みます。",
+      "translation": "<code>www/js/app.js</code> 要修改 2 處。HTML 和 CSS 不變。完成版使用名為 <code>isOpeningDetail</code> 的布林值和 <code>ons-navigator</code> 的目前頁面，防止堆疊開啟詳情。Onsen UI 的 <code>ons-navigator</code> 雖然也不接受切換途中到達的第 2 次 <code>pushPage</code>，但被拒絕的呼叫會報錯。在應用程式一側記錄是否正在開啟，就可以不發出第 2 次呼叫。"
+    },
+    {
+      "source": "まず、配列 <code>oshiItems</code> を閉じる <code>];</code> の下に、1行空けて追加します。下の <code>// templateの中身は、ページが作られてから取得する。</code> との間も1行空けます。",
+      "translation": "首先，請在結束陣列 <code>oshiItems</code> 的 <code>];</code> 下方，空一行後新增程式碼。與下方的 <code>// templateの中身は、ページが作られてから取得する。</code> 之間也空一行。"
+    },
+    {
+      "source": "www/js/app.js · 追加 · 配列 oshiItems の ]; の下",
+      "translation": "www/js/app.js · 新增 · 陣列 oshiItems 的 ]; 下方"
+    },
+    {
+      "source": "次に、ファイルの末尾の <code>function openOshiDetail(oshi) {</code> の行から、その関数を閉じる <code>}</code> までを、次のコードに置き換えます。",
+      "translation": "接著，請把檔案末尾從 <code>function openOshiDetail(oshi) {</code> 這一行到結束該函式的 <code>}</code> 為止，替換為以下程式碼。"
     },
     {
       "source": "場所",
@@ -1043,8 +1219,8 @@
       "translation": "確認完成版，做成自己的喜愛筆記"
     },
     {
-      "source": "下の3ファイルは <code>M01OshiList</code> の完成版です。コードをそろえたら、順番に確認します。自分のアレンジを残す場合は、データや色の違いと、処理の違いを分けて見比べます。",
-      "translation": "下方的 3 個檔案是 <code>M01OshiList</code> 的完成版。把程式碼調整為下方的內容之後，請按順序確認。要保留自己的自訂時，請把資料和顏色的差別與處理的差別分開來對照。"
+      "source": "コードは変えません。STEP 18まで書いたコードが、<code>M01OshiList</code> の完成版です。順番に確認します。自分のアレンジを残す場合は、データや色の違いと、処理の違いを分けて見比べます。",
+      "translation": "程式碼不變。寫到 STEP 18 為止的程式碼，就是 <code>M01OshiList</code> 的完成版。請按順序確認。要保留自己的自訂時，請把資料和顏色的差別與處理的差別分開來對照。"
     },
     {
       "source": "再読み込み直後は3件と「まだ選択していません」が見えます。",

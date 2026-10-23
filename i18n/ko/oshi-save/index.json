@@ -179,12 +179,24 @@
       "translation": "<code>www/index.html</code>, <code>www/css/style.css</code>를 엽니다. <code>www/js/app.js</code>가 없다면 파일 목록의 생성 조작을 통해 <code>www</code> 아래에 <code>js</code> 폴더, 그 안에 <code>app.js</code> 파일을 만듭니다."
     },
     {
-      "source": "自分のアレンジがある場合は、変えた文字と色を控えます。下の開始コード3ファイルをそろえ、保存してプレビューを再読み込みします。<code>components</code> や <code>res</code> は変更しません。",
-      "translation": "자신이 변형한 내용이 있는 경우에는 변경한 글자와 색상을 메모해 둡니다. 아래의 시작 코드 3개 파일을 동일하게 맞추고, 저장한 후 プレビュー(미리보기)를 새로고침합니다. <code>components</code>나 <code>res</code>는 변경하지 않습니다."
+      "source": "自分のアレンジがある場合は、変えた文字と色を控えます。3ファイルの中身を、下の開始コードでそれぞれ全体を置き換え、保存してプレビューを再読み込みします。<code>components</code> や <code>res</code> は変更しません。",
+      "translation": "자신이 변형한 내용이 있는 경우에는 변경한 글자와 색상을 메모해 둡니다. 3개 파일의 내용을 아래의 시작 코드로 각각 전체 교체하고, 저장한 후 プレビュー(미리보기)를 새로고침합니다. <code>components</code>나 <code>res</code>는 변경하지 않습니다."
     },
     {
       "source": "3件の名前を押して詳細を開き、左上の戻るボタンで一覧へ戻ります。戻るボタンは、iOS向けの見た目では「＜ 戻る」、Android向けの見た目では左向きの矢印「←」だけです。タイトルと詳細の組み合わせを確かめます。",
       "translation": "3개의 이름을 눌러 상세 화면을 열고, 왼쪽 위의 뒤로 가기 버튼으로 목록으로 돌아갑니다. 뒤로 가기 버튼은 iOS용 화면에서는 「＜ 戻る」(＜ 뒤로), Android용 화면에서는 왼쪽 화살표 「←」뿐입니다. 제목과 상세 내용의 조합을 확인합니다."
+    },
+    {
+      "source": "www/index.html · 全体を置き換える",
+      "translation": "www/index.html · 파일 전체 교체"
+    },
+    {
+      "source": "www/css/style.css · 全体を置き換える",
+      "translation": "www/css/style.css · 파일 전체 교체"
+    },
+    {
+      "source": "www/js/app.js · 全体を置き換える",
+      "translation": "www/js/app.js · 파일 전체 교체"
     },
     {
       "source": "開始コードの役割を、次の順で追いましょう。新しいファイル名を <code>detail.html</code> として作る操作は不要です。これは <code>index.html</code> の中の <code>template</code> の<code>id</code>です。",
@@ -247,22 +259,6 @@
       "translation": "웹 기초와 동일한 3개 파일 구성이지만 조작하는 장소는 Monaca クラウド IDE입니다. <code>init</code>은 Android의 뷰 생성 후 설정이나 iOS의 <code>viewDidLoad</code>에 해당하는 타이밍으로, JavaScript의 <code>addEventListener</code>로 수신합니다. <code>pushPage</code>의 <code>data</code>는 네이티브 앱에서 다음 화면으로 값을 전달하는 조작에 대응합니다. 아직 저장용 문자열로는 변환하지 않았습니다."
     },
     {
-      "source": "このSTEPの全コード（照合・合流用）",
-      "translation": "이 STEP의 전체 코드(대조 및 합류용)"
-    },
-    {
-      "source": "www/index.html · 全文",
-      "translation": "www/index.html · 전체 코드"
-    },
-    {
-      "source": "www/css/style.css · 全文",
-      "translation": "www/css/style.css · 전체 코드"
-    },
-    {
-      "source": "www/js/app.js · 全文",
-      "translation": "www/js/app.js · 전체 코드"
-    },
-    {
       "source": "自分の1プロジェクトで3件の一覧・詳細・戻るを確認し、HTMLとJSの対応を追えた。",
       "translation": "자신의 1개 프로젝트에서 3개 항목의 목록·상세·뒤로 가기를 확인하고, HTML과 JS의 대응 관계를 파악했습니다."
     },
@@ -275,8 +271,28 @@
       "translation": "입력 화면 만들기"
     },
     {
-      "source": "3ファイルをこのSTEPのコードへ更新します。HTMLに <code>add.html</code> の<code>template</code>を加え、名前・種類の <code>input</code> と、好きな理由の <code>textarea</code> を置きます。<code>label</code> の<code>for</code>と入力欄の<code>id</code>が対応します。",
-      "translation": "3개 파일을 이 STEP의 코드로 업데이트합니다. HTML에 <code>add.html</code>의 <code>template</code>을 추가하고 이름·종류의 <code>input</code>과 좋아하는 이유를 적는 <code>textarea</code>를 배치합니다. <code>label</code>의 <code>for</code>와 입력란의 <code>id</code>가 대응합니다."
+      "source": "HTMLに、一覧から入力画面を開くボタンと、入力画面の <code>add.html</code> の<code>template</code>を加えます。まず、一覧の説明文 <code>音楽、食べ物、場所。好きなものと理由の記録。</code> の行の下に、ボタンと案内用の段落を足します。",
+      "translation": "HTML에 목록에서 입력 화면을 여는 버튼과, 입력 화면인 <code>add.html</code>의 <code>template</code>을 추가합니다. 먼저 목록의 설명문 <code>音楽、食べ物、場所。好きなものと理由の記録。</code>(음악, 음식, 장소. 좋아하는 것과 이유의 기록.) 줄 아래에 버튼과 안내용 문단을 추가합니다."
+    },
+    {
+      "source": "www/index.html · 追加 · 一覧の説明文 app-description の下",
+      "translation": "www/index.html · 추가 · 목록의 설명문 app-description 아래"
+    },
+    {
+      "source": "続けて、<code>&lt;template id=\"detail.html\"&gt;</code> の行の上に、入力画面の<code>template</code>を足します。最後の <code>&lt;/template&gt;</code> の下に空行を1行入れ、詳細の<code>template</code>と分けます。名前・種類の <code>input</code> と、好きな理由の <code>textarea</code> を置きます。<code>label</code> の<code>for</code>と入力欄の<code>id</code>が対応します。",
+      "translation": "이어서 <code>&lt;template id=\"detail.html\"&gt;</code> 줄 위에 입력 화면의 <code>template</code>을 추가합니다. 마지막 <code>&lt;/template&gt;</code> 아래에 빈 줄을 한 줄 넣어 상세 화면의 <code>template</code>과 구분합니다. 이름·종류의 <code>input</code>과 좋아하는 이유를 적는 <code>textarea</code>를 배치합니다. <code>label</code>의 <code>for</code>와 입력란의 <code>id</code>가 대응합니다."
+    },
+    {
+      "source": "www/index.html · 追加 · &lt;template id=\"detail.html\"&gt; の上",
+      "translation": "www/index.html · 추가 · &lt;template id=\"detail.html\"&gt; 위"
+    },
+    {
+      "source": "CSSは、ファイルの末尾（<code>.oshi-genre</code> を含む指定の閉じかっこの下）に、空行を1行あけて次の指定を足します。",
+      "translation": "CSS는 파일 맨 끝(<code>.oshi-genre</code>를 포함한 지정의 닫는 괄호 아래)에 빈 줄을 한 줄 두고 다음 지정을 추가합니다."
+    },
+    {
+      "source": "www/css/style.css · 追加 · ファイルの末尾",
+      "translation": "www/css/style.css · 추가 · 파일 맨 끝"
     },
     {
       "source": "CSSの <code>.app-input</code> は幅を100%にし、<code>box-sizing: border-box</code> で<code>padding</code>と枠をその幅の内側へ収めます。<code>font: inherit</code> で文字を周囲とそろえ、<code>focus</code>の<code>outline</code>で選択中の欄を見分けます。ほかに加わるクラスのうち、このSTEPの画面に当たる4つは次の表のとおりです。",
@@ -331,20 +347,48 @@
       "translation": "<code>.reset-section</code>, <code>#panel_reset ons-button</code>, <code>.is-hidden</code>의 3가지는 STEP 08에서 추가할 초기화 확인란을 위한 지정입니다. 이 STEP의 HTML에는 아직 적용될 요소가 없습니다."
     },
     {
-      "source": "一覧の <code>btn_open_add</code> へ<code>openAddPage</code>を登録し、<code>pushPage(\"add.html\", ...)</code> で入力画面へ進みます。詳細と同じ移動中の旗を共有するため、片方を開いている最中にもう片方は開きません。",
-      "translation": "목록의 <code>btn_open_add</code>에 <code>openAddPage</code>를 등록하고, <code>pushPage(\"add.html\", ...)</code>로 입력 화면으로 이동합니다. 상세 화면과 동일한 이동 중 플래그를 공유하므로, 한쪽을 열고 있는 중에는 다른 쪽이 열리지 않습니다."
+      "source": "JavaScriptは4か所を変えます。まず、<code>let oshiItems = [</code> の行から <code>let isOpeningDetail = false;</code> の行までを、次のコードに置き換えます。初期データの配列を自分の好きなものに変えている場合は、控えてから置き換え、<code>createInitialItems</code> の中の配列へ書き戻します。",
+      "translation": "JavaScript는 4군데를 변경합니다. 먼저 <code>let oshiItems = [</code> 줄부터 <code>let isOpeningDetail = false;</code> 줄까지를 다음 코드로 교체합니다. 초기 데이터의 배열을 자신이 좋아하는 것으로 바꾸어 둔 경우에는 메모해 둔 뒤 교체하고, <code>createInitialItems</code> 안의 배열에 다시 적어 넣습니다."
     },
     {
-      "source": "この旗の名前は、STEP 00の <code>isOpeningDetail</code> から <code>isOpeningPage</code> に変えます。詳細を開くときだけでなく入力画面を開くときにも使うので、「詳細を開いている最中」ではなく「どちらかのページを開いている最中」と読める名前にするためです。宣言と<code>openOshiDetail</code>の中の3か所も、新しい名前にそろえます。",
-      "translation": "이 플래그의 이름은 STEP 00의 <code>isOpeningDetail</code>에서 <code>isOpeningPage</code>로 변경합니다. 상세 화면을 열 때뿐만 아니라 입력 화면을 열 때도 사용하므로, '상세 화면을 열고 있는 중'이 아니라 '두 페이지 중 하나를 열고 있는 중'으로 읽히는 이름으로 만들기 위해서입니다. 선언부와 <code>openOshiDetail</code> 내부의 3곳도 새로운 이름에 맞춰 변경합니다."
+      "source": "www/js/app.js · 置き換え · let oshiItems = [ から let isOpeningDetail = false; まで",
+      "translation": "www/js/app.js · 교체 · let oshiItems = [부터 let isOpeningDetail = false;까지"
+    },
+    {
+      "source": "初期データは <code>createInitialItems</code> が新しい配列を返す形にまとめました。後で初期化したときにも同じ内容を作り直せるようにするためです。呼び出しのたびに新しい配列になる点を、<code>return</code>の位置と一緒に読みます。",
+      "translation": "초기 데이터는 <code>createInitialItems</code>가 새로운 배열을 반환하는 형태로 정리했습니다. 나중에 초기화했을 때도 동일한 내용을 다시 만들 수 있도록 하기 위해서입니다. 호출할 때마다 새로운 배열이 반환된다는 점을 <code>return</code>의 위치와 함께 확인합니다."
+    },
+    {
+      "source": "移動中の旗の名前は、STEP 00の <code>isOpeningDetail</code> から <code>isOpeningPage</code> に変えます。詳細を開くときだけでなく入力画面を開くときにも使うので、「詳細を開いている最中」ではなく「どちらかのページを開いている最中」と読める名前にするためです。宣言は上のコードで変えたので、残りは<code>openOshiDetail</code>の中の3か所です。",
+      "translation": "이동 중 플래그의 이름은 STEP 00의 <code>isOpeningDetail</code>에서 <code>isOpeningPage</code>로 변경합니다. 상세 화면을 열 때뿐만 아니라 입력 화면을 열 때도 사용하므로, '상세 화면을 열고 있는 중'이 아니라 '두 페이지 중 하나를 열고 있는 중'으로 읽히는 이름으로 만들기 위해서입니다. 선언부는 위의 코드에서 변경했으므로, 남은 것은 <code>openOshiDetail</code> 내부의 3곳입니다."
+    },
+    {
+      "source": "次に、<code>init</code> の処理を、直前のコメント <code>// templateの中身は、ページが作られてから取得する。</code> の行から、閉じる <code>});</code> の行までを置き換えます。一覧の<code>init</code>では、<code>txt_storage</code> に文を入れ、<code>btn_open_add</code> へ<code>openAddPage</code>を登録します。詳細の<code>init</code>は、<code>const oshi</code> の下の空行がなくなるだけで、処理は変わりません。",
+      "translation": "다음으로 <code>init</code> 처리를, 바로 앞의 주석 <code>// templateの中身は、ページが作られてから取得する。</code> 줄부터 닫는 <code>});</code> 줄까지 교체합니다. 목록의 <code>init</code>에서는 <code>txt_storage</code>에 문장을 넣고, <code>btn_open_add</code>에 <code>openAddPage</code>를 등록합니다. 상세 화면의 <code>init</code>은 <code>const oshi</code> 아래의 빈 줄이 없어질 뿐이며, 처리는 바뀌지 않습니다."
+    },
+    {
+      "source": "www/js/app.js · 置き換え · init の処理（直前のコメントから }); まで）",
+      "translation": "www/js/app.js · 교체 · init 처리(바로 앞 주석부터 });까지)"
     },
     {
       "source": "一覧のボタンの下の <code>txt_storage</code> には <code>この段階では、追加した内容は保存されません。</code>、入力画面のボタンの下の注記には <code>この段階では、追加した内容は再読み込みすると消えます。</code> と出します。追加した内容がまだ残らないことを、画面で先に伝えるためです。保存を作るSTEP 06で、どちらの文も書き換えます。",
       "translation": "목록의 버튼 아래에 있는 <code>txt_storage</code>에는 <code>この段階では、追加した内容は保存されません。</code>(이 단계에서는 추가한 내용이 저장되지 않습니다), 입력 화면의 버튼 아래 참고 사항에는 <code>この段階では、追加した内容は再読み込みすると消えます。</code>(이 단계에서는 추가한 내용이 새로고침하면 사라집니다)라고 표시합니다. 추가한 내용이 아직 유지되지 않는다는 점을 화면에서 미리 전달하기 위해서입니다. 저장을 구현하는 STEP 06에서 두 문장 모두 수정합니다."
     },
     {
-      "source": "初期データは <code>createInitialItems</code> が新しい配列を返す形にまとめました。後で初期化したときにも同じ内容を作り直せるようにするためです。呼び出しのたびに新しい配列になる点を、<code>return</code>の位置と一緒に読みます。",
-      "translation": "초기 데이터는 <code>createInitialItems</code>가 새로운 배열을 반환하는 형태로 정리했습니다. 나중에 초기화했을 때도 동일한 내용을 다시 만들 수 있도록 하기 위해서입니다. 호출할 때마다 새로운 배열이 반환된다는 점을 <code>return</code>의 위치와 함께 확인합니다."
+      "source": "3つ目に、<code>function openOshiDetail(oshi) {</code> の行から、その閉じかっこ <code>}</code> の行までを置き換えます。変わるのは、<code>isOpeningDetail</code> を <code>isOpeningPage</code> にした3行だけです。",
+      "translation": "세 번째로 <code>function openOshiDetail(oshi) {</code> 줄부터 그 닫는 괄호 <code>}</code> 줄까지 교체합니다. 바뀌는 것은 <code>isOpeningDetail</code>을 <code>isOpeningPage</code>로 바꾼 3줄뿐입니다."
+    },
+    {
+      "source": "www/js/app.js · 置き換え · function openOshiDetail から、その閉じかっこまで",
+      "translation": "www/js/app.js · 교체 · function openOshiDetail부터 그 닫는 괄호까지"
+    },
+    {
+      "source": "最後に、ファイルの末尾（<code>openOshiDetail</code> の閉じかっこの下）に、空行を1行あけて <code>openAddPage</code> を足します。<code>pushPage(\"add.html\", ...)</code> で入力画面へ進みます。詳細と同じ移動中の旗を共有するため、片方を開いている最中にもう片方は開きません。",
+      "translation": "마지막으로 파일 맨 끝(<code>openOshiDetail</code>의 닫는 괄호 아래)에 빈 줄을 한 줄 두고 <code>openAddPage</code>를 추가합니다. <code>pushPage(\"add.html\", ...)</code>로 입력 화면으로 이동합니다. 상세 화면과 동일한 이동 중 플래그를 공유하므로, 한쪽을 열고 있는 중에는 다른 쪽이 열리지 않습니다."
+    },
+    {
+      "source": "www/js/app.js · 追加 · ファイルの末尾",
+      "translation": "www/js/app.js · 추가 · 파일 맨 끝"
     },
     {
       "source": "保存・再読み込み後に <code>好きなものを追加</code> を押します。",
@@ -375,8 +419,24 @@
       "translation": "입력한 글자 확인하기"
     },
     {
-      "source": "HTMLの追加ボタンから <code>disabled</code> を外し、JSでは <code>page_add</code> の<code>init</code>で<code>addOshi</code>を登録します。関数名を渡しているので、登録した瞬間ではなくボタンを押したときに動きます。",
-      "translation": "HTML의 추가 버튼에서 <code>disabled</code>를 제거하고, JS에서는 <code>page_add</code>의 <code>init</code>에서 <code>addOshi</code>를 등록합니다. 함수명을 전달하고 있으므로 등록하는 순간이 아니라 버튼을 눌렀을 때 실행됩니다."
+      "source": "HTMLでは、入力画面の <code>btn_save_oshi</code> の1行を置き換えて、追加ボタンから <code>disabled</code> を外します。",
+      "translation": "HTML에서는 입력 화면의 <code>btn_save_oshi</code>가 있는 한 줄을 교체하여 추가 버튼에서 <code>disabled</code>를 제거합니다."
+    },
+    {
+      "source": "www/index.html · 置き換え · btn_save_oshi の1行",
+      "translation": "www/index.html · 교체 · btn_save_oshi가 있는 한 줄"
+    },
+    {
+      "source": "JSでは、<code>init</code> の処理の中の <code>if (page.id === \"page_detail\") {</code> の行の上に、<code>page_add</code> の<code>init</code>で<code>addOshi</code>を登録する処理を足します。足した <code>}</code> の下に空行を1行入れます。関数名を渡しているので、登録した瞬間ではなくボタンを押したときに動きます。",
+      "translation": "JS에서는 <code>init</code> 처리 안의 <code>if (page.id === \"page_detail\") {</code> 줄 위에, <code>page_add</code>의 <code>init</code>에서 <code>addOshi</code>를 등록하는 처리를 추가합니다. 추가한 <code>}</code> 아래에 빈 줄을 한 줄 넣습니다. 함수 이름을 전달하고 있으므로, 등록한 순간이 아니라 버튼을 눌렀을 때 작동합니다."
+    },
+    {
+      "source": "www/js/app.js · 追加 · if (page.id === \"page_detail\") { の上",
+      "translation": "www/js/app.js · 추가 · if (page.id === \"page_detail\") { 위"
+    },
+    {
+      "source": "ファイルの末尾（<code>openAddPage</code> の閉じかっこの下）に、空行を1行あけて <code>addOshi</code> を足します。",
+      "translation": "파일 맨 끝(<code>openAddPage</code>의 닫는 괄호 아래)에 빈 줄을 한 줄 두고 <code>addOshi</code>를 추가합니다."
     },
     {
       "source": "<code>addOshi</code>は、入力欄を<code>id</code>で取得し、<code>value</code> で今の文字を読みます。<code>trim()</code> は前後の空白を取り除きます。3つのどれかが空ならメッセージを表示して<code>return</code>し、残りの処理へ進みません。",
@@ -415,8 +475,16 @@
       "translation": "배열에 추가하고 돌아가기"
     },
     {
-      "source": "JSの<code>addOshi</code>で、入力確認だけの行を、配列へ追加して一覧を描き直す処理へ替えます。<code>oshiItems.push({ name: name, genre: genre, comment: comment })</code> の左側はデータの項目名、右側は入力欄から読んだ変数です。",
-      "translation": "JS의 <code>addOshi</code>에서 입력 확인만 하던 코드를 배열에 추가하고 목록을 다시 그리는 처리로 바꿉니다. <code>oshiItems.push({ name: name, genre: genre, comment: comment })</code>의 왼쪽은 데이터의 항목 이름이고, 오른쪽은 입력란에서 읽어온 변수입니다."
+      "source": "JSの<code>addOshi</code>で、最後の <code>txtMessage.textContent = \"入力を確認しました：\" + name;</code> の1行を、次の5行に置き換えます。入力確認だけの行を、配列へ追加して一覧を描き直す処理へ替えます。",
+      "translation": "JS의 <code>addOshi</code>에서 마지막의 <code>txtMessage.textContent = \"入力を確認しました：\" + name;</code> 한 줄을 다음 5줄로 교체합니다. 입력 확인만 하던 줄을 배열에 추가하고 목록을 다시 그리는 처리로 바꿉니다."
+    },
+    {
+      "source": "www/js/app.js · 置き換え · 「入力を確認しました：」の1行",
+      "translation": "www/js/app.js · 교체 · 「入力を確認しました：」(입력을 확인했습니다:)가 있는 한 줄"
+    },
+    {
+      "source": "<code>oshiItems.push({ name: name, genre: genre, comment: comment })</code> の左側はデータの項目名、右側は入力欄から読んだ変数です。",
+      "translation": "<code>oshiItems.push({ name: name, genre: genre, comment: comment })</code>의 왼쪽은 데이터의 항목 이름이고, 오른쪽은 입력란에서 읽어온 변수입니다."
     },
     {
       "source": "次に<code>renderOshiList</code>を呼びます。この関数は<code>innerHTML</code>で行を置き直した後に、<code>textContent</code>の設定とクリックの登録をやり直します。古い行に登録したイベントは、新しい行へ自動では移らないためです。",
@@ -459,8 +527,8 @@
       "translation": "확인과 변형"
     },
     {
-      "source": "今日の終わりは、作った範囲を使って自分の表現に変えます。コードはSTEP 03の状態です。下の全コードは照合用で、自分の変更を無条件に貼り戻すためのものではありません。",
-      "translation": "오늘 수업의 마무리는 지금까지 만든 범위를 활용하여 자신만의 표현으로 변경해 봅니다. 코드는 STEP 03 상태입니다. 아래의 전체 코드는 대조용이며, 자신이 변경한 내용을 무조건 원래대로 덮어씌워 붙여넣기 위한 것이 아닙니다."
+      "source": "コードは変えません。STEP 03まで書いたコードが、第5コマ終了時の基準です。今日の終わりは、作った範囲を使って自分の表現に変えます。",
+      "translation": "코드는 변경하지 않습니다. STEP 03까지 작성한 코드가 5차시 종료 시점의 기준입니다. 오늘의 마무리로, 만든 범위를 활용하여 자신만의 표현으로 바꿉니다."
     },
     {
       "source": "変える場所",
@@ -519,16 +587,8 @@
       "translation": "배열과 JSON의 차이점 살펴보기"
     },
     {
-      "source": "このコマの開始時の全コード",
-      "translation": "이번 차시 시작 시점의 전체 코드"
-    },
-    {
-      "source": "途中から合流する場合は、変更した文字と色を控えてから3ファイルをそろえます。順番に進めている人は、前の回の続きで構いません。",
-      "translation": "도중에 합류하는 경우에는 변경한 글자와 색상을 메모해 둔 후 3개 파일을 동일하게 맞춥니다. 순서대로 진행하고 있는 사람은 지난 시간에 이어서 진행해도 괜찮습니다."
-    },
-    {
-      "source": "Monaca クラウド IDEで同じ好きなものノートを開きます。開始状態は「入力して追加できるが、再読み込みすると初期データに戻る」です。保存する前に、画面で使う配列と、保存へ渡す文字列を区別します。",
-      "translation": "Monaca クラウド IDE에서 동일한 좋아하는 것 노트를 엽니다. 시작 상태는 '입력하여 추가할 수 있지만 새로고침하면 초기 데이터로 되돌아간다'입니다. 저장하기 전에 화면에서 사용하는 배열과 저장소로 전달할 문자열을 구분합니다."
+      "source": "Monaca クラウド IDEで同じ好きなものノートを開きます。開始状態は「入力して追加できるが、再読み込みすると初期データに戻る」です。このSTEPでは、コードは変えません。保存する前に、画面で使う配列と、保存へ渡す文字列を区別します。",
+      "translation": "Monaca クラウド IDE에서 동일한 좋아하는 것 노트를 엽니다. 시작 상태는 '입력하여 추가할 수 있지만 새로고침하면 초기 데이터로 되돌아간다'입니다. 이 STEP에서는 코드를 변경하지 않습니다. 저장하기 전에 화면에서 사용하는 배열과 저장소로 전달할 문자열을 구분합니다."
     },
     {
       "source": "<strong>JSONは、値を文字で表すための決まった形式</strong>です。JavaScriptの配列やオブジェクトそのものではありません。<code>JSON.stringify</code> は値をJSONの文字列にし、<code>JSON.parse</code> はJSONの文字列から値を復元します。今回の保存対象は文字列の3項目を持つオブジェクトの配列です。",
@@ -603,8 +663,48 @@
       "translation": "문자열로 만들어 저장하기"
     },
     {
-      "source": "このSTEPの3ファイルへ更新します。JSの先頭に <code>STORAGE_KEY</code> を置き、保存内容を探すための名前を1か所で管理します。この名前を途中で変更すると、以前のキーで保存した内容は見えなくなります。",
-      "translation": "이 STEP의 3개 파일로 업데이트합니다. JS의 시작 부분에 <code>STORAGE_KEY</code>를 배치하여 저장 내용을 찾기 위한 이름을 한곳에서 관리합니다. 이 이름을 도중에 변경하면 이전 키로 저장한 내용은 표시되지 않게 됩니다."
+      "source": "JSの先頭近く、<code>// 初期化のたびに新しい配列を返し、追加した内容と混ぜない。</code> の行の上に <code>STORAGE_KEY</code> を足し、その下に空行を1行入れます。保存内容を探すための名前を1か所で管理します。この名前を途中で変更すると、以前のキーで保存した内容は見えなくなります。",
+      "translation": "JS의 시작 부분 근처, <code>// 初期化のたびに新しい配列を返し、追加した内容と混ぜない。</code> 줄 위에 <code>STORAGE_KEY</code>를 추가하고, 그 아래에 빈 줄을 한 줄 넣습니다. 저장 내용을 찾기 위한 이름을 한곳에서 관리합니다. 이 이름을 도중에 변경하면 이전 키로 저장한 내용은 표시되지 않게 됩니다."
+    },
+    {
+      "source": "www/js/app.js · 追加 · // 初期化のたびに新しい配列を返し、追加した内容と混ぜない。 の上",
+      "translation": "www/js/app.js · 추가 · // 初期化のたびに新しい配列を返し、追加した内容と混ぜない。 위"
+    },
+    {
+      "source": "<code>let isOpeningPage = false;</code> の行の下に、保存してよいかを表す <code>let canSave = true;</code> を足します。",
+      "translation": "<code>let isOpeningPage = false;</code> 줄 아래에 저장해도 되는지를 나타내는 <code>let canSave = true;</code>를 추가합니다."
+    },
+    {
+      "source": "www/js/app.js · 追加 · let isOpeningPage = false; の下",
+      "translation": "www/js/app.js · 추가 · let isOpeningPage = false; 아래"
+    },
+    {
+      "source": "一覧の<code>init</code>は、<code>if (page.id === \"page_list\") {</code> の行から、その閉じかっこ <code>}</code> の行までを置き換えます。<code>txt_storage</code> の文を替え、<code>renderOshiList();</code> の下で <code>btn_open_add</code> の <code>disabled</code> を <code>!canSave</code> にします。",
+      "translation": "목록의 <code>init</code>은 <code>if (page.id === \"page_list\") {</code> 줄부터 그 닫는 괄호 <code>}</code> 줄까지 교체합니다. <code>txt_storage</code>의 문장을 바꾸고, <code>renderOshiList();</code> 아래에서 <code>btn_open_add</code>의 <code>disabled</code>를 <code>!canSave</code>로 설정합니다."
+    },
+    {
+      "source": "www/js/app.js · 置き換え · if (page.id === \"page_list\") { から、その閉じかっこまで",
+      "translation": "www/js/app.js · 교체 · if (page.id === \"page_list\") {부터 그 닫는 괄호까지"
+    },
+    {
+      "source": "<code>function openAddPage() {</code> の行から、その閉じかっこ <code>}</code> の行までを置き換え、最初の条件に <code>!canSave</code> を加えます。",
+      "translation": "<code>function openAddPage() {</code> 줄부터 그 닫는 괄호 <code>}</code> 줄까지 교체하고, 첫 번째 조건에 <code>!canSave</code>를 추가합니다."
+    },
+    {
+      "source": "www/js/app.js · 置き換え · function openAddPage から、その閉じかっこまで",
+      "translation": "www/js/app.js · 교체 · function openAddPage부터 그 닫는 괄호까지"
+    },
+    {
+      "source": "<code>canSave</code> が <code>false</code> なら、<code>openAddPage</code>と<code>addOshi</code>の最初の条件で何もせずに戻ります。このSTEPには <code>canSave</code> を<code>false</code>にする行がないので、常に<code>true</code>のままで、画面の動きは変わりません。<code>false</code>にするのは、次のSTEPで保存内容を読み込めなかったときです。そのまま追加できると、読めなかった保存内容を、初期データに1件足した配列で上書きしてしまいます。保存の処理を書くこのSTEPで、保存へ進む入口に確認を置いておけば、次のSTEPでは読み込みの処理を足すだけで済みます。",
+      "translation": "<code>canSave</code>가 <code>false</code>라면 <code>openAddPage</code>와 <code>addOshi</code>의 첫 번째 조건에서 아무것도 하지 않고 돌아갑니다. 이 STEP에는 <code>canSave</code>를 <code>false</code>로 만드는 코드가 없으므로 항상 <code>true</code> 상태를 유지하며 화면의 동작도 바뀌지 않습니다. <code>false</code>로 만드는 것은 다음 STEP에서 저장된 내용을 읽어오지 못했을 때입니다. 그대로 추가할 수 있다면 읽어오지 못한 저장 내용을 초기 데이터에 1개 항목을 추가한 배열로 덮어쓰게 됩니다. 저장 처리를 작성하는 이 STEP에서 저장으로 진입하는 입구에 확인 단계를 마련해 두면 다음 STEP에서는 불러오기 처리만 추가하면 됩니다."
+    },
+    {
+      "source": "最後に、ファイルの末尾にある <code>function addOshi() {</code> の行から、その閉じかっこ <code>}</code> の行までを置き換えます。",
+      "translation": "마지막으로 파일 맨 끝에 있는 <code>function addOshi() {</code> 줄부터 그 닫는 괄호 <code>}</code> 줄까지 교체합니다."
+    },
+    {
+      "source": "www/js/app.js · 置き換え · function addOshi から、その閉じかっこまで",
+      "translation": "www/js/app.js · 교체 · function addOshi부터 그 닫는 괄호까지"
     },
     {
       "source": "<code>addOshi</code>では、<code>oshiItems.slice()</code> で配列の浅いコピー<code>nextItems</code>を作り、そこへ新しい1件を追加します。この処理では既存のオブジェクトの項目は変更せず、配列へ追加するだけなので、配列のコピーで足ります。",
@@ -659,12 +759,16 @@
       "translation": "입력을 지우지 않고 다음 확인이나 재시도로 이어지게 합니다."
     },
     {
-      "source": "保存してよいかを表す <code>let canSave = true;</code> も加えます。<code>openAddPage</code>と<code>addOshi</code>の最初の条件で <code>!canSave</code> なら何もせずに戻り、一覧の<code>init</code>では <code>btn_open_add</code> の <code>disabled</code> を <code>!canSave</code> にします。このSTEPには <code>canSave</code> を<code>false</code>にする行がないので、常に<code>true</code>のままで、画面の動きは変わりません。<code>false</code>にするのは、次のSTEPで保存内容を読み込めなかったときです。そのまま追加できると、読めなかった保存内容を、初期データに1件足した配列で上書きしてしまいます。保存の処理を書くこのSTEPで、保存へ進む入口に確認を置いておけば、次のSTEPでは読み込みの処理を足すだけで済みます。",
-      "translation": "저장 가능 여부를 나타내는 <code>let canSave = true;</code>도 추가합니다. <code>openAddPage</code>와 <code>addOshi</code>의 첫 번째 조건에서 <code>!canSave</code>라면 아무것도 하지 않고 돌아가며, 목록의 <code>init</code>에서는 <code>btn_open_add</code>의 <code>disabled</code>를 <code>!canSave</code>로 설정합니다. 이 STEP에는 <code>canSave</code>를 <code>false</code>로 만드는 코드가 없으므로 항상 <code>true</code> 상태를 유지하며 화면의 동작도 바뀌지 않습니다. <code>false</code>로 만드는 것은 다음 STEP에서 저장된 내용을 읽어오지 못했을 때입니다. 그대로 추가할 수 있다면 읽어오지 못한 저장 내용을 초기 데이터에 1개 항목을 추가한 배열로 덮어쓰게 됩니다. 저장 처리를 작성하는 이 STEP에서 저장으로 진입하는 입구에 확인 단계를 마련해 두면 다음 STEP에서는 불러오기 처리만 추가하면 됩니다."
+      "source": "画面の文も、保存ができるようになったことに合わせて替えます。HTMLでは、入力画面の <code>btn_save_oshi</code> の行から、その下の <code>app-note</code> の行までの2行を置き換えます。",
+      "translation": "화면의 문장도 저장이 가능해진 점에 맞춰 변경합니다. HTML에서는 입력 화면의 <code>btn_save_oshi</code> 줄부터 그 아래의 <code>app-note</code> 줄까지의 2줄을 교체합니다."
     },
     {
-      "source": "画面の文も、保存ができるようになったことに合わせて替えます。入力画面のボタンは <code>追加する</code> から <code>追加して保存</code> に変わります。押すと、配列への追加と一緒に保存まで行うことを、ボタンの文字で示すためです。STEP 01から出していた2つの文は、保存できるようになると事実と合わなくなるので、一覧の <code>txt_storage</code> は <code>保存はできますが、このSTEPではまだ読み込みません。</code> に、入力画面のボタンの下の注記は <code>保存先は、このブラウザの同じプレビューです。公開URLに入力内容は含まれません。</code> に替えます。保存した内容はこのブラウザにだけ残り、STEP 12で発行する公開URLから取り込んだ人には届かないためです。",
-      "translation": "화면의 문장도 저장이 가능해진 점에 맞춰 변경합니다. 입력 화면의 버튼은 <code>追加する</code>(추가하기)에서 <code>追加して保存</code>(추가하고 저장)으로 바뀝니다. 누르면 배열로의 추가와 함께 저장까지 수행한다는 점을 버튼 글자로 나타내기 위해서입니다. STEP 01부터 표시하던 2개의 문장은 저장이 가능해지면 사실과 맞지 않게 되므로, 목록의 <code>txt_storage</code>는 <code>保存はできますが、このSTEPではまだ読み込みません。</code>(저장은 되지만 이 STEP에서는 아직 불러오지 않습니다)로, 입력 화면의 버튼 아래 참고 사항은 <code>保存先は、このブラウザの同じプレビューです。公開URLに入力内容は含まれません。</code>(저장 위치는 이 브라우저의 동일한 미리보기입니다. 가져오기 URL에는 입력 내용이 포함되지 않습니다)로 변경합니다. 저장된 내용은 이 브라우저에만 남으며, STEP 12에서 발행하는 가져오기 URL을 통해 가져온 사람에게는 전달되지 않기 때문입니다."
+      "source": "www/index.html · 置き換え · btn_save_oshi の行から app-note の行まで",
+      "translation": "www/index.html · 교체 · btn_save_oshi 줄부터 app-note 줄까지"
+    },
+    {
+      "source": "入力画面のボタンは <code>追加する</code> から <code>追加して保存</code> に変わります。押すと、配列への追加と一緒に保存まで行うことを、ボタンの文字で示すためです。STEP 01から出していた2つの文は、保存できるようになると事実と合わなくなるので、一覧の <code>txt_storage</code> は <code>保存はできますが、このSTEPではまだ読み込みません。</code> に（上で置き換えた一覧の<code>init</code>の中です）、入力画面のボタンの下の注記は <code>保存先は、このブラウザの同じプレビューです。公開URLに入力内容は含まれません。</code> に替えます。保存した内容はこのブラウザにだけ残り、STEP 12で発行する公開URLから取り込んだ人には届かないためです。",
+      "translation": "입력 화면의 버튼은 <code>追加する</code>(추가하기)에서 <code>追加して保存</code>(추가하고 저장)으로 바뀝니다. 누르면 배열로의 추가와 함께 저장까지 수행한다는 점을 버튼 글자로 나타내기 위해서입니다. STEP 01부터 표시하던 2개의 문장은 저장이 가능해지면 사실과 맞지 않게 되므로, 목록의 <code>txt_storage</code>는 <code>保存はできますが、このSTEPではまだ読み込みません。</code>(저장은 되지만 이 STEP에서는 아직 불러오지 않습니다)로(위에서 교체한 목록의 <code>init</code> 안입니다), 입력 화면의 버튼 아래 참고 사항은 <code>保存先は、このブラウザの同じプレビューです。公開URLに入力内容は含まれません。</code>(저장 위치는 이 브라우저의 동일한 미리보기입니다. 가져오기 URL에는 입력 내용이 포함되지 않습니다)로 변경합니다. 저장된 내용은 이 브라우저에만 남으며, STEP 12에서 발행하는 가져오기 URL을 통해 가져온 사람에게는 전달되지 않기 때문입니다."
     },
     {
       "source": "入力画面のボタンが <code>追加して保存</code> になったことを確かめてから、1件追加して一覧へ戻り、<code>件をこのブラウザに保存しました。</code> の文を確かめます。このSTEPでは保存までなので、再読み込み時の表示はまだ初期データです。保存されていないと決めつけず、次のSTEPで読み込む側を作ります。また、このSTEPで再読み込みしてからもう一度追加すると、前に保存した内容は、ソースの初期データと新しい1件で上書きされます。保存した内容をまだ読み込んでいない配列に、新しい1件を足して保存するためです。次のSTEPで読み込めるのは、最後に保存した内容です。",
@@ -687,8 +791,16 @@
       "translation": "저장한 배열 복원하기"
     },
     {
-      "source": "JSに<code>loadOshiItems</code>と<code>isValidItems</code>を加え、<code>page_list</code>の<code>init</code>で <strong>読み込み→一覧生成</strong> の順に呼びます。保存した値を読む前に行を作ると、初期データのまま表示されるためです。",
-      "translation": "JS에 <code>loadOshiItems</code>와 <code>isValidItems</code>를 추가하고, <code>page_list</code>의 <code>init</code>에서 <strong>불러오기 → 목록 생성</strong> 순서로 호출합니다. 저장된 값을 읽기 전에 행을 만들면 초기 데이터 그대로 표시되기 때문입니다."
+      "source": "JSに<code>loadOshiItems</code>と<code>isValidItems</code>を加え、<code>page_list</code>の<code>init</code>で <strong>読み込み→一覧生成</strong> の順に呼びます。保存した値を読む前に行を作ると、初期データのまま表示されるためです。まず、一覧の<code>init</code>の中で <code>txt_storage</code> に文字を入れている1行を、<code>loadOshiItems();</code> に置き換えます。すぐ下の <code>renderOshiList();</code> は残します。",
+      "translation": "JS에 <code>loadOshiItems</code>와 <code>isValidItems</code>를 추가하고, <code>page_list</code>의 <code>init</code>에서 <strong>불러오기 → 목록 생성</strong> 순서로 호출합니다. 저장된 값을 읽기 전에 행을 만들면 초기 데이터 그대로 표시되기 때문입니다. 먼저 목록의 <code>init</code> 안에서 <code>txt_storage</code>에 텍스트를 넣고 있는 한 줄을 <code>loadOshiItems();</code>로 교체합니다. 바로 아래의 <code>renderOshiList();</code>는 그대로 둡니다."
+    },
+    {
+      "source": "www/js/app.js · 置き換え · init の中の txt_storage に文字を入れる1行",
+      "translation": "www/js/app.js · 교체 · init 안의 txt_storage에 텍스트를 넣는 한 줄"
+    },
+    {
+      "source": "次に、ファイルの末尾（<code>addOshi</code> の閉じかっこの下）に、空行を1行あけて2つの関数を足します。<code>txt_storage</code> の文は、<code>loadOshiItems</code> の中で、読み込みの結果に合わせて出します。",
+      "translation": "다음으로 파일 맨 끝(<code>addOshi</code>의 닫는 괄호 아래)에 빈 줄을 한 줄 두고 2개의 함수를 추가합니다. <code>txt_storage</code>의 문장은 <code>loadOshiItems</code> 안에서 불러오기 결과에 맞추어 표시합니다."
     },
     {
       "source": "<code>getItem(STORAGE_KEY)</code> は、未保存なら <code>null</code> を返します。この場合は何も復元せず、ソースの初期データを使います。文字列があれば<code>JSON.parse</code>で値へ戻します。",
@@ -751,8 +863,24 @@
       "translation": "초기화 확인과 실패 대응"
     },
     {
-      "source": "HTMLに初期化ボタンと確認欄、JSにそのイベントと<code>resetOshiItems</code>を加えます。<code>初期の内容に戻す</code> を押すと、<code>is-hidden</code>を<code>remove</code>して確認欄を見せます。<code>やめる</code> ではクラスを<code>add</code>し、欄を閉じるだけです。確認欄を囲む <code>reset-section</code> は上に区切りの線を引き、<code>#panel_reset ons-button</code> は確認欄の2つのボタンの上を12px空けます。この2つと <code>is-hidden</code> はSTEP 01のCSSに入れてあり、このSTEPのHTMLで初めて要素に当たります。",
-      "translation": "HTML에 초기화 버튼과 확인 영역, JS에 해당 이벤트와 <code>resetOshiItems</code>를 추가합니다. <code>初期の内容に戻す</code>(초기 내용으로 되돌리기)를 누르면 <code>is-hidden</code>을 <code>remove</code>하여 확인 영역을 표시합니다. <code>やめる</code>(취소)에서는 클래스를 <code>add</code>하여 확인 영역을 닫기만 합니다. 확인 영역을 감싸는 <code>reset-section</code>은 위쪽에 구분선을 긋고, <code>#panel_reset ons-button</code>은 확인 영역의 2개 버튼 위쪽에 12px 여백을 둡니다. 이 2가지와 <code>is-hidden</code>은 STEP 01의 CSS에 포함되어 있었으며, 이 STEP의 HTML에서 처음으로 대상 요소에 적용됩니다."
+      "source": "HTMLに初期化ボタンと確認欄、JSにそのイベントと<code>resetOshiItems</code>を加えます。HTMLでは、一覧の <code>txt_selected</code> の行（<code>まだ選択していません</code>）の下に、次のコードを足します。",
+      "translation": "HTML에 초기화 버튼과 확인 영역, JS에 해당 이벤트와 <code>resetOshiItems</code>를 추가합니다. HTML에서는 목록의 <code>txt_selected</code> 줄, 즉 <code>まだ選択していません</code>(아직 선택하지 않았습니다) 줄 아래에 다음 코드를 추가합니다."
+    },
+    {
+      "source": "www/index.html · 追加 · txt_selected の行の下",
+      "translation": "www/index.html · 추가 · txt_selected 줄 아래"
+    },
+    {
+      "source": "JSでは、一覧の<code>init</code>を、<code>if (page.id === \"page_list\") {</code> の行から、その閉じかっこ <code>}</code> の行までを置き換えます。<code>openAddPage</code> を登録する行の下の空行の代わりに、3つのボタンのイベントを登録します。",
+      "translation": "JS에서는 목록의 <code>init</code>을, <code>if (page.id === \"page_list\") {</code> 줄부터 그 닫는 괄호 <code>}</code> 줄까지 교체합니다. <code>openAddPage</code>를 등록하는 줄 아래의 빈 줄 대신, 3개 버튼의 이벤트를 등록합니다."
+    },
+    {
+      "source": "ファイルの末尾（<code>isValidItems</code> の閉じかっこの下）に、空行を1行あけて <code>resetOshiItems</code> を足します。",
+      "translation": "파일 맨 끝(<code>isValidItems</code>의 닫는 괄호 아래)에 빈 줄을 한 줄 두고 <code>resetOshiItems</code>를 추가합니다."
+    },
+    {
+      "source": "<code>初期の内容に戻す</code> を押すと、<code>is-hidden</code>を<code>remove</code>して確認欄を見せます。<code>やめる</code> ではクラスを<code>add</code>し、欄を閉じるだけです。確認欄を囲む <code>reset-section</code> は上に区切りの線を引き、<code>#panel_reset ons-button</code> は確認欄の2つのボタンの上を12px空けます。この2つと <code>is-hidden</code> はSTEP 01のCSSに入れてあり、このSTEPのHTMLで初めて要素に当たります。",
+      "translation": "<code>初期の内容に戻す</code>(초기 내용으로 되돌리기)를 누르면 <code>is-hidden</code>을 <code>remove</code>하여 확인 영역을 표시합니다. <code>やめる</code>(취소)에서는 클래스를 <code>add</code>하여 확인 영역을 닫기만 합니다. 확인 영역을 감싸는 <code>reset-section</code>은 위쪽에 구분선을 긋고, <code>#panel_reset ons-button</code>은 확인 영역의 2개 버튼 위쪽에 12px 여백을 둡니다. 이 2가지와 <code>is-hidden</code>은 STEP 01의 CSS에 포함되어 있었으며, 이 STEP의 HTML에서 처음으로 대상 요소에 적용됩니다."
     },
     {
       "source": "実際の削除は <code>削除して初期の内容に戻す</code> を押した場合だけです。<code>localStorage.removeItem(STORAGE_KEY)</code> で、このアプリのキー1つだけを削除します。保存領域全体を空にする<code>clear</code>は使いません。",
@@ -795,8 +923,8 @@
       "translation": "저장을 확인하고 변형하기"
     },
     {
-      "source": "入力→追加→詳細→戻る→再読み込みの順で動かし、保存した内容が復元されることを確認します。次に、ソースの初期データを自分の言葉へ変えます。",
-      "translation": "입력 → 추가 → 상세 → 뒤로 가기 → 새로고침 순서로 동작시켜 저장된 내용이 복원되는지 확인합니다. 다음으로 소스의 초기 데이터를 자신만의 표현으로 변경합니다."
+      "source": "コードは変えません。STEP 08まで書いたコードが、第6コマ終了時の基準です。入力→追加→詳細→戻る→再読み込みの順で動かし、保存した内容が復元されることを確認します。次に、ソースの初期データを自分の言葉へ変えます。",
+      "translation": "코드는 변경하지 않습니다. STEP 08까지 작성한 코드가 6차시 종료 시점의 기준입니다. 입력 → 추가 → 상세 → 뒤로 가기 → 새로고침 순서로 동작시켜 저장된 내용이 복원되는지 확인합니다. 다음으로 소스의 초기 데이터를 자신만의 표현으로 변경합니다."
     },
     {
       "source": "<strong>保存データがあると、ソースの初期データより優先して表示されます。</strong> <code>createInitialItems</code>を書き換えても画面が変わらない場合は、変更したコードのミスとは限りません。必要な入力を控えたうえで、アプリ内の初期化を使ってソースの内容を確認します。",
@@ -855,8 +983,8 @@
       "translation": "수업 시간 내에 Flutter 준비 시작하기"
     },
     {
-      "source": "今日は好きなものノートを仕上げて提出します。最初の10分で、後半に使うFlutter SDKのダウンロードと既存のiOS環境の確認を始めます。授業前に取得しておく必要はありません。",
-      "translation": "오늘은 좋아하는 것 노트를 완성하여 제출합니다. 첫 10분 동안 후반부에 사용할 Flutter SDK 다운로드와 기존 iOS 환경 확인을 시작합니다. 수업 전에 미리 다운로드해 둘 필요는 없습니다."
+      "source": "今日は好きなものノートを仕上げて提出します。このコマでは、教科書のコードは変えません。STEP 08まで書いたコードに、自分のアレンジを加えて仕上げます。最初の10分で、後半に使うFlutter SDKのダウンロードと既存のiOS環境の確認を始めます。授業前に取得しておく必要はありません。",
+      "translation": "오늘은 좋아하는 것 노트를 완성하여 제출합니다. 이 차시에서는 교과서의 코드를 변경하지 않습니다. STEP 08까지 작성한 코드에 자신의 변형을 더해 완성합니다. 첫 10분 동안 후반부에 사용할 Flutter SDK 다운로드와 기존 iOS 환경 확인을 시작합니다. 수업 전에 미리 다운로드해 둘 필요는 없습니다."
     },
     {
       "source": "<a1>共通資料のSTEP 4〜7</a1>を別のタブで開きます。",
@@ -895,8 +1023,8 @@
       "translation": "제출물에 남길 변형 만들기"
     },
     {
-      "source": "Monaca クラウド IDEへ戻り、自分の好きなものノートを仕上げます。既に扱った文字・色・初期データから変更箇所を選び、どんなものが好きで、なぜ好きなのかが伝わる内容にします。",
-      "translation": "Monaca クラウド IDE로 돌아와 자신의 좋아하는 것 노트를 완성합니다. 이미 다룬 글자·색상·초기 데이터에서 변경할 위치를 선택하여 어떤 것을 좋아하고 왜 좋아하는지가 잘 전달되는 내용으로 만듭니다."
+      "source": "コードは変えません。Monaca クラウド IDEへ戻り、自分の好きなものノートを仕上げます。既に扱った文字・色・初期データから変更箇所を選び、どんなものが好きで、なぜ好きなのかが伝わる内容にします。",
+      "translation": "코드는 변경하지 않습니다. Monaca クラウド IDE로 돌아와 자신의 좋아하는 것 노트를 완성합니다. 이미 다룬 글자·색상·초기 데이터에서 변경할 위치를 선택하여 어떤 것을 좋아하고 왜 좋아하는지가 잘 전달되는 내용으로 만듭니다."
     },
     {
       "source": "確認方法",
@@ -963,8 +1091,8 @@
       "translation": "조작과 가져오기 URL 확인하기"
     },
     {
-      "source": "ソースの初期の内容が表示された状態から完成確認を始めます。必要な入力は内容を控えて、先生と確認してから初期化します。",
-      "translation": "소스의 초기 내용이 표시된 상태에서 완성 확인을 시작합니다. 필요한 입력 내용은 메모해 두고 선생님과 확인한 후 초기화합니다."
+      "source": "コードは変えません。ソースの初期の内容が表示された状態から完成確認を始めます。必要な入力は内容を控えて、先生と確認してから初期化します。",
+      "translation": "코드는 변경하지 않습니다. 소스의 초기 내용이 표시된 상태에서 완성 확인을 시작합니다. 필요한 입력 내용은 메모해 두고 선생님과 확인한 후 초기화합니다."
     },
     {
       "source": "一覧の各行から詳細へ進み、名前・種類・理由が一致することを確認します。",
@@ -1015,8 +1143,8 @@
       "translation": "제출과 준비 상황 확인하기"
     },
     {
-      "source": "先生が授業中に案内する提出先・締め切りを確認し、自分の好きなものノートで発行した公開URLを提出します。まだ案内がない場合は、URLを控えて先生へ確認します。",
-      "translation": "선생님이 수업 중에 안내하는 제출처와 마감 기한을 확인하고 자신의 좋아하는 것 노트에서 발행한 가져오기 URL을 제출합니다. 아직 안내가 없는 경우에는 URL을 메모해 두고 선생님께 확인합니다."
+      "source": "コードは変えません。先生が授業中に案内する提出先・締め切りを確認し、自分の好きなものノートで発行した公開URLを提出します。まだ案内がない場合は、URLを控えて先生へ確認します。",
+      "translation": "코드는 변경하지 않습니다. 선생님이 수업 중에 안내하는 제출처와 마감 기한을 확인하고 자신의 좋아하는 것 노트에서 발행한 가져오기 URL을 제출합니다. 아직 안내가 없는 경우에는 URL을 메모해 두고 선생님께 확인합니다."
     },
     {
       "source": "通常版MonacaのFreeプランではZIPを学生の提出物にしません。先生は公開URLから取り込み、初期データと操作を確認します。公開中の自分のプロジェクトは提出後に削除しません。",
@@ -1043,8 +1171,8 @@
       "translation": "변형할 수 있는 곳 확인하기"
     },
     {
-      "source": "最後に提出したソースを見ながら、次の3点を確かめます。",
-      "translation": "마지막으로 제출한 소스를 보면서 다음 3가지를 확인합니다."
+      "source": "コードは変えません。最後に提出したソースを見ながら、次の3点を確かめます。",
+      "translation": "코드는 변경하지 않습니다. 마지막으로 제출한 소스를 보면서 다음 3가지를 확인합니다."
     },
     {
       "source": "どのファイルの、どの文字・色・初期データを変更したか。",
@@ -1061,10 +1189,6 @@
     {
       "source": "余裕があれば、既に扱った範囲で記入例を分かりやすくしたり、余白を調整したりします。いまある画面で、自分の「好き」が伝わる状態を確かめましょう。変更したら保存し、一覧・追加・詳細・再読み込みを確認してから公開内容を確かめます。",
       "translation": "여유가 있다면 이미 다룬 범위 내에서 작성 예시를 알기 쉽게 만들거나 여백을 조정합니다. 현재 있는 화면에서 자신이 '좋아하는 것'이 잘 전달되는 상태인지 확인합시다. 변경했으면 저장하고 목록·추가·상세·새로고침을 확인한 후 공개 내용을 확인합니다."
-    },
-    {
-      "source": "下の全コードは、自分のコードと見比べるためのものです。自分の変更を消して全コードに戻す必要はありません。動かなくなった部分や、変更した場所と結果の関係を確かめるために使います。",
-      "translation": "아래의 전체 코드는 자신의 코드와 비교해 보기 위한 것입니다. 자신의 변경 사항을 지우고 전체 코드로 되돌릴 필요는 없습니다. 동작하지 않게 된 부분이나 변경한 위치와 결과의 관계를 확인하기 위해 사용합니다."
     },
     {
       "source": "HTML・CSS・JavaScriptの役割分担はWeb基礎と同じで、変更した場所はファイルの種類から見つけられます。保存があるアプリでは、ソースの初期値と保存値の両方を見ます。<code>SharedPreferences</code>／<code>UserDefaults</code>を使うアプリで、コードに書いた初期値と端末に残る保存値が別にあるのと同じです。",
