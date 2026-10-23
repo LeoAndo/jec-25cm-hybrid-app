@@ -151,6 +151,10 @@
       "translation": "El proyecto que se crea en esta unidad es <code>F01StampBoard</code>. Solo con este libro de texto, puedes avanzar desde la creación de un nuevo proyecto hasta la ejecución de la lista, los sellos y los detalles. Léelo comparándolo con tus conocimientos de Fundamentos web y Java/Swift."
     },
     {
+      "source": "各STEPのコードは、前のSTEPのコードから変える箇所だけを載せています。前から順に、本文が示す場所を書き換えて進みます。授業を休んだなどで途中から合流するときは、先生に伝えて、前のSTEPまでのコードを受け取ってから進みます。",
+      "translation": "El código de cada STEP muestra solo las partes que cambian respecto al código del STEP anterior. Avanza en orden desde el principio y modifica los lugares que indica el texto. Si te incorporas a mitad de camino, por ejemplo porque faltaste a una clase, avísale a tu docente y recibe el código hasta el STEP anterior antes de continuar."
+    },
+    {
       "source": "STEP 00 · コマ8",
       "translation": "STEP 00 · Clase 8"
     },
@@ -211,6 +215,10 @@
       "translation": "<code>flutter devices</code> muestra una lista; no es un comando para iniciar dispositivos. Al completarse la ejecución, aparece Hello World! en el centro de una pantalla blanca. Si la compilación está esperando descargas, avísale al docente sobre la situación y no ejecutes el mismo comando una y otra vez."
     },
     {
+      "source": "<code>lib/main.dart</code>のコードは、このSTEPでは変えません。<code>flutter create</code>が作ったままのコードを読みます。",
+      "translation": "Este STEP no tiene cambios en el código de <code>lib/main.dart</code>. Lee el código tal como lo generó <code>flutter create</code>."
+    },
+    {
       "source": "<code>lib/main.dart</code>が画面の入口です。<code>main</code>から<code>runApp</code>へ<code>MainApp</code>を渡し、<code>MainApp</code>の<code>build</code>が<code>MaterialApp</code>と<code>Scaffold</code>を返します。<code>android/</code>と<code>ios/</code>は起動の土台で、この単元では直接編集しません。",
       "translation": "<code>lib/main.dart</code> es el punto de entrada de la pantalla. Desde <code>main</code> se pasa <code>MainApp</code> a <code>runApp</code>, y el método <code>build</code> de <code>MainApp</code> devuelve <code>MaterialApp</code> y <code>Scaffold</code>. Las carpetas <code>android/</code> e <code>ios/</code> son la base para el inicio y no se editan directamente en esta unidad."
     },
@@ -239,6 +247,22 @@
       "translation": "El nuevo concepto en esta unidad es la <strong>UI declarativa</strong> (宣言的UI). En <code>build</code>, devuelves la estructura de la pantalla que corresponde a los valores actuales. En lugar de buscar y modificar <code>View</code>s o elementos del DOM existentes uno tras otro, describes: “si tiene este valor, coloca este componente”."
     },
     {
+      "source": "コード欄の見出しには、ファイルのパスと、変え方を書きます。「追加」は、本文が示す行の下（または上）に書き足します。「置き換え」は、本文が示す範囲だけを書き換え、ほかの行は残します。「全体を置き換える」は、そのファイルの中身をすべて置き換えます。",
+      "translation": "El encabezado de cada bloque de código indica la ruta del archivo y la forma de cambiarlo. Con “agregar”, escribe el código debajo (o encima) de la línea que indica el texto. Con “reemplazar”, reescribe solo el rango que indica el texto y conserva las demás líneas. Con “reemplazar todo el archivo”, reemplaza todo el contenido de ese archivo."
+    },
+    {
+      "source": "<code>lib/main.dart</code>で、<code>return const MaterialApp(</code>の下にある<code>home: Scaffold(body: Center(child: Text('Hello World!'))),</code>の1行を、次のコードに置き換えます。<code>return const MaterialApp(</code>の行と、その下の<code>);</code>の行は残します。",
+      "translation": "En <code>lib/main.dart</code>, reemplaza por el siguiente código la línea <code>home: Scaffold(body: Center(child: Text('Hello World!'))),</code>, que está debajo de <code>return const MaterialApp(</code>. Conserva la línea <code>return const MaterialApp(</code> y la línea <code>);</code> que viene después."
+    },
+    {
+      "source": "lib/main.dart · 置き換え · home: Scaffold(…) の1行",
+      "translation": "lib/main.dart · reemplazar · la línea home: Scaffold(…)"
+    },
+    {
+      "source": "<code>MaterialApp</code>はアプリの設定、<code>Scaffold</code>は画面の基本枠、<code>SafeArea</code>はOSの表示領域を避ける余白、<code>Center</code>は中央配置、<code>Text</code>は文字を担当します。<code>child:</code>は1つのWidget、後で使う<code>children:</code>は複数のWidgetのリストです。<code>MaterialApp</code>に加えた<code>debugShowCheckedModeBanner: false</code>は、STEP 01で画面の右上に出ていたDEBUGの帯を消す設定です。帯はデバッグ実行中を示す目印で、アプリの動きには関係しません。",
+      "translation": "<code>MaterialApp</code> se encarga de la configuración de la aplicación, <code>Scaffold</code> de la estructura básica de la pantalla, <code>SafeArea</code> del margen para evitar el área de visualización del sistema operativo, <code>Center</code> de la alineación centrada y <code>Text</code> del texto. <code>child:</code> recibe un widget, mientras que <code>children:</code>, que usarás más adelante, es una lista de múltiples widgets. La propiedad <code>debugShowCheckedModeBanner: false</code> agregada a <code>MaterialApp</code> es una configuración para quitar la franja de DEBUG que aparecía en la esquina superior derecha de la pantalla en el STEP 01. La franja es solo una marca que indica que se está ejecutando en depuración y no afecta el funcionamiento de la aplicación."
+    },
+    {
       "source": "<code>Text('今日の小さな一歩', style: TextStyle(fontSize: 28))</code>では、最初の引数が文字、名前付き引数<code>style</code>が装飾です。括弧とカンマの対応をインデントで追いましょう。<code>@override</code>は親のメソッドを実装し直す印です。<code>build</code>へ渡される<code>BuildContext</code>は、そのWidgetがツリーのどこにあるかを表す情報です。",
       "translation": "En <code>Text('今日の小さな一歩', style: TextStyle(fontSize: 28))</code> (今日の小さな一歩 = un pequeño paso hoy), el primer argumento es el texto y el argumento con nombre <code>style</code> es la decoración. Sigue la correspondencia de paréntesis y comas mediante la sangría. <code>@override</code> es la marca de que estás reimplementando un método del padre. El <code>BuildContext</code> que se pasa a <code>build</code> es la información que indica en qué parte del árbol se encuentra ese widget."
     },
@@ -257,6 +281,10 @@
     {
       "source": "保存してホットリロードする",
       "translation": "Guarda y haz hot reload"
+    },
+    {
+      "source": "コードは変えません。STEP 02で書いたコードの文字と大きさを自分で変えて、ホットリロードを試します。",
+      "translation": "Este STEP no tiene cambios de código. Cambia tú mismo el texto y el tamaño en el código que escribiste en el STEP 02 y prueba el hot reload."
     },
     {
       "source": "実行中のまま<code>Text</code>の文字を1か所変え、保存します。ターミナルから<code>flutter run</code>している場合は、その実行中のターミナルで<code>r</code>を押すとホットリロードします。Visual Studio Codeの実行機能を使っている場合は<code>Flutter: Hot Reload</code>を選べます。",
@@ -287,6 +315,10 @@
       "translation": "Personaliza el texto y el tamaño"
     },
     {
+      "source": "コードは変えません。STEP 02で書いたコードが、第8コマ終了時の基準です。",
+      "translation": "Este STEP no tiene cambios de código. El código que escribiste en el STEP 02 es la referencia al final de la clase 8."
+    },
+    {
       "source": "最後に、表示する一言と文字の大きさを自分の題材へ変えます。「毎日必ず」より「できたときに少し」のように、自分が使いやすい文でも構いません。",
       "translation": "Por último, cambia el mensaje mostrado y el tamaño del texto para que coincidan con tu propio tema. Puede ser una frase que te resulte cómoda de usar, como 「できたときに少し」 (Un poco cuando pueda) en lugar de 「毎日必ず」 (Todos los días sin falta)."
     },
@@ -315,6 +347,10 @@
       "translation": "El tamaño del texto."
     },
     {
+      "source": "保存し、ホットリロードして、全文が読めるか確認します。次回の合流のため、変えた文字・数値を控えておきます。",
+      "translation": "Guarda, haz hot reload y verifica que se pueda leer el texto completo. Anota el texto y los números que modificaste para poder retomarlo en la siguiente clase."
+    },
+    {
       "source": "Web基礎では既存要素へ<code>textContent</code>を設定しました。Flutterでは表示する<code>Text</code>を返します。同じ「文字を変える」操作でも、画面の指定方法が違います。",
       "translation": "En Fundamentos web, establecías <code>textContent</code> en un elemento existente. En Flutter, devuelves el <code>Text</code> que deseas mostrar. Aunque se trate de la misma operación de “cambiar el texto”, la forma de especificar la pantalla es diferente."
     },
@@ -333,6 +369,14 @@
     {
       "source": "Visual Studio Codeで同じ<code>F01StampBoard</code>を開き、iOSで実行します。今日の開始状態は中央に1つの<code>Text</code>がある画面です。このSTEPでは<code>Center</code>の<code>child</code>を<code>Card</code>へ替え、習慣名・マーク・回数を1枚にまとめます。",
       "translation": "Abre el mismo <code>F01StampBoard</code> en Visual Studio Code y ejecútalo en iOS. El estado inicial de hoy es una pantalla con un <code>Text</code> en el centro. En este STEP, reemplaza el <code>child</code> de <code>Center</code> por un <code>Card</code> y reúne el nombre del hábito, las marcas y el conteo en una sola tarjeta."
+    },
+    {
+      "source": "<code>lib/main.dart</code>で、<code>child: Center(</code>の下にある、<code>child: Text(</code>で始まる1行を、次のコードに置き換えます。STEP 04で文字や大きさを変えた行です。<code>child: Center(</code>の行と、その下の<code>),</code>の行は残します。",
+      "translation": "En <code>lib/main.dart</code>, reemplaza por el siguiente código la línea que empieza con <code>child: Text(</code>, debajo de <code>child: Center(</code>. Es la línea en la que cambiaste el texto o el tamaño en el STEP 04. Conserva la línea <code>child: Center(</code> y la línea <code>),</code> que viene después."
+    },
+    {
+      "source": "lib/main.dart · 置き換え · Center の中の child: Text(…) の1行",
+      "translation": "lib/main.dart · reemplazar · la línea child: Text(…) dentro de Center"
     },
     {
       "source": "<code>Card</code>の中に<code>Padding</code>、さらに<code>Column</code>を置きます。<code>children</code>の角括弧の中へ<code>Text</code>、<code>SizedBox</code>、<code>Icon</code>を順番に並べます。今回は回数を変える処理をまだ付けないため、0 / 5 回のままです。",
@@ -357,6 +401,10 @@
     {
       "source": "余白と縦横の並びを読む",
       "translation": "Lee los márgenes y la disposición vertical y horizontal"
+    },
+    {
+      "source": "コードは変えません。STEP 05で書いたカードのコードを読み、余白の値を自分で変えて確かめます。",
+      "translation": "Este STEP no tiene cambios de código. Lee el código de la tarjeta que escribiste en el STEP 05 y cambia tú mismo los valores de los márgenes para comprobar el efecto."
     },
     {
       "source": "<code>Column</code>は縦、<code>Row</code>は横に<code>children</code>を並べます。<code>Column</code>の<code>mainAxisSize: MainAxisSize.min</code>は主軸方向を必要な大きさに絞り、<code>crossAxisAlignment: CrossAxisAlignment.start</code>は横方向の開始側へ寄せます。型名を省略したdot shorthandは使いません。",
@@ -391,6 +439,18 @@
       "translation": "Aumenta los hábitos a tres. En lugar de copiar la misma tarjeta tres veces, agrupa el nombre, la razón y el conteo en <code>Habit</code> y créalas a partir de la lista <code>habits</code>."
     },
     {
+      "source": "<code>lib/main.dart</code>の中身を、次のコードですべて置き換えます。アプリのクラスの名前が<code>MainApp</code>から<code>StampApp</code>に変わり、データの<code>Habit</code>、一覧の画面の<code>StampBoardPage</code>、マークの<code>StampMarks</code>の3つのクラスが加わるので、ほとんどの行が変わるためです。STEP 06で試しに変えた余白の値は、この置き換えで元に戻ります。",
+      "translation": "Reemplaza todo el contenido de <code>lib/main.dart</code> por el siguiente código. Esto se debe a que cambian casi todas las líneas: el nombre de la clase de la aplicación pasa de <code>MainApp</code> a <code>StampApp</code>, y se agregan tres clases: <code>Habit</code> para los datos, <code>StampBoardPage</code> para la pantalla de la lista y <code>StampMarks</code> para las marcas. Los valores de los márgenes que cambiaste para probar en el STEP 06 vuelven a su valor original con este reemplazo."
+    },
+    {
+      "source": "lib/main.dart · 全体を置き換える",
+      "translation": "lib/main.dart · reemplazar todo el archivo"
+    },
+    {
+      "source": "保存したら、ホットリロードではなくホットリスタートします。<code>main</code>の中で<code>runApp</code>に渡すクラスが変わったので、ホットリロードでは画面がSTEP 06のカードのまま変わりません。",
+      "translation": "Después de guardar, haz hot restart en lugar de hot reload. Como cambió la clase que se pasa a <code>runApp</code> dentro de <code>main</code>, con hot reload la pantalla se queda con la tarjeta del STEP 06 y no cambia."
+    },
+    {
       "source": "<code>Habit({required this.name, required this.reason, this.count = 0})</code>は名前付き引数を持つコンストラクタです。<code>required</code>は必須、<code>this.name</code>は受け取った値を同名フィールドへ代入する省略形、<code>count = 0</code>は省略時の初期値です。<code>name</code>・<code>reason</code>は<code>final</code>で一度代入した参照を再代入せず、回数<code>count</code>は<code>int</code>として後で変更します。",
       "translation": "<code>Habit({required this.name, required this.reason, this.count = 0})</code> es un constructor con argumentos con nombre. <code>required</code> indica que es obligatorio, <code>this.name</code> es una forma abreviada de asignar el valor recibido al campo del mismo nombre y <code>count = 0</code> es el valor inicial cuando se omite. <code>name</code> y <code>reason</code> son <code>final</code> y no reasignan la referencia una vez asignada, mientras que el conteo <code>count</code> se modificará más adelante como un <code>int</code>."
     },
@@ -417,6 +477,10 @@
     {
       "source": "配色と表示をそろえる",
       "translation": "Unifica los colores y la visualización"
+    },
+    {
+      "source": "コードは変えません。STEP 07で書いたコードのうち、配色と表示を決めている部分を読みます。",
+      "translation": "Este STEP no tiene cambios de código. Lee las partes del código que escribiste en el STEP 07 que definen los colores y la visualización."
     },
     {
       "source": "画面全体の配色を<code>StampApp</code>で指定します。<code>MaterialApp</code>の<code>theme</code>に<code>ThemeData</code>、<code>colorScheme</code>に<code>ColorScheme.fromSeed</code>を渡し、<code>seedColor</code>で基準の色を決めます。<code>Color(0xFF287A70)</code>の<code>FF</code>は不透明度、続く6桁はRGBです。",
@@ -449,6 +513,10 @@
     {
       "source": "カードの題材をアレンジする",
       "translation": "Personaliza el tema de las tarjetas"
+    },
+    {
+      "source": "コードは変えません。STEP 07で書いたコードが、第9コマ終了時の基準です。",
+      "translation": "Este STEP no tiene cambios de código. El código que escribiste en el STEP 07 es la referencia al final de la clase 9."
     },
     {
       "source": "3件の名前と理由を、自分が使いたい題材へ変えます。学習でも、休憩でも、架空の習慣でも構いません。<code>Habit</code>を1つ増やす場合は同じ形でリストへ加えます。",
@@ -499,6 +567,10 @@
       "translation": "Abre <code>F01StampBoard</code> en Visual Studio Code y retoma desde la lista estática de 3 elementos. Hoy verificarás mediante la interacción cómo se utiliza la UI declarativa: “la visualización se genera a partir de la cantidad actual de veces”."
     },
     {
+      "source": "このSTEPでは、コードは変えません。STEP 09までのコードで、回数がどの表示につながっているかを読みます。",
+      "translation": "Este STEP no tiene cambios de código. Con el código hasta el STEP 09, lee con qué partes de la visualización se conecta el conteo."
+    },
+    {
       "source": "<code>Habit</code>の<code>count</code>、合計<code>total</code>、<code>StampMarks</code>の<code>count</code>がどうつながるかを先に読みます。数値・マーク・達成メッセージを別々に記憶せず、<code>count</code>を基準に計算します。初期データの<code>count</code>を一時的に1へ変えてホットリスタートし、複数の表示が同時に変わることを確かめ、0へ戻します。",
       "translation": "Primero lee cómo se conectan <code>count</code> en <code>Habit</code>, el total <code>total</code> y <code>count</code> en <code>StampMarks</code>. En lugar de almacenar por separado el número, las marcas y el mensaje de logro, calcúlalos en base a <code>count</code>. Cambia temporalmente <code>count</code> a 1 en los datos iniciales, haz hot restart, confirma que múltiples elementos cambian al mismo tiempo y regresa a 0."
     },
@@ -527,6 +599,38 @@
       "translation": "Mueve a <code>State</code> la lista <code>habits</code>, que cambia mediante operaciones. <code>StampBoardPage</code> se convierte en un <code>StatefulWidget</code> y <code>createState</code> crea <code>_StampBoardPageState</code>. El widget mantiene la configuración de la pantalla y <code>State</code> conserva los valores que cambian con la interacción. El guion bajo al inicio del nombre especifica que es un nombre utilizado solo dentro de la biblioteca de Dart."
     },
     {
+      "source": "<code>lib/main.dart</code>を4か所変えます。まず、<code>StampApp</code>の<code>build</code>にある<code>home: StampBoardPage(),</code>の1行を、次の1行に置き換えます。次の置き換えで<code>StampBoardPage</code>のコンストラクタを<code>const</code>にするので、呼び出す側にも<code>const</code>を付けます。",
+      "translation": "Cambia <code>lib/main.dart</code> en cuatro lugares. Primero, reemplaza la línea <code>home: StampBoardPage(),</code> del <code>build</code> de <code>StampApp</code> por la siguiente línea. Como en el siguiente reemplazo el constructor de <code>StampBoardPage</code> pasa a ser <code>const</code>, agrega <code>const</code> también en el lugar donde se llama."
+    },
+    {
+      "source": "lib/main.dart · 置き換え · home: StampBoardPage(), の1行",
+      "translation": "lib/main.dart · reemplazar · la línea home: StampBoardPage(),"
+    },
+    {
+      "source": "次に、<code>class StampBoardPage extends StatelessWidget {</code>の行から、その下の<code>StampBoardPage({super.key});</code>の行と空行までの3行を、次のコードに置き換えます。<code>final List&lt;Habit&gt; habits = [</code>の行から下は残します。もとのクラスを閉じていた<code>}</code>（<code>buildHabitCard</code>の下の行）は、そのまま<code>_StampBoardPageState</code>を閉じる<code>}</code>になります。",
+      "translation": "Luego, reemplaza por el siguiente código las tres líneas que van desde <code>class StampBoardPage extends StatelessWidget {</code> hasta la línea <code>StampBoardPage({super.key});</code> y la línea en blanco que están debajo. Conserva todo desde la línea <code>final List&lt;Habit&gt; habits = [</code> hacia abajo. La llave <code>}</code> que cerraba la clase original (la línea debajo de <code>buildHabitCard</code>) pasa a ser, tal cual, la <code>}</code> que cierra <code>_StampBoardPageState</code>."
+    },
+    {
+      "source": "lib/main.dart · 置き換え · class StampBoardPage の行から、その下の空行まで",
+      "translation": "lib/main.dart · reemplazar · desde la línea class StampBoardPage hasta la línea en blanco de abajo"
+    },
+    {
+      "source": "続けて、<code>habits</code>のリストを閉じる<code>];</code>の下に、1行空けて次のコードを追加します。下の<code>@override</code>との間も1行空けます。",
+      "translation": "A continuación, debajo de <code>];</code>, que cierra la lista <code>habits</code>, deja una línea en blanco y agrega el siguiente código. Deja también una línea en blanco entre este código y el <code>@override</code> de abajo."
+    },
+    {
+      "source": "lib/main.dart · 追加 · habits のリストを閉じる ]; の下",
+      "translation": "lib/main.dart · agregar · debajo de ]; que cierra la lista habits"
+    },
+    {
+      "source": "最後に、<code>buildHabitCard</code>の中にある<code>const Text('回数を変える操作は、このあと作ります。'),</code>の1行を、次のコードに置き換えます。",
+      "translation": "Por último, reemplaza por el siguiente código la línea <code>const Text('回数を変える操作は、このあと作ります。'),</code> que está dentro de <code>buildHabitCard</code>."
+    },
+    {
+      "source": "lib/main.dart · 置き換え · 「回数を変える操作は、このあと作ります。」の1行",
+      "translation": "lib/main.dart · reemplazar · la línea 「回数を変える操作は、このあと作ります。」 (Las operaciones para cambiar el conteo se crearán más adelante.)"
+    },
+    {
       "source": "ボタンの<code>onPressed</code>へ<code>() =&gt; changeStamp(habit, 1)</code>を渡します。これは引数のない関数で、押したときに<code>changeStamp</code>を呼びます。関数の呼出結果をその場で渡す書き方と区別してください。Dartのアローは1つの式を返す省略形です。",
       "translation": "Pasa <code>() =&gt; changeStamp(habit, 1)</code> al <code>onPressed</code> del botón. Esta es una función sin parámetros que llama a <code>changeStamp</code> cuando se presiona. Distínguela de la forma de escribir que pasa el resultado de invocar la función en ese mismo instante. La flecha de Dart es una forma abreviada de devolver una sola expresión."
     },
@@ -553,6 +657,10 @@
     {
       "source": "合計とマークを値から作る",
       "translation": "Crea el total y las marcas a partir de valores"
+    },
+    {
+      "source": "コードは変えません。STEP 07で書いた、合計を数える<code>for</code>と<code>StampMarks</code>を読みます。",
+      "translation": "Este STEP no tiene cambios de código. Lee el <code>for</code> que cuenta el total y <code>StampMarks</code>, que escribiste en el STEP 07."
     },
     {
       "source": "<code>build</code>の最初で<code>total</code>を0にし、<code>for</code>で全件の<code>count</code>を足します。合計を別の状態として持たないため、戻す操作でも合計の更新忘れが起こりにくくなります。",
@@ -585,6 +693,10 @@
     {
       "source": "上限と戻す操作を確かめる",
       "translation": "Verifica el límite y la operación de deshacer"
+    },
+    {
+      "source": "コードは変えません。STEP 11で付けたボタンと<code>changeStamp</code>の範囲の確認を、操作して確かめます。",
+      "translation": "Este STEP no tiene cambios de código. Comprueba mediante la interacción los botones que agregaste en el STEP 11 y la verificación de rango de <code>changeStamp</code>."
     },
     {
       "source": "回数は0〜<code>stampGoal</code>に収めます。ボタン側では、上限なら<code>onPressed</code>を<code>null</code>にして押せない表示にし、関数側でも範囲外なら<code>return</code>します。表示の無効化とデータの範囲確認を両方置きます。",
@@ -631,6 +743,10 @@
       "translation": "Personaliza la cantidad de veces y la apariencia"
     },
     {
+      "source": "コードは変えません。STEP 11まで書いたコードが、第10コマ終了時の基準です。",
+      "translation": "Este STEP no tiene cambios de código. El código que escribiste hasta el STEP 11 es la referencia al final de la clase 10."
+    },
+    {
       "source": "ファイル先頭の<code>stampGoal</code>を5から3や7へ変え、上限・マークの数・残り回数・達成の文がそろうことを確認します。目標を減らす前には回数を0へ戻すか、ホットリスタートします。ホットリロードでは回数が残るため、5回のまま目標を3にすると「5 / 3 回 · あと-2回」と出ます。1つ戻すは押せる表示ですが、<code>changeStamp</code>が目標を超える次の回数を受け付けないため、押しても変わりません。そのときはホットリスタートで0へ戻します。",
       "translation": "Cambia <code>stampGoal</code> al inicio del archivo de 5 a 3 o 7, y confirma que el límite, la cantidad de marcas, la cantidad restante y el mensaje de logro coincidan. Antes de reducir el objetivo, vuelve el conteo a 0 o haz hot restart. Como el hot reload mantiene el conteo, si dejas 5 y bajas el objetivo a 3, aparecerá 「5 / 3 回 · あと-2回」 (5 / 3 veces · faltan -2 veces). El botón 「1つ戻す」 (Deshacer uno) parece habilitado, pero como <code>changeStamp</code> no acepta un nuevo conteo que supere el objetivo, no cambiará nada al presionarlo. En ese caso, haz hot restart para volver a 0."
     },
@@ -663,6 +779,10 @@
       "translation": "Abre <code>F01StampBoard</code> en Visual Studio Code y retoma desde la lista donde se pueden aumentar y disminuir los sellos. Hoy haremos que se pueda leer la 「続けたい理由」 (Razón para continuar) en una pantalla diferente."
     },
     {
+      "source": "このSTEPでは、コードは変えません。詳細へ渡す<code>Habit</code>の項目を、STEP 14までのコードで確かめます。",
+      "translation": "Este STEP no tiene cambios de código. Con el código hasta el STEP 14, verifica los campos de <code>Habit</code> que se pasarán a los detalles."
+    },
+    {
       "source": "詳細へ渡すのは選んだ<code>Habit</code>です。名前だけでなく<code>reason</code>と<code>count</code>も1つの値として渡せるため、同じ内容をもう一度検索する必要がありません。詳細では編集せず、スタンプの操作は一覧へ戻って行います。",
       "translation": "Lo que se pasa a los detalles es el <code>Habit</code> seleccionado. Dado que no solo el nombre sino también <code>reason</code> y <code>count</code> se pueden pasar como un único valor, no es necesario volver a buscar el mismo contenido. En los detalles no se edita nada; las operaciones con los sellos se realizan volviendo a la lista."
     },
@@ -689,6 +809,30 @@
     {
       "source": "カードに詳しく見るを加え、<code>openDetail(habit)</code>を呼びます。<code>openDetail</code>は<code>Navigator.push</code>へ<code>context</code>と<code>MaterialPageRoute</code>を渡し、ルートの<code>builder</code>で<code>HabitDetailPage</code>を作ります。",
       "translation": "Agrega 「詳しく見る」 (Ver detalles) a la tarjeta y llama a <code>openDetail(habit)</code>. <code>openDetail</code> pasa <code>context</code> y <code>MaterialPageRoute</code> a <code>Navigator.push</code>, y crea <code>HabitDetailPage</code> en el <code>builder</code> de la ruta."
+    },
+    {
+      "source": "<code>lib/main.dart</code>に3か所追加します。まず、<code>_StampBoardPageState</code>の中で、<code>changeStamp</code>の関数を閉じる<code>}</code>の下に、1行空けて次のコードを追加します。下の<code>@override</code>との間も1行空けます。",
+      "translation": "Agrega código en tres lugares de <code>lib/main.dart</code>. Primero, dentro de <code>_StampBoardPageState</code>, debajo de la llave <code>}</code> que cierra la función <code>changeStamp</code>, deja una línea en blanco y agrega el siguiente código. Deja también una línea en blanco entre este código y el <code>@override</code> de abajo."
+    },
+    {
+      "source": "lib/main.dart · 追加 · changeStamp の閉じかっこの下",
+      "translation": "lib/main.dart · agregar · debajo de la llave de cierre de changeStamp"
+    },
+    {
+      "source": "次に、<code>buildHabitCard</code>の<code>Wrap</code>の中で、「1つ戻す」の<code>TextButton</code>を閉じる<code>),</code>の下に、次のコードを追加します。<code>Wrap</code>の3つ目のボタンになります。",
+      "translation": "Luego, dentro del <code>Wrap</code> de <code>buildHabitCard</code>, agrega el siguiente código debajo de <code>),</code>, que cierra el <code>TextButton</code> de 「1つ戻す」 (Deshacer uno). Será el tercer botón del <code>Wrap</code>."
+    },
+    {
+      "source": "lib/main.dart · 追加 · 「1つ戻す」の TextButton の下",
+      "translation": "lib/main.dart · agregar · debajo del TextButton de 「1つ戻す」 (Deshacer uno)"
+    },
+    {
+      "source": "最後に、ファイルの末尾に、1行空けて次のコードを追加します。詳細の画面の<code>HabitDetailPage</code>です。中身はSTEP 17で読みます。",
+      "translation": "Por último, al final del archivo, deja una línea en blanco y agrega el siguiente código. Es <code>HabitDetailPage</code>, la pantalla de detalles. Leerás su contenido en el STEP 17."
+    },
+    {
+      "source": "lib/main.dart · 追加 · ファイルの末尾",
+      "translation": "lib/main.dart · agregar · al final del archivo"
     },
     {
       "source": "<code>Navigator</code>は画面の重なりを管理します。<code>push</code>で詳細を上に載せるため、一覧の<code>State</code>は下に残ります。<code>MaterialPageRoute</code>の<code>&lt;void&gt;</code>は、この画面から結果の値を受け取らない指定です。<code>builder</code>の<code>context</code>は新しい画面を作る場所の情報です。",
@@ -727,6 +871,10 @@
       "translation": "Muestra el hábito recibido"
     },
     {
+      "source": "コードは変えません。STEP 16でファイルの末尾に追加した<code>HabitDetailPage</code>を読みます。",
+      "translation": "Este STEP no tiene cambios de código. Lee <code>HabitDetailPage</code>, que agregaste al final del archivo en el STEP 16."
+    },
+    {
       "source": "<code>HabitDetailPage</code>は受け取った<code>Habit</code>を表示するだけなので<code>StatelessWidget</code>です。<code>const HabitDetailPage({super.key, required this.habit})</code>で<code>habit</code>を必須にし、<code>final</code>フィールドへ保持します。",
       "translation": "<code>HabitDetailPage</code> solo muestra el <code>Habit</code> que recibió, por lo que es un <code>StatelessWidget</code>. Con <code>const HabitDetailPage({super.key, required this.habit})</code>, se hace obligatorio <code>habit</code> y se conserva en un campo <code>final</code>."
     },
@@ -757,6 +905,10 @@
     {
       "source": "一覧と詳細を通して確かめる",
       "translation": "Verifica la lista y los detalles de principio a fin"
+    },
+    {
+      "source": "コードは変えません。STEP 16まで書いたコードで確かめます。",
+      "translation": "Este STEP no tiene cambios de código. Verifica con el código que escribiste hasta el STEP 16."
     },
     {
       "source": "最後に一覧と詳細を通して動かします。説明を読めるだけでなく、変更したデータが操作中も一致することを確かめます。",
@@ -801,6 +953,10 @@
     {
       "source": "アレンジできる場所を確かめる",
       "translation": "Verifica los lugares que puedes personalizar"
+    },
+    {
+      "source": "コードは変えません。STEP 16まで書いたコードが、<code>F01StampBoard</code>の完成版です。",
+      "translation": "Este STEP no tiene cambios de código. El código que escribiste hasta el STEP 16 es la versión final de <code>F01StampBoard</code>."
     },
     {
       "source": "仕上げに、自分の題材で使いやすいスタンプ帳にします。変更する場所は、ここまでに扱った範囲から選びます。",
@@ -885,6 +1041,10 @@
     {
       "source": "括弧のエラーが出た",
       "translation": "Apareció un error de paréntesis"
+    },
+    {
+      "source": "最初のエラーから確認。<code>child</code>は1つ、<code>children</code>はリスト。そのSTEPのコード欄と、置き換えた範囲の閉じ括弧を見比べる。",
+      "translation": "Verifica desde el primer error. <code>child</code> es uno solo, <code>children</code> es una lista. Compara los paréntesis de cierre del rango que reemplazaste con el bloque de código de ese STEP."
     },
     {
       "source": "再起動すると0に戻った",

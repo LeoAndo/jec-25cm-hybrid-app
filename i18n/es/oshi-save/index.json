@@ -179,8 +179,24 @@
       "translation": "Abre <code>www/index.html</code> y <code>www/css/style.css</code>. Si no existe <code>www/js/app.js</code>, usa las opciones de creación de la lista de archivos para crear una carpeta <code>js</code> debajo de <code>www</code> y un archivo <code>app.js</code> dentro de ella."
     },
     {
+      "source": "自分のアレンジがある場合は、変えた文字と色を控えます。3ファイルの中身を、下の開始コードでそれぞれ全体を置き換え、保存してプレビューを再読み込みします。<code>components</code> や <code>res</code> は変更しません。",
+      "translation": "Si tienes tus propias personalizaciones, anota el texto y los colores que cambiaste. Reemplaza todo el contenido de cada uno de los 3 archivos por el código inicial de abajo, guarda y vuelve a cargar la vista previa. No modifiques <code>components</code> ni <code>res</code>."
+    },
+    {
       "source": "3件の名前を押して詳細を開き、左上の戻るボタンで一覧へ戻ります。戻るボタンは、iOS向けの見た目では「＜ 戻る」、Android向けの見た目では左向きの矢印「←」だけです。タイトルと詳細の組み合わせを確かめます。",
       "translation": "Presiona los nombres de los 3 elementos para abrir sus detalles y regresa a la lista con el botón de volver de la esquina superior izquierda. El botón de volver se muestra como 「＜ 戻る」 (Volver) en la apariencia para iOS y solo como una flecha hacia la izquierda 「←」 en la apariencia para Android. Verifica que los títulos coincidan con sus detalles correspondientes."
+    },
+    {
+      "source": "www/index.html · 全体を置き換える",
+      "translation": "www/index.html · reemplazar todo el archivo"
+    },
+    {
+      "source": "www/css/style.css · 全体を置き換える",
+      "translation": "www/css/style.css · reemplazar todo el archivo"
+    },
+    {
+      "source": "www/js/app.js · 全体を置き換える",
+      "translation": "www/js/app.js · reemplazar todo el archivo"
     },
     {
       "source": "開始コードの役割を、次の順で追いましょう。新しいファイル名を <code>detail.html</code> として作る操作は不要です。これは <code>index.html</code> の中の <code>template</code> の<code>id</code>です。",
@@ -255,6 +271,30 @@
       "translation": "Crea la pantalla de entrada"
     },
     {
+      "source": "HTMLに、一覧から入力画面を開くボタンと、入力画面の <code>add.html</code> の<code>template</code>を加えます。まず、一覧の説明文 <code>音楽、食べ物、場所。好きなものと理由の記録。</code> の行の下に、ボタンと案内用の段落を足します。",
+      "translation": "En el HTML, agrega un botón para abrir la pantalla de entrada desde la lista y el <code>template</code> de <code>add.html</code> para la pantalla de entrada. Primero, debajo de la línea con el texto de descripción de la lista, <code>音楽、食べ物、場所。好きなものと理由の記録。</code> (Música, comida, lugares. Registro de favoritos y sus razones.), agrega el botón y un párrafo de guía."
+    },
+    {
+      "source": "www/index.html · 追加 · 一覧の説明文 app-description の下",
+      "translation": "www/index.html · agregar · debajo del texto de descripción app-description de la lista"
+    },
+    {
+      "source": "続けて、<code>&lt;template id=\"detail.html\"&gt;</code> の行の上に、入力画面の<code>template</code>を足します。最後の <code>&lt;/template&gt;</code> の下に空行を1行入れ、詳細の<code>template</code>と分けます。名前・種類の <code>input</code> と、好きな理由の <code>textarea</code> を置きます。<code>label</code> の<code>for</code>と入力欄の<code>id</code>が対応します。",
+      "translation": "A continuación, encima de la línea <code>&lt;template id=\"detail.html\"&gt;</code>, agrega el <code>template</code> de la pantalla de entrada. Deja una línea en blanco debajo del <code>&lt;/template&gt;</code> con el que termina el código agregado, para separarlo del <code>template</code> del detalle. Coloca los <code>input</code> para el nombre y el tipo, y el <code>textarea</code> para la razón por la que te gusta. El <code>for</code> de cada <code>label</code> corresponde al <code>id</code> de su campo de entrada."
+    },
+    {
+      "source": "www/index.html · 追加 · &lt;template id=\"detail.html\"&gt; の上",
+      "translation": "www/index.html · agregar · encima de &lt;template id=\"detail.html\"&gt;"
+    },
+    {
+      "source": "CSSは、ファイルの末尾（<code>.oshi-genre</code> を含む指定の閉じかっこの下）に、空行を1行あけて次の指定を足します。",
+      "translation": "En el CSS, al final del archivo (debajo de la llave de cierre de la regla que incluye <code>.oshi-genre</code>), deja una línea en blanco y agrega las siguientes reglas."
+    },
+    {
+      "source": "www/css/style.css · 追加 · ファイルの末尾",
+      "translation": "www/css/style.css · agregar · al final del archivo"
+    },
+    {
       "source": "CSSの <code>.app-input</code> は幅を100%にし、<code>box-sizing: border-box</code> で<code>padding</code>と枠をその幅の内側へ収めます。<code>font: inherit</code> で文字を周囲とそろえ、<code>focus</code>の<code>outline</code>で選択中の欄を見分けます。ほかに加わるクラスのうち、このSTEPの画面に当たる4つは次の表のとおりです。",
       "translation": "En el CSS, <code>.app-input</code> establece el ancho al 100%, y con <code>box-sizing: border-box</code> mantiene el <code>padding</code> y el borde dentro de ese ancho. <code>font: inherit</code> unifica el estilo del texto con el entorno, y el <code>outline</code> de <code>focus</code> permite distinguir el campo seleccionado. Entre las demás clases que se agregan, las 4 que corresponden a la pantalla de este STEP se muestran en la siguiente tabla."
     },
@@ -307,12 +347,48 @@
       "translation": "Las tres declaraciones <code>.reset-section</code>, <code>#panel_reset ons-button</code> y <code>.is-hidden</code> son reglas para el panel de confirmación de reinicio que se agregará en el STEP 08. En el HTML de este STEP, aún no hay elementos a los que se apliquen."
     },
     {
+      "source": "JavaScriptは4か所を変えます。まず、<code>let oshiItems = [</code> の行から <code>let isOpeningDetail = false;</code> の行までを、次のコードに置き換えます。初期データの配列を自分の好きなものに変えている場合は、控えてから置き換え、<code>createInitialItems</code> の中の配列へ書き戻します。",
+      "translation": "En JavaScript, cambia 4 lugares. Primero, reemplaza desde la línea <code>let oshiItems = [</code> hasta la línea <code>let isOpeningDetail = false;</code> por el siguiente código. Si cambiaste el arreglo de datos iniciales por tus propios favoritos, anótalo antes de reemplazarlo y vuelve a escribirlo en el arreglo dentro de <code>createInitialItems</code>."
+    },
+    {
+      "source": "www/js/app.js · 置き換え · let oshiItems = [ から let isOpeningDetail = false; まで",
+      "translation": "www/js/app.js · reemplazar · desde let oshiItems = [ hasta let isOpeningDetail = false;"
+    },
+    {
       "source": "初期データは <code>createInitialItems</code> が新しい配列を返す形にまとめました。後で初期化したときにも同じ内容を作り直せるようにするためです。呼び出しのたびに新しい配列になる点を、<code>return</code>の位置と一緒に読みます。",
       "translation": "Los datos iniciales se organizaron para que <code>createInitialItems</code> devuelva un arreglo nuevo. Esto permite volver a crear el mismo contenido cuando se reinicie más adelante. Observa que en cada llamada se genera un arreglo nuevo, prestando atención a la posición de <code>return</code>."
     },
     {
+      "source": "移動中の旗の名前は、STEP 00の <code>isOpeningDetail</code> から <code>isOpeningPage</code> に変えます。詳細を開くときだけでなく入力画面を開くときにも使うので、「詳細を開いている最中」ではなく「どちらかのページを開いている最中」と読める名前にするためです。宣言は上のコードで変えたので、残りは<code>openOshiDetail</code>の中の3か所です。",
+      "translation": "Cambiamos el nombre de la bandera de transición de <code>isOpeningDetail</code> en el STEP 00 a <code>isOpeningPage</code>. Dado que no solo se usa al abrir el detalle sino también al abrir la pantalla de entrada, el nombre debe reflejar “abriendo alguna de las páginas” en lugar de “abriendo el detalle”. La declaración ya cambió con el código de arriba; lo que falta son los 3 lugares dentro de <code>openOshiDetail</code>."
+    },
+    {
+      "source": "次に、<code>init</code> の処理を、直前のコメント <code>// templateの中身は、ページが作られてから取得する。</code> の行から、閉じる <code>});</code> の行までを置き換えます。一覧の<code>init</code>では、<code>txt_storage</code> に文を入れ、<code>btn_open_add</code> へ<code>openAddPage</code>を登録します。詳細の<code>init</code>は、<code>const oshi</code> の下の空行がなくなるだけで、処理は変わりません。",
+      "translation": "Luego, reemplaza el procesamiento de <code>init</code>, desde la línea del comentario que lo precede, <code>// templateの中身は、ページが作られてから取得する。</code>, hasta la línea del <code>});</code> que lo cierra. En el <code>init</code> de la lista, se asigna un texto a <code>txt_storage</code> y se registra <code>openAddPage</code> en <code>btn_open_add</code>. En el <code>init</code> del detalle solo desaparece la línea en blanco debajo de <code>const oshi</code>; el procesamiento no cambia."
+    },
+    {
+      "source": "www/js/app.js · 置き換え · init の処理（直前のコメントから }); まで）",
+      "translation": "www/js/app.js · reemplazar · el procesamiento de init (desde el comentario que lo precede hasta });)"
+    },
+    {
       "source": "一覧のボタンの下の <code>txt_storage</code> には <code>この段階では、追加した内容は保存されません。</code>、入力画面のボタンの下の注記には <code>この段階では、追加した内容は再読み込みすると消えます。</code> と出します。追加した内容がまだ残らないことを、画面で先に伝えるためです。保存を作るSTEP 06で、どちらの文も書き換えます。",
       "translation": "En <code>txt_storage</code> debajo del botón de la lista, muestra <code>この段階では、追加した内容は保存されません。</code> (En esta etapa, el contenido agregado no se guardará.), y en la nota debajo del botón de la pantalla de entrada, muestra <code>この段階では、追加した内容は再読み込みすると消えます。</code> (En esta etapa, el contenido agregado desaparecerá al recargar.). El objetivo es informar previamente en la pantalla que el contenido agregado aún no persiste. En el STEP 06, donde implementaremos el guardado, modificaremos ambas frases."
+    },
+    {
+      "source": "3つ目に、<code>function openOshiDetail(oshi) {</code> の行から、その閉じかっこ <code>}</code> の行までを置き換えます。変わるのは、<code>isOpeningDetail</code> を <code>isOpeningPage</code> にした3行だけです。",
+      "translation": "En tercer lugar, reemplaza desde la línea <code>function openOshiDetail(oshi) {</code> hasta la línea de su llave de cierre <code>}</code>. Solo cambian las 3 líneas en las que <code>isOpeningDetail</code> pasó a ser <code>isOpeningPage</code>."
+    },
+    {
+      "source": "www/js/app.js · 置き換え · function openOshiDetail から、その閉じかっこまで",
+      "translation": "www/js/app.js · reemplazar · desde function openOshiDetail hasta su llave de cierre"
+    },
+    {
+      "source": "最後に、ファイルの末尾（<code>openOshiDetail</code> の閉じかっこの下）に、空行を1行あけて <code>openAddPage</code> を足します。<code>pushPage(\"add.html\", ...)</code> で入力画面へ進みます。詳細と同じ移動中の旗を共有するため、片方を開いている最中にもう片方は開きません。",
+      "translation": "Por último, al final del archivo (debajo de la llave de cierre de <code>openOshiDetail</code>), deja una línea en blanco y agrega <code>openAddPage</code>. Avanza a la pantalla de entrada con <code>pushPage(\"add.html\", ...)</code>. Como comparte la misma bandera de transición con el detalle, mientras se abre uno, el otro no se puede abrir."
+    },
+    {
+      "source": "www/js/app.js · 追加 · ファイルの末尾",
+      "translation": "www/js/app.js · agregar · al final del archivo"
     },
     {
       "source": "保存・再読み込み後に <code>好きなものを追加</code> を押します。",
@@ -341,6 +417,26 @@
     {
       "source": "入力した文字を確認する",
       "translation": "Verifica el texto ingresado"
+    },
+    {
+      "source": "HTMLでは、入力画面の <code>btn_save_oshi</code> の1行を置き換えて、追加ボタンから <code>disabled</code> を外します。",
+      "translation": "En el HTML, reemplaza la línea de <code>btn_save_oshi</code> de la pantalla de entrada para quitar <code>disabled</code> del botón de agregar."
+    },
+    {
+      "source": "www/index.html · 置き換え · btn_save_oshi の1行",
+      "translation": "www/index.html · reemplazar · la línea de btn_save_oshi"
+    },
+    {
+      "source": "JSでは、<code>init</code> の処理の中の <code>if (page.id === \"page_detail\") {</code> の行の上に、<code>page_add</code> の<code>init</code>で<code>addOshi</code>を登録する処理を足します。足した <code>}</code> の下に空行を1行入れます。関数名を渡しているので、登録した瞬間ではなくボタンを押したときに動きます。",
+      "translation": "En JS, dentro del procesamiento de <code>init</code>, encima de la línea <code>if (page.id === \"page_detail\") {</code>, agrega el procesamiento que registra <code>addOshi</code> en el <code>init</code> de <code>page_add</code>. Deja una línea en blanco debajo de la <code>}</code> que agregaste. Como se pasa el nombre de la función, se ejecuta al presionar el botón y no en el momento de registrarla."
+    },
+    {
+      "source": "www/js/app.js · 追加 · if (page.id === \"page_detail\") { の上",
+      "translation": "www/js/app.js · agregar · encima de if (page.id === \"page_detail\") {"
+    },
+    {
+      "source": "ファイルの末尾（<code>openAddPage</code> の閉じかっこの下）に、空行を1行あけて <code>addOshi</code> を足します。",
+      "translation": "Al final del archivo (debajo de la llave de cierre de <code>openAddPage</code>), deja una línea en blanco y agrega <code>addOshi</code>."
     },
     {
       "source": "<code>addOshi</code>は、入力欄を<code>id</code>で取得し、<code>value</code> で今の文字を読みます。<code>trim()</code> は前後の空白を取り除きます。3つのどれかが空ならメッセージを表示して<code>return</code>し、残りの処理へ進みません。",
@@ -377,6 +473,18 @@
     {
       "source": "配列へ追加して戻る",
       "translation": "Agrega al arreglo y regresa"
+    },
+    {
+      "source": "JSの<code>addOshi</code>で、最後の <code>txtMessage.textContent = \"入力を確認しました：\" + name;</code> の1行を、次の5行に置き換えます。入力確認だけの行を、配列へ追加して一覧を描き直す処理へ替えます。",
+      "translation": "En <code>addOshi</code> de JS, reemplaza la última línea, <code>txtMessage.textContent = \"入力を確認しました：\" + name;</code>, por las siguientes 5 líneas. Cambiamos la línea que solo confirmaba la entrada por el proceso que agrega al arreglo y vuelve a dibujar la lista."
+    },
+    {
+      "source": "www/js/app.js · 置き換え · 「入力を確認しました：」の1行",
+      "translation": "www/js/app.js · reemplazar · la línea de 「入力を確認しました：」 (Entrada confirmada:)"
+    },
+    {
+      "source": "<code>oshiItems.push({ name: name, genre: genre, comment: comment })</code> の左側はデータの項目名、右側は入力欄から読んだ変数です。",
+      "translation": "En <code>oshiItems.push({ name: name, genre: genre, comment: comment })</code>, el lado izquierdo corresponde al nombre del campo de datos y el lado derecho es la variable leída del campo de entrada."
     },
     {
       "source": "次に<code>renderOshiList</code>を呼びます。この関数は<code>innerHTML</code>で行を置き直した後に、<code>textContent</code>の設定とクリックの登録をやり直します。古い行に登録したイベントは、新しい行へ自動では移らないためです。",
@@ -417,6 +525,10 @@
     {
       "source": "確認とアレンジ",
       "translation": "Verificación y personalización"
+    },
+    {
+      "source": "コードは変えません。STEP 03まで書いたコードが、第5コマ終了時の基準です。今日の終わりは、作った範囲を使って自分の表現に変えます。",
+      "translation": "Este STEP no tiene cambios de código. El código que escribiste hasta el STEP 03 es la referencia al finalizar la clase 5. Para terminar el día de hoy, usa lo que construiste para adaptarlo a tu propia expresión."
     },
     {
       "source": "変える場所",
@@ -473,6 +585,10 @@
     {
       "source": "配列とJSONの違いを読む",
       "translation": "Lee la diferencia entre arreglos y JSON"
+    },
+    {
+      "source": "Monaca クラウド IDEで同じ好きなものノートを開きます。開始状態は「入力して追加できるが、再読み込みすると初期データに戻る」です。このSTEPでは、コードは変えません。保存する前に、画面で使う配列と、保存へ渡す文字列を区別します。",
+      "translation": "Abre el mismo cuaderno de favoritos en Monaca クラウド IDE. El estado inicial es “puedes escribir y agregar, pero al recargar vuelve a los datos iniciales”. En este STEP no hay cambios de código. Antes de guardar, distinguiremos entre el arreglo utilizado en la pantalla y la cadena de texto que se pasa al almacenamiento."
     },
     {
       "source": "<strong>JSONは、値を文字で表すための決まった形式</strong>です。JavaScriptの配列やオブジェクトそのものではありません。<code>JSON.stringify</code> は値をJSONの文字列にし、<code>JSON.parse</code> はJSONの文字列から値を復元します。今回の保存対象は文字列の3項目を持つオブジェクトの配列です。",
@@ -547,6 +663,50 @@
       "translation": "Guarda como texto"
     },
     {
+      "source": "JSの先頭近く、<code>// 初期化のたびに新しい配列を返し、追加した内容と混ぜない。</code> の行の上に <code>STORAGE_KEY</code> を足し、その下に空行を1行入れます。保存内容を探すための名前を1か所で管理します。この名前を途中で変更すると、以前のキーで保存した内容は見えなくなります。",
+      "translation": "Cerca del inicio del JS, agrega <code>STORAGE_KEY</code> encima de la línea <code>// 初期化のたびに新しい配列を返し、追加した内容と混ぜない。</code> y deja una línea en blanco debajo de él. Así administras en un solo lugar el nombre con el que se buscan los datos guardados. Si cambias este nombre en el camino, ya no podrás ver los datos guardados con la clave anterior."
+    },
+    {
+      "source": "www/js/app.js · 追加 · // 初期化のたびに新しい配列を返し、追加した内容と混ぜない。 の上",
+      "translation": "www/js/app.js · agregar · encima de // 初期化のたびに新しい配列を返し、追加した内容と混ぜない。"
+    },
+    {
+      "source": "<code>let isOpeningPage = false;</code> の行の下に、保存してよいかを表す <code>let canSave = true;</code> を足します。",
+      "translation": "Debajo de la línea <code>let isOpeningPage = false;</code>, agrega <code>let canSave = true;</code>, que indica si se puede guardar."
+    },
+    {
+      "source": "www/js/app.js · 追加 · let isOpeningPage = false; の下",
+      "translation": "www/js/app.js · agregar · debajo de let isOpeningPage = false;"
+    },
+    {
+      "source": "一覧の<code>init</code>は、<code>if (page.id === \"page_list\") {</code> の行から、その閉じかっこ <code>}</code> の行までを置き換えます。<code>txt_storage</code> の文を替え、<code>renderOshiList();</code> の下で <code>btn_open_add</code> の <code>disabled</code> を <code>!canSave</code> にします。",
+      "translation": "En el <code>init</code> de la lista, reemplaza desde la línea <code>if (page.id === \"page_list\") {</code> hasta la línea de su llave de cierre <code>}</code>. Se cambia el texto de <code>txt_storage</code> y, debajo de <code>renderOshiList();</code>, se asigna <code>!canSave</code> al <code>disabled</code> de <code>btn_open_add</code>."
+    },
+    {
+      "source": "www/js/app.js · 置き換え · if (page.id === \"page_list\") { から、その閉じかっこまで",
+      "translation": "www/js/app.js · reemplazar · desde if (page.id === \"page_list\") { hasta su llave de cierre"
+    },
+    {
+      "source": "<code>function openAddPage() {</code> の行から、その閉じかっこ <code>}</code> の行までを置き換え、最初の条件に <code>!canSave</code> を加えます。",
+      "translation": "Reemplaza desde la línea <code>function openAddPage() {</code> hasta la línea de su llave de cierre <code>}</code> y agrega <code>!canSave</code> a la primera condición."
+    },
+    {
+      "source": "www/js/app.js · 置き換え · function openAddPage から、その閉じかっこまで",
+      "translation": "www/js/app.js · reemplazar · desde function openAddPage hasta su llave de cierre"
+    },
+    {
+      "source": "<code>canSave</code> が <code>false</code> なら、<code>openAddPage</code>と<code>addOshi</code>の最初の条件で何もせずに戻ります。このSTEPには <code>canSave</code> を<code>false</code>にする行がないので、常に<code>true</code>のままで、画面の動きは変わりません。<code>false</code>にするのは、次のSTEPで保存内容を読み込めなかったときです。そのまま追加できると、読めなかった保存内容を、初期データに1件足した配列で上書きしてしまいます。保存の処理を書くこのSTEPで、保存へ進む入口に確認を置いておけば、次のSTEPでは読み込みの処理を足すだけで済みます。",
+      "translation": "Si <code>canSave</code> es <code>false</code>, la primera condición de <code>openAddPage</code> y de <code>addOshi</code> hace que regresen sin hacer nada. En este STEP no hay ninguna línea que ponga <code>canSave</code> en <code>false</code>, por lo que siempre permanece en <code>true</code> y el comportamiento de la pantalla no cambia. Se pondrá en <code>false</code> en el siguiente STEP, en caso de que no se puedan leer los datos guardados. Si se permitiera agregar de todas formas, el contenido guardado que no se pudo leer se sobrescribiría con un arreglo que solo contiene los datos iniciales más 1 elemento. Al colocar esta verificación en la entrada al guardado en este STEP donde escribimos el proceso de guardar, en el siguiente STEP solo necesitaremos agregar el proceso de lectura."
+    },
+    {
+      "source": "最後に、ファイルの末尾にある <code>function addOshi() {</code> の行から、その閉じかっこ <code>}</code> の行までを置き換えます。",
+      "translation": "Por último, reemplaza desde la línea <code>function addOshi() {</code>, que está al final del archivo, hasta la línea de su llave de cierre <code>}</code>."
+    },
+    {
+      "source": "www/js/app.js · 置き換え · function addOshi から、その閉じかっこまで",
+      "translation": "www/js/app.js · reemplazar · desde function addOshi hasta su llave de cierre"
+    },
+    {
       "source": "<code>addOshi</code>では、<code>oshiItems.slice()</code> で配列の浅いコピー<code>nextItems</code>を作り、そこへ新しい1件を追加します。この処理では既存のオブジェクトの項目は変更せず、配列へ追加するだけなので、配列のコピーで足ります。",
       "translation": "En <code>addOshi</code>, creamos una copia superficial del arreglo <code>nextItems</code> con <code>oshiItems.slice()</code> y agregamos el nuevo elemento allí. Dado que en este proceso no modificamos los campos de los objetos existentes sino que solo agregamos al arreglo, una copia del arreglo es suficiente."
     },
@@ -599,6 +759,18 @@
       "translation": "No borrar lo ingresado, permitiendo verificar o reintentar a continuación."
     },
     {
+      "source": "画面の文も、保存ができるようになったことに合わせて替えます。HTMLでは、入力画面の <code>btn_save_oshi</code> の行から、その下の <code>app-note</code> の行までの2行を置き換えます。",
+      "translation": "Los textos en pantalla también cambian al habilitar la capacidad de guardar. En el HTML, reemplaza las 2 líneas de la pantalla de entrada que van desde la línea de <code>btn_save_oshi</code> hasta la línea de <code>app-note</code> que está debajo."
+    },
+    {
+      "source": "www/index.html · 置き換え · btn_save_oshi の行から app-note の行まで",
+      "translation": "www/index.html · reemplazar · desde la línea de btn_save_oshi hasta la línea de app-note"
+    },
+    {
+      "source": "入力画面のボタンは <code>追加する</code> から <code>追加して保存</code> に変わります。押すと、配列への追加と一緒に保存まで行うことを、ボタンの文字で示すためです。STEP 01から出していた2つの文は、保存できるようになると事実と合わなくなるので、一覧の <code>txt_storage</code> は <code>保存はできますが、このSTEPではまだ読み込みません。</code> に（上で置き換えた一覧の<code>init</code>の中です）、入力画面のボタンの下の注記は <code>保存先は、このブラウザの同じプレビューです。公開URLに入力内容は含まれません。</code> に替えます。保存した内容はこのブラウザにだけ残り、STEP 12で発行する公開URLから取り込んだ人には届かないためです。",
+      "translation": "El botón de la pantalla de entrada cambia de <code>追加する</code> (Agregar) a <code>追加して保存</code> (Agregar y guardar). Esto se debe a que el texto del botón indica que, al presionarlo, se realiza el guardado junto con la adición al arreglo. Las dos frases que mostrábamos desde el STEP 01 ya no coinciden con la realidad al poder guardar, por lo que cambiamos <code>txt_storage</code> en la lista (dentro del <code>init</code> de la lista que reemplazaste arriba) a <code>保存はできますが、このSTEPではまだ読み込みません。</code> (Se puede guardar, pero en este STEP todavía no se lee.), y la nota debajo del botón en la pantalla de entrada a <code>保存先は、このブラウザの同じプレビューです。公開URLに入力内容は含まれません。</code> (El destino de guardado es la misma vista previa de este navegador. La URL de importación no incluye el contenido ingresado.). Esto se debe a que el contenido guardado solo permanece en este navegador y no llega a quienes importen el proyecto desde la URL de importación generada en el STEP 12."
+    },
+    {
       "source": "入力画面のボタンが <code>追加して保存</code> になったことを確かめてから、1件追加して一覧へ戻り、<code>件をこのブラウザに保存しました。</code> の文を確かめます。このSTEPでは保存までなので、再読み込み時の表示はまだ初期データです。保存されていないと決めつけず、次のSTEPで読み込む側を作ります。また、このSTEPで再読み込みしてからもう一度追加すると、前に保存した内容は、ソースの初期データと新しい1件で上書きされます。保存した内容をまだ読み込んでいない配列に、新しい1件を足して保存するためです。次のSTEPで読み込めるのは、最後に保存した内容です。",
       "translation": "Después de confirmar que el botón de la pantalla de entrada cambió a <code>追加して保存</code> (Agregar y guardar), agrega 1 elemento, regresa a la lista y verifica la frase <code>件をこのブラウザに保存しました。</code> (elementos guardados en este navegador.). Como en este STEP solo implementamos hasta el guardado, al recargar la pantalla aún se mostrarán los datos iniciales. No asumas que no se guardó; en el siguiente STEP construiremos la parte que los lee. Además, si recargas en este STEP y vuelves a agregar otro elemento, el contenido guardado anteriormente se sobrescribirá con los datos iniciales del código fuente más el nuevo elemento. Esto se debe a que se agrega un nuevo elemento a un arreglo que todavía no leyó los datos guardados y luego se guarda. Lo que podrás leer en el siguiente STEP es el último contenido guardado."
     },
@@ -617,6 +789,18 @@
     {
       "source": "保存した配列を復元する",
       "translation": "Restaura el arreglo guardado"
+    },
+    {
+      "source": "JSに<code>loadOshiItems</code>と<code>isValidItems</code>を加え、<code>page_list</code>の<code>init</code>で <strong>読み込み→一覧生成</strong> の順に呼びます。保存した値を読む前に行を作ると、初期データのまま表示されるためです。まず、一覧の<code>init</code>の中で <code>txt_storage</code> に文字を入れている1行を、<code>loadOshiItems();</code> に置き換えます。すぐ下の <code>renderOshiList();</code> は残します。",
+      "translation": "Agrega <code>loadOshiItems</code> y <code>isValidItems</code> en JS y, en el <code>init</code> de <code>page_list</code>, llámalos en el orden <strong>lectura → generación de lista</strong>. Si creas las filas antes de leer los valores guardados, se mostrarán con los datos iniciales. Primero, dentro del <code>init</code> de la lista, reemplaza la línea que asigna texto a <code>txt_storage</code> por <code>loadOshiItems();</code>. Conserva el <code>renderOshiList();</code> que está justo debajo."
+    },
+    {
+      "source": "www/js/app.js · 置き換え · init の中の txt_storage に文字を入れる1行",
+      "translation": "www/js/app.js · reemplazar · la línea dentro de init que asigna texto a txt_storage"
+    },
+    {
+      "source": "次に、ファイルの末尾（<code>addOshi</code> の閉じかっこの下）に、空行を1行あけて2つの関数を足します。<code>txt_storage</code> の文は、<code>loadOshiItems</code> の中で、読み込みの結果に合わせて出します。",
+      "translation": "Luego, al final del archivo (debajo de la llave de cierre de <code>addOshi</code>), deja una línea en blanco y agrega las 2 funciones. El texto de <code>txt_storage</code> se muestra dentro de <code>loadOshiItems</code>, según el resultado de la lectura."
     },
     {
       "source": "<code>getItem(STORAGE_KEY)</code> は、未保存なら <code>null</code> を返します。この場合は何も復元せず、ソースの初期データを使います。文字列があれば<code>JSON.parse</code>で値へ戻します。",
@@ -679,6 +863,26 @@
       "translation": "Confirmación del reinicio y manejo de fallas"
     },
     {
+      "source": "HTMLに初期化ボタンと確認欄、JSにそのイベントと<code>resetOshiItems</code>を加えます。HTMLでは、一覧の <code>txt_selected</code> の行（<code>まだ選択していません</code>）の下に、次のコードを足します。",
+      "translation": "Agrega el botón de reinicio y el panel de confirmación en el HTML, y su evento y <code>resetOshiItems</code> en el JS. En el HTML, agrega el siguiente código debajo de la línea de <code>txt_selected</code> de la lista, la que contiene <code>まだ選択していません</code> (Todavía no se ha seleccionado nada)."
+    },
+    {
+      "source": "www/index.html · 追加 · txt_selected の行の下",
+      "translation": "www/index.html · agregar · debajo de la línea de txt_selected"
+    },
+    {
+      "source": "JSでは、一覧の<code>init</code>を、<code>if (page.id === \"page_list\") {</code> の行から、その閉じかっこ <code>}</code> の行までを置き換えます。<code>openAddPage</code> を登録する行の下の空行の代わりに、3つのボタンのイベントを登録します。",
+      "translation": "En JS, reemplaza el <code>init</code> de la lista desde la línea <code>if (page.id === \"page_list\") {</code> hasta la línea de su llave de cierre <code>}</code>. En lugar de la línea en blanco que está debajo de la línea que registra <code>openAddPage</code>, se registran los eventos de los 3 botones."
+    },
+    {
+      "source": "ファイルの末尾（<code>isValidItems</code> の閉じかっこの下）に、空行を1行あけて <code>resetOshiItems</code> を足します。",
+      "translation": "Al final del archivo (debajo de la llave de cierre de <code>isValidItems</code>), deja una línea en blanco y agrega <code>resetOshiItems</code>."
+    },
+    {
+      "source": "<code>初期の内容に戻す</code> を押すと、<code>is-hidden</code>を<code>remove</code>して確認欄を見せます。<code>やめる</code> ではクラスを<code>add</code>し、欄を閉じるだけです。確認欄を囲む <code>reset-section</code> は上に区切りの線を引き、<code>#panel_reset ons-button</code> は確認欄の2つのボタンの上を12px空けます。この2つと <code>is-hidden</code> はSTEP 01のCSSに入れてあり、このSTEPのHTMLで初めて要素に当たります。",
+      "translation": "Al presionar <code>初期の内容に戻す</code> (Restaurar contenido inicial), se aplica <code>remove</code> sobre <code>is-hidden</code> para mostrar el panel de confirmación. Con <code>やめる</code> (Cancelar), solo se aplica <code>add</code> a la clase y se cierra el panel. <code>reset-section</code>, que rodea el panel de confirmación, dibuja una línea divisoria arriba, y <code>#panel_reset ons-button</code> deja un espacio de 12px arriba de los 2 botones del panel de confirmación. Estas dos reglas y <code>is-hidden</code> se incluyeron en el CSS desde el STEP 01, y es en el HTML de este STEP donde se aplican a elementos por primera vez."
+    },
+    {
       "source": "実際の削除は <code>削除して初期の内容に戻す</code> を押した場合だけです。<code>localStorage.removeItem(STORAGE_KEY)</code> で、このアプリのキー1つだけを削除します。保存領域全体を空にする<code>clear</code>は使いません。",
       "translation": "La eliminación real solo ocurre al presionar <code>削除して初期の内容に戻す</code> (Eliminar y restaurar contenido inicial). Con <code>localStorage.removeItem(STORAGE_KEY)</code> se elimina únicamente la clave correspondiente a esta aplicación. No utilizamos <code>clear</code>, que vaciaría toda el área de almacenamiento."
     },
@@ -717,6 +921,10 @@
     {
       "source": "保存を確かめてアレンジする",
       "translation": "Verificar el guardado y personalizar"
+    },
+    {
+      "source": "コードは変えません。STEP 08まで書いたコードが、第6コマ終了時の基準です。入力→追加→詳細→戻る→再読み込みの順で動かし、保存した内容が復元されることを確認します。次に、ソースの初期データを自分の言葉へ変えます。",
+      "translation": "Este STEP no tiene cambios de código. El código que escribiste hasta el STEP 08 es la referencia al finalizar la clase 6. Ejecuta la secuencia de ingresar → agregar → detalle → volver → recargar, y confirma que el contenido guardado se restaure. A continuación, cambia los datos iniciales del código fuente con tus propias palabras."
     },
     {
       "source": "<strong>保存データがあると、ソースの初期データより優先して表示されます。</strong> <code>createInitialItems</code>を書き換えても画面が変わらない場合は、変更したコードのミスとは限りません。必要な入力を控えたうえで、アプリ内の初期化を使ってソースの内容を確認します。",
@@ -775,6 +983,10 @@
       "translation": "Comienza la preparación de Flutter en clase"
     },
     {
+      "source": "今日は好きなものノートを仕上げて提出します。このコマでは、教科書のコードは変えません。STEP 08まで書いたコードに、自分のアレンジを加えて仕上げます。最初の10分で、後半に使うFlutter SDKのダウンロードと既存のiOS環境の確認を始めます。授業前に取得しておく必要はありません。",
+      "translation": "Hoy terminaremos el cuaderno de favoritos y lo entregaremos. En esta clase, el libro de texto no tiene cambios de código. Terminarás el trabajo agregando tus propias personalizaciones al código que escribiste hasta el STEP 08. En los primeros 10 minutos comenzaremos a descargar el SDK de Flutter que usaremos en la segunda mitad y a verificar el entorno de iOS existente. No es necesario descargarlo antes de la clase."
+    },
+    {
       "source": "<a1>共通資料のSTEP 4〜7</a1>を別のタブで開きます。",
       "translation": "Abre el <a1>STEP 4 a 7 de los materiales comunes</a1> en otra pestaña."
     },
@@ -809,6 +1021,10 @@
     {
       "source": "提出に残るアレンジを作る",
       "translation": "Crea personalizaciones que se conserven en la entrega"
+    },
+    {
+      "source": "コードは変えません。Monaca クラウド IDEへ戻り、自分の好きなものノートを仕上げます。既に扱った文字・色・初期データから変更箇所を選び、どんなものが好きで、なぜ好きなのかが伝わる内容にします。",
+      "translation": "Este STEP no tiene cambios de código. Regresa a Monaca クラウド IDE y termina tu propio cuaderno de favoritos. Elige las partes a modificar entre los textos, colores y datos iniciales que ya manejamos, para que transmita qué cosas te gustan y por qué te gustan."
     },
     {
       "source": "確認方法",
@@ -875,6 +1091,10 @@
       "translation": "Verifica el funcionamiento y la URL de importación"
     },
     {
+      "source": "コードは変えません。ソースの初期の内容が表示された状態から完成確認を始めます。必要な入力は内容を控えて、先生と確認してから初期化します。",
+      "translation": "Este STEP no tiene cambios de código. Comienza la comprobación final desde el estado en que se muestra el contenido inicial del código fuente. Anota los datos ingresados que necesites y realiza el reinicio tras confirmarlo con tu docente."
+    },
+    {
       "source": "一覧の各行から詳細へ進み、名前・種類・理由が一致することを確認します。",
       "translation": "Avanza al detalle desde cada fila de la lista y confirma que el nombre, el tipo y la razón coincidan."
     },
@@ -923,6 +1143,10 @@
       "translation": "Entrega y verifica el estado de preparación"
     },
     {
+      "source": "コードは変えません。先生が授業中に案内する提出先・締め切りを確認し、自分の好きなものノートで発行した公開URLを提出します。まだ案内がない場合は、URLを控えて先生へ確認します。",
+      "translation": "Este STEP no tiene cambios de código. Comprueba el lugar de entrega y la fecha límite que indique tu docente durante la clase, y entrega la URL de importación que generaste para tu cuaderno de favoritos. Si aún no hay aviso, anota la URL y consúltalo con tu docente."
+    },
+    {
       "source": "通常版MonacaのFreeプランではZIPを学生の提出物にしません。先生は公開URLから取り込み、初期データと操作を確認します。公開中の自分のプロジェクトは提出後に削除しません。",
       "translation": "En el plan Free de la versión estándar de Monaca, no se usan archivos ZIP para las entregas de los estudiantes. El docente importa el proyecto mediante la URL de importación y verifica los datos iniciales y el funcionamiento. No elimines tu proyecto publicado después de la entrega."
     },
@@ -945,6 +1169,10 @@
     {
       "source": "アレンジできる場所を確かめる",
       "translation": "Verifica los lugares que puedes personalizar"
+    },
+    {
+      "source": "コードは変えません。最後に提出したソースを見ながら、次の3点を確かめます。",
+      "translation": "Este STEP no tiene cambios de código. Por último, mientras miras el código fuente entregado, verifica los siguientes 3 puntos."
     },
     {
       "source": "どのファイルの、どの文字・色・初期データを変更したか。",

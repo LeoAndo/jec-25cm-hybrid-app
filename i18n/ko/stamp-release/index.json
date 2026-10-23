@@ -151,6 +151,10 @@
       "translation": "이 단원의 프로젝트는 <code>F02StampRelease</code>입니다. 이 교재에 시작 코드와 작성·실행 절차를 싣고 있습니다. 이미 만들어 둔 자신의 스탬프북에서 계속 진행해도 괜찮습니다. Web 기초와 Java/Swift 지식을 비교하면서 읽습니다."
     },
     {
+      "source": "STEP 00では開始コードの全体を載せ、STEP 01からは、前のSTEPのコードから変える箇所だけを載せています。前から順に、本文が示す場所を書き換えて進みます。授業を休んだなどで途中から合流するときは、先生に伝えて、前のSTEPまでのコードを受け取ってから進みます。",
+      "translation": "STEP 00에서는 시작 코드 전체를 싣고, STEP 01부터는 이전 STEP의 코드에서 변경하는 부분만 싣고 있습니다. 앞에서부터 순서대로, 본문이 가리키는 위치를 수정하며 진행합니다. 수업을 결석하는 등의 이유로 중간부터 합류할 때는 선생님께 알리고, 이전 STEP까지의 코드를 받은 뒤에 진행합니다."
+    },
+    {
       "source": "STEP 00 · コマ12",
       "translation": "STEP 00 · 12차시"
     },
@@ -169,6 +173,14 @@
     {
       "source": "<code>lib/main.dart</code>を下の開始コードへそろえます。自分が変えた文字・色は先に控えます。<code>pubspec.yaml</code>の<code>dependencies</code>側のFlutter SDKは残し、<code>dev_dependencies</code>側に<code>flutter_test</code>のひな形がある場合はそのブロックだけ除きます。<code>test/</code>のひな形も生成されていた場合だけ除き、<code>flutter_lints</code>は残します。",
       "translation": "<code>lib/main.dart</code>를 아래의 시작 코드와 일치시킵니다. 자신이 변경한 텍스트와 색상은 미리 메모해 둡니다. <code>pubspec.yaml</code>의 <code>dependencies</code> 쪽에 있는 Flutter SDK는 남겨 두고, <code>dev_dependencies</code> 쪽에 <code>flutter_test</code> 템플릿 코드가 있다면 해당 블록만 제거합니다. <code>test/</code> 템플릿 코드도 생성되어 있는 경우에만 제거하고, <code>flutter_lints</code>는 남겨 둡니다."
+    },
+    {
+      "source": "コード欄の見出しには、ファイルのパスと、変え方を書きます。「追加」は、本文が示す行の下（または上）に書き足します。「置き換え」は、本文が示す範囲だけを書き換え、ほかの行は残します。「全体を置き換える」は、そのファイルの中身をすべて置き換えます。",
+      "translation": "코드 블록의 제목에는 파일 경로와 변경 방법을 적습니다. '추가'는 본문이 가리키는 줄의 아래(또는 위)에 덧붙여 씁니다. '교체'는 본문이 가리키는 범위만 바꿔 쓰고, 나머지 줄은 남겨 둡니다. '파일 전체 교체'는 해당 파일의 내용을 모두 교체합니다."
+    },
+    {
+      "source": "lib/main.dart · 全体を置き換える",
+      "translation": "lib/main.dart · 파일 전체 교체"
     },
     {
       "source": "<code>Terminal &gt; New Terminal</code>で<code>flutter pub get</code>を実行し、<code>Flutter: Launch Emulator</code>で既存のiOSシミュレータを起動します。<code>flutter devices</code>でIDを読み、<code>flutter run -d 端末ID</code>で実行します。端末IDは表示された値へ置き換えます。",
@@ -247,6 +259,34 @@
       "translation": "뒤로 가기 버튼은 <code>Navigator.pop</code>으로 입력 화면을 닫습니다. <code>PopScope</code>의 <code>canPop</code>은 뒤로 가기를 허용하는 설정이며, 지금은 <code>true</code>입니다. 저장을 구현하는 단계에서 처리 중 뒤로 가기 동작을 제어하기 위해 사용합니다. 내용을 입력한 뒤 뒤로 갔다가 다시 열었을 때, 새로운 <code>State</code>가 되어 입력란이 비어 있는지 확인합니다."
     },
     {
+      "source": "このSTEPで書くコードには、後のSTEPで使う部分も先に入れてあります。空欄を確かめて<code>message</code>へ文を入れる<code>submit</code>はSTEP 02で、入力画面から一覧へ習慣を渡す<code>onSave</code>と、渡された習慣を一覧へ加える<code>addHabit</code>はSTEP 03で使います。<code>onSave</code>は<code>AddHabitPage</code>の必須の名前付き引数なので、一覧の<code>openAdd</code>は今から<code>addHabit</code>を渡します。追加するボタンの<code>onPressed</code>が<code>null</code>なので、このSTEPではどれも呼ばれません。<code>TextField</code>の<code>enabled: true</code>は入力を受け付ける指定です。<code>canPop</code>と同じく今は<code>true</code>で、保存を入れる段階で、保存中の入力を止めるために使います。",
+      "translation": "이번 STEP에서 작성하는 코드에는 이후 STEP에서 사용할 부분도 미리 포함되어 있습니다. 빈칸을 확인하여 <code>message</code>에 문구를 넣는 <code>submit</code>은 STEP 02에서, 입력 화면에서 목록으로 습관을 전달하는 <code>onSave</code>와 전달받은 습관을 목록에 추가하는 <code>addHabit</code>은 STEP 03에서 사용합니다. <code>onSave</code>는 <code>AddHabitPage</code>의 필수 명명된 매개변수이므로 목록의 <code>openAdd</code>는 지금부터 <code>addHabit</code>을 전달합니다. 「追加する」 (추가하기) 버튼의 <code>onPressed</code>가 <code>null</code>이므로 이 STEP에서는 어느 것도 호출되지 않습니다. <code>TextField</code>의 <code>enabled: true</code>는 입력을 허용하는 설정입니다. <code>canPop</code>과 마찬가지로 지금은 <code>true</code>이며, 저장을 구현하는 단계에서 저장 중 입력을 막기 위해 사용합니다."
+    },
+    {
+      "source": "<code>lib/main.dart</code>を3か所変えます。まず、<code>_StampBoardPageState</code>の中で、<code>changeStamp</code>の関数を閉じる<code>}</code>の下に、1行空けて次のコードを追加します。下の<code>openDetail</code>との間も1行空けます。",
+      "translation": "<code>lib/main.dart</code>를 3곳 변경합니다. 먼저 <code>_StampBoardPageState</code> 안에서 <code>changeStamp</code> 함수를 닫는 <code>}</code> 아래에 1줄을 비우고 다음 코드를 추가합니다. 아래의 <code>openDetail</code>과의 사이도 1줄 비웁니다."
+    },
+    {
+      "source": "lib/main.dart · 追加 · changeStamp の閉じかっこの下",
+      "translation": "lib/main.dart · 추가 · changeStamp의 닫는 괄호 아래"
+    },
+    {
+      "source": "次に、一覧の<code>build</code>の中で、合計を表示する<code>Container</code>の下にある<code>const SizedBox(height: 20),</code>の下に、次のコードを追加します。習慣のカードを並べる<code>for</code>の行の上になります。",
+      "translation": "다음으로 목록의 <code>build</code> 안에서 합계를 표시하는 <code>Container</code> 아래에 있는 <code>const SizedBox(height: 20),</code> 아래에 다음 코드를 추가합니다. 습관 카드를 나열하는 <code>for</code> 줄의 위가 됩니다."
+    },
+    {
+      "source": "lib/main.dart · 追加 · 合計の下の const SizedBox(height: 20), の下",
+      "translation": "lib/main.dart · 추가 · 합계 아래의 const SizedBox(height: 20), 아래"
+    },
+    {
+      "source": "最後に、ファイルの末尾に、1行空けて次のコードを追加します。入力画面の<code>AddHabitPage</code>です。",
+      "translation": "마지막으로 파일 맨 끝에 1줄을 비우고 다음 코드를 추가합니다. 입력 화면인 <code>AddHabitPage</code>입니다."
+    },
+    {
+      "source": "lib/main.dart · 追加 · ファイルの末尾",
+      "translation": "lib/main.dart · 추가 · 파일 맨 끝"
+    },
+    {
       "source": "Androidの<code>EditText</code>やiOSの<code>UITextField</code>から文字を読む場面に対応します。Flutterでは<code>controller</code>を<code>State</code>に保持し、画面が終わるときに解放します。入力欄を開き直しても残したい場合は別の場所へ保存が必要ですが、まだ行いません。",
       "translation": "Android의 <code>EditText</code>나 iOS의 <code>UITextField</code>에서 텍스트를 읽어 오는 상황에 해당합니다. Flutter에서는 <code>controller</code>를 <code>State</code>에 보관하고 화면이 종료될 때 해제합니다. 입력란을 다시 열어도 입력 내용을 유지하고 싶다면 다른 위치에 저장해야 하지만, 아직은 구현하지 않습니다."
     },
@@ -265,6 +305,18 @@
     {
       "source": "追加するボタンの<code>onPressed</code>へ<code>submit</code>を渡します。括弧を付けた<code>submit()</code>の実行結果ではなく、押したときに呼ぶ関数を渡します。",
       "translation": "「追加する」 (추가하기) 버튼의 <code>onPressed</code>에 <code>submit</code>을 전달합니다. 괄호를 붙인 <code>submit()</code>의 실행 결과가 아니라, 버튼을 눌렀을 때 호출할 함수를 전달합니다."
+    },
+    {
+      "source": "<code>lib/main.dart</code>で、入力画面の<code>build</code>の最後にある<code>FilledButton(onPressed: null, child: const Text('追加する')),</code>の1行を、次の1行に置き換えます。",
+      "translation": "<code>lib/main.dart</code>에서 입력 화면의 <code>build</code> 맨 끝에 있는 <code>FilledButton(onPressed: null, child: const Text('追加する')),</code>(추가하기) 1줄을 다음 1줄로 교체합니다."
+    },
+    {
+      "source": "lib/main.dart · 置き換え · FilledButton(onPressed: null, …) の1行",
+      "translation": "lib/main.dart · 교체 · FilledButton(onPressed: null, …) 1줄"
+    },
+    {
+      "source": "STEP 01で書いた<code>submit</code>では、2つの<code>controller.text</code>を<code>trim</code>して前後の空白を除き、どちらかの<code>isEmpty</code>が<code>true</code>ならメッセージを表示して<code>return</code>します。今回は入力を確認しましたという文までで、一覧への追加は次のSTEPです。",
+      "translation": "STEP 01에서 작성한 <code>submit</code>에서는 두 <code>controller.text</code>를 <code>trim</code>하여 앞뒤 공백을 제거하고, 둘 중 하나의 <code>isEmpty</code>가 <code>true</code>이면 메시지를 표시하고 <code>return</code>합니다. 이번에는 입력을 확인했다는 문구까지만 표시하며, 목록에 추가하는 작업은 다음 STEP에서 진행합니다."
     },
     {
       "source": "両方を空にして追加するを押します。",
@@ -303,6 +355,18 @@
       "translation": "입력 확인 후에 <code>Habit</code>을 만들어 <code>widget.onSave</code>에 전달합니다. <code>onSave</code>는 부모 위젯이 입력 화면에 전달한 함수이며, 이 단계에서는 <code>void Function(Habit)</code> 타입입니다. \"<code>Habit</code>을 받아 결과 값을 반환하지 않는 처리\"라는 의미입니다."
     },
     {
+      "source": "<code>lib/main.dart</code>で、<code>submit</code>の最後にある<code>setState(() {</code>の行から、<code>message = '入力を確認しました：$name';</code>の下の<code>});</code>の行までの3行を、次の2行に置き換えます。上の<code>if</code>で空欄を確かめる部分は残します。",
+      "translation": "<code>lib/main.dart</code>에서 <code>submit</code> 맨 끝에 있는 <code>setState(() {</code> 줄부터 <code>message = '入力を確認しました：$name';</code>(입력을 확인했습니다: $name) 아래의 <code>});</code> 줄까지의 3줄을 다음 2줄로 교체합니다. 위쪽의 <code>if</code>로 빈칸을 확인하는 부분은 남겨 둡니다."
+    },
+    {
+      "source": "lib/main.dart · 置き換え · submit の最後の setState(() { から }); まで",
+      "translation": "lib/main.dart · 교체 · submit 맨 끝의 setState(() { 부터 }); 까지"
+    },
+    {
+      "source": "STEP 01で書いた親の<code>addHabit</code>では、<code>setState</code>の中で<code>habits.add</code>を呼びます。入力画面は<code>Navigator.pop</code>で閉じ、下に残っている一覧を表示します。<code>widget</code>はこの<code>State</code>に対応する<code>AddHabitPage</code>の設定を読むためのプロパティです。",
+      "translation": "STEP 01에서 작성한 부모 위젯의 <code>addHabit</code>에서는 <code>setState</code> 안에서 <code>habits.add</code>를 호출합니다. 입력 화면은 <code>Navigator.pop</code>으로 닫고, 아래에 남아 있던 목록을 표시합니다. <code>widget</code>은 이 <code>State</code>에 해당하는 <code>AddHabitPage</code>의 설정을 읽기 위한 프로퍼티입니다."
+    },
+    {
       "source": "1件追加し、一覧が4件になったことを確認します。",
       "translation": "항목 1개를 추가하고 목록이 4개가 되었는지 확인합니다."
     },
@@ -337,6 +401,10 @@
     {
       "source": "入力の題材をアレンジする",
       "translation": "입력 주제 어레인지하기"
+    },
+    {
+      "source": "コードは変えません。STEP 03まで書いたコードが、第12コマ終了時の基準です。",
+      "translation": "코드는 변경하지 않습니다. STEP 03까지 작성한 코드가 12차시 종료 시점의 기준입니다."
     },
     {
       "source": "名前と理由の入力例、見出し、カードの初期データを自分の題材へ変えます。個人的な体験を開示する必要はなく、架空の習慣でも構いません。",
@@ -399,12 +467,20 @@
       "translation": "Visual Studio Code에서 동일한 스탬프북을 엽니다. 시작 상태는 \"입력으로 추가할 수 있지만 재시작하면 사라진다\"입니다. 오늘은 기록을 기기에 남깁니다."
     },
     {
+      "source": "このSTEPでは、コードは変えません。保存の処理を書く前に、完了を待つ処理の流れを読みます。",
+      "translation": "이번 STEP에서는 코드를 변경하지 않습니다. 저장 처리를 작성하기 전에, 완료를 기다리는 처리의 흐름을 읽습니다."
+    },
+    {
       "source": "この単元の新概念は<strong>非同期処理と、その完了を待つ<code>async</code> / <code>await</code></strong>です。Dartの<code>Future</code>は、後で完了する処理の結果を表します。<code>Future&lt;bool&gt;</code>なら、完了後に<code>true</code>か<code>false</code>を受け取る形です。",
       "translation": "이번 단원의 새로운 개념은 <strong>비동기 처리(非同期処理)와 그 완료를 기다리는 <code>async</code> / <code>await</code></strong>입니다. Dart의 <code>Future</code>는 나중에 완료되는 처리의 결과를 나타냅니다. <code>Future&lt;bool&gt;</code>라면 완료 후에 <code>true</code> 또는 <code>false</code>를 전달받는 형태입니다."
     },
     {
       "source": "<code>async</code>を付けた関数の中では<code>await</code>が使えます。<code>await</code>では、その処理の完了後に続きへ進みます。画面全体を同期的に止めて待つのではなく、待っている間も画面を表示できます。保存の完了前に「保存した」と表示したり、入力を消したりしない順番を作ります。",
       "translation": "<code>async</code>가 붙은 함수 안에서는 <code>await</code>를 사용할 수 있습니다. <code>await</code>에서는 해당 처리가 완료된 뒤에 다음으로 진행합니다. 화면 전체를 동기적으로 멈추고 기다리는 것이 아니라, 기다리는 동안에도 화면을 계속 표시할 수 있습니다. 저장이 완료되기 전에 \"저장 완료\"라고 표시하거나 입력을 지우지 않는 순서를 구성합니다."
+    },
+    {
+      "source": "次は流れを読む抜粋で、このSTEPではまだ追加しません。次のSTEPでパッケージを加え、コードを書き換えます。",
+      "translation": "다음은 흐름을 읽기 위한 발췌 코드이며, 이번 STEP에서는 아직 추가하지 않습니다. 다음 STEP에서 패키지를 추가하고 코드를 수정합니다."
     },
     {
       "source": "Javaの同期的な戻り値と比較し、今回は<code>Future</code>の完了を待って結果を得る点を新しく扱います。Java／Swiftの非同期APIを履修済みとは仮定しません。既知の順次処理から「完了後の続き」と「待機中の画面」を区別します。",
@@ -423,12 +499,40 @@
       "translation": "문자열 리스트에 저장하기"
     },
     {
+      "source": "まず<code>pubspec.yaml</code>の<code>dependencies</code>へ<code>shared_preferences: 2.5.5</code>を加えます。<code>dependencies:</code>の行から<code>sdk: flutter</code>の行までの3行を、次の4行に置き換えます。<code>dependencies</code>は二重に作らず、<code>shared_preferences</code>の行は<code>flutter:</code>と同じ字下げにします。ほかの設定は残します。",
+      "translation": "먼저 <code>pubspec.yaml</code>의 <code>dependencies</code>에 <code>shared_preferences: 2.5.5</code>를 추가합니다. <code>dependencies:</code> 줄부터 <code>sdk: flutter</code> 줄까지의 3줄을 다음 4줄로 교체합니다. <code>dependencies</code>는 중복해서 만들지 않고, <code>shared_preferences</code> 줄은 <code>flutter:</code>와 같은 들여쓰기로 맞춥니다. 다른 설정은 유지합니다."
+    },
+    {
+      "source": "pubspec.yaml · 置き換え · dependencies: から sdk: flutter まで",
+      "translation": "pubspec.yaml · 교체 · dependencies: 부터 sdk: flutter 까지"
+    },
+    {
+      "source": "実行中のアプリを<code>q</code>で終了し、<code>flutter pub get</code>を実行します。新しいネイティブプラグインを加えたのでホットリロードだけで済ませず、下の<code>lib/main.dart</code>の書き換えを終えてから、<code>flutter run -d 端末ID</code>で起動し直します。",
+      "translation": "실행 중인 앱을 <code>q</code>로 종료하고, <code>flutter pub get</code>을 실행합니다. 새로운 네이티브 플러그인을 추가했으므로 핫 리로드만으로 끝내지 말고, 아래의 <code>lib/main.dart</code> 수정을 마친 뒤 <code>flutter run -d 端末ID</code>(기기 ID)로 다시 시작합니다."
+    },
+    {
       "source": "起動し直さずに<code>r</code>で反映すると、ターミナルにはエラーが出ませんが、スタンプを押しても習慣を追加しても「保存できませんでした。」で始まる文が出るだけで、保存できません。続けて<code>R</code>を押すと、画面全体が赤くなり<code>Bad state: The SharedPreferencesAsyncPlatform instance must be set.</code>と出ます。<code>r</code>と<code>R</code>はDartのコードを入れ替えるだけで、アプリのビルドをやり直しません。新しいプラグインは、ビルドし直したアプリにだけ組み込まれます。そのときは<code>q</code>で終了し、<code>flutter run -d 端末ID</code>で起動し直します。",
       "translation": "다시 시작하지 않고 <code>r</code>로 반영하면 터미널에 오류는 출력되지 않지만, 스탬프를 누르거나 습관을 추가해도 「保存できませんでした。」 (저장하지 못했습니다.)로 시작하는 문구만 표시될 뿐 저장되지 않습니다. 이어서 <code>R</code>을 누르면 화면 전체가 빨간색으로 바뀌며 <code>Bad state: The SharedPreferencesAsyncPlatform instance must be set.</code> 오류가 나타납니다. <code>r</code>과 <code>R</code>은 Dart 코드만 교체할 뿐 앱 빌드를 다시 수행하지 않습니다. 새로운 플러그인은 다시 빌드한 앱에만 포함됩니다. 그럴 때는 <code>q</code>로 종료한 뒤 <code>flutter run -d 端末ID</code>(기기 ID)로 다시 실행합니다."
     },
     {
       "source": "<code>import</code>でパッケージを読み込み、<code>State</code>に<code>SharedPreferencesAsync</code>を1つ持ちます。保存キー<code>storageKey</code>も1か所です。このAPIだけを使い、旧APIやキャッシュ付きAPIを混ぜません。",
       "translation": "<code>import</code>로 패키지를 불러오고, <code>State</code>에 <code>SharedPreferencesAsync</code>를 1개 둡니다. 저장 키 <code>storageKey</code>도 한곳에 정의합니다. 이 API만 사용하며, 이전 API나 캐시가 포함된 API를 혼용하지 않습니다."
+    },
+    {
+      "source": "<code>lib/main.dart</code>は12か所変えます。ファイルの先頭と一覧の画面で4か所、入力画面で8か所です。まず、ファイルの先頭の<code>import</code>の行から<code>const stampGoal = 5;</code>の行までの3行を、次のコードに置き換えます。<code>import</code>と<code>storageKey</code>の行が1行ずつ増えます。",
+      "translation": "<code>lib/main.dart</code>는 12곳을 변경합니다. 파일 맨 앞과 목록 화면에서 4곳, 입력 화면에서 8곳입니다. 먼저 파일 맨 앞의 <code>import</code> 줄부터 <code>const stampGoal = 5;</code> 줄까지의 3줄을 다음 코드로 교체합니다. <code>import</code>와 <code>storageKey</code> 줄이 1줄씩 늘어납니다."
+    },
+    {
+      "source": "lib/main.dart · 置き換え · ファイルの先頭から const stampGoal = 5; まで",
+      "translation": "lib/main.dart · 교체 · 파일 맨 앞부터 const stampGoal = 5; 까지"
+    },
+    {
+      "source": "次に、<code>_StampBoardPageState</code>の<code>final List&lt;Habit&gt; habits = [</code>の行から、<code>addHabit</code>の関数を閉じる<code>}</code>の行までを、次のコードに置き換えます。間にある<code>changeStamp</code>も置き換えます。その下の<code>openAdd</code>は残します。初期の3件は、<code>createInitialHabits</code>の中へ移ります。STEP 04で初期の習慣を自分の題材に変えた場合は、置き換えた後の<code>createInitialHabits</code>の<code>Habit</code>の行を、自分の題材に書き直します。",
+      "translation": "다음으로 <code>_StampBoardPageState</code>의 <code>final List&lt;Habit&gt; habits = [</code> 줄부터 <code>addHabit</code> 함수를 닫는 <code>}</code> 줄까지를 다음 코드로 교체합니다. 그 사이에 있는 <code>changeStamp</code>도 교체합니다. 그 아래의 <code>openAdd</code>는 남겨 둡니다. 초기 3개는 <code>createInitialHabits</code> 안으로 옮겨집니다. STEP 04에서 초기 습관을 자신의 주제로 바꾼 경우에는, 교체한 뒤의 <code>createInitialHabits</code>에 있는 <code>Habit</code> 줄을 자신의 주제로 다시 작성합니다."
+    },
+    {
+      "source": "lib/main.dart · 置き換え · final List&lt;Habit&gt; habits = [ から、addHabit の閉じかっこまで",
+      "translation": "lib/main.dart · 교체 · final List&lt;Habit&gt; habits = [ 부터 addHabit의 닫는 괄호까지"
     },
     {
       "source": "名前・理由・回数を文字列リストにして保存します。1件は3要素で、2件なら6要素です。回数は<code>count.toString()</code>で文字列へ変えます。JSONは使いません。",
@@ -459,8 +563,88 @@
       "translation": "<code>isSaving</code>을 <code>true</code>로 설정하여 버튼과 입력란을 비활성화하고, 대기 문구와 <code>LinearProgressIndicator</code>를 표시합니다. 예외는 <code>try</code> / <code>catch</code>로 처리하며, 실패 시에는 기존 목록을 유지합니다. <code>finally</code>는 성공·실패 여부와 관계없이 대기 상태를 원래대로 되돌리는 위치입니다."
     },
     {
+      "source": "一覧の<code>build</code>では、合計の下の<code>const SizedBox(height: 20),</code>の下にある<code>FilledButton.icon(</code>の行から、一覧のいちばん下の<code>const Text('この段階ではアプリを終了すると回数は0に戻ります。'),</code>の行までを、次のコードに置き換えます。その上の<code>const SizedBox(height: 20),</code>と、下の<code>],</code>は残します。",
+      "translation": "목록의 <code>build</code>에서는 합계 아래의 <code>const SizedBox(height: 20),</code> 아래에 있는 <code>FilledButton.icon(</code> 줄부터 목록 맨 아래의 <code>const Text('この段階ではアプリを終了すると回数は0に戻ります。'),</code>(이 단계에서는 앱을 종료하면 횟수가 0으로 돌아갑니다.) 줄까지를 다음 코드로 교체합니다. 그 위의 <code>const SizedBox(height: 20),</code>와 아래의 <code>],</code>는 남겨 둡니다."
+    },
+    {
+      "source": "lib/main.dart · 置き換え · 「習慣を追加」の FilledButton.icon( から、一覧の最後の Text まで",
+      "translation": "lib/main.dart · 교체 · 「習慣を追加」 (습관 추가)의 FilledButton.icon( 부터 목록 마지막의 Text 까지"
+    },
+    {
+      "source": "<code>buildHabitCard</code>では、<code>Wrap</code>の<code>children</code>の中の3つのボタンを置き換えます。<code>FilledButton.icon(</code>の行から、「詳しく見る」の<code>TextButton</code>を閉じる<code>),</code>の行までです。どのボタンも、読込中や保存中は<code>onPressed</code>が<code>null</code>になり、押せなくなります。",
+      "translation": "<code>buildHabitCard</code>에서는 <code>Wrap</code>의 <code>children</code> 안에 있는 3개의 버튼을 교체합니다. <code>FilledButton.icon(</code> 줄부터 「詳しく見る」 (자세히 보기)의 <code>TextButton</code>을 닫는 <code>),</code> 줄까지입니다. 어느 버튼이든 불러오는 중이나 저장 중에는 <code>onPressed</code>가 <code>null</code>이 되어 누를 수 없게 됩니다."
+    },
+    {
+      "source": "lib/main.dart · 置き換え · Wrap の中の3つのボタン",
+      "translation": "lib/main.dart · 교체 · Wrap 안의 3개 버튼"
+    },
+    {
       "source": "<code>onSave</code>の型は<code>Future&lt;bool&gt; Function(Habit)</code>へ変わり、入力画面の<code>submit</code>も<code>async</code>になります。<code>await</code>で親の保存を待ち、成功したときだけ<code>pop</code>します。失敗なら入力を消しません。<code>await</code>の後は<code>mounted</code>を確認し、既に破棄された<code>State</code>へ<code>setState</code>や画面遷移を行わないようにします。保存中は戻るボタンと<code>PopScope</code>の<code>canPop</code>も無効にします。",
       "translation": "<code>onSave</code>의 타입은 <code>Future&lt;bool&gt; Function(Habit)</code>으로 변경되고, 입력 화면의 <code>submit</code>도 <code>async</code>가 됩니다. <code>await</code>로 부모의 저장을 기다리고, 성공했을 때만 <code>pop</code>합니다. 실패한 경우에는 입력을 지우지 않습니다. <code>await</code> 이후에는 <code>mounted</code>를 확인하여 이미 폐기된 <code>State</code>에 <code>setState</code>나 화면 전환을 실행하지 않도록 합니다. 저장 중에는 뒤로 가기 버튼과 <code>PopScope</code>의 <code>canPop</code>도 비활성화합니다."
+    },
+    {
+      "source": "入力画面の8か所です。<code>AddHabitPage</code>の<code>final void Function(Habit) onSave;</code>の1行を、次の1行に置き換えます。",
+      "translation": "입력 화면의 8곳입니다. <code>AddHabitPage</code>의 <code>final void Function(Habit) onSave;</code> 1줄을 다음 1줄로 교체합니다."
+    },
+    {
+      "source": "lib/main.dart · 置き換え · final void Function(Habit) onSave; の1行",
+      "translation": "lib/main.dart · 교체 · final void Function(Habit) onSave; 1줄"
+    },
+    {
+      "source": "<code>_AddHabitPageState</code>の<code>final reasonController = TextEditingController();</code>の下に、次の1行を追加します。",
+      "translation": "<code>_AddHabitPageState</code>의 <code>final reasonController = TextEditingController();</code> 아래에 다음 1줄을 추가합니다."
+    },
+    {
+      "source": "lib/main.dart · 追加 · final reasonController = TextEditingController(); の下",
+      "translation": "lib/main.dart · 추가 · final reasonController = TextEditingController(); 아래"
+    },
+    {
+      "source": "<code>void submit() {</code>の行から、その関数を閉じる<code>}</code>の行までを、次のコードに置き換えます。",
+      "translation": "<code>void submit() {</code> 줄부터 그 함수를 닫는 <code>}</code> 줄까지를 다음 코드로 교체합니다."
+    },
+    {
+      "source": "lib/main.dart · 置き換え · void submit() { から、その閉じかっこまで",
+      "translation": "lib/main.dart · 교체 · void submit() { 부터 그 닫는 괄호까지"
+    },
+    {
+      "source": "入力画面の<code>build</code>では、<code>canPop: true,</code>の1行を、次の1行に置き換えます。",
+      "translation": "입력 화면의 <code>build</code>에서는 <code>canPop: true,</code> 1줄을 다음 1줄로 교체합니다."
+    },
+    {
+      "source": "lib/main.dart · 置き換え · canPop: true, の1行",
+      "translation": "lib/main.dart · 교체 · canPop: true, 1줄"
+    },
+    {
+      "source": "<code>leading</code>の<code>IconButton</code>にある<code>onPressed: () =&gt; Navigator.pop(context),</code>の1行を、次の1行に置き換えます。",
+      "translation": "<code>leading</code>의 <code>IconButton</code>에 있는 <code>onPressed: () =&gt; Navigator.pop(context),</code> 1줄을 다음 1줄로 교체합니다."
+    },
+    {
+      "source": "lib/main.dart · 置き換え · 戻るボタンの onPressed の1行",
+      "translation": "lib/main.dart · 교체 · 뒤로 가기 버튼의 onPressed 1줄"
+    },
+    {
+      "source": "2つの<code>TextField</code>にある<code>enabled: true,</code>の行を、どちらも次の1行に置き換えます。",
+      "translation": "2개의 <code>TextField</code>에 있는 <code>enabled: true,</code> 줄을 둘 다 다음 1줄로 교체합니다."
+    },
+    {
+      "source": "lib/main.dart · 置き換え · 2つの enabled: true, の行",
+      "translation": "lib/main.dart · 교체 · 2개의 enabled: true, 줄"
+    },
+    {
+      "source": "入力画面の<code>Text(message),</code>の下に、次の1行を追加します。",
+      "translation": "입력 화면의 <code>Text(message),</code> 아래에 다음 1줄을 추가합니다."
+    },
+    {
+      "source": "lib/main.dart · 追加 · 入力画面の Text(message), の下",
+      "translation": "lib/main.dart · 추가 · 입력 화면의 Text(message), 아래"
+    },
+    {
+      "source": "最後に、<code>FilledButton(onPressed: submit, child: const Text('追加する')),</code>の1行を、次のコードに置き換えます。ボタンの文字は<code>追加して保存</code>に変わります。",
+      "translation": "마지막으로 <code>FilledButton(onPressed: submit, child: const Text('追加する')),</code>(추가하기) 1줄을 다음 코드로 교체합니다. 버튼의 글자는 <code>追加して保存</code>(추가하고 저장)으로 바뀝니다."
+    },
+    {
+      "source": "lib/main.dart · 置き換え · 「追加する」の FilledButton の1行",
+      "translation": "lib/main.dart · 교체 · 「追加する」 (추가하기)의 FilledButton 1줄"
     },
     {
       "source": "1件追加して「この端末に保存しました。」を確認します。このSTEPは保存だけで、起動時に読む処理はまだありません。再起動すると初期3件を表示する段階です。再起動した後の初期3件の画面でスタンプを押すか習慣を追加すると、保存内容は表示中の一覧で置き換わり、再起動の前に保存した習慣や回数は残りません。保存した内容をまだ読み込んでいない一覧を、そのまま保存するためです。次のSTEPで読み込めるのは、最後に保存した内容です。",
@@ -487,6 +671,14 @@
       "translation": "시작 시 <code>initState</code>에서 <code>loadHabits</code>를 호출합니다. <code>initState</code> 자체를 <code>async</code>로 만들지 않고 별도의 <code>async</code> 함수로 처리를 분리합니다. 데이터를 읽는 동안에는 <code>isLoading</code>을 <code>true</code>, <code>canSave</code>를 <code>false</code>로 설정하여 초깃값으로 저장 내용을 덮어쓰지 않도록 합니다."
     },
     {
+      "source": "<code>lib/main.dart</code>を3か所変えます。まず、<code>_StampBoardPageState</code>の<code>bool isLoading = false;</code>の行から、<code>initState</code>の関数を閉じる<code>}</code>の行までを、次のコードに置き換えます。<code>isLoading</code>と<code>canSave</code>の最初の値が変わり、<code>initState</code>は<code>loadHabits</code>を呼ぶだけになります。",
+      "translation": "<code>lib/main.dart</code>를 3곳 변경합니다. 먼저 <code>_StampBoardPageState</code>의 <code>bool isLoading = false;</code> 줄부터 <code>initState</code> 함수를 닫는 <code>}</code> 줄까지를 다음 코드로 교체합니다. <code>isLoading</code>과 <code>canSave</code>의 초깃값이 바뀌고, <code>initState</code>는 <code>loadHabits</code>를 호출하기만 하게 됩니다."
+    },
+    {
+      "source": "lib/main.dart · 置き換え · bool isLoading = false; から、initState の閉じかっこまで",
+      "translation": "lib/main.dart · 교체 · bool isLoading = false; 부터 initState의 닫는 괄호까지"
+    },
+    {
       "source": "<code>await preferences.getStringList(storageKey)</code>は未保存なら<code>null</code>です。その場合だけ<code>createInitialHabits</code>を使います。値があれば<code>decodeHabits</code>で3要素ずつ<code>Habit</code>へ戻します。空リストは正しい0件なので、初期3件へ勝手に置き換えません。",
       "translation": "<code>await preferences.getStringList(storageKey)</code>는 저장되지 않은 상태라면 <code>null</code>입니다. 이 경우에만 <code>createInitialHabits</code>를 사용합니다. 값이 있으면 <code>decodeHabits</code>로 3개 요소씩 <code>Habit</code>으로 복원합니다. 빈 리스트는 정상적인 0건이므로 임의로 초기 3개로 바꾸지 않습니다."
     },
@@ -509,6 +701,22 @@
     {
       "source": "不正な保存内容を「未保存」とは扱いません。元の保存キーへ自動で書き込まず、再読み込みと教員への確認を案内します。次のSTEPで本人が選ぶ初期化を作ります。",
       "translation": "올바르지 않은 저장 내용을 \"미저장\"으로 취급하지 않습니다. 원래의 저장 키에 자동으로 덮어쓰지 않고, 다시 읽어 오기와 교수자에게 확인하기를 안내합니다. 다음 STEP에서 사용자가 직접 선택하는 초기화를 구현합니다."
+    },
+    {
+      "source": "次に、<code>createInitialHabits</code>の関数を閉じる<code>}</code>の下に、1行空けて次のコードを追加します。下の<code>saveHabits</code>との間も1行空けます。",
+      "translation": "다음으로 <code>createInitialHabits</code> 함수를 닫는 <code>}</code> 아래에 1줄을 비우고 다음 코드를 추가합니다. 아래의 <code>saveHabits</code>와의 사이도 1줄 비웁니다."
+    },
+    {
+      "source": "lib/main.dart · 追加 · createInitialHabits の閉じかっこの下",
+      "translation": "lib/main.dart · 추가 · createInitialHabits의 닫는 괄호 아래"
+    },
+    {
+      "source": "最後に、一覧の<code>build</code>で、「習慣を追加」の<code>FilledButton.icon</code>を閉じる<code>),</code>の下に、次のコードを追加します。読み込めなかったときだけ表示する、再読み込みのボタンです。",
+      "translation": "마지막으로 목록의 <code>build</code>에서 「習慣を追加」 (습관 추가)의 <code>FilledButton.icon</code>을 닫는 <code>),</code> 아래에 다음 코드를 추가합니다. 불러오지 못했을 때만 표시하는 다시 불러오기 버튼입니다."
+    },
+    {
+      "source": "lib/main.dart · 追加 · 「習慣を追加」の FilledButton.icon の下",
+      "translation": "lib/main.dart · 추가 · 「習慣を追加」 (습관 추가)의 FilledButton.icon 아래"
     },
     {
       "source": "新しい習慣を追加し、何回かスタンプを押します。",
@@ -547,6 +755,30 @@
       "translation": "삭제하는 것은 <code>preferences.remove(storageKey)</code>로 지정한 키 1개뿐입니다. 저장 영역 전체를 비우는 <code>clear</code>는 사용하지 않습니다. 삭제에 성공한 뒤에 초기 <code>Habit</code> 배열로 되돌리고 저장을 다시 활성화합니다. 삭제에 실패하면 기존 목록과 오류 문구를 유지합니다."
     },
     {
+      "source": "<code>lib/main.dart</code>を3か所変えます。まず、<code>loadHabits</code>の<code>catch</code>にある、<code>message = '記録を読み込めませんでした。</code>で始まる1行を、次の1行に置き換えます。読み込めなかったときに、初期化も選べることを案内します。",
+      "translation": "<code>lib/main.dart</code>를 3곳 변경합니다. 먼저 <code>loadHabits</code>의 <code>catch</code>에 있는, <code>message = '記録を読み込めませんでした。</code>(기록을 불러오지 못했습니다.)로 시작하는 1줄을 다음 1줄로 교체합니다. 불러오지 못했을 때 초기화도 선택할 수 있음을 안내합니다."
+    },
+    {
+      "source": "lib/main.dart · 置き換え · loadHabits の catch の message の1行",
+      "translation": "lib/main.dart · 교체 · loadHabits의 catch에 있는 message 1줄"
+    },
+    {
+      "source": "次に、<code>openAdd</code>の関数を閉じる<code>}</code>の下に、1行空けて次のコードを追加します。下の<code>openDetail</code>との間も1行空けます。",
+      "translation": "다음으로 <code>openAdd</code> 함수를 닫는 <code>}</code> 아래에 1줄을 비우고 다음 코드를 추가합니다. 아래의 <code>openDetail</code>과의 사이도 1줄 비웁니다."
+    },
+    {
+      "source": "lib/main.dart · 追加 · openAdd の閉じかっこの下",
+      "translation": "lib/main.dart · 추가 · openAdd의 닫는 괄호 아래"
+    },
+    {
+      "source": "最後に、一覧の<code>build</code>で、いちばん下の<code>const Text('記録はこの端末だけに残ります。提出するAPKに入力済みデータは含まれません。'),</code>の下に、次のコードを追加します。初期化を始めるボタンです。",
+      "translation": "마지막으로 목록의 <code>build</code>에서 맨 아래의 <code>const Text('記録はこの端末だけに残ります。提出するAPKに入力済みデータは含まれません。'),</code>(기록은 이 기기에만 남습니다. 제출하는 APK에는 입력한 데이터가 포함되지 않습니다.) 아래에 다음 코드를 추가합니다. 초기화를 시작하는 버튼입니다."
+    },
+    {
+      "source": "lib/main.dart · 追加 · 一覧の最後の Text の下",
+      "translation": "lib/main.dart · 추가 · 목록 마지막의 Text 아래"
+    },
+    {
       "source": "自分が残す必要のない検証用の記録で、初期化を開いてやめるを押します。記録が残ることを確認します。",
       "translation": "유지할 필요가 없는 테스트용 기록에서 초기화 대화상자를 열고 「やめる」 (취소)를 누릅니다. 기록이 유지되는지 확인합니다."
     },
@@ -577,6 +809,10 @@
     {
       "source": "保存を確かめてアレンジする",
       "translation": "저장을 확인하고 변형하기"
+    },
+    {
+      "source": "コードは変えません。STEP 08まで書いたコードが、第13コマ終了時の基準です。",
+      "translation": "코드는 변경하지 않습니다. STEP 08까지 작성한 코드가 13차시 종료 시점의 기준입니다."
     },
     {
       "source": "入力→保存→詳細→再起動→復元を一続きで確かめます。次に<code>createInitialHabits</code>の名前と理由を自分の題材へ変えます。",
@@ -627,6 +863,10 @@
       "translation": "Visual Studio Code에서 저장 기능이 있는 스탬프북을 엽니다. 오늘은 Android에서 처음 실행하고, 제출할 APK를 만듭니다. 최초 SDK·Gradle 등의 다운로드도 수업 시간 내에 진행합니다."
     },
     {
+      "source": "このSTEPでは、<code>lib/main.dart</code>のコードは変えません。STEP 09までのコードを、Androidで初めて動かします。",
+      "translation": "이번 STEP에서는 <code>lib/main.dart</code>의 코드를 변경하지 않습니다. STEP 09까지의 코드를 Android에서 처음으로 실행합니다."
+    },
+    {
       "source": "<code>flutter doctor -v</code>で<code>Android toolchain</code>の項目を確認します。不足やライセンスの案内がある場合は先生と内容を確認します。",
       "translation": "<code>flutter doctor -v</code>로 <code>Android toolchain</code> 항목을 확인합니다. 부족한 항목이나 라이선스 관련 안내가 있는 경우 교수자와 내용을 확인합니다."
     },
@@ -641,6 +881,10 @@
     {
       "source": "<code>android/gradle/wrapper/gradle-wrapper.properties</code>の<code>distributionUrl</code>を確認します。今回の空テンプレートはGradle 9.3.1です。<code>all.zip</code>の場合は、版を変えず<code>bin.zip</code>へそろえます。この1行だけを次の形にします。",
       "translation": "<code>android/gradle/wrapper/gradle-wrapper.properties</code>의 <code>distributionUrl</code>을 확인합니다. 이번 빈 템플릿은 Gradle 9.3.1입니다. <code>all.zip</code>으로 되어 있다면 버전을 바꾸지 않고 <code>bin.zip</code>으로 일치시킵니다. 이 한 줄만 다음과 같은 형태로 변경합니다."
+    },
+    {
+      "source": "android/gradle/wrapper/gradle-wrapper.properties · 置き換え · distributionUrl の1行",
+      "translation": "android/gradle/wrapper/gradle-wrapper.properties · 교체 · distributionUrl 1줄"
     },
     {
       "source": "教員から同じURLで取得したGradleキャッシュを受け取る場合は、配布された<code>gradle-9.3.1-bin</code>フォルダを<code>~/.gradle/wrapper/dists/</code>の下へ配置します。ハッシュ名の階層、展開済みディレクトリ、<code>.zip.ok</code>を保ち、既存の別版を上書きしません。既に同じフォルダがある場合は先生へ確認します。<code>all.zip</code>のキャッシュとは共用できません。",
@@ -665,6 +909,10 @@
     {
       "source": "提出形式のAPKを作る",
       "translation": "제출 형식의 APK 만들기"
+    },
+    {
+      "source": "コードは変えません。STEP 09までのコードから、提出するAPKを作ります。",
+      "translation": "코드는 변경하지 않습니다. STEP 09까지의 코드로 제출할 APK를 만듭니다."
     },
     {
       "source": "Androidで一覧・追加・保存・詳細を確認したら、通常の<code>release</code> APKを作ります。最初にソースを保存し、<code>flutter analyze</code>で指摘がないか確認します。",
@@ -697,6 +945,10 @@
     {
       "source": "生成したAPKをインストールする",
       "translation": "생성한 APK 설치하기"
+    },
+    {
+      "source": "コードは変えません。STEP 11で作ったAPKを、そのまま使います。",
+      "translation": "코드는 변경하지 않습니다. STEP 11에서 만든 APK를 그대로 사용합니다."
     },
     {
       "source": "生成したAPKをそのままAndroidエミュレータへ入れます。先に実行中の<code>flutter run</code>を<code>q</code>で終了し、<code>flutter devices</code>でAndroidのIDを確認します。下のAndroid端末IDは実際のIDに置き換えます。",
@@ -747,6 +999,10 @@
       "translation": "소스와 저장 데이터 구분하기"
     },
     {
+      "source": "コードは変えません。APKに入るものと、端末に残る記録を区別します。",
+      "translation": "코드는 변경하지 않습니다. APK에 포함되는 것과 기기에 남는 기록을 구별합니다."
+    },
+    {
       "source": "APKに入るのはビルドされたアプリで、エミュレータへ入力した記録ではありません。教員が別の端末へ初めて入れたとき、学生の入力済みの4件目は出ません。",
       "translation": "APK에 포함되는 것은 빌드된 앱이며, 에뮬레이터에 입력한 기록이 아닙니다. 교수자가 다른 기기에 처음 설치했을 때 학생이 이미 입력한 4번째 항목은 나타나지 않습니다."
     },
@@ -773,6 +1029,10 @@
     {
       "source": "配色を整えてAPKを作り直す",
       "translation": "배색을 다듬고 APK 다시 만들기"
+    },
+    {
+      "source": "コードは変えません。STEP 08まで書いたコードが、第14コマ終了時の基準です。",
+      "translation": "코드는 변경하지 않습니다. STEP 08까지 작성한 코드가 14차시 종료 시점의 기준입니다."
     },
     {
       "source": "配色・余白・題材を調整し、もう一度APKを作ります。ここでは新しい機能を追加せず、既に扱った場所を変えます。",
@@ -827,6 +1087,14 @@
       "translation": "완성 확인 순서 정하기"
     },
     {
+      "source": "Visual Studio Codeで自分のスタンプ帳を開きます。今日は新しい概念を追加せず、作品を仕上げて通常APKを提出します。",
+      "translation": "Visual Studio Code에서 자신의 스탬프북을 엽니다. 오늘은 새로운 개념을 추가하지 않고, 작품을 완성하여 일반 APK를 제출합니다."
+    },
+    {
+      "source": "このコマでは、教科書のコードは変えません。STEP 14までに自分でアレンジしたコードを、上書きせずにそのまま仕上げます。",
+      "translation": "이번 차시에서는 교재의 코드를 변경하지 않습니다. STEP 14까지 직접 어레인지한 코드를 덮어쓰지 않고 그대로 완성합니다."
+    },
+    {
       "source": "確認順を決め、結果を短く控えます。必要な記録は初期化前に別に残します。",
       "translation": "확인 순서를 정하고 결과를 간단히 메모해 둡니다. 필요한 기록은 초기화하기 전에 별도로 보관합니다."
     },
@@ -875,6 +1143,10 @@
       "translation": "자신만의 작품으로 완성하기"
     },
     {
+      "source": "コードは変えません。STEP 15までのコードで、題材と見た目の値を自分で変えて仕上げます。",
+      "translation": "코드는 변경하지 않습니다. STEP 15까지의 코드에서 주제와 겉모습의 값을 직접 바꿔 완성합니다."
+    },
+    {
       "source": "自分の題材に合う名前・理由・見出し・入力例をそろえます。「何を続けたい人が使うアプリか」が初期画面から伝わるようにします。本人の私生活を公開する必要はありません。",
       "translation": "자신만의 주제에 맞는 이름·이유·제목·입력 예시를 갖춥니다. \"어떤 일을 지속하고 싶은 사람이 사용하는 앱인가\"가 초기 화면에서 잘 전달되도록 합니다. 본인의 사생활을 공개할 필요는 없습니다."
     },
@@ -907,6 +1179,10 @@
       "translation": "최종 APK를 확인하고 제출하기"
     },
     {
+      "source": "コードは変えません。STEP 16で仕上げたコードから、最終APKを作ります。",
+      "translation": "코드는 변경하지 않습니다. STEP 16에서 완성한 코드로 최종 APK를 만듭니다."
+    },
+    {
       "source": "ソースを保存し、<code>flutter analyze</code>の指摘を確認して、<code>flutter build apk</code>で最終APKを作ります。生成した<code>app-release.apk</code>そのものをSTEP 12のコマンドでAndroidへ入れ、STEP 15の順で確認します。",
       "translation": "소스를 저장하고 <code>flutter analyze</code>의 지적 사항을 확인한 뒤, <code>flutter build apk</code>로 최종 APK를 만듭니다. 생성된 <code>app-release.apk</code> 자체를 STEP 12의 명령어로 Android에 설치하고 STEP 15의 순서대로 확인합니다."
     },
@@ -937,6 +1213,10 @@
     {
       "source": "変更箇所と動作を確かめる",
       "translation": "변경 부분과 동작 확인하기"
+    },
+    {
+      "source": "コードは変えません。STEP 17で提出したアプリで確かめます。",
+      "translation": "코드는 변경하지 않습니다. STEP 17에서 제출한 앱으로 확인합니다."
     },
     {
       "source": "提出したアプリを動かしながら、次の内容を確かめます。",
@@ -977,6 +1257,10 @@
     {
       "source": "アレンジできる場所を振り返る",
       "translation": "어레인지할 수 있는 부분 돌아보기"
+    },
+    {
+      "source": "コードは変えません。STEP 08まで書いたコードが、この単元の完成版です。",
+      "translation": "코드는 변경하지 않습니다. STEP 08까지 작성한 코드가 이번 단원의 완성판입니다."
     },
     {
       "source": "最後に、既に扱ったアレンジの場所を振り返ります。<code>createInitialHabits</code>の題材、<code>Text</code>の案内、<code>ThemeData</code>の配色、<code>StampMarks</code>の色、<code>Padding</code>や<code>SizedBox</code>の余白を、自分の目的に合わせて変えられます。",
