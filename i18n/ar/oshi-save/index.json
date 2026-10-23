@@ -179,8 +179,24 @@
       "translation": "افتح <code>www/index.html</code> و<code>www/css/style.css</code>. وإذا لم يكن <code>www/js/app.js</code> موجوداً، فأنشئ مجلد <code>js</code> تحت <code>www</code> من خلال عملية إنشاء الملفات، ثم أنشئ ملف <code>app.js</code> داخله."
     },
     {
+      "source": "自分のアレンジがある場合は、変えた文字と色を控えます。3ファイルの中身を、下の開始コードでそれぞれ全体を置き換え、保存してプレビューを再読み込みします。<code>components</code> や <code>res</code> は変更しません。",
+      "translation": "إذا كان لديك تخصيص خاص بك، فاحتفظ بملاحظة للنصوص والألوان التي قمت بتغييرها. استبدل محتوى كل ملف من الملفات الثلاثة بالكامل بالشيفرة الأولية أدناه، ثم احفظها وأعد تحميل المعاينة. لا تعدل مجلدي <code>components</code> أو <code>res</code>."
+    },
+    {
       "source": "3件の名前を押して詳細を開き、左上の戻るボタンで一覧へ戻ります。戻るボタンは、iOS向けの見た目では「＜ 戻る」、Android向けの見た目では左向きの矢印「←」だけです。タイトルと詳細の組み合わせを確かめます。",
       "translation": "اضغط على أسماء العناصر الثلاثة لفتح التفاصيل، ثم ارجع إلى القائمة باستخدام زر الرجوع في أعلى اليسار. يظهر زر الرجوع بالشكل «＜ 戻る» في مظهر iOS، وبشكل سهم يشير لليسار «←» فقط في مظهر Android. تحقق من تطابق العنوان مع التفاصيل."
+    },
+    {
+      "source": "www/index.html · 全体を置き換える",
+      "translation": "www/index.html · استبدال الملف بالكامل"
+    },
+    {
+      "source": "www/css/style.css · 全体を置き換える",
+      "translation": "www/css/style.css · استبدال الملف بالكامل"
+    },
+    {
+      "source": "www/js/app.js · 全体を置き換える",
+      "translation": "www/js/app.js · استبدال الملف بالكامل"
     },
     {
       "source": "開始コードの役割を、次の順で追いましょう。新しいファイル名を <code>detail.html</code> として作る操作は不要です。これは <code>index.html</code> の中の <code>template</code> の<code>id</code>です。",
@@ -255,6 +271,30 @@
       "translation": "إنشاء شاشة الإدخال"
     },
     {
+      "source": "HTMLに、一覧から入力画面を開くボタンと、入力画面の <code>add.html</code> の<code>template</code>を加えます。まず、一覧の説明文 <code>音楽、食べ物、場所。好きなものと理由の記録。</code> の行の下に、ボタンと案内用の段落を足します。",
+      "translation": "أضف إلى HTML زراً يفتح شاشة الإدخال من القائمة، و<code>template</code> الخاص بشاشة الإدخال <code>add.html</code>. أولاً، أضف الزر وفقرة الإرشاد أسفل سطر نص وصف القائمة <code>音楽、食べ物、場所。好きなものと理由の記録。</code>."
+    },
+    {
+      "source": "www/index.html · 追加 · 一覧の説明文 app-description の下",
+      "translation": "www/index.html · إضافة · أسفل نص وصف القائمة app-description"
+    },
+    {
+      "source": "続けて、<code>&lt;template id=\"detail.html\"&gt;</code> の行の上に、入力画面の<code>template</code>を足します。最後の <code>&lt;/template&gt;</code> の下に空行を1行入れ、詳細の<code>template</code>と分けます。名前・種類の <code>input</code> と、好きな理由の <code>textarea</code> を置きます。<code>label</code> の<code>for</code>と入力欄の<code>id</code>が対応します。",
+      "translation": "ثم أضف <code>template</code> الخاص بشاشة الإدخال أعلى سطر <code>&lt;template id=\"detail.html\"&gt;</code>. أدخل سطراً فارغاً واحداً أسفل <code>&lt;/template&gt;</code> الأخير لفصله عن <code>template</code> الخاص بالتفاصيل. ضع حقول <code>input</code> للاسم والنوع، و<code>textarea</code> لسبب التفضيل. يتطابق <code>for</code> الخاص بـ <code>label</code> مع <code>id</code> الخاص بحقل الإدخال."
+    },
+    {
+      "source": "www/index.html · 追加 · &lt;template id=\"detail.html\"&gt; の上",
+      "translation": "www/index.html · إضافة · أعلى &lrm;&lt;template id=\"detail.html\"&gt;&lrm;"
+    },
+    {
+      "source": "CSSは、ファイルの末尾（<code>.oshi-genre</code> を含む指定の閉じかっこの下）に、空行を1行あけて次の指定を足します。",
+      "translation": "في CSS، أضف التعيينات التالية في نهاية الملف (أسفل قوس إغلاق التعيين الذي يتضمن <code>.oshi-genre</code>)، مع ترك سطر فارغ واحد."
+    },
+    {
+      "source": "www/css/style.css · 追加 · ファイルの末尾",
+      "translation": "www/css/style.css · إضافة · نهاية الملف"
+    },
+    {
       "source": "CSSの <code>.app-input</code> は幅を100%にし、<code>box-sizing: border-box</code> で<code>padding</code>と枠をその幅の内側へ収めます。<code>font: inherit</code> で文字を周囲とそろえ、<code>focus</code>の<code>outline</code>で選択中の欄を見分けます。ほかに加わるクラスのうち、このSTEPの画面に当たる4つは次の表のとおりです。",
       "translation": "يجعل <code>.app-input</code> في CSS العرض 100%، ويحتوي <code>padding</code> والإطار داخل ذلك العرض باستخدام <code>box-sizing: border-box</code>. تجعل <code>font: inherit</code> الخط متناسقاً مع ما حوله، ويميز <code>outline</code> الخاص بـ <code>focus</code> الحقل المحدد حالياً. ومن بين الفئات الأخرى المضافة، الفئات الأربع التي تنطبق على شاشة هذا الـ STEP موضحة في الجدول التالي."
     },
@@ -307,12 +347,48 @@
       "translation": "التعيينات الثلاثة <code>.reset-section</code> و<code>#panel_reset ons-button</code> و<code>.is-hidden</code> مخصصة لقسم تأكيد التهيئة الذي ستتم إضافته في STEP 08. لا توجد عناصر تنطبق عليها هذه التعيينات في HTML الخاص بهذا الـ STEP بعد."
     },
     {
+      "source": "JavaScriptは4か所を変えます。まず、<code>let oshiItems = [</code> の行から <code>let isOpeningDetail = false;</code> の行までを、次のコードに置き換えます。初期データの配列を自分の好きなものに変えている場合は、控えてから置き換え、<code>createInitialItems</code> の中の配列へ書き戻します。",
+      "translation": "في JavaScript، غيّر 4 مواضع. أولاً، استبدل الأسطر من سطر <code>let oshiItems = [</code> إلى سطر <code>let isOpeningDetail = false;</code> بالشيفرة التالية. إذا كنت قد غيرت مصفوفة البيانات الأولية إلى مفضلاتك الخاصة، فاحتفظ بملاحظة لها قبل الاستبدال، ثم أعد كتابتها في المصفوفة داخل <code>createInitialItems</code>."
+    },
+    {
+      "source": "www/js/app.js · 置き換え · let oshiItems = [ から let isOpeningDetail = false; まで",
+      "translation": "www/js/app.js · استبدال · من &lrm;let oshiItems = [&lrm; إلى &lrm;let isOpeningDetail = false;&lrm;"
+    },
+    {
       "source": "初期データは <code>createInitialItems</code> が新しい配列を返す形にまとめました。後で初期化したときにも同じ内容を作り直せるようにするためです。呼び出しのたびに新しい配列になる点を、<code>return</code>の位置と一緒に読みます。",
       "translation": "تم تجميع البيانات الأولية بحيث تعيد <code>createInitialItems</code> مصفوفة جديدة. وذلك لكي نتمكن من إعادة إنشاء نفس المحتوى عند إجراء التهيئة لاحقاً. تتبع موضع <code>return</code> لفهم أن كل استدعاء ينتج مصفوفة جديدة."
     },
     {
+      "source": "移動中の旗の名前は、STEP 00の <code>isOpeningDetail</code> から <code>isOpeningPage</code> に変えます。詳細を開くときだけでなく入力画面を開くときにも使うので、「詳細を開いている最中」ではなく「どちらかのページを開いている最中」と読める名前にするためです。宣言は上のコードで変えたので、残りは<code>openOshiDetail</code>の中の3か所です。",
+      "translation": "نغير اسم مؤشر الانتقال من <code>isOpeningDetail</code> في STEP 00 إلى <code>isOpeningPage</code>. والسبب في ذلك هو استخدامه ليس فقط عند فتح التفاصيل بل عند فتح شاشة الإدخال أيضاً، ليكون اسماً يُقرأ على أنه «أثناء فتح إحدى الصفحتين» بدلاً من «أثناء فتح التفاصيل». وقد غيرنا الإعلان في الشيفرة أعلاه، فتتبقى المواضع الثلاثة داخل <code>openOshiDetail</code>."
+    },
+    {
+      "source": "次に、<code>init</code> の処理を、直前のコメント <code>// templateの中身は、ページが作られてから取得する。</code> の行から、閉じる <code>});</code> の行までを置き換えます。一覧の<code>init</code>では、<code>txt_storage</code> に文を入れ、<code>btn_open_add</code> へ<code>openAddPage</code>を登録します。詳細の<code>init</code>は、<code>const oshi</code> の下の空行がなくなるだけで、処理は変わりません。",
+      "translation": "بعد ذلك، استبدل معالجة <code>init</code>، من سطر التعليق الذي يسبقها <code>// templateの中身は、ページが作られてから取得する。</code> إلى سطر <code>});</code> الذي يغلقها. في <code>init</code> الخاص بالقائمة، نضع نصاً في <code>txt_storage</code>، ونسجل <code>openAddPage</code> في <code>btn_open_add</code>. أما <code>init</code> الخاص بالتفاصيل، فلا يتغير فيه سوى حذف السطر الفارغ أسفل <code>const oshi</code>، ولا تتغير المعالجة."
+    },
+    {
+      "source": "www/js/app.js · 置き換え · init の処理（直前のコメントから }); まで）",
+      "translation": "www/js/app.js · استبدال · معالجة init، من التعليق الذي يسبقها إلى &lrm;});&lrm;"
+    },
+    {
       "source": "一覧のボタンの下の <code>txt_storage</code> には <code>この段階では、追加した内容は保存されません。</code>、入力画面のボタンの下の注記には <code>この段階では、追加した内容は再読み込みすると消えます。</code> と出します。追加した内容がまだ残らないことを、画面で先に伝えるためです。保存を作るSTEP 06で、どちらの文も書き換えます。",
       "translation": "في <code>txt_storage</code> أسفل الزر في القائمة، نعرض <code>この段階では、追加した内容は保存されません。</code>، وفي الملاحظة أسفل الزر في شاشة الإدخال، نعرض <code>この段階では、追加した内容は再読み込みすると消えます。</code>. وذلك لنوضح مسبقاً على الشاشة أن المحتوى المضاف لا يتم حفظه بعد. وسيتم إعادة كتابة كلا النصين في STEP 06 الذي ننشئ فيه الحفظ."
+    },
+    {
+      "source": "3つ目に、<code>function openOshiDetail(oshi) {</code> の行から、その閉じかっこ <code>}</code> の行までを置き換えます。変わるのは、<code>isOpeningDetail</code> を <code>isOpeningPage</code> にした3行だけです。",
+      "translation": "ثالثاً، استبدل الأسطر من سطر <code>function openOshiDetail(oshi) {</code> إلى سطر قوس الإغلاق <code>}</code> الخاص بها. لا يتغير سوى الأسطر الثلاثة التي تم فيها تغيير <code>isOpeningDetail</code> إلى <code>isOpeningPage</code>."
+    },
+    {
+      "source": "www/js/app.js · 置き換え · function openOshiDetail から、その閉じかっこまで",
+      "translation": "www/js/app.js · استبدال · من function openOshiDetail إلى قوس الإغلاق الخاص بها"
+    },
+    {
+      "source": "最後に、ファイルの末尾（<code>openOshiDetail</code> の閉じかっこの下）に、空行を1行あけて <code>openAddPage</code> を足します。<code>pushPage(\"add.html\", ...)</code> で入力画面へ進みます。詳細と同じ移動中の旗を共有するため、片方を開いている最中にもう片方は開きません。",
+      "translation": "أخيراً، أضف <code>openAddPage</code> في نهاية الملف (أسفل قوس إغلاق <code>openOshiDetail</code>)، مع ترك سطر فارغ واحد. ننتقل إلى شاشة الإدخال باستخدام <code>pushPage(\"add.html\", ...)</code>. نظراً لمشاركة نفس مؤشر الانتقال مع التفاصيل، فلن تفتح إحداهما أثناء فتح الأخرى."
+    },
+    {
+      "source": "www/js/app.js · 追加 · ファイルの末尾",
+      "translation": "www/js/app.js · إضافة · نهاية الملف"
     },
     {
       "source": "保存・再読み込み後に <code>好きなものを追加</code> を押します。",
@@ -341,6 +417,26 @@
     {
       "source": "入力した文字を確認する",
       "translation": "التحقق من النصوص المدخلة"
+    },
+    {
+      "source": "HTMLでは、入力画面の <code>btn_save_oshi</code> の1行を置き換えて、追加ボタンから <code>disabled</code> を外します。",
+      "translation": "في HTML، استبدل سطر <code>btn_save_oshi</code> في شاشة الإدخال، لإزالة <code>disabled</code> من زر الإضافة."
+    },
+    {
+      "source": "www/index.html · 置き換え · btn_save_oshi の1行",
+      "translation": "www/index.html · استبدال · سطر btn_save_oshi"
+    },
+    {
+      "source": "JSでは、<code>init</code> の処理の中の <code>if (page.id === \"page_detail\") {</code> の行の上に、<code>page_add</code> の<code>init</code>で<code>addOshi</code>を登録する処理を足します。足した <code>}</code> の下に空行を1行入れます。関数名を渡しているので、登録した瞬間ではなくボタンを押したときに動きます。",
+      "translation": "في JS، أضف أعلى سطر <code>if (page.id === \"page_detail\") {</code> داخل معالجة <code>init</code> الشيفرة التي تسجل <code>addOshi</code> في <code>init</code> الخاص بـ <code>page_add</code>. أدخل سطراً فارغاً واحداً أسفل <code>}</code> الذي أضفته. وبما أننا نمرر اسم الدالة، فإنها تعمل عند الضغط على الزر، وليس لحظة التسجيل."
+    },
+    {
+      "source": "www/js/app.js · 追加 · if (page.id === \"page_detail\") { の上",
+      "translation": "www/js/app.js · إضافة · أعلى &lrm;if (page.id === \"page_detail\") {&lrm;"
+    },
+    {
+      "source": "ファイルの末尾（<code>openAddPage</code> の閉じかっこの下）に、空行を1行あけて <code>addOshi</code> を足します。",
+      "translation": "أضف <code>addOshi</code> في نهاية الملف (أسفل قوس إغلاق <code>openAddPage</code>)، مع ترك سطر فارغ واحد."
     },
     {
       "source": "<code>addOshi</code>は、入力欄を<code>id</code>で取得し、<code>value</code> で今の文字を読みます。<code>trim()</code> は前後の空白を取り除きます。3つのどれかが空ならメッセージを表示して<code>return</code>し、残りの処理へ進みません。",
@@ -377,6 +473,18 @@
     {
       "source": "配列へ追加して戻る",
       "translation": "الإضافة إلى المصفوفة والرجوع"
+    },
+    {
+      "source": "JSの<code>addOshi</code>で、最後の <code>txtMessage.textContent = \"入力を確認しました：\" + name;</code> の1行を、次の5行に置き換えます。入力確認だけの行を、配列へ追加して一覧を描き直す処理へ替えます。",
+      "translation": "في <code>addOshi</code> ضمن JS، استبدل السطر الأخير <code>txtMessage.textContent = \"入力を確認しました：\" + name;</code> بالأسطر الخمسة التالية. نستبدل السطر المخصص لتأكيد الإدخال فقط بعملية الإضافة إلى المصفوفة وإعادة رسم القائمة."
+    },
+    {
+      "source": "www/js/app.js · 置き換え · 「入力を確認しました：」の1行",
+      "translation": "www/js/app.js · استبدال · سطر 「入力を確認しました：&lrm;」 (تم التحقق من الإدخال)"
+    },
+    {
+      "source": "<code>oshiItems.push({ name: name, genre: genre, comment: comment })</code> の左側はデータの項目名、右側は入力欄から読んだ変数です。",
+      "translation": "في <code>oshiItems.push({ name: name, genre: genre, comment: comment })</code>، يمثل الطرف الأيسر اسم حقل البيانات، بينما يمثل الطرف الأيمن المتغير المقروء من حقل الإدخال."
     },
     {
       "source": "次に<code>renderOshiList</code>を呼びます。この関数は<code>innerHTML</code>で行を置き直した後に、<code>textContent</code>の設定とクリックの登録をやり直します。古い行に登録したイベントは、新しい行へ自動では移らないためです。",
@@ -417,6 +525,10 @@
     {
       "source": "確認とアレンジ",
       "translation": "التحقق والتخصيص"
+    },
+    {
+      "source": "コードは変えません。STEP 03まで書いたコードが、第5コマ終了時の基準です。今日の終わりは、作った範囲を使って自分の表現に変えます。",
+      "translation": "لا نغيّر الشيفرة في هذا الـ STEP. الشيفرة التي كتبتها حتى STEP 03 هي المعيار في نهاية الحصة 5. في نهاية اليوم، استخدم ما أنشأته حتى الآن لتغييره إلى تعبيرك الخاص."
     },
     {
       "source": "変える場所",
@@ -473,6 +585,10 @@
     {
       "source": "配列とJSONの違いを読む",
       "translation": "قراءة الفرق بين المصفوفات وJSON"
+    },
+    {
+      "source": "Monaca クラウド IDEで同じ好きなものノートを開きます。開始状態は「入力して追加できるが、再読み込みすると初期データに戻る」です。このSTEPでは、コードは変えません。保存する前に、画面で使う配列と、保存へ渡す文字列を区別します。",
+      "translation": "افتح نفس دفتر الأشياء المفضلة في Monaca クラウド IDE. الحالة الأولية هي «يمكنك الإدخال والإضافة، ولكن إعادة التحميل تعيده إلى البيانات الأولية». لا نغيّر الشيفرة في هذا الـ STEP. قبل الحفظ، نميز بين المصفوفة المستخدمة في الشاشة والسلسلة النصية الممررة إلى الحفظ."
     },
     {
       "source": "<strong>JSONは、値を文字で表すための決まった形式</strong>です。JavaScriptの配列やオブジェクトそのものではありません。<code>JSON.stringify</code> は値をJSONの文字列にし、<code>JSON.parse</code> はJSONの文字列から値を復元します。今回の保存対象は文字列の3項目を持つオブジェクトの配列です。",
@@ -547,6 +663,50 @@
       "translation": "التحويل إلى سلسلة نصية والحفظ"
     },
     {
+      "source": "JSの先頭近く、<code>// 初期化のたびに新しい配列を返し、追加した内容と混ぜない。</code> の行の上に <code>STORAGE_KEY</code> を足し、その下に空行を1行入れます。保存内容を探すための名前を1か所で管理します。この名前を途中で変更すると、以前のキーで保存した内容は見えなくなります。",
+      "translation": "قرب بداية JS، أضف <code>STORAGE_KEY</code> أعلى سطر <code>// 初期化のたびに新しい配列を返し、追加した内容と混ぜない。</code>، وأدخل سطراً فارغاً واحداً أسفله. ندير الاسم المستخدم للبحث عن المحتوى المحفوظ في مكان واحد. وإذا قمت بتغيير هذا الاسم في المنتصف، فلن يعود بالإمكان رؤية المحتوى المحفوظ بالمفتاح السابق."
+    },
+    {
+      "source": "www/js/app.js · 追加 · // 初期化のたびに新しい配列を返し、追加した内容と混ぜない。 の上",
+      "translation": "www/js/app.js · إضافة · أعلى &lrm;// 初期化のたびに新しい配列を返し、追加した内容と混ぜない。&lrm;"
+    },
+    {
+      "source": "<code>let isOpeningPage = false;</code> の行の下に、保存してよいかを表す <code>let canSave = true;</code> を足します。",
+      "translation": "أضف <code>let canSave = true;</code>، الذي يمثل ما إذا كان الحفظ مسموحاً به، أسفل سطر <code>let isOpeningPage = false;</code>."
+    },
+    {
+      "source": "www/js/app.js · 追加 · let isOpeningPage = false; の下",
+      "translation": "www/js/app.js · إضافة · أسفل &lrm;let isOpeningPage = false;&lrm;"
+    },
+    {
+      "source": "一覧の<code>init</code>は、<code>if (page.id === \"page_list\") {</code> の行から、その閉じかっこ <code>}</code> の行までを置き換えます。<code>txt_storage</code> の文を替え、<code>renderOshiList();</code> の下で <code>btn_open_add</code> の <code>disabled</code> を <code>!canSave</code> にします。",
+      "translation": "بالنسبة إلى <code>init</code> الخاص بالقائمة، استبدل الأسطر من سطر <code>if (page.id === \"page_list\") {</code> إلى سطر قوس الإغلاق <code>}</code> الخاص به. نغير نص <code>txt_storage</code>، ونضبط <code>disabled</code> الخاصة بـ <code>btn_open_add</code> على <code>!canSave</code> أسفل <code>renderOshiList();</code>."
+    },
+    {
+      "source": "www/js/app.js · 置き換え · if (page.id === \"page_list\") { から、その閉じかっこまで",
+      "translation": "www/js/app.js · استبدال · من &lrm;if (page.id === \"page_list\") {&lrm; إلى قوس الإغلاق الخاص به"
+    },
+    {
+      "source": "<code>function openAddPage() {</code> の行から、その閉じかっこ <code>}</code> の行までを置き換え、最初の条件に <code>!canSave</code> を加えます。",
+      "translation": "استبدل الأسطر من سطر <code>function openAddPage() {</code> إلى سطر قوس الإغلاق <code>}</code> الخاص بها، وأضف <code>!canSave</code> إلى الشرط الأول."
+    },
+    {
+      "source": "www/js/app.js · 置き換え · function openAddPage から、その閉じかっこまで",
+      "translation": "www/js/app.js · استبدال · من function openAddPage إلى قوس الإغلاق الخاص بها"
+    },
+    {
+      "source": "<code>canSave</code> が <code>false</code> なら、<code>openAddPage</code>と<code>addOshi</code>の最初の条件で何もせずに戻ります。このSTEPには <code>canSave</code> を<code>false</code>にする行がないので、常に<code>true</code>のままで、画面の動きは変わりません。<code>false</code>にするのは、次のSTEPで保存内容を読み込めなかったときです。そのまま追加できると、読めなかった保存内容を、初期データに1件足した配列で上書きしてしまいます。保存の処理を書くこのSTEPで、保存へ進む入口に確認を置いておけば、次のSTEPでは読み込みの処理を足すだけで済みます。",
+      "translation": "إذا كانت <code>canSave</code> تساوي <code>false</code>، فسيتم الرجوع دون فعل أي شيء في الشرط الأول لـ <code>openAddPage</code> و<code>addOshi</code>. ونظراً لعدم وجود سطر يضبط <code>canSave</code> على <code>false</code> في هذا الـ STEP، فإنها تبقى دائماً <code>true</code> ولا يتغير سلوك الشاشة. والوقت الذي نضبطها فيه على <code>false</code> هو عندما يتعذر قراءة المحتوى المحفوظ في الـ STEP التالي. فإذا كان بإمكانك الإضافة مباشرة، فسيتم الكتابة فوق المحتوى المحفوظ الذي تعذر قراءته بمصفوفة أضيف إليها عنصر واحد إلى البيانات الأولية. فإذا وضعنا التحقق عند مدخل عملية الحفظ في هذا الـ STEP الذي نكتب فيه معالجة الحفظ، فسيكفي فقط إضافة معالجة القراءة في الـ STEP التالي."
+    },
+    {
+      "source": "最後に、ファイルの末尾にある <code>function addOshi() {</code> の行から、その閉じかっこ <code>}</code> の行までを置き換えます。",
+      "translation": "أخيراً، استبدل الأسطر من سطر <code>function addOshi() {</code> في نهاية الملف إلى سطر قوس الإغلاق <code>}</code> الخاص بها."
+    },
+    {
+      "source": "www/js/app.js · 置き換え · function addOshi から、その閉じかっこまで",
+      "translation": "www/js/app.js · استبدال · من function addOshi إلى قوس الإغلاق الخاص بها"
+    },
+    {
       "source": "<code>addOshi</code>では、<code>oshiItems.slice()</code> で配列の浅いコピー<code>nextItems</code>を作り、そこへ新しい1件を追加します。この処理では既存のオブジェクトの項目は変更せず、配列へ追加するだけなので、配列のコピーで足ります。",
       "translation": "في <code>addOshi</code>، ننشئ نسخة سطحية من المصفوفة باسم <code>nextItems</code> باستخدام <code>oshiItems.slice()</code>، ونضيف عنصراً جديداً واحداً إليها. في هذه المعالجة، لا نعدل عناصر الكائنات الموجودة بل نضيف فقط إلى المصفوفة، لذا تكفي نسخة المصفوفة هذه."
     },
@@ -599,6 +759,18 @@
       "translation": "عدم مسح الإدخال، وإتاحته للتحقق التالي أو إعادة المحاولة."
     },
     {
+      "source": "画面の文も、保存ができるようになったことに合わせて替えます。HTMLでは、入力画面の <code>btn_save_oshi</code> の行から、その下の <code>app-note</code> の行までの2行を置き換えます。",
+      "translation": "نغير نصوص الشاشة أيضاً لتتناسب مع إمكانية الحفظ. في HTML، استبدل السطرين من سطر <code>btn_save_oshi</code> في شاشة الإدخال إلى سطر <code>app-note</code> الذي يليه."
+    },
+    {
+      "source": "www/index.html · 置き換え · btn_save_oshi の行から app-note の行まで",
+      "translation": "www/index.html · استبدال · من سطر btn_save_oshi إلى سطر app-note"
+    },
+    {
+      "source": "入力画面のボタンは <code>追加する</code> から <code>追加して保存</code> に変わります。押すと、配列への追加と一緒に保存まで行うことを、ボタンの文字で示すためです。STEP 01から出していた2つの文は、保存できるようになると事実と合わなくなるので、一覧の <code>txt_storage</code> は <code>保存はできますが、このSTEPではまだ読み込みません。</code> に（上で置き換えた一覧の<code>init</code>の中です）、入力画面のボタンの下の注記は <code>保存先は、このブラウザの同じプレビューです。公開URLに入力内容は含まれません。</code> に替えます。保存した内容はこのブラウザにだけ残り、STEP 12で発行する公開URLから取り込んだ人には届かないためです。",
+      "translation": "يتغير زر شاشة الإدخال من <code>追加する</code> إلى <code>追加して保存</code>. وذلك لنوضح بنص الزر أن الضغط عليه يقوم بالحفظ مع الإضافة إلى المصفوفة في الوقت نفسه. النصان اللذان عُرضا منذ STEP 01 لن يعودا متطابقين مع الواقع عند إمكانية الحفظ، لذا نغير <code>txt_storage</code> في القائمة إلى <code>保存はできますが、このSTEPではまだ読み込みません。</code> (داخل <code>init</code> الخاص بالقائمة الذي استبدلناه أعلاه)، ونغير الملاحظة أسفل الزر في شاشة الإدخال إلى <code>保存先は、このブラウザの同じプレビューです。公開URLに入力内容は含まれません。</code>. وذلك لأن المحتوى المحفوظ يبقى في هذا المتصفح فقط، ولا يصل إلى الأشخاص الذين يستوردون المشروع من رابط الاستيراد الصادر في STEP 12."
+    },
+    {
       "source": "入力画面のボタンが <code>追加して保存</code> になったことを確かめてから、1件追加して一覧へ戻り、<code>件をこのブラウザに保存しました。</code> の文を確かめます。このSTEPでは保存までなので、再読み込み時の表示はまだ初期データです。保存されていないと決めつけず、次のSTEPで読み込む側を作ります。また、このSTEPで再読み込みしてからもう一度追加すると、前に保存した内容は、ソースの初期データと新しい1件で上書きされます。保存した内容をまだ読み込んでいない配列に、新しい1件を足して保存するためです。次のSTEPで読み込めるのは、最後に保存した内容です。",
       "translation": "بعد التأكد من أن زر شاشة الإدخال أصبح <code>追加して保存</code>، أضف عنصراً واحداً وارجع إلى القائمة، وتحقق من ظهور جملة <code>件をこのブラウザに保存しました。</code>. نظراً لأن هذا الـ STEP يقتصر على الحفظ فقط، فإن ما يُعرض عند إعادة التحميل يظل هو البيانات الأولية. لا تفترض أنه لم يُحفظ، فسننشئ جانب القراءة في الـ STEP التالي. إضافة إلى ذلك، إذا أعدت التحميل في هذا الـ STEP ثم أضفت عنصراً مرة أخرى، فسيتم الكتابة فوق المحتوى المحفوظ سابقاً بالبيانات الأولية من الشيفرة المصدرية مع العنصر الجديد. وذلك لأنك تضيف عنصراً جديداً إلى مصفوفة لم تقرأ المحتوى المحفوظ بعد وتقوم بحفظها. وما يمكنك قراءته في الـ STEP التالي هو آخر محتوى تم حفظه."
     },
@@ -617,6 +789,18 @@
     {
       "source": "保存した配列を復元する",
       "translation": "استعادة المصفوفة المحفوظة"
+    },
+    {
+      "source": "JSに<code>loadOshiItems</code>と<code>isValidItems</code>を加え、<code>page_list</code>の<code>init</code>で <strong>読み込み→一覧生成</strong> の順に呼びます。保存した値を読む前に行を作ると、初期データのまま表示されるためです。まず、一覧の<code>init</code>の中で <code>txt_storage</code> に文字を入れている1行を、<code>loadOshiItems();</code> に置き換えます。すぐ下の <code>renderOshiList();</code> は残します。",
+      "translation": "أضف <code>loadOshiItems</code> و<code>isValidItems</code> إلى JS، واستدعهما في حدث <code>init</code> الخاص بـ <code>page_list</code> بالترتيب: <strong>القراءة ← إنشاء القائمة</strong>. وذلك لأنه إذا أنشئت الصفوف قبل قراءة القيمة المحفوظة، فستُعرض بالبيانات الأولية. أولاً، استبدل السطر الذي يضع النص في <code>txt_storage</code> داخل <code>init</code> الخاص بالقائمة بـ <code>loadOshiItems();</code>. واحتفظ بـ <code>renderOshiList();</code> الموجود أسفله مباشرة."
+    },
+    {
+      "source": "www/js/app.js · 置き換え · init の中の txt_storage に文字を入れる1行",
+      "translation": "www/js/app.js · استبدال · السطر الذي يضع النص في txt_storage داخل init"
+    },
+    {
+      "source": "次に、ファイルの末尾（<code>addOshi</code> の閉じかっこの下）に、空行を1行あけて2つの関数を足します。<code>txt_storage</code> の文は、<code>loadOshiItems</code> の中で、読み込みの結果に合わせて出します。",
+      "translation": "بعد ذلك، أضف الدالتين في نهاية الملف (أسفل قوس إغلاق <code>addOshi</code>)، مع ترك سطر فارغ واحد. يُعرض نص <code>txt_storage</code> داخل <code>loadOshiItems</code> وفقاً لنتيجة القراءة."
     },
     {
       "source": "<code>getItem(STORAGE_KEY)</code> は、未保存なら <code>null</code> を返します。この場合は何も復元せず、ソースの初期データを使います。文字列があれば<code>JSON.parse</code>で値へ戻します。",
@@ -679,6 +863,26 @@
       "translation": "تأكيد التهيئة والتعامل مع الفشل"
     },
     {
+      "source": "HTMLに初期化ボタンと確認欄、JSにそのイベントと<code>resetOshiItems</code>を加えます。HTMLでは、一覧の <code>txt_selected</code> の行（<code>まだ選択していません</code>）の下に、次のコードを足します。",
+      "translation": "أضف زر التهيئة وحقل التأكيد إلى HTML، وأضف الحدث الخاص به و<code>resetOshiItems</code> إلى JS. في HTML، أضف الشيفرة التالية أسفل سطر <code>txt_selected</code> في القائمة (<code>まだ選択していません</code>)."
+    },
+    {
+      "source": "www/index.html · 追加 · txt_selected の行の下",
+      "translation": "www/index.html · إضافة · أسفل سطر txt_selected"
+    },
+    {
+      "source": "JSでは、一覧の<code>init</code>を、<code>if (page.id === \"page_list\") {</code> の行から、その閉じかっこ <code>}</code> の行までを置き換えます。<code>openAddPage</code> を登録する行の下の空行の代わりに、3つのボタンのイベントを登録します。",
+      "translation": "في JS، استبدل <code>init</code> الخاص بالقائمة، من سطر <code>if (page.id === \"page_list\") {</code> إلى سطر قوس الإغلاق <code>}</code> الخاص به. بدلاً من السطر الفارغ أسفل السطر الذي يسجل <code>openAddPage</code>، نسجل أحداث الأزرار الثلاثة."
+    },
+    {
+      "source": "ファイルの末尾（<code>isValidItems</code> の閉じかっこの下）に、空行を1行あけて <code>resetOshiItems</code> を足します。",
+      "translation": "أضف <code>resetOshiItems</code> في نهاية الملف (أسفل قوس إغلاق <code>isValidItems</code>)، مع ترك سطر فارغ واحد."
+    },
+    {
+      "source": "<code>初期の内容に戻す</code> を押すと、<code>is-hidden</code>を<code>remove</code>して確認欄を見せます。<code>やめる</code> ではクラスを<code>add</code>し、欄を閉じるだけです。確認欄を囲む <code>reset-section</code> は上に区切りの線を引き、<code>#panel_reset ons-button</code> は確認欄の2つのボタンの上を12px空けます。この2つと <code>is-hidden</code> はSTEP 01のCSSに入れてあり、このSTEPのHTMLで初めて要素に当たります。",
+      "translation": "عند الضغط على <code>初期の内容に戻す</code>، نقوم بـ <code>remove</code> لـ <code>is-hidden</code> لإظهار حقل التأكيد. وعند <code>やめる</code>، نقوم بـ <code>add</code> للفئة ونغلق الحقل فقط. يرسم <code>reset-section</code> المحيط بحقل التأكيد خط فاصل في الأعلى، ويترك <code>#panel_reset ons-button</code> مسافة 12px أعلى الزرين في حقل التأكيد. هذان التعيينان بالإضافة إلى <code>is-hidden</code> قد تم وضعها في CSS الخاص بـ STEP 01، وتنطبق على العناصر لأول مرة في HTML الخاص بهذا الـ STEP."
+    },
+    {
       "source": "実際の削除は <code>削除して初期の内容に戻す</code> を押した場合だけです。<code>localStorage.removeItem(STORAGE_KEY)</code> で、このアプリのキー1つだけを削除します。保存領域全体を空にする<code>clear</code>は使いません。",
       "translation": "يتم الحذف الفعلي فقط عند الضغط على <code>削除して初期の内容に戻す</code>. نقوم بحذف مفتاح واحد فقط خاص بهذا التطبيق باستخدام <code>localStorage.removeItem(STORAGE_KEY)</code>. ولا نستخدم <code>clear</code> التي تفرغ مساحة التخزين بأكملها."
     },
@@ -717,6 +921,10 @@
     {
       "source": "保存を確かめてアレンジする",
       "translation": "التحقق من الحفظ وتخصيص التطبيق"
+    },
+    {
+      "source": "コードは変えません。STEP 08まで書いたコードが、第6コマ終了時の基準です。入力→追加→詳細→戻る→再読み込みの順で動かし、保存した内容が復元されることを確認します。次に、ソースの初期データを自分の言葉へ変えます。",
+      "translation": "لا نغيّر الشيفرة في هذا الـ STEP. الشيفرة التي كتبتها حتى STEP 08 هي المعيار في نهاية الحصة 6. شغّل بالترتيب: الإدخال ← الإضافة ← التفاصيل ← الرجوع ← إعادة التحميل، وتحقق من استعادة المحتوى المحفوظ. بعد ذلك، غيّر البيانات الأولية في الشيفرة المصدرية إلى كلماتك الخاصة."
     },
     {
       "source": "<strong>保存データがあると、ソースの初期データより優先して表示されます。</strong> <code>createInitialItems</code>を書き換えても画面が変わらない場合は、変更したコードのミスとは限りません。必要な入力を控えたうえで、アプリ内の初期化を使ってソースの内容を確認します。",
@@ -775,6 +983,10 @@
       "translation": "بدء التحضير لـ Flutter أثناء الحصة"
     },
     {
+      "source": "今日は好きなものノートを仕上げて提出します。このコマでは、教科書のコードは変えません。STEP 08まで書いたコードに、自分のアレンジを加えて仕上げます。最初の10分で、後半に使うFlutter SDKのダウンロードと既存のiOS環境の確認を始めます。授業前に取得しておく必要はありません。",
+      "translation": "اليوم سنكمل دفتر الأشياء المفضلة ونسلمه. في هذه الحصة، لا نغيّر الشيفرة الواردة في الكتاب، بل نكمل العمل بإضافة تخصيصك الخاص إلى الشيفرة التي كتبتها حتى STEP 08. في الدقائق العشر الأولى، سنبدأ بتنزيل Flutter SDK المستخدم في النصف الثاني والتحقق من بيئة iOS الحالية. لا داعي لتنزيلها قبل الدرس."
+    },
+    {
       "source": "<a1>共通資料のSTEP 4〜7</a1>を別のタブで開きます。",
       "translation": "افتح <a1>STEP 4〜7 في المواد المشتركة</a1> في علامة تبويب أخرى."
     },
@@ -809,6 +1021,10 @@
     {
       "source": "提出に残るアレンジを作る",
       "translation": "إنشاء تخصيص يبقى في التسليم"
+    },
+    {
+      "source": "コードは変えません。Monaca クラウド IDEへ戻り、自分の好きなものノートを仕上げます。既に扱った文字・色・初期データから変更箇所を選び、どんなものが好きで、なぜ好きなのかが伝わる内容にします。",
+      "translation": "لا نغيّر الشيفرة في هذا الـ STEP. عد إلى Monaca クラウド IDE وأكمل دفتر الأشياء المفضلة الخاص بك. اختر مواضع التعديل من النصوص والألوان والبيانات الأولية التي تمت دراستها مسبقاً، واجعل المحتوى يوضح ما تفضله ولماذا تفضله."
     },
     {
       "source": "確認方法",
@@ -875,6 +1091,10 @@
       "translation": "التحقق من العمليات ورابط الاستيراد"
     },
     {
+      "source": "コードは変えません。ソースの初期の内容が表示された状態から完成確認を始めます。必要な入力は内容を控えて、先生と確認してから初期化します。",
+      "translation": "لا نغيّر الشيفرة في هذا الـ STEP. ابدأ التحقق من الاكتمال من الحالة التي يُعرض فيها المحتوى الأولي من الشيفرة المصدرية. احتفظ بملاحظة للإدخالات الضرورية، وتأكد مع المعلم قبل إجراء التهيئة."
+    },
+    {
       "source": "一覧の各行から詳細へ進み、名前・種類・理由が一致することを確認します。",
       "translation": "انتقل إلى التفاصيل من كل صف في القائمة، وتحقق من تطابق الاسم والنوع وسبب التفضيل."
     },
@@ -923,6 +1143,10 @@
       "translation": "التحقق من التسليم وحالة التحضير"
     },
     {
+      "source": "コードは変えません。先生が授業中に案内する提出先・締め切りを確認し、自分の好きなものノートで発行した公開URLを提出します。まだ案内がない場合は、URLを控えて先生へ確認します。",
+      "translation": "لا نغيّر الشيفرة في هذا الـ STEP. تحقق من وجهة التسليم والموعد النهائي الذي يعلن عنه المعلم أثناء الحصة، وسلّم رابط الاستيراد الصادر من دفتر الأشياء المفضلة الخاص بك. وإذا لم تكن هناك إرشادات بعد، فاحتفظ بالرابط وتحقق مع المعلم."
+    },
+    {
       "source": "通常版MonacaのFreeプランではZIPを学生の提出物にしません。先生は公開URLから取り込み、初期データと操作を確認します。公開中の自分のプロジェクトは提出後に削除しません。",
       "translation": "في خطة Free للنسخة القياسية من Monaca، لا يتم جعل ملفات ZIP مخرجات لتسليم الطلاب. يستورد المعلم المشروع من رابط الاستيراد ويتحقق من البيانات الأولية والعمليات. ولا تحذف مشروعك المنشور بعد التسليم."
     },
@@ -945,6 +1169,10 @@
     {
       "source": "アレンジできる場所を確かめる",
       "translation": "التحقق من المواضع القابلة للتخصيص"
+    },
+    {
+      "source": "コードは変えません。最後に提出したソースを見ながら、次の3点を確かめます。",
+      "translation": "لا نغيّر الشيفرة في هذا الـ STEP. أخيراً، وأثناء النظر إلى الشيفرة المصدرية المسلمة، تحقق من النقاط الثلاث التالية."
     },
     {
       "source": "どのファイルの、どの文字・色・初期データを変更したか。",
