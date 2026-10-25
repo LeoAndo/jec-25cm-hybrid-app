@@ -4,7 +4,7 @@
   "entries": [
     {
       "source": "困ったとき | ハイブリッドアプリ開発技法",
-      "translation": "Solución de problemas | Desarrollo de aplicaciones híbridas"
+      "translation": "Solución de problemas | Técnicas de desarrollo de aplicaciones híbridas"
     },
     {
       "source": "本文へ移動",
@@ -12,7 +12,7 @@
     },
     {
       "source": "JEC / ハイブリッドアプリ開発技法",
-      "translation": "JEC / Desarrollo de aplicaciones híbridas"
+      "translation": "JEC / Técnicas de desarrollo de aplicaciones híbridas"
     },
     {
       "source": "もとの教科書へ戻る",
@@ -44,15 +44,15 @@
     },
     {
       "source": "プログラミングでエラーが出るのは自然なことです。エラーメッセージには「どのファイルの何行目で、何が問題か」が書かれています。焦らずに上から順に確認しましょう。",
-      "translation": "Tener errores al programar es completamente natural. En los mensajes de error siempre se indica «qué problema hay en qué línea de qué archivo». Mantén la calma y comprueba en orden de arriba a abajo."
+      "translation": "Tener errores al programar es completamente natural. En los mensajes de error siempre se indica “qué problema hay en qué línea de qué archivo”. Mantén la calma y comprueba en orden de arriba a abajo."
     },
     {
       "source": "<strong>各単元の「困ったとき」表を確認する</strong><br>教科書の末尾にある「困ったとき」には、その単元でよくある状態と確認場所がまとまっています。",
-      "translation": "<strong>Consulta la tabla «Solución de problemas» de cada unidad</strong><br>Al final de cada libro de texto, en «Solución de problemas», se recopilan las situaciones frecuentes y los lugares a revisar para esa unidad."
+      "translation": "<strong>Consulta la tabla “Solución de problemas” de cada unidad</strong><br>Al final de cada libro de texto, en “Solución de problemas”, se recopilan las situaciones frecuentes y los lugares a revisar para esa unidad."
     },
     {
       "source": "<strong>最初の赤い行を見る</strong><br>エラーが複数出ているときは、一番上の「最初の赤い行」を直します。最初の1つを直すと、あとのエラーがまとめて消えることがよくあります。",
-      "translation": "<strong>Mira la primera línea roja</strong><br>Cuando aparezcan varios errores, corrige la «primera línea roja» de más arriba. Al corregir la primera, los errores siguientes suelen desaparecer juntos."
+      "translation": "<strong>Mira la primera línea roja</strong><br>Cuando aparezcan varios errores, corrige la “primera línea roja” de más arriba. Al corregir la primera, los errores siguientes suelen desaparecer juntos."
     },
     {
       "source": "<strong>直前のSTEPと見比べる</strong><br>手順を1つ飛ばしていないか、大文字・小文字やスペル（綴り）、全角スペースが混ざっていないかを確認します。",
@@ -60,7 +60,7 @@
     },
     {
       "source": "<strong>先生に質問するときは</strong><br>「STEP番号・編集したファイル・最初の赤い行・実行した操作」を伝えると、原因が早く分かります。",
-      "translation": "<strong>Al hacer preguntas al profesor</strong><br>Indica «el número de STEP, el archivo editado, la primera línea roja y las operaciones realizadas» para que la causa se pueda averiguar más rápido."
+      "translation": "<strong>Al hacer preguntas a tu docente</strong><br>Indica “el número de STEP, el archivo editado, la primera línea roja y las operaciones realizadas” para que la causa se pueda averiguar más rápido."
     },
     {
       "source": "開発環境",
@@ -80,7 +80,7 @@
     },
     {
       "source": "プレビュー画面下の「デバッグログ」やブラウザの開発者ツール（F12/右クリック→検証）のConsoleタブを確認します。JavaScriptの構文エラーやファイル読み込みエラーが赤く表示されます。",
-      "translation": "Revisa el «Registro de depuración» debajo de la pantalla de vista previa o la pestaña Console de las herramientas para desarrolladores del navegador (F12 / clic derecho → Inspeccionar). Los errores de sintaxis de JavaScript y de carga de archivos se mostrarán en rojo."
+      "translation": "Revisa 「デバッグログ」 (Registro de depuración) debajo de la pantalla de vista previa o la pestaña Console de las herramientas para desarrolladores del navegador (F12 / clic derecho → 検証 (Inspeccionar)). Los errores de sintaxis de JavaScript y de carga de archivos se mostrarán en rojo."
     },
     {
       "source": "共通：準備（Monaca）",
@@ -88,7 +88,7 @@
     },
     {
       "source": "ターミナル（Terminal）のエラー出力や、エディタ下部の「PROBLEMS（問題）」タブを確認します。<code>flutter pub get</code> の実行漏れやパッケージの指定誤りを確認します。",
-      "translation": "Revisa la salida de error en la terminal (Terminal) o la pestaña «PROBLEMS (Problemas)» en la parte inferior del editor. Comprueba si olvidaste ejecutar <code>flutter pub get</code> o si especificaste mal algún paquete."
+      "translation": "Revisa la salida de error en la terminal (Terminal) o la pestaña “PROBLEMS (Problemas)” en la parte inferior del editor. Comprueba si olvidaste ejecutar <code>flutter pub get</code> o si especificaste mal algún paquete."
     },
     {
       "source": "共通：準備（Flutter）",

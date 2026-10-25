@@ -32,7 +32,7 @@
     },
     {
       "source": "00 一覧と詳細から再開する",
-      "translation": "00 從清單與詳細資訊繼續"
+      "translation": "00 從清單與詳情繼續"
     },
     {
       "source": "01 習慣を入力する画面を作る",
@@ -48,7 +48,7 @@
     },
     {
       "source": "04 入力の題材をアレンジする",
-      "translation": "04 自訂輸入的主題"
+      "translation": "04 修改輸入的主題"
     },
     {
       "source": "コマ13 · STEP 05〜09",
@@ -68,11 +68,11 @@
     },
     {
       "source": "08 初期化と失敗時の表示",
-      "translation": "08 初始化與失敗時的顯示"
+      "translation": "08 重設與失敗時的顯示"
     },
     {
       "source": "09 保存を確かめてアレンジする",
-      "translation": "09 確認儲存並進行自訂"
+      "translation": "09 確認儲存並進行修改"
     },
     {
       "source": "コマ14 · STEP 10〜14",
@@ -120,7 +120,7 @@
     },
     {
       "source": "19 アレンジできる場所を振り返る",
-      "translation": "19 回顧可以自訂的地方"
+      "translation": "19 回顧可以修改的地方"
     },
     {
       "source": "困ったとき",
@@ -128,7 +128,7 @@
     },
     {
       "source": "共通：はじめの準備",
-      "translation": "通用：上課前的準備"
+      "translation": "共用：上課前的準備"
     },
     {
       "source": "共通：困ったとき",
@@ -160,7 +160,7 @@
     },
     {
       "source": "一覧と詳細から再開する",
-      "translation": "從清單與詳細資訊繼續"
+      "translation": "從清單與詳情繼續"
     },
     {
       "source": "Visual Studio Codeで、自分のスタンプ帳のフォルダを開きます。既に<code>F01StampBoard</code>として作っている場合は名前を変えず、その1本を育てて構いません。まだ無い場合はTerminalで次を実行し、生成した<code>F02StampRelease</code>を<code>File &gt; Open Folder…</code>で開きます。同名フォルダへ上書きしません。",
@@ -168,7 +168,7 @@
     },
     {
       "source": "SDKはFlutter 3.47.5 / Dart 3.13.4です。不足分は<a1>共通の準備資料</a1>を授業中に確認します。既存のiOSランタイムを使い、<code>flutter upgrade</code>はしません。",
-      "translation": "SDK 是 Flutter 3.47.5 / Dart 3.13.4。缺少的部分在課堂上參照<a1>通用的準備資料</a1>確認。使用現有的 iOS 執行階段，不要執行 <code>flutter upgrade</code>。"
+      "translation": "SDK 是 Flutter 3.47.5 / Dart 3.13.4。缺少的部分在課堂上參照<a1>共用的準備資料</a1>確認。使用現有的 iOS 執行階段，不要執行 <code>flutter upgrade</code>。"
     },
     {
       "source": "<code>lib/main.dart</code>を下の開始コードへそろえます。自分が変えた文字・色は先に控えます。<code>pubspec.yaml</code>の<code>dependencies</code>側のFlutter SDKは残し、<code>dev_dependencies</code>側に<code>flutter_test</code>のひな形がある場合はそのブロックだけ除きます。<code>test/</code>のひな形も生成されていた場合だけ除き、<code>flutter_lints</code>は残します。",
@@ -224,7 +224,7 @@
     },
     {
       "source": "<code>child</code>は1部品、<code>children</code>は部品のリストです。<code>Column</code>／<code>Row</code>で縦横、<code>ListView</code>でスクロール、<code>Wrap</code>で折り返しを指定します。<code>$</code>と波括弧は文字列補間、<code>() =&gt;</code>はコールバックの1式を返す書き方です。全件の一覧・詳細、0〜5の増減を確認します。再起動で0へ戻るのは、この段階では保存していないためです。",
-      "translation": "<code>child</code> 是1個元件，<code>children</code> 是元件的清單。用 <code>Column</code>／<code>Row</code> 指定直向與橫向，用 <code>ListView</code> 指定捲動，用 <code>Wrap</code> 指定換行。<code>$</code> 與大括號是字串插值，<code>() =&gt;</code> 是回傳1個運算式的回呼寫法。確認全部項目的清單與詳細資訊，以及 0〜5 的增減。重新啟動後回到 0，是因為這個階段尚未儲存。"
+      "translation": "<code>child</code> 是1個元件，<code>children</code> 是元件的清單。用 <code>Column</code>／<code>Row</code> 指定直向與橫向，用 <code>ListView</code> 指定捲動，用 <code>Wrap</code> 指定換行。<code>$</code> 與大括號是字串插值，<code>() =&gt;</code> 是回傳1個運算式的回呼寫法。確認全部項目的清單與詳情，以及 0〜5 的增減。重新啟動後回到 0，是因為這個階段尚未儲存。"
     },
     {
       "source": "Javaでモデルと<code>View</code>を更新する目的に対し、Flutterでは<code>setState</code>で値の変更を通知し、その値からWidgetを返します。遷移はSwiftのNavigation Controllerと同じく画面を積み、引数でデータを渡します。",
@@ -232,7 +232,7 @@
     },
     {
       "source": "自分のプロジェクトで一覧・スタンプ・詳細の開始状態を確認できた。",
-      "translation": "已在自己的專案中確認了清單、印章、詳細資訊的起始狀態。"
+      "translation": "已在自己的專案中確認了清單、印章、詳情的起始狀態。"
     },
     {
       "source": "STEP 01 · コマ12",
@@ -372,11 +372,11 @@
     },
     {
       "source": "追加したカードの「詳しく見る」を押し、名前と理由が詳細に一致するか確認します。",
-      "translation": "按下新加入卡片上的「詳しく見る」（查看詳情），確認名稱與理由與詳細資訊一致。"
+      "translation": "按下新加入卡片上的「詳しく見る」（查看詳情），確認名稱與理由與詳情一致。"
     },
     {
       "source": "スタンプを押し、一覧・詳細の回数を確かめます。",
-      "translation": "蓋印章，確認清單與詳細資訊中的次數。"
+      "translation": "蓋印章，確認清單與詳情中的次數。"
     },
     {
       "source": "ホットリスタートし、追加した習慣が消えて初期3件へ戻ることを確認します。",
@@ -392,7 +392,7 @@
     },
     {
       "source": "追加した習慣を一覧・詳細で読め、再起動では消えることを確認した。",
-      "translation": "能夠在清單與詳細資訊中看到新增的習慣，並已確認重新啟動後它會消失。"
+      "translation": "能夠在清單與詳情中看到新增的習慣，並已確認重新啟動後它會消失。"
     },
     {
       "source": "STEP 04 · コマ12",
@@ -400,7 +400,7 @@
     },
     {
       "source": "入力の題材をアレンジする",
-      "translation": "自訂輸入的主題"
+      "translation": "修改輸入的主題"
     },
     {
       "source": "コードは変えません。STEP 03まで書いたコードが、第12コマ終了時の基準です。",
@@ -444,7 +444,7 @@
     },
     {
       "source": "初期データはホットリスタートで確かめます。追加・空欄・詳細・戻るも試し、どこを変えたか控えて終えます。",
-      "translation": "初始資料用熱重啟來確認。也嘗試新增、空白處、詳細資訊、返回，記下改了哪裏後結束。"
+      "translation": "初始資料用熱重啟來確認。也嘗試新增、空白處、詳情、返回，記下改了哪裏後結束。"
     },
     {
       "source": "HTMLの<code>placeholder</code>と同じ役割を<code>hintText</code>が持ちます。入力済みデータとソースの記入例の違いを、再起動時の表示で確認します。",
@@ -452,7 +452,7 @@
     },
     {
       "source": "入力例と題材をアレンジし、動作が続いていることを確かめた。",
-      "translation": "已自訂輸入範例與主題，並確認功能仍然正常。"
+      "translation": "已修改輸入範例與主題，並確認功能仍然正常。"
     },
     {
       "source": "STEP 05 · コマ13",
@@ -728,7 +728,7 @@
     },
     {
       "source": "「保存した記録を読み込みました。」、追加した習慣、回数、詳細の理由を確認します。",
-      "translation": "確認「保存した記録を読み込みました。」（已讀取儲存的記錄）、新增的習慣、次數，以及詳細資訊中的理由。"
+      "translation": "確認「保存した記録を読み込みました。」（已讀取儲存的記錄）、新增的習慣、次數，以及詳情中的理由。"
     },
     {
       "source": "未保存の<code>null</code>はSwiftの<code>nil</code>に対応します。Androidの<code>onCreate</code>やiOSの<code>viewDidLoad</code>で保存値を画面へ戻す目的と同じですが、今回は<code>initState</code>から非同期処理を呼びます。読めたことと、アプリで扱える値かの確認を分けます。",
@@ -744,11 +744,11 @@
     },
     {
       "source": "初期化と失敗時の表示",
-      "translation": "初始化與失敗時的顯示"
+      "translation": "重設與失敗時的顯示"
     },
     {
       "source": "初期化ボタンと<code>resetHabits</code>を加えます。<code>showDialog&lt;bool&gt;</code>が返す<code>Future</code>を<code>await</code>し、やめるなら<code>false</code>、初期化するなら<code>true</code>を<code>Navigator.pop</code>で返します。ダイアログの外側などで閉じた場合は<code>null</code>なので、<code>confirmed != true</code>なら何もしません。",
-      "translation": "加入重設按鈕和 <code>resetHabits</code>。用 <code>await</code> 等待 <code>showDialog&lt;bool&gt;</code> 回傳的 <code>Future</code>，「やめる」（取消）時用 <code>Navigator.pop</code> 回傳 <code>false</code>，「初期化する」（初始化）時回傳 <code>true</code>。在對話方塊外側等處關閉時是 <code>null</code>，所以 <code>confirmed != true</code> 時甚麼都不做。"
+      "translation": "加入重設按鈕和 <code>resetHabits</code>。用 <code>await</code> 等待 <code>showDialog&lt;bool&gt;</code> 回傳的 <code>Future</code>，「やめる」（取消）時用 <code>Navigator.pop</code> 回傳 <code>false</code>，「初期化する」（重設）時回傳 <code>true</code>。在對話方塊外側等處關閉時是 <code>null</code>，所以 <code>confirmed != true</code> 時甚麼都不做。"
     },
     {
       "source": "削除するのは<code>preferences.remove(storageKey)</code>で指定したキー1個だけです。保存領域全体の<code>clear</code>は使いません。削除に成功してから初期の<code>Habit</code>配列へ戻し、保存を再び有効にします。削除に失敗したら元の一覧とエラーの文を残します。",
@@ -756,7 +756,7 @@
     },
     {
       "source": "<code>lib/main.dart</code>を3か所変えます。まず、<code>loadHabits</code>の<code>catch</code>にある、<code>message = '記録を読み込めませんでした。</code>で始まる1行を、次の1行に置き換えます。読み込めなかったときに、初期化も選べることを案内します。",
-      "translation": "修改 <code>lib/main.dart</code> 的 3 處地方。首先，把 <code>loadHabits</code> 的 <code>catch</code> 中以 <code>message = '記録を読み込めませんでした。</code> 開頭的那一行，替換為下面這一行。讀取失敗時，提示使用者也可以選擇初始化。"
+      "translation": "修改 <code>lib/main.dart</code> 的 3 處地方。首先，把 <code>loadHabits</code> 的 <code>catch</code> 中以 <code>message = '記録を読み込めませんでした。</code> 開頭的那一行，替換為下面這一行。讀取失敗時，提示使用者也可以選擇重設。"
     },
     {
       "source": "lib/main.dart · 置き換え · loadHabits の catch の message の1行",
@@ -772,7 +772,7 @@
     },
     {
       "source": "最後に、一覧の<code>build</code>で、いちばん下の<code>const Text('記録はこの端末だけに残ります。提出するAPKに入力済みデータは含まれません。'),</code>の下に、次のコードを追加します。初期化を始めるボタンです。",
-      "translation": "最後，在清單的 <code>build</code> 中，最底部的 <code>const Text('記録はこの端末だけに残ります。提出するAPKに入力済みデータは含まれません。'),</code> 下面，新增下面的程式碼。這是開始初始化的按鈕。"
+      "translation": "最後，在清單的 <code>build</code> 中，最底部的 <code>const Text('記録はこの端末だけに残ります。提出するAPKに入力済みデータは含まれません。'),</code> 下面，新增下面的程式碼。這是開始重設的按鈕。"
     },
     {
       "source": "lib/main.dart · 追加 · 一覧の最後の Text の下",
@@ -784,7 +784,7 @@
     },
     {
       "source": "必要な内容は別に控えてから、もう一度開いて初期化するを押します。",
-      "translation": "把需要的內容另外記下後，再次開啟，按下「初期化する」（初始化）。"
+      "translation": "把需要的內容另外記下後，再次開啟，按下「初期化する」（重設）。"
     },
     {
       "source": "初期3件・回数0へ戻り、再起動しても初期値になることを確認します。",
@@ -792,7 +792,7 @@
     },
     {
       "source": "通常の操作で保存・読込に失敗したら、表示された文を先生と確認します。学生の作品へ障害を起こすコードを入れる作業は行いません。",
-      "translation": "如果在正常操作中儲存或讀取失敗，請和老師一起確認顯示出來的文字。不做往學生作品裡加入引發故障的程式碼這樣的操作。"
+      "translation": "如果在正常操作中儲存或讀取失敗，請和老師一起確認顯示出來的文字。不做往學生作品裏加入引發故障的程式碼這樣的操作。"
     },
     {
       "source": "キー単位の削除は<code>UserDefaults</code>の<code>removeObject</code>や<code>SharedPreferences.Editor.remove</code>に対応します。今回は確認画面の返答も非同期に待ち、<code>true</code>のときだけ進みます。取消しや画面を閉じた場合と、削除の確定を区別します。",
@@ -808,7 +808,7 @@
     },
     {
       "source": "保存を確かめてアレンジする",
-      "translation": "確認儲存並進行自訂"
+      "translation": "確認儲存並進行修改"
     },
     {
       "source": "コードは変えません。STEP 08まで書いたコードが、第13コマ終了時の基準です。",
@@ -816,11 +816,11 @@
     },
     {
       "source": "入力→保存→詳細→再起動→復元を一続きで確かめます。次に<code>createInitialHabits</code>の名前と理由を自分の題材へ変えます。",
-      "translation": "將輸入→儲存→詳細資訊→重新啟動→還原連貫地確認一遍。然後把 <code>createInitialHabits</code> 中的名稱和理由改成自己的主題。"
+      "translation": "將輸入→儲存→詳情→重新啟動→還原連貫地確認一遍。然後把 <code>createInitialHabits</code> 中的名稱和理由改成自己的主題。"
     },
     {
       "source": "保存済みデータがあるとソースの初期値より優先されます。初期値のアレンジを確かめるときは、残す内容を控えてからアプリ内の初期化を使います。キーを変えて記録を見えなくする方法で済ませません。",
-      "translation": "有已儲存的資料時，它比原始碼中的初始值優先。要確認初始值的自訂時，先記下要保留的內容，再使用應用程式內的初始化。不要用修改鍵名讓記錄看不見的方法來應付。"
+      "translation": "有已儲存的資料時，它比原始碼中的初始值優先。要確認初始值的修改時，先記下要保留的內容，再使用應用程式內的重設。不要用修改鍵名讓記錄看不見的方法來應付。"
     },
     {
       "source": "効果",
@@ -828,7 +828,7 @@
     },
     {
       "source": "未保存・初期化後に出る題材。",
-      "translation": "未儲存或初始化後顯示的主題。"
+      "translation": "未儲存或重設後顯示的主題。"
     },
     {
       "source": "見出し、入力例、色、余白",
@@ -844,7 +844,7 @@
     },
     {
       "source": "既定値と保存済みの値の優先関係はSwiftの設定読込に対応します。今回は保存内容を検証してから表示します。ソースの変更がどの状態で見えるかを確認するのがアレンジの仕上げです。",
-      "translation": "預設值和已儲存值的優先關係，對應於 Swift 中讀取設定的做法。這次是先驗證儲存內容再顯示。確認原始碼的修改在哪種狀態下能看到，是自訂的收尾工作。"
+      "translation": "預設值和已儲存值的優先關係，對應於 Swift 中讀取設定的做法。這次是先驗證儲存內容再顯示。確認原始碼的改動在哪種狀態下能看到，是修改的收尾工作。"
     },
     {
       "source": "自分の題材が初期状態に表れ、保存・復元も引き続き動いた。",
@@ -892,7 +892,7 @@
     },
     {
       "source": "キャッシュを受け取ってもAndroid SDK・NDK・AGP等の取得が残る場合があります。<code>flutter run -d Android端末ID</code>を実行し、ターミナルの取得状況を見ます。待機時間はコードと提出前チェックの確認に使い、途中で同じビルドを重ねて始めません。",
-      "translation": "即使拿到了快取，也可能還需要下載 Android SDK、NDK、AGP 等。執行 <code>flutter run -d Android端末ID</code>（Android端末ID＝Android 裝置 ID），觀察終端機裡的下載情況。等待時間用來確認程式碼和提交前的檢查項目，不要在中途重複啟動同一個建置。"
+      "translation": "即使拿到了快取，也可能還需要下載 Android SDK、NDK、AGP 等。執行 <code>flutter run -d Android端末ID</code>（Android端末ID＝Android 裝置 ID），觀察終端機裏的下載情況。等待時間用來確認程式碼和提交前的檢查項目，不要在中途重複啟動同一個建置。"
     },
     {
       "source": "同じDartソースからiOS用とAndroid用をビルドしますが、ネイティブ側の道具と依存関係は別です。既に知っているAndroid StudioのSDK・エミュレータを使い、Flutterがビルドと起動をつなぎます。",
@@ -916,7 +916,7 @@
     },
     {
       "source": "Androidで一覧・追加・保存・詳細を確認したら、通常の<code>release</code> APKを作ります。最初にソースを保存し、<code>flutter analyze</code>で指摘がないか確認します。",
-      "translation": "在 Android 上確認了清單、新增、儲存、詳細資訊之後，製作普通的 <code>release</code> APK。首先儲存原始碼，用 <code>flutter analyze</code> 確認沒有問題。"
+      "translation": "在 Android 上確認了清單、新增、儲存、詳情之後，製作普通的 <code>release</code> APK。首先儲存原始碼，用 <code>flutter analyze</code> 確認沒有問題。"
     },
     {
       "source": "<code>flutter build apk</code>は既定で<code>release</code>です。今回は<code>--debug</code>や<code>--split-per-abi</code>を付けません。端末用の通常APKを1ファイルで提出します。署名鍵の作成やストア公開は扱わず、空テンプレートの<code>debug</code>鍵による署名設定を使います。",
@@ -964,11 +964,11 @@
     },
     {
       "source": "空欄では追加できず、正常入力なら一覧・詳細へ反映されることを確かめます。",
-      "translation": "確認留空時不能新增，正常輸入時會反映到清單與詳細資訊。"
+      "translation": "確認留空時不能新增，正常輸入時會反映到清單與詳情。"
     },
     {
       "source": "スタンプの上限と1つ戻すを試します。",
-      "translation": "嘗試印章的上限和「1つ戻す」（退回一個）。"
+      "translation": "嘗試印章的上限和「1つ戻す」（復原一個）。"
     },
     {
       "source": "Androidのアプリ情報（<code>App info</code>）の<code>Force stop</code>でアプリを停止し、アイコンから起動し直して復元を確認します。バックグラウンドへ移すだけとは区別します。アプリ情報とアイコンに出るアプリの名前は、プロジェクト名の<code>f02_stamp_release</code>です（F01から続けている場合は<code>f01_stamp_board</code>）。",
@@ -988,7 +988,7 @@
     },
     {
       "source": "生成したAPKそのもので追加・保存・詳細・復元を確認できた。",
-      "translation": "已用產生的 APK 本身確認了新增、儲存、詳細資訊、還原。"
+      "translation": "已用產生的 APK 本身確認了新增、儲存、詳情、還原。"
     },
     {
       "source": "STEP 13 · コマ14",
@@ -1008,7 +1008,7 @@
     },
     {
       "source": "相手にも見せたい題材は<code>createInitialHabits</code>へ書きます。名前・理由、画面の見出し・入力例、配色など、ソースに残した変更がアレンジの対象です。保存済みデータで初期値が隠れている場合は、必要な記録を控えてアプリ内で初期化し、確認します。",
-      "translation": "想讓對方也看到的主題，寫到 <code>createInitialHabits</code> 裏。名稱、理由、畫面標題、輸入範例、配色等留在原始碼裏的修改，才是自訂的對象。如果已儲存的資料擋住了初始值，先記下需要的記錄，在應用程式內初始化後再確認。"
+      "translation": "想讓對方也看到的主題，寫到 <code>createInitialHabits</code> 裏。名稱、理由、畫面標題、輸入範例、配色等留在原始碼裏的改動，才是修改的對象。如果已儲存的資料擋住了初始值，先記下需要的記錄，在應用程式內重設後再確認。"
     },
     {
       "source": "iOSとAndroidでは同じ名前の記録を使っても保存領域は別です。片方で入力してももう片方へ自動では移りません。両方の画面で文字・余白・入力・戻るを比較し、見た目の違いと動作の一致を確かめます。",
@@ -1048,7 +1048,7 @@
     },
     {
       "source": "初期化後にも自分の題材が出る。",
-      "translation": "初始化後也會顯示自己的主題。"
+      "translation": "重設後也會顯示自己的主題。"
     },
     {
       "source": "<code>ThemeData</code>と<code>StampMarks</code>の色",
@@ -1072,7 +1072,7 @@
     },
     {
       "source": "CSSで指定したRGBと同じ色を、Flutterでは不透明度付きの<code>Color</code>へ書きます。保存や遷移を変えず、既存の表示の値でアレンジします。",
-      "translation": "CSS 中指定的 RGB 顏色，在 Flutter 中寫成帶不透明度的 <code>Color</code>。不修改儲存與畫面切換，只用現有的顯示值來進行自訂。"
+      "translation": "CSS 中指定的 RGB 顏色，在 Flutter 中寫成帶不透明度的 <code>Color</code>。不修改儲存與畫面切換，只用現有的顯示值來進行修改。"
     },
     {
       "source": "変更後のAPKを作り直し、そのファイルで表示と操作を確認できた。",
@@ -1092,11 +1092,11 @@
     },
     {
       "source": "このコマでは、教科書のコードは変えません。STEP 14までに自分でアレンジしたコードを、上書きせずにそのまま仕上げます。",
-      "translation": "這堂課教科書的程式碼不變。到 STEP 14 為止自己自訂過的程式碼，不要覆寫，直接在其上完成作品。"
+      "translation": "這堂課教科書的程式碼不變。到 STEP 14 為止自己修改過的程式碼，不要覆寫，直接在其上完成作品。"
     },
     {
       "source": "確認順を決め、結果を短く控えます。必要な記録は初期化前に別に残します。",
-      "translation": "決定檢查順序，簡短記下結果。需要的記錄在初始化前另外儲存。"
+      "translation": "決定檢查順序，簡短記下結果。需要的記錄在重設前另外儲存。"
     },
     {
       "source": "初期の題材・名前・理由が自分の作品になっている。",
@@ -1108,11 +1108,11 @@
     },
     {
       "source": "スタンプの0と上限、1つ戻すが正しい。",
-      "translation": "印章的 0 和上限、「1つ戻す」（退回一個）都正確。"
+      "translation": "印章的 0 和上限、「1つ戻す」（復原一個）都正確。"
     },
     {
       "source": "詳細の名前・理由・回数が選んだ習慣と一致する。",
-      "translation": "詳細資訊中的名稱、理由、次數與所選習慣一致。"
+      "translation": "詳情中的名稱、理由、次數與所選習慣一致。"
     },
     {
       "source": "終了・再起動で記録が戻る。",
@@ -1120,7 +1120,7 @@
     },
     {
       "source": "初期化を取り消すと記録が残る。",
-      "translation": "取消初始化後記錄仍然保留。"
+      "translation": "取消重設後記錄仍然保留。"
     },
     {
       "source": "最終APKの確認でも同じ順を使います。エラーを隠すために警告抑制を加えず、分からない項目は先生と原因を確認します。",
@@ -1152,15 +1152,15 @@
     },
     {
       "source": "見た目を変えたら長い名前と改行のある理由でも確認します。目標回数を小さくする場合は、保存済みの回数が新しい上限を超えると読込の検査に通りません。必要な記録を控えてから旧版で初期化するか、変更後の画面で本人が初期化を選びます。",
-      "translation": "修改了外觀後，也要用較長的名稱和帶換行的理由確認。如果把目標次數改小，已儲存的次數超過新上限時就通不過讀取驗證。先記下需要的記錄，然後在舊版本中初始化，或者在修改後的畫面上由本人選擇初始化。"
+      "translation": "修改了外觀後，也要用較長的名稱和帶換行的理由確認。如果把目標次數改小，已儲存的次數超過新上限時就通不過讀取驗證。先記下需要的記錄，然後在舊版本中重設，或者在修改後的畫面上由本人選擇重設。"
     },
     {
       "source": "読込の検査は起動時だけなので、<code>r</code>（ホットリロード）で反映したときは行われず、回数がそのまま残ります。3回のまま目標を2にすると「3 / 2 回 · あと-1回」と出て、スタンプを押すは無効になります。1つ戻すは押せる表示ですが、<code>changeStamp</code>は目標を超える次の回数を受け付けません。この例のように目標を1回だけ超えているときは、押すと目標の2回に戻ります。2回以上超えているときは、押しても変わりません。目標を超えた回数が残ったまま<code>R</code>を押すと読込の検査に通らないので、上のとおり、必要な記録を控えてから初期化を選びます。",
-      "translation": "讀取驗證只在啟動時進行，用 <code>r</code>（熱重載）套用變更時不會執行，次數會原樣保留。次數還是 3 次時把目標改成 2，會顯示「3 / 2 回 · あと-1回」（3 / 2 次 · 還差 -1 次），「スタンプを押す」（蓋印章）變為停用。「1つ戻す」（退回一個）顯示為可以按，但 <code>changeStamp</code> 不接受超過目標的下一個次數。像這個例子一樣只超過目標 1 次時，按下後會回到目標的 2 次。超過 2 次及以上時，按了也不會變。在超過目標的次數還保留的狀態下按 <code>R</code>，會通不過讀取驗證，所以如上所述，先記下需要的記錄，再選擇初始化。"
+      "translation": "讀取驗證只在啟動時進行，用 <code>r</code>（熱重載）套用變更時不會執行，次數會原樣保留。次數還是 3 次時把目標改成 2，會顯示「3 / 2 回 · あと-1回」（3 / 2 次 · 還差 -1 次），「スタンプを押す」（蓋印章）變為停用。「1つ戻す」（復原一個）顯示為可以按，但 <code>changeStamp</code> 不接受超過目標的下一個次數。像這個例子一樣只超過目標 1 次時，按下後會回到目標的 2 次。超過 2 次及以上時，按了也不會變。在超過目標的次數還保留的狀態下按 <code>R</code>，會通不過讀取驗證，所以如上所述，先記下需要的記錄，再選擇重設。"
     },
     {
       "source": "保存キー・3要素の並び・検証条件は、見た目のアレンジとは分けます。今回の提出前に新しい保存形式や機能を増やさず、学んだ範囲で仕上げます。",
-      "translation": "儲存鍵、3 個元素的順序、驗證條件，與外觀的自訂分開。這次提交前不要增加新的儲存格式或功能，在學過的範圍內完成。"
+      "translation": "儲存鍵、3 個元素的順序、驗證條件，與外觀的修改分開。這次提交前不要增加新的儲存格式或功能，在學過的範圍內完成。"
     },
     {
       "source": "見出しの文字や改行を変える目的はSwiftのラベルと同じです。保存の仕組みを触らずに、既存の<code>Text</code>や色で題材を伝えられます。",
@@ -1200,7 +1200,7 @@
     },
     {
       "source": "Androidの提出物としてAPKを渡す経験と同じです。保存データではなくアプリ本体を渡すため、相手の初期状態で見えるアレンジにします。",
-      "translation": "這和作為 Android 的提交物交出 APK 的經驗相同。因為交出的是應用程式本體而不是儲存的資料，所以要做成在對方的初始狀態下就能看到的自訂。"
+      "translation": "這和作為 Android 的提交物交出 APK 的經驗相同。因為交出的是應用程式本體而不是儲存的資料，所以要做成在對方的初始狀態下就能看到的修改。"
     },
     {
       "source": "最終APKそのものを確認し、指定先へ提出したファイルを確かめた。",
@@ -1256,7 +1256,7 @@
     },
     {
       "source": "アレンジできる場所を振り返る",
-      "translation": "回顧可以自訂的地方"
+      "translation": "回顧可以修改的地方"
     },
     {
       "source": "コードは変えません。STEP 08まで書いたコードが、この単元の完成版です。",
@@ -1264,7 +1264,7 @@
     },
     {
       "source": "最後に、既に扱ったアレンジの場所を振り返ります。<code>createInitialHabits</code>の題材、<code>Text</code>の案内、<code>ThemeData</code>の配色、<code>StampMarks</code>の色、<code>Padding</code>や<code>SizedBox</code>の余白を、自分の目的に合わせて変えられます。",
-      "translation": "最後，回顧已經處理過的可自訂之處。<code>createInitialHabits</code> 的主題、<code>Text</code> 的提示文字、<code>ThemeData</code> 的配色、<code>StampMarks</code> 的顏色、<code>Padding</code> 和 <code>SizedBox</code> 的邊距，都可以配合自己的目的進行修改。"
+      "translation": "最後，回顧已經處理過的可修改之處。<code>createInitialHabits</code> 的主題、<code>Text</code> 的提示文字、<code>ThemeData</code> 的配色、<code>StampMarks</code> 的顏色、<code>Padding</code> 和 <code>SizedBox</code> 的邊距，都可以配合自己的目的進行修改。"
     },
     {
       "source": "追加で直す場合も、ソース保存→解析→APK作成→そのAPKの操作確認という順番を保ちます。提出後にファイルを差し替える場合は、教員の提出ルールに従います。",
@@ -1276,11 +1276,11 @@
     },
     {
       "source": "データの項目を変える目的はWeb基礎と同じです。Dartでは型に沿って初期データを用意し、その上へ入力・保存・復元を組み合わせました。新しいAPIを追加せず、既存の値と表示を使ってアレンジできます。",
-      "translation": "修改資料項目的目的與 Web 基礎相同。在 Dart 中按型別準備初始資料，並在此之上組合了輸入、儲存、還原。不新增新的 API，用現有的值和顯示就能進行自訂。"
+      "translation": "修改資料項目的目的與 Web 基礎相同。在 Dart 中按型別準備初始資料，並在此之上組合了輸入、儲存、還原。不新增新的 API，用現有的值和顯示就能進行修改。"
     },
     {
       "source": "アレンジできる場所と確認の順を、自分のコードで確かめた。",
-      "translation": "已用自己的程式碼確認可以自訂的地方和確認的順序。"
+      "translation": "已用自己的程式碼確認可以修改的地方和確認的順序。"
     },
     {
       "source": "状態",
@@ -1320,7 +1320,7 @@
     },
     {
       "source": "元データを勝手に上書きせず、再読み込み。必要な記録を控えてから本人の判断で初期化。",
-      "translation": "不擅自覆寫原資料，先重新讀取。記下需要的記錄後，由本人判斷是否初始化。"
+      "translation": "不擅自覆寫原資料，先重新讀取。記下需要的記錄後，由本人判斷是否重設。"
     },
     {
       "source": "残り回数が負になる（あと-1回など）",
@@ -1328,7 +1328,7 @@
     },
     {
       "source": "回数が目標を超えたまま<code>stampGoal</code>を減らし、<code>r</code>で反映した。1つ戻すが効くのは、目標を1回だけ超えているとき。<code>R</code>では読込エラーになるので、必要な記録を控えて初期化。",
-      "translation": "在次數超過目標的狀態下縮小了 <code>stampGoal</code>，並用 <code>r</code> 套用了變更。「1つ戻す」（退回一個）只在超過目標 1 次時有效。按 <code>R</code> 會出現讀取錯誤，所以記下需要的記錄後初始化。"
+      "translation": "在次數超過目標的狀態下縮小了 <code>stampGoal</code>，並用 <code>r</code> 套用了變更。「1つ戻す」（復原一個）只在超過目標 1 次時有效。按 <code>R</code> 會出現讀取錯誤，所以記下需要的記錄後重設。"
     },
     {
       "source": "初期値を変えても出ない",
@@ -1336,7 +1336,7 @@
     },
     {
       "source": "保存済みデータが優先。必要な記録を控えて初期化し、ソースの初期データを確認。",
-      "translation": "已儲存的資料優先。記下需要的記錄後初始化，再確認原始碼中的初始資料。"
+      "translation": "已儲存的資料優先。記下需要的記錄後重設，再確認原始碼中的初始資料。"
     },
     {
       "source": "Androidビルドが止まる",
@@ -1356,7 +1356,7 @@
     },
     {
       "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の調べ方を試してください。それでも解決しないときは、STEP番号と画面を先生に見せましょう。",
-      "translation": "如果錯誤仍未解決，請嘗試<a1>共通資料：遇到問題時</a1>中的排查方法。如果依然無法解決，請把 STEP 編號和螢幕展示給老師看。"
+      "translation": "如果錯誤仍未解決，請嘗試<a1>共用資料：遇到問題時</a1>中的排查方法。如果依然無法解決，請把 STEP 編號和螢幕展示給老師看。"
     },
     {
       "source": "JEC / ハイブリッドアプリ開発技法 · F02StampRelease",

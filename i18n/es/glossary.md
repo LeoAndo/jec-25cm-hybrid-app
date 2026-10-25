@@ -67,6 +67,50 @@
 | 全体を置き換える（同上） | reemplazar todo el archivo | 以前の見出しの `· 全文`（archivo completo）に代わる語。`全文` は見出しから消えた |
 | コード欄 | bloque de código | |
 | コードは変えません。（STEPの冒頭の決まり文句） | Este STEP no tiene cambios de código. | 教科書がそのSTEPで新しいコードを出さない、という意味。直後に学生が自分で値を変える文が続くことがあるので、「コードを変えるな」という禁止の言い方にしない（#182） |
+| ハイブリッドアプリ開発技法 | Técnicas de desarrollo de aplicaciones híbridas | 授業名。教科書の題名・上部の帯・末尾の行。学生用ZIPの入口ページ（`package-student-materials.py`）は日本語と英語だけなので、es の訳文はそこに出ない（en は入口ページに合わせて Hybrid App Development） |
+| Web基礎 | Fundamentos web | 学生が履修済みの科目名。web は小文字で書く（Fundamentos de la Web・Fundamentos Web とは書かない） |
+| 通常版Monaca | versión estándar de Monaca | Monaca Education ではない通常版 |
+| Freeプラン | plan Free | |
+| 枠（プロジェクトの枠） | espacio | Freeプランの3枠。空き＝espacio libre／espacio disponible。CSS の「枠」（border）は borde で別の語 |
+| 教材 | materiales | jec-25cm-kotlin と同じ（los materiales）。material educativo・materiales de enseñanza とは書かない |
+| 教科書 | libro de texto | jec-25cm-kotlin と同じ |
+| 共通資料 | material común | jec-25cm-kotlin と同じ。単数で書く（「共通資料のSTEP 4〜7」は el STEP 4〜7 del material común）。リンクの「共通資料：困ったとき」は Material común: Solución de problemas。サイドバーの「共通：はじめの準備」「共通：困ったとき」は Común: Preparación inicial／Común: Solución de problemas |
+| 開始コード | código inicial | 各コマの最初にある合流用のコード |
+| 単元 | unidad | jec-25cm-kotlin と同じ |
+| 完成版 | versión terminada | jec-25cm-kotlin と同じ。「STEP NNまで書いたコードが、…の完成版です。」も versión terminada（versión final とは書かない） |
+| アレンジ | personalizar／personalización | jec-25cm-kotlin と同じ |
+| 題材 | tema | 学生が自分で決める好きなもの・習慣などの内容。temática とは書かない |
+| 先生／教員 | docente | 男女で形が変わらない語（下の「書き方の決まり」）。profesor とは書かない（#185）。冠詞は文による（el docente／tu docente。どちらの形も既訳にある） |
+| 提出 | entregar／entrega | jec-25cm-kotlin と同じ（Google Classroom の語） |
+| 好きなものノート | Cuaderno de favoritos | M01・M02の題材。画面の題名「好きなものノート」は日本語のまま残し (Cuaderno de favoritos) を添える。文中は cuaderno de favoritos（「自分の好きなものノート」は tu propio cuaderno de favoritos） |
+| 好きなもの | favorito／cosa favorita | M02 の画面のボタン「好きなものを追加」は (Agregar un favorito)。文中では cosas que te gustan とも書く |
+| 名前・種類・好きな理由 | nombre／tipo／razón | 画面の項目名。コードのプロパティ `name`・`genre`・`comment` は原文のまま。F01・F02 の「続けたい理由」も razón（「続けたい理由」 (Razón para continuar)）。データの項目としての「理由」は motivo とは書かない（項目でない一般の「理由」は motivo でもよい） |
+| 項目（オブジェクトの） | campo | M02の保存データの「文字列の3項目」、F01・F02 の `Habit` の項目。選んでいる一覧の項目（elemento）と区別する |
+| 一覧／詳細 | lista／detalle | 詳細画面＝pantalla de detalle。Monaca系（M01・M02）は単数の el detalle、Flutter系（F01・F02）の既訳は複数の los detalles（pantalla de detalles、「詳しく見る」 (Ver detalles)）で、系統の中ではそろっている |
+| 端末選択 | selección de dispositivos | Monacaのプレビューの iPhone 15／Pixel 8 |
+| 初期化（記録を初期の内容に戻す操作） | restablecer／restablecimiento | M02・F02 の初期化ボタンと処理。reiniciar／reinicio は「再起動」に使うので、初期化には使わない。F02 の画面のボタン「初期化する」は (Restablecer)、M02 の「初期の内容に戻す」は (Restablecer contenido inicial)。プログラムの初期化（Onsen UI のページの `init`、Swift の初期化）は inicializar／inicialización |
+| 保存キー | clave de guardado | `localStorage` のキー（M02）、`SharedPreferencesAsync` のキー（F02） |
+| 復元 | restaurar | |
+| 空欄 | campo vacío | 空白だけの入力（solo espacios en blanco）と区別する。campo en blanco とは書かない |
+| スタンプ帳 | tablero de sellos | F01・F02の題材。題名では Tablero de sellos。estampa とは書かない |
+| スタンプ／スタンプを押す | sello／poner un sello | 画面のボタン「スタンプを押す」は日本語のまま残し (Poner sello) を添える。押した分＝los sellados |
+| 1つ戻す | deshacer uno | 画面のボタン「1つ戻す」は日本語のまま残し (Deshacer uno) を添える（sello に合わせて男性形） |
+| 習慣 | hábito | |
+| 回数 | conteo | recuento・cantidad de veces とは書かない。画面の「回」は veces（「3 / 2 回 · あと-1回」 (3 / 2 veces · faltan -1 veces)） |
+| 目標回数 | cantidad objetivo | `stampGoal`。「目標」は objetivo |
+| 残り回数 | cantidad restante | |
+| 合計 | total | |
+| 詳しく見る | (Ver detalles) | 画面のボタン。日本語のまま残す |
+| 達成メッセージ | mensaje de logro | |
+| ホットリスタート | hot restart | 英字のまま。男性名詞（el hot restart） |
+| 非同期処理 | procesamiento asíncrono | F02 で定義する文は procesamiento asíncrono (非同期処理) と日本語を添える。`async` / `await` は `<code>` のまま |
+| 通常APK | APK normal | `flutter build apk` の既定（release）のAPK |
+| 端末ID | ID del dispositivo | `flutter devices` で見る値。`端末ID` が `<code>` の中にあるときは (端末ID = ID del dispositivo) と添える |
+| 空テンプレート | plantilla vacía | `flutter create --empty` |
+| 制作フォルダ | carpeta de trabajo | |
+| 条件演算子 | operador condicional | `? :` |
+| 名前付き引数 | argumento con nombre | jec-25cm-kotlin と同じ。「必須の名前付き引数」は argumento con nombre obligatorio |
+| 件（データの数） | elemento | 3件＝3 elementos |
 
 ## Web基礎で習った用語
 

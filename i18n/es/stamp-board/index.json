@@ -12,7 +12,7 @@
     },
     {
       "source": "JEC / ハイブリッドアプリ開発技法",
-      "translation": "JEC / Desarrollo de aplicaciones híbridas"
+      "translation": "JEC / Técnicas de desarrollo de aplicaciones híbridas"
     },
     {
       "source": "0 / 20 ステップ確認済み",
@@ -80,7 +80,7 @@
     },
     {
       "source": "10 回数と画面の関係を読む",
-      "translation": "10 Lee la relación entre la cantidad de veces y la pantalla"
+      "translation": "10 Lee la relación entre el conteo y la pantalla"
     },
     {
       "source": "11 setStateでスタンプを増やす",
@@ -96,7 +96,7 @@
     },
     {
       "source": "14 回数と見た目をアレンジする",
-      "translation": "14 Personaliza la cantidad de veces y la apariencia"
+      "translation": "14 Personaliza el conteo y la apariencia"
     },
     {
       "source": "コマ11 · STEP 15〜19",
@@ -164,7 +164,7 @@
     },
     {
       "source": "Visual Studio Codeを使います。最初の25分でFlutter 3.47.5 / Dart 3.13.4、Flutter拡張、iOS実行環境を確認します。<a1>共通資料のSTEP 4〜7</a1>を開き、不足分は授業中に用意してください。学生のMacはApple Siliconです。既存のXcodeで使えるiOSランタイムは再利用し、全員に再取得は求めません。",
-      "translation": "Usarás Visual Studio Code. En los primeros 25 minutos, verifica Flutter 3.47.5 / Dart 3.13.4, la extensión de Flutter y el entorno de ejecución de iOS. Abre el <a1>STEP 4〜7 de los materiales comunes</a1> y prepara lo que falte durante la clase. Las Mac de los estudiantes son Apple Silicon. Reutiliza los entornos de ejecución de iOS que ya se pueden usar con el Xcode existente; no se exige a todos volver a descargarlos."
+      "translation": "Usarás Visual Studio Code. En los primeros 25 minutos, verifica Flutter 3.47.5 / Dart 3.13.4, la extensión de Flutter y el entorno de ejecución de iOS. Abre el <a1>STEP 4〜7 del material común</a1> y prepara lo que falte durante la clase. Las Mac de los estudiantes son Apple Silicon. Reutiliza los entornos de ejecución de iOS que ya se pueden usar con el Xcode existente; no se exige a todos volver a descargarlos."
     },
     {
       "source": "<code>flutter --version</code>と<code>flutter doctor -v</code>を確認します。この単元はiOSで始めるため、Android欄の課題は先生と切り分けます。取得が終わらないときは授業中に相談し、自宅で終わらせることを条件にはしません。",
@@ -560,11 +560,11 @@
     },
     {
       "source": "回数と画面の関係を読む",
-      "translation": "Lee la relación entre la cantidad de veces y la pantalla"
+      "translation": "Lee la relación entre el conteo y la pantalla"
     },
     {
       "source": "Visual Studio Codeで<code>F01StampBoard</code>を開き、3件の静的な一覧から再開します。今日は「現在の回数から表示する」という宣言的UIの使い方を操作で確かめます。",
-      "translation": "Abre <code>F01StampBoard</code> en Visual Studio Code y retoma desde la lista estática de 3 elementos. Hoy verificarás mediante la interacción cómo se utiliza la UI declarativa: “la visualización se genera a partir de la cantidad actual de veces”."
+      "translation": "Abre <code>F01StampBoard</code> en Visual Studio Code y retoma desde la lista estática de 3 elementos. Hoy verificarás mediante la interacción cómo se utiliza la UI declarativa: “la visualización se genera a partir del conteo actual”."
     },
     {
       "source": "このSTEPでは、コードは変えません。STEP 09までのコードで、回数がどの表示につながっているかを読みます。",
@@ -740,7 +740,7 @@
     },
     {
       "source": "回数と見た目をアレンジする",
-      "translation": "Personaliza la cantidad de veces y la apariencia"
+      "translation": "Personaliza el conteo y la apariencia"
     },
     {
       "source": "コードは変えません。STEP 11まで書いたコードが、第10コマ終了時の基準です。",
@@ -760,7 +760,7 @@
     },
     {
       "source": "Javaの変更しない基準値と同じ目的です。Dartの<code>const</code>はコンパイル時に確定する値で、今回の目標回数を1か所で管理します。新しい機能ではなく既存の数値と装飾をアレンジします。",
-      "translation": "Tiene el mismo propósito que un valor de referencia constante en Java. El <code>const</code> de Dart es un valor fijado en tiempo de compilación y gestiona la cantidad de veces objetivo de esta ocasión en un solo lugar. En lugar de agregar una nueva funcionalidad, personalizas los números y la decoración existentes."
+      "translation": "Tiene el mismo propósito que un valor de referencia constante en Java. El <code>const</code> de Dart es un valor fijado en tiempo de compilación y gestiona la cantidad objetivo de esta ocasión en un solo lugar. En lugar de agregar una nueva funcionalidad, personalizas los números y la decoración existentes."
     },
     {
       "source": "目標と配色を変えても、上限・取消し・合計がそろった。",
@@ -956,7 +956,7 @@
     },
     {
       "source": "コードは変えません。STEP 16まで書いたコードが、<code>F01StampBoard</code>の完成版です。",
-      "translation": "Este STEP no tiene cambios de código. El código que escribiste hasta el STEP 16 es la versión final de <code>F01StampBoard</code>."
+      "translation": "Este STEP no tiene cambios de código. El código que escribiste hasta el STEP 16 es la versión terminada de <code>F01StampBoard</code>."
     },
     {
       "source": "仕上げに、自分の題材で使いやすいスタンプ帳にします。変更する場所は、ここまでに扱った範囲から選びます。",
@@ -1012,7 +1012,7 @@
     },
     {
       "source": "共通資料のSDK・<code>PATH</code>を確認し、Visual Studio Codeとターミナルを開き直す。",
-      "translation": "Verifica el SDK y <code>PATH</code> en los materiales comunes, y vuelve a abrir Visual Studio Code y la terminal."
+      "translation": "Verifica el SDK y <code>PATH</code> en el material común, y vuelve a abrir Visual Studio Code y la terminal."
     },
     {
       "source": "<code>pubspec.yaml</code>が見つからない",
@@ -1064,7 +1064,7 @@
     },
     {
       "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の調べ方を試してください。それでも解決しないときは、STEP番号と画面を先生に見せましょう。",
-      "translation": "Si el error no se resuelve, prueba los pasos indicados en <a1>Guía común: Solución de problemas</a1>. Si aun así no se soluciona, muestra al profesor el número de STEP y tu pantalla."
+      "translation": "Si el error no se resuelve, prueba los pasos indicados en <a1>Material común: Solución de problemas</a1>. Si aun así no se soluciona, muestra a tu docente el número de STEP y tu pantalla."
     },
     {
       "source": "JEC / ハイブリッドアプリ開発技法 · F01StampBoard",

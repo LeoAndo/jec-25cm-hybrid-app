@@ -12,7 +12,7 @@
     },
     {
       "source": "JEC / ハイブリッドアプリ開発技法",
-      "translation": "JEC / Desarrollo de aplicaciones híbridas"
+      "translation": "JEC / Técnicas de desarrollo de aplicaciones híbridas"
     },
     {
       "source": "0 / 15 ステップ確認済み",
@@ -68,7 +68,7 @@
     },
     {
       "source": "08 初期化の確認と失敗への対応",
-      "translation": "08 Confirmación del reinicio y manejo de fallas"
+      "translation": "08 Confirmación del restablecimiento y manejo de fallas"
     },
     {
       "source": "09 保存を確かめてアレンジ",
@@ -152,7 +152,7 @@
     },
     {
       "source": "JSONと<code>localStorage</code>で保存・復元できる。初期化には確認を挟む。",
-      "translation": "Poder guardar y restaurar con JSON y <code>localStorage</code>. Incluir una confirmación antes de reiniciar."
+      "translation": "Poder guardar y restaurar con JSON y <code>localStorage</code>. Incluir una confirmación antes de restablecer."
     },
     {
       "source": "授業内でFlutter準備を開始し、待ち時間に好きなものノートをアレンジ・確認・提出する。",
@@ -172,7 +172,7 @@
     },
     {
       "source": "まだ自分の好きなものノートがない人だけ、ダッシュボードで新規作成し、<code>最小限のテンプレート</code> を選び、<code>M02OshiSave</code> と名付けます。登録や空き枠が不明なら、<a1>共通資料のSTEP 2〜3</a1>で確認して戻ります。",
-      "translation": "Solo si aún no tienes tu propio cuaderno de favoritos, crea uno nuevo en el panel de control, elige <code>最小限のテンプレート</code> (Plantilla mínima) y nómbralo <code>M02OshiSave</code>. Si no estás seguro de tu registro o de los espacios libres, consulta el <a1>STEP 2 a 3 de los materiales comunes</a1> y regresa."
+      "translation": "Solo si aún no tienes tu propio cuaderno de favoritos, crea uno nuevo en el panel de control, elige <code>最小限のテンプレート</code> (Plantilla mínima) y nómbralo <code>M02OshiSave</code>. Si tienes dudas sobre tu registro o sobre los espacios libres, consulta el <a1>STEP 2 a 3 del material común</a1> y regresa."
     },
     {
       "source": "<code>www/index.html</code>・<code>www/css/style.css</code> を開きます。<code>www/js/app.js</code> がなければ、ファイル一覧の作成操作で <code>www</code> の下に <code>js</code> フォルダ、その中に <code>app.js</code> ファイルを作ります。",
@@ -256,7 +256,7 @@
     },
     {
       "source": "Web基礎と同じ3ファイル構成ですが、操作する場所はMonaca クラウド IDEです。<code>init</code>はAndroidのビュー生成後の設定やiOSの<code>viewDidLoad</code>に相当するタイミングで、JavaScriptの<code>addEventListener</code>で受け取ります。<code>pushPage</code>の<code>data</code>は、ネイティブアプリで次の画面へ値を渡す操作に対応します。まだ保存用の文字列には変換していません。",
-      "translation": "La estructura de 3 archivos es la misma que en Fundamentos de la Web, pero el lugar donde operas es el Monaca クラウド IDE. <code>init</code> equivale al momento de configuración tras crear las vistas en Android o a <code>viewDidLoad</code> en iOS, y se recibe con <code>addEventListener</code> en JavaScript. El <code>data</code> de <code>pushPage</code> corresponde a pasar valores a la siguiente pantalla en una aplicación nativa. Todavía no lo hemos convertido en una cadena de texto para guardarlo."
+      "translation": "La estructura de 3 archivos es la misma que en Fundamentos web, pero el lugar donde operas es el Monaca クラウド IDE. <code>init</code> equivale al momento de configuración tras crear las vistas en Android o a <code>viewDidLoad</code> en iOS, y se recibe con <code>addEventListener</code> en JavaScript. El <code>data</code> de <code>pushPage</code> corresponde a pasar valores a la siguiente pantalla en una aplicación nativa. Todavía no lo hemos convertido en una cadena de texto para guardarlo."
     },
     {
       "source": "自分の1プロジェクトで3件の一覧・詳細・戻るを確認し、HTMLとJSの対応を追えた。",
@@ -344,7 +344,7 @@
     },
     {
       "source": "<code>.reset-section</code>・<code>#panel_reset ons-button</code>・<code>.is-hidden</code> の3つは、STEP 08で足す初期化の確認欄のための指定です。このSTEPのHTMLには、まだ当たる要素がありません。",
-      "translation": "Las tres declaraciones <code>.reset-section</code>, <code>#panel_reset ons-button</code> y <code>.is-hidden</code> son reglas para el panel de confirmación de reinicio que se agregará en el STEP 08. En el HTML de este STEP, aún no hay elementos a los que se apliquen."
+      "translation": "Las tres declaraciones <code>.reset-section</code>, <code>#panel_reset ons-button</code> y <code>.is-hidden</code> son reglas para el panel de confirmación de restablecimiento que se agregará en el STEP 08. En el HTML de este STEP, aún no hay elementos a los que se apliquen."
     },
     {
       "source": "JavaScriptは4か所を変えます。まず、<code>let oshiItems = [</code> の行から <code>let isOpeningDetail = false;</code> の行までを、次のコードに置き換えます。初期データの配列を自分の好きなものに変えている場合は、控えてから置き換え、<code>createInitialItems</code> の中の配列へ書き戻します。",
@@ -356,7 +356,7 @@
     },
     {
       "source": "初期データは <code>createInitialItems</code> が新しい配列を返す形にまとめました。後で初期化したときにも同じ内容を作り直せるようにするためです。呼び出しのたびに新しい配列になる点を、<code>return</code>の位置と一緒に読みます。",
-      "translation": "Los datos iniciales se organizaron para que <code>createInitialItems</code> devuelva un arreglo nuevo. Esto permite volver a crear el mismo contenido cuando se reinicie más adelante. Observa que en cada llamada se genera un arreglo nuevo, prestando atención a la posición de <code>return</code>."
+      "translation": "Los datos iniciales se organizaron para que <code>createInitialItems</code> devuelva un arreglo nuevo. Esto permite volver a crear el mismo contenido cuando se restablezca más adelante. Observa que en cada llamada se genera un arreglo nuevo, prestando atención a la posición de <code>return</code>."
     },
     {
       "source": "移動中の旗の名前は、STEP 00の <code>isOpeningDetail</code> から <code>isOpeningPage</code> に変えます。詳細を開くときだけでなく入力画面を開くときにも使うので、「詳細を開いている最中」ではなく「どちらかのページを開いている最中」と読める名前にするためです。宣言は上のコードで変えたので、残りは<code>openOshiDetail</code>の中の3か所です。",
@@ -404,7 +404,7 @@
     },
     {
       "source": "Web基礎の<code>input</code>・<code>textarea</code>・<code>label</code>をそのまま使います。Androidの<code>EditText</code>、iOSの<code>UITextField</code>・<code>UITextView</code>と同じ役割です。画面を開く処理は詳細への移動と同じ形で、渡すデータが要らないため<code>data</code>を省きます。<code>createInitialItems</code>は、Java／Swiftでデータの配列を関数から返す書き方と対応します。",
-      "translation": "Usamos <code>input</code>, <code>textarea</code> y <code>label</code> de Fundamentos de la Web tal como están. Cumplen la misma función que <code>EditText</code> en Android y <code>UITextField</code> o <code>UITextView</code> en iOS. El proceso de abrir la pantalla tiene la misma forma que la navegación al detalle, y se omite <code>data</code> porque no hace falta pasar datos. <code>createInitialItems</code> corresponde a la forma de retornar un arreglo de datos desde una función en Java o Swift."
+      "translation": "Usamos <code>input</code>, <code>textarea</code> y <code>label</code> de Fundamentos web tal como están. Cumplen la misma función que <code>EditText</code> en Android y <code>UITextField</code> o <code>UITextView</code> en iOS. El proceso de abrir la pantalla tiene la misma forma que la navegación al detalle, y se omite <code>data</code> porque no hace falta pasar datos. <code>createInitialItems</code> corresponde a la forma de retornar un arreglo de datos desde una función en Java o Swift."
     },
     {
       "source": "入力画面を開き、3つの欄へ入力して戻れた。追加ボタンがまだ押せないことを確認した。",
@@ -572,7 +572,7 @@
     },
     {
       "source": "HTMLは構造と記入例、CSSは装飾、JavaScriptはデータと動きというWeb基礎の役割分担を使います。画面に入力した値と、ソースの初期データの違いを、再読み込み後の結果で見分けます。",
-      "translation": "Utilizamos la división de roles de Fundamentos de la Web: HTML para la estructura y ejemplos de llenado, CSS para la apariencia y JavaScript para los datos y el comportamiento. Distingue la diferencia entre los valores ingresados en pantalla y los datos iniciales del código fuente a partir del resultado tras recargar."
+      "translation": "Utilizamos la división de roles de Fundamentos web: HTML para la estructura y ejemplos de llenado, CSS para la apariencia y JavaScript para los datos y el comportamiento. Distingue la diferencia entre los valores ingresados en pantalla y los datos iniciales del código fuente a partir del resultado tras recargar."
     },
     {
       "source": "アレンジした場所が画面に現れ、追加・詳細・戻るが引き続き動いた。",
@@ -828,7 +828,7 @@
     },
     {
       "source": "読み込みや<code>parse</code>が失敗したとき、または構造が違うときは<code>canSave</code>を<code>false</code>にします。保存済みの文字列を自動で消したり、初期データで上書きしたりしません。一覧には初期データと失敗メッセージを表示し、追加は止めます。次のSTEPで、本人が選んだときだけ初期化できる操作を作ります。失敗メッセージが案内する「初期の内容に戻す」ボタンも、そのときに作ります。このSTEPの画面には、まだありません。",
-      "translation": "Cuando la lectura o <code>parse</code> fallen, o cuando la estructura sea diferente, asigna <code>false</code> a <code>canSave</code>. No borres automáticamente la cadena guardada ni la sobrescribas con los datos iniciales. Muestra los datos iniciales y un mensaje de fallo en la lista, y detén la adición. En el siguiente STEP crearemos una operación para reiniciar solo cuando el propio usuario lo elija. El botón 「初期の内容に戻す」 (Restaurar contenido inicial) indicado en el mensaje de error también se creará en ese momento. En la pantalla de este STEP aún no existe."
+      "translation": "Cuando la lectura o <code>parse</code> fallen, o cuando la estructura sea diferente, asigna <code>false</code> a <code>canSave</code>. No borres automáticamente la cadena guardada ni la sobrescribas con los datos iniciales. Muestra los datos iniciales y un mensaje de fallo en la lista, y detén la adición. En el siguiente STEP crearemos una operación para restablecer solo cuando el propio usuario lo elija. El botón 「初期の内容に戻す」 (Restablecer contenido inicial) indicado en el mensaje de error también se creará en ese momento. En la pantalla de este STEP aún no existe."
     },
     {
       "source": "名前に引用符や山かっこ、好きな理由に改行を入れて1件追加します。",
@@ -860,11 +860,11 @@
     },
     {
       "source": "初期化の確認と失敗への対応",
-      "translation": "Confirmación del reinicio y manejo de fallas"
+      "translation": "Confirmación del restablecimiento y manejo de fallas"
     },
     {
       "source": "HTMLに初期化ボタンと確認欄、JSにそのイベントと<code>resetOshiItems</code>を加えます。HTMLでは、一覧の <code>txt_selected</code> の行（<code>まだ選択していません</code>）の下に、次のコードを足します。",
-      "translation": "Agrega el botón de reinicio y el panel de confirmación en el HTML, y su evento y <code>resetOshiItems</code> en el JS. En el HTML, agrega el siguiente código debajo de la línea de <code>txt_selected</code> de la lista, la que contiene <code>まだ選択していません</code> (Todavía no se ha seleccionado nada)."
+      "translation": "Agrega el botón de restablecimiento y el panel de confirmación en el HTML, y su evento y <code>resetOshiItems</code> en el JS. En el HTML, agrega el siguiente código debajo de la línea de <code>txt_selected</code> de la lista, la que contiene <code>まだ選択していません</code> (Todavía no se ha seleccionado nada)."
     },
     {
       "source": "www/index.html · 追加 · txt_selected の行の下",
@@ -880,19 +880,19 @@
     },
     {
       "source": "<code>初期の内容に戻す</code> を押すと、<code>is-hidden</code>を<code>remove</code>して確認欄を見せます。<code>やめる</code> ではクラスを<code>add</code>し、欄を閉じるだけです。確認欄を囲む <code>reset-section</code> は上に区切りの線を引き、<code>#panel_reset ons-button</code> は確認欄の2つのボタンの上を12px空けます。この2つと <code>is-hidden</code> はSTEP 01のCSSに入れてあり、このSTEPのHTMLで初めて要素に当たります。",
-      "translation": "Al presionar <code>初期の内容に戻す</code> (Restaurar contenido inicial), se aplica <code>remove</code> sobre <code>is-hidden</code> para mostrar el panel de confirmación. Con <code>やめる</code> (Cancelar), solo se aplica <code>add</code> a la clase y se cierra el panel. <code>reset-section</code>, que rodea el panel de confirmación, dibuja una línea divisoria arriba, y <code>#panel_reset ons-button</code> deja un espacio de 12px arriba de los 2 botones del panel de confirmación. Estas dos reglas y <code>is-hidden</code> se incluyeron en el CSS desde el STEP 01, y es en el HTML de este STEP donde se aplican a elementos por primera vez."
+      "translation": "Al presionar <code>初期の内容に戻す</code> (Restablecer contenido inicial), se aplica <code>remove</code> sobre <code>is-hidden</code> para mostrar el panel de confirmación. Con <code>やめる</code> (Cancelar), solo se aplica <code>add</code> a la clase y se cierra el panel. <code>reset-section</code>, que rodea el panel de confirmación, dibuja una línea divisoria arriba, y <code>#panel_reset ons-button</code> deja un espacio de 12px arriba de los 2 botones del panel de confirmación. Estas dos reglas y <code>is-hidden</code> se incluyeron en el CSS desde el STEP 01, y es en el HTML de este STEP donde se aplican a elementos por primera vez."
     },
     {
       "source": "実際の削除は <code>削除して初期の内容に戻す</code> を押した場合だけです。<code>localStorage.removeItem(STORAGE_KEY)</code> で、このアプリのキー1つだけを削除します。保存領域全体を空にする<code>clear</code>は使いません。",
-      "translation": "La eliminación real solo ocurre al presionar <code>削除して初期の内容に戻す</code> (Eliminar y restaurar contenido inicial). Con <code>localStorage.removeItem(STORAGE_KEY)</code> se elimina únicamente la clave correspondiente a esta aplicación. No utilizamos <code>clear</code>, que vaciaría toda el área de almacenamiento."
+      "translation": "La eliminación real solo ocurre al presionar <code>削除して初期の内容に戻す</code> (Eliminar y restablecer contenido inicial). Con <code>localStorage.removeItem(STORAGE_KEY)</code> se elimina únicamente la clave correspondiente a esta aplicación. No utilizamos <code>clear</code>, que vaciaría toda el área de almacenamiento."
     },
     {
       "source": "削除に成功したら<code>createInitialItems</code>で新しい初期配列を作り、<code>canSave</code>を<code>true</code>へ戻し、一覧と文を更新します。削除に失敗したら画面の配列も変更せず、削除できなかったと表示します。初期化が終わると、以前入力した内容は戻せません。",
-      "translation": "Si la eliminación tiene éxito, crea un nuevo arreglo inicial con <code>createInitialItems</code>, devuelve <code>canSave</code> a <code>true</code> y actualiza la lista y los textos. Si la eliminación falla, no modifica el arreglo en pantalla y muestra que no se pudo eliminar. Una vez que se completa el reinicio, el contenido ingresado anteriormente no se podrá recuperar."
+      "translation": "Si la eliminación tiene éxito, crea un nuevo arreglo inicial con <code>createInitialItems</code>, devuelve <code>canSave</code> a <code>true</code> y actualiza la lista y los textos. Si la eliminación falla, no modifica el arreglo en pantalla y muestra que no se pudo eliminar. Una vez que se completa el restablecimiento, el contenido ingresado anteriormente no se podrá recuperar."
     },
     {
       "source": "検証用に追加したデータを使い、初期化の確認欄を開いて <code>やめる</code> を押します。件数が変わらないことを確認します。",
-      "translation": "Usando los datos agregados para la verificación, abre el panel de confirmación de reinicio y presiona <code>やめる</code> (Cancelar). Confirma que la cantidad de elementos no cambie."
+      "translation": "Usando los datos agregados para la verificación, abre el panel de confirmación de restablecimiento y presiona <code>やめる</code> (Cancelar). Confirma que la cantidad de elementos no cambie."
     },
     {
       "source": "残す必要のある内容は控えてから、もう一度確認欄を開き、削除するボタンを押します。",
@@ -904,15 +904,15 @@
     },
     {
       "source": "通常の操作で保存・読込に失敗した場合は、表示された文を先生と確認します。教材の確認のために、ブラウザのセキュリティ設定を変更する必要はありません。",
-      "translation": "Si falla el guardado o la lectura durante el funcionamiento normal, revisa el mensaje mostrado con tu docente. No es necesario modificar la configuración de seguridad del navegador para verificar el material educativo."
+      "translation": "Si falla el guardado o la lectura durante el funcionamiento normal, revisa el mensaje mostrado con tu docente. No es necesario modificar la configuración de seguridad del navegador para verificar los materiales."
     },
     {
       "source": "Web基礎の<code>classList.add</code> / <code>remove</code>で表示クラスを切り替えます。キー1つの削除は、Androidの<code>SharedPreferences.Editor.remove</code>やSwiftの<code>UserDefaults.removeObject</code>に対応します。データを消す前に選び直せる画面を用意する点は、ネイティブアプリの確認操作と同じです。",
-      "translation": "Alternamos la clase de visualización mediante <code>classList.add</code> / <code>remove</code> de Fundamentos de la Web. Eliminar una sola clave corresponde a <code>SharedPreferences.Editor.remove</code> en Android o <code>UserDefaults.removeObject</code> en Swift. Ofrecer una interfaz para reconsiderar antes de borrar los datos es igual a las operaciones de confirmación en aplicaciones nativas."
+      "translation": "Alternamos la clase de visualización mediante <code>classList.add</code> / <code>remove</code> de Fundamentos web. Eliminar una sola clave corresponde a <code>SharedPreferences.Editor.remove</code> en Android o <code>UserDefaults.removeObject</code> en Swift. Ofrecer una interfaz para reconsiderar antes de borrar los datos es igual a las operaciones de confirmación en aplicaciones nativas."
     },
     {
       "source": "初期化を中止したときは内容が残り、確定したときだけ初期の内容へ戻った。",
-      "translation": "Al cancelar el reinicio el contenido se mantuvo, y solo al confirmarlo se restableció al contenido inicial."
+      "translation": "Al cancelar el restablecimiento el contenido se mantuvo, y solo al confirmarlo se restableció al contenido inicial."
     },
     {
       "source": "STEP 09 · コマ6",
@@ -928,7 +928,7 @@
     },
     {
       "source": "<strong>保存データがあると、ソースの初期データより優先して表示されます。</strong> <code>createInitialItems</code>を書き換えても画面が変わらない場合は、変更したコードのミスとは限りません。必要な入力を控えたうえで、アプリ内の初期化を使ってソースの内容を確認します。",
-      "translation": "<strong>Si existen datos guardados, se muestran con prioridad sobre los datos iniciales del código fuente.</strong> Si la pantalla no cambia tras modificar <code>createInitialItems</code>, no necesariamente se debe a un error en el código modificado. Anota los datos ingresados que necesites y usa la opción de reinicio dentro de la aplicación para comprobar el contenido del código fuente."
+      "translation": "<strong>Si existen datos guardados, se muestran con prioridad sobre los datos iniciales del código fuente.</strong> Si la pantalla no cambia tras modificar <code>createInitialItems</code>, no necesariamente se debe a un error en el código modificado. Anota los datos ingresados que necesites y usa la opción de restablecimiento dentro de la aplicación para comprobar el contenido del código fuente."
     },
     {
       "source": "アレンジする場所",
@@ -944,7 +944,7 @@
     },
     {
       "source": "初期化後の一覧と詳細が自分の好きなものになる。",
-      "translation": "La lista y el detalle tras el reinicio muestran tus propios favoritos."
+      "translation": "La lista y el detalle tras el restablecimiento muestran tus propios favoritos."
     },
     {
       "source": "HTMLの案内文・<code>placeholder</code>",
@@ -988,7 +988,7 @@
     },
     {
       "source": "<a1>共通資料のSTEP 4〜7</a1>を別のタブで開きます。",
-      "translation": "Abre el <a1>STEP 4 a 7 de los materiales comunes</a1> en otra pestaña."
+      "translation": "Abre el <a1>STEP 4 a 7 del material común</a1> en otra pestaña."
     },
     {
       "source": "Apple Silicon用のFlutter 3.47.5 / Dart 3.13.4を取得します。既にその版を用意できている場合は、版を確認して重複取得を避けます。",
@@ -1000,7 +1000,7 @@
     },
     {
       "source": "不足分だけ先生と確認して取得を始め、この教科書へ戻ります。Flutter専用のiOS資材は共通資料の <code>flutter precache --ios</code> で用意します。",
-      "translation": "Verifica con tu docente solo lo que te falte, comienza a descargarlo y regresa a este libro de texto. Los recursos de iOS específicos para Flutter se preparan con <code>flutter precache --ios</code> según los materiales comunes."
+      "translation": "Verifica con tu docente solo lo que te falte, comienza a descargarlo y regresa a este libro de texto. Los recursos de iOS específicos para Flutter se preparan con <code>flutter precache --ios</code> según el material común."
     },
     {
       "source": "取得待ちは好きなものノートのアレンジに使います。コマ8の冒頭にも準備確認の時間があります。家庭での作業が済んでいることを前提にはしません。",
@@ -1040,7 +1040,7 @@
     },
     {
       "source": "必要な保存内容を控えて初期化し、全件の詳細を開く。",
-      "translation": "Anotar el contenido guardado necesario, reiniciar y abrir los detalles de todos los elementos."
+      "translation": "Anotar el contenido guardado necesario, restablecer y abrir los detalles de todos los elementos."
     },
     {
       "source": "HTMLの見出し・案内文・入力例",
@@ -1048,7 +1048,7 @@
     },
     {
       "source": "自分の題材が画面から伝わる。",
-      "translation": "Tu propia temática se transmite desde la pantalla."
+      "translation": "Tu propio tema se transmite desde la pantalla."
     },
     {
       "source": "入力画面を開き、迷わず入力できるか読む。",
@@ -1072,7 +1072,7 @@
     },
     {
       "source": "ソースを変えても以前の保存内容が表示される場合はSTEP 09を確認します。保存キーを変えて見えなくする方法で済ませず、残す内容を控えてからアプリ内の初期化を使います。",
-      "translation": "Si después de modificar el código fuente se sigue mostrando el contenido guardado anteriormente, revisa el STEP 09. No te limites a ocultarlo cambiando la clave de guardado; anota el contenido que desees conservar y luego usa el reinicio dentro de la aplicación."
+      "translation": "Si después de modificar el código fuente se sigue mostrando el contenido guardado anteriormente, revisa el STEP 09. No te limites a ocultarlo cambiando la clave de guardado; anota el contenido que desees conservar y luego usa el restablecimiento dentro de la aplicación."
     },
     {
       "source": "JavaやSwiftでコードの初期値を変えることと、実行中に端末へ保存した内容を変えることは別です。公開URLで渡すのはソースなので、ブラウザの入力内容だけを変えても相手の初期画面には反映されません。",
@@ -1080,7 +1080,7 @@
     },
     {
       "source": "自分の題材に合わせた変更をソースへ保存し、初期状態から確認できた。",
-      "translation": "Guardaste en el código fuente los cambios acordes a tu propia temática y los pudiste verificar desde el estado inicial."
+      "translation": "Guardaste en el código fuente los cambios acordes a tu propio tema y los pudiste verificar desde el estado inicial."
     },
     {
       "source": "STEP 12 · コマ7",
@@ -1092,7 +1092,7 @@
     },
     {
       "source": "コードは変えません。ソースの初期の内容が表示された状態から完成確認を始めます。必要な入力は内容を控えて、先生と確認してから初期化します。",
-      "translation": "Este STEP no tiene cambios de código. Comienza la comprobación final desde el estado en que se muestra el contenido inicial del código fuente. Anota los datos ingresados que necesites y realiza el reinicio tras confirmarlo con tu docente."
+      "translation": "Este STEP no tiene cambios de código. Comienza la comprobación final desde el estado en que se muestra el contenido inicial del código fuente. Anota los datos ingresados que necesites y realiza el restablecimiento tras confirmarlo con tu docente."
     },
     {
       "source": "一覧の各行から詳細へ進み、名前・種類・理由が一致することを確認します。",
@@ -1100,7 +1100,7 @@
     },
     {
       "source": "追加画面で空欄を試し、同じ画面に案内が出ることを確認します。",
-      "translation": "Prueba dejar campos en blanco en la pantalla de entrada y confirma que aparezca un mensaje de guía en la misma pantalla."
+      "translation": "Prueba dejar campos vacíos en la pantalla de entrada y confirma que aparezca un mensaje de guía en la misma pantalla."
     },
     {
       "source": "確認用の1件を追加し、成功の文・件数・詳細・再読み込み後の復元を確認します。",
@@ -1108,7 +1108,7 @@
     },
     {
       "source": "初期化で <code>やめる</code> を選び、データが残ることを確かめます。必要な内容を控えた後に初期化し、ソースのデータへ戻します。",
-      "translation": "Elige <code>やめる</code> (Cancelar) en el reinicio y comprueba que los datos permanezcan. Tras anotar el contenido necesario, reinicia y regresa a los datos del código fuente."
+      "translation": "Elige <code>やめる</code> (Cancelar) en el restablecimiento y comprueba que los datos permanezcan. Tras anotar el contenido necesario, restablece y regresa a los datos del código fuente."
     },
     {
       "source": "iPhone系・Android系のプレビューで入力・戻る・ボタンの見た目を比べます。比較用の <code>ons.platform.select(\"android\")</code> を有効にした場合は、最後にコメントへ戻します。",
@@ -1192,7 +1192,7 @@
     },
     {
       "source": "HTML・CSS・JavaScriptの役割分担はWeb基礎と同じで、変更した場所はファイルの種類から見つけられます。保存があるアプリでは、ソースの初期値と保存値の両方を見ます。<code>SharedPreferences</code>／<code>UserDefaults</code>を使うアプリで、コードに書いた初期値と端末に残る保存値が別にあるのと同じです。",
-      "translation": "La división de roles entre HTML, CSS y JavaScript es la misma que en Fundamentos de la Web, por lo que puedes ubicar los lugares modificados según el tipo de archivo. En aplicaciones con guardado, se observan tanto los valores iniciales del código fuente como los valores guardados. Esto es igual a las aplicaciones que usan <code>SharedPreferences</code> / <code>UserDefaults</code>, donde los valores iniciales escritos en el código y los valores guardados en el dispositivo son independientes."
+      "translation": "La división de roles entre HTML, CSS y JavaScript es la misma que en Fundamentos web, por lo que puedes ubicar los lugares modificados según el tipo de archivo. En aplicaciones con guardado, se observan tanto los valores iniciales del código fuente como los valores guardados. Esto es igual a las aplicaciones que usan <code>SharedPreferences</code> / <code>UserDefaults</code>, donde los valores iniciales escritos en el código y los valores guardados en el dispositivo son independientes."
     },
     {
       "source": "自分の変更箇所が画面に現れ、初期状態からも伝わる作品にできた。",
@@ -1228,7 +1228,7 @@
     },
     {
       "source": "保存データが優先される。必要な内容を控えたうえで、アプリ内の「初期の内容に戻す」を使う。",
-      "translation": "Los datos guardados tienen prioridad. Tras anotar el contenido necesario, usa 「初期の内容に戻す」 (Restaurar contenido inicial) dentro de la aplicación."
+      "translation": "Los datos guardados tienen prioridad. Tras anotar el contenido necesario, usa 「初期の内容に戻す」 (Restablecer contenido inicial) dentro de la aplicación."
     },
     {
       "source": "保存・読込失敗と出る",
@@ -1248,7 +1248,7 @@
     },
     {
       "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の調べ方を試してください。それでも解決しないときは、STEP番号と画面を先生に見せましょう。",
-      "translation": "Si el error no se resuelve, prueba los pasos indicados en <a1>Guía común: Solución de problemas</a1>. Si aun así no se soluciona, muestra al profesor el número de STEP y tu pantalla."
+      "translation": "Si el error no se resuelve, prueba los pasos indicados en <a1>Material común: Solución de problemas</a1>. Si aun así no se soluciona, muestra a tu docente el número de STEP y tu pantalla."
     },
     {
       "source": "JEC / ハイブリッドアプリ開発技法 · M02OshiSave",

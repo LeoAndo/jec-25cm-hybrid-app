@@ -4,7 +4,7 @@
   "entries": [
     {
       "source": "F02 スタンプ帳：入力・保存・APK提出 | ハイブリッドアプリ開発技法",
-      "translation": "F02 印章簿：輸入、儲存、APK 提交 | 混合式應用程式開發技法"
+      "translation": "F02 印章簿：輸入、儲存、APK 繳交 | 混合式應用程式開發技法"
     },
     {
       "source": "本文へ移動",
@@ -40,7 +40,7 @@
     },
     {
       "source": "02 空欄を確かめる",
-      "translation": "02 檢查空白處"
+      "translation": "02 檢查空白欄位"
     },
     {
       "source": "03 習慣を追加して戻る",
@@ -68,7 +68,7 @@
     },
     {
       "source": "08 初期化と失敗時の表示",
-      "translation": "08 初始化與失敗時的顯示"
+      "translation": "08 重設與失敗時的顯示"
     },
     {
       "source": "09 保存を確かめてアレンジする",
@@ -84,7 +84,7 @@
     },
     {
       "source": "11 提出形式のAPKを作る",
-      "translation": "11 製作提交格式的 APK"
+      "translation": "11 製作繳交格式的 APK"
     },
     {
       "source": "12 生成したAPKをインストールする",
@@ -112,7 +112,7 @@
     },
     {
       "source": "17 最終APKを確認して提出する",
-      "translation": "17 確認最終 APK 並提交"
+      "translation": "17 確認最終 APK 並繳交"
     },
     {
       "source": "18 変更箇所と動作を確かめる",
@@ -132,7 +132,7 @@
     },
     {
       "source": "共通：困ったとき",
-      "translation": "共用：遇到問題時"
+      "translation": "通用：遇到問題時"
     },
     {
       "source": "コマ12〜15 · 各90分",
@@ -144,7 +144,7 @@
     },
     {
       "source": "入力した習慣とスタンプを端末へ保存し、再起動後も続けられるアプリにします。保存の完了を待つ処理を読み、生成したAPKそのものを確認して提出しましょう。",
-      "translation": "把輸入的習慣和印章儲存到裝置上，做成重新啟動後也能繼續使用的應用程式。閱讀等待儲存完成的處理，確認產生的 APK 本身，然後提交。"
+      "translation": "把輸入的習慣和印章儲存到裝置上，做成重新啟動後也能繼續使用的應用程式。閱讀等待儲存完成的處理，確認產生的 APK 本身，然後繳交。"
     },
     {
       "source": "この単元のプロジェクトは<code>F02StampRelease</code>です。この教科書に開始コードと作成・実行手順を掲載しています。既に作っている自分のスタンプ帳から続けても構いません。Web基礎とJava／Swiftの知識を比べながら読みます。",
@@ -260,7 +260,7 @@
     },
     {
       "source": "このSTEPで書くコードには、後のSTEPで使う部分も先に入れてあります。空欄を確かめて<code>message</code>へ文を入れる<code>submit</code>はSTEP 02で、入力画面から一覧へ習慣を渡す<code>onSave</code>と、渡された習慣を一覧へ加える<code>addHabit</code>はSTEP 03で使います。<code>onSave</code>は<code>AddHabitPage</code>の必須の名前付き引数なので、一覧の<code>openAdd</code>は今から<code>addHabit</code>を渡します。追加するボタンの<code>onPressed</code>が<code>null</code>なので、このSTEPではどれも呼ばれません。<code>TextField</code>の<code>enabled: true</code>は入力を受け付ける指定です。<code>canPop</code>と同じく今は<code>true</code>で、保存を入れる段階で、保存中の入力を止めるために使います。",
-      "translation": "本 STEP 要寫的程式碼中，已經預先放入了後面 STEP 要使用的部分。檢查空白處並將文字放進 <code>message</code> 的 <code>submit</code> 在 STEP 02 使用；將習慣從輸入畫面傳給清單的 <code>onSave</code>，以及將傳入的習慣新增至清單的 <code>addHabit</code> 在 STEP 03 使用。<code>onSave</code> 是 <code>AddHabitPage</code> 的必填具名引數，所以清單的 <code>openAdd</code> 現在就傳入 <code>addHabit</code>。「追加する」（新增）按鈕的 <code>onPressed</code> 為 <code>null</code>，所以在這個 STEP 中它們都不會被呼叫。<code>TextField</code> 的 <code>enabled: true</code> 是接受輸入的指定。和 <code>canPop</code> 一樣，現在是 <code>true</code>，在加入儲存的階段，用來在儲存過程中停止輸入。"
+      "translation": "本 STEP 要寫的程式碼中，已經預先放入了後面 STEP 要使用的部分。檢查空白欄位並將文字放進 <code>message</code> 的 <code>submit</code> 在 STEP 02 使用；將習慣從輸入畫面傳給清單的 <code>onSave</code>，以及將傳入的習慣新增至清單的 <code>addHabit</code> 在 STEP 03 使用。<code>onSave</code> 是 <code>AddHabitPage</code> 的必填具名引數，所以清單的 <code>openAdd</code> 現在就傳入 <code>addHabit</code>。「追加する」（新增）按鈕的 <code>onPressed</code> 為 <code>null</code>，所以在這個 STEP 中它們都不會被呼叫。<code>TextField</code> 的 <code>enabled: true</code> 是接受輸入的指定。和 <code>canPop</code> 一樣，現在是 <code>true</code>，在加入儲存的階段，用來在儲存過程中停止輸入。"
     },
     {
       "source": "<code>lib/main.dart</code>を3か所変えます。まず、<code>_StampBoardPageState</code>の中で、<code>changeStamp</code>の関数を閉じる<code>}</code>の下に、1行空けて次のコードを追加します。下の<code>openDetail</code>との間も1行空けます。",
@@ -300,7 +300,7 @@
     },
     {
       "source": "空欄を確かめる",
-      "translation": "檢查空白處"
+      "translation": "檢查空白欄位"
     },
     {
       "source": "追加するボタンの<code>onPressed</code>へ<code>submit</code>を渡します。括弧を付けた<code>submit()</code>の実行結果ではなく、押したときに呼ぶ関数を渡します。",
@@ -336,7 +336,7 @@
     },
     {
       "source": "<code>trim</code>と空欄の判定はJavaの入力検証に対応します。Dartの<code>isEmpty</code>はプロパティとして読みます。結果はダイアログではなく同じ画面の<code>Text</code>へ出し、<code>setState</code>で変更を通知します。",
-      "translation": "<code>trim</code> 與空白處的判斷對應於 Java 的輸入驗證。Dart 的 <code>isEmpty</code> 作為屬性讀取。結果不使用對話方塊，而是顯示在同一畫面的 <code>Text</code> 中，用 <code>setState</code> 通知變更。"
+      "translation": "<code>trim</code> 與空白欄位的判斷對應於 Java 的輸入驗證。Dart 的 <code>isEmpty</code> 作為屬性讀取。結果不使用對話方塊，而是顯示在同一畫面的 <code>Text</code> 中，用 <code>setState</code> 通知變更。"
     },
     {
       "source": "空欄・空白だけ・正常入力の違いを確認できた。",
@@ -356,7 +356,7 @@
     },
     {
       "source": "<code>lib/main.dart</code>で、<code>submit</code>の最後にある<code>setState(() {</code>の行から、<code>message = '入力を確認しました：$name';</code>の下の<code>});</code>の行までの3行を、次の2行に置き換えます。上の<code>if</code>で空欄を確かめる部分は残します。",
-      "translation": "請在 <code>lib/main.dart</code> 中，將從 <code>submit</code> 最後的 <code>setState(() {</code> 這一行開始，到 <code>message = '入力を確認しました：$name';</code> 下方的 <code>});</code> 這一行為止的 3 行，替換為下面的 2 行。上方用 <code>if</code> 檢查空白處的部分請保留。"
+      "translation": "請在 <code>lib/main.dart</code> 中，將從 <code>submit</code> 最後的 <code>setState(() {</code> 這一行開始，到 <code>message = '入力を確認しました：$name';</code> 下方的 <code>});</code> 這一行為止的 3 行，替換為下面的 2 行。上方用 <code>if</code> 檢查空白欄位的部分請保留。"
     },
     {
       "source": "lib/main.dart · 置き換え · submit の最後の setState(() { から }); まで",
@@ -444,7 +444,7 @@
     },
     {
       "source": "初期データはホットリスタートで確かめます。追加・空欄・詳細・戻るも試し、どこを変えたか控えて終えます。",
-      "translation": "初始資料用熱重啟來確認。請嘗試新增、空白處、詳細資訊、返回，記下改了哪裡後結束。"
+      "translation": "初始資料用熱重啟來確認。請嘗試新增、空白欄位、詳細資訊、返回，記下改了哪裡後結束。"
     },
     {
       "source": "HTMLの<code>placeholder</code>と同じ役割を<code>hintText</code>が持ちます。入力済みデータとソースの記入例の違いを、再起動時の表示で確認します。",
@@ -744,11 +744,11 @@
     },
     {
       "source": "初期化と失敗時の表示",
-      "translation": "初始化與失敗時的顯示"
+      "translation": "重設與失敗時的顯示"
     },
     {
       "source": "初期化ボタンと<code>resetHabits</code>を加えます。<code>showDialog&lt;bool&gt;</code>が返す<code>Future</code>を<code>await</code>し、やめるなら<code>false</code>、初期化するなら<code>true</code>を<code>Navigator.pop</code>で返します。ダイアログの外側などで閉じた場合は<code>null</code>なので、<code>confirmed != true</code>なら何もしません。",
-      "translation": "加入重設按鈕和 <code>resetHabits</code>。用 <code>await</code> 等待 <code>showDialog&lt;bool&gt;</code> 回傳的 <code>Future</code>，「やめる」（取消）時用 <code>Navigator.pop</code> 回傳 <code>false</code>，「初期化する」（初始化）時回傳 <code>true</code>。在對話方塊外側等處關閉時是 <code>null</code>，所以 <code>confirmed != true</code> 時什麼都不做。"
+      "translation": "加入重設按鈕和 <code>resetHabits</code>。用 <code>await</code> 等待 <code>showDialog&lt;bool&gt;</code> 回傳的 <code>Future</code>，「やめる」（取消）時用 <code>Navigator.pop</code> 回傳 <code>false</code>，「初期化する」（重設）時回傳 <code>true</code>。在對話方塊外側等處關閉時是 <code>null</code>，所以 <code>confirmed != true</code> 時什麼都不做。"
     },
     {
       "source": "削除するのは<code>preferences.remove(storageKey)</code>で指定したキー1個だけです。保存領域全体の<code>clear</code>は使いません。削除に成功してから初期の<code>Habit</code>配列へ戻し、保存を再び有効にします。削除に失敗したら元の一覧とエラーの文を残します。",
@@ -756,7 +756,7 @@
     },
     {
       "source": "<code>lib/main.dart</code>を3か所変えます。まず、<code>loadHabits</code>の<code>catch</code>にある、<code>message = '記録を読み込めませんでした。</code>で始まる1行を、次の1行に置き換えます。読み込めなかったときに、初期化も選べることを案内します。",
-      "translation": "<code>lib/main.dart</code> 要修改 3 處。首先，請將 <code>loadHabits</code> 的 <code>catch</code> 中，以 <code>message = '記録を読み込めませんでした。</code> 開頭的那 1 行，替換為下面這 1 行。在無法讀取時，提示使用者也可以選擇初始化。"
+      "translation": "<code>lib/main.dart</code> 要修改 3 處。首先，請將 <code>loadHabits</code> 的 <code>catch</code> 中，以 <code>message = '記録を読み込めませんでした。</code> 開頭的那 1 行，替換為下面這 1 行。在無法讀取時，提示使用者也可以選擇重設。"
     },
     {
       "source": "lib/main.dart · 置き換え · loadHabits の catch の message の1行",
@@ -772,7 +772,7 @@
     },
     {
       "source": "最後に、一覧の<code>build</code>で、いちばん下の<code>const Text('記録はこの端末だけに残ります。提出するAPKに入力済みデータは含まれません。'),</code>の下に、次のコードを追加します。初期化を始めるボタンです。",
-      "translation": "最後，請在清單的 <code>build</code> 中，最下方的 <code>const Text('記録はこの端末だけに残ります。提出するAPKに入力済みデータは含まれません。'),</code> 下方，新增下面的程式碼。這是開始初始化的按鈕。"
+      "translation": "最後，請在清單的 <code>build</code> 中，最下方的 <code>const Text('記録はこの端末だけに残ります。提出するAPKに入力済みデータは含まれません。'),</code> 下方，新增下面的程式碼。這是開始重設的按鈕。"
     },
     {
       "source": "lib/main.dart · 追加 · 一覧の最後の Text の下",
@@ -784,7 +784,7 @@
     },
     {
       "source": "必要な内容は別に控えてから、もう一度開いて初期化するを押します。",
-      "translation": "把需要的內容另外記下後，請再次開啟，按下「初期化する」（初始化）。"
+      "translation": "把需要的內容另外記下後，請再次開啟，按下「初期化する」（重設）。"
     },
     {
       "source": "初期3件・回数0へ戻り、再起動しても初期値になることを確認します。",
@@ -820,7 +820,7 @@
     },
     {
       "source": "保存済みデータがあるとソースの初期値より優先されます。初期値のアレンジを確かめるときは、残す内容を控えてからアプリ内の初期化を使います。キーを変えて記録を見えなくする方法で済ませません。",
-      "translation": "有已儲存的資料時，它比原始碼中的初始值優先。要確認初始值的自訂時，請先記下要保留的內容，再使用應用程式內的初始化。請不要用修改鍵名讓記錄看不見的方法來應付。"
+      "translation": "有已儲存的資料時，它比原始碼中的初始值優先。要確認初始值的自訂時，請先記下要保留的內容，再使用應用程式內的重設。請不要用修改鍵名讓記錄看不見的方法來應付。"
     },
     {
       "source": "効果",
@@ -828,7 +828,7 @@
     },
     {
       "source": "未保存・初期化後に出る題材。",
-      "translation": "未儲存或初始化後顯示的主題。"
+      "translation": "未儲存或重設後顯示的主題。"
     },
     {
       "source": "見出し、入力例、色、余白",
@@ -860,7 +860,7 @@
     },
     {
       "source": "Visual Studio Codeで保存できるスタンプ帳を開きます。今日はAndroidで初めて実行し、提出するAPKを作ります。初回のSDK・Gradle等の取得も授業時間内に行います。",
-      "translation": "請在 Visual Studio Code 中開啟可以儲存的印章簿。今天首次在 Android 上執行，並製作要提交的 APK。首次下載 SDK、Gradle 等也在課堂時間內進行。"
+      "translation": "請在 Visual Studio Code 中開啟可以儲存的印章簿。今天首次在 Android 上執行，並製作要繳交的 APK。首次下載 SDK、Gradle 等也在課堂時間內進行。"
     },
     {
       "source": "このSTEPでは、<code>lib/main.dart</code>のコードは変えません。STEP 09までのコードを、Androidで初めて動かします。",
@@ -892,7 +892,7 @@
     },
     {
       "source": "キャッシュを受け取ってもAndroid SDK・NDK・AGP等の取得が残る場合があります。<code>flutter run -d Android端末ID</code>を実行し、ターミナルの取得状況を見ます。待機時間はコードと提出前チェックの確認に使い、途中で同じビルドを重ねて始めません。",
-      "translation": "即使拿到了快取，也可能還需要下載 Android SDK、NDK、AGP 等。請執行 <code>flutter run -d Android端末ID</code>（Android端末ID＝Android 裝置 ID），觀察終端機裡的下載情況。等待時間用來確認程式碼和提交前的檢查項目，不要在中途重複啟動同一個建置。"
+      "translation": "即使拿到了快取，也可能還需要下載 Android SDK、NDK、AGP 等。請執行 <code>flutter run -d Android端末ID</code>（Android端末ID＝Android 裝置 ID），觀察終端機裡的下載情況。等待時間用來確認程式碼和繳交前的檢查項目，不要在中途重複啟動同一個建置。"
     },
     {
       "source": "同じDartソースからiOS用とAndroid用をビルドしますが、ネイティブ側の道具と依存関係は別です。既に知っているAndroid StudioのSDK・エミュレータを使い、Flutterがビルドと起動をつなぎます。",
@@ -908,11 +908,11 @@
     },
     {
       "source": "提出形式のAPKを作る",
-      "translation": "製作提交格式的 APK"
+      "translation": "製作繳交格式的 APK"
     },
     {
       "source": "コードは変えません。STEP 09までのコードから、提出するAPKを作ります。",
-      "translation": "程式碼不變。用到 STEP 09 為止的程式碼，製作要提交的 APK。"
+      "translation": "程式碼不變。用到 STEP 09 為止的程式碼，製作要繳交的 APK。"
     },
     {
       "source": "Androidで一覧・追加・保存・詳細を確認したら、通常の<code>release</code> APKを作ります。最初にソースを保存し、<code>flutter analyze</code>で指摘がないか確認します。",
@@ -920,19 +920,19 @@
     },
     {
       "source": "<code>flutter build apk</code>は既定で<code>release</code>です。今回は<code>--debug</code>や<code>--split-per-abi</code>を付けません。端末用の通常APKを1ファイルで提出します。署名鍵の作成やストア公開は扱わず、空テンプレートの<code>debug</code>鍵による署名設定を使います。",
-      "translation": "<code>flutter build apk</code> 預設就是 <code>release</code>。這次不加 <code>--debug</code> 或 <code>--split-per-abi</code>。以 1 個檔案提交裝置用的普通 APK。不涉及建立簽署金鑰和發布到應用程式商店，使用空白範本中用 <code>debug</code> 金鑰簽署的設定。"
+      "translation": "<code>flutter build apk</code> 預設就是 <code>release</code>。這次不加 <code>--debug</code> 或 <code>--split-per-abi</code>。以 1 個檔案繳交裝置用的普通 APK。不涉及建立簽署金鑰和發布到應用程式商店，使用空白範本中用 <code>debug</code> 金鑰簽署的設定。"
     },
     {
       "source": "成功すると<code>build/app/outputs/flutter-apk/app-release.apk</code>ができます。Finderでファイルの容量と更新日時を確認します。提出先の上限は100MB以上または制限なしですが、各自の最終APKでも容量を確認してください。",
-      "translation": "成功後會產生 <code>build/app/outputs/flutter-apk/app-release.apk</code>。請在 Finder 中確認檔案的大小和修改時間。提交處的上限是 100MB 以上或沒有限制，但各自的最終 APK 也請確認容量。"
+      "translation": "成功後會產生 <code>build/app/outputs/flutter-apk/app-release.apk</code>。請在 Finder 中確認檔案的大小和修改時間。繳交處的上限是 100MB 以上或沒有限制，但各自的最終 APK 也請確認容量。"
     },
     {
       "source": "先生の環境でこの教科書のとおりに作ったときの実測は約48.7MBでした。この値は先生の環境での結果で、学生の素材や変更後の容量を保証する値ではありません。APKが生成されただけでは提出前の動作確認は終わりません。",
-      "translation": "在老師的環境中按照本教科書製作時的實測約為 48.7MB。這個值是老師環境下的結果，不保證學生的素材或修改後的容量。只是產生了 APK，並不等於完成了提交前的運作確認。"
+      "translation": "在老師的環境中按照本教科書製作時的實測約為 48.7MB。這個值是老師環境下的結果，不保證學生的素材或修改後的容量。只是產生了 APK，並不等於完成了繳交前的運作確認。"
     },
     {
       "source": "DartソースとAPKは、Androidのソースとビルド成果物の関係と同じです。普段の<code>flutter run</code>は開発用の実行なので、提出する<code>release</code> APKそのものを次のSTEPで確認します。",
-      "translation": "Dart 原始碼和 APK 的關係，與 Android 的原始碼和建置產物的關係相同。平時的 <code>flutter run</code> 是開發用的執行，所以要提交的 <code>release</code> APK 本身在下一個 STEP 確認。"
+      "translation": "Dart 原始碼和 APK 的關係，與 Android 的原始碼和建置產物的關係相同。平時的 <code>flutter run</code> 是開發用的執行，所以要繳交的 <code>release</code> APK 本身在下一個 STEP 確認。"
     },
     {
       "source": "<code>app-release.apk</code>の生成場所・容量・更新日時を確認できた。",
@@ -968,7 +968,7 @@
     },
     {
       "source": "スタンプの上限と1つ戻すを試します。",
-      "translation": "請嘗試印章的上限和「1つ戻す」（退回一個）。"
+      "translation": "請嘗試印章的上限和「1つ戻す」（復原1個）。"
     },
     {
       "source": "Androidのアプリ情報（<code>App info</code>）の<code>Force stop</code>でアプリを停止し、アイコンから起動し直して復元を確認します。バックグラウンドへ移すだけとは区別します。アプリ情報とアイコンに出るアプリの名前は、プロジェクト名の<code>f02_stamp_release</code>です（F01から続けている場合は<code>f01_stamp_board</code>）。",
@@ -1008,7 +1008,7 @@
     },
     {
       "source": "相手にも見せたい題材は<code>createInitialHabits</code>へ書きます。名前・理由、画面の見出し・入力例、配色など、ソースに残した変更がアレンジの対象です。保存済みデータで初期値が隠れている場合は、必要な記録を控えてアプリ内で初期化し、確認します。",
-      "translation": "想讓對方也看到的主題，請寫到 <code>createInitialHabits</code> 裡。名稱、理由、畫面標題、輸入範例、配色等留在原始碼裡的修改，才是自訂的對象。如果已儲存的資料擋住了初始值，請先記下需要的記錄，在應用程式內初始化後再確認。"
+      "translation": "想讓對方也看到的主題，請寫到 <code>createInitialHabits</code> 裡。名稱、理由、畫面標題、輸入範例、配色等留在原始碼裡的修改，才是自訂的對象。如果已儲存的資料擋住了初始值，請先記下需要的記錄，在應用程式內重設後再確認。"
     },
     {
       "source": "iOSとAndroidでは同じ名前の記録を使っても保存領域は別です。片方で入力してももう片方へ自動では移りません。両方の画面で文字・余白・入力・戻るを比較し、見た目の違いと動作の一致を確かめます。",
@@ -1048,7 +1048,7 @@
     },
     {
       "source": "初期化後にも自分の題材が出る。",
-      "translation": "初始化後也會顯示自己的主題。"
+      "translation": "重設後也會顯示自己的主題。"
     },
     {
       "source": "<code>ThemeData</code>と<code>StampMarks</code>の色",
@@ -1088,7 +1088,7 @@
     },
     {
       "source": "Visual Studio Codeで自分のスタンプ帳を開きます。今日は新しい概念を追加せず、作品を仕上げて通常APKを提出します。",
-      "translation": "請在 Visual Studio Code 中開啟自己的印章簿。今天不新增新概念，完善作品並提交普通 APK。"
+      "translation": "請在 Visual Studio Code 中開啟自己的印章簿。今天不新增新概念，完善作品並繳交普通 APK。"
     },
     {
       "source": "このコマでは、教科書のコードは変えません。STEP 14までに自分でアレンジしたコードを、上書きせずにそのまま仕上げます。",
@@ -1096,7 +1096,7 @@
     },
     {
       "source": "確認順を決め、結果を短く控えます。必要な記録は初期化前に別に残します。",
-      "translation": "請決定檢查順序，簡短記下結果。需要的記錄在初始化前另外儲存。"
+      "translation": "請決定檢查順序，簡短記下結果。需要的記錄在重設前另外儲存。"
     },
     {
       "source": "初期の題材・名前・理由が自分の作品になっている。",
@@ -1108,7 +1108,7 @@
     },
     {
       "source": "スタンプの0と上限、1つ戻すが正しい。",
-      "translation": "印章的 0 和上限、「1つ戻す」（退回一個）都正確。"
+      "translation": "印章的 0 和上限、「1つ戻す」（復原1個）都正確。"
     },
     {
       "source": "詳細の名前・理由・回数が選んだ習慣と一致する。",
@@ -1120,7 +1120,7 @@
     },
     {
       "source": "初期化を取り消すと記録が残る。",
-      "translation": "取消初始化後記錄仍然保留。"
+      "translation": "取消重設後記錄仍然保留。"
     },
     {
       "source": "最終APKの確認でも同じ順を使います。エラーを隠すために警告抑制を加えず、分からない項目は先生と原因を確認します。",
@@ -1132,7 +1132,7 @@
     },
     {
       "source": "提出前の確認順と、直す必要のある箇所を整理できた。",
-      "translation": "已整理好提交前的檢查順序和需要修改的地方。"
+      "translation": "已整理好繳交前的檢查順序和需要修改的地方。"
     },
     {
       "source": "STEP 16 · コマ15",
@@ -1152,15 +1152,15 @@
     },
     {
       "source": "見た目を変えたら長い名前と改行のある理由でも確認します。目標回数を小さくする場合は、保存済みの回数が新しい上限を超えると読込の検査に通りません。必要な記録を控えてから旧版で初期化するか、変更後の画面で本人が初期化を選びます。",
-      "translation": "修改了外觀後，也要用較長的名稱和帶換行的理由確認。如果把目標次數改小，已儲存的次數超過新上限時就通不過讀取驗證。請先記下需要的記錄，然後在舊版本中初始化，或者在修改後的畫面上由本人選擇初始化。"
+      "translation": "修改了外觀後，也要用較長的名稱和帶換行的理由確認。如果把目標次數改小，已儲存的次數超過新上限時就通不過讀取驗證。請先記下需要的記錄，然後在舊版本中重設，或者在修改後的畫面上由本人選擇重設。"
     },
     {
       "source": "読込の検査は起動時だけなので、<code>r</code>（ホットリロード）で反映したときは行われず、回数がそのまま残ります。3回のまま目標を2にすると「3 / 2 回 · あと-1回」と出て、スタンプを押すは無効になります。1つ戻すは押せる表示ですが、<code>changeStamp</code>は目標を超える次の回数を受け付けません。この例のように目標を1回だけ超えているときは、押すと目標の2回に戻ります。2回以上超えているときは、押しても変わりません。目標を超えた回数が残ったまま<code>R</code>を押すと読込の検査に通らないので、上のとおり、必要な記録を控えてから初期化を選びます。",
-      "translation": "讀取驗證只在啟動時進行，用 <code>r</code>（熱重載）套用變更時不會執行，次數會原樣保留。次數還是 3 次時把目標改成 2，會顯示「3 / 2 回 · あと-1回」（3 / 2 次 · 還差 -1 次），「スタンプを押す」（蓋印章）變為停用。「1つ戻す」（退回一個）顯示為可以按，但 <code>changeStamp</code> 不接受超過目標的下一個次數。像這個例子一樣只超過目標 1 次時，按下後會回到目標的 2 次。超過 2 次及以上時，按了也不會變。在超過目標的次數還保留的狀態下按 <code>R</code>，會通不過讀取驗證，所以如上所述，請先記下需要的記錄，再選擇初始化。"
+      "translation": "讀取驗證只在啟動時進行，用 <code>r</code>（熱重載）套用變更時不會執行，次數會原樣保留。次數還是 3 次時把目標改成 2，會顯示「3 / 2 回 · あと-1回」（3 / 2 次 · 還差 -1 次），「スタンプを押す」（蓋印章）變為停用。「1つ戻す」（復原1個）顯示為可以按，但 <code>changeStamp</code> 不接受超過目標的下一個次數。像這個例子一樣只超過目標 1 次時，按下後會回到目標的 2 次。超過 2 次及以上時，按了也不會變。在超過目標的次數還保留的狀態下按 <code>R</code>，會通不過讀取驗證，所以如上所述，請先記下需要的記錄，再選擇重設。"
     },
     {
       "source": "保存キー・3要素の並び・検証条件は、見た目のアレンジとは分けます。今回の提出前に新しい保存形式や機能を増やさず、学んだ範囲で仕上げます。",
-      "translation": "儲存鍵、3 個元素的順序、驗證條件，與外觀的自訂分開。這次提交前不要增加新的儲存格式或功能，在學過的範圍內完成。"
+      "translation": "儲存鍵、3 個元素的順序、驗證條件，與外觀的自訂分開。這次繳交前不要增加新的儲存格式或功能，在學過的範圍內完成。"
     },
     {
       "source": "見出しの文字や改行を変える目的はSwiftのラベルと同じです。保存の仕組みを触らずに、既存の<code>Text</code>や色で題材を伝えられます。",
@@ -1176,7 +1176,7 @@
     },
     {
       "source": "最終APKを確認して提出する",
-      "translation": "確認最終 APK 並提交"
+      "translation": "確認最終 APK 並繳交"
     },
     {
       "source": "コードは変えません。STEP 16で仕上げたコードから、最終APKを作ります。",
@@ -1188,23 +1188,23 @@
     },
     {
       "source": "Finderで<code>build/app/outputs/flutter-apk/app-release.apk</code>の容量と更新日時を確認します。教員が案内する提出先へ、そのAPKファイルを提出します。提出先・締め切り・ファイル名の指定がまだない場合は、授業中に先生へ確認してください。",
-      "translation": "請在 Finder 中確認 <code>build/app/outputs/flutter-apk/app-release.apk</code> 的容量和修改時間。把該 APK 檔案提交到老師指定的提交處。如果還沒有指定提交處、截止日期和檔案名稱，請在課堂上向老師確認。"
+      "translation": "請在 Finder 中確認 <code>build/app/outputs/flutter-apk/app-release.apk</code> 的容量和修改時間。把該 APK 檔案繳交到老師指定的繳交處。如果還沒有指定繳交處、截止日期和檔案名稱，請在課堂上向老師確認。"
     },
     {
       "source": "ファイル名の指定がある場合は、確認済みAPKを別の提出用フォルダへコピーし、コピーの名前だけを指定に合わせます。拡張子.apkを保ちます。プロジェクトのZIP、<code>app-debug.apk</code>、ソースフォルダは今回の提出物ではありません。",
-      "translation": "如果指定了檔案名稱，請把確認過的 APK 複製到另一個提交用的資料夾，只把複本的名稱改成指定的名稱。保留副檔名 .apk。專案的 ZIP、<code>app-debug.apk</code>、原始碼資料夾都不是這次的提交物。"
+      "translation": "如果指定了檔案名稱，請把確認過的 APK 複製到另一個繳交用的資料夾，只把複本的名稱改成指定的名稱。保留副檔名 .apk。專案的 ZIP、<code>app-debug.apk</code>、原始碼資料夾都不是這次的繳交物。"
     },
     {
       "source": "提出後、提出先に表示されるファイル名・容量が手元のものに合うことを確かめます。提出先の機能で可能なら、提出したファイルを取り直して同じAPKか確認します。自分のソースは今後の修正用に残します。",
-      "translation": "提交後，請確認提交處顯示的檔案名稱和容量與自己手上的一致。如果提交處的功能允許，重新下載提交的檔案，確認是同一個 APK。自己的原始碼保留下來，供以後修改使用。"
+      "translation": "繳交後，請確認繳交處顯示的檔案名稱和容量與自己手上的一致。如果繳交處的功能允許，重新下載繳交的檔案，確認是同一個 APK。自己的原始碼保留下來，供以後修改使用。"
     },
     {
       "source": "Androidの提出物としてAPKを渡す経験と同じです。保存データではなくアプリ本体を渡すため、相手の初期状態で見えるアレンジにします。",
-      "translation": "這和作為 Android 的提交物交出 APK 的經驗相同。因為交出的是應用程式本體而不是儲存的資料，所以要做成在對方的初始狀態下就能看到的自訂。"
+      "translation": "這和作為 Android 的繳交物交出 APK 的經驗相同。因為交出的是應用程式本體而不是儲存的資料，所以要做成在對方的初始狀態下就能看到的自訂。"
     },
     {
       "source": "最終APKそのものを確認し、指定先へ提出したファイルを確かめた。",
-      "translation": "已確認最終 APK 本身，並核對了提交到指定處的檔案。"
+      "translation": "已確認最終 APK 本身，並核對了繳交到指定處的檔案。"
     },
     {
       "source": "STEP 18 · コマ15",
@@ -1216,11 +1216,11 @@
     },
     {
       "source": "コードは変えません。STEP 17で提出したアプリで確かめます。",
-      "translation": "程式碼不變。用 STEP 17 提交的應用程式進行確認。"
+      "translation": "程式碼不變。用 STEP 17 繳交的應用程式進行確認。"
     },
     {
       "source": "提出したアプリを動かしながら、次の内容を確かめます。",
-      "translation": "一邊執行提交的應用程式，一邊確認下面的內容。"
+      "translation": "一邊執行繳交的應用程式，一邊確認下面的內容。"
     },
     {
       "source": "どのような人が、何を記録するためのスタンプ帳になっているか。",
@@ -1268,7 +1268,7 @@
     },
     {
       "source": "追加で直す場合も、ソース保存→解析→APK作成→そのAPKの操作確認という順番を保ちます。提出後にファイルを差し替える場合は、教員の提出ルールに従います。",
-      "translation": "追加修改時，也保持儲存原始碼→分析→建立 APK→用該 APK 確認操作的順序。提交後要替換檔案時，請遵守老師的提交規則。"
+      "translation": "追加修改時，也保持儲存原始碼→分析→建立 APK→用該 APK 確認操作的順序。繳交後要替換檔案時，請遵守老師的繳交規則。"
     },
     {
       "source": "いまある機能で、自分が選んだ習慣を入力し、できたことを残せる状態が完成です。どこを変えると何が変わるかを、自分のコードで確かめて授業を終えましょう。",
@@ -1320,7 +1320,7 @@
     },
     {
       "source": "元データを勝手に上書きせず、再読み込み。必要な記録を控えてから本人の判断で初期化。",
-      "translation": "不擅自覆寫原資料，先重新讀取。記下需要的記錄後，由本人判斷是否初始化。"
+      "translation": "不擅自覆寫原資料，先重新讀取。記下需要的記錄後，由本人判斷是否重設。"
     },
     {
       "source": "残り回数が負になる（あと-1回など）",
@@ -1328,7 +1328,7 @@
     },
     {
       "source": "回数が目標を超えたまま<code>stampGoal</code>を減らし、<code>r</code>で反映した。1つ戻すが効くのは、目標を1回だけ超えているとき。<code>R</code>では読込エラーになるので、必要な記録を控えて初期化。",
-      "translation": "在次數超過目標的狀態下縮小了 <code>stampGoal</code>，並用 <code>r</code> 套用了變更。「1つ戻す」（退回一個）只在超過目標 1 次時有效。按 <code>R</code> 會出現讀取錯誤，所以記下需要的記錄後初始化。"
+      "translation": "在次數超過目標的狀態下縮小了 <code>stampGoal</code>，並用 <code>r</code> 套用了變更。「1つ戻す」（復原1個）只在超過目標 1 次時有效。按 <code>R</code> 會出現讀取錯誤，所以記下需要的記錄後重設。"
     },
     {
       "source": "初期値を変えても出ない",
@@ -1336,7 +1336,7 @@
     },
     {
       "source": "保存済みデータが優先。必要な記録を控えて初期化し、ソースの初期データを確認。",
-      "translation": "已儲存的資料優先。記下需要的記錄後初始化，再確認原始碼中的初始資料。"
+      "translation": "已儲存的資料優先。記下需要的記錄後重設，再確認原始碼中的初始資料。"
     },
     {
       "source": "Androidビルドが止まる",
@@ -1356,7 +1356,7 @@
     },
     {
       "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の調べ方を試してください。それでも解決しないときは、STEP番号と画面を先生に見せましょう。",
-      "translation": "如果錯誤仍未解決，請嘗試<a1>共通資料：遇到問題時</a1>中的排查方法。如果依然無法解決，請把 STEP 編號和螢幕展示給老師看。"
+      "translation": "如果錯誤仍未解決，請嘗試<a1>通用資料：遇到問題時</a1>中的排查方法。如果依然無法解決，請把 STEP 編號和螢幕展示給老師看。"
     },
     {
       "source": "JEC / ハイブリッドアプリ開発技法 · F02StampRelease",
