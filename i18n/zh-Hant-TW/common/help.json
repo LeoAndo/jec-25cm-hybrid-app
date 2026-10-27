@@ -20,7 +20,7 @@
     },
     {
       "source": "共通資料 · 授業サポート",
-      "translation": "共用資料 · 課堂支援"
+      "translation": "通用資料 · 課堂支援"
     },
     {
       "source": "困ったとき",
@@ -84,7 +84,7 @@
     },
     {
       "source": "共通：準備（Monaca）",
-      "translation": "共用：準備（Monaca）"
+      "translation": "通用：準備（Monaca）"
     },
     {
       "source": "ターミナル（Terminal）のエラー出力や、エディタ下部の「PROBLEMS（問題）」タブを確認します。<code>flutter pub get</code> の実行漏れやパッケージの指定誤りを確認します。",
@@ -92,7 +92,7 @@
     },
     {
       "source": "共通：準備（Flutter）",
-      "translation": "共用：準備（Flutter）"
+      "translation": "通用：準備（Flutter）"
     }
   ]
 }

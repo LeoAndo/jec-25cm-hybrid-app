@@ -20,7 +20,7 @@
     },
     {
       "source": "共通資料 · 授業内で行う準備",
-      "translation": "通用資料 · 在課堂內進行的準備"
+      "translation": "共用資料 · 在課堂內進行的準備"
     },
     {
       "source": "授業を始めるまでの準備",
@@ -96,11 +96,11 @@
     },
     {
       "source": "中に <code>docs</code>、<code>はじめに.txt</code>、<code>VERSION.json</code> があることを確かめます。言語を選ぶ <code>index.html</code> がある版では、そこから教科書を開けます。",
-      "translation": "確認裡面有 <code>docs</code>、<code>はじめに.txt</code>、<code>VERSION.json</code>。在帶有選擇語言的 <code>index.html</code> 的版本中，可以從那裡打開教科書。"
+      "translation": "確認裏面有 <code>docs</code>、<code>はじめに.txt</code>、<code>VERSION.json</code>。在帶有選擇語言的 <code>index.html</code> 的版本中，可以從那裏打開教科書。"
     },
     {
       "source": "<code>docs/common/setup.html</code> をGoogle Chromeで開きます。今読んでいるページが、この共通資料です。",
-      "translation": "使用 Google Chrome 開啟 <code>docs/common/setup.html</code>。現在正在閱讀的頁面，就是這份通用資料。"
+      "translation": "使用 Google Chrome 開啟 <code>docs/common/setup.html</code>。現在正在閱讀的頁面，就是這份共用資料。"
     },
     {
       "source": "更新版も <code>書類</code> の直下に、別のフォルダとして置きます。同じ日に配り直された版は名前が同じになるため、先生の案内を確かめてから入れ替えてください。自分で作るプロジェクトは、配布フォルダの中ではなく <code>~/Documents/HybridApp</code> に置きます（作り方は、その日の教科書にあります）。質問するときは、フォルダ名の日付と <code>VERSION.json</code> の <code>version</code> を伝えます。",
@@ -140,7 +140,7 @@
     },
     {
       "source": "登録を完了し、通常版Monacaへログインします。プロジェクトの一覧が見えれば、このSTEPは完了です。",
-      "translation": "完成註冊，登入標準版 Monaca。能夠看到專案列表，此 STEP 即告完成。"
+      "translation": "完成註冊，登入標準版 Monaca。能夠看到專案清單，此 STEP 即告完成。"
     },
     {
       "source": "メールアドレスとパスワードを入力し、アカウント新規作成を選ぶ画面",
@@ -164,7 +164,7 @@
     },
     {
       "source": "通常版Monacaへログインし、自分のプロジェクト一覧を開けた。",
-      "translation": "已登入標準版 Monaca，並成功開啟自己的專案列表。"
+      "translation": "已登入標準版 Monaca，並成功開啟自己的專案清單。"
     },
     {
       "source": "Freeプランでは、同時に持てるプロジェクトは<strong>3個まで</strong>です。登録直後は <code>はじめてのMonacaアプリ</code> が自動で1個作られるため、そのままなら空きは2個です。",
@@ -172,7 +172,7 @@
     },
     {
       "source": "プロジェクト一覧で、今あるプロジェクトの名前と個数を確かめます。",
-      "translation": "在專案列表中，確認現有專案的名稱與數量。"
+      "translation": "在專案清單中，確認現有專案的名稱與數量。"
     },
     {
       "source": "<code>はじめてのMonacaアプリ</code> があり、まだ自分で編集していなければ、授業で先生と確認してから削除し、空きを確保します。",
@@ -180,7 +180,7 @@
     },
     {
       "source": "自分で編集した作品がある場合は削除せず、一覧を先生に見せます。自動作成のものか分からない場合も、そのまま相談してください。",
-      "translation": "若有自己編輯過的作品，請勿刪除，並將列表出示給老師看。如果不確定是否為自動建立的專案，亦請直接向老師諮詢。"
+      "translation": "若有自己編輯過的作品，請勿刪除，並將清單出示給老師看。如果不確定是否為自動建立的專案，亦請直接向老師諮詢。"
     },
     {
       "source": "Android Studio・Xcodeのプロジェクトとの違い",
@@ -192,11 +192,11 @@
     },
     {
       "source": "この授業では、1つのプロジェクトを何回かの授業で育てます。単元ごとに新しいプロジェクトを作って3枠を埋める必要はありません。Freeプランでは作品をZIPへ書き出せないため、<strong>自分の作品を削除して空きを作ろうとしないでください。</strong>",
-      "translation": "這門課程中，我們會在幾次課中完善同一個專案。沒有必要為每個單元建立新專案把 3 個名額佔滿。由於 Free 計劃無法將作品匯出為 ZIP，<strong>請不要為了騰出空位而刪除自己的作品。</strong>"
+      "translation": "這門課程中，我們會在幾次課中完善同一個專案。沒有必要為每個單元建立新專案把 3 個名額佔滿。由於 Free 方案無法將作品匯出為 ZIP，<strong>請不要為了騰出名額而刪除自己的作品。</strong>"
     },
     {
       "source": "提出には、通常版Monacaで発行する取り込み用の公開URLを使います。このURLは、見る人のMonacaへプロジェクトを取り込むためのもので、完成アプリをWebで動かすURLではありません。公開と提出の操作は、提出を扱う授業で行います。",
-      "translation": "提交作業時，會使用在標準版 Monaca 發行的匯入用公開連結。此連結是用來將專案匯入至檢視者的 Monaca 中，並非在 Web 上執行完成應用程式的連結。公開與提交的操作，會在介紹提交的課堂中進行。"
+      "translation": "提交作業時，會使用在標準版 Monaca 發行的匯入連結。此連結是用來將專案匯入至檢視者的 Monaca 中，並非在 Web 上執行完成應用程式的連結。公開與提交的操作，會在介紹提交的課堂中進行。"
     },
     {
       "source": "プロジェクトの個数と空きを確認し、自分の作品を消さずに授業を始められる状態にした。",
@@ -228,7 +228,7 @@
     },
     {
       "source": "<code>iOS</code> の見出しの下に、授業で使っているiPhoneの名前があるかを確かめます。<code>Shutdown</code> は停止中という意味で、ダウンロード不足を示すものではありません。名前があれば、その環境を使う準備を進めます。一覧が空、またはエラーになる場合は、出力を先生に見せてください。ランタイムが不足しているのか、Xcodeの設定やシミュレータの作成が必要なのかを一緒に確認します。コマンドの説明は <a1>AppleのXcodeコマンドラインツール資料</a1>と、Terminalの <code>xcrun simctl help list</code> で確認できます。",
-      "translation": "請確認在 <code>iOS</code> 標題下方是否有課堂上使用的 iPhone 名稱。<code>Shutdown</code> 代表已停止運作，並不表示未完成下載。若有相應名稱，即可推進使用該環境的準備。如果列表為空或出現錯誤，請將輸出內容出示給老師看。老師會與你一起確認是缺少執行階段，還是需要設定 Xcode 或建立模擬器。指令的說明可在 <a1>Apple 的 Xcode 命令行工具資料</a1>及 Terminal 的 <code>xcrun simctl help list</code> 中確認。"
+      "translation": "請確認在 <code>iOS</code> 標題下方是否有課堂上使用的 iPhone 名稱。<code>Shutdown</code> 代表已停止運作，並不表示未完成下載。若有相應名稱，即可推進使用該環境的準備。如果清單為空或出現錯誤，請將輸出內容出示給老師看。老師會與你一起確認是缺少執行階段，還是需要設定 Xcode 或建立模擬器。指令的說明可在 <a1>Apple 的 Xcode 命令行工具資料</a1>及 Terminal 的 <code>xcrun simctl help list</code> 中確認。"
     },
     {
       "source": "補足：iOS環境が見つからない・実行できないとき",
@@ -508,7 +508,7 @@
     },
     {
       "source": "JEC / ハイブリッドアプリ開発技法 · 共通資料 · 2026-09-23",
-      "translation": "JEC / 混合應用程式開發技法 · 通用資料 · 2026-09-23"
+      "translation": "JEC / 混合應用程式開發技法 · 共用資料 · 2026-09-23"
     }
   ]
 }

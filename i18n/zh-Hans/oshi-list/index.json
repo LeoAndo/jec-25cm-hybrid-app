@@ -220,31 +220,31 @@
     },
     {
       "source": "プロジェクト名にM01OshiListを入力し作成ボタンを押す画面",
-      "translation": "在项目名称中输入 M01OshiList 并点击创建按钮的画面"
+      "translation": "在项目名称中输入 M01OshiList 并点击创建按钮的界面"
     },
     {
       "source": "プロジェクト一覧から <code>M01OshiList</code> を選び、<code>クラウドIDEで開く</code> を押します。既に自分の同名プロジェクトがあれば、その続きを開きます。",
-      "translation": "从项目列表中选择 <code>M01OshiList</code>，点击 <code>クラウドIDEで開く</code>（在云端IDE中打开）。如果已有自己的同名项目，则继续打开该项目。"
+      "translation": "从项目列表中选择 <code>M01OshiList</code>，点击 <code>クラウドIDEで開く</code>（在云端 IDE 中打开）。如果已有自己的同名项目，则继续打开该项目。"
     },
     {
       "source": "プロジェクト一覧でM01OshiListのクラウドIDEで開くを選ぶ画面",
-      "translation": "在项目列表中为 M01OshiList 选择在云端IDE中打开的画面"
+      "translation": "在项目列表中为 M01OshiList 选择在云端 IDE 中打开的界面"
     },
     {
       "source": "プロジェクト一覧から <code>M01OshiList</code> を選び、<code>クラウドIDEで開く</code> を押します。",
-      "translation": "从项目列表中选择 <code>M01OshiList</code>，点击 <code>クラウドIDEで開く</code>（在云端IDE中打开）。"
+      "translation": "从项目列表中选择 <code>M01OshiList</code>，点击 <code>クラウドIDEで開く</code>（在云端 IDE 中打开）。"
     },
     {
       "source": "クラウドIDEが開いたら、左側のファイル一覧で <code>www/index.html</code> と <code>www/css/style.css</code> を探します。<code>components</code>、<code>res</code>、設定ファイルはそのまま使います。",
-      "translation": "云端IDE打开后，在左侧文件列表中找到 <code>www/index.html</code> 和 <code>www/css/style.css</code>。<code>components</code>、<code>res</code> 和配置文件保持原样使用。"
+      "translation": "云端 IDE 打开后，在左侧文件列表中找到 <code>www/index.html</code> 和 <code>www/css/style.css</code>。<code>components</code>、<code>res</code> 和配置文件保持原样使用。"
     },
     {
       "source": "Monaca クラウド IDEの初期画面。左側にファイル一覧、右側にindex.htmlのエディタが表示されている",
-      "translation": "Monaca クラウド IDE 的初始画面。左侧显示文件列表，右侧显示 index.html 的编辑器"
+      "translation": "Monaca クラウド IDE 的初始界面。左侧显示文件列表，右侧显示 index.html 的编辑器"
     },
     {
       "source": "クラウドIDEが開きます。左側のファイル一覧で <code>www/index.html</code> や <code>www/css/style.css</code> を確認します。",
-      "translation": "云端IDE打开。在左侧文件列表中确认 <code>www/index.html</code> 和 <code>www/css/style.css</code>。"
+      "translation": "云端 IDE 打开。在左侧文件列表中确认 <code>www/index.html</code> 和 <code>www/css/style.css</code>。"
     },
     {
       "source": "<code>www/index.html</code> と <code>www/css/style.css</code> の中身を、下のコードでそれぞれすべて置き換えて保存します。テンプレートに最初から書かれている内容は残しません。プレビューを再読み込みし、<strong>好きなものノートを作ります。</strong>を確認します。プレビューが表示されないときは、上部メニューの <code>表示</code> → <code>プレビュータブを表示</code> や <code>レイアウトをリセット</code> を選びます。",
@@ -252,7 +252,7 @@
     },
     {
       "source": "クラウドIDEのメニューバー「表示」から「プレビュータブを表示」「レイアウトをリセット」を選ぶ画面",
-      "translation": "从云端IDE菜单栏的“表示”（查看）中选择“プレビュータブを表示”（显示预览标签页）或“レイアウトをリセット”（重置布局）的画面"
+      "translation": "从云端 IDE 菜单栏的“表示”（查看）中选择“プレビュータブを表示”（显示预览标签页）或“レイアウトをリセット”（重置布局）的界面"
     },
     {
       "source": "プレビューが表示されないときは、上部メニューの <code>表示</code> → <code>プレビュータブを表示</code> や <code>レイアウトをリセット</code> を選びます。",
@@ -1340,7 +1340,7 @@
     },
     {
       "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の調べ方を試してください。それでも解決しないときは、STEP番号と画面を先生に見せましょう。",
-      "translation": "如果错误仍未解决，请尝试<a1>公共资料：遇到问题时</a1>中的排查方法。如果依然无法解决，请把 STEP 编号和画面展示给老师看。"
+      "translation": "如果错误仍未解决，请尝试<a1>通用资料：遇到问题时</a1>中的排查方法。如果依然无法解决，请把 STEP 编号和屏幕上的显示展示给老师看。"
     },
     {
       "source": "JEC / ハイブリッドアプリ開発技法 · M01OshiList",

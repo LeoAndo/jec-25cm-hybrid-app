@@ -48,7 +48,7 @@
     },
     {
       "source": "04 確認とアレンジ",
-      "translation": "04 확인과 어레인지"
+      "translation": "04 확인과 변형"
     },
     {
       "source": "コマ6 · STEP 05〜09",
@@ -104,7 +104,7 @@
     },
     {
       "source": "共通：はじめの準備",
-      "translation": "공통: 시작 준비"
+      "translation": "공통: 수업 시작 전 준비"
     },
     {
       "source": "共通：困ったとき",
@@ -168,11 +168,11 @@
     },
     {
       "source": "Google Chromeで通常版Monacaへログインし、自分の好きなものノートを開きます。続けて使っているプロジェクトは、名前が <code>M01OshiList</code> のままで構いません。今日のためにコピーを増やしたり、削除したりしません。",
-      "translation": "Google Chrome에서 일반판 Monaca에 로그인하여 자신의 좋아하는 것 노트를 엽니다. 계속 사용하고 있는 프로젝트는 이름이 <code>M01OshiList</code> 그대로여도 괜찮습니다. 오늘 수업을 위해 복사본을 늘리거나 삭제하지 않습니다."
+      "translation": "Google Chrome에서 일반 Monaca에 로그인하여 자신의 좋아하는 것 노트를 엽니다. 계속 사용하고 있는 프로젝트는 이름이 <code>M01OshiList</code> 그대로여도 괜찮습니다. 오늘 수업을 위해 복사본을 늘리거나 삭제하지 않습니다."
     },
     {
       "source": "まだ自分の好きなものノートがない人だけ、ダッシュボードで新規作成し、<code>最小限のテンプレート</code> を選び、<code>M02OshiSave</code> と名付けます。登録や空き枠が不明なら、<a1>共通資料のSTEP 2〜3</a1>で確認して戻ります。",
-      "translation": "아직 자신의 좋아하는 것 노트가 없는 사람만 대시보드에서 새로 만들고, <code>最小限のテンプレート</code>(최소 템플릿)을 선택하고, <code>M02OshiSave</code>라고 이름을 지정합니다. 등록 상태나 남은 슬롯이 확실하지 않다면 <a1>공통 자료의 STEP 2~3</a1>에서 확인한 후 돌아옵니다."
+      "translation": "아직 자신의 좋아하는 것 노트가 없는 사람만 대시보드에서 새로 만들고, <code>最小限のテンプレート</code>(최소 템플릿)을 선택하고, <code>M02OshiSave</code>라고 이름을 지정합니다. 등록 상태나 빈 슬롯이 확실하지 않다면 <a1>공통 자료의 STEP 2~3</a1>에서 확인한 후 돌아옵니다."
     },
     {
       "source": "<code>www/index.html</code>・<code>www/css/style.css</code> を開きます。<code>www/js/app.js</code> がなければ、ファイル一覧の作成操作で <code>www</code> の下に <code>js</code> フォルダ、その中に <code>app.js</code> ファイルを作ります。",
@@ -256,7 +256,7 @@
     },
     {
       "source": "Web基礎と同じ3ファイル構成ですが、操作する場所はMonaca クラウド IDEです。<code>init</code>はAndroidのビュー生成後の設定やiOSの<code>viewDidLoad</code>に相当するタイミングで、JavaScriptの<code>addEventListener</code>で受け取ります。<code>pushPage</code>の<code>data</code>は、ネイティブアプリで次の画面へ値を渡す操作に対応します。まだ保存用の文字列には変換していません。",
-      "translation": "웹 기초와 동일한 3개 파일 구성이지만 조작하는 장소는 Monaca クラウド IDE입니다. <code>init</code>은 Android의 뷰 생성 후 설정이나 iOS의 <code>viewDidLoad</code>에 해당하는 타이밍으로, JavaScript의 <code>addEventListener</code>로 수신합니다. <code>pushPage</code>의 <code>data</code>는 네이티브 앱에서 다음 화면으로 값을 전달하는 조작에 대응합니다. 아직 저장용 문자열로는 변환하지 않았습니다."
+      "translation": "Web 기초와 동일한 3개 파일 구성이지만 조작하는 장소는 Monaca クラウド IDE입니다. <code>init</code>은 Android의 뷰 생성 후 설정이나 iOS의 <code>viewDidLoad</code>에 해당하는 타이밍으로, JavaScript의 <code>addEventListener</code>로 수신합니다. <code>pushPage</code>의 <code>data</code>는 네이티브 앱에서 다음 화면으로 값을 전달하는 조작에 대응합니다. 아직 저장용 문자열로는 변환하지 않았습니다."
     },
     {
       "source": "自分の1プロジェクトで3件の一覧・詳細・戻るを確認し、HTMLとJSの対応を追えた。",
@@ -344,7 +344,7 @@
     },
     {
       "source": "<code>.reset-section</code>・<code>#panel_reset ons-button</code>・<code>.is-hidden</code> の3つは、STEP 08で足す初期化の確認欄のための指定です。このSTEPのHTMLには、まだ当たる要素がありません。",
-      "translation": "<code>.reset-section</code>, <code>#panel_reset ons-button</code>, <code>.is-hidden</code>의 3가지는 STEP 08에서 추가할 초기화 확인란을 위한 지정입니다. 이 STEP의 HTML에는 아직 적용될 요소가 없습니다."
+      "translation": "<code>.reset-section</code>, <code>#panel_reset ons-button</code>, <code>.is-hidden</code>의 3가지는 STEP 08에서 추가할 초기화 확인 영역을 위한 지정입니다. 이 STEP의 HTML에는 아직 적용될 요소가 없습니다."
     },
     {
       "source": "JavaScriptは4か所を変えます。まず、<code>let oshiItems = [</code> の行から <code>let isOpeningDetail = false;</code> の行までを、次のコードに置き換えます。初期データの配列を自分の好きなものに変えている場合は、控えてから置き換え、<code>createInitialItems</code> の中の配列へ書き戻します。",
@@ -404,7 +404,7 @@
     },
     {
       "source": "Web基礎の<code>input</code>・<code>textarea</code>・<code>label</code>をそのまま使います。Androidの<code>EditText</code>、iOSの<code>UITextField</code>・<code>UITextView</code>と同じ役割です。画面を開く処理は詳細への移動と同じ形で、渡すデータが要らないため<code>data</code>を省きます。<code>createInitialItems</code>は、Java／Swiftでデータの配列を関数から返す書き方と対応します。",
-      "translation": "웹 기초의 <code>input</code>, <code>textarea</code>, <code>label</code>을 그대로 사용합니다. Android의 <code>EditText</code>, iOS의 <code>UITextField</code>·<code>UITextView</code>와 동일한 역할입니다. 화면을 여는 처리는 상세 화면으로의 이동과 동일한 형태이며, 전달할 데이터가 필요 없으므로 <code>data</code>를 생략합니다. <code>createInitialItems</code>는 Java/Swift에서 데이터 배열을 함수에서 반환하는 작성법에 대응합니다."
+      "translation": "Web 기초의 <code>input</code>, <code>textarea</code>, <code>label</code>을 그대로 사용합니다. Android의 <code>EditText</code>, iOS의 <code>UITextField</code>·<code>UITextView</code>와 동일한 역할입니다. 화면을 여는 처리는 상세 화면으로의 이동과 동일한 형태이며, 전달할 데이터가 필요 없으므로 <code>data</code>를 생략합니다. <code>createInitialItems</code>는 Java/Swift에서 데이터 배열을 함수에서 반환하는 작성법에 대응합니다."
     },
     {
       "source": "入力画面を開き、3つの欄へ入力して戻れた。追加ボタンがまだ押せないことを確認した。",
@@ -572,7 +572,7 @@
     },
     {
       "source": "HTMLは構造と記入例、CSSは装飾、JavaScriptはデータと動きというWeb基礎の役割分担を使います。画面に入力した値と、ソースの初期データの違いを、再読み込み後の結果で見分けます。",
-      "translation": "HTML은 구조와 작성 예시, CSS는 장식, JavaScript는 데이터와 동작이라는 웹 기초의 역할 분담을 활용합니다. 화면에 입력한 값과 소스의 초기 데이터의 차이를 새로고침 후의 결과로 구분합니다."
+      "translation": "HTML은 구조와 작성 예시, CSS는 장식, JavaScript는 데이터와 동작이라는 Web 기초의 역할 분담을 활용합니다. 화면에 입력한 값과 소스의 초기 데이터의 차이를 새로고침 후의 결과로 구분합니다."
     },
     {
       "source": "アレンジした場所が画面に現れ、追加・詳細・戻るが引き続き動いた。",
@@ -844,7 +844,7 @@
     },
     {
       "source": "保存領域はブラウザやプレビューの場所に結び付きます。別の端末・別のブラウザ・別のプロジェクトのコピーへ、内容が自動で移る仕組みではありません。",
-      "translation": "저장 영역은 브라우저나 미리보기의 위치에 연결됩니다. 다른 기기·다른 브라우저·다른 프로젝트 복사본으로 내용이 자동으로 이동하는 구조가 아닙니다."
+      "translation": "저장 영역은 브라우저나 プレビュー(미리보기)의 위치에 연결됩니다. 다른 기기·다른 브라우저·다른 프로젝트 복사본으로 내용이 자동으로 이동하는 구조가 아닙니다."
     },
     {
       "source": "保存を読むタイミングは、Androidの<code>onCreate</code>やiOSの<code>viewDidLoad</code>で保存値を画面へ戻すときに対応します。Javaの型検査やSwiftの型確認と同じ目的で、今回はJavaScriptの<code>Array.isArray</code>と<code>typeof</code>を使います。<code>JSON.parse</code>の結果を信頼し切らず、画面に必要な項目と型を確かめる点が違いです。",
@@ -908,7 +908,7 @@
     },
     {
       "source": "Web基礎の<code>classList.add</code> / <code>remove</code>で表示クラスを切り替えます。キー1つの削除は、Androidの<code>SharedPreferences.Editor.remove</code>やSwiftの<code>UserDefaults.removeObject</code>に対応します。データを消す前に選び直せる画面を用意する点は、ネイティブアプリの確認操作と同じです。",
-      "translation": "웹 기초의 <code>classList.add</code> / <code>remove</code>로 표시 클래스를 전환합니다. 키 1개를 삭제하는 것은 Android의 <code>SharedPreferences.Editor.remove</code>나 Swift의 <code>UserDefaults.removeObject</code>에 대응합니다. 데이터를 삭제하기 전에 다시 선택할 수 있는 화면을 마련해 두는 점은 네이티브 앱의 확인 조작과 동일합니다."
+      "translation": "Web 기초의 <code>classList.add</code> / <code>remove</code>로 표시 클래스를 전환합니다. 키 1개를 삭제하는 것은 Android의 <code>SharedPreferences.Editor.remove</code>나 Swift의 <code>UserDefaults.removeObject</code>에 대응합니다. 데이터를 삭제하기 전에 다시 선택할 수 있는 화면을 마련해 두는 점은 네이티브 앱의 확인 조작과 동일합니다."
     },
     {
       "source": "初期化を中止したときは内容が残り、確定したときだけ初期の内容へ戻った。",
@@ -1120,11 +1120,11 @@
     },
     {
       "source": "提出するのは <code>https://monaca.mobi/ja/directimport?pid=…</code> という形の、実際に発行されたURLです。クラウド IDEやプレビューのアドレスを代わりに貼りません。相手のMonacaへソースを取り込むためのURLです。",
-      "translation": "제출하는 것은 <code>https://monaca.mobi/ja/directimport?pid=…</code> 형식의 실제로 발행된 URL입니다. 대신 クラウド IDE(클라우드 IDE)나 プレビュー(미리보기)의 주소를 붙여넣지 마세요. 상대방의 Monaca로 소스를 가져오기 위한 URL입니다."
+      "translation": "제출하는 것은 <code>https://monaca.mobi/ja/directimport?pid=…</code> 형식의 실제로 발행된 URL입니다. 대신 クラウド IDE(클라우드 IDE)나 プレビュー(미리보기)의 주소를 붙여넣지 마십시오. 상대방의 Monaca로 소스를 가져오기 위한 URL입니다."
     },
     {
       "source": "発行したURLを開き、対象のプロジェクトを確かめます。取り込みを確定するとコピーが増えるため、繰り返して枠を埋めないようにします。教員側で新しく取り込んだ状態の動作も確認します。",
-      "translation": "발행한 URL을 열어 대상 프로젝트를 확인합니다. 가져오기를 확정하면 복사본이 늘어나므로 반복하여 슬롯을 채우지 않도록 합니다. 교사 측에서 새로 가져온 상태의 동작도 확인합니다."
+      "translation": "발행한 URL을 열어 대상 프로젝트를 확인합니다. 가져오기를 확정하면 복사본이 늘어나므로 반복하여 슬롯을 채우지 않도록 합니다. 선생님 측에서 새로 가져온 상태의 동작도 확인합니다."
     },
     {
       "source": "OSの見た目が変わっても入力・保存の処理は同じです。ネイティブアプリのビルド成果物を渡す方法と違い、ここではソースを相手の開発環境へコピーします。ブラウザの保存領域まで渡す操作ではありません。",
@@ -1148,7 +1148,7 @@
     },
     {
       "source": "通常版MonacaのFreeプランではZIPを学生の提出物にしません。先生は公開URLから取り込み、初期データと操作を確認します。公開中の自分のプロジェクトは提出後に削除しません。",
-      "translation": "일반판 Monaca의 Free 플랜에서는 ZIP을 학생의 제출물로 사용하지 않습니다. 선생님은 가져오기 URL에서 프로젝트를 가져와 초기 데이터와 조작을 확인합니다. 공개 중인 자신의 프로젝트는 제출 후에 삭제하지 않습니다."
+      "translation": "일반 Monaca의 Free 플랜에서는 ZIP을 학생의 제출물로 사용하지 않습니다. 선생님은 가져오기 URL에서 프로젝트를 가져와 초기 데이터와 조작을 확인합니다. 공개 중인 자신의 프로젝트는 제출 후에 삭제하지 않습니다."
     },
     {
       "source": "Flutter準備のタブへ戻り、取得が終わったか、SDKの版、<code>flutter doctor</code>で止まっている項目を確認します。終わっていない項目はその場で先生へ伝え、コマ8へ引き継ぎます。授業外で終わらせることを条件にはしません。",
@@ -1192,7 +1192,7 @@
     },
     {
       "source": "HTML・CSS・JavaScriptの役割分担はWeb基礎と同じで、変更した場所はファイルの種類から見つけられます。保存があるアプリでは、ソースの初期値と保存値の両方を見ます。<code>SharedPreferences</code>／<code>UserDefaults</code>を使うアプリで、コードに書いた初期値と端末に残る保存値が別にあるのと同じです。",
-      "translation": "HTML·CSS·JavaScript의 역할 분담은 웹 기초와 동일하며, 변경한 위치는 파일 종류를 통해 찾을 수 있습니다. 저장이 있는 앱에서는 소스의 초기값과 저장된 값 둘 다 확인합니다. <code>SharedPreferences</code>/<code>UserDefaults</code>를 사용하는 앱에서 코드에 작성된 초기값과 기기에 남아 있는 저장값이 별도로 존재하는 것과 같습니다."
+      "translation": "HTML·CSS·JavaScript의 역할 분담은 Web 기초와 동일하며, 변경한 위치는 파일 종류를 통해 찾을 수 있습니다. 저장이 있는 앱에서는 소스의 초기값과 저장된 값 둘 다 확인합니다. <code>SharedPreferences</code>/<code>UserDefaults</code>를 사용하는 앱에서 코드에 작성된 초기값과 기기에 남아 있는 저장값이 별도로 존재하는 것과 같습니다."
     },
     {
       "source": "自分の変更箇所が画面に現れ、初期状態からも伝わる作品にできた。",
@@ -1244,11 +1244,11 @@
     },
     {
       "source": "自分のプロジェクトで発行したURLか確認。クラウド IDEのアドレスやプレビューURLでは提出しない。",
-      "translation": "자신의 프로젝트에서 발행한 URL인지 확인합니다. 클라우드 IDE의 주소나 미리보기 URL로 제출하지 않습니다."
+      "translation": "자신의 프로젝트에서 발행한 URL인지 확인합니다. 클라우드 IDE의 주소나 プレビュー(미리보기) URL로 제출하지 않습니다."
     },
     {
       "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の調べ方を試してください。それでも解決しないときは、STEP番号と画面を先生に見せましょう。",
-      "translation": "오류가 해결되지 않을 때는 <a1>공통 자료: 문제가 생겼을 때</a1>의 확인 방법을 시도해 보세요. 그래도 해결되지 않을 때는 STEP 번호와 화면을 선생님께 보여 드립시다."
+      "translation": "오류가 해결되지 않을 때는 <a1>공통 자료: 문제가 생겼을 때</a1>의 확인 방법을 시도해 보십시오. 그래도 해결되지 않을 때는 STEP 번호와 화면을 선생님께 보여 드립시다."
     },
     {
       "source": "JEC / ハイブリッドアプリ開発技法 · M02OshiSave",

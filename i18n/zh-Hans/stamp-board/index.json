@@ -452,7 +452,7 @@
     },
     {
       "source": "<code>Habit({required this.name, required this.reason, this.count = 0})</code>は名前付き引数を持つコンストラクタです。<code>required</code>は必須、<code>this.name</code>は受け取った値を同名フィールドへ代入する省略形、<code>count = 0</code>は省略時の初期値です。<code>name</code>・<code>reason</code>は<code>final</code>で一度代入した参照を再代入せず、回数<code>count</code>は<code>int</code>として後で変更します。",
-      "translation": "<code>Habit({required this.name, required this.reason, this.count = 0})</code> 是带命名参数的构造函数。<code>required</code> 表示必填，<code>this.name</code> 是把收到的值赋给同名字段的简写，<code>count = 0</code> 是省略时的初始值。<code>name</code>、<code>reason</code> 是 <code>final</code>，赋值一次后的引用不再重新赋值；次数 <code>count</code> 作为 <code>int</code>，之后会修改。"
+      "translation": "<code>Habit({required this.name, required this.reason, this.count = 0})</code> 是带命名参数的构造函数。<code>required</code> 表示必需，<code>this.name</code> 是把收到的值赋给同名字段的简写，<code>count = 0</code> 是省略时的初始值。<code>name</code>、<code>reason</code> 是 <code>final</code>，赋值一次后的引用不再重新赋值；次数 <code>count</code> 作为 <code>int</code>，之后会修改。"
     },
     {
       "source": "<code>ListView</code>は縦にスクロールする領域です。<code>children</code>の中の<code>for (final habit in habits) buildHabitCard(habit)</code>で各データから<code>Card</code>を作ります。<code>buildHabitCard</code>は1件をWidgetとして返すメソッドです。この段階の一覧は<code>StatelessWidget</code>で、操作ボタンはありません。",
@@ -876,7 +876,7 @@
     },
     {
       "source": "<code>HabitDetailPage</code>は受け取った<code>Habit</code>を表示するだけなので<code>StatelessWidget</code>です。<code>const HabitDetailPage({super.key, required this.habit})</code>で<code>habit</code>を必須にし、<code>final</code>フィールドへ保持します。",
-      "translation": "<code>HabitDetailPage</code> 只显示收到的 <code>Habit</code>，所以是 <code>StatelessWidget</code>。用 <code>const HabitDetailPage({super.key, required this.habit})</code> 把 <code>habit</code> 设为必填，并由 <code>final</code> 字段持有它。"
+      "translation": "<code>HabitDetailPage</code> 只显示收到的 <code>Habit</code>，所以是 <code>StatelessWidget</code>。用 <code>const HabitDetailPage({super.key, required this.habit})</code> 把 <code>habit</code> 设为必需，并由 <code>final</code> 字段持有它。"
     },
     {
       "source": "本文は<code>SafeArea</code>の中の<code>ListView</code>へ名前・<code>StampMarks</code>・回数・理由を並べます。続けたい理由の<code>TextStyle</code>は<code>height: 1.7</code>で行間を確保します。長い理由は折り返し、縦の領域が足りなければスクロールできます。",
@@ -892,7 +892,7 @@
     },
     {
       "source": "Swiftの初期化時に値を受け取る形に対応します。Dartは<code>required</code> <code>this.habit</code>で必須引数と代入をまとめます。表示専用だから<code>StatelessWidget</code>を選び、更新を管理する<code>State</code>を余分に作りません。",
-      "translation": "对应 Swift 在初始化时接收值的形式。Dart 用 <code>required</code> <code>this.habit</code> 把必填参数和赋值合在一起。因为只用于显示，所以选择 <code>StatelessWidget</code>，不额外创建管理更新的 <code>State</code>。"
+      "translation": "对应 Swift 在初始化时接收值的形式。Dart 用 <code>required</code> <code>this.habit</code> 把必需参数和赋值合在一起。因为只用于显示，所以选择 <code>StatelessWidget</code>，不额外创建管理更新的 <code>State</code>。"
     },
     {
       "source": "3件の名前・回数・理由が正しく表示された。",
@@ -1064,7 +1064,7 @@
     },
     {
       "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の調べ方を試してください。それでも解決しないときは、STEP番号と画面を先生に見せましょう。",
-      "translation": "如果错误仍未解决，请尝试<a1>公共资料：遇到问题时</a1>中的排查方法。如果依然无法解决，请把 STEP 编号和画面展示给老师看。"
+      "translation": "如果错误仍未解决，请尝试<a1>通用资料：遇到问题时</a1>中的排查方法。如果依然无法解决，请把 STEP 编号和屏幕上的显示展示给老师看。"
     },
     {
       "source": "JEC / ハイブリッドアプリ開発技法 · F01StampBoard",

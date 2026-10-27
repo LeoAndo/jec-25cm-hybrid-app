@@ -4,7 +4,7 @@
   "entries": [
     {
       "source": "F02 スタンプ帳：入力・保存・APK提出 | ハイブリッドアプリ開発技法",
-      "translation": "F02 Tablero de estampas: entrada, guardado y entrega de APK | Técnicas de desarrollo de aplicaciones híbridas"
+      "translation": "F02 Tablero de sellos: entrada, guardado y entrega de APK | Técnicas de desarrollo de aplicaciones híbridas"
     },
     {
       "source": "本文へ移動",
@@ -12,7 +12,7 @@
     },
     {
       "source": "JEC / ハイブリッドアプリ開発技法",
-      "translation": "JEC / Desarrollo de aplicaciones híbridas"
+      "translation": "JEC / Técnicas de desarrollo de aplicaciones híbridas"
     },
     {
       "source": "0 / 20 ステップ確認済み",
@@ -144,11 +144,11 @@
     },
     {
       "source": "入力した習慣とスタンプを端末へ保存し、再起動後も続けられるアプリにします。保存の完了を待つ処理を読み、生成したAPKそのものを確認して提出しましょう。",
-      "translation": "Guarda en el dispositivo los hábitos ingresados y las estampas para que puedas continuar incluso después de reiniciar la aplicación. Lee el procesamiento que espera a que termine el guardado, verifica el archivo APK generado y entrégalo."
+      "translation": "Guarda en el dispositivo los hábitos ingresados y los sellos para que puedas continuar incluso después de reiniciar la aplicación. Lee el procesamiento que espera a que termine el guardado, verifica el archivo APK generado y entrégalo."
     },
     {
       "source": "この単元のプロジェクトは<code>F02StampRelease</code>です。この教科書に開始コードと作成・実行手順を掲載しています。既に作っている自分のスタンプ帳から続けても構いません。Web基礎とJava／Swiftの知識を比べながら読みます。",
-      "translation": "El proyecto de esta unidad es <code>F02StampRelease</code>. En este libro de texto se incluye el código inicial y los pasos de creación y ejecución. También puedes continuar a partir del tablero de estampas que ya hayas creado. Léelo comparándolo con tus conocimientos de Fundamentos web y Java/Swift."
+      "translation": "El proyecto de esta unidad es <code>F02StampRelease</code>. En este libro de texto se incluye el código inicial y los pasos de creación y ejecución. También puedes continuar a partir del tablero de sellos que ya hayas creado. Léelo comparándolo con tus conocimientos de Fundamentos web y Java/Swift."
     },
     {
       "source": "STEP 00では開始コードの全体を載せ、STEP 01からは、前のSTEPのコードから変える箇所だけを載せています。前から順に、本文が示す場所を書き換えて進みます。授業を休んだなどで途中から合流するときは、先生に伝えて、前のSTEPまでのコードを受け取ってから進みます。",
@@ -164,15 +164,15 @@
     },
     {
       "source": "Visual Studio Codeで、自分のスタンプ帳のフォルダを開きます。既に<code>F01StampBoard</code>として作っている場合は名前を変えず、その1本を育てて構いません。まだ無い場合はTerminalで次を実行し、生成した<code>F02StampRelease</code>を<code>File &gt; Open Folder…</code>で開きます。同名フォルダへ上書きしません。",
-      "translation": "En Visual Studio Code, abre la carpeta de tu propio tablero de estampas. Si ya lo creaste como <code>F01StampBoard</code>, no cambies el nombre y puedes seguir desarrollando ese mismo proyecto. Si aún no lo tienes, ejecuta lo siguiente en Terminal y abre el <code>F02StampRelease</code> generado con <code>File &gt; Open Folder…</code>. No sobrescribas una carpeta con el mismo nombre."
+      "translation": "En Visual Studio Code, abre la carpeta de tu propio tablero de sellos. Si ya lo creaste como <code>F01StampBoard</code>, no cambies el nombre y puedes seguir desarrollando ese mismo proyecto. Si aún no lo tienes, ejecuta lo siguiente en Terminal y abre el <code>F02StampRelease</code> generado con <code>File &gt; Open Folder…</code>. No sobrescribas una carpeta con el mismo nombre."
     },
     {
       "source": "SDKはFlutter 3.47.5 / Dart 3.13.4です。不足分は<a1>共通の準備資料</a1>を授業中に確認します。既存のiOSランタイムを使い、<code>flutter upgrade</code>はしません。",
-      "translation": "El SDK es Flutter 3.47.5 / Dart 3.13.4. Si te falta algo, consulta los <a1>materiales comunes de preparación</a1> durante la clase. Usa el entorno de ejecución de iOS existente y no ejecutes <code>flutter upgrade</code>."
+      "translation": "El SDK es Flutter 3.47.5 / Dart 3.13.4. Si te falta algo, consulta el <a1>material común de preparación</a1> durante la clase. Usa el entorno de ejecución de iOS existente y no ejecutes <code>flutter upgrade</code>."
     },
     {
       "source": "<code>lib/main.dart</code>を下の開始コードへそろえます。自分が変えた文字・色は先に控えます。<code>pubspec.yaml</code>の<code>dependencies</code>側のFlutter SDKは残し、<code>dev_dependencies</code>側に<code>flutter_test</code>のひな形がある場合はそのブロックだけ除きます。<code>test/</code>のひな形も生成されていた場合だけ除き、<code>flutter_lints</code>は残します。",
-      "translation": "Haz que <code>lib/main.dart</code> coincida con el código inicial de abajo. Anota primero los textos y colores que hayas modificado tú mismo. Mantén el Flutter SDK en la sección <code>dependencies</code> de <code>pubspec.yaml</code>. Si hay una plantilla de <code>flutter_test</code> en <code>dev_dependencies</code>, elimina solo ese bloque. Elimina la plantilla de <code>test/</code> solo si se generó, y conserva <code>flutter_lints</code>."
+      "translation": "Haz que <code>lib/main.dart</code> coincida con el código inicial de abajo. Anota primero los textos y colores que hayas modificado por tu cuenta. Mantén el Flutter SDK en la sección <code>dependencies</code> de <code>pubspec.yaml</code>. Si hay una plantilla de <code>flutter_test</code> en <code>dev_dependencies</code>, elimina solo ese bloque. Elimina la plantilla de <code>test/</code> solo si se generó, y conserva <code>flutter_lints</code>."
     },
     {
       "source": "コード欄の見出しには、ファイルのパスと、変え方を書きます。「追加」は、本文が示す行の下（または上）に書き足します。「置き換え」は、本文が示す範囲だけを書き換え、ほかの行は残します。「全体を置き換える」は、そのファイルの中身をすべて置き換えます。",
@@ -188,7 +188,7 @@
     },
     {
       "source": "コードを保存したら、<code>flutter run</code>が動いているターミナルで小文字の<code>r</code>を押すとホットリロードし、現在の<code>State</code>を保って画面を更新します。初期値や<code>initState</code>からやり直す場合は、大文字の<code>R</code>（<code>Shift + R</code>）でホットリスタートします。<code>q</code>は実行の終了です。以後、再起動による確認では<code>R</code>を使い、保存が未実装の段階では入力した習慣や回数が消えることも確かめます。",
-      "translation": "Una vez guardado el código, presiona la letra minúscula <code>r</code> en la terminal donde se está ejecutando <code>flutter run</code> para hacer un hot reload; la pantalla se actualizará conservando el <code>State</code> actual. Si quieres reiniciar desde los valores iniciales y <code>initState</code>, haz un hot restart con la letra mayúscula <code>R</code> (<code>Shift + R</code>). <code>q</code> finaliza la ejecución. De aquí en adelante, usa <code>R</code> para verificar mediante el reinicio, y comprueba también que los hábitos y el número de veces ingresados desaparecen en la etapa en que el guardado aún no está implementado."
+      "translation": "Una vez guardado el código, presiona la letra minúscula <code>r</code> en la terminal donde se está ejecutando <code>flutter run</code> para hacer un hot reload; la pantalla se actualizará conservando el <code>State</code> actual. Si quieres reiniciar desde los valores iniciales y <code>initState</code>, haz un hot restart con la letra mayúscula <code>R</code> (<code>Shift + R</code>). <code>q</code> finaliza la ejecución. De aquí en adelante, usa <code>R</code> para verificar mediante el reinicio, y comprueba también que los hábitos y el conteo ingresados desaparecen en la etapa en que el guardado aún no está implementado."
     },
     {
       "source": "開始コード",
@@ -204,7 +204,7 @@
     },
     {
       "source": "名前・理由・回数を保持。<code>required</code>は必須の名前付き引数、<code>final</code>は再代入しないフィールド。",
-      "translation": "Conserva el nombre, el motivo y el recuento. <code>required</code> indica un argumento con nombre obligatorio y <code>final</code> un campo que no se reasigna."
+      "translation": "Conserva el nombre, la razón y el conteo. <code>required</code> indica un argumento con nombre obligatorio y <code>final</code> un campo que no se reasigna."
     },
     {
       "source": "<code>StampBoardPage</code>の<code>State</code>",
@@ -212,7 +212,7 @@
     },
     {
       "source": "<code>habits</code>を保持し、<code>setState</code>で回数の変更を通知。<code>build</code>が値から一覧・合計を作る。",
-      "translation": "Conserva <code>habits</code> y notifica los cambios del recuento con <code>setState</code>. <code>build</code> crea la lista y el total a partir de los valores."
+      "translation": "Conserva <code>habits</code> y notifica los cambios del conteo con <code>setState</code>. <code>build</code> crea la lista y el total a partir de los valores."
     },
     {
       "source": "<code>count</code>を受け取り、<code>for</code>と条件演算子でマークを並べる表示専用Widget。",
@@ -232,7 +232,7 @@
     },
     {
       "source": "自分のプロジェクトで一覧・スタンプ・詳細の開始状態を確認できた。",
-      "translation": "Pudiste verificar el estado inicial de la lista, las estampas y los detalles en tu propio proyecto."
+      "translation": "Pudiste verificar el estado inicial de la lista, los sellos y los detalles en tu propio proyecto."
     },
     {
       "source": "STEP 01 · コマ12",
@@ -252,7 +252,7 @@
     },
     {
       "source": "名前は<code>maxLength: 40</code>、理由は200文字。<code>InputDecoration</code>の<code>labelText</code>は欄の名前、<code>hintText</code>は入力例、<code>OutlineInputBorder</code>は枠です。理由は<code>minLines: 3</code>、<code>maxLines: 5</code>で複数行にします。<code>body</code>を<code>ListView</code>にして、キーボードで表示領域が狭くても下へ動かせる形にします。",
-      "translation": "El nombre usa <code>maxLength: 40</code> y el motivo 200 caracteres. En <code>InputDecoration</code>, <code>labelText</code> es el nombre del campo, <code>hintText</code> es un ejemplo de entrada y <code>OutlineInputBorder</code> es el borde. Haz que el motivo tenga varias líneas con <code>minLines: 3</code> y <code>maxLines: 5</code>. Para poder desplazarte hacia abajo incluso cuando el teclado reduzca el espacio visible, haz que <code>body</code> sea un <code>ListView</code>."
+      "translation": "El nombre usa <code>maxLength: 40</code> y la razón 200 caracteres. En <code>InputDecoration</code>, <code>labelText</code> es el nombre del campo, <code>hintText</code> es un ejemplo de entrada y <code>OutlineInputBorder</code> es el borde. Haz que la razón tenga varias líneas con <code>minLines: 3</code> y <code>maxLines: 5</code>. Para poder desplazarte hacia abajo incluso cuando el teclado reduzca el espacio visible, haz que <code>body</code> sea un <code>ListView</code>."
     },
     {
       "source": "戻るボタンは<code>Navigator.pop</code>で入力画面を閉じます。<code>PopScope</code>の<code>canPop</code>は戻ることを許す指定で、今は<code>true</code>です。保存を入れる段階で、処理中の戻る操作を制御するために使います。入力して戻り、再び開くと新しい<code>State</code>で欄が空になることを確認します。",
@@ -324,7 +324,7 @@
     },
     {
       "source": "名前を空白だけにして、理由だけ入力して押します。",
-      "translation": "Deja solo espacios en blanco en el nombre, ingresa únicamente el motivo y presiona el botón."
+      "translation": "Deja solo espacios en blanco en el nombre, ingresa únicamente la razón y presiona el botón."
     },
     {
       "source": "両方を入力し、確認の文と名前が表示されることを確かめます。",
@@ -332,7 +332,7 @@
     },
     {
       "source": "エラーのたびに欄を消さず、直して再試行できるようにします。理由に改行を入れ、入力が保持されることも見ます。",
-      "translation": "No borres los campos con cada error; permite corregirlos y volver a intentar. Inserta un salto de línea en el motivo y verifica también que se mantenga el texto ingresado."
+      "translation": "No borres los campos con cada error; permite corregirlos y volver a intentar. Inserta un salto de línea en la razón y verifica también que se mantenga el texto ingresado."
     },
     {
       "source": "<code>trim</code>と空欄の判定はJavaの入力検証に対応します。Dartの<code>isEmpty</code>はプロパティとして読みます。結果はダイアログではなく同じ画面の<code>Text</code>へ出し、<code>setState</code>で変更を通知します。",
@@ -372,11 +372,11 @@
     },
     {
       "source": "追加したカードの「詳しく見る」を押し、名前と理由が詳細に一致するか確認します。",
-      "translation": "Presiona 「詳しく見る」 (Ver detalles) en la tarjeta agregada y comprueba si el nombre y el motivo coinciden en los detalles."
+      "translation": "Presiona 「詳しく見る」 (Ver detalles) en la tarjeta agregada y comprueba si el nombre y la razón coinciden en los detalles."
     },
     {
       "source": "スタンプを押し、一覧・詳細の回数を確かめます。",
-      "translation": "Presiona 「スタンプを押す」 (Poner estampa) y verifica el recuento en la lista y los detalles."
+      "translation": "Presiona 「スタンプを押す」 (Poner sello) y verifica el conteo en la lista y los detalles."
     },
     {
       "source": "ホットリスタートし、追加した習慣が消えて初期3件へ戻ることを確認します。",
@@ -408,7 +408,7 @@
     },
     {
       "source": "名前と理由の入力例、見出し、カードの初期データを自分の題材へ変えます。個人的な体験を開示する必要はなく、架空の習慣でも構いません。",
-      "translation": "Cambia los ejemplos de entrada para el nombre y el motivo, los encabezados y los datos iniciales de las tarjetas a tu propio tema. No es necesario que reveles experiencias personales; los hábitos ficticios también están bien."
+      "translation": "Cambia los ejemplos de entrada para el nombre y la razón, los encabezados y los datos iniciales de las tarjetas a tu propio tema. No es necesario que reveles experiencias personales; los hábitos ficticios también están bien."
     },
     {
       "source": "場所",
@@ -464,7 +464,7 @@
     },
     {
       "source": "Visual Studio Codeで同じスタンプ帳を開きます。開始状態は「入力で追加できるが、再起動で消える」です。今日は記録を端末へ残します。",
-      "translation": "Abre el mismo tablero de estampas en Visual Studio Code. El estado inicial es “se puede agregar mediante entrada, pero desaparece al reiniciar”. Hoy guardaremos los registros en el dispositivo."
+      "translation": "Abre el mismo tablero de sellos en Visual Studio Code. El estado inicial es “se puede agregar mediante entrada, pero desaparece al reiniciar”. Hoy guardaremos los registros en el dispositivo."
     },
     {
       "source": "このSTEPでは、コードは変えません。保存の処理を書く前に、完了を待つ処理の流れを読みます。",
@@ -512,7 +512,7 @@
     },
     {
       "source": "起動し直さずに<code>r</code>で反映すると、ターミナルにはエラーが出ませんが、スタンプを押しても習慣を追加しても「保存できませんでした。」で始まる文が出るだけで、保存できません。続けて<code>R</code>を押すと、画面全体が赤くなり<code>Bad state: The SharedPreferencesAsyncPlatform instance must be set.</code>と出ます。<code>r</code>と<code>R</code>はDartのコードを入れ替えるだけで、アプリのビルドをやり直しません。新しいプラグインは、ビルドし直したアプリにだけ組み込まれます。そのときは<code>q</code>で終了し、<code>flutter run -d 端末ID</code>で起動し直します。",
-      "translation": "Si aplicas los cambios con <code>r</code> sin volver a iniciar la aplicación, no aparecerá ningún error en la terminal, pero al presionar una estampa o agregar un hábito solo aparecerá un mensaje que comienza con 「保存できませんでした。」 (No se pudo guardar.) y no se guardará nada. Si después presionas <code>R</code>, toda la pantalla se volverá roja y mostrará <code>Bad state: The SharedPreferencesAsyncPlatform instance must be set.</code>. <code>r</code> y <code>R</code> solo intercambian el código Dart y no vuelven a compilar la aplicación. Los nuevos plugins solo se incorporan a una aplicación recompilada. En ese caso, sal con <code>q</code> y vuelve a iniciar con <code>flutter run -d 端末ID</code> (端末ID = ID del dispositivo)."
+      "translation": "Si aplicas los cambios con <code>r</code> sin volver a iniciar la aplicación, no aparecerá ningún error en la terminal, pero al presionar un sello o agregar un hábito solo aparecerá un mensaje que comienza con 「保存できませんでした。」 (No se pudo guardar.) y no se guardará nada. Si después presionas <code>R</code>, toda la pantalla se volverá roja y mostrará <code>Bad state: The SharedPreferencesAsyncPlatform instance must be set.</code>. <code>r</code> y <code>R</code> solo intercambian el código Dart y no vuelven a compilar la aplicación. Los nuevos plugins solo se incorporan a una aplicación recompilada. En ese caso, sal con <code>q</code> y vuelve a iniciar con <code>flutter run -d 端末ID</code> (端末ID = ID del dispositivo)."
     },
     {
       "source": "<code>import</code>でパッケージを読み込み、<code>State</code>に<code>SharedPreferencesAsync</code>を1つ持ちます。保存キー<code>storageKey</code>も1か所です。このAPIだけを使い、旧APIやキャッシュ付きAPIを混ぜません。",
@@ -536,7 +536,7 @@
     },
     {
       "source": "名前・理由・回数を文字列リストにして保存します。1件は3要素で、2件なら6要素です。回数は<code>count.toString()</code>で文字列へ変えます。JSONは使いません。",
-      "translation": "Guarda el nombre, el motivo y el recuento como una lista de cadenas. Cada elemento consta de 3 datos; para 2 elementos serán 6 datos. Convierte el recuento a cadena con <code>count.toString()</code>. No uses JSON."
+      "translation": "Guarda el nombre, la razón y el conteo como una lista de cadenas. Cada elemento consta de 3 datos; para 2 elementos serán 6 datos. Convierte el conteo a cadena con <code>count.toString()</code>. No uses JSON."
     },
     {
       "source": "リストの位置",
@@ -548,11 +548,11 @@
     },
     {
       "source": "コードを15分読む / 理由の文 / 1",
-      "translation": "コードを15分読む (Leer código durante 15 minutos) / texto del motivo / 1"
+      "translation": "コードを15分読む (Leer código durante 15 minutos) / texto de la razón / 1"
     },
     {
       "source": "外を10分歩く / 理由の文 / 0",
-      "translation": "外を10分歩く (Caminar al aire libre durante 10 minutos) / texto del motivo / 0"
+      "translation": "外を10分歩く (Caminar al aire libre durante 10 minutos) / texto de la razón / 0"
     },
     {
       "source": "<code>saveHabits</code>は<code>await</code>で<code>setStringList</code>を待ち、成功してから<code>habits</code>を<code>nextHabits</code>へ更新します。<code>changeStamp</code>は新しい<code>Habit</code>を作り、表示中のオブジェクトを先に変更しません。追加は<code>List.of</code>で配列を複製して末尾へ加えます。既存の<code>Habit</code>の内容を書き換えない追加だけなら、リストのコピーで足ります。",
@@ -648,7 +648,7 @@
     },
     {
       "source": "1件追加して「この端末に保存しました。」を確認します。このSTEPは保存だけで、起動時に読む処理はまだありません。再起動すると初期3件を表示する段階です。再起動した後の初期3件の画面でスタンプを押すか習慣を追加すると、保存内容は表示中の一覧で置き換わり、再起動の前に保存した習慣や回数は残りません。保存した内容をまだ読み込んでいない一覧を、そのまま保存するためです。次のSTEPで読み込めるのは、最後に保存した内容です。",
-      "translation": "Agrega un elemento y comprueba el mensaje 「この端末に保存しました。」 (Guardado en este dispositivo.). Este STEP solo realiza el guardado; aún no incluye el procesamiento para leerlo al iniciar. Es una etapa en la que, al reiniciar, se muestran los 3 elementos iniciales. Si en la pantalla de los 3 elementos iniciales tras reiniciar presionas una estampa o agregas un hábito, el contenido guardado se reemplazará por la lista que se está mostrando y no quedarán los hábitos ni los recuentos guardados antes del reinicio. Esto se debe a que se guarda directamente la lista que todavía no ha cargado el contenido guardado. Lo que se podrá cargar en el siguiente STEP es el contenido guardado por última vez."
+      "translation": "Agrega un elemento y comprueba el mensaje 「この端末に保存しました。」 (Guardado en este dispositivo.). Este STEP solo realiza el guardado; aún no incluye el procesamiento para leerlo al iniciar. Es una etapa en la que, al reiniciar, se muestran los 3 elementos iniciales. Si en la pantalla de los 3 elementos iniciales tras reiniciar presionas un sello o agregas un hábito, el contenido guardado se reemplazará por la lista que se está mostrando y no quedarán los hábitos ni los conteos guardados antes del reinicio. Esto se debe a que se guarda directamente la lista que todavía no ha cargado el contenido guardado. Lo que se podrá cargar en el siguiente STEP es el contenido guardado por última vez."
     },
     {
       "source": "キーを指定して少量のデータを端末内へ置く目的は<code>UserDefaults</code>やAndroidの<code>SharedPreferences</code>に対応します。Flutter側は<code>Future</code>の完了を<code>await</code>で待ちます。<code>try</code> / <code>catch</code> / <code>finally</code>はJavaの例外処理と同じ役割で、画面を更新する順序を保存の成功後へそろえます。",
@@ -688,11 +688,11 @@
     },
     {
       "source": "名前と理由を読み、空白だけでないか確認します。",
-      "translation": "Lee el nombre y el motivo, y comprueba que no contengan solo espacios en blanco."
+      "translation": "Lee el nombre y la razón, y comprueba que no contengan solo espacios en blanco."
     },
     {
       "source": "<code>int.tryParse</code>で回数を<code>int</code>へ戻します。変換できなければ<code>null</code>なので、0〜<code>stampGoal</code>の範囲と一緒に確認します。",
-      "translation": "Convierte el recuento de nuevo a <code>int</code> con <code>int.tryParse</code>. Si no se puede convertir devuelve <code>null</code>, así que verifícalo junto con el rango de 0 a <code>stampGoal</code>."
+      "translation": "Convierte el conteo de nuevo a <code>int</code> con <code>int.tryParse</code>. Si no se puede convertir devuelve <code>null</code>, así que verifícalo junto con el rango de 0 a <code>stampGoal</code>."
     },
     {
       "source": "異常なら<code>FormatException</code>を投げます。<code>catch</code>で文を表示し、<code>canSave</code>を<code>false</code>のままにします。",
@@ -700,7 +700,7 @@
     },
     {
       "source": "不正な保存内容を「未保存」とは扱いません。元の保存キーへ自動で書き込まず、再読み込みと教員への確認を案内します。次のSTEPで本人が選ぶ初期化を作ります。",
-      "translation": "El contenido guardado que no sea válido no se trata como “no guardado”. No sobrescribas automáticamente la clave de guardado original; en su lugar, indica recargar y consultar con el docente. En el siguiente STEP crearemos una inicialización que el usuario elija voluntariamente."
+      "translation": "El contenido guardado que no sea válido no se trata como “no guardado”. No sobrescribas automáticamente la clave de guardado original; en su lugar, indica recargar y consultar con el docente. En el siguiente STEP crearemos un restablecimiento que el usuario elija voluntariamente."
     },
     {
       "source": "次に、<code>createInitialHabits</code>の関数を閉じる<code>}</code>の下に、1行空けて次のコードを追加します。下の<code>saveHabits</code>との間も1行空けます。",
@@ -720,7 +720,7 @@
     },
     {
       "source": "新しい習慣を追加し、何回かスタンプを押します。",
-      "translation": "Agrega un nuevo hábito y presiona la estampa varias veces."
+      "translation": "Agrega un nuevo hábito y presiona el sello varias veces."
     },
     {
       "source": "アプリを終了して再起動するか、開発中はホットリスタートします。",
@@ -728,7 +728,7 @@
     },
     {
       "source": "「保存した記録を読み込みました。」、追加した習慣、回数、詳細の理由を確認します。",
-      "translation": "Comprueba el mensaje 「保存した記録を読み込みました。」 (Se cargaron los registros guardados.), el hábito agregado, el recuento y el motivo en los detalles."
+      "translation": "Comprueba el mensaje 「保存した記録を読み込みました。」 (Se cargaron los registros guardados.), el hábito agregado, el conteo y la razón en los detalles."
     },
     {
       "source": "未保存の<code>null</code>はSwiftの<code>nil</code>に対応します。Androidの<code>onCreate</code>やiOSの<code>viewDidLoad</code>で保存値を画面へ戻す目的と同じですが、今回は<code>initState</code>から非同期処理を呼びます。読めたことと、アプリで扱える値かの確認を分けます。",
@@ -736,7 +736,7 @@
     },
     {
       "source": "追加した名前・理由・回数が再起動後にも戻った。",
-      "translation": "Pudiste comprobar que el nombre, el motivo y el recuento agregados se restauran después de reiniciar."
+      "translation": "Pudiste comprobar que el nombre, la razón y el conteo agregados se restauran después de reiniciar."
     },
     {
       "source": "STEP 08 · コマ13",
@@ -748,7 +748,7 @@
     },
     {
       "source": "初期化ボタンと<code>resetHabits</code>を加えます。<code>showDialog&lt;bool&gt;</code>が返す<code>Future</code>を<code>await</code>し、やめるなら<code>false</code>、初期化するなら<code>true</code>を<code>Navigator.pop</code>で返します。ダイアログの外側などで閉じた場合は<code>null</code>なので、<code>confirmed != true</code>なら何もしません。",
-      "translation": "Agrega el botón de inicialización y <code>resetHabits</code>. Espera con <code>await</code> al <code>Future</code> que devuelve <code>showDialog&lt;bool&gt;</code>, y devuelve <code>false</code> para 「やめる」 (Cancelar) o <code>true</code> para 「初期化する」 (Restablecer) con <code>Navigator.pop</code>. Si se cierra tocando fuera del cuadro de diálogo u otra acción, el valor será <code>null</code>, por lo que no se hace nada si <code>confirmed != true</code>."
+      "translation": "Agrega el botón de restablecimiento y <code>resetHabits</code>. Espera con <code>await</code> al <code>Future</code> que devuelve <code>showDialog&lt;bool&gt;</code>, y devuelve <code>false</code> para 「やめる」 (Cancelar) o <code>true</code> para 「初期化する」 (Restablecer) con <code>Navigator.pop</code>. Si se cierra tocando fuera del cuadro de diálogo u otra acción, el valor será <code>null</code>, por lo que no se hace nada si <code>confirmed != true</code>."
     },
     {
       "source": "削除するのは<code>preferences.remove(storageKey)</code>で指定したキー1個だけです。保存領域全体の<code>clear</code>は使いません。削除に成功してから初期の<code>Habit</code>配列へ戻し、保存を再び有効にします。削除に失敗したら元の一覧とエラーの文を残します。",
@@ -788,7 +788,7 @@
     },
     {
       "source": "初期3件・回数0へ戻り、再起動しても初期値になることを確認します。",
-      "translation": "Comprueba que vuelva a los 3 elementos iniciales con recuento 0, y que los valores iniciales se mantengan incluso después de reiniciar."
+      "translation": "Comprueba que vuelva a los 3 elementos iniciales con conteo 0, y que los valores iniciales se mantengan incluso después de reiniciar."
     },
     {
       "source": "通常の操作で保存・読込に失敗したら、表示された文を先生と確認します。学生の作品へ障害を起こすコードを入れる作業は行いません。",
@@ -816,7 +816,7 @@
     },
     {
       "source": "入力→保存→詳細→再起動→復元を一続きで確かめます。次に<code>createInitialHabits</code>の名前と理由を自分の題材へ変えます。",
-      "translation": "Verifica de manera continua el flujo: entrada → guardado → detalles → reinicio → restauración. A continuación, cambia los nombres y motivos en <code>createInitialHabits</code> por tu propio tema."
+      "translation": "Verifica de manera continua el flujo: entrada → guardado → detalles → reinicio → restauración. A continuación, cambia los nombres y las razones en <code>createInitialHabits</code> por tu propio tema."
     },
     {
       "source": "保存済みデータがあるとソースの初期値より優先されます。初期値のアレンジを確かめるときは、残す内容を控えてからアプリ内の初期化を使います。キーを変えて記録を見えなくする方法で済ませません。",
@@ -860,7 +860,7 @@
     },
     {
       "source": "Visual Studio Codeで保存できるスタンプ帳を開きます。今日はAndroidで初めて実行し、提出するAPKを作ります。初回のSDK・Gradle等の取得も授業時間内に行います。",
-      "translation": "Abre en Visual Studio Code el tablero de estampas capaz de guardar datos. Hoy lo ejecutaremos por primera vez en Android y crearemos el APK para entregar. La descarga inicial del SDK, Gradle, etc., también se realiza dentro del horario de clase."
+      "translation": "Abre en Visual Studio Code el tablero de sellos capaz de guardar datos. Hoy lo ejecutaremos por primera vez en Android y crearemos el APK para entregar. La descarga inicial del SDK, Gradle, etc., también se realiza dentro del horario de clase."
     },
     {
       "source": "このSTEPでは、<code>lib/main.dart</code>のコードは変えません。STEP 09までのコードを、Androidで初めて動かします。",
@@ -928,7 +928,7 @@
     },
     {
       "source": "先生の環境でこの教科書のとおりに作ったときの実測は約48.7MBでした。この値は先生の環境での結果で、学生の素材や変更後の容量を保証する値ではありません。APKが生成されただけでは提出前の動作確認は終わりません。",
-      "translation": "El tamaño medido al crearlo siguiendo este libro de texto en el entorno del profesor fue de aproximadamente 48.7 MB. Este valor corresponde al resultado en el entorno del profesor y no garantiza el tamaño posterior con los recursos y cambios de cada estudiante. El simple hecho de generar el APK no concluye la verificación de funcionamiento antes de la entrega."
+      "translation": "El tamaño medido al crearlo siguiendo este libro de texto en el entorno de tu docente fue de aproximadamente 48.7 MB. Este valor corresponde al resultado en el entorno de tu docente y no garantiza el tamaño posterior con los recursos y cambios de cada estudiante. El simple hecho de generar el APK no concluye la verificación de funcionamiento antes de la entrega."
     },
     {
       "source": "DartソースとAPKは、Androidのソースとビルド成果物の関係と同じです。普段の<code>flutter run</code>は開発用の実行なので、提出する<code>release</code> APKそのものを次のSTEPで確認します。",
@@ -968,7 +968,7 @@
     },
     {
       "source": "スタンプの上限と1つ戻すを試します。",
-      "translation": "Prueba el límite de estampas y el botón 「1つ戻す」 (Deshacer una)."
+      "translation": "Prueba el límite de sellos y el botón 「1つ戻す」 (Deshacer uno)."
     },
     {
       "source": "Androidのアプリ情報（<code>App info</code>）の<code>Force stop</code>でアプリを停止し、アイコンから起動し直して復元を確認します。バックグラウンドへ移すだけとは区別します。アプリ情報とアイコンに出るアプリの名前は、プロジェクト名の<code>f02_stamp_release</code>です（F01から続けている場合は<code>f01_stamp_board</code>）。",
@@ -1008,7 +1008,7 @@
     },
     {
       "source": "相手にも見せたい題材は<code>createInitialHabits</code>へ書きます。名前・理由、画面の見出し・入力例、配色など、ソースに残した変更がアレンジの対象です。保存済みデータで初期値が隠れている場合は、必要な記録を控えてアプリ内で初期化し、確認します。",
-      "translation": "Escribe en <code>createInitialHabits</code> el tema que deseas mostrar a los demás. Los cambios que dejes en el código fuente, como nombres, motivos, encabezados de pantalla, ejemplos de entrada y combinación de colores, son el objeto de la personalización. Si los valores iniciales quedan ocultos por datos guardados, anota los registros necesarios, restablece dentro de la aplicación y verifica."
+      "translation": "Escribe en <code>createInitialHabits</code> el tema que deseas mostrar a los demás. Los cambios que dejes en el código fuente, como nombres, razones, encabezados de pantalla, ejemplos de entrada y combinación de colores, son el objeto de la personalización. Si los valores iniciales quedan ocultos por datos guardados, anota los registros necesarios, restablece dentro de la aplicación y verifica."
     },
     {
       "source": "iOSとAndroidでは同じ名前の記録を使っても保存領域は別です。片方で入力してももう片方へ自動では移りません。両方の画面で文字・余白・入力・戻るを比較し、見た目の違いと動作の一致を確かめます。",
@@ -1064,7 +1064,7 @@
     },
     {
       "source": "長い日本語や理由が読める。",
-      "translation": "El texto largo en japonés y los motivos se leen bien."
+      "translation": "El texto largo en japonés y las razones se leen bien."
     },
     {
       "source": "ソース保存→<code>flutter analyze</code>→<code>flutter build apk</code>→実APKのインストールの順を繰り返します。直前に生成したファイルの更新日時を見て、古いAPKを確認していないか注意します。",
@@ -1088,7 +1088,7 @@
     },
     {
       "source": "Visual Studio Codeで自分のスタンプ帳を開きます。今日は新しい概念を追加せず、作品を仕上げて通常APKを提出します。",
-      "translation": "Abre tu propio tablero de estampas en Visual Studio Code. Hoy no agregaremos conceptos nuevos; daremos los toques finales a la aplicación y entregaremos el APK normal."
+      "translation": "Abre tu propio tablero de sellos en Visual Studio Code. Hoy no agregaremos conceptos nuevos; daremos los toques finales a la aplicación y entregaremos el APK normal."
     },
     {
       "source": "このコマでは、教科書のコードは変えません。STEP 14までに自分でアレンジしたコードを、上書きせずにそのまま仕上げます。",
@@ -1100,7 +1100,7 @@
     },
     {
       "source": "初期の題材・名前・理由が自分の作品になっている。",
-      "translation": "El tema, los nombres y los motivos iniciales corresponden a tu propio trabajo."
+      "translation": "El tema, los nombres y las razones iniciales corresponden a tu propio trabajo."
     },
     {
       "source": "空欄は止まり、正常な入力は追加できる。",
@@ -1108,11 +1108,11 @@
     },
     {
       "source": "スタンプの0と上限、1つ戻すが正しい。",
-      "translation": "El 0 de las estampas, el límite y 「1つ戻す」 (Deshacer una) funcionan correctamente."
+      "translation": "El 0 de los sellos, el límite y 「1つ戻す」 (Deshacer uno) funcionan correctamente."
     },
     {
       "source": "詳細の名前・理由・回数が選んだ習慣と一致する。",
-      "translation": "El nombre, el motivo y el recuento en los detalles coinciden con el hábito seleccionado."
+      "translation": "El nombre, la razón y el conteo en los detalles coinciden con el hábito seleccionado."
     },
     {
       "source": "終了・再起動で記録が戻る。",
@@ -1148,15 +1148,15 @@
     },
     {
       "source": "自分の題材に合う名前・理由・見出し・入力例をそろえます。「何を続けたい人が使うアプリか」が初期画面から伝わるようにします。本人の私生活を公開する必要はありません。",
-      "translation": "Alinea nombres, motivos, encabezados y ejemplos de entrada que se adapten a tu propio tema. Haz que desde la pantalla inicial se transmita “para qué tipo de persona que desea continuar qué hábito es esta aplicación”. No es necesario que expongas tu vida privada."
+      "translation": "Alinea nombres, razones, encabezados y ejemplos de entrada que se adapten a tu propio tema. Haz que desde la pantalla inicial se transmita “para qué tipo de persona que desea continuar qué hábito es esta aplicación”. No es necesario que expongas tu vida privada."
     },
     {
       "source": "見た目を変えたら長い名前と改行のある理由でも確認します。目標回数を小さくする場合は、保存済みの回数が新しい上限を超えると読込の検査に通りません。必要な記録を控えてから旧版で初期化するか、変更後の画面で本人が初期化を選びます。",
-      "translation": "Tras modificar la apariencia, comprueba también con nombres largos y motivos con saltos de línea. Si reduces el recuento objetivo, no se superará la validación de carga si el recuento guardado sobrepasa el nuevo límite. Anota los registros necesarios y restablece en la versión anterior, o elige restablecer en la pantalla modificada."
+      "translation": "Tras modificar la apariencia, comprueba también con nombres largos y razones con saltos de línea. Si reduces la cantidad objetivo, no se superará la validación de carga si el conteo guardado sobrepasa el nuevo límite. Anota los registros necesarios y restablece en la versión anterior, o elige restablecer en la pantalla modificada."
     },
     {
       "source": "読込の検査は起動時だけなので、<code>r</code>（ホットリロード）で反映したときは行われず、回数がそのまま残ります。3回のまま目標を2にすると「3 / 2 回 · あと-1回」と出て、スタンプを押すは無効になります。1つ戻すは押せる表示ですが、<code>changeStamp</code>は目標を超える次の回数を受け付けません。この例のように目標を1回だけ超えているときは、押すと目標の2回に戻ります。2回以上超えているときは、押しても変わりません。目標を超えた回数が残ったまま<code>R</code>を押すと読込の検査に通らないので、上のとおり、必要な記録を控えてから初期化を選びます。",
-      "translation": "Dado que la comprobación de carga se ejecuta solo al iniciar, no se realiza al aplicar cambios con <code>r</code> (hot reload) y los recuentos permanecen intactos. Si dejas el recuento en 3 y cambias el objetivo a 2, aparecerá 「3 / 2 回 · あと-1回」 (3 / 2 veces · faltan -1 veces) y 「スタンプを押す」 (Poner estampa) quedará deshabilitado. 「1つ戻す」 (Deshacer una) parece presionable, pero <code>changeStamp</code> no acepta un recuento siguiente que supere el objetivo. Cuando, como en este ejemplo, se supera el objetivo en solo 1 vez, al presionarlo vuelve a las 2 veces del objetivo. Si se supera en 2 o más veces, no cambiará aunque se presione. Si presionas <code>R</code> mientras queda un recuento que supera el objetivo, no se superará la comprobación de carga, por lo que, como se indicó arriba, anota los registros necesarios antes de elegir el restablecimiento."
+      "translation": "Dado que la comprobación de carga se ejecuta solo al iniciar, no se realiza al aplicar cambios con <code>r</code> (hot reload) y los conteos permanecen intactos. Si dejas el conteo en 3 y cambias el objetivo a 2, aparecerá 「3 / 2 回 · あと-1回」 (3 / 2 veces · faltan -1 veces) y 「スタンプを押す」 (Poner sello) quedará deshabilitado. 「1つ戻す」 (Deshacer uno) parece presionable, pero <code>changeStamp</code> no acepta un conteo siguiente que supere el objetivo. Cuando, como en este ejemplo, se supera el objetivo en solo 1 vez, al presionarlo vuelve a las 2 veces del objetivo. Si se supera en 2 o más veces, no cambiará aunque se presione. Si presionas <code>R</code> mientras queda un conteo que supera el objetivo, no se superará la comprobación de carga, por lo que, como se indicó arriba, anota los registros necesarios antes de elegir el restablecimiento."
     },
     {
       "source": "保存キー・3要素の並び・検証条件は、見た目のアレンジとは分けます。今回の提出前に新しい保存形式や機能を増やさず、学んだ範囲で仕上げます。",
@@ -1224,7 +1224,7 @@
     },
     {
       "source": "どのような人が、何を記録するためのスタンプ帳になっているか。",
-      "translation": "Para qué tipo de persona y para registrar qué cosas está pensado este tablero de estampas."
+      "translation": "Para qué tipo de persona y para registrar qué cosas está pensado este tablero de sellos."
     },
     {
       "source": "どのファイルの、どの文字・色・初期データを変えたか。",
@@ -1260,7 +1260,7 @@
     },
     {
       "source": "コードは変えません。STEP 08まで書いたコードが、この単元の完成版です。",
-      "translation": "Este STEP no tiene cambios de código. El código que escribiste hasta el STEP 08 es la versión final de esta unidad."
+      "translation": "Este STEP no tiene cambios de código. El código que escribiste hasta el STEP 08 es la versión terminada de esta unidad."
     },
     {
       "source": "最後に、既に扱ったアレンジの場所を振り返ります。<code>createInitialHabits</code>の題材、<code>Text</code>の案内、<code>ThemeData</code>の配色、<code>StampMarks</code>の色、<code>Padding</code>や<code>SizedBox</code>の余白を、自分の目的に合わせて変えられます。",
@@ -1312,7 +1312,7 @@
     },
     {
       "source": "STEP 06は保存だけ、07から読み込み。06で再起動した後に押すか追加すると、前の保存は表示中の一覧で置き換わる。保存キーとアプリの実行先が同じか。",
-      "translation": "El STEP 06 es solo guardado; la lectura comienza en el 07. En el 06, si presionas una estampa o agregas un elemento tras reiniciar, el guardado anterior se reemplaza por la lista que se está mostrando. Comprueba si la clave de guardado y el destino de ejecución de la aplicación son los mismos."
+      "translation": "El STEP 06 es solo guardado; la lectura comienza en el 07. En el 06, si presionas un sello o agregas un elemento tras reiniciar, el guardado anterior se reemplaza por la lista que se está mostrando. Comprueba si la clave de guardado y el destino de ejecución de la aplicación son los mismos."
     },
     {
       "source": "読込エラーになる",
@@ -1324,11 +1324,11 @@
     },
     {
       "source": "残り回数が負になる（あと-1回など）",
-      "translation": "El recuento restante se vuelve negativo (como 「あと-1回」 (-1 restante))"
+      "translation": "La cantidad restante se vuelve negativa (como 「あと-1回」 (faltan -1 veces))"
     },
     {
       "source": "回数が目標を超えたまま<code>stampGoal</code>を減らし、<code>r</code>で反映した。1つ戻すが効くのは、目標を1回だけ超えているとき。<code>R</code>では読込エラーになるので、必要な記録を控えて初期化。",
-      "translation": "Se redujo <code>stampGoal</code> mientras el recuento superaba el objetivo y se aplicó con <code>r</code>. 「1つ戻す」 (Deshacer una) solo tiene efecto si supera el objetivo en solo 1 vez. Con <code>R</code> ocurre un error de lectura, así que anota los registros necesarios y restablece."
+      "translation": "Se redujo <code>stampGoal</code> mientras el conteo superaba el objetivo y se aplicó con <code>r</code>. 「1つ戻す」 (Deshacer uno) solo tiene efecto si supera el objetivo en solo 1 vez. Con <code>R</code> ocurre un error de lectura, así que anota los registros necesarios y restablece."
     },
     {
       "source": "初期値を変えても出ない",
@@ -1356,7 +1356,7 @@
     },
     {
       "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の調べ方を試してください。それでも解決しないときは、STEP番号と画面を先生に見せましょう。",
-      "translation": "Si el error no se resuelve, prueba los pasos indicados en <a1>Guía común: Solución de problemas</a1>. Si aun así no se soluciona, muestra al profesor el número de STEP y tu pantalla."
+      "translation": "Si el error no se resuelve, prueba los pasos indicados en <a1>Material común: Solución de problemas</a1>. Si aun así no se soluciona, muestra a tu docente el número de STEP y tu pantalla."
     },
     {
       "source": "JEC / ハイブリッドアプリ開発技法 · F02StampRelease",

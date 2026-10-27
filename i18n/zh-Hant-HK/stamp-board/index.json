@@ -48,7 +48,7 @@
     },
     {
       "source": "04 文字と大きさをアレンジする",
-      "translation": "04 自訂文字與大小"
+      "translation": "04 修改文字與大小"
     },
     {
       "source": "コマ9 · STEP 05〜09",
@@ -128,7 +128,7 @@
     },
     {
       "source": "共通：はじめの準備",
-      "translation": "通用：上課前的準備"
+      "translation": "共用：上課前的準備"
     },
     {
       "source": "共通：困ったとき",
@@ -148,7 +148,7 @@
     },
     {
       "source": "この単元で作るプロジェクトは<code>F01StampBoard</code>です。この教科書だけで、新規作成から一覧・スタンプ・詳細の実行まで進められます。Web基礎とJava／Swiftの知識を比べながら読みます。",
-      "translation": "本單元製作的專案是 <code>F01StampBoard</code>。僅憑本教科書，就可以完成從新建到執行清單、印章、詳細畫面的全過程。閱讀時請對照 Web 基礎與 Java／Swift 的知識。"
+      "translation": "本單元製作的專案是 <code>F01StampBoard</code>。僅憑本教科書，就可以完成從新建到執行清單、印章、詳情畫面的全過程。閱讀時請對照 Web 基礎與 Java／Swift 的知識。"
     },
     {
       "source": "各STEPのコードは、前のSTEPのコードから変える箇所だけを載せています。前から順に、本文が示す場所を書き換えて進みます。授業を休んだなどで途中から合流するときは、先生に伝えて、前のSTEPまでのコードを受け取ってから進みます。",
@@ -164,7 +164,7 @@
     },
     {
       "source": "Visual Studio Codeを使います。最初の25分でFlutter 3.47.5 / Dart 3.13.4、Flutter拡張、iOS実行環境を確認します。<a1>共通資料のSTEP 4〜7</a1>を開き、不足分は授業中に用意してください。学生のMacはApple Siliconです。既存のXcodeで使えるiOSランタイムは再利用し、全員に再取得は求めません。",
-      "translation": "使用 Visual Studio Code。用最初的25分鐘確認 Flutter 3.47.5 / Dart 3.13.4、Flutter 擴充功能和 iOS 執行環境。開啟<a1>共通資料的 STEP 4〜7</a1>，缺少的部分請在課堂上準備。學生的 Mac 都是 Apple Silicon。現有 Xcode 中可用的 iOS 執行階段直接重複使用，不要求所有人重新取得。"
+      "translation": "使用 Visual Studio Code。用最初的25分鐘確認 Flutter 3.47.5 / Dart 3.13.4、Flutter 擴充功能和 iOS 執行環境。開啟<a1>共用資料的 STEP 4〜7</a1>，缺少的部分請在課堂上準備。學生的 Mac 都是 Apple Silicon。現有 Xcode 中可用的 iOS 執行階段直接重複使用，不要求所有人重新取得。"
     },
     {
       "source": "<code>flutter --version</code>と<code>flutter doctor -v</code>を確認します。この単元はiOSで始めるため、Android欄の課題は先生と切り分けます。取得が終わらないときは授業中に相談し、自宅で終わらせることを条件にはしません。",
@@ -312,7 +312,7 @@
     },
     {
       "source": "文字と大きさをアレンジする",
-      "translation": "自訂文字與大小"
+      "translation": "修改文字與大小"
     },
     {
       "source": "コードは変えません。STEP 02で書いたコードが、第8コマ終了時の基準です。",
@@ -436,7 +436,7 @@
     },
     {
       "source": "習慣を3件へ増やします。同じカードを3回コピーする代わりに、名前・理由・回数を<code>Habit</code>にまとめ、<code>habits</code>のリストから作ります。",
-      "translation": "把習慣增加到3項。不是把同一張卡片複製3次，而是把名稱、理由和次數彙整到 <code>Habit</code> 中，根據 <code>habits</code> 清單來建立。"
+      "translation": "把習慣增加到3個。不是把同一張卡片複製3次，而是把名稱、理由和次數彙整到 <code>Habit</code> 中，根據 <code>habits</code> 清單來建立。"
     },
     {
       "source": "<code>lib/main.dart</code>の中身を、次のコードですべて置き換えます。アプリのクラスの名前が<code>MainApp</code>から<code>StampApp</code>に変わり、データの<code>Habit</code>、一覧の画面の<code>StampBoardPage</code>、マークの<code>StampMarks</code>の3つのクラスが加わるので、ほとんどの行が変わるためです。STEP 06で試しに変えた余白の値は、この置き換えで元に戻ります。",
@@ -520,7 +520,7 @@
     },
     {
       "source": "3件の名前と理由を、自分が使いたい題材へ変えます。学習でも、休憩でも、架空の習慣でも構いません。<code>Habit</code>を1つ増やす場合は同じ形でリストへ加えます。",
-      "translation": "把3項習慣的名稱和理由改成自己想用的主題。學習、休息或虛構的習慣都可以。要增加1個 <code>Habit</code> 時，按同樣的形式加入到清單裏。"
+      "translation": "把3個習慣的名稱和理由改成自己想用的主題。學習、休息或虛構的習慣都可以。要增加1個 <code>Habit</code> 時，按同樣的形式加入到清單裏。"
     },
     {
       "source": "確認すること",
@@ -564,7 +564,7 @@
     },
     {
       "source": "Visual Studio Codeで<code>F01StampBoard</code>を開き、3件の静的な一覧から再開します。今日は「現在の回数から表示する」という宣言的UIの使い方を操作で確かめます。",
-      "translation": "在 Visual Studio Code 中開啟 <code>F01StampBoard</code>，從3項習慣的靜態清單繼續。今天透過操作來確認「根據目前次數來顯示」這種宣告式 UI 的用法。"
+      "translation": "在 Visual Studio Code 中開啟 <code>F01StampBoard</code>，從3個習慣的靜態清單繼續。今天透過操作來確認「根據目前次數來顯示」這種宣告式 UI 的用法。"
     },
     {
       "source": "このSTEPでは、コードは変えません。STEP 09までのコードで、回数がどの表示につながっているかを読みます。",
@@ -596,7 +596,7 @@
     },
     {
       "source": "操作で変わる<code>habits</code>を<code>State</code>へ移します。<code>StampBoardPage</code>は<code>StatefulWidget</code>となり、<code>createState</code>が<code>_StampBoardPageState</code>を作ります。Widgetは画面の設定、<code>State</code>は操作によって変わる値を保持します。名前の先頭のアンダースコアはDartのライブラリ内で使う名前という指定です。",
-      "translation": "把會隨操作變化的 <code>habits</code> 移到 <code>State</code> 中。<code>StampBoardPage</code> 變為 <code>StatefulWidget</code>，由 <code>createState</code> 建立 <code>_StampBoardPageState</code>。Widget 是畫面的設定，<code>State</code> 持有隨操作變化的值。名稱開頭的底線表示這是只在 Dart 函式庫內部使用的名稱。"
+      "translation": "把會隨操作變化的 <code>habits</code> 移到 <code>State</code> 中。<code>StampBoardPage</code> 變為 <code>StatefulWidget</code>，由 <code>createState</code> 建立 <code>_StampBoardPageState</code>。Widget 是畫面的設定，<code>State</code> 持有隨操作變化的值。名稱開頭的底線表示這是只在 Dart 程式庫內部使用的名稱。"
     },
     {
       "source": "<code>lib/main.dart</code>を4か所変えます。まず、<code>StampApp</code>の<code>build</code>にある<code>home: StampBoardPage(),</code>の1行を、次の1行に置き換えます。次の置き換えで<code>StampBoardPage</code>のコンストラクタを<code>const</code>にするので、呼び出す側にも<code>const</code>を付けます。",
@@ -888,7 +888,7 @@
     },
     {
       "source": "3件とも詳細を開き、理由の取り違えがないか、長文が読めるかを確かめます。",
-      "translation": "3項都開啟詳情，確認理由沒有弄錯，長文能夠閱讀。"
+      "translation": "3筆都開啟詳情，確認理由沒有弄錯，長文能夠閱讀。"
     },
     {
       "source": "Swiftの初期化時に値を受け取る形に対応します。Dartは<code>required</code> <code>this.habit</code>で必須引数と代入をまとめます。表示専用だから<code>StatelessWidget</code>を選び、更新を管理する<code>State</code>を余分に作りません。",
@@ -896,7 +896,7 @@
     },
     {
       "source": "3件の名前・回数・理由が正しく表示された。",
-      "translation": "3項習慣的名稱、次數和理由已正確顯示。"
+      "translation": "3個習慣的名稱、次數和理由已正確顯示。"
     },
     {
       "source": "STEP 18 · コマ11",
@@ -916,11 +916,11 @@
     },
     {
       "source": "一覧で初期3件と合計0を確認します。",
-      "translation": "在清單中確認初始的3項和合計0。"
+      "translation": "在清單中確認初始的3筆和合計0。"
     },
     {
       "source": "1件を5回まで押し、上限を確認して1つ戻します。",
-      "translation": "對其中1項按到5次，確認上限後復原1個。"
+      "translation": "對其中1筆按到5次，確認上限後復原1個。"
     },
     {
       "source": "詳しく見るで名前・4回・理由が合うことを確認します。",
@@ -1012,7 +1012,7 @@
     },
     {
       "source": "共通資料のSDK・<code>PATH</code>を確認し、Visual Studio Codeとターミナルを開き直す。",
-      "translation": "檢查共通資料中的 SDK 和 <code>PATH</code>，然後重新開啟 Visual Studio Code 和終端機。"
+      "translation": "檢查共用資料中的 SDK 和 <code>PATH</code>，然後重新開啟 Visual Studio Code 和終端機。"
     },
     {
       "source": "<code>pubspec.yaml</code>が見つからない",
@@ -1064,7 +1064,7 @@
     },
     {
       "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の調べ方を試してください。それでも解決しないときは、STEP番号と画面を先生に見せましょう。",
-      "translation": "如果錯誤仍未解決，請嘗試<a1>共通資料：遇到問題時</a1>中的排查方法。如果依然無法解決，請把 STEP 編號和螢幕展示給老師看。"
+      "translation": "如果錯誤仍未解決，請嘗試<a1>共用資料：遇到問題時</a1>中的排查方法。如果依然無法解決，請把 STEP 編號和螢幕展示給老師看。"
     },
     {
       "source": "JEC / ハイブリッドアプリ開発技法 · F01StampBoard",

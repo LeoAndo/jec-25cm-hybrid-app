@@ -4,7 +4,7 @@
   "entries": [
     {
       "source": "授業を始めるまでの準備 | ハイブリッドアプリ開発技法",
-      "translation": "Preparación antes de comenzar las clases | Desarrollo de aplicaciones híbridas"
+      "translation": "Preparación antes de comenzar las clases | Técnicas de desarrollo de aplicaciones híbridas"
     },
     {
       "source": "本文へ移動",
@@ -12,7 +12,7 @@
     },
     {
       "source": "JEC / ハイブリッドアプリ開発技法",
-      "translation": "JEC / Desarrollo de aplicaciones híbridas"
+      "translation": "JEC / Técnicas de desarrollo de aplicaciones híbridas"
     },
     {
       "source": "もとの教科書へ戻る",
@@ -20,7 +20,7 @@
     },
     {
       "source": "共通資料 · 授業内で行う準備",
-      "translation": "Materiales comunes · Preparación dentro de la clase"
+      "translation": "Material común · Preparación dentro de la clase"
     },
     {
       "source": "授業を始めるまでの準備",
@@ -100,11 +100,11 @@
     },
     {
       "source": "<code>docs/common/setup.html</code> をGoogle Chromeで開きます。今読んでいるページが、この共通資料です。",
-      "translation": "Abre <code>docs/common/setup.html</code> en Google Chrome. La página que estás leyendo ahora corresponde a estos materiales comunes."
+      "translation": "Abre <code>docs/common/setup.html</code> en Google Chrome. La página que estás leyendo ahora corresponde a este material común."
     },
     {
       "source": "更新版も <code>書類</code> の直下に、別のフォルダとして置きます。同じ日に配り直された版は名前が同じになるため、先生の案内を確かめてから入れ替えてください。自分で作るプロジェクトは、配布フォルダの中ではなく <code>~/Documents/HybridApp</code> に置きます（作り方は、その日の教科書にあります）。質問するときは、フォルダ名の日付と <code>VERSION.json</code> の <code>version</code> を伝えます。",
-      "translation": "Coloca también las versiones actualizadas directamente en <code>書類</code> (Documentos) como una carpeta separada. Las versiones redistribuidas el mismo día tendrán el mismo nombre, así que consulta las indicaciones del docente antes de reemplazarlas. Los proyectos que crees tú mismo no se colocan dentro de la carpeta de distribución, sino en <code>~/Documents/HybridApp</code> (el método de creación se encuentra en el libro de texto de ese día). Al hacer preguntas, indica la fecha del nombre de la carpeta y el <code>version</code> de <code>VERSION.json</code>."
+      "translation": "Coloca también las versiones actualizadas directamente en <code>書類</code> (Documentos) como una carpeta separada. Las versiones redistribuidas el mismo día tendrán el mismo nombre, así que consulta las indicaciones del docente antes de reemplazarlas. Los proyectos que crees por tu cuenta no se colocan dentro de la carpeta de distribución, sino en <code>~/Documents/HybridApp</code> (el método de creación se encuentra en el libro de texto de ese día). Al hacer preguntas, indica la fecha del nombre de la carpeta y el <code>version</code> de <code>VERSION.json</code>."
     },
     {
       "source": "先生が指定した版を <code>書類</code> の直下に置き、教科書を開けた。",
@@ -152,11 +152,11 @@
     },
     {
       "source": "Web基礎の編集環境との違い",
-      "translation": "Diferencias con el entorno de edición en Fundamentos Web"
+      "translation": "Diferencias con el entorno de edición en Fundamentos web"
     },
     {
       "source": "Web基礎ではMacに置いたHTMLやCSSを編集しました。Monacaでは、ログインしたアカウントのプロジェクトを、Monaca クラウド IDEで編集します。アカウントを取り違えると、自分のプロジェクトが見つからなくなります。",
-      "translation": "En Fundamentos Web editabas HTML y CSS guardados en tu Mac. En Monaca, editas los proyectos de la cuenta con la que iniciaste sesión mediante Monaca クラウド IDE (IDE en la nube). Si te equivocas de cuenta, no podrás encontrar tus propios proyectos."
+      "translation": "En Fundamentos web editabas HTML y CSS guardados en tu Mac. En Monaca, editas los proyectos de la cuenta con la que iniciaste sesión mediante Monaca クラウド IDE (IDE en la nube). Si te equivocas de cuenta, no podrás encontrar tus propios proyectos."
     },
     {
       "source": "Monaca Educationのアカウントや <code>Monaca for Study</code> は、この授業では使いません。確認メールが届かなければ、迷惑メールのフォルダと入力したアドレスを確認し、解決しないときは先生へ知らせてください。確認メールについては <a1>Monacaの公式FAQ</a1>でも案内されています。",
@@ -180,7 +180,7 @@
     },
     {
       "source": "自分で編集した作品がある場合は削除せず、一覧を先生に見せます。自動作成のものか分からない場合も、そのまま相談してください。",
-      "translation": "Si tienes trabajos que hayas editado tú mismo, no los elimines y muéstrale la lista al docente. Si no sabes con certeza si fue creado automáticamente, consúltale tal como está."
+      "translation": "Si tienes trabajos que hayas editado por tu cuenta, no los elimines y muéstrale la lista al docente. Si no sabes con certeza si fue creado automáticamente, consúltale tal como está."
     },
     {
       "source": "Android Studio・Xcodeのプロジェクトとの違い",
@@ -344,7 +344,7 @@
     },
     {
       "source": "<strong>授業期間中は <code>flutter upgrade</code> を実行しません。</strong>教材と同じ版で進めます。版やパスが合わなければ、その出力を先生に見せてください。<code>PATH</code> の設定と再起動の手順は <a1>Flutterの公式インストール手順</a1>に基づいています。",
-      "translation": "<strong>No ejecutes <code>flutter upgrade</code> durante el período de clases.</strong> Continuaremos con la misma versión de los materiales de enseñanza. Si la versión o la ruta no coinciden, muéstrale esa salida al docente. La configuración de <code>PATH</code> y los pasos para reiniciar se basan en las <a1>instrucciones oficiales de instalación de Flutter</a1>."
+      "translation": "<strong>No ejecutes <code>flutter upgrade</code> durante el período de clases.</strong> Continuaremos con la misma versión de los materiales. Si la versión o la ruta no coinciden, muéstrale esa salida al docente. La configuración de <code>PATH</code> y los pasos para reiniciar se basan en las <a1>instrucciones oficiales de instalación de Flutter</a1>."
     },
     {
       "source": "新しいTerminalで、Flutter 3.47.5とDart 3.13.4を確認できた。",
@@ -508,7 +508,7 @@
     },
     {
       "source": "JEC / ハイブリッドアプリ開発技法 · 共通資料 · 2026-09-23",
-      "translation": "JEC / Desarrollo de aplicaciones híbridas · Materiales comunes · 2026-09-23"
+      "translation": "JEC / Técnicas de desarrollo de aplicaciones híbridas · Material común · 2026-09-23"
     }
   ]
 }
