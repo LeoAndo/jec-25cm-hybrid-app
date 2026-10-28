@@ -222,7 +222,7 @@ description: Translate the Japanese student textbooks (docs/**/*.html) into the 
   ```sh
   python3 - <<'PY'
   import glob, re
-  for path in sorted(glob.glob("i18n/mn/*.json")) + ["i18n/mn/glossary.md"]:
+  for path in sorted(glob.glob("i18n/mn/**/*.json", recursive=True)) + ["i18n/mn/glossary.md"]:
       for word in re.findall(r"[\w\u0400-\u04FF]+", open(path, encoding="utf-8").read()):
           if any("\u0400" <= c <= "\u04FF" for c in word) and any(c.isascii() and c.isalpha() for c in word):
               print(path, word)
@@ -231,7 +231,10 @@ description: Translate the Japanese student textbooks (docs/**/*.html) into the 
 
 - **ロシア語由来の語は、モンゴル語のつづりで書く**（функц、програм、консол。функция、программа、консоль とは書かない）。
 - **呼びかけは丁寧な та にそろえる。** 手順は「語幹＋-на уу／-нэ үү／-но уу／-нө үү」の形（дарна уу、нээнэ үү、сонгоно уу）。語幹だけの命令形（дар）と、話し言葉の -аарай／-ээрэй は使わない。
-- **英字の語・コード・日本語のまま残す画面名に、格語尾を直接付けない。** うしろにモンゴル語の名詞（товч、файл、цэс、хэсэг）を置き、格語尾はその名詞に付ける（**Run** товчийг дарна уу、`lib/main.dart` файлыг нээнэ үү）。
+- **英字の略語・製品名・コード・`STEP` には、ハイフンで格語尾を付けてよい**（`STEP-д`、`<code>…</code>-ийг`、`APK-г`）。外来語にハイフンで格語尾を付けるのは、モンゴル語のふつうの書き方である。格語尾は、その語を読んだ音で選ぶ（2026-10-28 オーナー決定、[issue #184](https://github.com/LeoAndo/jec-25cm-hybrid-app/issues/184)）。
+  - **新しく訳す文では、名詞を置ける場所は名詞を置く。** うしろにモンゴル語の名詞（товч、файл、цэс、хэсэг）を置き、格語尾はその名詞に付ける（**Run** товчийг дарна уу、`lib/main.dart` файлыг нээнэ үү）。
+  - **既訳のハイフンの形は書き換えない。** 配布前の全文照合を、この形のまま通っている。
+  - **日本語のまま残す画面名（`<strong>`・`<code>` の中の日本語）の直後には、格語尾を付けない。** 日本語の読みでは格語尾を選べないので、うしろに名詞を置く（**プレビュー** цонхыг нээнэ үү）。かっこで添えたモンゴル語の訳のうしろに付けるのはよい（`<code>作成</code> (Үүсгэх)-г`）。
 - 文の途中の言語名は小文字で書く（монгол хэл、япон хэл）。引用符は «…»。どちらも `i18n/mn/glossary.md` の「書き方の決まり」にある。
 
 ### 一貫性
