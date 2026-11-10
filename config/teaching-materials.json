@@ -609,7 +609,7 @@
         },
         {
           "html": "docs/stamp-board/index.html",
-          "ids": ["diff-11-main-dart-home", "diff-11-main-dart-state", "diff-11-main-dart-buttons"],
+          "ids": ["diff-11-main-dart-home", "diff-11-main-dart-class", "diff-11-main-dart-change", "diff-11-main-dart-buttons"],
           "before": "teacher/stamp-board/code/10-main.dart",
           "after": "teacher/stamp-board/code/11-main.dart"
         },
