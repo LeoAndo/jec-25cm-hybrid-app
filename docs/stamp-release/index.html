@@ -420,7 +420,7 @@ const stampGoal = 5;
 </ins>
 void main() {
   runApp(const StampApp());
-</code></pre><p>次に、一覧の<code>_StampBoardPageState</code>の先頭で、<code>final List&lt;Habit&gt; habits = [</code>の行から<code>];</code>の行までの5行（赤い行）を消し、同じ場所に緑の行を足します。緑の行は、保存の状態を持つフィールドと、最初に1度呼ばれる<code>initState</code>と、初期の習慣を返す<code>createInitialHabits</code>です。初期の3件は、<code>createInitialHabits</code>の中へ移ります。STEP 04で初期の習慣を自分の題材に変えた場合は、赤い行が枠の中の文字と違っていても、その5行を消し、緑の<code>Habit</code>の3行は自分の題材で書きます。</p><div class="code-head diff-head"><span>lib/main.dart</span><span class="diff-legend"><span class="diff-add">足す行</span><span class="diff-del">消す行</span><span class="diff-keep">すでにある行</span></span></div><pre id="diff-06-main-dart-state" class="diff" tabindex="0"><code>class _StampBoardPageState extends State&lt;StampBoardPage&gt; {
+</code></pre><p>次に、一覧の<code>_StampBoardPageState</code>の先頭で、<code>final List&lt;Habit&gt; habits = [</code>の行から<code>];</code>の行までの5行（赤い行）を消し、同じ場所に緑の行を足します。緑の行は、保存に使うフィールドと、最初に1度呼ばれる<code>initState</code>と、初期の習慣を返す<code>createInitialHabits</code>です。初期の3件は、<code>createInitialHabits</code>の中へ移ります。STEP 04で初期の習慣を自分の題材に変えた場合は、赤い行が枠の中の文字と違っていても、その5行を消し、緑の<code>Habit</code>の3行は自分の題材で書きます。</p><div class="code-head diff-head"><span>lib/main.dart</span><span class="diff-legend"><span class="diff-add">足す行</span><span class="diff-del">消す行</span><span class="diff-keep">すでにある行</span></span></div><pre id="diff-06-main-dart-state" class="diff" tabindex="0"><code>class _StampBoardPageState extends State&lt;StampBoardPage&gt; {
 <del>  final List&lt;Habit&gt; habits = [
     Habit(name: 'コードを15分読む', reason: '気になったアプリの仕組みを、少しずつ読めるようになりたい。'),
     Habit(name: '外を10分歩く', reason: '画面から離れて気分を切り替え、次の作業を気持ちよく始めたい。'),
@@ -646,7 +646,7 @@ class _AddHabitPageState extends State&lt;AddHabitPage&gt; {
 <del>                enabled: true,
 </del><ins>                enabled: !isSaving,
 </ins>                maxLength: 200,
-</code></pre><p>最後に、入力画面の<code>Text(message),</code>の下に、緑の1行を足します。保存中に出す<code>LinearProgressIndicator</code>です。その下の<code>FilledButton(onPressed: submit, child: const Text('追加する')),</code>の1行を消し、緑の4行を足します。ボタンの文字は<code>追加して保存</code>に変わります。</p><div class="code-head diff-head"><span>lib/main.dart</span><span class="diff-legend"><span class="diff-add">足す行</span><span class="diff-del">消す行</span><span class="diff-keep">すでにある行</span></span></div><pre id="diff-06-main-dart-save-button" class="diff" tabindex="0"><code>              Text(message),
+</code></pre><p>最後に、入力画面の<code>Text(message),</code>の下に、緑の1行を足します。保存中に出す<code>LinearProgressIndicator</code>です。いちばん下の<code>FilledButton(onPressed: submit, child: const Text('追加する')),</code>の1行は消し、緑の4行を足します。ボタンの文字は<code>追加して保存</code>に変わります。</p><div class="code-head diff-head"><span>lib/main.dart</span><span class="diff-legend"><span class="diff-add">足す行</span><span class="diff-del">消す行</span><span class="diff-keep">すでにある行</span></span></div><pre id="diff-06-main-dart-save-button" class="diff" tabindex="0"><code>              Text(message),
 <ins>              if (isSaving) const LinearProgressIndicator(),
 </ins>              const SizedBox(height: 16),
 <del>              FilledButton(onPressed: submit, child: const Text('追加する')),
