@@ -590,62 +590,34 @@
       "snippets": [
         {
           "html": "docs/stamp-board/index.html",
-          "id": "code-02-main-dart",
-          "source": "teacher/stamp-board/code/02-main.dart",
-          "match": "contains"
-        },
-        {
-          "html": "docs/stamp-board/index.html",
-          "id": "code-05-main-dart",
-          "source": "teacher/stamp-board/code/05-main.dart",
-          "match": "contains"
-        },
-        {
-          "html": "docs/stamp-board/index.html",
           "id": "code-07-main-dart",
           "source": "teacher/stamp-board/code/07-main.dart"
+        }
+      ],
+      "diffs": [
+        {
+          "html": "docs/stamp-board/index.html",
+          "ids": ["diff-02-main-dart"],
+          "before": "teacher/stamp-board/code/01-main.dart",
+          "after": "teacher/stamp-board/code/02-main.dart"
         },
         {
           "html": "docs/stamp-board/index.html",
-          "id": "code-11-main-dart-home",
-          "source": "teacher/stamp-board/code/11-main.dart",
-          "match": "contains"
+          "ids": ["diff-05-main-dart"],
+          "before": "teacher/stamp-board/code/04-main.dart",
+          "after": "teacher/stamp-board/code/05-main.dart"
         },
         {
           "html": "docs/stamp-board/index.html",
-          "id": "code-11-main-dart-class",
-          "source": "teacher/stamp-board/code/11-main.dart",
-          "match": "contains"
+          "ids": ["diff-11-main-dart-home", "diff-11-main-dart-class", "diff-11-main-dart-change", "diff-11-main-dart-buttons"],
+          "before": "teacher/stamp-board/code/10-main.dart",
+          "after": "teacher/stamp-board/code/11-main.dart"
         },
         {
           "html": "docs/stamp-board/index.html",
-          "id": "code-11-main-dart-change",
-          "source": "teacher/stamp-board/code/11-main.dart",
-          "match": "contains"
-        },
-        {
-          "html": "docs/stamp-board/index.html",
-          "id": "code-11-main-dart-buttons",
-          "source": "teacher/stamp-board/code/11-main.dart",
-          "match": "contains"
-        },
-        {
-          "html": "docs/stamp-board/index.html",
-          "id": "code-16-main-dart-open",
-          "source": "teacher/stamp-board/code/16-main.dart",
-          "match": "contains"
-        },
-        {
-          "html": "docs/stamp-board/index.html",
-          "id": "code-16-main-dart-button",
-          "source": "teacher/stamp-board/code/16-main.dart",
-          "match": "contains"
-        },
-        {
-          "html": "docs/stamp-board/index.html",
-          "id": "code-16-main-dart-detail",
-          "source": "teacher/stamp-board/code/16-main.dart",
-          "match": "contains"
+          "ids": ["diff-16-main-dart-open", "diff-16-main-dart-button", "diff-16-main-dart-detail"],
+          "before": "teacher/stamp-board/code/15-main.dart",
+          "after": "teacher/stamp-board/code/16-main.dart"
         }
       ],
       "mirrors": [

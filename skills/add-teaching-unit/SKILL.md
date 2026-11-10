@@ -166,16 +166,31 @@ description: Add a new teaching unit to this hybrid app course repository - a Mo
   ZIPはGitで管理しているファイルから作るので、新しいファイルは先に `git add` する。
 - **教科書から完成プロジェクトへは案内しない**（READMEの「授業用教科書の基本方針」13、2026-10-06 #168）。「完成プロジェクトを開く」の節（`#sample-project`）は作らず、配布フォルダの `samples/` の開き方、完成版ZIPへのリンク、教員が公開したMonacaの取り込み用URL（`import_url`）も書かない。「完成プロジェクト」「samples」の語、`archive` へのリンク、configの `import_url` は `scripts/check-teaching-materials.py` が落とす。「先生が作った見本」のような言い換えも書かない。学生の提出に使う、学生自身の作品の取り込み用公開URLの説明は対象外。
 - `docs/<スラッグ>/images/` は、**その教科書で実際に使うスクリーンショットがあるときだけ**作る。Monaca系はMonaca クラウド IDEのプレビュー、Flutter系はシミュレータ／エミュレータで撮る。「ここに画像を入れる」のようなプレースホルダは置かない。`<img>` には実寸の `width` と `height` を書く。
-- **コードは、前のSTEPのコードからの変更箇所だけを見せる**（READMEの「授業用教科書の基本方針」14、#172）。「このSTEPの全コード（照合・合流用）」のような全文の折りたたみは置かない。
-  - コード欄の見出し（`<div class="code-head">`）は `<ファイルのパス> · 追加 · <場所>`、`<ファイルのパス> · 置き換え · <範囲>`、`<ファイルのパス> · 全体を置き換える` のどれか。本文に、どの行の下（上）に足すか、どこからどこまでを置き換えて何を残すかを書く。
+- **コードは、前のSTEPのコードからの変更箇所だけを見せる**（READMEの「授業用教科書の基本方針」14、#172）。**すでにあるファイルを直すSTEPは、差分ブロックにする**（#189）。「このSTEPの全コード（照合・合流用）」のような全文の折りたたみは置かない。
+  - 差分ブロックは `<pre id="diff-…" class="diff">` で、足す行を `<ins>`、消す行を `<del>` で、行ごと（改行までタグの中に入れて）囲む。印のない行は、すでにファイルにある行で、学生は入力しない。あいだの変えない行は `<span class="diff-gap">⋮</span>` で省く。行頭に `+`・`-` の記号は付けない。見出しは `<div class="code-head diff-head">` で、ファイルのパスと、その枠に出てくる行の種類の凡例（足す行・消す行・すでにある行）を出す。
+  - **枠は手で書かない。** configの `diffs` に登録してから、`--print-diff` で、隣り合うSTEPの照合コード（`teacher/<スラッグ>/code/NN-…`）から作る（下の「4. `config/teaching-materials.json`」）。
+
+    ```sh
+    python3 scripts/check-teaching-materials.py --print-diff docs/hello-flutter/index.html diff-02-main-dart
+    ```
+
+  - 差分ブロックを初めて使うSTEPに、読み方の説明を置く（単元ごとに1回）。言い回しは、同じ学生が読む jec-25cm-kotlin の教科書とそろえる。`⋮` の文は、その単元に `⋮` のある枠があるときだけ足す。
+
+    ```html
+    <p>このあとの枠には、ファイルの<strong>直す場所だけ</strong>を載せます。<span class="diff-add">緑の太字の行</span>は足す行、<span class="diff-del">赤い取り消し線の行</span>は消す行です。<span class="diff-keep">薄い字の行</span>は、すでにファイルにある行で、入力しません。直す場所を探す目印にします。<code>⋮</code> は、あいだの変えない行を省いた印です。</p>
+    ```
+
+  - 本文には、どこを直すのか（どの関数の、何の行か）と、直す理由を書く。「2行（赤い行）を消し、緑の行を足します」のように書いたら、枠の中身と合わせる。
+  - 学生が前のSTEPで自分の内容に変える行（題材の文字・色・数値）は、できるだけ、すでにある行に含めない。作った枠から、その行を外す（すでにある行の範囲は直してよい。足す行・消す行は直さない）。消す行として出るときは、枠の中の文字と違っていてもその行を消す、と本文に書く。直したことと理由は、教員用ガイドの「コードの見せ方」に書く。
   - コードが変わらないSTEPにはコード欄を置かず、「コードは変えません」と書く。
-  - 全文を載せるのは、新しく作るファイル、変更が多くて部分では追えないとき、前の教科書なしで始める単元（M02・F02）のSTEP 00の開始コードだけ。
-  - 断片は、前のSTEPと次のSTEPの照合コード（`teacher/<スラッグ>/code/NN-…`）の差分から作る。本文の説明どおりに断片を前のSTEPのコードへ当てると、そのSTEPの照合コードと同じになることを確かめる。
-- コードのスニペットは、`<pre id="code-…"><code>` に置き、**ソースからHTMLエスケープして差し込む**。configの `snippets` が照合するので、手で写して直さない。全文は `"match"` を書かずに登録し、バイト単位で照合される。断片は `"match": "contains"` を付けて、`source` にそのSTEPの照合コードを書く。断片の行が、`source` の中に字下げごと同じ順で連続して並んでいれば通る（行末の空白だけはそろえる）。
+  - 全文を載せてよいのは、新しく作るファイル、前の教科書なしで始める単元（M02・F02）のSTEP 00の開始コード、テンプレートが作った直後の中身を使わずに入れ替えるファイル、ほとんどの行が入れ替わるSTEPの4つだけ。見出しを `<ファイルのパス> · 全体を置き換える` にし、全文にする理由をその場に書く。
+- 全文のコード欄は、`<pre id="code-…"><code>` に置き、**ソースからHTMLエスケープして差し込む**。configの `snippets` に `"match"` を書かずに登録し、バイト単位で照合される。手で写して直さない。
 
   ```sh
   python3 -c 'import html, pathlib, sys; print(html.escape(pathlib.Path(sys.argv[1]).read_text(encoding="utf-8").rstrip()), end="")' M01HelloMonaca/www/js/app.js
   ```
+
+  `"match": "contains"`（断片が、`source` の中に連続した行として含まれていればよい、という照合）は、差分ブロックに直す前の単元（M01・M02・F02）に残っているだけで、新しく書くコード欄には使わない。
 
 - 教科書の中から**ほかの単元へ本文で送らない**。**Monaca系で作ったものを、Flutter系の前提にしない。** 共通資料へのリンクはサイドバーと明示の導線だけ。
 - **単元の最後は「アレンジできる場所」で終える。** どこを変えると画面や動きの何が変わるかを、その単元のコードの中で示す（文字・色・数値・件数など）。新しい概念やAPIはここで足さない。
@@ -194,7 +209,8 @@ description: Add a new teaching unit to this hybrid app course repository - a Mo
   - その単元で導入する新概念（1つまで）を、ここで宣言する。Web基礎で習っていないもの（`querySelector`、`fetch`、`@keyframes` など）を使うときは、既習の対応物と比較STEP、または対応物がないため新概念に数える理由を書く。レビューの「未習事項ゲート」は、この対応付けと本文の説明を見て判断する。
   - Flutter系は、`package:material_ui` を使わない理由、`go_router` と名前付きルートを使わない理由を書く（AGENTS.md §0-B・§11）。`shared_preferences` を使う単元は、APIが3系統あることと、どれを選んだかを書く。
 - 進め方には、コマごとにどのSTEPを扱うかを書く。
-- `teacher/<スラッグ>/code/` に、STEPごとの照合コードを `NN-ファイル名.拡張子` の形式で置く（`01-index.html`、`03-app.js`、`02-main.dart` など）。完成プロジェクトと同じ中身のものは `mirrors` に登録する。
+- `teacher/<スラッグ>/code/` に、STEPごとの照合コードを `NN-ファイル名.拡張子` の形式で置く（`01-index.html`、`03-app.js`、`02-main.dart` など）。コードを変えないSTEPのぶんも含めて、全STEP・全ファイルぶんを置く。完成プロジェクトと同じ中身のものは `mirrors` に登録する。
+- **照合コードは、前のSTEPとの差分が「そのSTEPで学生が直す行」だけになる形にする。** 隣り合うSTEPの照合コードが、教科書の差分ブロックの「直す前」「直したあと」になる。空行の位置や並び順を変えると、学生が打つ必要のない行が差分に出る。
 - 本文に単元名の表記を入れる（`check-teaching-materials.py` は `docs` に挙げた両方のHTMLを見る）。
 
 ## 4. `config/teaching-materials.json`
@@ -212,8 +228,11 @@ description: Add a new teaching unit to this hybrid app course repository - a Mo
   "docs": ["docs/hello-monaca/index.html", "teacher/hello-monaca/index.html"],
   "sources": ["M01HelloMonaca/www/index.html", "M01HelloMonaca/www/js/app.js"],
   "snippets": [
-    { "html": "docs/hello-monaca/index.html", "id": "code-app-js", "source": "M01HelloMonaca/www/js/app.js" },
-    { "html": "docs/hello-monaca/index.html", "id": "code-02-app-js-click", "source": "teacher/hello-monaca/code/02-app.js", "match": "contains" }
+    { "html": "docs/hello-monaca/index.html", "id": "code-01-app-js", "source": "teacher/hello-monaca/code/01-app.js" }
+  ],
+  "diffs": [
+    { "html": "docs/hello-monaca/index.html", "ids": ["diff-02-app-js-click", "diff-02-app-js-show"],
+      "before": "teacher/hello-monaca/code/01-app.js", "after": "teacher/hello-monaca/code/02-app.js" }
   ],
   "mirrors": [
     { "source": "M01HelloMonaca/www/index.html", "copy": "teacher/hello-monaca/code/01-index.html" }
@@ -225,7 +244,8 @@ description: Add a new teaching unit to this hybrid app course repository - a Mo
 - `app_id` は `config.xml` の `<widget id>` と同じ値（検査が照合する）。`entry` は `<content src>` が指すファイルのリポジトリ上のパスで、`www/` の下に実在する必要がある。
 - `sources` は1つ以上。Monaca系は `www/` の下、Flutter系の `.dart` は `lib/` の下に置く。CRを含むと検査が落ちる。
 - `import_url` は任意で、Monaca系だけに書ける教員用の記録。オーナーがMonacaで公開して記録するなら書き、まだなら**キーごと省く**（上の「Monaca系」7）。**教科書（`docs/` の下）に同じURLがあると検査が落ちる。** **URLを推測で書かない。**
-- `snippets` の `match` は任意で、書けるのは `exact`（既定、全文の一致）と `contains`（前のSTEPからの断片）だけ。ほかの値と、空の断片は検査が落ちる。
+- `snippets` は、全文のコード欄（新しく作るファイルなど）を登録する。`match` は書かない（既定の `exact`、全文の一致）。`contains` は、差分ブロックに直す前の単元に残っている断片の照合で、新しくは使わない。
+- `diffs` は任意で、すでにあるファイルを直すSTEPの差分ブロックを登録する。1件が「直す前のファイル（`before`）→ 直したあとのファイル（`after`）」の1回の変更で、`ids` に、教科書の `<pre id="…" class="diff">` を当てる順に並べる。`before`・`after` は、隣り合うSTEPの照合コード。検査は、`before` に枠を順に当てると `after` と1文字も違わないこと、すでにある行の並びで場所が1つに決まること、登録のない `class="diff"` がないことを確かめる。見出しに出すパスは `sources` から決まる（`www/js/app.js`）。`sources` にないファイルのパスを書くときだけ、`label` を足す。
 - `mirrors` は任意。
 
 Flutter単元なら次の形になる（`F01HelloFlutter` を足す場合）。

@@ -3,8 +3,10 @@
 from __future__ import annotations
 
 import argparse
+import difflib
 import html
 from html.parser import HTMLParser
+import itertools
 import json
 from pathlib import Path
 import posixpath
@@ -36,10 +38,22 @@ REQUIRED_KIND_KEYS = {
     "flutter": ("package_name", "application_id", "entry"),
 }
 REQUIRED_MIRROR_KEYS = ("source", "copy")
+REQUIRED_DIFF_KEYS = ("html", "ids", "before", "after")
 REQUIRED_TARGET_KEYS = ("path", "requires")
 # 教科書のコード（snippets）の照合のしかた。exact はファイル全体、contains は前のSTEPからの
 # 追加・置き換えの断片で、source のファイルの連続した行としてそのまま含まれていればよい。
 SNIPPET_MATCHES = ("exact", "contains")
+# 差分ブロック（<pre class="diff">）の中の印。足す行は <ins>、消す行は <del>、
+# あいだの変えない行を省いた目印は <span class="diff-gap">。印のない行は、すでにある行。
+DIFF_MARK = re.compile(r'<(ins|del)>(.*?)</\1>|<span class="diff-gap">(.*?)</span>', re.DOTALL)
+DIFF_GAP = '<span class="diff-gap">⋮\n</span>'
+DIFF_PRE = re.compile(r"<pre\b([^>]*)>")
+# --print-diff で、まとまりどうしのあいだがこの行数以下なら、省かずに1つにつなげる。
+DIFF_MERGE_GAP = 3
+# 足すだけ・消すだけのまとまりをずらす位置を選ぶときに見る、行の形（_block_shape_score）。
+# 閉じる側は、かっこ・HTMLの終了タグで始まる行。開く側は、かっこで終わる行。
+DIFF_CLOSING_LINE = re.compile(r"^\s*(?:[)}\]]|</)")
+DIFF_OPENING_LINE = re.compile(r"[({\[]\s*$")
 # Monacaの config.xml は、既定の名前空間を持つ。名前空間なしで探すと、どの要素も見つからない。
 WIDGET_NAMESPACE = "http://www.w3.org/ns/widgets"
 WIDGET_TAG = f"{{{WIDGET_NAMESPACE}}}widget"
@@ -148,7 +162,7 @@ def check_config(config: dict) -> list[str]:
 
     書き忘れたまま検査へ進むと、日本語のエラーではなくPythonのトレースバックが出て、
     設定のどこを直せばよいか分からなくなる。入口で日本語にして引き返すための検査。
-    書かなくてよいキー（course・registration・project_layout・mirrors など）は求めない。
+    書かなくてよいキー（course・registration・project_layout・mirrors・diffs など）は求めない。
     kind ごとに要るキー（Monacaの app_id、Flutterの package_name など）も、ここで確かめる。
     kind そのものの誤りは check_project が報告する。
     """
@@ -191,6 +205,22 @@ def check_config(config: dict) -> list[str]:
                 if key not in mirror:
                     errors.append(
                         f"{shown}:1: {label}のmirrors[{mirror_index}]に{key}がありません")
+        for diff_index, diff in enumerate(project.get("diffs", [])):
+            where = f"{label}のdiffs[{diff_index}]"
+            for key in REQUIRED_DIFF_KEYS:
+                if key not in diff:
+                    errors.append(f"{shown}:1: {where}に{key}がありません")
+                elif key != "ids" and (not isinstance(diff[key], str) or not diff[key]):
+                    errors.append(f"{shown}:1: {where}の{key}は、ファイルのパスを文字列で書いてください: {diff[key]!r}")
+            ids = diff.get("ids")
+            if "ids" in diff and (not isinstance(ids, list) or not ids
+                                  or not all(isinstance(item, str) and item for item in ids)):
+                errors.append(f"{shown}:1: {where}のidsは、<pre>のidを1つ以上並べた配列で書いてください: {ids!r}")
+            # 見出しに出すファイルのパスは、ふつうは sources から決まる（diff_label）。label は、
+            # sources にないファイル（pubspec.yaml など）のパスを書くときだけ使う。
+            label_text = diff.get("label")
+            if "label" in diff and (not isinstance(label_text, str) or not label_text):
+                errors.append(f"{shown}:1: {where}のlabelは文字列で書いてください: {label_text!r}")
     return errors
 
 
@@ -523,6 +553,434 @@ def check_mirrors(root: Path, project: dict, errors: list[str]) -> None:
                     "（元ファイルからコピーし直してください）")
         except OSError as error:
             add(errors, root, copy_path, 1, f"複製コードを読み込めません: {error}")
+
+
+# ---------------------------------------------------------------------------
+# 差分ブロック（README「授業用教科書の基本方針」14）
+#
+# すでにあるファイルを直すSTEPでは、直す場所だけを載せる。
+# 足す行は <ins>、消す行は <del>、印のない行は、すでにファイルにある行（学生は入力しない）。
+# あいだの変えない行は <span class="diff-gap">⋮</span> で省く。
+# ここで確かめるのは「直す前のファイルに、教科書の差分ブロックを上から順に当てると、
+# 直したあとのファイルと1文字も違わない」こと。全文のスニペットのバイト照合と同じ役目を持つ。
+# しくみは、同じ学生が受ける Kotlin演習（jec-25cm-kotlin）の検査を移したもの。
+# ---------------------------------------------------------------------------
+
+def code_lines(text: str) -> list[str]:
+    """ファイルの中身を行に分ける。末尾の改行と空行の違いは見ない（スニペットの照合と同じ扱い）。"""
+    return text.rstrip().split("\n")
+
+
+def _shorten(line: str, limit: int = 70) -> str:
+    """エラーに行を引用するときの形。字下げや末尾の空白の違いも見えるように、repr で囲む。"""
+    return repr(line if len(line) <= limit else line[:limit] + "…")
+
+
+def diff_block_hunks(inner: str) -> list[list[tuple[str, str]]]:
+    """差分ブロックの中身（<code> の内側）を、省略の目印（⋮）で区切った「まとまり」に分ける。
+
+    まとまりは (種類, 行) の並び。種類は " "（すでにある行）・"+"（足す行）・"-"（消す行）。
+    学生は行ごとに「足す・消す・そのまま」を読むので、印は必ず行の単位で付ける。
+    行の途中で始まる・終わる印は、どの行のことか決まらないので ValueError にする。
+    """
+    pieces: list[tuple[str, str]] = []  # (種類, 文字)。種類は上の3つと、省略の目印の "gap"
+    position = 0
+    for match in DIFF_MARK.finditer(inner):
+        if match.start() > position:
+            pieces.append((" ", inner[position:match.start()]))
+        if match.group(1):
+            pieces.append(("+" if match.group(1) == "ins" else "-", match.group(2)))
+        else:
+            pieces.append(("gap", match.group(3)))
+        position = match.end()
+    if position < len(inner):
+        pieces.append((" ", inner[position:]))
+    hunks: list[list[tuple[str, str]]] = []
+    current: list[tuple[str, str]] = []
+    for index, (kind, raw) in enumerate(pieces):
+        if re.search(r"<[A-Za-z/!]", raw):
+            raise ValueError('<ins>・<del>・<span class="diff-gap"> 以外のタグは使えません'
+                             "（印を入れ子にもできません）")
+        text = html.unescape(raw)
+        if not text.endswith("\n") and index < len(pieces) - 1:
+            raise ValueError("印は行の単位で付けてください（<ins>・<del>・省略の目印は、"
+                             f"行の先頭で始め、改行の直後で閉じます）: {_shorten(text)}")
+        if kind == "gap":
+            if not current:
+                raise ValueError("省略の目印（⋮）の前に、行がありません")
+            hunks.append(current)
+            current = []
+            continue
+        lines = text.split("\n")
+        if text.endswith("\n"):
+            lines.pop()
+        current.extend((kind, line) for line in lines)
+    if not current:
+        raise ValueError("省略の目印（⋮）のあとに、行がありません" if hunks else "差分ブロックが空です")
+    hunks.append(current)
+    return hunks
+
+
+def _closest_mismatch(lines: list[str], old: list[str]) -> str:
+    """当てる場所が見つからないとき、いちばん長く一致した場所と、最初に違った行を返す。"""
+    best = (-1, 0)  # (一致した行数, 開始位置)
+    for start in range(len(lines)):
+        matched = 0
+        while (matched < len(old) and start + matched < len(lines)
+               and lines[start + matched] == old[matched]):
+            matched += 1
+        if matched > best[0]:
+            best = (matched, start)
+    matched, start = best
+    if matched <= 0:
+        return f"最初の行が、直す前のファイルにありません: {_shorten(old[0])}"
+    actual = lines[start + matched] if start + matched < len(lines) else "（ファイルの終わり）"
+    return (f"{matched}行目までは直す前のファイルの{start + 1}行目からと一致し、次の行が違います。"
+            f"教科書: {_shorten(old[matched])}／ファイル: {_shorten(actual)}")
+
+
+def apply_diff_hunks(lines: list[str], hunks: list[list[tuple[str, str]]]) -> list[str]:
+    """直す前の行に、差分ブロックのまとまりを上から順に当てた結果を返す。当てられなければ ValueError。
+
+    学生は、すでにある行（印のない行と消す行）を目印にして場所を探す。
+    その並びがファイルに無い、または2か所以上あると、どこを直すのか決まらない。
+    """
+    position = 0  # 直前のまとまりを当て終えた位置
+    for number, hunk in enumerate(hunks, 1):
+        label = f"{number}つ目のまとまり" if len(hunks) > 1 else "このブロック"
+        old = [line for kind, line in hunk if kind != "+"]
+        new = [line for kind, line in hunk if kind != "-"]
+        if not old:
+            raise ValueError(f"{label}に、すでにある行（印のない行か消す行）がありません。足す場所を決められません")
+        found = [start for start in range(len(lines) - len(old) + 1) if lines[start:start + len(old)] == old]
+        if not found:
+            raise ValueError(f"{label}を当てる場所がありません。{_closest_mismatch(lines, old)}")
+        if len(found) > 1:
+            places = "・".join(f"{start + 1}行目" for start in found)
+            raise ValueError(f"{label}の場所が1つに決まりません（同じ並びが{places}にあります）。"
+                             "前後のすでにある行を足してください")
+        start = found[0]
+        if start < position:
+            raise ValueError(f"{label}が、前のまとまりと重なっているか、それより上の行を指しています。"
+                             "ファイルの上から下の順に並べてください")
+        lines = lines[:start] + new + lines[start + len(old):]
+        position = start + len(new)
+    return lines
+
+
+def check_diffs(root: Path, project: dict, errors: list[str]) -> None:
+    """教科書の差分ブロックを当てると、直したあとのファイルになるか確かめる。
+
+    diffs の1件は「直す前のファイル → 直したあとのファイル」の1回の変更で、ids に並べた
+    <pre> を順に当てる。1つのSTEPで同じファイルの差分を複数の枠に分けて載せられる。
+    当てた結果が直したあとのファイルと1行でも違えば、教科書の差分が足りないか、古い。
+    直す前・直したあとのファイルは、ふつうは隣り合うSTEPの照合コード（teacher/<スラッグ>/code/）。
+    """
+    for diff in project.get("diffs", []):
+        html_path = root / diff["html"]
+        before_path = root / diff["before"]
+        after_path = root / diff["after"]
+        if not html_path.is_file():
+            add(errors, root, diff["html"], 1, "差分ブロックを載せる教材ファイルがありません")
+            continue
+        if not before_path.is_file():
+            add(errors, root, diff["before"], 1, "差分ブロックの、直す前のファイルがありません")
+            continue
+        if not after_path.is_file():
+            add(errors, root, diff["after"], 1, "差分ブロックの、直したあとのファイルがありません")
+            continue
+        document = read(html_path)
+        lines = code_lines(read(before_path))
+        first_line = 1
+        applied = True
+        for number, block_id in enumerate(diff["ids"]):
+            match = re.search(rf'<pre\s+id="{re.escape(block_id)}"[^>]*><code>(.*?)</code></pre>',
+                              document, re.DOTALL)
+            if not match:
+                add(errors, root, html_path, 1, f"差分ブロックがありません: {block_id}")
+                applied = False
+                break
+            line = line_of(document, f'id="{block_id}"')
+            if number == 0:
+                first_line = line
+            try:
+                lines = apply_diff_hunks(lines, diff_block_hunks(match.group(1)))
+            except ValueError as error:
+                add(errors, root, html_path, line, f"{block_id}: {error}（直す前のファイル: {diff['before']}）")
+                applied = False
+                break
+        if not applied:
+            continue
+        expected = code_lines(read(after_path))
+        if lines == expected:
+            continue
+        for number, (actual, wanted) in enumerate(itertools.zip_longest(lines, expected), 1):
+            if actual != wanted:
+                shown_actual = "（行がありません）" if actual is None else _shorten(actual)
+                shown_wanted = "（行がありません）" if wanted is None else _shorten(wanted)
+                add(errors, root, html_path, first_line,
+                    f"{'・'.join(diff['ids'])}を{diff['before']}に当てても、{diff['after']}と一致しません"
+                    f"（{number}行目。当てた結果: {shown_actual}／{diff['after']}: {shown_wanted}）")
+                break
+
+
+def check_diff_registration(root: Path, config: dict, errors: list[str]) -> None:
+    """教科書にある差分ブロック（<pre class="diff">）が、すべて diffs に登録されているか確かめる。
+
+    登録のない差分ブロックは、当てた結果を誰も確かめていない。照合コードを直したときに、
+    古い差分が教科書に静かに残るので、ここで捕まえる。
+    1つの枠を2件の diffs に書くことも落とす。枠は1回の変更にしか当てられない。
+    """
+    docs = root / "docs"
+    if not docs.is_dir():
+        return
+    registered: dict[tuple[str, str], int] = {}
+    for project in config["projects"]:
+        for diff in project.get("diffs", []):
+            for block_id in diff.get("ids", []):
+                key = (diff.get("html"), block_id)
+                registered[key] = registered.get(key, 0) + 1
+    for (name, block_id), count in sorted(registered.items(), key=lambda item: (str(item[0][0]), item[0][1])):
+        if count > 1:
+            add(errors, root, CONFIG.as_posix(), 1,
+                f"差分ブロックが、diffsに{count}回書いてあります: {name} の {block_id}"
+                "（1つの枠は、1回の変更にだけ当てます）")
+    for path in sorted(docs.rglob("*.html")):
+        if IGNORED_PARTS.intersection(path.relative_to(root).parts):
+            continue
+        try:
+            text = read(path)
+        except (OSError, UnicodeDecodeError):
+            continue
+        name = display(root, path)
+        for match in DIFF_PRE.finditer(text):
+            attributes = dict(re.findall(r'([\w-]+)="([^"]*)"', match.group(1)))
+            if "diff" not in attributes.get("class", "").split():
+                continue
+            line = text.count("\n", 0, match.start()) + 1
+            block_id = attributes.get("id")
+            if not block_id:
+                add(errors, root, path, line, '差分ブロック（<pre class="diff">）にidがありません')
+            elif (name, block_id) not in registered:
+                add(errors, root, path, line,
+                    f"差分ブロックが{CONFIG.as_posix()}のdiffsにありません: {block_id}"
+                    "（直す前と直したあとのファイルを登録してください）")
+
+
+def _block_shape_score(block: list[str]) -> int:
+    """足すだけ・消すだけのまとまりの、読みやすさの点。大きいほどよい。
+
+    関数を1つ足すと、機械的な差分は「前の関数の閉じかっこ・空行・新しい関数（閉じかっこの手前まで）」
+    を足す行にすることがある。当てた結果は同じでも、学生には、閉じかっこを打つ場所が分かりにくい。
+    まとまりが、閉じる行から始まる・開く行で終わる位置を避け、空行で区切れる位置を選ぶ。
+    """
+    score = 0
+    if not block[-1].strip():
+        score += 2  # 「足すもの＋空行」。次のまとまりとの区切りまでを足す形で、いちばん読みやすい。
+    if not block[0].strip():
+        score += 1  # 「空行＋足すもの」
+    if DIFF_CLOSING_LINE.search(block[0]):
+        score -= 2
+    if DIFF_OPENING_LINE.search(block[-1]):
+        score -= 2
+    return score
+
+
+def _slide_changes(opcodes: list[tuple], before: list[str], after: list[str]) -> list[tuple]:
+    """足すだけ・消すだけの変更を、同じ結果になる範囲で上下にずらし、読みやすい位置にそろえる。
+
+    difflib は、同じ行が続くところ（閉じかっこ・空行）で、どこからを変更とみなすかを機械的に決める。
+    足す（消す）行の先頭が、すぐ下のすでにある行と同じなら、1行下へずらしても結果は変わらない
+    （末尾が、すぐ上の行と同じなら、1行上へ）。ずらせる位置のうち、_block_shape_score が
+    いちばん大きい位置を選ぶ。同じ点なら、difflib が決めた位置に近いほうにする。
+    前後の変更とのあいだには、すでにある行を1行は残す（となりの変更とつながらないようにする）。
+    """
+    changes = [list(opcode) for opcode in opcodes if opcode[0] != "equal"]
+    for index, (tag, i1, i2, j1, j2) in enumerate(changes):
+        if tag not in ("insert", "delete"):
+            continue
+        # 行を持っている側（足すなら直したあと、消すなら直す前）の並びで考える。
+        lines, start, end = (after, j1, j2) if tag == "insert" else (before, i1, i2)
+        # ずらせるのは、前後の、すでにある行のあいだだけ。前の変更は、もうずらし終えた位置で見る。
+        up_limit = i1 - changes[index - 1][2] - 1 if index > 0 else i1
+        down_limit = changes[index + 1][1] - i2 - 1 if index + 1 < len(changes) else len(before) - i2
+        candidates = [0]
+        shift = 0
+        while -shift < up_limit and lines[start + shift - 1] == lines[end + shift - 1]:
+            shift -= 1
+            candidates.append(shift)
+        shift = 0
+        while shift < down_limit and lines[start + shift] == lines[end + shift]:
+            shift += 1
+            candidates.append(shift)
+        best = max(candidates, key=lambda move: (_block_shape_score(lines[start + move:end + move]), -abs(move), move))
+        changes[index] = [tag, i1 + best, i2 + best, j1 + best, j2 + best]
+    # 変更のあいだを、すでにある行（equal）で埋め直す。ずらしても、あいだの行数は両方の側で同じ。
+    result: list[tuple] = []
+    i = j = 0
+    for tag, i1, i2, j1, j2 in changes:
+        if i1 > i:
+            result.append(("equal", i, i1, j, j1))
+        result.append((tag, i1, i2, j1, j2))
+        i, j = i2, j2
+    if i < len(before):
+        result.append(("equal", i, len(before), j, len(after)))
+    return result
+
+
+def _diff_hunk(opcodes: list, before: list[str], after: list[str], start: int, end: int) -> list[tuple[str, str]]:
+    """直す前の start 行目から end 行目の手前までを、1つのまとまりにする。"""
+    hunk: list[tuple[str, str]] = []
+    for tag, i1, i2, j1, j2 in opcodes:
+        if tag == "equal":
+            hunk.extend((" ", line) for line in before[max(i1, start):min(i2, end)])
+        elif start <= i1 and i2 <= end:
+            hunk.extend(("-", line) for line in before[i1:i2])
+            hunk.extend(("+", line) for line in after[j1:j2])
+    # 端の空行は、場所を探す目印にならないので落とす。ただし、すでにある行（消す行を含む）が
+    # ほかに1行もなければ残す。空のファイルに書き足すときは、その空行だけが、足す場所の目印になる。
+    def has_landmark(lines: list[tuple[str, str]]) -> bool:
+        return any(kind != "+" for kind, _ in lines)
+    while hunk[0] == (" ", "") and has_landmark(hunk[1:]):
+        hunk.pop(0)
+    while hunk[-1] == (" ", "") and has_landmark(hunk[:-1]):
+        hunk.pop()
+    return hunk
+
+
+def diff_hunks_between(before: list[str], after: list[str], context: int = 3) -> list[list[tuple[str, str]]]:
+    """直す前と直したあとの行から、差分ブロックのまとまりを作る（--print-diff 用）。
+
+    変わる行の前後に、すでにある行を context 行ずつ付ける。それだけでは場所が1つに
+    決まらないまとまりは、決まるまで前後の行を1行ずつ足す。
+    あいだが DIFF_MERGE_GAP 行以下のまとまりは、1つにまとめる（2〜3行だけを ⋮ で省いても、
+    読む量は減らず、つながりが見えなくなるだけなので）。
+    """
+    opcodes = _slide_changes(
+        difflib.SequenceMatcher(None, before, after, autojunk=False).get_opcodes(), before, after)
+    changes = [index for index, opcode in enumerate(opcodes) if opcode[0] != "equal"]
+    margins = {index: max(context, 1) for index in changes}
+    hunks: list[list[tuple[str, str]]] = []
+    for _ in range(len(before) * max(len(changes), 1) + 2):
+        spans: list[list] = []  # [直す前の開始位置, 終了位置, そこに入る変更の番号]
+        for index in changes:
+            _, i1, i2, _, _ = opcodes[index]
+            start, end = max(0, i1 - margins[index]), min(len(before), i2 + margins[index])
+            if spans and start <= spans[-1][1] + DIFF_MERGE_GAP:
+                spans[-1][1] = max(spans[-1][1], end)
+                spans[-1][2].append(index)
+            else:
+                spans.append([start, end, [index]])
+        hunks = [_diff_hunk(opcodes, before, after, start, end) for start, end, _ in spans]
+        lines, failed = list(before), None
+        for index, hunk in enumerate(hunks):
+            try:
+                lines = apply_diff_hunks(lines, [hunk])
+            except ValueError:
+                failed = index
+                break
+        if failed is None:
+            break
+        for index in spans[failed][2]:
+            margins[index] += 1
+    return hunks
+
+
+def render_diff_block(hunks: list[list[tuple[str, str]]], block_id: str) -> str:
+    """まとまりを、教科書に貼る差分ブロックのHTMLにする。"""
+    parts = []
+    for number, hunk in enumerate(hunks):
+        if number:
+            parts.append(DIFF_GAP)
+        for kind, group in itertools.groupby(hunk, key=lambda item: item[0]):
+            text = "".join(html.escape(line, quote=False) + "\n" for _, line in group)
+            parts.append({"+": f"<ins>{text}</ins>", "-": f"<del>{text}</del>", " ": text}[kind])
+    return f'<pre id="{block_id}" class="diff" tabindex="0"><code>{"".join(parts)}</code></pre>'
+
+
+def render_diff_head(label: str, hunks: list[list[tuple[str, str]]]) -> str:
+    """差分ブロックの見出し。終わり側に、その枠に出てくる行の種類だけを凡例として並べる。"""
+    kinds = {kind for hunk in hunks for kind, _ in hunk}
+    legend = "".join(chip for kind, chip in (
+        ("+", '<span class="diff-add">足す行</span>'),
+        ("-", '<span class="diff-del">消す行</span>'),
+        (" ", '<span class="diff-keep">すでにある行</span>'),
+    ) if kind in kinds)
+    return (f'<div class="code-head diff-head"><span>{html.escape(label, quote=False)}</span>'
+            f'<span class="diff-legend">{legend}</span></div>')
+
+
+def diff_label(project: dict, diff: dict) -> str:
+    """差分ブロックの見出しに出す、ファイルのパス（プロジェクトの中での位置）。
+
+    直したあとのファイルは teacher/<スラッグ>/code/11-main.dart のような照合コードなので、
+    番号を外した名前（main.dart）と同じ名前の完成コードを sources から探し、プロジェクトの中での
+    パス（lib/main.dart）にする。学生がエディタで開くファイルと、同じ書き方になる。
+    sources に同じ名前がない、または2つ以上あるときは、番号を外した名前をそのまま使う。
+    見出しを別の書き方にしたいときは、diffs に label を書く。
+    """
+    if diff.get("label"):
+        return diff["label"]
+    name = re.sub(r"^\d+-", "", posixpath.basename(diff["after"]))
+    prefix = project["root"].rstrip("/") + "/"
+    found = [source[len(prefix):] for source in project.get("sources") or []
+             if isinstance(source, str) and source.startswith(prefix) and posixpath.basename(source) == name]
+    return found[0] if len(found) == 1 else name
+
+
+def print_diff(root: Path, html_name: str, block_id: str, context: int) -> int:
+    """diffs に登録した1件の差分ブロックを、直す前後のファイルから作って表示する。
+
+    教科書のコードは手で写さない。先に diffs へ登録してから、これで作った枠を貼る。
+    ids を2つ以上並べた登録は、まとまりの数が ids の数と同じなら、まとまりごとに1つの枠にして、
+    ids の順に id を付ける（説明をはさんで載せる形）。数が合わなければ、全部を1つの枠で出す。
+    すでにある行を増やしたいとき、枠の分け方を変えたいときは、貼ったあとで直す。
+    直した結果が正しいかどうかは、いつもの検査が確かめる。
+    """
+    try:
+        config = json.loads(read(root / CONFIG))
+    except (OSError, json.JSONDecodeError) as error:
+        print(f"{CONFIG}:1: 設定ファイルを読み込めません: {error}", file=sys.stderr)
+        return 1
+    problems = check_config(config)
+    if problems:
+        print("\n".join(problems), file=sys.stderr)
+        return 1
+    for project in config["projects"]:
+        for diff in project.get("diffs", []):
+            if diff["html"] != html_name or block_id not in diff["ids"]:
+                continue
+            before_path, after_path = root / diff["before"], root / diff["after"]
+            if not before_path.is_file() or not after_path.is_file():
+                print(f"直す前後のファイルがありません: {diff['before']} → {diff['after']}", file=sys.stderr)
+                return 1
+            before, after = code_lines(read(before_path)), code_lines(read(after_path))
+            hunks = diff_hunks_between(before, after, context)
+            if not hunks:
+                print(f"差分がありません: {diff['before']} → {diff['after']}", file=sys.stderr)
+                return 1
+            # 作った枠を当てて、直したあとのファイルになることを確かめてから出す。黙って違う枠を出さない。
+            try:
+                applied = apply_diff_hunks(before, hunks)
+            except ValueError as error:
+                print(f"差分ブロックを作れません: {error}（直す前のファイル: {diff['before']}）", file=sys.stderr)
+                return 1
+            if applied != after:
+                print(f"作った枠を当てても、{diff['after']}になりません。スクリプトの不具合です", file=sys.stderr)
+                return 1
+            label = diff_label(project, diff)
+            ids = diff["ids"]
+            if len(ids) > 1 and len(hunks) == len(ids):
+                for hunk, hunk_id in zip(hunks, ids):
+                    print(render_diff_head(label, [hunk]) + render_diff_block([hunk], hunk_id))
+                return 0
+            if len(ids) > 1:
+                print(f"まとまりは{len(hunks)}つ、idsは{len(ids)}つです。全部を1つの枠（{block_id}）で出します。"
+                      "⋮ の位置で分けて、それぞれに見出しと id を付けてください", file=sys.stderr)
+            print(render_diff_head(label, hunks) + render_diff_block(hunks, block_id))
+            return 0
+    print(f"{CONFIG.as_posix()}のdiffsに登録がありません: {html_name} の {block_id}", file=sys.stderr)
+    return 1
 
 
 class SectionTexts(HTMLParser):
@@ -992,9 +1450,11 @@ def validate(root: Path) -> list[str]:
     check_project_layout(root, config, errors)
     check_progress_keys(root, errors)
     check_no_sample_guidance(root, config, errors)
+    check_diff_registration(root, config, errors)
     for project in config["projects"]:
         check_project(root, project, errors)
         check_mirrors(root, project, errors)
+        check_diffs(root, project, errors)
         check_downloads(root, project, errors)
     return errors
 
@@ -1002,7 +1462,15 @@ def validate(root: Path) -> list[str]:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, default=Path.cwd())
+    parser.add_argument(
+        "--print-diff", nargs=2, metavar=("HTML", "ID"),
+        help="検査の代わりに、diffsに登録した差分ブロックのHTMLを、直す前後のファイルから作って表示する"
+             "（例: --print-diff docs/stamp-board/index.html diff-02-main-dart）")
+    parser.add_argument("--context", type=int, default=3,
+                        help="--print-diff で、変わる行の前後に付ける、すでにある行の数（既定は3）")
     args = parser.parse_args()
+    if args.print_diff:
+        return print_diff(args.root.resolve(), args.print_diff[0], args.print_diff[1], args.context)
     errors = validate(args.root.resolve())
     if errors:
         print("教材整合性チェック: NG", file=sys.stderr)

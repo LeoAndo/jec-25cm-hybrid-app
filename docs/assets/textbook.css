@@ -94,6 +94,28 @@ code { background: #eef1f3; border-radius: 3px; padding: .13em .3em; font-size: 
 pre { background: #192635; color: #edf4fc; border-radius: 0 0 9px 9px; padding: 1.2rem; margin: 0 0 1.2rem; overflow-x: auto; line-height: 1.65; font-size: .82rem; tab-size: 4; }
 pre code { padding: 0; background: transparent; color: inherit; font-size: inherit; overflow-wrap: inherit; }
 .code-head { background: #293c51; color: #edf4fc; border-radius: 9px 9px 0 0; padding: .5rem .8rem; display: flex; gap: 1rem; justify-content: space-between; align-items: center; margin-top: .8rem; font-size: .78rem; }
+/* 差分ブロック。すでにあるファイルを直すSTEPでは、直す場所だけを載せる
+   （README「授業用教科書の基本方針」14）。<ins> は足す行、<del> は消す行、
+   どちらでもない行は、すでにファイルにある行で、学生は入力しない。
+   色だけに頼らない。足す行は太字と行頭側の線、消す行は取り消し線、すでにある行は薄い字にする。
+   白黒の印刷でも、色の見分けにくい人でも、3つを区別できる。
+   同じ学生が読む Kotlin演習（jec-25cm-kotlin）の教科書と、同じ色・同じ書体にしてある。 */
+pre.diff { color: #a9b8c8; }
+/* 足す行・消す行の帯を、横にスクロールした先でも途切れさせない。code を、いちばん長い行の幅まで広げる。 */
+pre.diff code { display: block; width: max-content; min-width: 100%; }
+/* 帯は枠の端から端まで。-1.2rem は pre の padding を打ち消す値で、padding を変えるときは一緒に変える。
+   pre は右から左のページでも左から右（上の [dir="rtl"] pre）なので、行頭側の線は、どのページでも左に出る。 */
+pre.diff ins, pre.diff del { display: block; margin-inline: -1.2rem; padding-inline: calc(1.2rem - 4px) 1.2rem; border-inline-start: 4px solid; }
+pre.diff ins, .diff-add { background: #1c4a33; border-color: #56d364; color: #f3fff6; font-weight: 700; text-decoration: none; }
+pre.diff del, .diff-del { background: #55252c; border-color: #ff7b72; color: #ffd9d4; text-decoration: line-through; }
+/* あいだの変えない行を省いた目印（⋮）。上下の破線で、そこでコードが途切れていることを見せる。
+   コードではないので、選択の対象から外す。 */
+.diff-gap { display: block; margin: .3rem -1.2rem; padding-inline: 1.2rem; border-block: 1px dashed #5d7590; color: #a9b8c8; line-height: 1.5; -webkit-user-select: none; user-select: none; }
+/* 凡例。見出しの終わり側と、本文の説明の中に置く。枠の中の行と同じ色・書体にして、見た目で対応が分かるようにする。 */
+.code-head.diff-head { flex-wrap: wrap; row-gap: .35rem; }
+.diff-legend { display: inline-flex; flex-wrap: wrap; gap: .3rem .45rem; }
+.diff-add, .diff-del, .diff-keep { display: inline-block; border-inline-start: 4px solid; border-radius: 3px; padding: 0 .5em; font-size: .78rem; line-height: 1.7; white-space: nowrap; }
+.diff-keep { background: #192635; border-color: #62758a; color: #a9b8c8; }
 /* 既知の技術（Web基礎の HTML / CSS / JavaScript、Java、Swift）との比較ブロック。
    その単元で書く言語（Monaca系は HTML / CSS / JavaScript、Flutter系は Dart）を先頭に置き、
    横に並べて見比べる。先頭は、日本語のページでは左端、右から左の言語のページでは右端になる。
@@ -177,6 +199,14 @@ details[open] > summary { margin-bottom: 1rem; }
   pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 8pt; color: black; background: #f4f4f4; border: 1px solid #ccc; }
   pre code { white-space: inherit; }
   .code-head { color: black; background: #eee; border: 1px solid #ccc; }
+  /* 紙では背景の色が出ないことがある。太字・取り消し線・行頭側の線で、足す行と消す行を区別する。
+     横スクロールがないので、code の幅を戻して折り返す。 */
+  pre.diff { color: #555; }
+  pre.diff code { width: auto; }
+  pre.diff ins, .diff-add { background: #e3f3e7; border-color: black; color: black; }
+  pre.diff del, .diff-del { background: #f7e4e4; border-color: #777; color: #444; }
+  .diff-keep { background: #f4f4f4; border-color: #bbb; color: #555; }
+  .diff-gap { color: #555; border-color: #999; }
   a { color: inherit; }
   img { max-height: 100mm !important; }
   .phones img, .phone img { width: auto; }
