@@ -660,144 +660,57 @@
           "html": "docs/stamp-release/index.html",
           "id": "code-00-main-dart",
           "source": "teacher/stamp-release/code/00-main.dart"
+        }
+      ],
+      "diffs": [
+        {
+          "html": "docs/stamp-release/index.html",
+          "ids": ["diff-01-main-dart-open", "diff-01-main-dart-button", "diff-01-main-dart-page"],
+          "before": "teacher/stamp-release/code/00-main.dart",
+          "after": "teacher/stamp-release/code/01-main.dart"
         },
         {
           "html": "docs/stamp-release/index.html",
-          "id": "code-01-main-dart-open",
-          "source": "teacher/stamp-release/code/01-main.dart",
-          "match": "contains"
+          "ids": ["diff-02-main-dart"],
+          "before": "teacher/stamp-release/code/01-main.dart",
+          "after": "teacher/stamp-release/code/02-main.dart"
         },
         {
           "html": "docs/stamp-release/index.html",
-          "id": "code-01-main-dart-button",
-          "source": "teacher/stamp-release/code/01-main.dart",
-          "match": "contains"
+          "ids": ["diff-03-main-dart"],
+          "before": "teacher/stamp-release/code/02-main.dart",
+          "after": "teacher/stamp-release/code/03-main.dart"
         },
         {
           "html": "docs/stamp-release/index.html",
-          "id": "code-01-main-dart-page",
-          "source": "teacher/stamp-release/code/01-main.dart",
-          "match": "contains"
+          "ids": ["diff-06-pubspec-yaml"],
+          "before": "teacher/stamp-release/code/05-pubspec.yaml",
+          "after": "teacher/stamp-release/code/06-pubspec.yaml"
         },
         {
           "html": "docs/stamp-release/index.html",
-          "id": "code-02-main-dart",
-          "source": "teacher/stamp-release/code/02-main.dart",
-          "match": "contains"
+          "ids": ["diff-06-main-dart-top", "diff-06-main-dart-state", "diff-06-main-dart-save", "diff-06-main-dart-change", "diff-06-main-dart-add", "diff-06-main-dart-list", "diff-06-main-dart-buttons", "diff-06-main-dart-onsave", "diff-06-main-dart-submit", "diff-06-main-dart-canpop", "diff-06-main-dart-enabled", "diff-06-main-dart-save-button"],
+          "before": "teacher/stamp-release/code/05-main.dart",
+          "after": "teacher/stamp-release/code/06-main.dart"
         },
         {
           "html": "docs/stamp-release/index.html",
-          "id": "code-03-main-dart",
-          "source": "teacher/stamp-release/code/03-main.dart",
-          "match": "contains"
+          "ids": ["diff-07-main-dart-init", "diff-07-main-dart-load", "diff-07-main-dart-reload"],
+          "before": "teacher/stamp-release/code/06-main.dart",
+          "after": "teacher/stamp-release/code/07-main.dart"
         },
         {
           "html": "docs/stamp-release/index.html",
-          "id": "code-06-main-dart-top",
-          "source": "teacher/stamp-release/code/06-main.dart",
-          "match": "contains"
+          "ids": ["diff-08-main-dart-message", "diff-08-main-dart-reset", "diff-08-main-dart-button"],
+          "before": "teacher/stamp-release/code/07-main.dart",
+          "after": "teacher/stamp-release/code/08-main.dart"
         },
         {
           "html": "docs/stamp-release/index.html",
-          "id": "code-06-main-dart-state",
-          "source": "teacher/stamp-release/code/06-main.dart",
-          "match": "contains"
-        },
-        {
-          "html": "docs/stamp-release/index.html",
-          "id": "code-06-main-dart-list",
-          "source": "teacher/stamp-release/code/06-main.dart",
-          "match": "contains"
-        },
-        {
-          "html": "docs/stamp-release/index.html",
-          "id": "code-06-main-dart-buttons",
-          "source": "teacher/stamp-release/code/06-main.dart",
-          "match": "contains"
-        },
-        {
-          "html": "docs/stamp-release/index.html",
-          "id": "code-06-main-dart-onsave",
-          "source": "teacher/stamp-release/code/06-main.dart",
-          "match": "contains"
-        },
-        {
-          "html": "docs/stamp-release/index.html",
-          "id": "code-06-main-dart-field",
-          "source": "teacher/stamp-release/code/06-main.dart",
-          "match": "contains"
-        },
-        {
-          "html": "docs/stamp-release/index.html",
-          "id": "code-06-main-dart-submit",
-          "source": "teacher/stamp-release/code/06-main.dart",
-          "match": "contains"
-        },
-        {
-          "html": "docs/stamp-release/index.html",
-          "id": "code-06-main-dart-canpop",
-          "source": "teacher/stamp-release/code/06-main.dart",
-          "match": "contains"
-        },
-        {
-          "html": "docs/stamp-release/index.html",
-          "id": "code-06-main-dart-back",
-          "source": "teacher/stamp-release/code/06-main.dart",
-          "match": "contains"
-        },
-        {
-          "html": "docs/stamp-release/index.html",
-          "id": "code-06-main-dart-enabled",
-          "source": "teacher/stamp-release/code/06-main.dart",
-          "match": "contains"
-        },
-        {
-          "html": "docs/stamp-release/index.html",
-          "id": "code-06-main-dart-progress",
-          "source": "teacher/stamp-release/code/06-main.dart",
-          "match": "contains"
-        },
-        {
-          "html": "docs/stamp-release/index.html",
-          "id": "code-06-main-dart-save-button",
-          "source": "teacher/stamp-release/code/06-main.dart",
-          "match": "contains"
-        },
-        {
-          "html": "docs/stamp-release/index.html",
-          "id": "code-07-main-dart-init",
-          "source": "teacher/stamp-release/code/07-main.dart",
-          "match": "contains"
-        },
-        {
-          "html": "docs/stamp-release/index.html",
-          "id": "code-07-main-dart-load",
-          "source": "teacher/stamp-release/code/07-main.dart",
-          "match": "contains"
-        },
-        {
-          "html": "docs/stamp-release/index.html",
-          "id": "code-07-main-dart-reload",
-          "source": "teacher/stamp-release/code/07-main.dart",
-          "match": "contains"
-        },
-        {
-          "html": "docs/stamp-release/index.html",
-          "id": "code-08-main-dart-message",
-          "source": "teacher/stamp-release/code/08-main.dart",
-          "match": "contains"
-        },
-        {
-          "html": "docs/stamp-release/index.html",
-          "id": "code-08-main-dart-reset",
-          "source": "teacher/stamp-release/code/08-main.dart",
-          "match": "contains"
-        },
-        {
-          "html": "docs/stamp-release/index.html",
-          "id": "code-08-main-dart-button",
-          "source": "teacher/stamp-release/code/08-main.dart",
-          "match": "contains"
+          "ids": ["diff-10-gradle-wrapper-properties"],
+          "before": "teacher/stamp-release/code/09-gradle-wrapper.properties",
+          "after": "teacher/stamp-release/code/10-gradle-wrapper.properties",
+          "label": "android/gradle/wrapper/gradle-wrapper.properties"
         }
       ],
       "mirrors": [
@@ -848,6 +761,10 @@
         {
           "source": "F02StampRelease/lib/main.dart",
           "copy": "teacher/stamp-release/code/19-main.dart"
+        },
+        {
+          "source": "F02StampRelease/android/gradle/wrapper/gradle-wrapper.properties",
+          "copy": "teacher/stamp-release/code/10-gradle-wrapper.properties"
         }
       ]
     }
