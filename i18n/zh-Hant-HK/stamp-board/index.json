@@ -247,6 +247,30 @@
       "translation": "本單元的新概念是<strong>宣告式 UI</strong>（宣言的UI）。在 <code>build</code> 中傳回與目前數值對應的畫面結構。不是依序尋找並改寫現有的 <code>View</code> 或 DOM，而是撰寫成「如果是這個數值，就放置這個元件」。"
     },
     {
+      "source": "このあとの枠には、ファイルの<strong>直す場所だけ</strong>を載せます。<span1>緑の太字の行</span1>は足す行、<span2>赤い取り消し線の行</span2>は消す行です。<span3>薄い字の行</span3>は、すでにファイルにある行で、入力しません。直す場所を探す目印にします。",
+      "translation": "之後的區塊所列出的，<strong>只有檔案中要修改的地方</strong>。<span1>綠色粗體的行</span1>是要加入的行，<span2>紅色加上刪除線的行</span2>是要刪除的行。<span3>灰色字的行</span3>是檔案中已有的行，不需要輸入。請用它們作為標記，找出要修改的地方。"
+    },
+    {
+      "source": "前のSTEPで文字や数値を自分で変えた行は、枠の中の文字と違っていても、同じ場所の行として読みます。",
+      "translation": "在之前的 STEP 中自己改過文字或數值的行，即使與區塊中的文字不同，也請當作同一個位置的行來看。"
+    },
+    {
+      "source": "<code>lib/main.dart</code>で、<code>return const MaterialApp(</code>の下にある<code>home: Scaffold(body: Center(child: Text('Hello World!'))),</code>の1行（赤い行）を消し、同じ場所に緑の行を足します。",
+      "translation": "在 <code>lib/main.dart</code> 中，刪除 <code>return const MaterialApp(</code> 下面的 <code>home: Scaffold(body: Center(child: Text('Hello World!'))),</code> 這一行（紅色的行），並在同一個位置加入綠色的行。"
+    },
+    {
+      "source": "足す行",
+      "translation": "要加入的行"
+    },
+    {
+      "source": "消す行",
+      "translation": "要刪除的行"
+    },
+    {
+      "source": "すでにある行",
+      "translation": "已有的行"
+    },
+    {
       "source": "<code>MaterialApp</code>はアプリの設定、<code>Scaffold</code>は画面の基本枠、<code>SafeArea</code>はOSの表示領域を避ける余白、<code>Center</code>は中央配置、<code>Text</code>は文字を担当します。<code>child:</code>は1つのWidget、後で使う<code>children:</code>は複数のWidgetのリストです。<code>MaterialApp</code>に加えた<code>debugShowCheckedModeBanner: false</code>は、STEP 01で画面の右上に出ていたDEBUGの帯を消す設定です。帯はデバッグ実行中を示す目印で、アプリの動きには関係しません。",
       "translation": "<code>MaterialApp</code> 負責應用程式的設定，<code>Scaffold</code> 是畫面的基本框架，<code>SafeArea</code> 是避開 OS 顯示區域的邊距，<code>Center</code> 負責置中，<code>Text</code> 負責文字。<code>child:</code> 是1個 Widget，之後會用到的 <code>children:</code> 是多個 Widget 的清單。加在 <code>MaterialApp</code> 上的 <code>debugShowCheckedModeBanner: false</code>，是消除 STEP 01 中畫面右上角 DEBUG 橫幅的設定。橫幅是表示正在除錯執行的標記，與應用程式的運作無關。"
     },
@@ -359,6 +383,10 @@
       "translation": "在 Visual Studio Code 中開啟同一個 <code>F01StampBoard</code>，在 iOS 上執行。今天的起始狀態是中央有1個 <code>Text</code> 的畫面。本 STEP 把 <code>Center</code> 的 <code>child</code> 換成 <code>Card</code>，把習慣名稱、標記和次數彙整到1張卡片上。"
     },
     {
+      "source": "<code>lib/main.dart</code>で、<code>child: Center(</code>の下にある、<code>child: Text(</code>で始まる1行（赤い行）を消し、同じ場所に緑の行を足します。赤い行は、STEP 04で文字や大きさを変えた行です。枠の中の文字と違っていても、その1行を消します。",
+      "translation": "在 <code>lib/main.dart</code> 中，刪除 <code>child: Center(</code> 下面以 <code>child: Text(</code> 開頭的那一行（紅色的行），並在同一個位置加入綠色的行。紅色的行就是在 STEP 04 中改過文字和大小的那一行。即使與區塊中的文字不同，也要刪除那一行。"
+    },
+    {
       "source": "<code>Card</code>の中に<code>Padding</code>、さらに<code>Column</code>を置きます。<code>children</code>の角括弧の中へ<code>Text</code>、<code>SizedBox</code>、<code>Icon</code>を順番に並べます。今回は回数を変える処理をまだ付けないため、0 / 5 回のままです。",
       "translation": "在 <code>Card</code> 裏放 <code>Padding</code>，再放 <code>Column</code>。在 <code>children</code> 的方括弧裏，依序排列 <code>Text</code>、<code>SizedBox</code>、<code>Icon</code>。這次還沒有加上改變次數的處理，所以仍然是「0 / 5 回」（0 / 5 次）。"
     },
@@ -417,6 +445,10 @@
     {
       "source": "習慣を3件へ増やします。同じカードを3回コピーする代わりに、名前・理由・回数を<code>Habit</code>にまとめ、<code>habits</code>のリストから作ります。",
       "translation": "把習慣增加到3個。不是把同一張卡片複製3次，而是把名稱、理由和次數彙整到 <code>Habit</code> 中，根據 <code>habits</code> 清單來建立。"
+    },
+    {
+      "source": "このSTEPだけは、直す場所ではなく、ファイルの全文を載せます。<code>lib/main.dart</code>の中身を、次のコードですべて置き換えます。アプリのクラスの名前が<code>MainApp</code>から<code>StampApp</code>に変わり、データの<code>Habit</code>、一覧の画面の<code>StampBoardPage</code>、マークの<code>StampMarks</code>の3つのクラスが加わるので、ほとんどの行が変わるためです。STEP 06で試しに変えた余白の値は、この置き換えで元に戻ります。",
+      "translation": "只有本 STEP 列出的不是要修改的地方，而是檔案的全文。用下面的程式碼替換 <code>lib/main.dart</code> 的全部內容。因為應用程式類別的名稱由 <code>MainApp</code> 改為 <code>StampApp</code>，並加入資料的 <code>Habit</code>、清單畫面的 <code>StampBoardPage</code>、標記的 <code>StampMarks</code> 這3個類別，幾乎每一行都會改變。STEP 06 中試著改過的邊距值，會因這次替換而恢復原狀。"
     },
     {
       "source": "lib/main.dart · 全体を置き換える",
@@ -573,6 +605,22 @@
     {
       "source": "操作で変わる<code>habits</code>を<code>State</code>へ移します。<code>StampBoardPage</code>は<code>StatefulWidget</code>となり、<code>createState</code>が<code>_StampBoardPageState</code>を作ります。Widgetは画面の設定、<code>State</code>は操作によって変わる値を保持します。名前の先頭のアンダースコアはDartのライブラリ内で使う名前という指定です。",
       "translation": "把會隨操作變化的 <code>habits</code> 移到 <code>State</code> 中。<code>StampBoardPage</code> 變為 <code>StatefulWidget</code>，由 <code>createState</code> 建立 <code>_StampBoardPageState</code>。Widget 是畫面的設定，<code>State</code> 持有隨操作變化的值。名稱開頭的底線表示這是只在 Dart 程式庫內部使用的名稱。"
+    },
+    {
+      "source": "<code>lib/main.dart</code>を4か所直します。まず、<code>StampApp</code>の<code>build</code>にある<code>home: StampBoardPage(),</code>の1行を、<code>const</code>を付けた緑の行に直します。次の枠で<code>StampBoardPage</code>のコンストラクタを<code>const</code>にするので、呼び出す側にも<code>const</code>を付けます。",
+      "translation": "修改 <code>lib/main.dart</code> 的4處地方。首先，把 <code>StampApp</code> 的 <code>build</code> 中 <code>home: StampBoardPage(),</code> 這一行，改成加上了 <code>const</code> 的綠色的行。下一個區塊會把 <code>StampBoardPage</code> 的建構函式設為 <code>const</code>，所以呼叫的一方也要加上 <code>const</code>。"
+    },
+    {
+      "source": "次に、<code>StampBoardPage</code>のクラスを2つに分けます。<code>class StampBoardPage extends StatelessWidget {</code>と、その下の<code>StampBoardPage({super.key});</code>の2行（赤い行）を消し、緑の行を足します。<code>final List&lt;Habit&gt; habits = [</code>の行から下は、新しい<code>_StampBoardPageState</code>の中身になります。もとのクラスを閉じていた<code>}</code>（<code>buildHabitCard</code>の下の行）は、そのまま<code>_StampBoardPageState</code>を閉じる<code>}</code>になります。",
+      "translation": "接著，把 <code>StampBoardPage</code> 這個類別分成2個。刪除 <code>class StampBoardPage extends StatelessWidget {</code> 和其下的 <code>StampBoardPage({super.key});</code> 這2行（紅色的行），並加入綠色的行。由 <code>final List&lt;Habit&gt; habits = [</code> 這一行起以下的內容，會成為新的 <code>_StampBoardPageState</code> 的內容。原本用來結束類別的 <code>}</code>（<code>buildHabitCard</code> 下面的那一行），會直接成為結束 <code>_StampBoardPageState</code> 的 <code>}</code>。"
+    },
+    {
+      "source": "続けて、<code>habits</code>のリストを閉じる<code>];</code>の下に、1行空けて緑の行を足します。下の<code>@override</code>との間も1行空けます。",
+      "translation": "接著，在結束 <code>habits</code> 清單的 <code>];</code> 下面，空一行後加入綠色的行。與下面的 <code>@override</code> 之間也空一行。"
+    },
+    {
+      "source": "最後に、<code>buildHabitCard</code>の中にある<code>const Text('回数を変える操作は、このあと作ります。'),</code>の1行（赤い行）を消し、同じ場所に緑の行を足します。",
+      "translation": "最後，刪除 <code>buildHabitCard</code> 中 <code>const Text('回数を変える操作は、このあと作ります。'),</code> 這一行（紅色的行），並在同一個位置加入綠色的行。"
     },
     {
       "source": "ボタンの<code>onPressed</code>へ<code>() =&gt; changeStamp(habit, 1)</code>を渡します。これは引数のない関数で、押したときに<code>changeStamp</code>を呼びます。関数の呼出結果をその場で渡す書き方と区別してください。Dartのアローは1つの式を返す省略形です。",
@@ -753,6 +801,18 @@
     {
       "source": "カードに詳しく見るを加え、<code>openDetail(habit)</code>を呼びます。<code>openDetail</code>は<code>Navigator.push</code>へ<code>context</code>と<code>MaterialPageRoute</code>を渡し、ルートの<code>builder</code>で<code>HabitDetailPage</code>を作ります。",
       "translation": "在卡片上加入「詳しく見る」（查看詳情），並呼叫 <code>openDetail(habit)</code>。<code>openDetail</code> 把 <code>context</code> 和 <code>MaterialPageRoute</code> 傳給 <code>Navigator.push</code>，在路由的 <code>builder</code> 中建立 <code>HabitDetailPage</code>。"
+    },
+    {
+      "source": "<code>lib/main.dart</code>に3か所足します。まず、<code>_StampBoardPageState</code>の中で、<code>changeStamp</code>の関数を閉じる<code>}</code>の下に、1行空けて緑の行を足します。下の<code>@override</code>との間も1行空けます。",
+      "translation": "在 <code>lib/main.dart</code> 中加入3處。首先，在 <code>_StampBoardPageState</code> 中，結束 <code>changeStamp</code> 函式的 <code>}</code> 下面，空一行後加入綠色的行。與下面的 <code>@override</code> 之間也空一行。"
+    },
+    {
+      "source": "次に、<code>buildHabitCard</code>の<code>Wrap</code>の中で、「1つ戻す」の<code>TextButton</code>を閉じる<code>),</code>の下に、緑の行を足します。<code>Wrap</code>の3つ目のボタンになります。",
+      "translation": "接著，在 <code>buildHabitCard</code> 的 <code>Wrap</code> 中，結束「1つ戻す」（復原一個）的 <code>TextButton</code> 的 <code>),</code> 下面，加入綠色的行。它會成為 <code>Wrap</code> 中的第3個按鈕。"
+    },
+    {
+      "source": "最後に、ファイルの末尾に、1行空けて緑の行を足します。詳細の画面の<code>HabitDetailPage</code>です。中身はSTEP 17で読みます。",
+      "translation": "最後，在檔案末尾空一行，加入綠色的行。這是詳情畫面的 <code>HabitDetailPage</code>。其內容在 STEP 17 閱讀。"
     },
     {
       "source": "<code>Navigator</code>は画面の重なりを管理します。<code>push</code>で詳細を上に載せるため、一覧の<code>State</code>は下に残ります。<code>MaterialPageRoute</code>の<code>&lt;void&gt;</code>は、この画面から結果の値を受け取らない指定です。<code>builder</code>の<code>context</code>は新しい画面を作る場所の情報です。",
@@ -961,6 +1021,10 @@
     {
       "source": "括弧のエラーが出た",
       "translation": "出現了括弧的錯誤"
+    },
+    {
+      "source": "最初のエラーから確認。<code>child</code>は1つ、<code>children</code>はリスト。そのSTEPの枠と、足した行・消した行の前後の閉じ括弧を見比べる。",
+      "translation": "從第一個錯誤開始確認。<code>child</code> 是1個，<code>children</code> 是清單。把該 STEP 的區塊，與自己加入的行、刪除的行前後的右括弧對照比較。"
     },
     {
       "source": "再起動すると0に戻った",
