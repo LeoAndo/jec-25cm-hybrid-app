@@ -15,11 +15,13 @@ import importlib.util
 import io
 import json
 from pathlib import Path
+import random
 from shutil import copy2
 import subprocess
 import sys
 import tempfile
 import unittest
+from unittest import mock
 from zipfile import ZIP_DEFLATED, ZipFile, ZipInfo
 
 
@@ -2433,6 +2435,29 @@ class DiffBlockTest(unittest.TestCase):
         self.assertEqual(CHECKER._slide_changes(opcodes, before, after),
                          [("equal", 0, 2, 0, 2), ("insert", 2, 2, 2, 4), ("equal", 2, 3, 4, 5), ("replace", 3, 4, 5, 6)])
 
+    def test_sliding_works_at_both_ends_of_the_file(self):
+        """ファイルの先頭や末尾に接した変更も、同じ結果になる範囲でずらせる。行の対応は崩れない。"""
+        # 先頭に「空行＋足す行」がある形を、「足す行＋空行」にずらす。上に、すでにある行が1行できる。
+        before = ["", "x();"]
+        after = ["", "added();", "", "x();"]
+        opcodes = [("insert", 0, 0, 0, 2), ("equal", 0, 2, 2, 4)]
+        slid = CHECKER._slide_changes(opcodes, before, after)
+        self.assertEqual(slid, [("equal", 0, 1, 0, 1), ("insert", 1, 1, 1, 3), ("equal", 1, 2, 3, 4)])
+        # 末尾の「閉じかっこから始まる足す行」を、上へずらす。下に、すでにある行が1行できる。
+        before = ["a() {", "}"]
+        after = ["a() {", "}", "", "b() {", "}"]
+        opcodes = [("equal", 0, 1, 0, 1), ("insert", 1, 1, 1, 4), ("equal", 1, 2, 4, 5)]
+        slid = CHECKER._slide_changes(opcodes, before, after)
+        self.assertEqual(slid, [("equal", 0, 2, 0, 2), ("insert", 2, 2, 2, 5)])
+        # どの並びでも、直す前・直したあとの全部の行を、ちょうど1回ずつ受け持つ。
+        for opcodes_, before_, after_ in ((slid, before, after),):
+            self.assertEqual(sum(i2 - i1 for _, i1, i2, _, _ in opcodes_), len(before_))
+            self.assertEqual(sum(j2 - j1 for _, _, _, j1, j2 in opcodes_), len(after_))
+        # 作ったまとまりは、当てると直したあとのファイルになる。
+        hunks = CHECKER.diff_hunks_between(before, after, 1)
+        self.assertEqual(hunks, [[(" ", "}"), ("+", ""), ("+", "b() {"), ("+", "}")]])
+        self.assertEqual(CHECKER.apply_diff_hunks(before, hunks), after)
+
     def test_head_lists_only_the_kinds_in_the_block(self):
         """見出しの凡例には、その枠に出てくる行の種類だけを並べる。"""
         added = [[(" ", "a"), ("+", "b")]]
@@ -2486,6 +2511,60 @@ class DiffBlockTest(unittest.TestCase):
         code, output, problems, _ = self._print_diff(["diff-main"], "diff-typo")
         self.assertEqual((code, output), (1, ""))
         self.assertIn("diffsに登録がありません: docs/x/index.html の diff-typo", problems)
+
+    def test_generated_block_for_an_empty_file_keeps_its_only_landmark(self):
+        """空のファイルに書き足すときは、その空行だけが目印になる。落とすと、足す場所を決められない。"""
+        before = CHECKER.code_lines("\n")
+        after = ["", "void main() {", "}"]
+        hunks = CHECKER.diff_hunks_between(before, after, 3)
+        self.assertEqual(hunks, [[(" ", ""), ("+", "void main() {"), ("+", "}")]])
+        self.assertEqual(CHECKER.apply_diff_hunks(before, hunks), after)
+        # ほかに目印になる行があれば、端の空行は落とす。
+        hunks = CHECKER.diff_hunks_between(["a();", "", "b();"], ["a();", "", "added();", "b();"], 1)
+        self.assertEqual(hunks, [[("+", "added();"), (" ", "b();")]])
+
+    def test_print_diff_reports_a_block_that_cannot_be_applied(self):
+        """作った枠を当てられないときは、トレースバックにせず、理由を知らせて止まる。黙って違う枠を出さない。"""
+        with tempfile.TemporaryDirectory() as name:
+            root = Path(name)
+            self._write(root, self.BEFORE_NAME, self.BEFORE)
+            self._write(root, self.AFTER_NAME, self.AFTER)
+            self._write(root, "config/teaching-materials.json", json.dumps(
+                {"scan_roots": [], "terms": [], "projects": [self._project()]}, ensure_ascii=False))
+            for hunks, message in (([[("+", "x")]], "差分ブロックを作れません"),
+                                   ([[(" ", "void main() {"), ("+", "x")]], "スクリプトの不具合です")):
+                with self.subTest(message=message):
+                    output, problems = io.StringIO(), io.StringIO()
+                    with mock.patch.object(CHECKER, "diff_hunks_between", return_value=hunks), \
+                            contextlib.redirect_stdout(output), contextlib.redirect_stderr(problems):
+                        code = CHECKER.print_diff(root, self.HTML, "diff-main", 3)
+                    self.assertEqual((code, output.getvalue()), (1, ""))
+                    self.assertIn(message, problems.getvalue())
+
+    def test_generated_hunks_apply_to_files_full_of_repeated_lines(self):
+        """同じ行（閉じかっこ・空行）が何度も出るファイルでも、作ったまとまりは必ず当てられ、直したあとになる。"""
+        rng = random.Random(189)
+        alphabet = ["", "}", "  }", "{", "a();", "b();", "void f() {", "  x = 1;", "  ],", "<div>", "</div>"]
+        for _ in range(300):
+            before = [rng.choice(alphabet) for _ in range(rng.randint(0, 20))]
+            after = list(before)
+            for _ in range(rng.randint(1, 4)):
+                position = rng.randint(0, len(after))
+                if rng.random() < 0.6:
+                    after[position:position] = [rng.choice(alphabet) for _ in range(rng.randint(1, 4))]
+                else:
+                    del after[position:position + rng.randint(1, 3)]
+            before, after = CHECKER.code_lines("\n".join(before)), CHECKER.code_lines("\n".join(after))
+            if before == after:
+                continue
+            for context in (1, 3):
+                with self.subTest(before=before, after=after, context=context):
+                    hunks = CHECKER.diff_hunks_between(before, after, context)
+                    self.assertEqual(CHECKER.apply_diff_hunks(before, hunks), after)
+                    # 教科書に貼った形（HTML）から読み戻しても、同じ結果になる。
+                    block = CHECKER.render_diff_block(hunks, "x")
+                    inner = block[block.index("<code>") + len("<code>"):block.rindex("</code>")]
+                    self.assertEqual(CHECKER.apply_diff_hunks(before, CHECKER.diff_block_hunks(inner)), after)
 
     def test_print_diff_splits_the_hunks_over_the_registered_ids(self):
         """ids の数とまとまりの数が同じなら、まとまりごとに1つの枠にして、ids の順に id を付ける。"""

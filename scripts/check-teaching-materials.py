@@ -795,16 +795,15 @@ def _slide_changes(opcodes: list[tuple], before: list[str], after: list[str]) ->
     いちばん大きい位置を選ぶ。同じ点なら、difflib が決めた位置に近いほうにする。
     前後の変更とのあいだには、すでにある行を1行は残す（となりの変更とつながらないようにする）。
     """
-    result = [list(opcode) for opcode in opcodes]
-    for index, (tag, i1, i2, j1, j2) in enumerate(result):
+    changes = [list(opcode) for opcode in opcodes if opcode[0] != "equal"]
+    for index, (tag, i1, i2, j1, j2) in enumerate(changes):
         if tag not in ("insert", "delete"):
             continue
         # 行を持っている側（足すなら直したあと、消すなら直す前）の並びで考える。
         lines, start, end = (after, j1, j2) if tag == "insert" else (before, i1, i2)
-        previous = result[index - 1] if index > 0 else None
-        following = result[index + 1] if index + 1 < len(result) else None
-        up_limit = previous[2] - previous[1] - 1 if previous and previous[0] == "equal" else 0
-        down_limit = following[2] - following[1] - 1 if following and following[0] == "equal" else 0
+        # ずらせるのは、前後の、すでにある行のあいだだけ。前の変更は、もうずらし終えた位置で見る。
+        up_limit = i1 - changes[index - 1][2] - 1 if index > 0 else i1
+        down_limit = changes[index + 1][1] - i2 - 1 if index + 1 < len(changes) else len(before) - i2
         candidates = [0]
         shift = 0
         while -shift < up_limit and lines[start + shift - 1] == lines[end + shift - 1]:
@@ -815,16 +814,18 @@ def _slide_changes(opcodes: list[tuple], before: list[str], after: list[str]) ->
             shift += 1
             candidates.append(shift)
         best = max(candidates, key=lambda move: (_block_shape_score(lines[start + move:end + move]), -abs(move), move))
-        if best == 0:
-            continue
-        result[index] = [tag, i1 + best, i2 + best, j1 + best, j2 + best]
-        if previous:
-            previous[2] += best
-            previous[4] += best
-        if following:
-            following[1] += best
-            following[3] += best
-    return [tuple(opcode) for opcode in result]
+        changes[index] = [tag, i1 + best, i2 + best, j1 + best, j2 + best]
+    # 変更のあいだを、すでにある行（equal）で埋め直す。ずらしても、あいだの行数は両方の側で同じ。
+    result: list[tuple] = []
+    i = j = 0
+    for tag, i1, i2, j1, j2 in changes:
+        if i1 > i:
+            result.append(("equal", i, i1, j, j1))
+        result.append((tag, i1, i2, j1, j2))
+        i, j = i2, j2
+    if i < len(before):
+        result.append(("equal", i, len(before), j, len(after)))
+    return result
 
 
 def _diff_hunk(opcodes: list, before: list[str], after: list[str], start: int, end: int) -> list[tuple[str, str]]:
@@ -836,10 +837,13 @@ def _diff_hunk(opcodes: list, before: list[str], after: list[str], start: int, e
         elif start <= i1 and i2 <= end:
             hunk.extend(("-", line) for line in before[i1:i2])
             hunk.extend(("+", line) for line in after[j1:j2])
-    # 端の空行は、場所を探す目印にならないので落とす。
-    while len(hunk) > 1 and hunk[0] == (" ", ""):
+    # 端の空行は、場所を探す目印にならないので落とす。ただし、すでにある行（消す行を含む）が
+    # ほかに1行もなければ残す。空のファイルに書き足すときは、その空行だけが、足す場所の目印になる。
+    def has_landmark(lines: list[tuple[str, str]]) -> bool:
+        return any(kind != "+" for kind, _ in lines)
+    while hunk[0] == (" ", "") and has_landmark(hunk[1:]):
         hunk.pop(0)
-    while len(hunk) > 1 and hunk[-1] == (" ", ""):
+    while hunk[-1] == (" ", "") and has_landmark(hunk[:-1]):
         hunk.pop()
     return hunk
 
@@ -955,8 +959,13 @@ def print_diff(root: Path, html_name: str, block_id: str, context: int) -> int:
             if not hunks:
                 print(f"差分がありません: {diff['before']} → {diff['after']}", file=sys.stderr)
                 return 1
-            if apply_diff_hunks(before, hunks) != after:
-                # ここへ来るのは、まとまりの作り方の誤り。黙って違う枠を出さない。
+            # 作った枠を当てて、直したあとのファイルになることを確かめてから出す。黙って違う枠を出さない。
+            try:
+                applied = apply_diff_hunks(before, hunks)
+            except ValueError as error:
+                print(f"差分ブロックを作れません: {error}（直す前のファイル: {diff['before']}）", file=sys.stderr)
+                return 1
+            if applied != after:
                 print(f"作った枠を当てても、{diff['after']}になりません。スクリプトの不具合です", file=sys.stderr)
                 return 1
             label = diff_label(project, diff)
