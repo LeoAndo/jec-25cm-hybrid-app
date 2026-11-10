@@ -9,8 +9,10 @@ pubspec.yaml＋lib/ のプロジェクト）である。どちらも検査でき
 （CIの validate ジョブとREADMEの検証コマンドに入っている）ので、ここでは重ねて見ない。
 """
 
+import contextlib
 import html
 import importlib.util
+import io
 import json
 from pathlib import Path
 from shutil import copy2
@@ -2040,6 +2042,480 @@ class SampleGuidanceTest(unittest.TestCase):
         self.assertIn("docs/common/help.html:1", errors[0])
         self.assertIn("docs/one/index.html:2", errors[1])
         self.assertTrue(all("取り込み用のURL（import_url）があります" in error for error in errors), errors)
+
+
+class DiffBlockTest(unittest.TestCase):
+    """差分ブロックの検査（README「授業用教科書の基本方針」14、#189）。
+
+    すでにあるファイルを直すSTEPは、足す行（<ins>）・消す行（<del>）・すでにある行（印なし）だけを
+    載せる。その枠を直す前のファイルに当てると、直したあとのファイルと1文字も違わないことを確かめる。
+    全文のスニペットのバイト照合と同じ役目。しくみは jec-25cm-kotlin の検査を移したもの。
+    """
+
+    HTML = "docs/x/index.html"
+    BEFORE_NAME = "teacher/x/code/01-main.dart"
+    AFTER_NAME = "teacher/x/code/02-main.dart"
+    BEFORE = (
+        "import 'package:flutter/material.dart';\n"
+        "\n"
+        "void main() {\n"
+        "  runApp(const StampApp());\n"
+        "}\n"
+        "\n"
+        "class Habit {\n"
+        "  final String name;\n"
+        "  int count;\n"
+        "}"  # 末尾に改行がないファイルでも、同じに扱う
+    )
+    AFTER = (
+        "import 'package:flutter/material.dart';\n"
+        "\n"
+        "void main() {\n"
+        "  WidgetsFlutterBinding.ensureInitialized();\n"
+        "  runApp(const StampApp());\n"
+        "}\n"
+        "\n"
+        "class Habit {\n"
+        "  final String name;\n"
+        "  final String reason;\n"
+        "  int count;\n"
+        "}\n"
+    )
+    GAP = '<span class="diff-gap">⋮\n</span>'
+    MAIN = (
+        "void main() {\n"
+        "<ins>  WidgetsFlutterBinding.ensureInitialized();\n</ins>"
+        "  runApp(const StampApp());\n"
+        "}\n"
+    )
+    HABIT = (
+        "class Habit {\n"
+        "  final String name;\n"
+        "<ins>  final String reason;\n</ins>"
+        "  int count;\n"
+        "}\n"
+    )
+
+    # ------------------------------------------------------------------
+    # 仮のリポジトリを組み立てる道具
+    # ------------------------------------------------------------------
+
+    def _write(self, root: Path, name: str, text: str) -> None:
+        path = root / name
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(text, encoding="utf-8")
+
+    def _block(self, block_id: str, inner: str, classes: str = ' class="diff"') -> str:
+        return f'<pre id="{block_id}"{classes} tabindex="0"><code>{inner}</code></pre>'
+
+    def _diff(self, **overrides) -> dict:
+        diff = {"html": self.HTML, "ids": ["diff-main"], "before": self.BEFORE_NAME, "after": self.AFTER_NAME}
+        diff.update(overrides)
+        return diff
+
+    def _project(self, **overrides) -> dict:
+        project = {
+            "name": "F01StampBoard", "kind": "flutter", "root": "F01StampBoard",
+            "package_name": "f01_stamp_board", "application_id": "jp.ac.jec.f01_stamp_board",
+            "entry": "F01StampBoard/lib/main.dart", "sources": ["F01StampBoard/lib/main.dart"],
+            "docs": [self.HTML, "teacher/x/index.html"], "snippets": [], "archive": "x.zip",
+            "diffs": [self._diff()],
+        }
+        project.update(overrides)
+        return project
+
+    def _errors(self, page: str, *, before: str | None = None, after: str | None = None,
+                project: dict | None = None) -> list[str]:
+        """教科書に page を書いたときに、check_diffs が言うこと。"""
+        with tempfile.TemporaryDirectory() as name:
+            root = Path(name)
+            self._write(root, self.HTML, "<main>\n<p>直す場所だけを載せます。</p>\n" + page + "\n</main>")
+            self._write(root, self.BEFORE_NAME, self.BEFORE if before is None else before)
+            self._write(root, self.AFTER_NAME, self.AFTER if after is None else after)
+            errors: list[str] = []
+            CHECKER.check_diffs(root, project or self._project(), errors)
+            return errors
+
+    # ------------------------------------------------------------------
+    # 当てた結果が、直したあとのファイルになるか
+    # ------------------------------------------------------------------
+
+    def test_block_that_gives_the_after_file_is_accepted(self):
+        """足す行をすべて載せた枠は通る。あいだの変えない行は ⋮ で省ける。"""
+        self.assertEqual(self._errors(self._block("diff-main", self.MAIN + self.GAP + self.HABIT)), [])
+
+    def test_block_missing_an_added_line_is_rejected(self):
+        """足す行が1行でも足りないと、当てた結果が照合コードにならない。行番号と中身を出す。"""
+        habit = self.HABIT.replace("<ins>  final String reason;\n</ins>", "")
+        errors = self._errors(self._block("diff-main", self.MAIN + self.GAP + habit))
+        self.assertEqual(len(errors), 1, errors)
+        self.assertIn("docs/x/index.html:3", errors[0])
+        self.assertIn(f"diff-mainを{self.BEFORE_NAME}に当てても、{self.AFTER_NAME}と一致しません", errors[0])
+        self.assertIn("10行目", errors[0])
+        self.assertIn("final String reason;", errors[0])
+
+    def test_changed_line_needs_both_marks(self):
+        """書き換える行は、消す行（<del>）と足す行（<ins>）の組で載せる。"""
+        after = self.AFTER.replace("  final String name;", "  final String title;")
+        changed = (
+            "class Habit {\n"
+            "<del>  final String name;\n</del>"
+            "<ins>  final String title;\n"
+            "  final String reason;\n</ins>"
+            "  int count;\n"
+        )
+        self.assertEqual(self._errors(self._block("diff-main", self.MAIN + self.GAP + changed), after=after), [])
+        # 消す行を載せ忘れると、古い行が残って照合コードにならない。
+        forgotten = changed.replace("<del>  final String name;\n</del>", "  final String name;\n")
+        errors = self._errors(self._block("diff-main", self.MAIN + self.GAP + forgotten), after=after)
+        self.assertEqual(len(errors), 1, errors)
+        self.assertIn("一致しません", errors[0])
+
+    def test_end_of_file_newlines_are_ignored(self):
+        """末尾の改行や空行の違いは見ない（全文のスニペットの照合と同じ扱い）。"""
+        page = self._block("diff-main", self.MAIN + self.GAP + self.HABIT)
+        self.assertEqual(self._errors(page, before=self.BEFORE + "\n\n", after=self.AFTER.rstrip()), [])
+
+    def test_block_without_marks_is_an_excerpt(self):
+        """印のない枠は「見比べるだけ」の抜粋。直す前と直したあとが同じなら通る。"""
+        page = self._block("diff-main", "class Habit {\n  final String name;\n", classes="")
+        self.assertEqual(self._errors(page, after=self.BEFORE), [])
+        # 抜粋が、ファイルと1文字でも違えば検出する。
+        page = self._block("diff-main", "class Habit {\n  final String title;\n", classes="")
+        errors = self._errors(page, after=self.BEFORE)
+        self.assertEqual(len(errors), 1, errors)
+        self.assertIn("当てる場所がありません", errors[0])
+
+    def test_several_blocks_are_applied_in_order(self):
+        """1つのファイルの差分を、説明をはさんで複数の枠に分けて載せられる。"""
+        page = (self._block("diff-main-a", self.MAIN) + "<p>次に、理由の項目を足します。</p>"
+                + self._block("diff-main-b", self.HABIT))
+        project = self._project(diffs=[self._diff(ids=["diff-main-a", "diff-main-b"])])
+        self.assertEqual(self._errors(page, project=project), [])
+        # 本文で先に説明したい枠を、ファイルの下のほうから載せてもよい（枠どうしの順は問わない）。
+        project = self._project(diffs=[self._diff(ids=["diff-main-b", "diff-main-a"])])
+        self.assertEqual(self._errors(page, project=project), [])
+        # 片方の枠だけでは、照合コードにならない。
+        project = self._project(diffs=[self._diff(ids=["diff-main-a"])])
+        errors = self._errors(page, project=project)
+        self.assertEqual(len(errors), 1, errors)
+        self.assertIn("一致しません", errors[0])
+
+    # ------------------------------------------------------------------
+    # 当てる場所が決まるか
+    # ------------------------------------------------------------------
+
+    def test_existing_line_that_differs_from_the_file_is_rejected(self):
+        """すでにある行が、直す前のファイルと字下げ1つでも違えば、学生は場所を探せない。"""
+        main = self.MAIN.replace("  runApp(const StampApp());\n", "    runApp(const StampApp());\n")
+        errors = self._errors(self._block("diff-main", main + self.GAP + self.HABIT))
+        self.assertEqual(len(errors), 1, errors)
+        self.assertIn("diff-main: 1つ目のまとまりを当てる場所がありません", errors[0])
+        self.assertIn("1行目までは直す前のファイルの3行目からと一致し、次の行が違います", errors[0])
+        self.assertIn(f"直す前のファイル: {self.BEFORE_NAME}", errors[0])
+
+    def test_ambiguous_place_is_rejected(self):
+        """すでにある行の並びが2か所にあると、どちらを直すのか決まらない。"""
+        errors = self._errors(self._block("diff-main", "<ins>  // 足す行\n</ins>}\n"))
+        self.assertEqual(len(errors), 1, errors)
+        self.assertIn("場所が1つに決まりません（同じ並びが5行目・10行目にあります）", errors[0])
+        self.assertIn("前後のすでにある行を足してください", errors[0])
+
+    def test_block_without_existing_line_is_rejected(self):
+        """足す行しかない枠は、どこへ足すのかが分からない。"""
+        errors = self._errors(self._block("diff-main", "<ins>  final String reason;\n</ins>"))
+        self.assertEqual(len(errors), 1, errors)
+        self.assertIn("すでにある行（印のない行か消す行）がありません", errors[0])
+
+    def test_hunks_must_follow_the_file_order(self):
+        """1つの枠の中のまとまりは、ファイルの上から下の順に並べる。"""
+        errors = self._errors(self._block("diff-main", self.HABIT + self.GAP + self.MAIN))
+        self.assertEqual(len(errors), 1, errors)
+        self.assertIn("2つ目のまとまりが、前のまとまりと重なっているか、それより上の行を指しています", errors[0])
+
+    # ------------------------------------------------------------------
+    # 枠の書き方
+    # ------------------------------------------------------------------
+
+    def test_marks_must_cover_whole_lines(self):
+        """印は行の単位で付ける。行の途中から始まる印は、どの行のことか決まらない。"""
+        inline = self.MAIN.replace("<ins>  WidgetsFlutterBinding.ensureInitialized();\n</ins>",
+                                   "  <ins>WidgetsFlutterBinding.ensureInitialized();\n</ins>")
+        unclosed = self.MAIN.replace("ensureInitialized();\n</ins>", "ensureInitialized();</ins>\n")
+        for inner in (inline, unclosed):
+            with self.subTest(inner=inner):
+                errors = self._errors(self._block("diff-main", inner + self.GAP + self.HABIT))
+                self.assertEqual(len(errors), 1, errors)
+                self.assertIn("印は行の単位で付けてください", errors[0])
+
+    def test_other_tags_are_rejected(self):
+        """強調などのタグを混ぜると、学生が入力する文字と枠の中身が食い違う。"""
+        inner = self.MAIN.replace("  WidgetsFlutterBinding.ensureInitialized();\n",
+                                  "  <b>WidgetsFlutterBinding</b>.ensureInitialized();\n")
+        errors = self._errors(self._block("diff-main", inner + self.GAP + self.HABIT))
+        self.assertEqual(len(errors), 1, errors)
+        self.assertIn("以外のタグは使えません", errors[0])
+
+    def test_gap_must_sit_between_lines(self):
+        """省略の目印は、まとまりとまとまりのあいだにだけ置く。"""
+        cases = [
+            (self.GAP + self.MAIN, "省略の目印（⋮）の前に、行がありません"),
+            (self.MAIN + self.GAP + self.GAP + self.HABIT, "省略の目印（⋮）の前に、行がありません"),
+            (self.MAIN + self.GAP, "省略の目印（⋮）のあとに、行がありません"),
+            ("", "差分ブロックが空です"),
+        ]
+        for inner, message in cases:
+            with self.subTest(message=message, inner=inner):
+                errors = self._errors(self._block("diff-main", inner))
+                self.assertEqual(len(errors), 1, errors)
+                self.assertIn(message, errors[0])
+
+    def test_escaped_characters_are_compared_as_written_in_the_file(self):
+        """枠の中の &lt; や &quot; は、ファイルの < や " と同じ文字として比べる。"""
+        before = '<body>\n  <ons-page id="page_list">\n</body>'
+        after = '<body>\n  <ons-navigator id="nav_app" page="list.html"></ons-navigator>\n  <ons-page id="page_list">\n</body>'
+        inner = ("&lt;body&gt;\n"
+                 "<ins>  &lt;ons-navigator id=&quot;nav_app&quot; page=&quot;list.html&quot;&gt;&lt;/ons-navigator&gt;\n</ins>"
+                 '  &lt;ons-page id="page_list"&gt;\n')
+        self.assertEqual(self._errors(self._block("diff-main", inner), before=before, after=after), [])
+
+    # ------------------------------------------------------------------
+    # ファイルや枠が無いとき
+    # ------------------------------------------------------------------
+
+    def test_missing_block_and_files_are_reported(self):
+        """枠のidの書き間違いと、直す前後のファイルの置き忘れを、それぞれ報告する。"""
+        page = self._block("diff-main", self.MAIN + self.GAP + self.HABIT)
+        cases = [
+            ({"ids": ["diff-typo"]}, "docs/x/index.html:1: 差分ブロックがありません: diff-typo"),
+            ({"before": "missing.dart"}, "missing.dart:1: 差分ブロックの、直す前のファイルがありません"),
+            ({"after": "missing.dart"}, "missing.dart:1: 差分ブロックの、直したあとのファイルがありません"),
+            ({"html": "docs/x/missing.html"}, "docs/x/missing.html:1: 差分ブロックを載せる教材ファイルがありません"),
+        ]
+        for change, message in cases:
+            with self.subTest(change=change):
+                project = self._project(diffs=[self._diff(**change)])
+                self.assertEqual(self._errors(page, project=project), [message])
+
+    # ------------------------------------------------------------------
+    # 登録もれ（check_diff_registration）
+    # ------------------------------------------------------------------
+
+    def _registration_errors(self, page: str, diffs: list) -> list[str]:
+        with tempfile.TemporaryDirectory() as name:
+            root = Path(name)
+            self._write(root, self.HTML, page)
+            errors: list[str] = []
+            CHECKER.check_diff_registration(root, {"projects": [self._project(diffs=diffs)]}, errors)
+            return errors
+
+    def test_unregistered_diff_block_is_rejected(self):
+        """登録のない差分ブロックは、当てた結果を誰も確かめていない。"""
+        page = "<p>直す場所</p>\n" + self._block("diff-main", self.MAIN) + "\n" + self._block("diff-other", self.HABIT)
+        errors = self._registration_errors(page, [self._diff()])
+        self.assertEqual(len(errors), 1, errors)
+        self.assertIn("docs/x/index.html:7", errors[0])
+        self.assertIn("差分ブロックがconfig/teaching-materials.jsonのdiffsにありません: diff-other", errors[0])
+
+    def test_diff_block_without_id_is_rejected(self):
+        """idのない差分ブロックは、登録のしようがない。"""
+        errors = self._registration_errors('<pre class="diff"><code>x\n</code></pre>', [])
+        self.assertEqual(len(errors), 1, errors)
+        self.assertIn("にidがありません", errors[0])
+
+    def test_plain_code_blocks_need_no_registration(self):
+        """全文のコード欄や比較ブロック（class="diff" でない <pre>）は、登録を求めない。"""
+        page = '<pre id="code-main" tabindex="0"><code>x\n</code></pre><pre><code>y\n</code></pre>'
+        self.assertEqual(self._registration_errors(page, []), [])
+
+    def test_block_registered_twice_is_rejected(self):
+        """1つの枠を2件の変更に書くと、どちらかは当てられない。書き写しの誤りとして知らせる。"""
+        page = self._block("diff-main", self.MAIN)
+        errors = self._registration_errors(page, [self._diff(), self._diff(before=self.AFTER_NAME, after="x.dart")])
+        self.assertEqual(len(errors), 1, errors)
+        self.assertIn("差分ブロックが、diffsに2回書いてあります: docs/x/index.html の diff-main", errors[0])
+
+    # ------------------------------------------------------------------
+    # 設定の書き方（check_config）
+    # ------------------------------------------------------------------
+
+    def _config_errors(self, diff: dict) -> list[str]:
+        return CHECKER.check_config({"scan_roots": [], "terms": [], "projects": [self._project(diffs=[diff])]})
+
+    def test_incomplete_diff_setting_is_reported_in_japanese(self):
+        """diffs の書き忘れや書き間違いを、トレースバックではなく日本語のエラーにする。"""
+        complete = self._diff()
+        self.assertEqual(self._config_errors(complete), [])
+        self.assertEqual(self._config_errors({**complete, "label": "pubspec.yaml"}), [])
+        for key in ("html", "ids", "before", "after"):
+            with self.subTest(key=key):
+                errors = self._config_errors({name: value for name, value in complete.items() if name != key})
+                self.assertEqual(len(errors), 1, errors)
+                self.assertIn(f"のdiffs[0]に{key}がありません", errors[0])
+        for ids in ("diff-main", [], [""]):
+            with self.subTest(ids=ids):
+                errors = self._config_errors({**complete, "ids": ids})
+                self.assertEqual(len(errors), 1, errors)
+                self.assertIn("idsは、<pre>のidを1つ以上並べた配列で書いてください", errors[0])
+        for key in ("html", "before", "after"):
+            with self.subTest(wrong=key):
+                errors = self._config_errors({**complete, key: ["a", "b"]})
+                self.assertEqual(len(errors), 1, errors)
+                self.assertIn(f"のdiffs[0]の{key}は、ファイルのパスを文字列で書いてください", errors[0])
+        errors = self._config_errors({**complete, "label": ""})
+        self.assertEqual(len(errors), 1, errors)
+        self.assertIn("のdiffs[0]のlabelは文字列で書いてください", errors[0])
+
+    # ------------------------------------------------------------------
+    # 差分ブロックを作る（--print-diff）
+    # ------------------------------------------------------------------
+
+    def test_generated_block_passes_the_check(self):
+        """--print-diff が作った枠は、そのまま検査を通る。"""
+        before, after = CHECKER.code_lines(self.BEFORE), CHECKER.code_lines(self.AFTER)
+        hunks = CHECKER.diff_hunks_between(before, after, 1)
+        block = CHECKER.render_diff_block(hunks, "diff-main")
+        self.assertIn('<pre id="diff-main" class="diff" tabindex="0"><code>', block)
+        self.assertIn("<ins>  WidgetsFlutterBinding.ensureInitialized();\n</ins>", block)
+        self.assertEqual(self._errors(block), [])
+
+    def test_generated_block_gets_enough_lines_to_fix_the_place(self):
+        """前後1行だけでは場所が決まらないまとまりには、決まるまで行を足す。"""
+        before = ["void a() {", "  run();", "}", "", "void b() {", "  run();", "}"]
+        after = ["void a() {", "  run();", "}", "", "void b() {", "  run();", "  stop();", "}"]
+        hunks = CHECKER.diff_hunks_between(before, after, 1)
+        # 「  run();」と「}」だけでは a と b のどちらか決まらないので、「void b() {」まで含める。
+        self.assertEqual(hunks, [[(" ", "void b() {"), (" ", "  run();"), ("+", "  stop();"), (" ", "}")]])
+        self.assertEqual(CHECKER.apply_diff_hunks(before, hunks), after)
+
+    def test_generated_hunks_close_to_each_other_are_joined(self):
+        """あいだが数行しかないまとまりは、⋮ で省かずに1つにつなげる。"""
+        before = [f"line {number}" for number in range(1, 21)]
+        near = before[:3] + ["added A"] + before[3:8] + ["added B"] + before[8:]
+        self.assertEqual(len(CHECKER.diff_hunks_between(before, near, 1)), 1)
+        far = before[:3] + ["added A"] + before[3:15] + ["added B"] + before[15:]
+        hunks = CHECKER.diff_hunks_between(before, far, 1)
+        self.assertEqual(len(hunks), 2)
+        self.assertEqual(CHECKER.render_diff_block(hunks, "x").count(self.GAP), 1)
+
+    def test_added_function_is_shown_as_a_whole(self):
+        """関数を1つ足したとき、足す行を「前の関数の閉じかっこ」から始めない。
+
+        機械的な差分は、同じ行（閉じかっこ・空行）が続くところで、どこからを足す行とみなすかを
+        決められない。足す行が、関数の先頭から、その閉じかっこと区切りの空行までになる位置を選ぶ。
+        """
+        before = ["class State {", "  void change() {", "    count += 1;", "  }", "", "  @override",
+                  "  Widget build() {", "  }", "}"]
+        added = ["  void open() {", "    push();", "  }", ""]
+        after = before[:5] + added + before[5:]
+        hunks = CHECKER.diff_hunks_between(before, after, 2)
+        self.assertEqual(hunks, [[(" ", "  }"), (" ", ""), *[("+", line) for line in added],
+                                  (" ", "  @override"), (" ", "  Widget build() {")]])
+        self.assertEqual(CHECKER.apply_diff_hunks(before, hunks), after)
+        # 消すだけの変更も、同じ位置にそろえる（上の変更を逆向きにしたもの）。
+        hunks = CHECKER.diff_hunks_between(after, before, 2)
+        self.assertEqual(hunks, [[(" ", "  }"), (" ", ""), *[("-", line) for line in added],
+                                  (" ", "  @override"), (" ", "  Widget build() {")]])
+        self.assertEqual(CHECKER.apply_diff_hunks(after, hunks), before)
+
+    def test_sliding_keeps_a_line_between_neighbouring_changes(self):
+        """ずらしても、となりの変更とつながらない。あいだの、すでにある行を1行は残す。"""
+        before = ["keep();", "", "x1();"]
+        after = ["keep();", "", "added();", "", "x2();"]
+        # 「空行＋足す行」を1行下へずらすと「足す行＋空行」になって読みやすいが、
+        # 下の変更（x1→x2）とのあいだの行が空行1つしかないので、ずらさない。
+        opcodes = [("equal", 0, 1, 0, 1), ("insert", 1, 1, 1, 3), ("equal", 1, 2, 3, 4), ("replace", 2, 3, 4, 5)]
+        self.assertEqual(CHECKER._slide_changes(opcodes, before, after), opcodes)
+        # あいだに2行あれば、1行ずらして、すでにある行を1行残す。
+        before = ["keep();", "", "", "x1();"]
+        after = ["keep();", "", "added();", "", "", "x2();"]
+        opcodes = [("equal", 0, 1, 0, 1), ("insert", 1, 1, 1, 3), ("equal", 1, 3, 3, 5), ("replace", 3, 4, 5, 6)]
+        self.assertEqual(CHECKER._slide_changes(opcodes, before, after),
+                         [("equal", 0, 2, 0, 2), ("insert", 2, 2, 2, 4), ("equal", 2, 3, 4, 5), ("replace", 3, 4, 5, 6)])
+
+    def test_head_lists_only_the_kinds_in_the_block(self):
+        """見出しの凡例には、その枠に出てくる行の種類だけを並べる。"""
+        added = [[(" ", "a"), ("+", "b")]]
+        head = CHECKER.render_diff_head("lib/main.dart", added)
+        self.assertIn("<span>lib/main.dart</span>", head)
+        self.assertIn('<span class="diff-add">足す行</span><span class="diff-keep">すでにある行</span>', head)
+        self.assertNotIn("消す行", head)
+        self.assertIn('<span class="diff-del">消す行</span>',
+                      CHECKER.render_diff_head("x", [[(" ", "a"), ("-", "b"), ("+", "c")]]))
+
+    def test_label_is_the_path_inside_the_project(self):
+        """見出しには、学生がエディタで開くファイルの、プロジェクトの中でのパスを出す。"""
+        monaca = {"root": "M01OshiList", "sources": ["M01OshiList/www/index.html", "M01OshiList/www/js/app.js"]}
+        self.assertEqual(CHECKER.diff_label(self._project(), self._diff()), "lib/main.dart")
+        self.assertEqual(CHECKER.diff_label(monaca, {"after": "teacher/oshi-list/code/12-app.js"}), "www/js/app.js")
+        # sources にないファイルは、番号を外した名前。別の書き方にしたいときは label を書く。
+        self.assertEqual(CHECKER.diff_label(self._project(), {"after": "teacher/x/code/06-pubspec.yaml"}), "pubspec.yaml")
+        self.assertEqual(CHECKER.diff_label(self._project(), self._diff(label="android/gradle.properties")),
+                         "android/gradle.properties")
+        # 同じ名前の完成コードが2つあると決められないので、番号を外した名前のままにする。
+        twins = {"root": "M01OshiList", "sources": ["M01OshiList/www/index.html", "M01OshiList/www/sub/index.html"]}
+        self.assertEqual(CHECKER.diff_label(twins, {"after": "teacher/oshi-list/code/01-index.html"}), "index.html")
+
+    def _print_diff(self, ids: list[str], block_id: str, *, padding: int = 0) -> tuple[int, str, str, list[str]]:
+        """--print-diff の終了コード・標準出力・標準エラーと、出力を教科書に貼ったときの検査の結果。
+
+        padding は、2つの変更のあいだに足す行の数。離すと、まとまりが2つに分かれる。
+        """
+        filler = "".join(f"// {number}\n" for number in range(padding))
+        before = self.BEFORE.replace("class Habit {", filler + "class Habit {")
+        after = self.AFTER.replace("class Habit {", filler + "class Habit {")
+        project = self._project(diffs=[self._diff(ids=ids)])
+        with tempfile.TemporaryDirectory() as name:
+            root = Path(name)
+            self._write(root, self.BEFORE_NAME, before)
+            self._write(root, self.AFTER_NAME, after)
+            self._write(root, "config/teaching-materials.json", json.dumps(
+                {"scan_roots": [], "terms": [], "projects": [project]}, ensure_ascii=False))
+            output, problems = io.StringIO(), io.StringIO()
+            with contextlib.redirect_stdout(output), contextlib.redirect_stderr(problems):
+                code = CHECKER.print_diff(root, self.HTML, block_id, 3)
+        errors = self._errors(output.getvalue(), before=before, after=after, project=project)
+        return code, output.getvalue(), problems.getvalue(), errors
+
+    def test_print_diff_uses_the_registered_files(self):
+        """登録した1件の、直す前後のファイルから枠を作って表示する。登録がなければ知らせる。"""
+        code, output, problems, errors = self._print_diff(["diff-main"], "diff-main")
+        self.assertEqual((code, problems, errors), (0, "", []))
+        self.assertIn('<div class="code-head diff-head"><span>lib/main.dart</span>', output)
+        self.assertIn('<pre id="diff-main" class="diff" tabindex="0"><code>', output)
+        code, output, problems, _ = self._print_diff(["diff-main"], "diff-typo")
+        self.assertEqual((code, output), (1, ""))
+        self.assertIn("diffsに登録がありません: docs/x/index.html の diff-typo", problems)
+
+    def test_print_diff_splits_the_hunks_over_the_registered_ids(self):
+        """ids の数とまとまりの数が同じなら、まとまりごとに1つの枠にして、ids の順に id を付ける。"""
+        code, output, problems, errors = self._print_diff(["diff-main-a", "diff-main-b"], "diff-main-b", padding=12)
+        self.assertEqual((code, problems, errors), (0, "", []))
+        self.assertEqual(output.count('<div class="code-head diff-head">'), 2)
+        self.assertLess(output.index('<pre id="diff-main-a"'), output.index('<pre id="diff-main-b"'))
+        self.assertNotIn(self.GAP, output)
+        # 数が合わなければ、全部を1つの枠で出して、分け方を知らせる。
+        ids = ["diff-main-a", "diff-main-b", "diff-main-c"]
+        code, output, problems, _ = self._print_diff(ids, "diff-main-a", padding=12)
+        self.assertEqual(code, 0)
+        self.assertEqual(output.count("<pre "), 1)
+        self.assertIn('<pre id="diff-main-a"', output)
+        self.assertEqual(output.count(self.GAP), 1)
+        self.assertIn("まとまりは2つ、idsは3つです", problems)
+
+    def test_validate_runs_the_checks(self):
+        """validate() の流れから、当てた結果の検査と登録もれの検査の両方が呼ばれる。"""
+        with tempfile.TemporaryDirectory() as name:
+            root = Path(name)
+            self._write(root, self.BEFORE_NAME, self.BEFORE)
+            self._write(root, self.AFTER_NAME, self.AFTER)
+            self._write(root, self.HTML, self._block("diff-main", self.MAIN) + self._block("diff-other", self.HABIT))
+            self._write(root, "config/teaching-materials.json", json.dumps(
+                {"scan_roots": [], "terms": [], "projects": [self._project()]}, ensure_ascii=False))
+            errors = CHECKER.validate(root)
+            self.assertTrue(any(f"diff-mainを{self.BEFORE_NAME}に当てても、{self.AFTER_NAME}と一致しません" in error
+                                for error in errors), errors)
+            self.assertTrue(any("diffsにありません: diff-other" in error for error in errors), errors)
 
 
 if __name__ == "__main__":
