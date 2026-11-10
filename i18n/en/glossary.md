@@ -155,6 +155,21 @@ Monacaは日本語表示で使う。画面の言葉は訳さずに残し、う�
 | 最小限のテンプレート | Minimal template | 新規作成のテンプレートの選択肢 |
 | プレビュー | Preview | クラウドIDEの画面 |
 
+## 差分ブロックの言葉（jec-25cm-kotlin とそろえる）
+
+すでにあるファイルを直すSTEPの「差分ブロック」（足す行・消す行・すでにある行を色で示すコードの枠）で使う言葉。いまは F01 で使う（#195）。Kotlin演習（jec-25cm-kotlin）の教科書にも、同じ日本語の凡例と読み方の説明があるので、同じ訳語にしてある。そろえた相手は、jec-25cm-kotlin #275 の翻訳で照合まで済んだ訳（2026-11-10 時点では、あちらの main にはまだ入っていない）。あちらの訳語が変わったら、こちらも同じように直す。凡例の札と、読み方を説明する文と、各STEPの指示は、同じ言葉にそろえる。
+
+| 日本語 | 訳 | メモ |
+| --- | --- | --- |
+| 足す行 / 消す行 / すでにある行（凡例の札） | Lines to add / Lines to delete / Existing lines | 枠の見出しの札。折り返さないので短く書く。読み方を説明する文でも同じ言葉を使う（文中は lines to add） |
+| 緑の太字の行 / 赤い取り消し線の行 / 薄い字の行 | Green bold lines / Red strikethrough lines / Faded lines | 読み方を説明する文の中の色つきの札 |
+| 緑の行 / 赤い行 | the green lines / the red line | 各STEPの指示の短い言い方。足す行は何行もあるので複数形。消す行が1行なら the red line、2行なら the red lines。「（赤い行）」は、消す行のコードのすぐうしろに置く（ほかの行を指していると読めないように） |
+| 枠（コードの枠） | code box | 差分ブロックのコードの枠。見出しつきのコード欄（M01・M02・F02）の code block、STEPの確認欄の check box と分ける |
+| 直す / 直す場所 | change / the places to change | 差分の指示の「直す」は change。エラーを直す fix と分ける |
+| 足す / 消す（行を） | add / delete | 凡例と同じ動詞を使う |
+| 同じ場所に（足す） | in the same place |  |
+| ファイルの全文（F01 STEP 07） | the full file | 「このSTEPだけは、直す場所ではなく、ファイルの全文を載せます。」→ Only this STEP shows the full file instead of the places to change. |
+
 ## 書き方の決まり
 
 - 見出しは文頭だけ大文字（sentence case）。`〜` の範囲は en dash（`STEP 00–04`、`Sessions 5–7`）。

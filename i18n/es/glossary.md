@@ -143,6 +143,21 @@ Monacaは日本語表示で使う。画面の言葉は訳さずに残し、う�
 | 最小限のテンプレート | Plantilla mínima | 新規作成のテンプレートの選択肢 |
 | プレビュー | Vista previa | クラウドIDEの画面 |
 
+## 差分ブロックの言葉（jec-25cm-kotlin とそろえる）
+
+すでにあるファイルを直すSTEPの「差分ブロック」（足す行・消す行・すでにある行を色で示すコードの枠）で使う言葉。いまは F01 で使う（#195）。Kotlin演習（jec-25cm-kotlin）の教科書にも、同じ日本語の凡例と読み方の説明があるので、同じ訳語にしてある。そろえた相手は、jec-25cm-kotlin #275 の翻訳で照合まで済んだ訳（2026-11-10 時点では、あちらの main にはまだ入っていない）。あちらの訳語が変わったら、こちらも同じように直す。凡例の札と、読み方を説明する文と、各STEPの指示は、同じ言葉にそろえる。
+
+| 日本語 | 訳 | メモ |
+| --- | --- | --- |
+| 足す行 / 消す行 / すでにある行（凡例の札） | Líneas a agregar / Líneas a borrar / Líneas que ya están | 枠の見出しの札。折り返さないので短く書く。読み方を説明する文でも同じ言葉を使う（文中は las líneas a agregar） |
+| 緑の太字の行 / 赤い取り消し線の行 / 薄い字の行 | líneas verdes en negrita / líneas rojas tachadas / líneas en gris | 読み方を説明する文の中の色つきの札。`color pálido` は使わない（コードの枠が濃紺の地なので、「明るい色の字」と読めて、足す行を指しかねない。jec-25cm-kotlin #275 の照合） |
+| 緑の行 / 赤い行 | las líneas verdes / la línea roja | 各STEPの指示の短い言い方。足す行は何行もあるので複数形。消す行が1行なら la línea roja、2行なら las dos líneas rojas。「（赤い行）」は、消す行のコードのすぐうしろに置く |
+| 枠（コードの枠） | recuadro | 差分ブロックのコードの枠。見出しつきのコード欄（M01・M02・F02）の bloque de código とは別の語 |
+| 直す / 直す場所 | modificar / el lugar que hay que modificar | 差分の指示の「直す」は modificar。誤りを直す corregir と分ける |
+| 足す / 消す（行を） | agregar / borrar | 凡例と同じ動詞を使う |
+| 同じ場所に（足す） | en el mismo lugar |  |
+| ファイルの全文（F01 STEP 07） | el archivo completo | 「このSTEPだけは、直す場所ではなく、ファイルの全文を載せます。」→ Solo en este STEP se muestra el archivo completo, en lugar de los lugares que hay que modificar. |
+
 ## 書き方の決まり
 
 - **学生への呼びかけは tú にする。** 手順は tú の命令形で書く（Haz clic en **Run**.、Abre el archivo.）。usted・vos・vosotros は使わない。複数の人に向けるときは ustedes。
