@@ -247,16 +247,28 @@
       "translation": "Энэ бүлгийн шинэ ойлголт нь <strong>декларатив UI</strong> (宣言的UI) юм. Одоогийн утгад тохирох дэлгэцийн бүтцийг <code>build</code> аргаар буцаана. Одоо байгаа <code>View</code> эсвэл DOM-ийг дарааллуулан хайж өөрчлөхийн оронд «хэрэв ийм утгатай бол энэ интерфейсийн элементийг байрлуулна» гэж тодорхойлдог."
     },
     {
-      "source": "コード欄の見出しには、ファイルのパスと、変え方を書きます。「追加」は、本文が示す行の下（または上）に書き足します。「置き換え」は、本文が示す範囲だけを書き換え、ほかの行は残します。「全体を置き換える」は、そのファイルの中身をすべて置き換えます。",
-      "translation": "Кодын талбарын гарчигт файлын зам болон өөрчлөх аргыг бичсэн. «нэмэх» нь тайлбарт заасан мөрийн доор (эсвэл дээр) нэмж бичих гэсэн үг. «солих» нь тайлбарт заасан хүрээг л өөрчилж, бусад мөрийг хэвээр үлдээх гэсэн үг. «файлыг бүхэлд нь солих» нь тухайн файлын агуулгыг бүгдийг нь солих гэсэн үг."
+      "source": "このあとの枠には、ファイルの<strong>直す場所だけ</strong>を載せます。<span1>緑の太字の行</span1>は足す行、<span2>赤い取り消し線の行</span2>は消す行です。<span3>薄い字の行</span3>は、すでにファイルにある行で、入力しません。直す場所を探す目印にします。",
+      "translation": "Үүнээс хойших хүрээн дотор файлын <strong>засах газрыг л</strong> харуулна. <span1>Ногоон тод үсэгтэй мөр</span1> нь нэмэх мөр, <span2>улаан дундуур зураастай мөр</span2> нь устгах мөр юм. <span3>Бүдэг үсэгтэй мөр</span3> нь файлд аль хэдийн байгаа мөр бөгөөд түүнийг бичиж оруулахгүй. Эдгээр мөрийг засах газраа олох тэмдэг болгон ашиглана."
     },
     {
-      "source": "<code>lib/main.dart</code>で、<code>return const MaterialApp(</code>の下にある<code>home: Scaffold(body: Center(child: Text('Hello World!'))),</code>の1行を、次のコードに置き換えます。<code>return const MaterialApp(</code>の行と、その下の<code>);</code>の行は残します。",
-      "translation": "<code>lib/main.dart</code> файлд <code>return const MaterialApp(</code> мөрийн доор байгаа <code>home: Scaffold(body: Center(child: Text('Hello World!'))),</code> гэсэн 1 мөрийг дараах кодоор солино уу. <code>return const MaterialApp(</code> мөр болон түүний доорх <code>);</code> мөрийг хэвээр үлдээнэ үү."
+      "source": "前のSTEPで文字や数値を自分で変えた行は、枠の中の文字と違っていても、同じ場所の行として読みます。",
+      "translation": "Өмнөх STEP-д текст эсвэл тоон утгыг нь өөрөө өөрчилсөн мөрийг хүрээн доторх тексттэй өөр байсан ч ижил байршил дахь мөр гэж уншина уу."
     },
     {
-      "source": "lib/main.dart · 置き換え · home: Scaffold(…) の1行",
-      "translation": "lib/main.dart · солих · home: Scaffold(…) гэсэн 1 мөр"
+      "source": "<code>lib/main.dart</code>で、<code>return const MaterialApp(</code>の下にある<code>home: Scaffold(body: Center(child: Text('Hello World!'))),</code>の1行（赤い行）を消し、同じ場所に緑の行を足します。",
+      "translation": "<code>lib/main.dart</code> файлд <code>return const MaterialApp(</code> мөрийн доор байгаа <code>home: Scaffold(body: Center(child: Text('Hello World!'))),</code> гэсэн 1 мөрийг (улаан мөр) устгаад, ижил байршилд ногоон мөрүүдийг нэмнэ үү."
+    },
+    {
+      "source": "足す行",
+      "translation": "Нэмэх мөр"
+    },
+    {
+      "source": "消す行",
+      "translation": "Устгах мөр"
+    },
+    {
+      "source": "すでにある行",
+      "translation": "Байгаа мөр"
     },
     {
       "source": "<code>MaterialApp</code>はアプリの設定、<code>Scaffold</code>は画面の基本枠、<code>SafeArea</code>はOSの表示領域を避ける余白、<code>Center</code>は中央配置、<code>Text</code>は文字を担当します。<code>child:</code>は1つのWidget、後で使う<code>children:</code>は複数のWidgetのリストです。<code>MaterialApp</code>に加えた<code>debugShowCheckedModeBanner: false</code>は、STEP 01で画面の右上に出ていたDEBUGの帯を消す設定です。帯はデバッグ実行中を示す目印で、アプリの動きには関係しません。",
@@ -371,12 +383,8 @@
       "translation": "Visual Studio Code дээр ижил <code>F01StampBoard</code> төслийг нээж, iOS дээр ажиллуулна уу. Өнөөдрийн эхлэх төлөв нь голд нь ганц <code>Text</code> байгаа дэлгэц юм. Энэ STEP-д <code>Center</code>-ийн <code>child</code>-ийг <code>Card</code>-аар сольж, зуршлын нэр, тэмдэг, тоог нэг картад нэгтгэнэ."
     },
     {
-      "source": "<code>lib/main.dart</code>で、<code>child: Center(</code>の下にある、<code>child: Text(</code>で始まる1行を、次のコードに置き換えます。STEP 04で文字や大きさを変えた行です。<code>child: Center(</code>の行と、その下の<code>),</code>の行は残します。",
-      "translation": "<code>lib/main.dart</code> файлд <code>child: Center(</code> мөрийн доор байгаа, <code>child: Text(</code> гэж эхэлсэн 1 мөрийг дараах кодоор солино уу. Энэ нь STEP 04 дээр текст, хэмжээг нь өөрчилсөн мөр юм. <code>child: Center(</code> мөр болон түүний доорх <code>),</code> мөрийг хэвээр үлдээнэ үү."
-    },
-    {
-      "source": "lib/main.dart · 置き換え · Center の中の child: Text(…) の1行",
-      "translation": "lib/main.dart · солих · Center доторх child: Text(…) гэсэн 1 мөр"
+      "source": "<code>lib/main.dart</code>で、<code>child: Center(</code>の下にある、<code>child: Text(</code>で始まる1行（赤い行）を消し、同じ場所に緑の行を足します。赤い行は、STEP 04で文字や大きさを変えた行です。枠の中の文字と違っていても、その1行を消します。",
+      "translation": "<code>lib/main.dart</code> файлд <code>child: Center(</code> мөрийн доор байгаа, <code>child: Text(</code> гэж эхэлсэн 1 мөрийг (улаан мөр) устгаад, ижил байршилд ногоон мөрүүдийг нэмнэ үү. Улаан мөр нь STEP 04 дээр текст, хэмжээг нь өөрчилсөн мөр юм. Хүрээн доторх тексттэй өөр байсан ч тэр 1 мөрийг устгана уу."
     },
     {
       "source": "<code>Card</code>の中に<code>Padding</code>、さらに<code>Column</code>を置きます。<code>children</code>の角括弧の中へ<code>Text</code>、<code>SizedBox</code>、<code>Icon</code>を順番に並べます。今回は回数を変える処理をまだ付けないため、0 / 5 回のままです。",
@@ -439,8 +447,8 @@
       "translation": "Зуршлыг 3 ширхэг болгож нэмэгдүүлнэ. Ижил картыг 3 удаа хуулахын оронд нэр, шалтгаан, тоог <code>Habit</code> ангид нэгтгэж, <code>habits</code> жагсаалтаас үүсгэнэ."
     },
     {
-      "source": "<code>lib/main.dart</code>の中身を、次のコードですべて置き換えます。アプリのクラスの名前が<code>MainApp</code>から<code>StampApp</code>に変わり、データの<code>Habit</code>、一覧の画面の<code>StampBoardPage</code>、マークの<code>StampMarks</code>の3つのクラスが加わるので、ほとんどの行が変わるためです。STEP 06で試しに変えた余白の値は、この置き換えで元に戻ります。",
-      "translation": "<code>lib/main.dart</code> файлын агуулгыг бүхэлд нь дараах кодоор солино уу. Учир нь аппын ангийн нэр <code>MainApp</code> байснаа <code>StampApp</code> болж, өгөгдлийн <code>Habit</code>, жагсаалтын дэлгэцийн <code>StampBoardPage</code>, тэмдгийн <code>StampMarks</code> гэсэн 3 анги нэмэгдэх тул ихэнх мөр өөрчлөгдөнө. STEP 06 дээр туршиж өөрчилсөн зайн утга энэ солилтоор анхны хэвэндээ буцна."
+      "source": "このSTEPだけは、直す場所ではなく、ファイルの全文を載せます。<code>lib/main.dart</code>の中身を、次のコードですべて置き換えます。アプリのクラスの名前が<code>MainApp</code>から<code>StampApp</code>に変わり、データの<code>Habit</code>、一覧の画面の<code>StampBoardPage</code>、マークの<code>StampMarks</code>の3つのクラスが加わるので、ほとんどの行が変わるためです。STEP 06で試しに変えた余白の値は、この置き換えで元に戻ります。",
+      "translation": "Зөвхөн энэ STEP-д засах газрыг биш, файлын бүтэн кодыг харуулна. <code>lib/main.dart</code> файлын агуулгыг бүхэлд нь дараах кодоор солино уу. Учир нь аппын ангийн нэр <code>MainApp</code> байснаа <code>StampApp</code> болж, өгөгдлийн <code>Habit</code>, жагсаалтын дэлгэцийн <code>StampBoardPage</code>, тэмдгийн <code>StampMarks</code> гэсэн 3 анги нэмэгдэх тул ихэнх мөр өөрчлөгдөнө. STEP 06 дээр туршиж өөрчилсөн зайн утга энэ солилтоор анхны хэвэндээ буцна."
     },
     {
       "source": "lib/main.dart · 全体を置き換える",
@@ -599,36 +607,20 @@
       "translation": "Үйлдлээр өөрчлөгдөх <code>habits</code>-ийг <code>State</code> рүү шилжүүлнэ. <code>StampBoardPage</code> нь <code>StatefulWidget</code> болж, <code>createState</code> нь <code>_StampBoardPageState</code>-ийг үүсгэнэ. Widget нь дэлгэцийн тохиргоо, харин <code>State</code> нь үйлдлээр өөрчлөгдөх утгуудыг хадгалдаг. Нэрний эхэнд байгаа доогуур зураас нь Dart-ийн сангаас гадагш гаргахгүй, дотооддоо ашиглах нэр гэсэн тодорхойлолт юм."
     },
     {
-      "source": "<code>lib/main.dart</code>を4か所変えます。まず、<code>StampApp</code>の<code>build</code>にある<code>home: StampBoardPage(),</code>の1行を、次の1行に置き換えます。次の置き換えで<code>StampBoardPage</code>のコンストラクタを<code>const</code>にするので、呼び出す側にも<code>const</code>を付けます。",
-      "translation": "<code>lib/main.dart</code> файлын 4 газрыг өөрчилнө. Эхлээд <code>StampApp</code> ангийн <code>build</code> дотор байгаа <code>home: StampBoardPage(),</code> гэсэн 1 мөрийг дараах 1 мөрөөр солино уу. Дараагийн солилтоор <code>StampBoardPage</code> ангийн байгуулагчийг <code>const</code> болгох тул дуудаж буй талд ч мөн <code>const</code> нэмнэ."
+      "source": "<code>lib/main.dart</code>を4か所直します。まず、<code>StampApp</code>の<code>build</code>にある<code>home: StampBoardPage(),</code>の1行を、<code>const</code>を付けた緑の行に直します。次の枠で<code>StampBoardPage</code>のコンストラクタを<code>const</code>にするので、呼び出す側にも<code>const</code>を付けます。",
+      "translation": "<code>lib/main.dart</code> файлын 4 газрыг засна. Эхлээд <code>StampApp</code> ангийн <code>build</code> дотор байгаа <code>home: StampBoardPage(),</code> гэсэн 1 мөрийг <code>const</code> нэмсэн ногоон мөр болгож засна уу. Дараагийн хүрээн дотор <code>StampBoardPage</code> ангийн байгуулагчийг <code>const</code> болгох тул дуудаж буй талд ч мөн <code>const</code> нэмнэ."
     },
     {
-      "source": "lib/main.dart · 置き換え · home: StampBoardPage(), の1行",
-      "translation": "lib/main.dart · солих · home: StampBoardPage(), гэсэн 1 мөр"
+      "source": "次に、<code>StampBoardPage</code>のクラスを2つに分けます。<code>class StampBoardPage extends StatelessWidget {</code>と、その下の<code>StampBoardPage({super.key});</code>の2行（赤い行）を消し、緑の行を足します。<code>final List&lt;Habit&gt; habits = [</code>の行から下は、新しい<code>_StampBoardPageState</code>の中身になります。もとのクラスを閉じていた<code>}</code>（<code>buildHabitCard</code>の下の行）は、そのまま<code>_StampBoardPageState</code>を閉じる<code>}</code>になります。",
+      "translation": "Дараа нь <code>StampBoardPage</code> ангийг 2 анги болгон хуваана. <code>class StampBoardPage extends StatelessWidget {</code> мөр болон түүний доорх <code>StampBoardPage({super.key});</code> мөр гэсэн 2 мөрийг (улаан мөрүүд) устгаад, ногоон мөрүүдийг нэмнэ үү. <code>final List&lt;Habit&gt; habits = [</code> мөр болон түүнээс доош байгаа хэсэг нь шинэ <code>_StampBoardPageState</code> ангийн агуулга болно. Анхны ангийг хааж байсан <code>}</code> (<code>buildHabitCard</code> хэсгийн доорх мөр) нь тэр хэвээрээ <code>_StampBoardPageState</code> ангийг хаах <code>}</code> болно."
     },
     {
-      "source": "次に、<code>class StampBoardPage extends StatelessWidget {</code>の行から、その下の<code>StampBoardPage({super.key});</code>の行と空行までの3行を、次のコードに置き換えます。<code>final List&lt;Habit&gt; habits = [</code>の行から下は残します。もとのクラスを閉じていた<code>}</code>（<code>buildHabitCard</code>の下の行）は、そのまま<code>_StampBoardPageState</code>を閉じる<code>}</code>になります。",
-      "translation": "Дараа нь <code>class StampBoardPage extends StatelessWidget {</code> мөрөөс эхлээд түүний доорх <code>StampBoardPage({super.key});</code> мөр болон хоосон мөр хүртэлх 3 мөрийг дараах кодоор солино уу. <code>final List&lt;Habit&gt; habits = [</code> мөр болон түүнээс доош байгаа хэсгийг хэвээр үлдээнэ үү. Анхны ангийг хааж байсан <code>}</code> (<code>buildHabitCard</code> хэсгийн доорх мөр) нь тэр хэвээрээ <code>_StampBoardPageState</code> ангийг хаах <code>}</code> болно."
+      "source": "続けて、<code>habits</code>のリストを閉じる<code>];</code>の下に、1行空けて緑の行を足します。下の<code>@override</code>との間も1行空けます。",
+      "translation": "Үргэлжлүүлэн <code>habits</code> жагсаалтыг хаах <code>];</code> мөрийн доор 1 хоосон мөр үлдээгээд ногоон мөрүүдийг нэмнэ үү. Нэмсэн мөрүүд болон доорх <code>@override</code> мөрийн хооронд ч мөн 1 хоосон мөр үлдээнэ үү."
     },
     {
-      "source": "lib/main.dart · 置き換え · class StampBoardPage の行から、その下の空行まで",
-      "translation": "lib/main.dart · солих · class StampBoardPage мөрөөс түүний доорх хоосон мөр хүртэл"
-    },
-    {
-      "source": "続けて、<code>habits</code>のリストを閉じる<code>];</code>の下に、1行空けて次のコードを追加します。下の<code>@override</code>との間も1行空けます。",
-      "translation": "Үргэлжлүүлэн <code>habits</code> жагсаалтыг хаах <code>];</code> мөрийн доор 1 хоосон мөр үлдээгээд дараах кодыг нэмнэ үү. Нэмсэн код болон доорх <code>@override</code> мөрийн хооронд ч мөн 1 хоосон мөр үлдээнэ үү."
-    },
-    {
-      "source": "lib/main.dart · 追加 · habits のリストを閉じる ]; の下",
-      "translation": "lib/main.dart · нэмэх · habits жагсаалтыг хаах ]; мөрийн доор"
-    },
-    {
-      "source": "最後に、<code>buildHabitCard</code>の中にある<code>const Text('回数を変える操作は、このあと作ります。'),</code>の1行を、次のコードに置き換えます。",
-      "translation": "Эцэст нь <code>buildHabitCard</code> дотор байгаа <code>const Text('回数を変える操作は、このあと作ります。'),</code> гэсэн 1 мөрийг дараах кодоор солино уу."
-    },
-    {
-      "source": "lib/main.dart · 置き換え · 「回数を変える操作は、このあと作ります。」の1行",
-      "translation": "lib/main.dart · солих · «回数を変える操作は、このあと作ります。» (Тоог өөрчлөх үйлдлийг дараа нь хийнэ.) гэсэн 1 мөр"
+      "source": "最後に、<code>buildHabitCard</code>の中にある<code>const Text('回数を変える操作は、このあと作ります。'),</code>の1行（赤い行）を消し、同じ場所に緑の行を足します。",
+      "translation": "Эцэст нь <code>buildHabitCard</code> дотор байгаа <code>const Text('回数を変える操作は、このあと作ります。'),</code> гэсэн 1 мөрийг (улаан мөр) устгаад, ижил байршилд ногоон мөрүүдийг нэмнэ үү."
     },
     {
       "source": "ボタンの<code>onPressed</code>へ<code>() =&gt; changeStamp(habit, 1)</code>を渡します。これは引数のない関数で、押したときに<code>changeStamp</code>を呼びます。関数の呼出結果をその場で渡す書き方と区別してください。Dartのアローは1つの式を返す省略形です。",
@@ -811,28 +803,16 @@
       "translation": "Карт дээр «詳しく見る» (Дэлгэрэнгүй үзэх) товчийг нэмж, <code>openDetail(habit)</code>-ийг дуудна. <code>openDetail</code> нь <code>Navigator.push</code> рүү <code>context</code> болон <code>MaterialPageRoute</code>-ийг дамжуулж, замын (route) <code>builder</code> дотор <code>HabitDetailPage</code>-ийг үүсгэнэ."
     },
     {
-      "source": "<code>lib/main.dart</code>に3か所追加します。まず、<code>_StampBoardPageState</code>の中で、<code>changeStamp</code>の関数を閉じる<code>}</code>の下に、1行空けて次のコードを追加します。下の<code>@override</code>との間も1行空けます。",
-      "translation": "<code>lib/main.dart</code> файлд 3 газар нэмнэ. Эхлээд <code>_StampBoardPageState</code> дотор <code>changeStamp</code> функцийг хаах <code>}</code> мөрийн доор 1 хоосон мөр үлдээгээд дараах кодыг нэмнэ үү. Нэмсэн код болон доорх <code>@override</code> мөрийн хооронд ч мөн 1 хоосон мөр үлдээнэ үү."
+      "source": "<code>lib/main.dart</code>に3か所足します。まず、<code>_StampBoardPageState</code>の中で、<code>changeStamp</code>の関数を閉じる<code>}</code>の下に、1行空けて緑の行を足します。下の<code>@override</code>との間も1行空けます。",
+      "translation": "<code>lib/main.dart</code> файлд 3 газар нэмнэ. Эхлээд <code>_StampBoardPageState</code> дотор <code>changeStamp</code> функцийг хаах <code>}</code> мөрийн доор 1 хоосон мөр үлдээгээд ногоон мөрүүдийг нэмнэ үү. Нэмсэн мөрүүд болон доорх <code>@override</code> мөрийн хооронд ч мөн 1 хоосон мөр үлдээнэ үү."
     },
     {
-      "source": "lib/main.dart · 追加 · changeStamp の閉じかっこの下",
-      "translation": "lib/main.dart · нэмэх · changeStamp функцийн хаах хаалтын доор"
+      "source": "次に、<code>buildHabitCard</code>の<code>Wrap</code>の中で、「1つ戻す」の<code>TextButton</code>を閉じる<code>),</code>の下に、緑の行を足します。<code>Wrap</code>の3つ目のボタンになります。",
+      "translation": "Дараа нь <code>buildHabitCard</code> доторх <code>Wrap</code> хэсэгт «1つ戻す» (Нэгийг буцаах) гэсэн <code>TextButton</code> товчийг хаах <code>),</code> мөрийн доор ногоон мөрүүдийг нэмнэ үү. Энэ нь <code>Wrap</code> доторх 3 дахь товч болно."
     },
     {
-      "source": "次に、<code>buildHabitCard</code>の<code>Wrap</code>の中で、「1つ戻す」の<code>TextButton</code>を閉じる<code>),</code>の下に、次のコードを追加します。<code>Wrap</code>の3つ目のボタンになります。",
-      "translation": "Дараа нь <code>buildHabitCard</code> доторх <code>Wrap</code> хэсэгт «1つ戻す» (Нэгийг буцаах) гэсэн <code>TextButton</code> товчийг хаах <code>),</code> мөрийн доор дараах кодыг нэмнэ үү. Энэ нь <code>Wrap</code> доторх 3 дахь товч болно."
-    },
-    {
-      "source": "lib/main.dart · 追加 · 「1つ戻す」の TextButton の下",
-      "translation": "lib/main.dart · нэмэх · «1つ戻す» (Нэгийг буцаах) TextButton товчны доор"
-    },
-    {
-      "source": "最後に、ファイルの末尾に、1行空けて次のコードを追加します。詳細の画面の<code>HabitDetailPage</code>です。中身はSTEP 17で読みます。",
-      "translation": "Эцэст нь файлын төгсгөлд 1 хоосон мөр үлдээгээд дараах кодыг нэмнэ үү. Энэ нь дэлгэрэнгүй дэлгэцийн <code>HabitDetailPage</code> анги юм. Агуулгыг нь STEP 17 дээр уншина."
-    },
-    {
-      "source": "lib/main.dart · 追加 · ファイルの末尾",
-      "translation": "lib/main.dart · нэмэх · файлын төгсгөл"
+      "source": "最後に、ファイルの末尾に、1行空けて緑の行を足します。詳細の画面の<code>HabitDetailPage</code>です。中身はSTEP 17で読みます。",
+      "translation": "Эцэст нь файлын төгсгөлд 1 хоосон мөр үлдээгээд ногоон мөрүүдийг нэмнэ үү. Энэ нь дэлгэрэнгүй дэлгэцийн <code>HabitDetailPage</code> анги юм. Агуулгыг нь STEP 17 дээр уншина."
     },
     {
       "source": "<code>Navigator</code>は画面の重なりを管理します。<code>push</code>で詳細を上に載せるため、一覧の<code>State</code>は下に残ります。<code>MaterialPageRoute</code>の<code>&lt;void&gt;</code>は、この画面から結果の値を受け取らない指定です。<code>builder</code>の<code>context</code>は新しい画面を作る場所の情報です。",
@@ -1043,8 +1023,8 @@
       "translation": "Хаалтны алдаа гарсан"
     },
     {
-      "source": "最初のエラーから確認。<code>child</code>は1つ、<code>children</code>はリスト。そのSTEPのコード欄と、置き換えた範囲の閉じ括弧を見比べる。",
-      "translation": "Эхний алдаанаас эхлэн шалгана уу. <code>child</code> нь 1 ширхэг, <code>children</code> нь жагсаалт байна. Тухайн STEP-ийн кодын талбар болон өөрийн сольсон хүрээний хаах хаалтыг харьцуулан шалгана уу."
+      "source": "最初のエラーから確認。<code>child</code>は1つ、<code>children</code>はリスト。そのSTEPの枠と、足した行・消した行の前後の閉じ括弧を見比べる。",
+      "translation": "Эхний алдаанаас эхлэн шалгана уу. <code>child</code> нь 1 ширхэг, <code>children</code> нь жагсаалт байна. Тухайн STEP-ийн хүрээн доторх код болон өөрийн нэмсэн, устгасан мөрүүдийн өмнө, хойно байгаа хаах хаалтыг харьцуулан шалгана уу."
     },
     {
       "source": "再起動すると0に戻った",
