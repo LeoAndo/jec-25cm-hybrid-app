@@ -247,18 +247,6 @@
       "translation": "ဤယူနစ်၏ အယူအဆအသစ်မှာ <strong>declarative UI</strong> (宣言的UI) ဖြစ်ပါသည်။ လက်ရှိတန်ဖိုးများနှင့် ကိုက်ညီသော screen ဖွဲ့စည်းပုံကို <code>build</code> ဖြင့် return ပြန်ပေးပါသည်။ ရှိပြီးသား <code>View</code> သို့မဟုတ် DOM များကို အစဉ်လိုက် ရှာဖွေပြီး ပြန်ရေးမည့်အစား “ဤတန်ဖိုးဖြစ်ပါက ဤအစိတ်အပိုင်းကို ထားရှိမည်” ဟု ရေးသားဖော်ပြပါသည်။"
     },
     {
-      "source": "コード欄の見出しには、ファイルのパスと、変え方を書きます。「追加」は、本文が示す行の下（または上）に書き足します。「置き換え」は、本文が示す範囲だけを書き換え、ほかの行は残します。「全体を置き換える」は、そのファイルの中身をすべて置き換えます。",
-      "translation": "Code ကွက်၏ ခေါင်းစဉ်တွင် ဖိုင်၏ path နှင့် ပြောင်းလဲပုံကို ရေးထားပါသည်။ “ထည့်ရန်” ဆိုသည်မှာ စာသားက ညွှန်ပြထားသော စာကြောင်း၏ အောက်ဘက် (သို့မဟုတ် အပေါ်ဘက်) တွင် ထပ်ရေးထည့်ရန် ဖြစ်ပါသည်။ “အစားထိုးရန်” ဆိုသည်မှာ စာသားက ညွှန်ပြထားသော အပိုင်းကိုသာ ပြင်ရေးပြီး အခြားစာကြောင်းများကို ချန်ထားရန် ဖြစ်ပါသည်။ “ဖိုင်တစ်ခုလုံး အစားထိုးရန်” ဆိုသည်မှာ ထိုဖိုင်၏ ပါဝင်သည့်အရာ အားလုံးကို အစားထိုးရန် ဖြစ်ပါသည်။"
-    },
-    {
-      "source": "<code>lib/main.dart</code>で、<code>return const MaterialApp(</code>の下にある<code>home: Scaffold(body: Center(child: Text('Hello World!'))),</code>の1行を、次のコードに置き換えます。<code>return const MaterialApp(</code>の行と、その下の<code>);</code>の行は残します。",
-      "translation": "<code>lib/main.dart</code> တွင် <code>return const MaterialApp(</code> ၏ အောက်ရှိ <code>home: Scaffold(body: Center(child: Text('Hello World!'))),</code> စာကြောင်း 1 ကြောင်းကို အောက်ပါ code ဖြင့် အစားထိုးပါ။ <code>return const MaterialApp(</code> စာကြောင်းနှင့် ထို့အောက်ရှိ <code>);</code> စာကြောင်းကို ချန်ထားပါ။"
-    },
-    {
-      "source": "lib/main.dart · 置き換え · home: Scaffold(…) の1行",
-      "translation": "lib/main.dart · အစားထိုးရန် · home: Scaffold(…) စာကြောင်း 1 ကြောင်း"
-    },
-    {
       "source": "<code>MaterialApp</code>はアプリの設定、<code>Scaffold</code>は画面の基本枠、<code>SafeArea</code>はOSの表示領域を避ける余白、<code>Center</code>は中央配置、<code>Text</code>は文字を担当します。<code>child:</code>は1つのWidget、後で使う<code>children:</code>は複数のWidgetのリストです。<code>MaterialApp</code>に加えた<code>debugShowCheckedModeBanner: false</code>は、STEP 01で画面の右上に出ていたDEBUGの帯を消す設定です。帯はデバッグ実行中を示す目印で、アプリの動きには関係しません。",
       "translation": "<code>MaterialApp</code> သည် app ၏ setting များ၊ <code>Scaffold</code> သည် screen ၏ အခြေခံဘောင်၊ <code>SafeArea</code> သည် OS ၏ ပြသမှုဧရိယာကို ရှောင်ရှားသည့် margin၊ <code>Center</code> သည် အလယ်တွင် နေရာချထားခြင်း၊ <code>Text</code> သည် စာသားကို တာဝန်ယူပါသည်။ <code>child:</code> သည် Widget တစ်ခုဖြစ်ပြီး နောက်ပိုင်းတွင် သုံးမည့် <code>children:</code> သည် Widget အများအပြားပါဝင်သော list ဖြစ်ပါသည်။ <code>MaterialApp</code> တွင် ထည့်သွင်းထားသော <code>debugShowCheckedModeBanner: false</code> သည် STEP 01 တွင် screen ၏ ညာဘက်အပေါ်ထောင့်၌ ပေါ်နေသော DEBUG တံဆိပ်ပြားကို ဖျောက်သည့် setting ဖြစ်ပါသည်။ ၎င်းတံဆိပ်ပြားသည် debug run နေခြင်းကို ပြသသည့် အမှတ်အသားဖြစ်ပြီး app ၏ လုပ်ဆောင်ချက်နှင့် မသက်ဆိုင်ပါ။"
     },
@@ -371,14 +359,6 @@
       "translation": "Visual Studio Code တွင် တူညီသော <code>F01StampBoard</code> ကို ဖွင့်ပြီး iOS တွင် run ပါ။ ယနေ့ စတင်သည့် အခြေအနေမှာ အလယ်တွင် <code>Text</code> တစ်ခုတည်းသာ ရှိသော screen ဖြစ်ပါသည်။ ဤ STEP တွင် <code>Center</code> ၏ <code>child</code> ကို <code>Card</code> သို့ ပြောင်းလဲပြီး အလေ့အထအမည်၊ mark နှင့် အကြိမ်အရေအတွက်တို့ကို card တစ်ခုတည်းတွင် စုစည်းပါမည်။"
     },
     {
-      "source": "<code>lib/main.dart</code>で、<code>child: Center(</code>の下にある、<code>child: Text(</code>で始まる1行を、次のコードに置き換えます。STEP 04で文字や大きさを変えた行です。<code>child: Center(</code>の行と、その下の<code>),</code>の行は残します。",
-      "translation": "<code>lib/main.dart</code> တွင် <code>child: Center(</code> ၏ အောက်ရှိ <code>child: Text(</code> ဖြင့် စတင်သော စာကြောင်း 1 ကြောင်းကို အောက်ပါ code ဖြင့် အစားထိုးပါ။ ၎င်းသည် STEP 04 တွင် စာသားနှင့် အရွယ်အစားကို ပြောင်းလဲခဲ့သော စာကြောင်း ဖြစ်ပါသည်။ <code>child: Center(</code> စာကြောင်းနှင့် ထို့အောက်ရှိ <code>),</code> စာကြောင်းကို ချန်ထားပါ။"
-    },
-    {
-      "source": "lib/main.dart · 置き換え · Center の中の child: Text(…) の1行",
-      "translation": "lib/main.dart · အစားထိုးရန် · Center အတွင်းရှိ child: Text(…) စာကြောင်း 1 ကြောင်း"
-    },
-    {
       "source": "<code>Card</code>の中に<code>Padding</code>、さらに<code>Column</code>を置きます。<code>children</code>の角括弧の中へ<code>Text</code>、<code>SizedBox</code>、<code>Icon</code>を順番に並べます。今回は回数を変える処理をまだ付けないため、0 / 5 回のままです。",
       "translation": "<code>Card</code> အတွင်းတွင် <code>Padding</code>၊ ၎င်းအထဲတွင် <code>Column</code> ကို ထားရှိပါ။ <code>children</code> ၏ လေးထောင့်ကွင်းအတွင်း၌ <code>Text</code>၊ <code>SizedBox</code>၊ <code>Icon</code> တို့ကို အစဉ်လိုက် စီစဉ်ပါ။ ယခုတစ်ကြိမ်တွင် အကြိမ်အရေအတွက် ပြောင်းလဲသည့် လုပ်ဆောင်ချက်ကို မထည့်သွင်းသေးသောကြောင့် 0 / 5 ကြိမ် အဖြစ်သာ ရှိနေပါမည်။"
     },
@@ -437,10 +417,6 @@
     {
       "source": "習慣を3件へ増やします。同じカードを3回コピーする代わりに、名前・理由・回数を<code>Habit</code>にまとめ、<code>habits</code>のリストから作ります。",
       "translation": "အလေ့အထကို 3 ခုအထိ တိုးမြှင့်ပါမည်။ တူညီသော card ကို 3 ကြိမ် copy ကူးမည့်အစား အမည်၊ အကြောင်းပြချက်နှင့် အကြိမ်အရေအတွက်တို့ကို <code>Habit</code> ထဲတွင် စုစည်းပြီး <code>habits</code> list မှ တည်ဆောက်ပါမည်။"
-    },
-    {
-      "source": "<code>lib/main.dart</code>の中身を、次のコードですべて置き換えます。アプリのクラスの名前が<code>MainApp</code>から<code>StampApp</code>に変わり、データの<code>Habit</code>、一覧の画面の<code>StampBoardPage</code>、マークの<code>StampMarks</code>の3つのクラスが加わるので、ほとんどの行が変わるためです。STEP 06で試しに変えた余白の値は、この置き換えで元に戻ります。",
-      "translation": "<code>lib/main.dart</code> ၏ ပါဝင်သည့်အရာ အားလုံးကို အောက်ပါ code ဖြင့် အစားထိုးပါ။ App ၏ class အမည်သည် <code>MainApp</code> မှ <code>StampApp</code> သို့ ပြောင်းလဲသွားပြီး data အတွက် <code>Habit</code>၊ စာရင်း screen အတွက် <code>StampBoardPage</code> နှင့် mark အတွက် <code>StampMarks</code> ဟူသော class 3 ခု ထပ်တိုးလာကာ စာကြောင်းအများစု ပြောင်းလဲသွားသောကြောင့် ဖြစ်ပါသည်။ STEP 06 တွင် စမ်းသပ်ပြောင်းလဲခဲ့သော margin တန်ဖိုးများသည် ဤအစားထိုးမှုဖြင့် မူလအတိုင်း ပြန်ဖြစ်သွားပါမည်။"
     },
     {
       "source": "lib/main.dart · 全体を置き換える",
@@ -597,38 +573,6 @@
     {
       "source": "操作で変わる<code>habits</code>を<code>State</code>へ移します。<code>StampBoardPage</code>は<code>StatefulWidget</code>となり、<code>createState</code>が<code>_StampBoardPageState</code>を作ります。Widgetは画面の設定、<code>State</code>は操作によって変わる値を保持します。名前の先頭のアンダースコアはDartのライブラリ内で使う名前という指定です。",
       "translation": "လုပ်ဆောင်မှုများကြောင့် ပြောင်းလဲမည့် <code>habits</code> ကို <code>State</code> သို့ ရွှေ့ပါမည်။ <code>StampBoardPage</code> သည် <code>StatefulWidget</code> ဖြစ်လာပြီး <code>createState</code> က <code>_StampBoardPageState</code> ကို ဖန်တီးပေးပါသည်။ Widget သည် screen ၏ setting ကို ထိန်းသိမ်းထားပြီး <code>State</code> သည် အသုံးပြုသူ၏ လုပ်ဆောင်ချက်ကြောင့် ပြောင်းလဲသော တန်ဖိုးများကို ထိန်းသိမ်းထားပါသည်။ အမည်၏ အစရှိ underscore သည် Dart library အတွင်း၌သာ သုံးမည့် အမည်ဟူသော သတ်မှတ်ချက် ဖြစ်ပါသည်။"
-    },
-    {
-      "source": "<code>lib/main.dart</code>を4か所変えます。まず、<code>StampApp</code>の<code>build</code>にある<code>home: StampBoardPage(),</code>の1行を、次の1行に置き換えます。次の置き換えで<code>StampBoardPage</code>のコンストラクタを<code>const</code>にするので、呼び出す側にも<code>const</code>を付けます。",
-      "translation": "<code>lib/main.dart</code> တွင် နေရာ 4 ခုကို ပြောင်းလဲပါမည်။ ပထမဦးစွာ <code>StampApp</code> ၏ <code>build</code> ထဲရှိ <code>home: StampBoardPage(),</code> စာကြောင်း 1 ကြောင်းကို အောက်ပါ စာကြောင်း 1 ကြောင်းဖြင့် အစားထိုးပါ။ နောက်တစ်ခု အစားထိုးရာတွင် <code>StampBoardPage</code> ၏ constructor ကို <code>const</code> ပြုလုပ်မည်ဖြစ်သောကြောင့် ခေါ်ယူသည့်ဘက်တွင်လည်း <code>const</code> ကို ထည့်ပါ။"
-    },
-    {
-      "source": "lib/main.dart · 置き換え · home: StampBoardPage(), の1行",
-      "translation": "lib/main.dart · အစားထိုးရန် · home: StampBoardPage(), စာကြောင်း 1 ကြောင်း"
-    },
-    {
-      "source": "次に、<code>class StampBoardPage extends StatelessWidget {</code>の行から、その下の<code>StampBoardPage({super.key});</code>の行と空行までの3行を、次のコードに置き換えます。<code>final List&lt;Habit&gt; habits = [</code>の行から下は残します。もとのクラスを閉じていた<code>}</code>（<code>buildHabitCard</code>の下の行）は、そのまま<code>_StampBoardPageState</code>を閉じる<code>}</code>になります。",
-      "translation": "နောက်တစ်ဆင့်အနေဖြင့် <code>class StampBoardPage extends StatelessWidget {</code> စာကြောင်းမှ ၎င်း၏အောက်ရှိ <code>StampBoardPage({super.key});</code> စာကြောင်းနှင့် စာကြောင်းအလွတ်အထိ စာကြောင်း 3 ကြောင်းကို အောက်ပါ code ဖြင့် အစားထိုးပါ။ <code>final List&lt;Habit&gt; habits = [</code> စာကြောင်းမှ အောက်ပိုင်းကို ချန်ထားပါ။ မူလ class ကို ပိတ်ထားခဲ့သော <code>}</code> (<code>buildHabitCard</code> ၏ အောက်ရှိ စာကြောင်း) သည် ထိုအတိုင်းပင် <code>_StampBoardPageState</code> ကို ပိတ်သည့် <code>}</code> ဖြစ်လာပါမည်။"
-    },
-    {
-      "source": "lib/main.dart · 置き換え · class StampBoardPage の行から、その下の空行まで",
-      "translation": "lib/main.dart · အစားထိုးရန် · class StampBoardPage စာကြောင်းမှ ၎င်း၏အောက်ရှိ စာကြောင်းအလွတ်အထိ"
-    },
-    {
-      "source": "続けて、<code>habits</code>のリストを閉じる<code>];</code>の下に、1行空けて次のコードを追加します。下の<code>@override</code>との間も1行空けます。",
-      "translation": "ဆက်လက်၍ <code>habits</code> list ကို ပိတ်သည့် <code>];</code> ၏ အောက်တွင် စာကြောင်း 1 ကြောင်း ခြားပြီး အောက်ပါ code ကို ထည့်ပါ။ အောက်ရှိ <code>@override</code> နှင့်ကြားတွင်လည်း စာကြောင်း 1 ကြောင်း ခြားထားပါ။"
-    },
-    {
-      "source": "lib/main.dart · 追加 · habits のリストを閉じる ]; の下",
-      "translation": "lib/main.dart · ထည့်ရန် · habits list ကို ပိတ်သည့် ]; ၏ အောက်"
-    },
-    {
-      "source": "最後に、<code>buildHabitCard</code>の中にある<code>const Text('回数を変える操作は、このあと作ります。'),</code>の1行を、次のコードに置き換えます。",
-      "translation": "နောက်ဆုံးအနေဖြင့် <code>buildHabitCard</code> အတွင်းရှိ <code>const Text('回数を変える操作は、このあと作ります。'),</code> စာကြောင်း 1 ကြောင်းကို အောက်ပါ code ဖြင့် အစားထိုးပါ။"
-    },
-    {
-      "source": "lib/main.dart · 置き換え · 「回数を変える操作は、このあと作ります。」の1行",
-      "translation": "lib/main.dart · အစားထိုးရန် · 「回数を変える操作は、このあと作ります。」 (Buttons to change the count come later.) စာကြောင်း 1 ကြောင်း"
     },
     {
       "source": "ボタンの<code>onPressed</code>へ<code>() =&gt; changeStamp(habit, 1)</code>を渡します。これは引数のない関数で、押したときに<code>changeStamp</code>を呼びます。関数の呼出結果をその場で渡す書き方と区別してください。Dartのアローは1つの式を返す省略形です。",
@@ -809,30 +753,6 @@
     {
       "source": "カードに詳しく見るを加え、<code>openDetail(habit)</code>を呼びます。<code>openDetail</code>は<code>Navigator.push</code>へ<code>context</code>と<code>MaterialPageRoute</code>を渡し、ルートの<code>builder</code>で<code>HabitDetailPage</code>を作ります。",
       "translation": "Card တွင် 「詳しく見る」 (View details) ကို ထည့်သွင်းပြီး <code>openDetail(habit)</code> ကို ခေါ်ယူပါ။ <code>openDetail</code> သည် <code>Navigator.push</code> သို့ <code>context</code> နှင့် <code>MaterialPageRoute</code> ကို ပေးပို့ပြီး route ၏ <code>builder</code> ဖြင့် <code>HabitDetailPage</code> ကို ဖန်တီးပေးပါသည်။"
-    },
-    {
-      "source": "<code>lib/main.dart</code>に3か所追加します。まず、<code>_StampBoardPageState</code>の中で、<code>changeStamp</code>の関数を閉じる<code>}</code>の下に、1行空けて次のコードを追加します。下の<code>@override</code>との間も1行空けます。",
-      "translation": "<code>lib/main.dart</code> တွင် နေရာ 3 ခု၌ code ထည့်ပါမည်။ ပထမဦးစွာ <code>_StampBoardPageState</code> အတွင်း၌ <code>changeStamp</code> function ကို ပိတ်သည့် <code>}</code> ၏ အောက်တွင် စာကြောင်း 1 ကြောင်း ခြားပြီး အောက်ပါ code ကို ထည့်ပါ။ အောက်ရှိ <code>@override</code> နှင့်ကြားတွင်လည်း စာကြောင်း 1 ကြောင်း ခြားထားပါ။"
-    },
-    {
-      "source": "lib/main.dart · 追加 · changeStamp の閉じかっこの下",
-      "translation": "lib/main.dart · ထည့်ရန် · changeStamp ၏ ပိတ်ကွင်းအောက်"
-    },
-    {
-      "source": "次に、<code>buildHabitCard</code>の<code>Wrap</code>の中で、「1つ戻す」の<code>TextButton</code>を閉じる<code>),</code>の下に、次のコードを追加します。<code>Wrap</code>の3つ目のボタンになります。",
-      "translation": "နောက်တစ်ဆင့်အနေဖြင့် <code>buildHabitCard</code> ၏ <code>Wrap</code> အတွင်း၌ 「1つ戻す」 (Undo) ၏ <code>TextButton</code> ကို ပိတ်သည့် <code>),</code> ၏ အောက်တွင် အောက်ပါ code ကို ထည့်ပါ။ ၎င်းသည် <code>Wrap</code> ၏ တတိယမြောက် ခလုတ် ဖြစ်လာပါမည်။"
-    },
-    {
-      "source": "lib/main.dart · 追加 · 「1つ戻す」の TextButton の下",
-      "translation": "lib/main.dart · ထည့်ရန် · 「1つ戻す」 (Undo) ၏ TextButton အောက်"
-    },
-    {
-      "source": "最後に、ファイルの末尾に、1行空けて次のコードを追加します。詳細の画面の<code>HabitDetailPage</code>です。中身はSTEP 17で読みます。",
-      "translation": "နောက်ဆုံးအနေဖြင့် ဖိုင်၏ အဆုံးတွင် စာကြောင်း 1 ကြောင်း ခြားပြီး အောက်ပါ code ကို ထည့်ပါ။ ၎င်းသည် အသေးစိတ် screen ဖြစ်သော <code>HabitDetailPage</code> ဖြစ်ပါသည်။ ပါဝင်သည့်အရာများကို STEP 17 တွင် ဖတ်ရှုပါမည်။"
-    },
-    {
-      "source": "lib/main.dart · 追加 · ファイルの末尾",
-      "translation": "lib/main.dart · ထည့်ရန် · ဖိုင်၏ အဆုံး"
     },
     {
       "source": "<code>Navigator</code>は画面の重なりを管理します。<code>push</code>で詳細を上に載せるため、一覧の<code>State</code>は下に残ります。<code>MaterialPageRoute</code>の<code>&lt;void&gt;</code>は、この画面から結果の値を受け取らない指定です。<code>builder</code>の<code>context</code>は新しい画面を作る場所の情報です。",
@@ -1041,10 +961,6 @@
     {
       "source": "括弧のエラーが出た",
       "translation": "လက်သည်းကွင်း error ပေါ်လာပါသည်"
-    },
-    {
-      "source": "最初のエラーから確認。<code>child</code>は1つ、<code>children</code>はリスト。そのSTEPのコード欄と、置き換えた範囲の閉じ括弧を見比べる。",
-      "translation": "ပထမဆုံး error မှ စတင်စစ်ဆေးပါ။ <code>child</code> သည် တစ်ခုတည်းဖြစ်ပြီး <code>children</code> သည် list ဖြစ်ပါသည်။ ထို STEP ၏ code ကွက်နှင့် အစားထိုးခဲ့သော အပိုင်း၏ ပိတ်လက်သည်းကွင်းများကို နှိုင်းယှဉ်ကြည့်ပါ။"
     },
     {
       "source": "再起動すると0に戻った",

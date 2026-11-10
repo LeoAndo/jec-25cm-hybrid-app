@@ -247,18 +247,6 @@
       "translation": "The new concept in this unit is <strong>declarative UI</strong> (宣言的UI). <code>build</code> returns the screen structure that corresponds to the current values. Instead of finding existing <code>View</code>s or DOM elements one after another and rewriting them, you write \"for this value, place this UI element\"."
     },
     {
-      "source": "コード欄の見出しには、ファイルのパスと、変え方を書きます。「追加」は、本文が示す行の下（または上）に書き足します。「置き換え」は、本文が示す範囲だけを書き換え、ほかの行は残します。「全体を置き換える」は、そのファイルの中身をすべて置き換えます。",
-      "translation": "The heading of each code block shows the file path and how to change the file. With \"add\", write the code below (or above) the line the text points to. With \"replace\", rewrite only the range the text points to, and keep the other lines. With \"replace entire file\", replace all the contents of that file."
-    },
-    {
-      "source": "<code>lib/main.dart</code>で、<code>return const MaterialApp(</code>の下にある<code>home: Scaffold(body: Center(child: Text('Hello World!'))),</code>の1行を、次のコードに置き換えます。<code>return const MaterialApp(</code>の行と、その下の<code>);</code>の行は残します。",
-      "translation": "In <code>lib/main.dart</code>, replace the one line <code>home: Scaffold(body: Center(child: Text('Hello World!'))),</code> below <code>return const MaterialApp(</code> with the following code. Keep the <code>return const MaterialApp(</code> line and the <code>);</code> line below it."
-    },
-    {
-      "source": "lib/main.dart · 置き換え · home: Scaffold(…) の1行",
-      "translation": "lib/main.dart · replace · the line home: Scaffold(…)"
-    },
-    {
       "source": "<code>MaterialApp</code>はアプリの設定、<code>Scaffold</code>は画面の基本枠、<code>SafeArea</code>はOSの表示領域を避ける余白、<code>Center</code>は中央配置、<code>Text</code>は文字を担当します。<code>child:</code>は1つのWidget、後で使う<code>children:</code>は複数のWidgetのリストです。<code>MaterialApp</code>に加えた<code>debugShowCheckedModeBanner: false</code>は、STEP 01で画面の右上に出ていたDEBUGの帯を消す設定です。帯はデバッグ実行中を示す目印で、アプリの動きには関係しません。",
       "translation": "<code>MaterialApp</code> holds the app settings, <code>Scaffold</code> is the basic frame of the screen, <code>SafeArea</code> is the margin that keeps content out of the areas the OS reserves for its own display, <code>Center</code> centers its content, and <code>Text</code> shows text. <code>child:</code> takes one widget; <code>children:</code>, which you use later, takes a list of widgets. The <code>debugShowCheckedModeBanner: false</code> added to <code>MaterialApp</code> removes the DEBUG banner that appeared at the top right of the screen in STEP 01. The banner only marks that the app is running in debug mode; it does not affect how the app works."
     },
@@ -371,14 +359,6 @@
       "translation": "Open the same <code>F01StampBoard</code> in Visual Studio Code and run it on iOS. Today's starting state is a screen with one <code>Text</code> in the center. In this STEP, replace the <code>child</code> of <code>Center</code> with a <code>Card</code>, and put the habit name, the marks, and the count together on one card."
     },
     {
-      "source": "<code>lib/main.dart</code>で、<code>child: Center(</code>の下にある、<code>child: Text(</code>で始まる1行を、次のコードに置き換えます。STEP 04で文字や大きさを変えた行です。<code>child: Center(</code>の行と、その下の<code>),</code>の行は残します。",
-      "translation": "In <code>lib/main.dart</code>, replace the one line that starts with <code>child: Text(</code>, below <code>child: Center(</code>, with the following code. This is the line where you changed the text and size in STEP 04. Keep the <code>child: Center(</code> line and the <code>),</code> line below it."
-    },
-    {
-      "source": "lib/main.dart · 置き換え · Center の中の child: Text(…) の1行",
-      "translation": "lib/main.dart · replace · the line child: Text(…) inside Center"
-    },
-    {
       "source": "<code>Card</code>の中に<code>Padding</code>、さらに<code>Column</code>を置きます。<code>children</code>の角括弧の中へ<code>Text</code>、<code>SizedBox</code>、<code>Icon</code>を順番に並べます。今回は回数を変える処理をまだ付けないため、0 / 5 回のままです。",
       "translation": "Inside the <code>Card</code>, place a <code>Padding</code>, and inside that a <code>Column</code>. Inside the square brackets of <code>children</code>, list <code>Text</code>, <code>SizedBox</code>, and <code>Icon</code> in order. Because you are not adding the code that changes the count yet, the card stays at 「0 / 5 回」 (0 / 5 times)."
     },
@@ -437,10 +417,6 @@
     {
       "source": "習慣を3件へ増やします。同じカードを3回コピーする代わりに、名前・理由・回数を<code>Habit</code>にまとめ、<code>habits</code>のリストから作ります。",
       "translation": "Increase the habits to three. Instead of copying the same card three times, put the name, reason, and count together in <code>Habit</code>, and build the cards from the <code>habits</code> list."
-    },
-    {
-      "source": "<code>lib/main.dart</code>の中身を、次のコードですべて置き換えます。アプリのクラスの名前が<code>MainApp</code>から<code>StampApp</code>に変わり、データの<code>Habit</code>、一覧の画面の<code>StampBoardPage</code>、マークの<code>StampMarks</code>の3つのクラスが加わるので、ほとんどの行が変わるためです。STEP 06で試しに変えた余白の値は、この置き換えで元に戻ります。",
-      "translation": "Replace all the contents of <code>lib/main.dart</code> with the following code. This is because almost every line changes: the app class is renamed from <code>MainApp</code> to <code>StampApp</code>, and three classes are added: <code>Habit</code> for the data, <code>StampBoardPage</code> for the list screen, and <code>StampMarks</code> for the marks. The spacing values you tried changing in STEP 06 go back to their original values with this replacement."
     },
     {
       "source": "lib/main.dart · 全体を置き換える",
@@ -597,38 +573,6 @@
     {
       "source": "操作で変わる<code>habits</code>を<code>State</code>へ移します。<code>StampBoardPage</code>は<code>StatefulWidget</code>となり、<code>createState</code>が<code>_StampBoardPageState</code>を作ります。Widgetは画面の設定、<code>State</code>は操作によって変わる値を保持します。名前の先頭のアンダースコアはDartのライブラリ内で使う名前という指定です。",
       "translation": "Move <code>habits</code>, which changes through operations, into <code>State</code>. <code>StampBoardPage</code> becomes a <code>StatefulWidget</code>, and <code>createState</code> creates <code>_StampBoardPageState</code>. The widget holds the screen settings, and <code>State</code> holds the values that change through operations. The underscore at the start of the name declares it as a name used only inside the Dart library."
-    },
-    {
-      "source": "<code>lib/main.dart</code>を4か所変えます。まず、<code>StampApp</code>の<code>build</code>にある<code>home: StampBoardPage(),</code>の1行を、次の1行に置き換えます。次の置き換えで<code>StampBoardPage</code>のコンストラクタを<code>const</code>にするので、呼び出す側にも<code>const</code>を付けます。",
-      "translation": "Change <code>lib/main.dart</code> in 4 places. First, replace the one line <code>home: StampBoardPage(),</code> in the <code>build</code> of <code>StampApp</code> with the following line. The next replacement makes the constructor of <code>StampBoardPage</code> <code>const</code>, so add <code>const</code> on the calling side too."
-    },
-    {
-      "source": "lib/main.dart · 置き換え · home: StampBoardPage(), の1行",
-      "translation": "lib/main.dart · replace · the line home: StampBoardPage(),"
-    },
-    {
-      "source": "次に、<code>class StampBoardPage extends StatelessWidget {</code>の行から、その下の<code>StampBoardPage({super.key});</code>の行と空行までの3行を、次のコードに置き換えます。<code>final List&lt;Habit&gt; habits = [</code>の行から下は残します。もとのクラスを閉じていた<code>}</code>（<code>buildHabitCard</code>の下の行）は、そのまま<code>_StampBoardPageState</code>を閉じる<code>}</code>になります。",
-      "translation": "Next, replace these 3 lines with the following code: the <code>class StampBoardPage extends StatelessWidget {</code> line, the <code>StampBoardPage({super.key});</code> line below it, and the blank line after that. Keep everything from the <code>final List&lt;Habit&gt; habits = [</code> line down. The <code>}</code> that closed the original class (the line below <code>buildHabitCard</code>) stays as it is and becomes the <code>}</code> that closes <code>_StampBoardPageState</code>."
-    },
-    {
-      "source": "lib/main.dart · 置き換え · class StampBoardPage の行から、その下の空行まで",
-      "translation": "lib/main.dart · replace · from the class StampBoardPage line to the blank line below it"
-    },
-    {
-      "source": "続けて、<code>habits</code>のリストを閉じる<code>];</code>の下に、1行空けて次のコードを追加します。下の<code>@override</code>との間も1行空けます。",
-      "translation": "Then, below the <code>];</code> that closes the <code>habits</code> list, leave one blank line and add the following code. Also leave one blank line between it and the <code>@override</code> below."
-    },
-    {
-      "source": "lib/main.dart · 追加 · habits のリストを閉じる ]; の下",
-      "translation": "lib/main.dart · add · below the ]; that closes the habits list"
-    },
-    {
-      "source": "最後に、<code>buildHabitCard</code>の中にある<code>const Text('回数を変える操作は、このあと作ります。'),</code>の1行を、次のコードに置き換えます。",
-      "translation": "Finally, replace the one line <code>const Text('回数を変える操作は、このあと作ります。'),</code> in <code>buildHabitCard</code> with the following code."
-    },
-    {
-      "source": "lib/main.dart · 置き換え · 「回数を変える操作は、このあと作ります。」の1行",
-      "translation": "lib/main.dart · replace · the line 「回数を変える操作は、このあと作ります。」 (The count controls come later.)"
     },
     {
       "source": "ボタンの<code>onPressed</code>へ<code>() =&gt; changeStamp(habit, 1)</code>を渡します。これは引数のない関数で、押したときに<code>changeStamp</code>を呼びます。関数の呼出結果をその場で渡す書き方と区別してください。Dartのアローは1つの式を返す省略形です。",
@@ -809,30 +753,6 @@
     {
       "source": "カードに詳しく見るを加え、<code>openDetail(habit)</code>を呼びます。<code>openDetail</code>は<code>Navigator.push</code>へ<code>context</code>と<code>MaterialPageRoute</code>を渡し、ルートの<code>builder</code>で<code>HabitDetailPage</code>を作ります。",
       "translation": "Add 「詳しく見る」 (See details) to the card, and call <code>openDetail(habit)</code>. <code>openDetail</code> passes <code>context</code> and a <code>MaterialPageRoute</code> to <code>Navigator.push</code>, and the route's <code>builder</code> creates a <code>HabitDetailPage</code>."
-    },
-    {
-      "source": "<code>lib/main.dart</code>に3か所追加します。まず、<code>_StampBoardPageState</code>の中で、<code>changeStamp</code>の関数を閉じる<code>}</code>の下に、1行空けて次のコードを追加します。下の<code>@override</code>との間も1行空けます。",
-      "translation": "Add code to <code>lib/main.dart</code> in 3 places. First, in <code>_StampBoardPageState</code>, below the <code>}</code> that closes the <code>changeStamp</code> function, leave one blank line and add the following code. Also leave one blank line between it and the <code>@override</code> below."
-    },
-    {
-      "source": "lib/main.dart · 追加 · changeStamp の閉じかっこの下",
-      "translation": "lib/main.dart · add · below the closing brace of changeStamp"
-    },
-    {
-      "source": "次に、<code>buildHabitCard</code>の<code>Wrap</code>の中で、「1つ戻す」の<code>TextButton</code>を閉じる<code>),</code>の下に、次のコードを追加します。<code>Wrap</code>の3つ目のボタンになります。",
-      "translation": "Next, in the <code>Wrap</code> of <code>buildHabitCard</code>, add the following code below the <code>),</code> that closes the 「1つ戻す」 (Undo one) <code>TextButton</code>. It becomes the third button in the <code>Wrap</code>."
-    },
-    {
-      "source": "lib/main.dart · 追加 · 「1つ戻す」の TextButton の下",
-      "translation": "lib/main.dart · add · below the 「1つ戻す」 (Undo one) TextButton"
-    },
-    {
-      "source": "最後に、ファイルの末尾に、1行空けて次のコードを追加します。詳細の画面の<code>HabitDetailPage</code>です。中身はSTEP 17で読みます。",
-      "translation": "Finally, at the end of the file, leave one blank line and add the following code. This is <code>HabitDetailPage</code>, the detail screen. You will read its contents in STEP 17."
-    },
-    {
-      "source": "lib/main.dart · 追加 · ファイルの末尾",
-      "translation": "lib/main.dart · add · at the end of the file"
     },
     {
       "source": "<code>Navigator</code>は画面の重なりを管理します。<code>push</code>で詳細を上に載せるため、一覧の<code>State</code>は下に残ります。<code>MaterialPageRoute</code>の<code>&lt;void&gt;</code>は、この画面から結果の値を受け取らない指定です。<code>builder</code>の<code>context</code>は新しい画面を作る場所の情報です。",
@@ -1041,10 +961,6 @@
     {
       "source": "括弧のエラーが出た",
       "translation": "A bracket error appears"
-    },
-    {
-      "source": "最初のエラーから確認。<code>child</code>は1つ、<code>children</code>はリスト。そのSTEPのコード欄と、置き換えた範囲の閉じ括弧を見比べる。",
-      "translation": "Start from the first error. <code>child</code> takes one widget; <code>children</code> takes a list. Compare the code block of that STEP with the closing brackets in the range you replaced."
     },
     {
       "source": "再起動すると0に戻った",

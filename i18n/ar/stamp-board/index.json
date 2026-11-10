@@ -247,18 +247,6 @@
       "translation": "المفهوم الجديد في هذه الوحدة هو <strong>واجهة المستخدم التصريحية</strong> (宣言的UI). حيث تُرجع دالة <code>build</code> تكوين الشاشة المتوافق مع القيمة الحالية. وبدلاً من البحث المتتابع عن <code>View</code> أو DOM الحالية وإعادة كتابتها، نقوم بوصف «إذا كانت هذه القيمة، ضع هذا الجزء»."
     },
     {
-      "source": "コード欄の見出しには、ファイルのパスと、変え方を書きます。「追加」は、本文が示す行の下（または上）に書き足します。「置き換え」は、本文が示す範囲だけを書き換え、ほかの行は残します。「全体を置き換える」は、そのファイルの中身をすべて置き換えます。",
-      "translation": "يُكتب في عنوان خانة الشيفرة مسار الملف وطريقة التغيير. «إضافة» تعني أن تكتب الشيفرة تحت السطر الذي يشير إليه النص (أو فوقه). «استبدال» تعني أن تعيد كتابة النطاق الذي يشير إليه النص فقط، وتُبقي الأسطر الأخرى كما هي. «استبدال الملف بالكامل» تعني أن تستبدل محتوى ذلك الملف كله."
-    },
-    {
-      "source": "<code>lib/main.dart</code>で、<code>return const MaterialApp(</code>の下にある<code>home: Scaffold(body: Center(child: Text('Hello World!'))),</code>の1行を、次のコードに置き換えます。<code>return const MaterialApp(</code>の行と、その下の<code>);</code>の行は残します。",
-      "translation": "في <code>lib/main.dart</code>، استبدل السطر الواحد <code>home: Scaffold(body: Center(child: Text('Hello World!'))),</code> الموجود تحت <code>return const MaterialApp(</code> بالشيفرة التالية. وأبقِ على سطر <code>return const MaterialApp(</code> وسطر <code>);</code> الذي تحته."
-    },
-    {
-      "source": "lib/main.dart · 置き換え · home: Scaffold(…) の1行",
-      "translation": "lib/main.dart · استبدال · السطر home: Scaffold(…)&lrm;"
-    },
-    {
       "source": "<code>MaterialApp</code>はアプリの設定、<code>Scaffold</code>は画面の基本枠、<code>SafeArea</code>はOSの表示領域を避ける余白、<code>Center</code>は中央配置、<code>Text</code>は文字を担当します。<code>child:</code>は1つのWidget、後で使う<code>children:</code>は複数のWidgetのリストです。<code>MaterialApp</code>に加えた<code>debugShowCheckedModeBanner: false</code>は、STEP 01で画面の右上に出ていたDEBUGの帯を消す設定です。帯はデバッグ実行中を示す目印で、アプリの動きには関係しません。",
       "translation": "يتولى <code>MaterialApp</code> إعدادات التطبيق، و<code>Scaffold</code> الإطار الأساسي للشاشة، و<code>SafeArea</code> الهوامش لتجنب منطقة عرض نظام التشغيل، و<code>Center</code> المحاذاة في الوسط، و<code>Text</code> عرض النصوص. تشير <code>child:</code> إلى Widget واحد، بينما <code>children:</code> التي سنستخدمها لاحقًا هي قائمة من عناصر Widget المتعددة. والإعداد <code>debugShowCheckedModeBanner: false</code> المضاف إلى <code>MaterialApp</code> يخفي شريط DEBUG الذي ظهر في الزاوية العلوية اليمنى من الشاشة في STEP 01. الشريط هو مجرد علامة تشير إلى أن تصحيح الأخطاء قيد التشغيل، ولا علاقة له بسلوك التطبيق."
     },
@@ -371,14 +359,6 @@
       "translation": "افتح مشروع <code>F01StampBoard</code> نفسه في Visual Studio Code، وشغّله على iOS. حالة البداية اليوم هي شاشة تحتوي على <code>Text</code> واحد في المنتصف. في هذه الخطوة، سنستبدل <code>child</code> الخاص بـ <code>Center</code> بـ <code>Card</code>، ونجمع اسم العادة والعلامة وعدد المرات في بطاقة واحدة."
     },
     {
-      "source": "<code>lib/main.dart</code>で、<code>child: Center(</code>の下にある、<code>child: Text(</code>で始まる1行を、次のコードに置き換えます。STEP 04で文字や大きさを変えた行です。<code>child: Center(</code>の行と、その下の<code>),</code>の行は残します。",
-      "translation": "في <code>lib/main.dart</code>، استبدل السطر الواحد الذي يبدأ بـ <code>child: Text(</code> والموجود تحت <code>child: Center(</code> بالشيفرة التالية. إنه السطر الذي غيّرت فيه النص والحجم في STEP 04. وأبقِ على سطر <code>child: Center(</code> وسطر <code>),</code> الذي تحته."
-    },
-    {
-      "source": "lib/main.dart · 置き換え · Center の中の child: Text(…) の1行",
-      "translation": "lib/main.dart · استبدال · السطر child: Text(…)&lrm; داخل Center"
-    },
-    {
       "source": "<code>Card</code>の中に<code>Padding</code>、さらに<code>Column</code>を置きます。<code>children</code>の角括弧の中へ<code>Text</code>、<code>SizedBox</code>、<code>Icon</code>を順番に並べます。今回は回数を変える処理をまだ付けないため、0 / 5 回のままです。",
       "translation": "ضع <code>Padding</code> داخل <code>Card</code>، ثم ضع <code>Column</code> داخله. رتّب <code>Text</code> و<code>SizedBox</code> و<code>Icon</code> بالتسلسل داخل القوسين المعقوفين لـ <code>children</code>. بما أننا لم نضف معالجة لتغيير عدد المرات هذه المرة، فستبقى معروضة كـ 0 / 5 مرات."
     },
@@ -437,10 +417,6 @@
     {
       "source": "習慣を3件へ増やします。同じカードを3回コピーする代わりに、名前・理由・回数を<code>Habit</code>にまとめ、<code>habits</code>のリストから作ります。",
       "translation": "سنزيد عدد العادات إلى 3. وبدلاً من نسخ البطاقة نفسها ثلاث مرات، نجمع الاسم والسبب وعدد المرات في <code>Habit</code>، وننشئها من قائمة <code>habits</code>."
-    },
-    {
-      "source": "<code>lib/main.dart</code>の中身を、次のコードですべて置き換えます。アプリのクラスの名前が<code>MainApp</code>から<code>StampApp</code>に変わり、データの<code>Habit</code>、一覧の画面の<code>StampBoardPage</code>、マークの<code>StampMarks</code>の3つのクラスが加わるので、ほとんどの行が変わるためです。STEP 06で試しに変えた余白の値は、この置き換えで元に戻ります。",
-      "translation": "استبدل محتوى <code>lib/main.dart</code> كله بالشيفرة التالية. السبب أن معظم الأسطر تتغير: إذ يتغير اسم فئة التطبيق من <code>MainApp</code> إلى <code>StampApp</code>، وتُضاف ثلاث فئات هي <code>Habit</code> للبيانات، و<code>StampBoardPage</code> لشاشة القائمة، و<code>StampMarks</code> للعلامات. وقيم الهوامش التي غيّرتها للتجربة في STEP 06 تعود إلى أصلها بهذا الاستبدال."
     },
     {
       "source": "lib/main.dart · 全体を置き換える",
@@ -597,38 +573,6 @@
     {
       "source": "操作で変わる<code>habits</code>を<code>State</code>へ移します。<code>StampBoardPage</code>は<code>StatefulWidget</code>となり、<code>createState</code>が<code>_StampBoardPageState</code>を作ります。Widgetは画面の設定、<code>State</code>は操作によって変わる値を保持します。名前の先頭のアンダースコアはDartのライブラリ内で使う名前という指定です。",
       "translation": "ننقل قائمة <code>habits</code> التي تتغير بالعمليات إلى <code>State</code>. تصبح <code>StampBoardPage</code> من النوع <code>StatefulWidget</code>، وتنشئ <code>createState</code> الفئة <code>_StampBoardPageState</code>. يحدد الـ Widget إعدادات الشاشة، بينما يحتفظ <code>State</code> بالقيم التي تتغير عبر العمليات. والشرطة السفلية في بداية الاسم تحدد أنه اسم مخصص للاستخدام داخل مكتبة Dart."
-    },
-    {
-      "source": "<code>lib/main.dart</code>を4か所変えます。まず、<code>StampApp</code>の<code>build</code>にある<code>home: StampBoardPage(),</code>の1行を、次の1行に置き換えます。次の置き換えで<code>StampBoardPage</code>のコンストラクタを<code>const</code>にするので、呼び出す側にも<code>const</code>を付けます。",
-      "translation": "سنغيّر <code>lib/main.dart</code> في 4 مواضع. أولاً، استبدل السطر الواحد <code>home: StampBoardPage(),</code> في <code>build</code> الخاصة بـ <code>StampApp</code> بالسطر التالي. ولأننا سنجعل الدالة الإنشائية لـ <code>StampBoardPage</code> دالةً إنشائية <code>const</code> في الاستبدال التالي، نضيف <code>const</code> في جهة الاستدعاء أيضًا."
-    },
-    {
-      "source": "lib/main.dart · 置き換え · home: StampBoardPage(), の1行",
-      "translation": "lib/main.dart · استبدال · السطر home: StampBoardPage(),&lrm;"
-    },
-    {
-      "source": "次に、<code>class StampBoardPage extends StatelessWidget {</code>の行から、その下の<code>StampBoardPage({super.key});</code>の行と空行までの3行を、次のコードに置き換えます。<code>final List&lt;Habit&gt; habits = [</code>の行から下は残します。もとのクラスを閉じていた<code>}</code>（<code>buildHabitCard</code>の下の行）は、そのまま<code>_StampBoardPageState</code>を閉じる<code>}</code>になります。",
-      "translation": "بعد ذلك، استبدل بالشيفرة التالية الأسطر الثلاثة الممتدة من سطر <code>class StampBoardPage extends StatelessWidget {</code> حتى السطر الفارغ، مرورًا بسطر <code>StampBoardPage({super.key});</code> الذي تحته. وأبقِ على سطر <code>final List&lt;Habit&gt; habits = [</code> وما تحته. أما <code>}</code> الذي كان يغلق الفئة الأصلية (السطر الذي تحت <code>buildHabitCard</code>)، فيصبح كما هو <code>}</code> الذي يغلق <code>_StampBoardPageState</code>."
-    },
-    {
-      "source": "lib/main.dart · 置き換え · class StampBoardPage の行から、その下の空行まで",
-      "translation": "lib/main.dart · استبدال · من سطر class StampBoardPage إلى السطر الفارغ الذي تحته"
-    },
-    {
-      "source": "続けて、<code>habits</code>のリストを閉じる<code>];</code>の下に、1行空けて次のコードを追加します。下の<code>@override</code>との間も1行空けます。",
-      "translation": "ثم أضف الشيفرة التالية تحت <code>];</code> الذي يغلق قائمة <code>habits</code>، تاركًا سطرًا فارغًا قبلها. واترك أيضًا سطرًا فارغًا بينها وبين <code>@override</code> الموجود تحتها."
-    },
-    {
-      "source": "lib/main.dart · 追加 · habits のリストを閉じる ]; の下",
-      "translation": "lib/main.dart · إضافة · أسفل &lrm;];&lrm; الذي يغلق قائمة habits"
-    },
-    {
-      "source": "最後に、<code>buildHabitCard</code>の中にある<code>const Text('回数を変える操作は、このあと作ります。'),</code>の1行を、次のコードに置き換えます。",
-      "translation": "أخيرًا، استبدل السطر الواحد <code>const Text('回数を変える操作は、このあと作ります。'),</code> الموجود داخل <code>buildHabitCard</code> بالشيفرة التالية."
-    },
-    {
-      "source": "lib/main.dart · 置き換え · 「回数を変える操作は、このあと作ります。」の1行",
-      "translation": "lib/main.dart · استبدال · السطر 「回数を変える操作は、このあと作ります。&lrm;」 (سننشئ عملية تغيير عدد المرات لاحقًا.)"
     },
     {
       "source": "ボタンの<code>onPressed</code>へ<code>() =&gt; changeStamp(habit, 1)</code>を渡します。これは引数のない関数で、押したときに<code>changeStamp</code>を呼びます。関数の呼出結果をその場で渡す書き方と区別してください。Dartのアローは1つの式を返す省略形です。",
@@ -809,30 +753,6 @@
     {
       "source": "カードに詳しく見るを加え、<code>openDetail(habit)</code>を呼びます。<code>openDetail</code>は<code>Navigator.push</code>へ<code>context</code>と<code>MaterialPageRoute</code>を渡し、ルートの<code>builder</code>で<code>HabitDetailPage</code>を作ります。",
       "translation": "أضف 「詳しく見る」 (عرض التفاصيل) إلى البطاقة، واستدعِ <code>openDetail(habit)</code>. تمرر <code>openDetail</code> كلاً من <code>context</code> و<code>MaterialPageRoute</code> إلى <code>Navigator.push</code>، وتنشئ <code>HabitDetailPage</code> في <code>builder</code> الخاص بالمسار."
-    },
-    {
-      "source": "<code>lib/main.dart</code>に3か所追加します。まず、<code>_StampBoardPageState</code>の中で、<code>changeStamp</code>の関数を閉じる<code>}</code>の下に、1行空けて次のコードを追加します。下の<code>@override</code>との間も1行空けます。",
-      "translation": "سنضيف إلى <code>lib/main.dart</code> في 3 مواضع. أولاً، داخل <code>_StampBoardPageState</code>، أضف الشيفرة التالية تحت <code>}</code> الذي يغلق الدالة <code>changeStamp</code>، تاركًا سطرًا فارغًا قبلها. واترك أيضًا سطرًا فارغًا بينها وبين <code>@override</code> الموجود تحتها."
-    },
-    {
-      "source": "lib/main.dart · 追加 · changeStamp の閉じかっこの下",
-      "translation": "lib/main.dart · إضافة · أسفل قوس إغلاق changeStamp"
-    },
-    {
-      "source": "次に、<code>buildHabitCard</code>の<code>Wrap</code>の中で、「1つ戻す」の<code>TextButton</code>を閉じる<code>),</code>の下に、次のコードを追加します。<code>Wrap</code>の3つ目のボタンになります。",
-      "translation": "بعد ذلك، داخل <code>Wrap</code> في <code>buildHabitCard</code>، أضف الشيفرة التالية تحت <code>),</code> الذي يغلق <code>TextButton</code> الخاص بـ 「1つ戻す」 (التراجع عن طابع واحد). وسيكون هذا هو الزر الثالث في <code>Wrap</code>."
-    },
-    {
-      "source": "lib/main.dart · 追加 · 「1つ戻す」の TextButton の下",
-      "translation": "lib/main.dart · إضافة · أسفل TextButton الخاص بـ 「1つ戻す」 (التراجع عن طابع واحد)"
-    },
-    {
-      "source": "最後に、ファイルの末尾に、1行空けて次のコードを追加します。詳細の画面の<code>HabitDetailPage</code>です。中身はSTEP 17で読みます。",
-      "translation": "أخيرًا، أضف الشيفرة التالية في نهاية الملف، تاركًا سطرًا فارغًا قبلها. إنها <code>HabitDetailPage</code> الخاصة بشاشة التفاصيل. سنقرأ محتواها في STEP 17."
-    },
-    {
-      "source": "lib/main.dart · 追加 · ファイルの末尾",
-      "translation": "lib/main.dart · إضافة · نهاية الملف"
     },
     {
       "source": "<code>Navigator</code>は画面の重なりを管理します。<code>push</code>で詳細を上に載せるため、一覧の<code>State</code>は下に残ります。<code>MaterialPageRoute</code>の<code>&lt;void&gt;</code>は、この画面から結果の値を受け取らない指定です。<code>builder</code>の<code>context</code>は新しい画面を作る場所の情報です。",
@@ -1041,10 +961,6 @@
     {
       "source": "括弧のエラーが出た",
       "translation": "ظهور خطأ في الأقواس"
-    },
-    {
-      "source": "最初のエラーから確認。<code>child</code>は1つ、<code>children</code>はリスト。そのSTEPのコード欄と、置き換えた範囲の閉じ括弧を見比べる。",
-      "translation": "تحقق بدءًا من الخطأ الأول. يقبل <code>child</code> عنصرًا واحدًا، بينما <code>children</code> قائمة. قارن بين خانة الشيفرة في تلك الخطوة وأقواس الإغلاق في النطاق الذي استبدلته."
     },
     {
       "source": "再起動すると0に戻った",
