@@ -53,9 +53,10 @@ Flutter 3.47.5 / Dart 3.13.4で、習慣の入力と端末内保存を加える�
 | --- | --- |
 | Flutter SDK | Material UIと画面遷移 |
 | shared_preferences 2.5.5 | `SharedPreferencesAsync`による端末内保存 |
+| shared_preferences_android 2.4.28 / shared_preferences_foundation 2.5.7 | `shared_preferences`のAndroid用・iOS用の実装。授業で確かめた版に固定 |
 | flutter_lints 6系 | 静的解析 |
 
-依存する各プラットフォーム実装の解決済みの版は`pubspec.lock`へ記録しています。
+Android用とiOS用の実装は、`pubspec.yaml`に版を書いて固定しています。書かないと、`flutter pub get`を実行した日の最新の版が入り、確かめた版と違うものになるためです（2026-11-11）。そのほかの解決済みの版は`pubspec.lock`へ記録しています。
 
 ## ビルドと実行
 
@@ -77,6 +78,6 @@ flutter build apk
 flutter run --release --no-resident -d <AndroidエミュレータのID> --use-application-binary=build/app/outputs/flutter-apk/app-release.apk
 ```
 
-生成物は`build/app/outputs/flutter-apk/app-release.apk`です。入力済みのデータを配るファイルではありません。2026-09-24に通常APK（48,666,844 bytes、約48.7MB）を生成しました。Flutter 3.47.5の`flutter analyze`は指摘なしです。Android 17の専用arm64エミュレータで、最終APKの初期表示・追加・保存・5回上限・取消し・詳細・再起動時の名前／理由／回数の復元・初期化の取消しと確定を確認しました。Androidの空欄検証も実施し、リポジトリ外の検証コピーでは保存失敗時の回数維持と入力保持、不正データでの上書き防止、空リストの0件表示を確認しました。
+生成物は`build/app/outputs/flutter-apk/app-release.apk`です。入力済みのデータを配るファイルではありません。2026-09-24に通常APK（48,666,844 bytes、約48.7MB）を生成しました。2026-11-11に実装の版を`pubspec.yaml`で固定したあとも、通常APKは48,666,844 bytesでした。Flutter 3.47.5の`flutter analyze`は指摘なしです。Android 17の専用arm64エミュレータで、最終APKの初期表示・追加・保存・5回上限・取消し・詳細・再起動時の名前／理由／回数の復元・初期化の取消しと確定を確認しました。Androidの空欄検証も実施し、リポジトリ外の検証コピーでは保存失敗時の回数維持と入力保持、不正データでの上書き防止、空リストの0件表示を確認しました。
 
 2026-09-25に、iOS 26.5（iPhone 17 Pro）で完成版の全操作を確認しました。初期表示、空欄検証、名前40文字・理由200文字の上限、追加と保存、5回上限、1つ戻す、詳細と戻る、アプリを終了して起動し直した後の名前・理由・回数の復元、初期化の取消しと確定です。教材の全20 STEPも、STEPごとのコードをiOSシミュレータで動かして確かめ、APKを作るSTEPはAndroid 17のエミュレータで確かめました。Visual Studio Codeからの操作、学生全員のSDK・端末の組み合わせ、教室の同時取得時間は未確認です。完成アプリのUnit Testはリポジトリ方針により作成していません。
