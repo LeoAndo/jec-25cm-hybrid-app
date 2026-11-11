@@ -499,10 +499,6 @@
       "translation": "儲存至字串清單"
     },
     {
-      "source": "まず<code>pubspec.yaml</code>の<code>dependencies</code>へ<code>shared_preferences: 2.5.5</code>を加えます。<code>dependencies:</code>の下にある<code>sdk: flutter</code>の行の下に、緑の1行を足します。<code>dependencies</code>は二重に作らず、<code>shared_preferences</code>の行は<code>flutter:</code>と同じ字下げにします。ほかの設定は残します。",
-      "translation": "首先在 <code>pubspec.yaml</code> 的 <code>dependencies</code> 中加入 <code>shared_preferences: 2.5.5</code>。在 <code>dependencies:</code> 下面的 <code>sdk: flutter</code> 這一行的下面，加入綠色的 1 行。不要重複建立 <code>dependencies</code>，<code>shared_preferences</code> 這一行要用和 <code>flutter:</code> 相同的縮排。其他設定保留。"
-    },
-    {
       "source": "実行中のアプリを<code>q</code>で終了し、<code>flutter pub get</code>を実行します。新しいネイティブプラグインを加えたのでホットリロードだけで済ませず、下の<code>lib/main.dart</code>の書き換えを終えてから、<code>flutter run -d 端末ID</code>で起動し直します。",
       "translation": "用 <code>q</code> 結束執行中的應用程式，執行 <code>flutter pub get</code>。因為加入了新的原生外掛程式，不能只靠熱重載，要先完成下面 <code>lib/main.dart</code> 的改寫，再用 <code>flutter run -d 端末ID</code>（端末ID＝裝置 ID）重新啟動。"
     },
@@ -1213,10 +1209,6 @@
     {
       "source": "パッケージが見つからない",
       "translation": "找不到套件"
-    },
-    {
-      "source": "<code>pubspec.yaml</code>の<code>dependencies</code>へ<code>shared_preferences</code>を入れ、<code>flutter pub get</code>を実行。追加後はアプリを停止して再実行。",
-      "translation": "在 <code>pubspec.yaml</code> 的 <code>dependencies</code> 中加入 <code>shared_preferences</code>，執行 <code>flutter pub get</code>。新增後停止應用程式並重新執行。"
     },
     {
       "source": "パッケージを加えた後、「保存できませんでした。」と出る。<code>R</code>で画面全体が赤くなる",
