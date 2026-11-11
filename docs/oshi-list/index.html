@@ -39,8 +39,8 @@
 <li><a href="#step-15">15 navigatorとtemplate</a></li>
 <li><a href="#step-16">16 詳細を開く・戻る</a></li>
 <li><a href="#step-17">17 詳細へ値を渡す</a></li>
-<li><a href="#step-18">18 連続クリックへの対応</a></li>
-<li><a href="#step-19">19 完成とアレンジ</a></li>
+<li><a href="#step-18">18 完成とアレンジ</a></li>
+<li><a href="#step-19">19 公開URLで提出</a></li>
 </ol>
 </nav>
 <div class="resources"><a href="#help">困ったとき</a><span aria-current="page">M01：OshiList</span><a href="../oshi-save/index.html">M02：OshiSave</a><a href="../stamp-board/index.html">F01：StampBoard</a><a href="../stamp-release/index.html">F02：StampRelease</a><a href="../common/setup.html?from=oshi-list">共通：はじめの準備</a><a href="../common/help.html?from=oshi-list">共通：困ったとき</a></div>
@@ -53,7 +53,7 @@
 <div class="tags"><span>Monaca クラウド IDE / Google Chrome</span><span>Onsen UI 2.12.9</span><span>HTML / CSS / JavaScript</span></div>
 <div class="goal"><p class="box-title">この単元で分かること</p><p>新しい考え方は <strong>auto-styling</strong> です。1つのHTMLから、OSに合った部品の見た目が選ばれる仕組みを確かめます。配列・イベント・画面の切り替えは、Web基礎・Android・iOSと比べて書き方を読みます。</p></div>
 <p>使うプロジェクトは <code>M01OshiList</code> です。各STEPのコードは、前のSTEPのコードから変える箇所だけを載せています。前から順に、本文が示す場所を書き換えて進みます。授業を休んだなどで途中から合流するときは、先生に伝えて、前のSTEPまでのコードを受け取ってから進みます。</p>
-<table><thead><tr><th>コマ</th><th>この回の到達点</th></tr></thead><tbody><tr><td>1</td><td>通常版Monacaで静的なカードを表示する。</td></tr><tr><td>2</td><td>Onsen UIの一覧とauto-stylingを確認する。</td></tr><tr><td>3</td><td>配列から一覧を作り、押した名前を表示する。</td></tr><tr><td>4</td><td>詳細へ値を渡し、戻る操作まで完成させる。</td></tr></tbody></table>
+<table><thead><tr><th>コマ</th><th>この回の到達点</th></tr></thead><tbody><tr><td>1</td><td>通常版Monacaで静的なカードを表示する。</td></tr><tr><td>2</td><td>Onsen UIの一覧とauto-stylingを確認する。</td></tr><tr><td>3</td><td>配列から一覧を作り、押した名前を表示する。</td></tr><tr><td>4</td><td>詳細へ値を渡して完成させ、公開URLで提出する。</td></tr></tbody></table>
 </div>
 <section id="step-0">
 <p class="step-meta">STEP 00 · コマ1</p><h2>授業の準備と、自分のプロジェクト</h2>
@@ -550,7 +550,7 @@ function renderOshiList() {
   document.getElementById(&quot;txt_selected&quot;).textContent = &quot;選択中：&quot; + oshi.name;
   navApp.pushPage(&quot;detail.html&quot;);
 }</code></pre>
-<ol><li>一覧の1件を1回押し、詳細の見本を表示します。</li><li>詳細の左上にある戻るボタンを1回押し、一覧へ戻ります。ブラウザ自体の戻るボタンは使いません。</li><li>別の行でも、詳細を開く・戻るを確かめます。このSTEPでは連打せず、画面の動きが終わってから操作します。</li></ol>
+<ol><li>一覧の1件を1回押し、詳細の見本を表示します。</li><li>詳細の左上にある戻るボタンを1回押し、一覧へ戻ります。ブラウザ自体の戻るボタンは使いません。</li><li>別の行でも、詳細を開く・戻るを確かめます。詳細はどの行でも同じ見本なので、押した行は、戻ったあとの一覧の下の「選択中：」で確かめます。</li></ol>
 <p><code>ons-back-button</code> は、そのページを管理する <code>ons-navigator</code> の前のページへ戻す部品です。自分でクリック処理を追加しなくても動きます。ページの切り替わり方もOSのスタイルで変わるので、常に同じ方向へスライドするとは限りません。ボタンの見た目もOSのスタイルで変わります。iOS向けでは、HTMLに書いた文字を添えて「＜ 戻る」と表示されます。Android向けでは左向きの矢印「←」だけになり、「戻る」の文字は表示されません。どちらも同じ <code>ons-back-button</code> で、押したときの動きは同じです。</p>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>iOSのナビゲーションコントローラで次の画面をpushし、戻る操作でpopする構造と同じです。Androidで次の画面へ進んで戻る場合と同様、一覧を消して作り直す操作ではありません。Onsen UIでは <code>pushPage</code> で積み、<code>ons-back-button</code> に戻る操作を任せます。見た目も、iOSのナビゲーションバーの文字つきの戻るボタンと、Androidのツールバーの矢印だけの戻るボタンに合わせて、Onsen UIが描き分けます。</p></div>
 <div class="check"><label><input type="checkbox" data-check="oshi-list-16"><span>詳細の見本を開き、画面内の戻るボタンで一覧へ戻れた。</span></label></div>
@@ -558,13 +558,16 @@ function renderOshiList() {
 </section>
 <section id="step-17">
 <p class="step-meta">STEP 17 · コマ4</p><h2>押した項目を詳細へ渡す</h2>
-<p>このSTEPでは、<code>www/index.html</code> と <code>www/js/app.js</code> を書き換えます。CSSは変えません。詳細の名前・種類・理由はHTMLでは空にし、受け取ったデータを後から入れます。</p>
+<p>このSTEPでは、<code>www/index.html</code>・<code>www/css/style.css</code>・<code>www/js/app.js</code> の3ファイルを書き換えます。詳細の名前・種類・理由はHTMLでは空にし、受け取ったデータを後から入れます。押した行の内容が詳細に出るようになるので、一覧の下の選択表示は外します。</p>
 <p><code>www/index.html</code> の <code>template id="detail.html"</code> の中で、<code>txt_detail_genre</code> の行から <code>txt_detail_comment</code> の行までの4行を、次のコードに置き換えます。間の「好きな理由」の行は変わりません。</p>
 <div class="code-head">www/index.html · 置き換え · txt_detail_genre の行から txt_detail_comment の行まで</div>
 <pre id="code-17-index-html" tabindex="0"><code>        &lt;p id=&quot;txt_detail_genre&quot; class=&quot;app-caption&quot;&gt;&lt;/p&gt;
         &lt;h1 id=&quot;txt_detail_name&quot; class=&quot;app-heading&quot;&gt;&lt;/h1&gt;
         &lt;p class=&quot;app-label&quot;&gt;好きな理由&lt;/p&gt;
         &lt;p id=&quot;txt_detail_comment&quot; class=&quot;app-comment&quot;&gt;&lt;/p&gt;</code></pre>
+<p>次に、一覧の下の選択表示を外します。この表示は、詳細画面がまだなかったSTEP 13で、押した行を画面で確かめるために置きました。詳細が見本のままだったSTEP 16でも、押した行は、戻ったあとの一覧の下で確かめました。このSTEPからは、押した行の名前・種類・理由を詳細画面が表示します。選択表示を残すと、戻ったあとの一覧に、前に押した名前が出たままになります。</p>
+<p>同じ <code>www/index.html</code> の <code>template id="list.html"</code> の中で、<code>&lt;ons-list id="list_oshi"&gt;&lt;/ons-list&gt;</code> のすぐ下にある、<code>txt_selected</code> の1行を消します。「まだ選択していません」と書いた <code>p</code> の行です。<code>ons-list</code> の行は残します。</p>
+<p><code>www/css/style.css</code> では、<code>.app-selection {</code> の行から、その閉じかっこ <code>}</code> までの6行と、その下の空行1行を消します。消した <code>p</code> にだけ使っていた、文字色と余白の指定です。</p>
 <p><code>www/js/app.js</code> では、<code>// ページの要素が使えるようになってから処理する。</code> のコメントの行から、<code>init</code> の処理を閉じる <code>});</code> までを、次のコードに置き換えます。コメントの文も変わり、<code>page_detail</code> のときの処理が加わります。</p>
 <div class="code-head">www/js/app.js · 置き換え · init の処理（直前のコメントから }); まで）</div>
 <pre id="code-17-app-js-init" tabindex="0"><code>// templateの中身は、ページが作られてから取得する。
@@ -583,12 +586,10 @@ document.addEventListener(&quot;init&quot;, function(event) {
     document.getElementById(&quot;txt_detail_comment&quot;).textContent = oshi.comment;
   }
 });</code></pre>
-<p>続けて、ファイルの末尾の <code>function openOshiDetail(oshi) {</code> の行から、その関数を閉じる <code>}</code> までを、次のコードに置き換えます。</p>
+<p>続けて、ファイルの末尾の <code>function openOshiDetail(oshi) {</code> の行から、その関数を閉じる <code>}</code> までを、次のコードに置き換えます。<code>txt_selected</code> に「選択中：」と名前を入れていた1行は、HTMLから消した表示を指すので、置き換えたあとのコードにはありません。</p>
 <div class="code-head">www/js/app.js · 置き換え · function openOshiDetail から、その閉じかっこまで</div>
 <pre id="code-17-app-js-open" tabindex="0"><code>function openOshiDetail(oshi) {
   const navApp = document.getElementById(&quot;nav_app&quot;);
-
-  document.getElementById(&quot;txt_selected&quot;).textContent = &quot;選択中：&quot; + oshi.name;
 
   navApp.pushPage(&quot;detail.html&quot;, {
     data: {
@@ -598,59 +599,36 @@ document.addEventListener(&quot;init&quot;, function(event) {
 }</code></pre>
 <p><code>pushPage</code> の2番目の引数に <code>{ data: { oshi: oshi } }</code> を渡します。左側の <code>oshi</code> は受け渡す項目の名前、右側の <code>oshi</code> は関数の引数で受け取った好きなもの1件です。</p>
 <p>詳細ページの <code>init</code> では、<code>const oshi = page.data.oshi;</code> でその1件を取り出します。その後、<code>txt_detail_name</code>・<code>txt_detail_genre</code>・<code>txt_detail_comment</code> の <code>textContent</code> を設定します。</p>
-<ol><li>1件目を押し、名前・種類・理由が配列の1件目と一致することを確かめます。</li><li>戻って2件目、3件目でも確かめます。</li><li>理由の <code>\n</code> が改行になっていることを見ます。CSSの <code>white-space: pre-wrap</code> が、改行を保ちながら折り返します。</li></ol>
-<p>このSTEPも画面の動きが終わってから次を押します。画面の切り替えの途中に届いた2回目の操作は、Onsen UIの <code>ons-navigator</code> が受け付けないので、続けて押しても詳細は重なりません。次のSTEPでは、この仕組みに任せきりにせず、アプリの側でも開く途中かどうかを記録します。</p>
-<div class="note"><p class="box-title">既知の技術と比べる</p><p>Androidで次の画面へ値を渡す、iOSで遷移先に表示用の値を渡す目的と同じです。Onsen UIでは <code>ons-navigator</code> の <code>data</code> を渡し、作られたページの <code>page.data</code> から受け取ります。ここで渡すのは実行中のJavaScriptオブジェクトで、ファイルへ保存したり文字列へ変換したりしているわけではありません。</p></div>
-<div class="check"><label><input type="checkbox" data-check="oshi-list-17"><span>3件それぞれの名前・種類・理由が詳細へ渡り、改行も表示された。</span></label></div>
+<ol><li>1件目を押し、名前・種類・理由が配列の1件目と一致することを確かめます。</li><li>戻って2件目、3件目でも確かめます。戻ったあとの一覧の下に、選択表示が出ないことも見ます。</li><li>理由の <code>\n</code> が改行になっていることを見ます。CSSの <code>white-space: pre-wrap</code> が、改行を保ちながら折り返します。</li></ol>
+<p>行を押しても詳細が開かないときは、<code>openOshiDetail</code> に <code>txt_selected</code> の行が残っていないかを見ます。HTMLから消した要素は <code>getElementById</code> で見つからないので、その行で処理が止まり、<code>pushPage</code> まで進みません。</p>
+<div class="note"><p class="box-title">既知の技術と比べる</p><p>Androidで次の画面へ値を渡す、iOSで遷移先に表示用の値を渡す目的と同じです。Onsen UIでは <code>ons-navigator</code> の <code>data</code> を渡し、作られたページの <code>page.data</code> から受け取ります。ここで渡すのは実行中のJavaScriptオブジェクトで、ファイルへ保存したり文字列へ変換したりしているわけではありません。選択表示を外すのは、AndroidやiOSで、動きを確かめるために置いたラベルを、同じ内容を次の画面が表示するようになったら取り除くのと同じ判断です。</p></div>
+<div class="check"><label><input type="checkbox" data-check="oshi-list-17"><span>3件それぞれの名前・種類・理由が詳細へ渡り、改行も表示された。一覧の下の選択表示がなくなった。</span></label></div>
 
 </section>
 <section id="step-18">
-<p class="step-meta">STEP 18 · コマ4</p><h2>連続して押されても詳細を重ねない</h2>
-<p><code>www/js/app.js</code> を2か所変えます。HTMLとCSSは変えません。完成版では <code>isOpeningDetail</code> という真偽値と、<code>ons-navigator</code> の現在のページを使って、詳細を重ねて開くことを防ぎます。Onsen UIの <code>ons-navigator</code> も、切り替えの途中に届いた2回目の <code>pushPage</code> は受け付けませんが、断られた呼び出しはエラーになります。アプリの側で開く途中かどうかを記録しておけば、2回目の呼び出しそのものをしないで済みます。</p>
-<p>まず、配列 <code>oshiItems</code> を閉じる <code>];</code> の下に、1行空けて追加します。下の <code>// templateの中身は、ページが作られてから取得する。</code> との間も1行空けます。</p>
-<div class="code-head">www/js/app.js · 追加 · 配列 oshiItems の ]; の下</div>
-<pre id="code-18-app-js-flag" tabindex="0"><code>let isOpeningDetail = false;</code></pre>
-<p>次に、ファイルの末尾の <code>function openOshiDetail(oshi) {</code> の行から、その関数を閉じる <code>}</code> までを、次のコードに置き換えます。</p>
-<div class="code-head">www/js/app.js · 置き換え · function openOshiDetail から、その閉じかっこまで</div>
-<pre id="code-18-app-js-open" tabindex="0"><code>function openOshiDetail(oshi) {
-  const navApp = document.getElementById(&quot;nav_app&quot;);
-
-  // 続けて押しても、詳細画面を重ねて開かない。
-  if (isOpeningDetail || navApp.topPage.id !== &quot;page_list&quot;) {
-    return;
-  }
-
-  isOpeningDetail = true;
-  document.getElementById(&quot;txt_selected&quot;).textContent = &quot;選択中：&quot; + oshi.name;
-
-  navApp.pushPage(&quot;detail.html&quot;, {
-    data: {
-      oshi: oshi
-    },
-    callback: function() {
-      isOpeningDetail = false;
-    }
-  });
-}</code></pre>
-<table><thead><tr><th>場所</th><th>意味</th></tr></thead><tbody><tr><td><code>isOpeningDetail = false</code></td><td>まだ詳細を開く途中ではない。</td></tr><tr><td><code>if (isOpeningDetail || navApp.topPage.id !== "page_list")</code></td><td>開いている途中、または一覧が一番上でなければ処理を抜ける。</td></tr><tr><td><code>isOpeningDetail = true</code></td><td>次のクリックが来る前に、開く途中だと記録する。</td></tr><tr><td><code>callback: function() { ... }</code></td><td>ページを開く処理が終わったときに実行される関数。ここで真偽値を <code>false</code> へ戻す。</td></tr></tbody></table>
-<p><code>||</code> は「どちらか」、<code>!==</code> は「等しくない」、<code>return</code> はこの関数をそこで終える、というWeb基礎の書き方です。開き終わって真偽値が <code>false</code> になっても、詳細が一番上ならもう一度開きません。</p>
-<ol><li>保存して再読み込みし、同じ行を続けて2回押します。</li><li>詳細の左上の戻るボタンを1回押します。一覧に戻れば、詳細は重なっていません。</li><li>別の行を押し、別の詳細も開けることを確かめます。</li></ol>
-<p>画面の見た目は、STEP 17のときと同じです。ここでは、処理を足したあとも、今までどおり詳細が1枚だけ開き、戻れることを確かめます。</p>
-<div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎でクリック後の処理を関数として登録したのと同じく、<code>callback</code> へ「終わったら行う関数」を渡します。Androidのアニメーション終了の通知やiOSの完了ハンドラと対応します。最初に真偽値を変え、完了通知で戻すことで、画面の切り替えを待つ間だけ次の開始を止めます。</p></div>
-<div class="check"><label><input type="checkbox" data-check="oshi-list-18"><span>続けて2回押しても、戻る1回で一覧になり、次の項目も開けた。</span></label></div>
-
-</section>
-<section id="step-19">
-<p class="step-meta">STEP 19 · コマ4</p><h2>完成版を確認し、自分の好きなものノートにする</h2>
-<p>コードは変えません。STEP 18まで書いたコードが、<code>M01OshiList</code> の完成版です。順番に確認します。自分のアレンジを残す場合は、データや色の違いと、処理の違いを分けて見比べます。</p>
-<ol><li>再読み込み直後は3件と「まだ選択していません」が見えます。</li><li>3件を順に開き、それぞれの名前・種類・理由が正しいことを確かめます。戻ると一覧に選択した名前が残ります。</li><li>行を続けて押しても、戻る1回で一覧へ戻ることを確かめます。</li><li>先頭のOS強制指定がコメントになっていることを確認します。STEP 09と同じく、Monacaの端末選択で <code>iPhone 15</code>、<code>Pixel 8</code> を選び、それぞれ <code>Reload</code> を押して一覧・詳細・戻るを比べます。</li><li>長い名前と改行のある理由を試し、狭い幅でも読めることを確かめます。再読み込み後の選択は未選択へ戻ります。</li></ol>
-<h3>アレンジ箇所を記録する</h3><p>この単元は、変更したファイル・箇所と、画面での変化を記録して終えます。公開URLでの提出は、先生が案内するMonaca系の提出回に行います。自分のプロジェクトは残しておきます。</p>
-<p>公開URLで相手へ渡るのは、ソースに書いた配列・HTML・CSSです。今画面で選んでいる項目は渡りません。この単元には保存機能もありません。</p>
+<p class="step-meta">STEP 18 · コマ4</p><h2>完成版を確認し、自分の好きなものノートにする</h2>
+<p>コードは変えません。STEP 17まで書いたコードが、<code>M01OshiList</code> の完成版です。順番に確認します。自分のアレンジを残す場合は、データや色の違いと、処理の違いを分けて見比べます。</p>
+<ol><li>再読み込み直後は、見出しと3件の一覧が見えます。</li><li>3件を順に開き、それぞれの名前・種類・理由が正しいことを確かめます。詳細の左上の戻るボタンを1回押すと、一覧へ戻ります。</li><li>先頭のOS強制指定がコメントになっていることを確認します。STEP 09と同じく、Monacaの端末選択で <code>iPhone 15</code>、<code>Pixel 8</code> を選び、それぞれ <code>Reload</code> を押して一覧・詳細・戻るを比べます。</li><li>長い名前と改行のある理由を試し、狭い幅でも読めることを確かめます。</li></ol>
+<h3>アレンジ箇所を記録する</h3><p>変更したファイル・箇所と、画面での変化を記録します。記録したら、次のSTEPで自分のプロジェクトを公開し、提出します。</p>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎で作ったHTML・CSS・JavaScriptの役割分担は、完成版でも同じです。画面間の移動と値の受け渡しはAndroid・iOSの経験と対応します。今回の新しい考え方は、OS別の見た目を共通のHTMLへ適用するauto-stylingです。自分で変えた内容と、OSによる違いを分けて確かめましょう。</p></div>
-<div class="check"><label><input type="checkbox" data-check="oshi-list-19"><span>一覧・詳細・戻る・連続クリック・OSによる差を確認し、自分の変更箇所を記録した。</span></label></div>
+<div class="check"><label><input type="checkbox" data-check="oshi-list-18"><span>一覧・詳細・戻る・OSによる差を確認し、自分の変更箇所を記録した。</span></label></div>
 <div class="task"><p class="box-title">アレンジできる場所</p><p><code>oshiItems</code> の名前・種類・理由・件数、HTMLの見出し、CSSの色・余白・文字サイズを変えられます。自分の好きなものと、その理由を自分の言葉で書きます。次に1か所だけ見た目を変え、どのファイルの何を変え、どの画面へ反映されたかを確かめてください。</p></div>
 </section>
-<section id="help"><h2>困ったとき</h2><table><thead><tr><th>見えること</th><th>確認すること</th></tr></thead><tbody><tr><td>装飾のない縦並びになる</td><td><code>index.html</code> の Onsen UI のCDNの版とパス、<code>css/style.css</code> のパスを確認。保存してからプレビューを再読み込みしたか。回線が <code>unpkg.com</code> へつながるか。</td></tr><tr><td><code>app.js</code> が動かない</td><td>置き場所が <code>www/js/app.js</code> か。<code>index.html</code> の <code>script</code> が Onsen UI より後にあるか。ファイルを保存したか。</td></tr><tr><td>一覧が空になる</td><td><code>page_list</code>・<code>list_oshi</code> の <code>id</code> の綴り。配列のカンマと引用符。<code>init</code> の中から <code>renderOshiList</code> を呼んでいるか。</td></tr><tr><td>どの行も同じ項目になる</td><td>繰り返しが <code>for (let i = 0; …)</code> になっているか。固定の <code>0</code> ではなく <code>oshiItems[i]</code> を渡しているか。</td></tr><tr><td>押しても反応しない</td><td><code>innerHTML</code> で行を作った後に <code>addEventListener</code> を登録しているか。<code>tappable</code> だけでは処理は付かない。</td></tr><tr><td><code>template</code> を足したら画面が空白になる</td><td><code>ons-navigator</code> の <code>page</code> と <code>template</code> の <code>id</code> の綴り。<code>template</code> の中に <code>ons-page</code> が1つあるか。要素を <code>init</code> より前に取得していないか。</td></tr><tr><td>詳細が空になる</td><td><code>pushPage</code> の <code>data</code> の <code>oshi</code> と、<code>page.data.oshi</code>、表示用の3つの <code>id</code> を照合する。</td></tr><tr><td>OS指定を変えても見た目が変わらない</td><td><code>ons.platform.select</code> を <code>app.js</code> の先頭で実行しているか。画面内の戻るではなく、プレビューの <code>Reload</code> を押したか。端末選択で比べるときは、コードの指定をコメントに戻したか。</td></tr></tbody></table><p>エラーが解決しないときは、<a href="../common/help.html?from=oshi-list">共通資料：困ったとき</a>の調べ方を試してください。それでも解決しないときは、STEP番号と画面を先生に見せましょう。</p></section>
+<section id="step-19">
+<p class="step-meta">STEP 19 · コマ4</p><h2>公開URLを発行して提出する</h2>
+<p>コードは変えません。STEP 18で確かめた自分の好きなものノートを、公開URLで提出します。Monaca系の課題は、自分のプロジェクトを公開し、発行されたURLを先生に渡して提出します。通常版MonacaのFreeプランでは、プロジェクトをZIPなどのファイルに書き出せないので、ファイルではなくURLで渡します。</p>
+<ol><li>編集したファイルを、すべて保存します。保存していない変更は、相手へ渡りません。</li><li>クラウド IDEの左上に、自分のプロジェクトの名前 <code>M01OshiList</code> が出ていることを確かめます。</li><li>上部メニューの <code>プロジェクト</code> を開き、<code>公開…</code> を選びます。
+<figure><img src="images/monaca-project-publish-menu.png" width="601" height="477" alt="クラウドIDEの上部メニューのプロジェクトを開いた画面。いちばん下の公開…が選ばれていて、左上にはプロジェクト名M01OshiListが出ている"><figcaption>上部メニューの <code>プロジェクト</code> を開き、いちばん下の <code>公開…</code> を選びます。</figcaption></figure>
+</li><li><code>プロジェクトの公開</code> の画面が開きます。まだ公開していないときは、<code>公開</code> ボタンを押します。公開すると <code>このプロジェクトは公開されています。</code> と出て、<code>プロジェクトのURL：</code> の欄にURLが表示されます。
+<figure><img src="images/monaca-project-publish-dialog.png" width="658" height="370" alt="プロジェクトの公開の画面。このプロジェクトは公開されていますと表示され、プロジェクトのURLの欄に、https://monaca.mobi/ja/directimport?pid=で始まるURLが出ている。pid=のあとは灰色で隠してある"><figcaption>公開したあとの画面です。<code>pid=</code> のあとの英数字はプロジェクトごとに違うので、画像では隠しています。</figcaption></figure>
+</li><li>欄の中のURLを、最後まで選んでコピーします。</li><li>先生が案内する提出先へ、コピーしたURLを貼り付けて提出します。提出先や締め切りがまだ案内されていないときは、URLを控えて先生に確認します。</li><li><code>閉じる</code> を押して、画面を閉じます。<code>プライベートにする</code> は押しません。</li></ol>
+<p>提出するのは、<code>https://monaca.mobi/ja/directimport?pid=…</code> という形の、自分のプロジェクトで発行したURLです。クラウド IDEやプレビューのアドレスを代わりに貼りません。このURLは、アプリを動かすURLではなく、プロジェクトを相手のMonacaへ取り込ませるURLです。先生はURLから自分のMonacaへ取り込み、プレビューで動かして確かめます。</p>
+<p>相手へ渡るのは、先生が取り込んだときに保存されている、プロジェクトのソースです。配列・HTML・CSS・JavaScriptに書いた内容が、そのまま渡ります。提出したあとも、プロジェクトは削除せず、<code>プライベートにする</code> も押しません。どちらをしても、そのURLから取り込めなくなります。</p>
+<p>発行したURLを自分で開くと、取り込みの画面が出ます。そこで <code>インポート</code> を押すと、自分のアカウントにコピーが1つ増え、プロジェクトの3つの枠の1つを使います。提出のために押す必要はありません。</p>
+<div class="note"><p class="box-title">既知の技術と比べる</p><p>Android StudioやXcodeの課題でプロジェクトのフォルダを渡すときと同じく、渡すのはビルドしたアプリではなく、ソース一式です。違うのは渡し方です。Monacaのプロジェクトはクラウドにあるので、フォルダの代わりに取り込み用のURLを渡します。受け取った人のMonacaには、プロジェクトのコピーが作られます。</p></div>
+<div class="check"><label><input type="checkbox" data-check="oshi-list-19"><span>自分の <code>M01OshiList</code> で公開URLを発行し、先生が案内する提出先へ提出した（提出先がまだ案内されていないときは、URLを控えた）。</span></label></div>
+</section>
+<section id="help"><h2>困ったとき</h2><table><thead><tr><th>見えること</th><th>確認すること</th></tr></thead><tbody><tr><td>装飾のない縦並びになる</td><td><code>index.html</code> の Onsen UI のCDNの版とパス、<code>css/style.css</code> のパスを確認。保存してからプレビューを再読み込みしたか。回線が <code>unpkg.com</code> へつながるか。</td></tr><tr><td><code>app.js</code> が動かない</td><td>置き場所が <code>www/js/app.js</code> か。<code>index.html</code> の <code>script</code> が Onsen UI より後にあるか。ファイルを保存したか。</td></tr><tr><td>一覧が空になる</td><td><code>page_list</code>・<code>list_oshi</code> の <code>id</code> の綴り。配列のカンマと引用符。<code>init</code> の中から <code>renderOshiList</code> を呼んでいるか。</td></tr><tr><td>どの行も同じ項目になる</td><td>繰り返しが <code>for (let i = 0; …)</code> になっているか。固定の <code>0</code> ではなく <code>oshiItems[i]</code> を渡しているか。</td></tr><tr><td>押しても反応しない</td><td><code>innerHTML</code> で行を作った後に <code>addEventListener</code> を登録しているか。<code>tappable</code> だけでは処理は付かない。STEP 17のあとなら、<code>openOshiDetail</code> に <code>txt_selected</code> の行が残っていないか。</td></tr><tr><td><code>template</code> を足したら画面が空白になる</td><td><code>ons-navigator</code> の <code>page</code> と <code>template</code> の <code>id</code> の綴り。<code>template</code> の中に <code>ons-page</code> が1つあるか。要素を <code>init</code> より前に取得していないか。</td></tr><tr><td>詳細が空になる</td><td><code>pushPage</code> の <code>data</code> の <code>oshi</code> と、<code>page.data.oshi</code>、表示用の3つの <code>id</code> を照合する。</td></tr><tr><td>OS指定を変えても見た目が変わらない</td><td><code>ons.platform.select</code> を <code>app.js</code> の先頭で実行しているか。画面内の戻るではなく、プレビューの <code>Reload</code> を押したか。端末選択で比べるときは、コードの指定をコメントに戻したか。</td></tr></tbody></table><p>エラーが解決しないときは、<a href="../common/help.html?from=oshi-list">共通資料：困ったとき</a>の調べ方を試してください。それでも解決しないときは、STEP番号と画面を先生に見せましょう。</p></section>
 <p class="footer">JEC / ハイブリッドアプリ開発技法 · M01OshiList</p>
 <p class="sr-only" role="status" aria-live="polite" data-copy-status></p>
 </main>
