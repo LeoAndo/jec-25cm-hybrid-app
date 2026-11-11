@@ -175,6 +175,10 @@
       "translation": "Haz que <code>lib/main.dart</code> coincida con el código inicial de abajo. Anota primero los textos y colores que hayas modificado por tu cuenta. Mantén el Flutter SDK en la sección <code>dependencies</code> de <code>pubspec.yaml</code>. Si hay una plantilla de <code>flutter_test</code> en <code>dev_dependencies</code>, elimina solo ese bloque. Elimina la plantilla de <code>test/</code> solo si se generó, y conserva <code>flutter_lints</code>."
     },
     {
+      "source": "このSTEPでは、<code>lib/main.dart</code>の全文を載せます。プロジェクトを新しく作った人と、自分のスタンプ帳を続ける人とで、直す前のコードが違うためです。<code>lib/main.dart</code>の中身を、次のコードですべて置き換えます。STEP 01からは、直す場所だけを載せます。",
+      "translation": "En este STEP se muestra el archivo <code>lib/main.dart</code> completo. Esto se debe a que el código antes de los cambios es distinto para quienes crearon un proyecto nuevo y para quienes continúan con su propio tablero de sellos. Reemplaza todo el contenido de <code>lib/main.dart</code> por el siguiente código. A partir del STEP 01, solo se muestran los lugares que hay que modificar."
+    },
+    {
       "source": "lib/main.dart · 全体を置き換える",
       "translation": "lib/main.dart · reemplazar todo el archivo"
     },
@@ -259,8 +263,16 @@
       "translation": "El código que escribes en este STEP ya incluye de antemano partes que se usarán en pasos posteriores. <code>submit</code>, que comprueba los campos vacíos y coloca un texto en <code>message</code>, se usará en el STEP 02; <code>onSave</code>, que pasa el hábito desde la pantalla de entrada a la lista, y <code>addHabit</code>, que agrega a la lista el hábito recibido, se usarán en el STEP 03. Dado que <code>onSave</code> es un argumento con nombre obligatorio de <code>AddHabitPage</code>, el método <code>openAdd</code> de la lista le pasará <code>addHabit</code> desde ahora. Debido a que <code>onPressed</code> del botón 「追加する」 (Agregar) es <code>null</code>, ninguno de ellos se llama en este STEP. <code>enabled: true</code> de <code>TextField</code> especifica que se acepta la entrada. Al igual que <code>canPop</code>, por ahora es <code>true</code>, y se usará en la etapa de guardar para detener la entrada mientras se guarda."
     },
     {
+      "source": "このあとの枠には、ファイルの<strong>直す場所だけ</strong>を載せます。<span1>緑の太字の行</span1>は足す行、<span2>赤い取り消し線の行</span2>は消す行です。<span3>薄い字の行</span3>は、すでにファイルにある行で、入力しません。直す場所を探す目印にします。<code>⋮</code> は、あいだの変えない行を省いた印です。",
+      "translation": "A partir de aquí, los recuadros muestran <strong>solo los lugares del archivo que hay que modificar</strong>. Las <span1>líneas verdes en negrita</span1> son las líneas a agregar, y las <span2>líneas rojas tachadas</span2> son las líneas a borrar. Las <span3>líneas en gris</span3> son líneas que ya están en el archivo; no las escribas. Úsalas como referencia para encontrar el lugar que hay que modificar. <code>⋮</code> es la marca que indica que se omitieron las líneas intermedias que no cambian."
+    },
+    {
       "source": "前のSTEPで文字や数値を自分で変えた行は、枠の中の文字と違っていても、同じ場所の行として読みます。",
       "translation": "Si en un STEP anterior cambiaste por tu cuenta el texto o los números de una línea, léela como la línea del mismo lugar, aunque sea distinta del texto del recuadro."
+    },
+    {
+      "source": "<code>lib/main.dart</code>に3か所足します。まず、<code>_StampBoardPageState</code>の中で、<code>changeStamp</code>の関数を閉じる<code>}</code>の下に、1行空けて緑の行を足します。一覧へ習慣を加える<code>addHabit</code>と、入力画面を開く<code>openAdd</code>です。下の<code>openDetail</code>との間も1行空けます。",
+      "translation": "Agrega código en tres lugares de <code>lib/main.dart</code>. Primero, dentro de <code>_StampBoardPageState</code>, debajo de la llave <code>}</code> que cierra la función <code>changeStamp</code>, deja una línea en blanco y agrega las líneas verdes. Son <code>addHabit</code>, que agrega un hábito a la lista, y <code>openAdd</code>, que abre la pantalla de entrada. Deja también una línea en blanco entre estas líneas y <code>openDetail</code>, que está debajo."
     },
     {
       "source": "足す行",
@@ -269,6 +281,14 @@
     {
       "source": "すでにある行",
       "translation": "Líneas que ya están"
+    },
+    {
+      "source": "次に、一覧の<code>build</code>の中で、合計を表示する<code>Container</code>の下にある<code>const SizedBox(height: 20),</code>の下に、緑の行を足します。入力画面を開くボタンと、その下の注記です。習慣のカードを並べる<code>for</code>の行の上になります。",
+      "translation": "Luego, dentro del <code>build</code> de la lista, agrega las líneas verdes debajo de <code>const SizedBox(height: 20),</code>, que está debajo del <code>Container</code> que muestra el total. Son el botón que abre la pantalla de entrada y la nota que está debajo. Quedarán encima de la línea <code>for</code> que coloca las tarjetas de los hábitos."
+    },
+    {
+      "source": "最後に、ファイルの末尾に、1行空けて緑の行を足します。入力画面の<code>AddHabitPage</code>です。",
+      "translation": "Por último, al final del archivo, deja una línea en blanco y agrega las líneas verdes. Es <code>AddHabitPage</code>, la pantalla de entrada."
     },
     {
       "source": "Androidの<code>EditText</code>やiOSの<code>UITextField</code>から文字を読む場面に対応します。Flutterでは<code>controller</code>を<code>State</code>に保持し、画面が終わるときに解放します。入力欄を開き直しても残したい場合は別の場所へ保存が必要ですが、まだ行いません。",
@@ -289,6 +309,10 @@
     {
       "source": "追加するボタンの<code>onPressed</code>へ<code>submit</code>を渡します。括弧を付けた<code>submit()</code>の実行結果ではなく、押したときに呼ぶ関数を渡します。",
       "translation": "Pasa <code>submit</code> a <code>onPressed</code> del botón 「追加する」 (Agregar). Pasa la función que se llamará cuando se presione el botón, no el resultado de ejecución de <code>submit()</code> con paréntesis."
+    },
+    {
+      "source": "<code>lib/main.dart</code>で、入力画面の<code>build</code>の最後にある<code>FilledButton(onPressed: null, child: const Text('追加する')),</code>の1行を、<code>null</code>を<code>submit</code>に変えた緑の行に直します。",
+      "translation": "En <code>lib/main.dart</code>, modifica la línea <code>FilledButton(onPressed: null, child: const Text('追加する')),</code>, al final del <code>build</code> de la pantalla de entrada, para que quede como la línea verde, en la que <code>null</code> cambia a <code>submit</code>."
     },
     {
       "source": "消す行",
@@ -333,6 +357,10 @@
     {
       "source": "入力確認後に<code>Habit</code>を作り、<code>widget.onSave</code>へ渡します。<code>onSave</code>は親が入力画面へ渡した関数で、この段階は<code>void Function(Habit)</code>型です。「<code>Habit</code>を受け取り、結果の値を返さない処理」という意味です。",
       "translation": "Tras verificar la entrada, crea un <code>Habit</code> y pásalo a <code>widget.onSave</code>. <code>onSave</code> es la función que el widget padre pasó a la pantalla de entrada, y en esta etapa su tipo es <code>void Function(Habit)</code>. Significa “un procesamiento que recibe un <code>Habit</code> y no devuelve ningún valor de resultado”."
+    },
+    {
+      "source": "<code>lib/main.dart</code>で、<code>submit</code>の最後にある<code>setState(() {</code>の行から、<code>message = '入力を確認しました：$name';</code>の下の<code>});</code>の行までの3行（赤い行）を消し、同じ場所に緑の2行を足します。上の<code>if</code>で空欄を確かめる部分は残します。",
+      "translation": "En <code>lib/main.dart</code>, borra las tres líneas del final de <code>submit</code> que van desde la línea <code>setState(() {</code> hasta la línea <code>});</code> que está debajo de <code>message = '入力を確認しました：$name';</code> (las líneas rojas), y agrega las dos líneas verdes en el mismo lugar. Conserva la parte de arriba que comprueba los campos vacíos con <code>if</code>."
     },
     {
       "source": "STEP 01で書いた親の<code>addHabit</code>では、<code>setState</code>の中で<code>habits.add</code>を呼びます。入力画面は<code>Navigator.pop</code>で閉じ、下に残っている一覧を表示します。<code>widget</code>はこの<code>State</code>に対応する<code>AddHabitPage</code>の設定を読むためのプロパティです。",
@@ -471,6 +499,10 @@
       "translation": "Guardar en una lista de cadenas"
     },
     {
+      "source": "まず<code>pubspec.yaml</code>の<code>dependencies</code>へ<code>shared_preferences: 2.5.5</code>を加えます。<code>dependencies:</code>の下にある<code>sdk: flutter</code>の行の下に、緑の1行を足します。<code>dependencies</code>は二重に作らず、<code>shared_preferences</code>の行は<code>flutter:</code>と同じ字下げにします。ほかの設定は残します。",
+      "translation": "Primero agrega <code>shared_preferences: 2.5.5</code> a <code>dependencies</code> en <code>pubspec.yaml</code>. Agrega la línea verde debajo de la línea <code>sdk: flutter</code>, que está debajo de <code>dependencies:</code>. No crees <code>dependencies</code> por duplicado, y escribe la línea <code>shared_preferences</code> con la misma sangría que <code>flutter:</code>. Conserva las demás configuraciones."
+    },
+    {
       "source": "実行中のアプリを<code>q</code>で終了し、<code>flutter pub get</code>を実行します。新しいネイティブプラグインを加えたのでホットリロードだけで済ませず、下の<code>lib/main.dart</code>の書き換えを終えてから、<code>flutter run -d 端末ID</code>で起動し直します。",
       "translation": "Finaliza la aplicación en ejecución con <code>q</code> y ejecuta <code>flutter pub get</code>. Dado que agregaste un nuevo plugin nativo, no te limites al hot reload: termina de modificar <code>lib/main.dart</code> como se indica abajo y luego vuelve a iniciarla con <code>flutter run -d 端末ID</code> (端末ID = ID del dispositivo)."
     },
@@ -481,6 +513,26 @@
     {
       "source": "<code>import</code>でパッケージを読み込み、<code>State</code>に<code>SharedPreferencesAsync</code>を1つ持ちます。保存キー<code>storageKey</code>も1か所です。このAPIだけを使い、旧APIやキャッシュ付きAPIを混ぜません。",
       "translation": "Importa el paquete con <code>import</code> y mantén una sola instancia de <code>SharedPreferencesAsync</code> en <code>State</code>. La clave de guardado <code>storageKey</code> también está en un único lugar. Usa únicamente esta API y no la mezcles con la API anterior ni con la API con caché."
+    },
+    {
+      "source": "<code>lib/main.dart</code>は、12の枠で直します。ファイルの先頭と一覧の画面が7つ、入力画面が5つです。まず、ファイルの先頭で、<code>import</code>の行の下と、<code>const stampGoal</code>の行の下に、緑の行を1行ずつ足します。パッケージを読み込む<code>import</code>と、保存キーの<code>storageKey</code>です。",
+      "translation": "Modifica <code>lib/main.dart</code> en 12 recuadros: 7 para el inicio del archivo y la pantalla de la lista, y 5 para la pantalla de entrada. Primero, al inicio del archivo, agrega una línea verde debajo de la línea <code>import</code> y otra debajo de la línea <code>const stampGoal</code>. Son el <code>import</code> que importa el paquete y <code>storageKey</code>, la clave de guardado."
+    },
+    {
+      "source": "次に、一覧の<code>_StampBoardPageState</code>の先頭で、<code>final List&lt;Habit&gt; habits = [</code>の行から<code>];</code>の行までの5行（赤い行）を消し、同じ場所に緑の行を足します。緑の行は、保存に使うフィールドと、最初に1度呼ばれる<code>initState</code>と、初期の習慣を返す<code>createInitialHabits</code>です。初期の3件は、<code>createInitialHabits</code>の中へ移ります。STEP 04で初期の習慣を自分の題材に変えた場合は、赤い行が枠の中の文字と違っていても、その5行を消し、緑の<code>Habit</code>の3行は自分の題材で書きます。",
+      "translation": "Luego, al inicio de <code>_StampBoardPageState</code> de la lista, borra las cinco líneas que van desde la línea <code>final List&lt;Habit&gt; habits = [</code> hasta la línea <code>];</code> (las líneas rojas), y agrega las líneas verdes en el mismo lugar. Las líneas verdes son los campos que se usan para guardar, <code>initState</code>, que se llama una sola vez al inicio, y <code>createInitialHabits</code>, que devuelve los hábitos iniciales. Los tres hábitos iniciales pasan a estar dentro de <code>createInitialHabits</code>. Si en el STEP 04 cambiaste los hábitos iniciales por tu propio tema, borra esas cinco líneas aunque las líneas rojas sean distintas del texto del recuadro, y escribe las tres líneas verdes de <code>Habit</code> con tu propio tema."
+    },
+    {
+      "source": "続けて、いま足した<code>createInitialHabits</code>の関数を閉じる<code>}</code>の下に、1行空けて緑の行を足します。一覧を端末へ保存する<code>saveHabits</code>です。下の<code>changeStamp</code>との間も1行空けます。",
+      "translation": "A continuación, debajo de la llave <code>}</code> que cierra la función <code>createInitialHabits</code> que acabas de agregar, deja una línea en blanco y agrega las líneas verdes. Es <code>saveHabits</code>, que guarda la lista en el dispositivo. Deja también una línea en blanco entre estas líneas y <code>changeStamp</code>, que está debajo."
+    },
+    {
+      "source": "<code>changeStamp</code>は、2か所直します。<code>void changeStamp(Habit habit, int change) {</code>の1行を消して、緑の2行を足します。その下の<code>final nextCount</code>の行は残し、<code>if</code>の行から<code>});</code>の行までの6行を消して、緑の行を足します。回数を直接変えていた<code>setState</code>の代わりに、新しいリストを作って<code>saveHabits</code>へ渡します。",
+      "translation": "Modifica <code>changeStamp</code> en dos lugares. Borra la línea <code>void changeStamp(Habit habit, int change) {</code> y agrega las dos líneas verdes. Conserva la línea <code>final nextCount</code> que está debajo; luego borra las seis líneas que van desde la línea <code>if</code> hasta la línea <code>});</code> y agrega las líneas verdes. En lugar del <code>setState</code> que cambiaba el conteo directamente, se crea una lista nueva y se pasa a <code>saveHabits</code>."
+    },
+    {
+      "source": "<code>addHabit</code>も、<code>void addHabit(Habit habit) {</code>の行から<code>});</code>の行までの4行（赤い行）を消し、同じ場所に緑の4行を足します。",
+      "translation": "También en <code>addHabit</code>, borra las cuatro líneas que van desde la línea <code>void addHabit(Habit habit) {</code> hasta la línea <code>});</code> (las líneas rojas), y agrega las cuatro líneas verdes en el mismo lugar."
     },
     {
       "source": "名前・理由・回数を文字列リストにして保存します。1件は3要素で、2件なら6要素です。回数は<code>count.toString()</code>で文字列へ変えます。JSONは使いません。",
@@ -511,8 +563,36 @@
       "translation": "Establece <code>isSaving</code> en <code>true</code> para deshabilitar los botones y los campos de entrada, y muestra el texto de espera y un <code>LinearProgressIndicator</code>. Captura las excepciones con <code>try</code> / <code>catch</code> y, en caso de error, conserva la lista original. <code>finally</code> es el lugar donde se restablece el estado de espera, tanto si tiene éxito como si falla."
     },
     {
+      "source": "一覧の<code>build</code>では、合計の下の<code>const SizedBox(height: 20),</code>から、一覧のいちばん下の<code>Text</code>までの間を、4か所直します。「習慣を追加」の<code>FilledButton.icon(</code>の上に、緑の4行を足します。待機中に出す<code>LinearProgressIndicator</code>と、<code>message</code>の表示です。ボタンの<code>onPressed: openAdd,</code>の1行は、緑の行に直します。ボタンの下の2行（赤い行）を消し、緑の3行を足します。習慣が0件のときの案内です。いちばん下の<code>const Text('この段階ではアプリを終了すると回数は0に戻ります。'),</code>の1行も、緑の行に直します。",
+      "translation": "En el <code>build</code> de la lista, modifica cuatro lugares entre <code>const SizedBox(height: 20),</code>, que está debajo del total, y el <code>Text</code> que está al final de la lista. Encima de <code>FilledButton.icon(</code> de 「習慣を追加」 (Agregar hábito), agrega las cuatro líneas verdes. Son el <code>LinearProgressIndicator</code> que se muestra durante la espera y la visualización de <code>message</code>. Modifica la línea <code>onPressed: openAdd,</code> del botón para que quede como la línea verde. Borra las dos líneas que están debajo del botón (las líneas rojas) y agrega las tres líneas verdes. Es el aviso para cuando hay 0 hábitos. Modifica también la línea <code>const Text('この段階ではアプリを終了すると回数は0に戻ります。'),</code>, que está al final de todo, para que quede como la línea verde."
+    },
+    {
+      "source": "<code>buildHabitCard</code>では、<code>Wrap</code>の<code>children</code>の中の3つのボタンで、<code>onPressed:</code>で始まる行（赤い行）を1行ずつ消し、同じ場所に緑の行を足します。どのボタンも、読込中や保存中は<code>onPressed</code>が<code>null</code>になり、押せなくなります。",
+      "translation": "En <code>buildHabitCard</code>, en cada uno de los tres botones dentro de los <code>children</code> del <code>Wrap</code>, borra la línea que empieza con <code>onPressed:</code> (la línea roja) y agrega las líneas verdes en el mismo lugar. Durante la carga o el guardado, el <code>onPressed</code> de todos los botones pasa a ser <code>null</code> y no se pueden presionar."
+    },
+    {
       "source": "<code>onSave</code>の型は<code>Future&lt;bool&gt; Function(Habit)</code>へ変わり、入力画面の<code>submit</code>も<code>async</code>になります。<code>await</code>で親の保存を待ち、成功したときだけ<code>pop</code>します。失敗なら入力を消しません。<code>await</code>の後は<code>mounted</code>を確認し、既に破棄された<code>State</code>へ<code>setState</code>や画面遷移を行わないようにします。保存中は戻るボタンと<code>PopScope</code>の<code>canPop</code>も無効にします。",
       "translation": "El tipo de <code>onSave</code> cambia a <code>Future&lt;bool&gt; Function(Habit)</code> y <code>submit</code> en la pantalla de entrada también se vuelve <code>async</code>. Espera con <code>await</code> al guardado del widget padre y ejecuta <code>pop</code> solo si tiene éxito. Si falla, no borres los datos ingresados. Después de <code>await</code>, verifica <code>mounted</code> para no llamar a <code>setState</code> ni realizar navegación entre pantallas sobre un <code>State</code> que ya haya sido destruido. Durante el guardado, deshabilita también el botón de regreso y <code>canPop</code> de <code>PopScope</code>."
+    },
+    {
+      "source": "ここからは、入力画面の5つの枠です。<code>AddHabitPage</code>の<code>final void Function(Habit) onSave;</code>の1行を、型を変えた緑の行に直します。<code>_AddHabitPageState</code>では、<code>final reasonController = TextEditingController();</code>の下に、緑の1行を足します。保存中かどうかを持つ<code>isSaving</code>です。",
+      "translation": "A partir de aquí están los cinco recuadros de la pantalla de entrada. Modifica la línea <code>final void Function(Habit) onSave;</code> de <code>AddHabitPage</code> para que quede como la línea verde, que tiene otro tipo. En <code>_AddHabitPageState</code>, agrega la línea verde debajo de <code>final reasonController = TextEditingController();</code>. Es <code>isSaving</code>, que indica si se está guardando."
+    },
+    {
+      "source": "<code>submit</code>は、2か所直します。<code>void submit() {</code>の1行を消して、緑の2行を足します。空欄を確かめる<code>if</code>は残し、その下の<code>widget.onSave(Habit(name: name, reason: reason));</code>と<code>Navigator.pop(context);</code>の2行を消して、緑の行を足します。",
+      "translation": "Modifica <code>submit</code> en dos lugares. Borra la línea <code>void submit() {</code> y agrega las dos líneas verdes. Conserva el <code>if</code> que comprueba los campos vacíos; luego borra las dos líneas que están debajo, <code>widget.onSave(Habit(name: name, reason: reason));</code> y <code>Navigator.pop(context);</code>, y agrega las líneas verdes."
+    },
+    {
+      "source": "入力画面の<code>build</code>では、<code>canPop: true,</code>の1行と、<code>leading</code>の<code>IconButton</code>にある<code>onPressed: () =&gt; Navigator.pop(context),</code>の1行を、それぞれ緑の行に直します。",
+      "translation": "En el <code>build</code> de la pantalla de entrada, modifica la línea <code>canPop: true,</code> y la línea <code>onPressed: () =&gt; Navigator.pop(context),</code> del <code>IconButton</code> de <code>leading</code> para que cada una quede como su línea verde."
+    },
+    {
+      "source": "2つの<code>TextField</code>にある<code>enabled: true,</code>の行を、どちらも緑の行に直します。",
+      "translation": "Modifica las líneas <code>enabled: true,</code> de los dos <code>TextField</code> para que, en ambos casos, queden como la línea verde."
+    },
+    {
+      "source": "最後に、入力画面の<code>Text(message),</code>の下に、緑の1行を足します。保存中に出す<code>LinearProgressIndicator</code>です。いちばん下の<code>FilledButton(onPressed: submit, child: const Text('追加する')),</code>の1行は消し、緑の4行を足します。ボタンの文字は<code>追加して保存</code>に変わります。",
+      "translation": "Por último, agrega la línea verde debajo de <code>Text(message),</code> en la pantalla de entrada. Es el <code>LinearProgressIndicator</code> que se muestra durante el guardado. Borra la línea <code>FilledButton(onPressed: submit, child: const Text('追加する')),</code>, que está al final de todo, y agrega las cuatro líneas verdes. El texto del botón cambia a <code>追加して保存</code> (Agregar y guardar)."
     },
     {
       "source": "1件追加して「この端末に保存しました。」を確認します。このSTEPは保存だけで、起動時に読む処理はまだありません。再起動すると初期3件を表示する段階です。再起動した後の初期3件の画面でスタンプを押すか習慣を追加すると、保存内容は表示中の一覧で置き換わり、再起動の前に保存した習慣や回数は残りません。保存した内容をまだ読み込んでいない一覧を、そのまま保存するためです。次のSTEPで読み込めるのは、最後に保存した内容です。",
@@ -539,6 +619,10 @@
       "translation": "Llama a <code>loadHabits</code> desde <code>initState</code> al iniciar. No hagas que <code>initState</code> en sí mismo sea <code>async</code>; separa el procesamiento en otra función <code>async</code>. Durante la carga, establece <code>isLoading</code> en <code>true</code> y <code>canSave</code> en <code>false</code> para no sobrescribir el contenido guardado con los valores iniciales."
     },
     {
+      "source": "<code>lib/main.dart</code>を、3つの枠で直します。まず、<code>_StampBoardPageState</code>の先頭で、<code>bool isLoading = false;</code>と<code>bool canSave = true;</code>の行を、それぞれ緑の行に直します。<code>initState</code>の中では、<code>habits = createInitialHabits();</code>と、その下の<code>message =</code>で始まる行の2行を消し、緑の1行を足します。<code>isLoading</code>と<code>canSave</code>の最初の値が変わり、<code>initState</code>は<code>loadHabits</code>を呼ぶだけになります。",
+      "translation": "Modifica <code>lib/main.dart</code> en tres recuadros. Primero, al inicio de <code>_StampBoardPageState</code>, modifica la línea <code>bool isLoading = false;</code> y la línea <code>bool canSave = true;</code> para que cada una quede como su línea verde. Dentro de <code>initState</code>, borra las dos líneas, <code>habits = createInitialHabits();</code> y la que está debajo y empieza con <code>message =</code>, y agrega la línea verde. Cambian los valores iniciales de <code>isLoading</code> y <code>canSave</code>, y <code>initState</code> solo llama a <code>loadHabits</code>."
+    },
+    {
       "source": "<code>await preferences.getStringList(storageKey)</code>は未保存なら<code>null</code>です。その場合だけ<code>createInitialHabits</code>を使います。値があれば<code>decodeHabits</code>で3要素ずつ<code>Habit</code>へ戻します。空リストは正しい0件なので、初期3件へ勝手に置き換えません。",
       "translation": "<code>await preferences.getStringList(storageKey)</code> es <code>null</code> si no se ha guardado nada. Solo en ese caso, usa <code>createInitialHabits</code>. Si hay valores, <code>decodeHabits</code> convierte cada grupo de 3 elementos de nuevo en un <code>Habit</code>. Una lista vacía representa 0 elementos válidos, así que no la reemplaces arbitrariamente por los 3 elementos iniciales."
     },
@@ -561,6 +645,14 @@
     {
       "source": "不正な保存内容を「未保存」とは扱いません。元の保存キーへ自動で書き込まず、再読み込みと教員への確認を案内します。次のSTEPで本人が選ぶ初期化を作ります。",
       "translation": "El contenido guardado que no sea válido no se trata como “no guardado”. No sobrescribas automáticamente la clave de guardado original; en su lugar, indica recargar y consultar con el docente. En el siguiente STEP crearemos un restablecimiento que el usuario elija voluntariamente."
+    },
+    {
+      "source": "次に、<code>createInitialHabits</code>の関数を閉じる<code>}</code>の下に、1行空けて緑の行を足します。保存した記録を読み込む<code>loadHabits</code>と、文字列のリストを<code>Habit</code>へ戻す<code>decodeHabits</code>です。下の<code>saveHabits</code>との間も1行空けます。",
+      "translation": "Luego, debajo de la llave <code>}</code> que cierra la función <code>createInitialHabits</code>, deja una línea en blanco y agrega las líneas verdes. Son <code>loadHabits</code>, que carga los registros guardados, y <code>decodeHabits</code>, que convierte la lista de cadenas de vuelta en <code>Habit</code>. Deja también una línea en blanco entre estas líneas y <code>saveHabits</code>, que está debajo."
+    },
+    {
+      "source": "最後に、一覧の<code>build</code>で、「習慣を追加」の<code>FilledButton.icon</code>を閉じる<code>),</code>の下に、緑の行を足します。読み込めなかったときだけ表示する、再読み込みのボタンです。",
+      "translation": "Por último, en el <code>build</code> de la lista, agrega las líneas verdes debajo de <code>),</code>, que cierra el <code>FilledButton.icon</code> de 「習慣を追加」 (Agregar hábito). Es el botón para recargar, que se muestra solo cuando no se pudo cargar."
     },
     {
       "source": "新しい習慣を追加し、何回かスタンプを押します。",
@@ -597,6 +689,18 @@
     {
       "source": "削除するのは<code>preferences.remove(storageKey)</code>で指定したキー1個だけです。保存領域全体の<code>clear</code>は使いません。削除に成功してから初期の<code>Habit</code>配列へ戻し、保存を再び有効にします。削除に失敗したら元の一覧とエラーの文を残します。",
       "translation": "Solo se elimina la clave única especificada con <code>preferences.remove(storageKey)</code>. No se usa <code>clear</code>, que borra toda el área de guardado. Solo después de que la eliminación tenga éxito, vuelve al arreglo de <code>Habit</code> inicial y habilita nuevamente el guardado. Si la eliminación falla, mantén la lista original y el mensaje de error."
+    },
+    {
+      "source": "<code>lib/main.dart</code>を3か所直します。まず、<code>loadHabits</code>の<code>catch</code>にある、<code>message = '記録を読み込めませんでした。</code>で始まる1行を、緑の行に直します。読み込めなかったときに、初期化も選べることを案内します。",
+      "translation": "Modifica <code>lib/main.dart</code> en tres lugares. Primero, modifica la línea del <code>catch</code> de <code>loadHabits</code> que empieza con <code>message = '記録を読み込めませんでした。</code> para que quede como la línea verde. Así, cuando no se pueda cargar, se indica que también se puede elegir el restablecimiento."
+    },
+    {
+      "source": "次に、<code>openAdd</code>の関数を閉じる<code>}</code>の下に、1行空けて緑の行を足します。確認してから初期の習慣へ戻す<code>resetHabits</code>です。下の<code>openDetail</code>との間も1行空けます。",
+      "translation": "Luego, debajo de la llave <code>}</code> que cierra la función <code>openAdd</code>, deja una línea en blanco y agrega las líneas verdes. Es <code>resetHabits</code>, que pide confirmación y luego vuelve a los hábitos iniciales. Deja también una línea en blanco entre estas líneas y <code>openDetail</code>, que está debajo."
+    },
+    {
+      "source": "最後に、一覧の<code>build</code>で、いちばん下の<code>const Text('記録はこの端末だけに残ります。提出するAPKに入力済みデータは含まれません。'),</code>の下に、緑の行を足します。初期化を始めるボタンです。",
+      "translation": "Por último, en el <code>build</code> de la lista, agrega las líneas verdes debajo de <code>const Text('記録はこの端末だけに残ります。提出するAPKに入力済みデータは含まれません。'),</code>, que está al final de todo. Es el botón para iniciar el restablecimiento."
     },
     {
       "source": "自分が残す必要のない検証用の記録で、初期化を開いてやめるを押します。記録が残ることを確認します。",
@@ -697,6 +801,10 @@
     {
       "source": "Visual Studio Codeでプロジェクトを開いた状態から<code>Flutter: Launch Emulator</code>でAndroid端末を起動し、<code>flutter devices</code>でIDを読みます。",
       "translation": "Con el proyecto abierto en Visual Studio Code, inicia el dispositivo Android mediante <code>Flutter: Launch Emulator</code> y lee su ID con <code>flutter devices</code>."
+    },
+    {
+      "source": "<code>android/gradle/wrapper/gradle-wrapper.properties</code>の<code>distributionUrl</code>を確認します。今回の空テンプレートはGradle 9.3.1です。<code>all.zip</code>の場合は、版を変えず<code>bin.zip</code>へそろえます。<code>distributionUrl</code>の1行だけを、緑の行に直します。",
+      "translation": "Verifica <code>distributionUrl</code> en <code>android/gradle/wrapper/gradle-wrapper.properties</code>. La plantilla vacía de esta ocasión usa Gradle 9.3.1. Si dice <code>all.zip</code>, cámbialo a <code>bin.zip</code> sin cambiar la versión. Modifica únicamente la línea <code>distributionUrl</code> para que quede como la línea verde."
     },
     {
       "source": "教員から同じURLで取得したGradleキャッシュを受け取る場合は、配布された<code>gradle-9.3.1-bin</code>フォルダを<code>~/.gradle/wrapper/dists/</code>の下へ配置します。ハッシュ名の階層、展開済みディレクトリ、<code>.zip.ok</code>を保ち、既存の別版を上書きしません。既に同じフォルダがある場合は先生へ確認します。<code>all.zip</code>のキャッシュとは共用できません。",

@@ -175,6 +175,10 @@
       "translation": "<code>lib/main.dart</code> ကို အောက်ဖော်ပြပါ စတင်ရန် code နှင့် ကိုက်ညီအောင် ပြုလုပ်ပါ။ မိမိပြောင်းလဲထားသော စာသားနှင့် အရောင်များကို ကြိုတင်မှတ်သားထားပါ။ <code>pubspec.yaml</code> ၏ <code>dependencies</code> ဘက်ရှိ Flutter SDK ကို ချန်ထားပြီး <code>dev_dependencies</code> ဘက်တွင် <code>flutter_test</code> template ရှိပါက ထို block ကိုသာ ဖယ်ရှားပါ။ <code>test/</code> template ထွက်ပေါ်လာပါကလည်း ဖယ်ရှားပြီး <code>flutter_lints</code> ကို ချန်ထားပါ။"
     },
     {
+      "source": "このSTEPでは、<code>lib/main.dart</code>の全文を載せます。プロジェクトを新しく作った人と、自分のスタンプ帳を続ける人とで、直す前のコードが違うためです。<code>lib/main.dart</code>の中身を、次のコードですべて置き換えます。STEP 01からは、直す場所だけを載せます。",
+      "translation": "ဤ STEP တွင် <code>lib/main.dart</code> ဖိုင်တစ်ခုလုံးကို ဖော်ပြထားပါသည်။ project အသစ် ဖန်တီးသူနှင့် မိမိ၏ stamp board ကို ဆက်လက်လုပ်ဆောင်သူတို့၏ မပြင်မီ code သည် မတူသောကြောင့် ဖြစ်ပါသည်။ <code>lib/main.dart</code> ၏ ပါဝင်သည့်အရာ အားလုံးကို အောက်ပါ code ဖြင့် အစားထိုးပါ။ STEP 01 မှ စတင်၍ ပြင်ရမည့်နေရာများကိုသာ ဖော်ပြပါမည်။"
+    },
+    {
       "source": "lib/main.dart · 全体を置き換える",
       "translation": "lib/main.dart · ဖိုင်တစ်ခုလုံး အစားထိုးရန်"
     },
@@ -259,8 +263,16 @@
       "translation": "ဤ STEP တွင် ရေးမည့် code ၌ နောက်ပိုင်း STEP များတွင် အသုံးပြုမည့် အစိတ်အပိုင်းများကိုလည်း ကြိုတင်ထည့်သွင်းထားပါသည်။ ကွက်လပ်များကို စစ်ဆေး၍ <code>message</code> ထဲသို့ စာကြောင်းထည့်ပေးသည့် <code>submit</code> ကို STEP 02 တွင် အသုံးပြုပြီး input screen မှ စာရင်းဆီသို့ အလေ့အထကို ပေးပို့သည့် <code>onSave</code> နှင့် ပေးပို့လာသော အလေ့အထကို စာရင်းထဲသို့ ထည့်သွင်းသည့် <code>addHabit</code> ကို STEP 03 တွင် အသုံးပြုပါမည်။ <code>onSave</code> သည် <code>AddHabitPage</code> ၏ မဖြစ်မနေလိုအပ်သော named argument ဖြစ်သောကြောင့် စာရင်း၏ <code>openAdd</code> သည် ယခုမှစ၍ <code>addHabit</code> ကို ပေးပို့မည် ဖြစ်ပါသည်။ 「追加する」 (Add) ခလုတ်၏ <code>onPressed</code> မှာ <code>null</code> ဖြစ်နေသောကြောင့် ဤ STEP တွင် မည်သည့်အရာမျှ ခေါ်ဆိုမည် မဟုတ်ပါ။ <code>TextField</code> ၏ <code>enabled: true</code> မှာ ထည့်သွင်းမှုကို လက်ခံရန် သတ်မှတ်ချက် ဖြစ်ပါသည်။ <code>canPop</code> ကဲ့သို့ပင် ယခုအခါ <code>true</code> ဖြစ်နေပြီး သိမ်းဆည်းခြင်းကို ထည့်သွင်းသည့် အဆင့်တွင် သိမ်းဆည်းနေစဉ် ထည့်သွင်းမှုကို ရပ်တန့်ရန် အသုံးပြုပါမည်။"
     },
     {
+      "source": "このあとの枠には、ファイルの<strong>直す場所だけ</strong>を載せます。<span1>緑の太字の行</span1>は足す行、<span2>赤い取り消し線の行</span2>は消す行です。<span3>薄い字の行</span3>は、すでにファイルにある行で、入力しません。直す場所を探す目印にします。<code>⋮</code> は、あいだの変えない行を省いた印です。",
+      "translation": "ဤနေရာမှ နောက်ပိုင်းရှိ ဘောင်များတွင် ဖိုင်၏ <strong>ပြင်ရမည့်နေရာများကိုသာ</strong> ဖော်ပြထားပါသည်။ <span1>စာလုံးထူသော အစိမ်းရောင် စာကြောင်း</span1>သည် ထပ်ထည့်ရမည့် စာကြောင်း၊ <span2>မျဉ်းဖြတ်ထားသော အနီရောင် စာကြောင်း</span2>သည် ဖျက်ရမည့် စာကြောင်း ဖြစ်ပါသည်။ <span3>စာလုံးအရောင်ဖျော့သော စာကြောင်း</span3>သည် ဖိုင်ထဲတွင် ရှိပြီးသား စာကြောင်းဖြစ်၍ မရိုက်ထည့်ပါနှင့်။ ပြင်ရမည့်နေရာကို ရှာရန် အမှတ်အသားအဖြစ် သုံးပါ။ <code>⋮</code> သည် ကြားရှိ မပြောင်းသော စာကြောင်းများကို ချန်လှပ်ထားကြောင်း ပြသည့် အမှတ်အသား ဖြစ်ပါသည်။"
+    },
+    {
       "source": "前のSTEPで文字や数値を自分で変えた行は、枠の中の文字と違っていても、同じ場所の行として読みます。",
       "translation": "ယခင် STEP များတွင် စာသား သို့မဟုတ် ဂဏန်းကို ကိုယ်တိုင် ပြောင်းလဲခဲ့သော စာကြောင်းကို ဘောင်ထဲရှိ စာသားနှင့် မတူသော်လည်း တူညီသောနေရာရှိ စာကြောင်းအဖြစ် ဖတ်ပါ။"
+    },
+    {
+      "source": "<code>lib/main.dart</code>に3か所足します。まず、<code>_StampBoardPageState</code>の中で、<code>changeStamp</code>の関数を閉じる<code>}</code>の下に、1行空けて緑の行を足します。一覧へ習慣を加える<code>addHabit</code>と、入力画面を開く<code>openAdd</code>です。下の<code>openDetail</code>との間も1行空けます。",
+      "translation": "<code>lib/main.dart</code> တွင် နေရာ 3 ခု၌ code ထည့်ပါမည်။ ပထမဦးစွာ <code>_StampBoardPageState</code> အတွင်း၌ <code>changeStamp</code> function ကို ပိတ်သည့် <code>}</code> ၏ အောက်တွင် စာကြောင်း 1 ကြောင်း ခြားပြီး အစိမ်းရောင် စာကြောင်းများကို ထပ်ထည့်ပါ။ ၎င်းတို့သည် စာရင်းသို့ အလေ့အထ ထပ်ထည့်သည့် <code>addHabit</code> နှင့် input screen ကို ဖွင့်သည့် <code>openAdd</code> ဖြစ်ပါသည်။ အောက်ရှိ <code>openDetail</code> နှင့်ကြားတွင်လည်း စာကြောင်း 1 ကြောင်း ခြားထားပါ။"
     },
     {
       "source": "足す行",
@@ -269,6 +281,14 @@
     {
       "source": "すでにある行",
       "translation": "ရှိပြီးသား စာကြောင်း"
+    },
+    {
+      "source": "次に、一覧の<code>build</code>の中で、合計を表示する<code>Container</code>の下にある<code>const SizedBox(height: 20),</code>の下に、緑の行を足します。入力画面を開くボタンと、その下の注記です。習慣のカードを並べる<code>for</code>の行の上になります。",
+      "translation": "နောက်တစ်ဆင့်အနေဖြင့် စာရင်း၏ <code>build</code> အတွင်း၌ စုစုပေါင်းကို ပြသသည့် <code>Container</code> ၏ အောက်ရှိ <code>const SizedBox(height: 20),</code> ၏ အောက်တွင် အစိမ်းရောင် စာကြောင်းများကို ထပ်ထည့်ပါ။ ၎င်းတို့သည် input screen ကို ဖွင့်သည့် ခလုတ်နှင့် ၎င်း၏အောက်ရှိ မှတ်ချက် ဖြစ်ပါသည်။ ၎င်းတို့သည် အလေ့အထ card များကို စီတန်းပြသသည့် <code>for</code> စာကြောင်း၏ အပေါ်တွင် ဖြစ်ပါမည်။"
+    },
+    {
+      "source": "最後に、ファイルの末尾に、1行空けて緑の行を足します。入力画面の<code>AddHabitPage</code>です。",
+      "translation": "နောက်ဆုံးအနေဖြင့် ဖိုင်၏ အဆုံးတွင် စာကြောင်း 1 ကြောင်း ခြားပြီး အစိမ်းရောင် စာကြောင်းများကို ထပ်ထည့်ပါ။ ၎င်းသည် input screen ဖြစ်သော <code>AddHabitPage</code> ဖြစ်ပါသည်။"
     },
     {
       "source": "Androidの<code>EditText</code>やiOSの<code>UITextField</code>から文字を読む場面に対応します。Flutterでは<code>controller</code>を<code>State</code>に保持し、画面が終わるときに解放します。入力欄を開き直しても残したい場合は別の場所へ保存が必要ですが、まだ行いません。",
@@ -289,6 +309,10 @@
     {
       "source": "追加するボタンの<code>onPressed</code>へ<code>submit</code>を渡します。括弧を付けた<code>submit()</code>の実行結果ではなく、押したときに呼ぶ関数を渡します。",
       "translation": "「追加する」 (Add) ခလုတ်၏ <code>onPressed</code> သို့ <code>submit</code> ကို ပေးပို့ပါ။ လက်သည်းကွင်းပါသော <code>submit()</code> ၏ run ရလဒ်မဟုတ်ဘဲ နှိပ်သည့်အခါ ခေါ်ဆိုမည့် function ကို ပေးပို့ရပါမည်။"
+    },
+    {
+      "source": "<code>lib/main.dart</code>で、入力画面の<code>build</code>の最後にある<code>FilledButton(onPressed: null, child: const Text('追加する')),</code>の1行を、<code>null</code>を<code>submit</code>に変えた緑の行に直します。",
+      "translation": "<code>lib/main.dart</code> တွင် input screen ၏ <code>build</code> ၏ နောက်ဆုံးရှိ <code>FilledButton(onPressed: null, child: const Text('追加する')),</code> စာကြောင်း 1 ကြောင်းကို <code>null</code> ကို <code>submit</code> သို့ ပြောင်းထားသော အစိမ်းရောင် စာကြောင်း ဖြစ်အောင် ပြင်ပါ။"
     },
     {
       "source": "消す行",
@@ -333,6 +357,10 @@
     {
       "source": "入力確認後に<code>Habit</code>を作り、<code>widget.onSave</code>へ渡します。<code>onSave</code>は親が入力画面へ渡した関数で、この段階は<code>void Function(Habit)</code>型です。「<code>Habit</code>を受け取り、結果の値を返さない処理」という意味です。",
       "translation": "ထည့်သွင်းမှုကို အတည်ပြုပြီးနောက် <code>Habit</code> ကို ဖန်တီးပြီး <code>widget.onSave</code> သို့ ပေးပို့ပါ။ <code>onSave</code> သည် parent မှ input screen သို့ ပေးပို့ထားသော function ဖြစ်ပြီး ဤအဆင့်တွင် <code>void Function(Habit)</code> type ဖြစ်ပါသည်။ “<code>Habit</code> ကို လက်ခံရယူပြီး ရလဒ်တန်ဖိုး ပြန်မပေးသော လုပ်ဆောင်ချက်” ဟု အဓိပ္ပာယ်ရပါသည်။"
+    },
+    {
+      "source": "<code>lib/main.dart</code>で、<code>submit</code>の最後にある<code>setState(() {</code>の行から、<code>message = '入力を確認しました：$name';</code>の下の<code>});</code>の行までの3行（赤い行）を消し、同じ場所に緑の2行を足します。上の<code>if</code>で空欄を確かめる部分は残します。",
+      "translation": "<code>lib/main.dart</code> တွင် <code>submit</code> ၏ နောက်ဆုံးရှိ <code>setState(() {</code> စာကြောင်းမှ <code>message = '入力を確認しました：$name';</code> ၏ အောက်ရှိ <code>});</code> စာကြောင်းအထိ စာကြောင်း 3 ကြောင်း (အနီရောင် စာကြောင်းများ) ကို ဖျက်ပြီး တူညီသောနေရာတွင် အစိမ်းရောင် စာကြောင်း 2 ကြောင်းကို ထပ်ထည့်ပါ။ အပေါ်ရှိ <code>if</code> ဖြင့် ကွက်လပ်များကို စစ်ဆေးသည့် အပိုင်းကို ချန်ထားပါ။"
     },
     {
       "source": "STEP 01で書いた親の<code>addHabit</code>では、<code>setState</code>の中で<code>habits.add</code>を呼びます。入力画面は<code>Navigator.pop</code>で閉じ、下に残っている一覧を表示します。<code>widget</code>はこの<code>State</code>に対応する<code>AddHabitPage</code>の設定を読むためのプロパティです。",
@@ -471,6 +499,10 @@
       "translation": "string list သို့ သိမ်းဆည်းရန်"
     },
     {
+      "source": "まず<code>pubspec.yaml</code>の<code>dependencies</code>へ<code>shared_preferences: 2.5.5</code>を加えます。<code>dependencies:</code>の下にある<code>sdk: flutter</code>の行の下に、緑の1行を足します。<code>dependencies</code>は二重に作らず、<code>shared_preferences</code>の行は<code>flutter:</code>と同じ字下げにします。ほかの設定は残します。",
+      "translation": "ပထမဦးစွာ <code>pubspec.yaml</code> ၏ <code>dependencies</code> ထဲသို့ <code>shared_preferences: 2.5.5</code> ကို ထည့်သွင်းပါ။ <code>dependencies:</code> ၏ အောက်ရှိ <code>sdk: flutter</code> စာကြောင်း၏ အောက်တွင် အစိမ်းရောင် စာကြောင်း 1 ကြောင်းကို ထပ်ထည့်ပါ။ <code>dependencies</code> ကို နှစ်ခါ မဖန်တီးဘဲ <code>shared_preferences</code> စာကြောင်းကို <code>flutter:</code> နှင့် တူညီသော indent ဖြင့် ရေးပါ။ အခြား setting များကို ချန်ထားပါ။"
+    },
+    {
       "source": "実行中のアプリを<code>q</code>で終了し、<code>flutter pub get</code>を実行します。新しいネイティブプラグインを加えたのでホットリロードだけで済ませず、下の<code>lib/main.dart</code>の書き換えを終えてから、<code>flutter run -d 端末ID</code>で起動し直します。",
       "translation": "Run နေသော app ကို <code>q</code> ဖြင့် ရပ်တန့်ပြီး <code>flutter pub get</code> ကို run လုပ်ပါ။ Native plugin အသစ်ကို ထည့်သွင်းထားသောကြောင့် hot reload ဖြင့်သာ မပြီးဆုံးစေဘဲ အောက်ပါ <code>lib/main.dart</code> ပြင်ရေးခြင်းကို ပြီးအောင်လုပ်ပြီးမှ <code>flutter run -d 端末ID</code> (端末ID = device ID) ဖြင့် ပြန်လည်စတင်ပါ။"
     },
@@ -481,6 +513,26 @@
     {
       "source": "<code>import</code>でパッケージを読み込み、<code>State</code>に<code>SharedPreferencesAsync</code>を1つ持ちます。保存キー<code>storageKey</code>も1か所です。このAPIだけを使い、旧APIやキャッシュ付きAPIを混ぜません。",
       "translation": "<code>import</code> ဖြင့် package ကို ရယူပြီး <code>State</code> တွင် <code>SharedPreferencesAsync</code> တစ်ခုကို ထားရှိပါ။ Storage key <code>storageKey</code> ကိုလည်း တစ်နေရာတည်းတွင် ထားရှိပါ။ ဤ API တစ်ခုတည်းကိုသာ အသုံးပြုပြီး API အဟောင်းများ သို့မဟုတ် cache ပါသော API များကို ရောနှော၍ မသုံးပါနှင့်။"
+    },
+    {
+      "source": "<code>lib/main.dart</code>は、12の枠で直します。ファイルの先頭と一覧の画面が7つ、入力画面が5つです。まず、ファイルの先頭で、<code>import</code>の行の下と、<code>const stampGoal</code>の行の下に、緑の行を1行ずつ足します。パッケージを読み込む<code>import</code>と、保存キーの<code>storageKey</code>です。",
+      "translation": "<code>lib/main.dart</code> ကို ဘောင် 12 ခုဖြင့် ပြင်ပါမည်။ ဖိုင်၏ အစနှင့် စာရင်း screen အတွက် 7 ခု၊ input screen အတွက် 5 ခု ဖြစ်ပါသည်။ ပထမဦးစွာ ဖိုင်၏ အစတွင် <code>import</code> စာကြောင်း၏ အောက်နှင့် <code>const stampGoal</code> စာကြောင်း၏ အောက်တွင် အစိမ်းရောင် စာကြောင်းကို 1 ကြောင်းစီ ထပ်ထည့်ပါ။ ၎င်းတို့သည် package ကို ရယူသည့် <code>import</code> နှင့် storage key ဖြစ်သော <code>storageKey</code> ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "次に、一覧の<code>_StampBoardPageState</code>の先頭で、<code>final List&lt;Habit&gt; habits = [</code>の行から<code>];</code>の行までの5行（赤い行）を消し、同じ場所に緑の行を足します。緑の行は、保存に使うフィールドと、最初に1度呼ばれる<code>initState</code>と、初期の習慣を返す<code>createInitialHabits</code>です。初期の3件は、<code>createInitialHabits</code>の中へ移ります。STEP 04で初期の習慣を自分の題材に変えた場合は、赤い行が枠の中の文字と違っていても、その5行を消し、緑の<code>Habit</code>の3行は自分の題材で書きます。",
+      "translation": "နောက်တစ်ဆင့်အနေဖြင့် စာရင်း၏ <code>_StampBoardPageState</code> ၏ အစတွင် <code>final List&lt;Habit&gt; habits = [</code> စာကြောင်းမှ <code>];</code> စာကြောင်းအထိ စာကြောင်း 5 ကြောင်း (အနီရောင် စာကြောင်းများ) ကို ဖျက်ပြီး တူညီသောနေရာတွင် အစိမ်းရောင် စာကြောင်းများကို ထပ်ထည့်ပါ။ အစိမ်းရောင် စာကြောင်းများသည် သိမ်းဆည်းရန် အသုံးပြုသည့် field များ၊ အစတွင် တစ်ကြိမ်သာ ခေါ်ဆိုသည့် <code>initState</code> နှင့် မူလ အလေ့အထများကို ပြန်ပေးသည့် <code>createInitialHabits</code> ဖြစ်ပါသည်။ မူလ အလေ့အထ 3 ခုသည် <code>createInitialHabits</code> အတွင်းသို့ ရွှေ့သွားပါမည်။ STEP 04 တွင် မူလ အလေ့အထများကို မိမိ၏ အကြောင်းအရာသို့ ပြောင်းလဲခဲ့ပါက အနီရောင် စာကြောင်းများသည် ဘောင်ထဲရှိ စာသားနှင့် မတူသော်လည်း ထိုစာကြောင်း 5 ကြောင်းကို ဖျက်ပြီး အစိမ်းရောင် <code>Habit</code> စာကြောင်း 3 ကြောင်းကို မိမိ၏ အကြောင်းအရာဖြင့် ရေးပါ။"
+    },
+    {
+      "source": "続けて、いま足した<code>createInitialHabits</code>の関数を閉じる<code>}</code>の下に、1行空けて緑の行を足します。一覧を端末へ保存する<code>saveHabits</code>です。下の<code>changeStamp</code>との間も1行空けます。",
+      "translation": "ဆက်လက်၍ ယခု ထပ်ထည့်လိုက်သော <code>createInitialHabits</code> function ကို ပိတ်သည့် <code>}</code> ၏ အောက်တွင် စာကြောင်း 1 ကြောင်း ခြားပြီး အစိမ်းရောင် စာကြောင်းများကို ထပ်ထည့်ပါ။ ၎င်းသည် စာရင်းကို device တွင် သိမ်းဆည်းသည့် <code>saveHabits</code> ဖြစ်ပါသည်။ အောက်ရှိ <code>changeStamp</code> နှင့်ကြားတွင်လည်း စာကြောင်း 1 ကြောင်း ခြားထားပါ။"
+    },
+    {
+      "source": "<code>changeStamp</code>は、2か所直します。<code>void changeStamp(Habit habit, int change) {</code>の1行を消して、緑の2行を足します。その下の<code>final nextCount</code>の行は残し、<code>if</code>の行から<code>});</code>の行までの6行を消して、緑の行を足します。回数を直接変えていた<code>setState</code>の代わりに、新しいリストを作って<code>saveHabits</code>へ渡します。",
+      "translation": "<code>changeStamp</code> တွင် နေရာ 2 ခုကို ပြင်ပါမည်။ <code>void changeStamp(Habit habit, int change) {</code> စာကြောင်း 1 ကြောင်းကို ဖျက်ပြီး အစိမ်းရောင် စာကြောင်း 2 ကြောင်းကို ထပ်ထည့်ပါ။ ၎င်း၏အောက်ရှိ <code>final nextCount</code> စာကြောင်းကို ချန်ထားပြီး <code>if</code> စာကြောင်းမှ <code>});</code> စာကြောင်းအထိ စာကြောင်း 6 ကြောင်းကို ဖျက်ကာ အစိမ်းရောင် စာကြောင်းများကို ထပ်ထည့်ပါ။ အကြိမ်အရေအတွက်ကို တိုက်ရိုက်ပြောင်းလဲခဲ့သော <code>setState</code> အစား list အသစ်တစ်ခု ဖန်တီးပြီး <code>saveHabits</code> သို့ ပေးပို့ပါမည်။"
+    },
+    {
+      "source": "<code>addHabit</code>も、<code>void addHabit(Habit habit) {</code>の行から<code>});</code>の行までの4行（赤い行）を消し、同じ場所に緑の4行を足します。",
+      "translation": "<code>addHabit</code> တွင်လည်း <code>void addHabit(Habit habit) {</code> စာကြောင်းမှ <code>});</code> စာကြောင်းအထိ စာကြောင်း 4 ကြောင်း (အနီရောင် စာကြောင်းများ) ကို ဖျက်ပြီး တူညီသောနေရာတွင် အစိမ်းရောင် စာကြောင်း 4 ကြောင်းကို ထပ်ထည့်ပါ။"
     },
     {
       "source": "名前・理由・回数を文字列リストにして保存します。1件は3要素で、2件なら6要素です。回数は<code>count.toString()</code>で文字列へ変えます。JSONは使いません。",
@@ -511,8 +563,36 @@
       "translation": "<code>isSaving</code> ကို <code>true</code> သတ်မှတ်ပြီး ခလုတ်များနှင့် input ကွက်လပ်များကို disable ပြုလုပ်ကာ စောင့်ဆိုင်းနေသည့် စာကြောင်းနှင့် <code>LinearProgressIndicator</code> ကို ပြသပါသည်။ Exception များကို <code>try</code> / <code>catch</code> ဖြင့် ဖမ်းယူပြီး မအောင်မြင်ပါက မူလစာရင်းကို ထိန်းသိမ်းထားပါမည်။ <code>finally</code> သည် အောင်မြင်သည်ဖြစ်စေ၊ မအောင်မြင်သည်ဖြစ်စေ စောင့်ဆိုင်းနေသည့် အခြေအနေကို ပြန်လည်သတ်မှတ်ပေးသည့် နေရာဖြစ်ပါသည်။"
     },
     {
+      "source": "一覧の<code>build</code>では、合計の下の<code>const SizedBox(height: 20),</code>から、一覧のいちばん下の<code>Text</code>までの間を、4か所直します。「習慣を追加」の<code>FilledButton.icon(</code>の上に、緑の4行を足します。待機中に出す<code>LinearProgressIndicator</code>と、<code>message</code>の表示です。ボタンの<code>onPressed: openAdd,</code>の1行は、緑の行に直します。ボタンの下の2行（赤い行）を消し、緑の3行を足します。習慣が0件のときの案内です。いちばん下の<code>const Text('この段階ではアプリを終了すると回数は0に戻ります。'),</code>の1行も、緑の行に直します。",
+      "translation": "စာရင်း၏ <code>build</code> တွင် စုစုပေါင်း၏ အောက်ရှိ <code>const SizedBox(height: 20),</code> နှင့် စာရင်း၏ အောက်ဆုံးရှိ <code>Text</code> ကြားတွင် နေရာ 4 ခုကို ပြင်ပါမည်။ 「習慣を追加」 (Add habit) ၏ <code>FilledButton.icon(</code> ၏ အပေါ်တွင် အစိမ်းရောင် စာကြောင်း 4 ကြောင်းကို ထပ်ထည့်ပါ။ ၎င်းတို့သည် စောင့်ဆိုင်းနေစဉ် ပြသသည့် <code>LinearProgressIndicator</code> နှင့် <code>message</code> ကို ပြသသည့် အပိုင်း ဖြစ်ပါသည်။ ခလုတ်၏ <code>onPressed: openAdd,</code> စာကြောင်း 1 ကြောင်းကို အစိမ်းရောင် စာကြောင်း ဖြစ်အောင် ပြင်ပါ။ ခလုတ်၏ အောက်ရှိ စာကြောင်း 2 ကြောင်း (အနီရောင် စာကြောင်းများ) ကို ဖျက်ပြီး အစိမ်းရောင် စာကြောင်း 3 ကြောင်းကို ထပ်ထည့်ပါ။ ၎င်းသည် အလေ့အထ 0 ခု ဖြစ်နေချိန်တွင် ပြသသည့် လမ်းညွှန်ချက် ဖြစ်ပါသည်။ အောက်ဆုံးရှိ <code>const Text('この段階ではアプリを終了すると回数は0に戻ります。'),</code> စာကြောင်း 1 ကြောင်းကိုလည်း အစိမ်းရောင် စာကြောင်း ဖြစ်အောင် ပြင်ပါ။"
+    },
+    {
+      "source": "<code>buildHabitCard</code>では、<code>Wrap</code>の<code>children</code>の中の3つのボタンで、<code>onPressed:</code>で始まる行（赤い行）を1行ずつ消し、同じ場所に緑の行を足します。どのボタンも、読込中や保存中は<code>onPressed</code>が<code>null</code>になり、押せなくなります。",
+      "translation": "<code>buildHabitCard</code> တွင် <code>Wrap</code> ၏ <code>children</code> အတွင်းရှိ ခလုတ် 3 ခုတွင် <code>onPressed:</code> ဖြင့် စတင်သော စာကြောင်း (အနီရောင် စာကြောင်း) ကို 1 ကြောင်းစီ ဖျက်ပြီး တူညီသောနေရာတွင် အစိမ်းရောင် စာကြောင်းများကို ထပ်ထည့်ပါ။ ခလုတ်အားလုံးသည် ဖတ်ရှုနေစဉ် သို့မဟုတ် သိမ်းဆည်းနေစဉ်တွင် <code>onPressed</code> သည် <code>null</code> ဖြစ်သွားပြီး နှိပ်၍ မရတော့ပါ။"
+    },
+    {
       "source": "<code>onSave</code>の型は<code>Future&lt;bool&gt; Function(Habit)</code>へ変わり、入力画面の<code>submit</code>も<code>async</code>になります。<code>await</code>で親の保存を待ち、成功したときだけ<code>pop</code>します。失敗なら入力を消しません。<code>await</code>の後は<code>mounted</code>を確認し、既に破棄された<code>State</code>へ<code>setState</code>や画面遷移を行わないようにします。保存中は戻るボタンと<code>PopScope</code>の<code>canPop</code>も無効にします。",
       "translation": "<code>onSave</code> ၏ type သည် <code>Future&lt;bool&gt; Function(Habit)</code> သို့ ပြောင်းလဲသွားပြီး input screen ၏ <code>submit</code> သည်လည်း <code>async</code> ဖြစ်လာပါမည်။ Parent ၏ သိမ်းဆည်းမှုကို <code>await</code> ဖြင့် စောင့်ဆိုင်းပြီး အောင်မြင်မှသာ <code>pop</code> လုပ်ပါမည်။ မအောင်မြင်ပါက ထည့်သွင်းထားသည်များကို မဖျက်ပါ။ <code>await</code> ပြီးနောက် ပျက်ပြယ်သွားပြီးဖြစ်သော <code>State</code> ပေါ်တွင် <code>setState</code> သို့မဟုတ် screen navigation မပြုလုပ်မိစေရန် <code>mounted</code> ကို စစ်ဆေးပါ။ သိမ်းဆည်းနေစဉ်အတွင်း နောက်သို့ ပြန်သွားသည့်ခလုတ်နှင့် <code>PopScope</code> ၏ <code>canPop</code> ကိုလည်း disable ပြုလုပ်ထားပါ။"
+    },
+    {
+      "source": "ここからは、入力画面の5つの枠です。<code>AddHabitPage</code>の<code>final void Function(Habit) onSave;</code>の1行を、型を変えた緑の行に直します。<code>_AddHabitPageState</code>では、<code>final reasonController = TextEditingController();</code>の下に、緑の1行を足します。保存中かどうかを持つ<code>isSaving</code>です。",
+      "translation": "ဤနေရာမှ နောက်ပိုင်းသည် input screen ၏ ဘောင် 5 ခု ဖြစ်ပါသည်။ <code>AddHabitPage</code> ၏ <code>final void Function(Habit) onSave;</code> စာကြောင်း 1 ကြောင်းကို type ပြောင်းထားသော အစိမ်းရောင် စာကြောင်း ဖြစ်အောင် ပြင်ပါ။ <code>_AddHabitPageState</code> တွင် <code>final reasonController = TextEditingController();</code> ၏ အောက်တွင် အစိမ်းရောင် စာကြောင်း 1 ကြောင်းကို ထပ်ထည့်ပါ။ ၎င်းသည် သိမ်းဆည်းနေခြင်း ရှိမရှိကို ထိန်းသိမ်းထားသည့် <code>isSaving</code> ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "<code>submit</code>は、2か所直します。<code>void submit() {</code>の1行を消して、緑の2行を足します。空欄を確かめる<code>if</code>は残し、その下の<code>widget.onSave(Habit(name: name, reason: reason));</code>と<code>Navigator.pop(context);</code>の2行を消して、緑の行を足します。",
+      "translation": "<code>submit</code> တွင် နေရာ 2 ခုကို ပြင်ပါမည်။ <code>void submit() {</code> စာကြောင်း 1 ကြောင်းကို ဖျက်ပြီး အစိမ်းရောင် စာကြောင်း 2 ကြောင်းကို ထပ်ထည့်ပါ။ ကွက်လပ်များကို စစ်ဆေးသည့် <code>if</code> ကို ချန်ထားပြီး ၎င်း၏အောက်ရှိ <code>widget.onSave(Habit(name: name, reason: reason));</code> နှင့် <code>Navigator.pop(context);</code> ဟူသော စာကြောင်း 2 ကြောင်းကို ဖျက်ကာ အစိမ်းရောင် စာကြောင်းများကို ထပ်ထည့်ပါ။"
+    },
+    {
+      "source": "入力画面の<code>build</code>では、<code>canPop: true,</code>の1行と、<code>leading</code>の<code>IconButton</code>にある<code>onPressed: () =&gt; Navigator.pop(context),</code>の1行を、それぞれ緑の行に直します。",
+      "translation": "input screen ၏ <code>build</code> တွင် <code>canPop: true,</code> စာကြောင်း 1 ကြောင်းနှင့် <code>leading</code> ၏ <code>IconButton</code> တွင်ရှိသော <code>onPressed: () =&gt; Navigator.pop(context),</code> စာကြောင်း 1 ကြောင်းကို တစ်ခုစီ အစိမ်းရောင် စာကြောင်း ဖြစ်အောင် ပြင်ပါ။"
+    },
+    {
+      "source": "2つの<code>TextField</code>にある<code>enabled: true,</code>の行を、どちらも緑の行に直します。",
+      "translation": "<code>TextField</code> 2 ခုတွင်ရှိသော <code>enabled: true,</code> စာကြောင်းများကို နှစ်ခုစလုံး အစိမ်းရောင် စာကြောင်း ဖြစ်အောင် ပြင်ပါ။"
+    },
+    {
+      "source": "最後に、入力画面の<code>Text(message),</code>の下に、緑の1行を足します。保存中に出す<code>LinearProgressIndicator</code>です。いちばん下の<code>FilledButton(onPressed: submit, child: const Text('追加する')),</code>の1行は消し、緑の4行を足します。ボタンの文字は<code>追加して保存</code>に変わります。",
+      "translation": "နောက်ဆုံးအနေဖြင့် input screen ၏ <code>Text(message),</code> ၏ အောက်တွင် အစိမ်းရောင် စာကြောင်း 1 ကြောင်းကို ထပ်ထည့်ပါ။ ၎င်းသည် သိမ်းဆည်းနေစဉ် ပြသသည့် <code>LinearProgressIndicator</code> ဖြစ်ပါသည်။ အောက်ဆုံးရှိ <code>FilledButton(onPressed: submit, child: const Text('追加する')),</code> စာကြောင်း 1 ကြောင်းကို ဖျက်ပြီး အစိမ်းရောင် စာကြောင်း 4 ကြောင်းကို ထပ်ထည့်ပါ။ ခလုတ်၏ စာသားသည် <code>追加して保存</code> (Add and save) သို့ ပြောင်းလဲသွားပါမည်။"
     },
     {
       "source": "1件追加して「この端末に保存しました。」を確認します。このSTEPは保存だけで、起動時に読む処理はまだありません。再起動すると初期3件を表示する段階です。再起動した後の初期3件の画面でスタンプを押すか習慣を追加すると、保存内容は表示中の一覧で置き換わり、再起動の前に保存した習慣や回数は残りません。保存した内容をまだ読み込んでいない一覧を、そのまま保存するためです。次のSTEPで読み込めるのは、最後に保存した内容です。",
@@ -539,6 +619,10 @@
       "translation": "စတင်ချိန်တွင် <code>initState</code> မှ <code>loadHabits</code> ကို ခေါ်ဆိုပါ။ <code>initState</code> ကိုယ်တိုင်ကို <code>async</code> မပြုလုပ်ဘဲ အခြား <code>async</code> function သို့ လုပ်ဆောင်ချက်ကို ခွဲထုတ်ပါ။ ဖတ်ရှုနေစဉ်အတွင်း <code>isLoading</code> ကို <code>true</code>၊ <code>canSave</code> ကို <code>false</code> သတ်မှတ်ပြီး မူလတန်ဖိုးများဖြင့် သိမ်းဆည်းထားသော အကြောင်းအရာများကို overwrite မဖြစ်စေရန် ပြုလုပ်ပါ။"
     },
     {
+      "source": "<code>lib/main.dart</code>を、3つの枠で直します。まず、<code>_StampBoardPageState</code>の先頭で、<code>bool isLoading = false;</code>と<code>bool canSave = true;</code>の行を、それぞれ緑の行に直します。<code>initState</code>の中では、<code>habits = createInitialHabits();</code>と、その下の<code>message =</code>で始まる行の2行を消し、緑の1行を足します。<code>isLoading</code>と<code>canSave</code>の最初の値が変わり、<code>initState</code>は<code>loadHabits</code>を呼ぶだけになります。",
+      "translation": "<code>lib/main.dart</code> ကို ဘောင် 3 ခုဖြင့် ပြင်ပါမည်။ ပထမဦးစွာ <code>_StampBoardPageState</code> ၏ အစတွင် <code>bool isLoading = false;</code> စာကြောင်းနှင့် <code>bool canSave = true;</code> စာကြောင်းကို တစ်ခုစီ အစိမ်းရောင် စာကြောင်း ဖြစ်အောင် ပြင်ပါ။ <code>initState</code> အတွင်း၌ <code>habits = createInitialHabits();</code> စာကြောင်းနှင့် ၎င်း၏အောက်ရှိ <code>message =</code> ဖြင့် စတင်သော စာကြောင်းဟူသော စာကြောင်း 2 ကြောင်းကို ဖျက်ပြီး အစိမ်းရောင် စာကြောင်း 1 ကြောင်းကို ထပ်ထည့်ပါ။ <code>isLoading</code> နှင့် <code>canSave</code> ၏ မူလတန်ဖိုးများ ပြောင်းလဲသွားပြီး <code>initState</code> သည် <code>loadHabits</code> ကို ခေါ်ဆိုရုံသာ ဖြစ်လာပါမည်။"
+    },
+    {
       "source": "<code>await preferences.getStringList(storageKey)</code>は未保存なら<code>null</code>です。その場合だけ<code>createInitialHabits</code>を使います。値があれば<code>decodeHabits</code>で3要素ずつ<code>Habit</code>へ戻します。空リストは正しい0件なので、初期3件へ勝手に置き換えません。",
       "translation": "<code>await preferences.getStringList(storageKey)</code> သည် မသိမ်းဆည်းရသေးပါက <code>null</code> ဖြစ်ပါသည်။ ထိုအခြေအနေတွင်သာ <code>createInitialHabits</code> ကို အသုံးပြုပါသည်။ တန်ဖိုးရှိပါက <code>decodeHabits</code> ဖြင့် element 3 ခုစီကို <code>Habit</code> အဖြစ် ပြန်လည်ပြောင်းလဲပါသည်။ Empty list သည် မှန်ကန်သော အကြောင်းအရာ 0 ခု ဖြစ်သောကြောင့် မူလ 3 ခုဖြင့် အလိုအလျောက် အစားထိုးခြင်း မပြုလုပ်ပါ။"
     },
@@ -561,6 +645,14 @@
     {
       "source": "不正な保存内容を「未保存」とは扱いません。元の保存キーへ自動で書き込まず、再読み込みと教員への確認を案内します。次のSTEPで本人が選ぶ初期化を作ります。",
       "translation": "မမှန်ကန်သော သိမ်းဆည်းမှု အကြောင်းအရာများကို “မသိမ်းဆည်းရသေး” ဟု မသတ်မှတ်ပါ။ မူလ storage key ထဲသို့ အလိုအလျောက် ပြန်မရေးဘဲ ပြန်လည်ဖတ်ရှုရန်နှင့် ဆရာနှင့်အတူ စစ်ဆေးရန် လမ်းညွှန်ပါ။ နောက်ထပ် STEP တွင် အသုံးပြုသူကိုယ်တိုင် ရွေးချယ်နိုင်သော reset ကို ဖန်တီးပါမည်။"
+    },
+    {
+      "source": "次に、<code>createInitialHabits</code>の関数を閉じる<code>}</code>の下に、1行空けて緑の行を足します。保存した記録を読み込む<code>loadHabits</code>と、文字列のリストを<code>Habit</code>へ戻す<code>decodeHabits</code>です。下の<code>saveHabits</code>との間も1行空けます。",
+      "translation": "နောက်တစ်ဆင့်အနေဖြင့် <code>createInitialHabits</code> function ကို ပိတ်သည့် <code>}</code> ၏ အောက်တွင် စာကြောင်း 1 ကြောင်း ခြားပြီး အစိမ်းရောင် စာကြောင်းများကို ထပ်ထည့်ပါ။ ၎င်းတို့သည် သိမ်းဆည်းထားသော မှတ်တမ်းများကို ဖတ်ရှုသည့် <code>loadHabits</code> နှင့် string list ကို <code>Habit</code> သို့ ပြန်ပြောင်းသည့် <code>decodeHabits</code> ဖြစ်ပါသည်။ အောက်ရှိ <code>saveHabits</code> နှင့်ကြားတွင်လည်း စာကြောင်း 1 ကြောင်း ခြားထားပါ။"
+    },
+    {
+      "source": "最後に、一覧の<code>build</code>で、「習慣を追加」の<code>FilledButton.icon</code>を閉じる<code>),</code>の下に、緑の行を足します。読み込めなかったときだけ表示する、再読み込みのボタンです。",
+      "translation": "နောက်ဆုံးအနေဖြင့် စာရင်း၏ <code>build</code> တွင် 「習慣を追加」 (Add habit) ၏ <code>FilledButton.icon</code> ကို ပိတ်သည့် <code>),</code> ၏ အောက်တွင် အစိမ်းရောင် စာကြောင်းများကို ထပ်ထည့်ပါ။ ၎င်းသည် ဖတ်ရှု၍ မရသည့်အခါတွင်သာ ပြသမည့် 「再読み込み」 (Reload) ခလုတ် ဖြစ်ပါသည်။"
     },
     {
       "source": "新しい習慣を追加し、何回かスタンプを押します。",
@@ -597,6 +689,18 @@
     {
       "source": "削除するのは<code>preferences.remove(storageKey)</code>で指定したキー1個だけです。保存領域全体の<code>clear</code>は使いません。削除に成功してから初期の<code>Habit</code>配列へ戻し、保存を再び有効にします。削除に失敗したら元の一覧とエラーの文を残します。",
       "translation": "ဖျက်ပစ်မည်မှာ <code>preferences.remove(storageKey)</code> တွင် သတ်မှတ်ထားသော key 1 ခုသာ ဖြစ်ပါသည်။ Storage ဧရိယာတစ်ခုလုံးကို ဖျက်သည့် <code>clear</code> ကို အသုံးမပြုပါ။ ဖျက်ပစ်ခြင်း အောင်မြင်ပြီးမှသာ မူလ <code>Habit</code> array သို့ ပြန်လည်ထားရှိပြီး သိမ်းဆည်းခြင်းကို ပြန်လည်ခွင့်ပြုပါမည်။ ဖျက်ပစ်ခြင်း မအောင်မြင်ပါက မူလစာရင်းနှင့် error စာကြောင်းကို ကျန်ရှိစေပါမည်။"
+    },
+    {
+      "source": "<code>lib/main.dart</code>を3か所直します。まず、<code>loadHabits</code>の<code>catch</code>にある、<code>message = '記録を読み込めませんでした。</code>で始まる1行を、緑の行に直します。読み込めなかったときに、初期化も選べることを案内します。",
+      "translation": "<code>lib/main.dart</code> တွင် နေရာ 3 ခုကို ပြင်ပါမည်။ ပထမဦးစွာ <code>loadHabits</code> ၏ <code>catch</code> တွင်ရှိသော <code>message = '記録を読み込めませんでした。</code> ဖြင့် စတင်သော စာကြောင်း 1 ကြောင်းကို အစိမ်းရောင် စာကြောင်း ဖြစ်အောင် ပြင်ပါ။ ဖတ်ရှု၍ မရသည့်အခါ reset ကိုလည်း ရွေးချယ်နိုင်ကြောင်း လမ်းညွှန်ပေးပါမည်။"
+    },
+    {
+      "source": "次に、<code>openAdd</code>の関数を閉じる<code>}</code>の下に、1行空けて緑の行を足します。確認してから初期の習慣へ戻す<code>resetHabits</code>です。下の<code>openDetail</code>との間も1行空けます。",
+      "translation": "နောက်တစ်ဆင့်အနေဖြင့် <code>openAdd</code> function ကို ပိတ်သည့် <code>}</code> ၏ အောက်တွင် စာကြောင်း 1 ကြောင်း ခြားပြီး အစိမ်းရောင် စာကြောင်းများကို ထပ်ထည့်ပါ။ ၎င်းသည် အတည်ပြုပြီးနောက် မူလ အလေ့အထများသို့ ပြန်ပြောင်းသည့် <code>resetHabits</code> ဖြစ်ပါသည်။ အောက်ရှိ <code>openDetail</code> နှင့်ကြားတွင်လည်း စာကြောင်း 1 ကြောင်း ခြားထားပါ။"
+    },
+    {
+      "source": "最後に、一覧の<code>build</code>で、いちばん下の<code>const Text('記録はこの端末だけに残ります。提出するAPKに入力済みデータは含まれません。'),</code>の下に、緑の行を足します。初期化を始めるボタンです。",
+      "translation": "နောက်ဆုံးအနေဖြင့် စာရင်း၏ <code>build</code> တွင် အောက်ဆုံးရှိ <code>const Text('記録はこの端末だけに残ります。提出するAPKに入力済みデータは含まれません。'),</code> ၏ အောက်တွင် အစိမ်းရောင် စာကြောင်းများကို ထပ်ထည့်ပါ။ ၎င်းသည် reset ကို စတင်သည့် ခလုတ် ဖြစ်ပါသည်။"
     },
     {
       "source": "自分が残す必要のない検証用の記録で、初期化を開いてやめるを押します。記録が残ることを確認します。",
@@ -697,6 +801,10 @@
     {
       "source": "Visual Studio Codeでプロジェクトを開いた状態から<code>Flutter: Launch Emulator</code>でAndroid端末を起動し、<code>flutter devices</code>でIDを読みます。",
       "translation": "Visual Studio Code တွင် project ကို ဖွင့်ထားသော အခြေအနေမှ <code>Flutter: Launch Emulator</code> ဖြင့် Android စက်ကို စတင်ဖွင့်ပြီး <code>flutter devices</code> ဖြင့် ID ကို ဖတ်ရှုပါ။"
+    },
+    {
+      "source": "<code>android/gradle/wrapper/gradle-wrapper.properties</code>の<code>distributionUrl</code>を確認します。今回の空テンプレートはGradle 9.3.1です。<code>all.zip</code>の場合は、版を変えず<code>bin.zip</code>へそろえます。<code>distributionUrl</code>の1行だけを、緑の行に直します。",
+      "translation": "<code>android/gradle/wrapper/gradle-wrapper.properties</code> ၏ <code>distributionUrl</code> ကို စစ်ဆေးပါ။ ယခုအသုံးပြုသော empty template မှာ Gradle 9.3.1 ဖြစ်ပါသည်။ <code>all.zip</code> ဖြစ်နေပါက version မပြောင်းလဲဘဲ <code>bin.zip</code> သို့ ညှိပါ။ <code>distributionUrl</code> စာကြောင်း 1 ကြောင်းတည်းကိုသာ အစိမ်းရောင် စာကြောင်း ဖြစ်အောင် ပြင်ပါ။"
     },
     {
       "source": "教員から同じURLで取得したGradleキャッシュを受け取る場合は、配布された<code>gradle-9.3.1-bin</code>フォルダを<code>~/.gradle/wrapper/dists/</code>の下へ配置します。ハッシュ名の階層、展開済みディレクトリ、<code>.zip.ok</code>を保ち、既存の別版を上書きしません。既に同じフォルダがある場合は先生へ確認します。<code>all.zip</code>のキャッシュとは共用できません。",
