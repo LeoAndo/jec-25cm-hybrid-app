@@ -499,10 +499,6 @@
       "translation": "Guardar en una lista de cadenas"
     },
     {
-      "source": "まず<code>pubspec.yaml</code>の<code>dependencies</code>へ<code>shared_preferences: 2.5.5</code>を加えます。<code>dependencies:</code>の下にある<code>sdk: flutter</code>の行の下に、緑の1行を足します。<code>dependencies</code>は二重に作らず、<code>shared_preferences</code>の行は<code>flutter:</code>と同じ字下げにします。ほかの設定は残します。",
-      "translation": "Primero agrega <code>shared_preferences: 2.5.5</code> a <code>dependencies</code> en <code>pubspec.yaml</code>. Agrega la línea verde debajo de la línea <code>sdk: flutter</code>, que está debajo de <code>dependencies:</code>. No crees <code>dependencies</code> por duplicado, y escribe la línea <code>shared_preferences</code> con la misma sangría que <code>flutter:</code>. Conserva las demás configuraciones."
-    },
-    {
       "source": "実行中のアプリを<code>q</code>で終了し、<code>flutter pub get</code>を実行します。新しいネイティブプラグインを加えたのでホットリロードだけで済ませず、下の<code>lib/main.dart</code>の書き換えを終えてから、<code>flutter run -d 端末ID</code>で起動し直します。",
       "translation": "Finaliza la aplicación en ejecución con <code>q</code> y ejecuta <code>flutter pub get</code>. Dado que agregaste un nuevo plugin nativo, no te limites al hot reload: termina de modificar <code>lib/main.dart</code> como se indica abajo y luego vuelve a iniciarla con <code>flutter run -d 端末ID</code> (端末ID = ID del dispositivo)."
     },
@@ -1213,10 +1209,6 @@
     {
       "source": "パッケージが見つからない",
       "translation": "No se encuentra el paquete"
-    },
-    {
-      "source": "<code>pubspec.yaml</code>の<code>dependencies</code>へ<code>shared_preferences</code>を入れ、<code>flutter pub get</code>を実行。追加後はアプリを停止して再実行。",
-      "translation": "Agrega <code>shared_preferences</code> en <code>dependencies</code> de <code>pubspec.yaml</code> y ejecuta <code>flutter pub get</code>. Tras agregarlo, detén la aplicación y vuelve a ejecutarla."
     },
     {
       "source": "パッケージを加えた後、「保存できませんでした。」と出る。<code>R</code>で画面全体が赤くなる",

@@ -499,10 +499,6 @@
       "translation": "string list သို့ သိမ်းဆည်းရန်"
     },
     {
-      "source": "まず<code>pubspec.yaml</code>の<code>dependencies</code>へ<code>shared_preferences: 2.5.5</code>を加えます。<code>dependencies:</code>の下にある<code>sdk: flutter</code>の行の下に、緑の1行を足します。<code>dependencies</code>は二重に作らず、<code>shared_preferences</code>の行は<code>flutter:</code>と同じ字下げにします。ほかの設定は残します。",
-      "translation": "ပထမဦးစွာ <code>pubspec.yaml</code> ၏ <code>dependencies</code> ထဲသို့ <code>shared_preferences: 2.5.5</code> ကို ထည့်သွင်းပါ။ <code>dependencies:</code> ၏ အောက်ရှိ <code>sdk: flutter</code> စာကြောင်း၏ အောက်တွင် အစိမ်းရောင် စာကြောင်း 1 ကြောင်းကို ထပ်ထည့်ပါ။ <code>dependencies</code> ကို နှစ်ခါ မဖန်တီးဘဲ <code>shared_preferences</code> စာကြောင်းကို <code>flutter:</code> နှင့် တူညီသော indent ဖြင့် ရေးပါ။ အခြား setting များကို ချန်ထားပါ။"
-    },
-    {
       "source": "実行中のアプリを<code>q</code>で終了し、<code>flutter pub get</code>を実行します。新しいネイティブプラグインを加えたのでホットリロードだけで済ませず、下の<code>lib/main.dart</code>の書き換えを終えてから、<code>flutter run -d 端末ID</code>で起動し直します。",
       "translation": "Run နေသော app ကို <code>q</code> ဖြင့် ရပ်တန့်ပြီး <code>flutter pub get</code> ကို run လုပ်ပါ။ Native plugin အသစ်ကို ထည့်သွင်းထားသောကြောင့် hot reload ဖြင့်သာ မပြီးဆုံးစေဘဲ အောက်ပါ <code>lib/main.dart</code> ပြင်ရေးခြင်းကို ပြီးအောင်လုပ်ပြီးမှ <code>flutter run -d 端末ID</code> (端末ID = device ID) ဖြင့် ပြန်လည်စတင်ပါ။"
     },
@@ -1213,10 +1209,6 @@
     {
       "source": "パッケージが見つからない",
       "translation": "Package ကို ရှာမတွေ့ပါ"
-    },
-    {
-      "source": "<code>pubspec.yaml</code>の<code>dependencies</code>へ<code>shared_preferences</code>を入れ、<code>flutter pub get</code>を実行。追加後はアプリを停止して再実行。",
-      "translation": "<code>pubspec.yaml</code> ၏ <code>dependencies</code> ထဲသို့ <code>shared_preferences</code> ကို ထည့်ပြီး <code>flutter pub get</code> ကို run လုပ်ပါ။ ထည့်သွင်းပြီးနောက် app ကို ရပ်တန့်၍ ပြန်လည် run လုပ်ပါ။"
     },
     {
       "source": "パッケージを加えた後、「保存できませんでした。」と出る。<code>R</code>で画面全体が赤くなる",

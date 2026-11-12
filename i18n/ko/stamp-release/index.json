@@ -499,10 +499,6 @@
       "translation": "문자열 리스트에 저장하기"
     },
     {
-      "source": "まず<code>pubspec.yaml</code>の<code>dependencies</code>へ<code>shared_preferences: 2.5.5</code>を加えます。<code>dependencies:</code>の下にある<code>sdk: flutter</code>の行の下に、緑の1行を足します。<code>dependencies</code>は二重に作らず、<code>shared_preferences</code>の行は<code>flutter:</code>と同じ字下げにします。ほかの設定は残します。",
-      "translation": "먼저 <code>pubspec.yaml</code>의 <code>dependencies</code>에 <code>shared_preferences: 2.5.5</code>를 추가합니다. <code>dependencies:</code> 아래에 있는 <code>sdk: flutter</code> 줄 아래에 초록색 1줄을 추가합니다. <code>dependencies</code>는 중복해서 만들지 않고, <code>shared_preferences</code> 줄은 <code>flutter:</code>와 같은 들여쓰기로 맞춥니다. 다른 설정은 유지합니다."
-    },
-    {
       "source": "実行中のアプリを<code>q</code>で終了し、<code>flutter pub get</code>を実行します。新しいネイティブプラグインを加えたのでホットリロードだけで済ませず、下の<code>lib/main.dart</code>の書き換えを終えてから、<code>flutter run -d 端末ID</code>で起動し直します。",
       "translation": "실행 중인 앱을 <code>q</code>로 종료하고, <code>flutter pub get</code>을 실행합니다. 새로운 네이티브 플러그인을 추가했으므로 핫 리로드만으로 끝내지 말고, 아래의 <code>lib/main.dart</code> 수정을 마친 뒤 <code>flutter run -d 端末ID</code>(기기 ID)로 다시 시작합니다."
     },
@@ -1213,10 +1209,6 @@
     {
       "source": "パッケージが見つからない",
       "translation": "패키지를 찾을 수 없음"
-    },
-    {
-      "source": "<code>pubspec.yaml</code>の<code>dependencies</code>へ<code>shared_preferences</code>を入れ、<code>flutter pub get</code>を実行。追加後はアプリを停止して再実行。",
-      "translation": "<code>pubspec.yaml</code>의 <code>dependencies</code>에 <code>shared_preferences</code>를 추가하고 <code>flutter pub get</code>을 실행. 추가 후에는 앱을 중지하고 다시 실행."
     },
     {
       "source": "パッケージを加えた後、「保存できませんでした。」と出る。<code>R</code>で画面全体が赤くなる",

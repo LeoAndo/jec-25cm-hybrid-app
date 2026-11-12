@@ -499,10 +499,6 @@
       "translation": "الحفظ في قائمة سلاسل نصية"
     },
     {
-      "source": "まず<code>pubspec.yaml</code>の<code>dependencies</code>へ<code>shared_preferences: 2.5.5</code>を加えます。<code>dependencies:</code>の下にある<code>sdk: flutter</code>の行の下に、緑の1行を足します。<code>dependencies</code>は二重に作らず、<code>shared_preferences</code>の行は<code>flutter:</code>と同じ字下げにします。ほかの設定は残します。",
-      "translation": "أولاً، أضف <code>shared_preferences: 2.5.5</code> إلى <code>dependencies</code> في <code>pubspec.yaml</code>. أضف السطر الأخضر الواحد تحت سطر <code>sdk: flutter</code> الموجود تحت <code>dependencies:</code>. لا تكرر <code>dependencies</code>، واجعل سطر <code>shared_preferences</code> بالمسافة البادئة نفسها لـ <code>flutter:</code>. وأبقِ على الإعدادات الأخرى كما هي."
-    },
-    {
       "source": "実行中のアプリを<code>q</code>で終了し、<code>flutter pub get</code>を実行します。新しいネイティブプラグインを加えたのでホットリロードだけで済ませず、下の<code>lib/main.dart</code>の書き換えを終えてから、<code>flutter run -d 端末ID</code>で起動し直します。",
       "translation": "أنهِ التطبيق قيد التشغيل بـ <code>q</code>، ثم نفّذ <code>flutter pub get</code>. ولأننا أضفنا مكونًا إضافيًا أصليًا (native plugin) جديدًا، فلا تكتفِ بـ Hot Reload، بل أكمل تعديل <code>lib/main.dart</code> الموضح أدناه أولاً، ثم أعد التشغيل بـ <code>flutter run -d 端末ID</code> (معرّف الجهاز = 端末ID)."
     },
@@ -1213,10 +1209,6 @@
     {
       "source": "パッケージが見つからない",
       "translation": "تعذر العثور على الحزمة"
-    },
-    {
-      "source": "<code>pubspec.yaml</code>の<code>dependencies</code>へ<code>shared_preferences</code>を入れ、<code>flutter pub get</code>を実行。追加後はアプリを停止して再実行。",
-      "translation": "أضف <code>shared_preferences</code> إلى <code>dependencies</code> في <code>pubspec.yaml</code>، ونفّذ <code>flutter pub get</code>. وبعد الإضافة، أوقف التطبيق ثم أعد تشغيله."
     },
     {
       "source": "パッケージを加えた後、「保存できませんでした。」と出る。<code>R</code>で画面全体が赤くなる",

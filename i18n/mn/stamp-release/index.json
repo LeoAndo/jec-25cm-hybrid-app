@@ -499,10 +499,6 @@
       "translation": "Тэмдэгт мөрийн жагсаалтад хадгалах"
     },
     {
-      "source": "まず<code>pubspec.yaml</code>の<code>dependencies</code>へ<code>shared_preferences: 2.5.5</code>を加えます。<code>dependencies:</code>の下にある<code>sdk: flutter</code>の行の下に、緑の1行を足します。<code>dependencies</code>は二重に作らず、<code>shared_preferences</code>の行は<code>flutter:</code>と同じ字下げにします。ほかの設定は残します。",
-      "translation": "Эхлээд <code>pubspec.yaml</code> файлын <code>dependencies</code> хэсэгт <code>shared_preferences: 2.5.5</code> мөрийг нэмнэ үү. <code>dependencies:</code> мөрийн доор байгаа <code>sdk: flutter</code> мөрийн доор ногоон 1 мөрийг нэмнэ үү. <code>dependencies</code> хэсгийг давхардуулан үүсгэхгүй бөгөөд <code>shared_preferences</code> мөрийг <code>flutter:</code> мөртэй ижил доголын зайгаар бичнэ. Бусад тохиргоог хэвээр үлдээнэ."
-    },
-    {
       "source": "実行中のアプリを<code>q</code>で終了し、<code>flutter pub get</code>を実行します。新しいネイティブプラグインを加えたのでホットリロードだけで済ませず、下の<code>lib/main.dart</code>の書き換えを終えてから、<code>flutter run -d 端末ID</code>で起動し直します。",
       "translation": "Ажиллаж байгаа аппыг <code>q</code> товчоор дуусгаад <code>flutter pub get</code> тушаалыг ажиллуулна уу. Шинэ натив залгаас (plugin) нэмсэн тул зөвхөн hot reload хийхээр хязгаарлахгүйгээр, доорх <code>lib/main.dart</code> файлын өөрчлөлтийг дуусгасны дараа <code>flutter run -d 端末ID</code> (端末ID = төхөөрөмжийн ID) тушаалаар дахин эхлүүлнэ үү."
     },
@@ -1213,10 +1209,6 @@
     {
       "source": "パッケージが見つからない",
       "translation": "Багц олдохгүй байна"
-    },
-    {
-      "source": "<code>pubspec.yaml</code>の<code>dependencies</code>へ<code>shared_preferences</code>を入れ、<code>flutter pub get</code>を実行。追加後はアプリを停止して再実行。",
-      "translation": "<code>pubspec.yaml</code> файлын <code>dependencies</code> хэсэгт <code>shared_preferences</code> багцыг оруулж, <code>flutter pub get</code> тушаалыг ажиллуулна уу. Нэмсний дараа аппыг зогсоож дахин ажиллуулна уу."
     },
     {
       "source": "パッケージを加えた後、「保存できませんでした。」と出る。<code>R</code>で画面全体が赤くなる",
