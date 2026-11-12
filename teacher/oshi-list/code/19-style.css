@@ -23,13 +23,6 @@
   line-height: 1.7;
 }
 
-.app-selection {
-  margin: 0;
-  color: #765744;
-  line-height: 1.7;
-  overflow-wrap: anywhere;
-}
-
 .app-label {
   margin: 24px 0 8px;
   color: #555555;
