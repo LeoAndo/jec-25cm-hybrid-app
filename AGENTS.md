@@ -134,8 +134,10 @@ Freeプランの利用規約は「法人による商用でのアプリ開発」�
 
   ```sh
   cd F01Xxx && flutter pub get && flutter analyze
-  cd F01Xxx && ANDROID_HOME="$HOME/Library/Android/sdk" flutter build apk --debug
+  cd F01Xxx && ANDROID_HOME="$HOME/Library/Android/sdk" GRADLE_OPTS="-Dorg.gradle.daemon=false" flutter build apk --debug
   ```
+
+  `GRADLE_OPTS="-Dorg.gradle.daemon=false"` は、オーナーのAndroid Studioが動かしているGradleデーモンを借りないために付ける（§7の「オーナーの作業を止めない」）。
 
   `flutter` がPATHにないときは、オーナーのSDKの置き場を確かめてから前置きする（前年度は `~/Downloads/flutter/bin`）。**SDKの置き場を教材に書くときは、必ず実在を確かめてから書く。**
 - **commitしないPoC成果物は、リポジトリの外に置く。** 置き場は `~/Documents/jec-25cm-hybrid-app-verification-deliverables`。なければ作る。
@@ -343,6 +345,49 @@ PR本文の検証の節に、項目ごとに1行で書く。検証結果をま�
 - 「一部確認」には、確認できた範囲と残りの両方を書く。「未確認」には理由を書き、あとから「確認済み」に書き換えるのは、実際に確認したときだけにする。
 - 「方法」には、ローカルのブラウザか、Monacaのプレビューか、iOSシミュレータか、Androidエミュレータか、`flutter analyze` やビルドだけか、コードを読んだだけかを書く。コードを読んだだけの項目を、動かして確認したことにしない。
 - 動かして確認したときは、検証の節の最初に、対象のコミットと、使った環境（ブラウザ、シミュレータやエミュレータの機種とOS、Flutterの版）を1回だけ書く。
+
+### オーナーの作業を止めない
+
+エージェントは、オーナーと同じ機械で動くことがある。オーナーはその機械で、Visual Studio Code・Android Studio・Xcode・シミュレータ・エミュレータ・ブラウザを使っている。Androidプログラミング1（jec-26cm-android-programming-1）では、2026-11-10 にエージェントが Android Studio のヘッドレス検査（`inspect.sh`）を11回走らせ、共有の adb サーバーが10回再起動されて、オーナーが別のプロジェクトで使っていたエミュレータの接続がそのたびに2〜4秒切れた。設定やキャッシュの置き場を分けても、adb サーバーとGradleデーモンは共有されたままだった。このリポジトリも、Flutter単元で同じ機械の adb・エミュレータ・Gradle を使うので、次の5つを守る（#209）。
+
+1. **Visual Studio Code・Android Studio・Xcode を、エージェントが起動しない。** ヘッドレスの検査（`inspect.sh`）も同じ。`flutter`・`adb`・`xcrun simctl` のコマンドは、アプリを起動せずに使える。エディタに出る警告や、メニュー・コマンドパレットの見え方を確かめる必要があるときは、オーナーへ引き継ぐ（上の「打ち切りの上限と引き継ぎ」の4つを書く）。エージェントが自分で行うのは、オーナーの了承を得て、オーナーがIDEとシミュレータ・エミュレータを使っていない時間に限る。Monacaのクラウド IDEは、もともとオーナーのアカウントが要るので、エージェントは開かない（上の2段階の2）。
+2. **`adb` には必ず `-s <シリアル>` を付ける。`adb kill-server` と `adb start-server` は実行しない。** adb サーバーは機械に1つで、止めると、オーナーのエミュレータやIDEの接続も切れる。`adb devices` が何も返さないときも、サーバーを再起動して直そうとせず、オーナーへ引き継ぐ。
+3. **シミュレータとエミュレータは、動いているものを確かめてから使う。** すでに動いているものは、オーナーが使っている最中かもしれない。アプリを入れる前に、使ってよいかをオーナーに確かめる。確かめられないときは、自分で起動したものだけを使う。`flutter run` と `flutter install` には、必ず `-d <端末のID>` を付ける（付けないと、動いている端末をFlutterが選ぶ）。
+
+   ```sh
+   flutter devices                      # 動いている端末の一覧（起動はしない）
+   adb devices                          # Androidエミュレータのシリアル
+   xcrun simctl list devices booted     # 起動しているiOSシミュレータ
+   ```
+
+   **Androidエミュレータ**を自分で起動するときは、画面を出さず、状態を保存しない形にする。AVDの名前は `emulator -list-avds` に出るとおりに書き、ポートは、動いている端末と重ならない偶数を選ぶ（シリアルは `emulator-<ポート>` になる）。終わったら、自分で起動したものだけを閉じる。
+
+   ```sh
+   "$ANDROID_HOME/emulator/emulator" -list-avds
+   "$ANDROID_HOME/emulator/emulator" -avd <AVDの名前> -no-window -no-snapshot-save -port <ポート> &
+   adb -s emulator-<ポート> emu kill    # 自分で起動したものだけを閉じる
+   ```
+
+   **iOSシミュレータ**を自分で起動するときは、`xcrun simctl boot` を使う（Simulator や DeviceHub のウィンドウを開かない。`open -a` で開かない）。起動していなかった端末を選び、終わったら、その端末だけを閉じる。**`xcrun simctl shutdown all`・`erase`・`delete` は実行しない。** オーナーや、別科目で使っているシミュレータの中身が消える。
+
+   ```sh
+   xcrun simctl list devices available  # 使える端末とUDID
+   xcrun simctl boot <UDID>             # 画面を出さずに起動する
+   xcrun simctl shutdown <UDID>         # 自分で起動したものだけを閉じる
+   ```
+
+   **オーナーが起動したシミュレータ・エミュレータは閉じない。**
+4. **FlutterのAndroidビルドは、動いているGradleデーモンを借りない形にする。** `flutter build apk` と、Android端末への `flutter run` の前に `GRADLE_OPTS="-Dorg.gradle.daemon=false"` を付ける（§2のコマンド例もこの形にしてある）。`android/` で `./gradlew` を直接呼ぶときは `--no-daemon` を付ける。`./gradlew --stop` は実行しない。オーナーのIDEが使っているデーモンも止まる。**`flutter upgrade`・`flutter channel` も実行しない。** Flutter SDKは機械に1つで、版が変わると、オーナーの教材の確認と食い違う（§0-B）。
+5. **ブラウザでの確認は、作業用のプロファイルを付けた headless Chrome で行う。** オーナーのプロファイルやウィンドウを使わない。実際のクリップボードを書き換える操作（教科書のコピーボタンを押す、など）はしない。コピーボタンの動きを確かめる必要があるときは、オーナーへ引き継ぐ。
+
+   ```sh
+   "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new \
+     --user-data-dir="$(mktemp -d)" --screenshot=<出力先.png> <開くページのURL>
+   ```
+
+   Monaca単元の静的サーバ（§2）は、ポート8000が使われていたら、別のポートで起動する。**8000を使っているプロセスを止めない。** オーナーが開いている静的サーバかもしれない。終わったら、自分で起動したサーバだけを止める。
+
+クラウドのセッションのように、オーナーの機械と別の場所で動くときは、共有するものがないので、1〜5で止まることはない。その環境ではシミュレータもエミュレータも動かせないので、動かしての確認は「打ち切りの上限と引き継ぎ」のとおり引き継ぐ。
 
 ## 8. PRとレビュー対応
 
