@@ -499,8 +499,12 @@
       "translation": "Тэмдэгт мөрийн жагсаалтад хадгалах"
     },
     {
-      "source": "まず<code>pubspec.yaml</code>の<code>dependencies</code>へ<code>shared_preferences: 2.5.5</code>を加えます。<code>dependencies:</code>の下にある<code>sdk: flutter</code>の行の下に、緑の1行を足します。<code>dependencies</code>は二重に作らず、<code>shared_preferences</code>の行は<code>flutter:</code>と同じ字下げにします。ほかの設定は残します。",
-      "translation": "Эхлээд <code>pubspec.yaml</code> файлын <code>dependencies</code> хэсэгт <code>shared_preferences: 2.5.5</code> мөрийг нэмнэ үү. <code>dependencies:</code> мөрийн доор байгаа <code>sdk: flutter</code> мөрийн доор ногоон 1 мөрийг нэмнэ үү. <code>dependencies</code> хэсгийг давхардуулан үүсгэхгүй бөгөөд <code>shared_preferences</code> мөрийг <code>flutter:</code> мөртэй ижил доголын зайгаар бичнэ. Бусад тохиргоог хэвээр үлдээнэ."
+      "source": "まず<code>pubspec.yaml</code>の<code>dependencies</code>へ、<code>shared_preferences: 2.5.5</code>と、その下の2行を加えます。<code>dependencies:</code>の下にある<code>sdk: flutter</code>の行の下に、緑の3行を足します。<code>dependencies</code>は二重に作らず、3行とも<code>flutter:</code>と同じ字下げにします。ほかの設定は残します。",
+      "translation": "Эхлээд <code>pubspec.yaml</code> файлын <code>dependencies</code> хэсэгт <code>shared_preferences: 2.5.5</code> мөр болон түүний доорх 2 мөрийг нэмнэ үү. <code>dependencies:</code> мөрийн доор байгаа <code>sdk: flutter</code> мөрийн доор ногоон 3 мөрийг нэмнэ үү. <code>dependencies</code> хэсгийг давхардуулан үүсгэхгүй бөгөөд 3 мөрийг бүгдийг нь <code>flutter:</code> мөртэй ижил доголын зайгаар бичнэ. Бусад тохиргоог хэвээр үлдээнэ."
+    },
+    {
+      "source": "<code>shared_preferences</code>は、Android用の<code>shared_preferences_android</code>と、iOS用の<code>shared_preferences_foundation</code>という別のパッケージを、実装として使います。2行目と3行目は、その実装の版を、この授業で確かめた版に決める行です。書かないと、<code>flutter pub get</code>を実行した日の最新の版が入り、授業で確かめた版と違うものになることがあります。AndroidのGradleで、ライブラリの版を番号で指定するのと同じ考え方です。",
+      "translation": "<code>shared_preferences</code> багц нь хэрэгжүүлэлтдээ Android-д зориулсан <code>shared_preferences_android</code>, iOS-д зориулсан <code>shared_preferences_foundation</code> гэсэн тусдаа багцуудыг ашигладаг. 2-р ба 3-р мөр нь эдгээр хэрэгжүүлэлтийн хувилбарыг энэ хичээлд шалгасан хувилбараар тогтоох мөрүүд юм. Эдгээрийг бичихгүй бол <code>flutter pub get</code> тушаалыг ажиллуулсан өдрийн хамгийн сүүлийн хувилбарууд сууна. Тэдгээр нь хичээлд шалгасан хувилбараас өөр байж болно. Энэ нь Android-ийн Gradle-д сангийн хувилбарыг дугаараар заадагтай ижил санаа юм."
     },
     {
       "source": "実行中のアプリを<code>q</code>で終了し、<code>flutter pub get</code>を実行します。新しいネイティブプラグインを加えたのでホットリロードだけで済ませず、下の<code>lib/main.dart</code>の書き換えを終えてから、<code>flutter run -d 端末ID</code>で起動し直します。",
@@ -1215,8 +1219,16 @@
       "translation": "Багц олдохгүй байна"
     },
     {
-      "source": "<code>pubspec.yaml</code>の<code>dependencies</code>へ<code>shared_preferences</code>を入れ、<code>flutter pub get</code>を実行。追加後はアプリを停止して再実行。",
-      "translation": "<code>pubspec.yaml</code> файлын <code>dependencies</code> хэсэгт <code>shared_preferences</code> багцыг оруулж, <code>flutter pub get</code> тушаалыг ажиллуулна уу. Нэмсний дараа аппыг зогсоож дахин ажиллуулна уу."
+      "source": "<code>pubspec.yaml</code>の<code>dependencies</code>へSTEP 06の3行を入れ、<code>flutter pub get</code>を実行。追加後はアプリを停止して再実行。",
+      "translation": "<code>pubspec.yaml</code> файлын <code>dependencies</code> хэсэгт STEP 06 дахь 3 мөрийг оруулж, <code>flutter pub get</code> тушаалыг ажиллуулна уу. Нэмсний дараа аппыг зогсоож дахин ажиллуулна уу."
+    },
+    {
+      "source": "<code>flutter pub get</code>がエラーで止まる",
+      "translation": "<code>flutter pub get</code> тушаал алдаанаас болж зогсоно"
+    },
+    {
+      "source": "<code>pubspec.yaml</code>の3行の、パッケージの名前・版の数字・字下げを、STEP 06の枠と見比べる。エラーの文に行番号が出ていれば、その行を見る。",
+      "translation": "<code>pubspec.yaml</code> файлын 3 мөрийн багцын нэр, хувилбарын дугаар, доголын зайг STEP 06 дахь хүрээн доторх кодтой харьцуулна уу. Алдааны мэдэгдэлд мөрийн дугаар гарсан бол тэр мөрийг харна уу."
     },
     {
       "source": "パッケージを加えた後、「保存できませんでした。」と出る。<code>R</code>で画面全体が赤くなる",

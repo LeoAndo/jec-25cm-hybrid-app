@@ -499,8 +499,12 @@
       "translation": "الحفظ في قائمة سلاسل نصية"
     },
     {
-      "source": "まず<code>pubspec.yaml</code>の<code>dependencies</code>へ<code>shared_preferences: 2.5.5</code>を加えます。<code>dependencies:</code>の下にある<code>sdk: flutter</code>の行の下に、緑の1行を足します。<code>dependencies</code>は二重に作らず、<code>shared_preferences</code>の行は<code>flutter:</code>と同じ字下げにします。ほかの設定は残します。",
-      "translation": "أولاً، أضف <code>shared_preferences: 2.5.5</code> إلى <code>dependencies</code> في <code>pubspec.yaml</code>. أضف السطر الأخضر الواحد تحت سطر <code>sdk: flutter</code> الموجود تحت <code>dependencies:</code>. لا تكرر <code>dependencies</code>، واجعل سطر <code>shared_preferences</code> بالمسافة البادئة نفسها لـ <code>flutter:</code>. وأبقِ على الإعدادات الأخرى كما هي."
+      "source": "まず<code>pubspec.yaml</code>の<code>dependencies</code>へ、<code>shared_preferences: 2.5.5</code>と、その下の2行を加えます。<code>dependencies:</code>の下にある<code>sdk: flutter</code>の行の下に、緑の3行を足します。<code>dependencies</code>は二重に作らず、3行とも<code>flutter:</code>と同じ字下げにします。ほかの設定は残します。",
+      "translation": "أولاً، أضف <code>shared_preferences: 2.5.5</code> والسطرين تحته إلى <code>dependencies</code> في <code>pubspec.yaml</code>. أضف الأسطر الخضراء الثلاثة تحت سطر <code>sdk: flutter</code> الموجود تحت <code>dependencies:</code>. لا تكرر <code>dependencies</code>، واجعل الأسطر الثلاثة بالمسافة البادئة نفسها لـ <code>flutter:</code>. وأبقِ على الإعدادات الأخرى كما هي."
+    },
+    {
+      "source": "<code>shared_preferences</code>は、Android用の<code>shared_preferences_android</code>と、iOS用の<code>shared_preferences_foundation</code>という別のパッケージを、実装として使います。2行目と3行目は、その実装の版を、この授業で確かめた版に決める行です。書かないと、<code>flutter pub get</code>を実行した日の最新の版が入り、授業で確かめた版と違うものになることがあります。AndroidのGradleで、ライブラリの版を番号で指定するのと同じ考え方です。",
+      "translation": "تستخدم حزمة <code>shared_preferences</code> حزمتين منفصلتين لتنفيذ وظائفها: <code>shared_preferences_android</code> لنظام Android و<code>shared_preferences_foundation</code> لنظام iOS. يحدد السطران الثاني والثالث إصدارات هذين التنفيذين لتكون الإصدارات التي تحققنا منها لهذا الدرس. إذا لم تكتبهما، فستثبت أحدث الإصدارات المتاحة في يوم تنفيذ <code>flutter pub get</code>، وقد تختلف عن الإصدارات التي تحققنا منها للدرس. هذه هي الفكرة نفسها عند تحديد إصدار مكتبة برقم في Gradle لنظام Android."
     },
     {
       "source": "実行中のアプリを<code>q</code>で終了し、<code>flutter pub get</code>を実行します。新しいネイティブプラグインを加えたのでホットリロードだけで済ませず、下の<code>lib/main.dart</code>の書き換えを終えてから、<code>flutter run -d 端末ID</code>で起動し直します。",
@@ -1215,8 +1219,16 @@
       "translation": "تعذر العثور على الحزمة"
     },
     {
-      "source": "<code>pubspec.yaml</code>の<code>dependencies</code>へ<code>shared_preferences</code>を入れ、<code>flutter pub get</code>を実行。追加後はアプリを停止して再実行。",
-      "translation": "أضف <code>shared_preferences</code> إلى <code>dependencies</code> في <code>pubspec.yaml</code>، ونفّذ <code>flutter pub get</code>. وبعد الإضافة، أوقف التطبيق ثم أعد تشغيله."
+      "source": "<code>pubspec.yaml</code>の<code>dependencies</code>へSTEP 06の3行を入れ、<code>flutter pub get</code>を実行。追加後はアプリを停止して再実行。",
+      "translation": "أضف الأسطر الثلاثة من STEP 06 إلى <code>dependencies</code> في <code>pubspec.yaml</code>، ونفّذ <code>flutter pub get</code>. وبعد الإضافة، أوقف التطبيق ثم أعد تشغيله."
+    },
+    {
+      "source": "<code>flutter pub get</code>がエラーで止まる",
+      "translation": "يتوقف <code>flutter pub get</code> بسبب خطأ"
+    },
+    {
+      "source": "<code>pubspec.yaml</code>の3行の、パッケージの名前・版の数字・字下げを、STEP 06の枠と見比べる。エラーの文に行番号が出ていれば、その行を見る。",
+      "translation": "قارن أسماء الحزم وأرقام الإصدارات والمسافات البادئة في الأسطر الثلاثة من <code>pubspec.yaml</code> بما في إطار STEP 06. إذا ظهر رقم سطر في رسالة الخطأ، فانظر إلى ذلك السطر."
     },
     {
       "source": "パッケージを加えた後、「保存できませんでした。」と出る。<code>R</code>で画面全体が赤くなる",

@@ -115,12 +115,12 @@
       "translation": "17 向详情传值"
     },
     {
-      "source": "18 連続クリックへの対応",
-      "translation": "18 应对连续点击"
+      "source": "18 完成とアレンジ",
+      "translation": "18 完成与修改"
     },
     {
-      "source": "19 完成とアレンジ",
-      "translation": "19 完成与修改"
+      "source": "19 公開URLで提出",
+      "translation": "19 用导入链接提交"
     },
     {
       "source": "困ったとき",
@@ -183,8 +183,8 @@
       "translation": "从数组生成列表，并显示点击的名称。"
     },
     {
-      "source": "詳細へ値を渡し、戻る操作まで完成させる。",
-      "translation": "向详情传值，并完成返回操作。"
+      "source": "詳細へ値を渡して完成させ、公開URLで提出する。",
+      "translation": "向详情页面传值，完成后用导入链接提交。"
     },
     {
       "source": "STEP 00 · コマ1",
@@ -1051,8 +1051,8 @@
       "translation": "按一次详情左上角的返回按钮，回到列表。不要使用浏览器本身的返回按钮。"
     },
     {
-      "source": "別の行でも、詳細を開く・戻るを確かめます。このSTEPでは連打せず、画面の動きが終わってから操作します。",
-      "translation": "在其他行上也确认打开详情和返回。本 STEP 不要连续点击，等页面的动作结束后再操作。"
+      "source": "別の行でも、詳細を開く・戻るを確かめます。詳細はどの行でも同じ見本なので、押した行は、戻ったあとの一覧の下の「選択中：」で確かめます。",
+      "translation": "换一行确认能否打开详情并返回。无论点击哪一行，显示的都是同一个详情示例。因此，返回列表后，请通过下方的「選択中：」（选择中：）确认刚才点击的是哪一行。"
     },
     {
       "source": "<code>ons-back-button</code> は、そのページを管理する <code>ons-navigator</code> の前のページへ戻す部品です。自分でクリック処理を追加しなくても動きます。ページの切り替わり方もOSのスタイルで変わるので、常に同じ方向へスライドするとは限りません。ボタンの見た目もOSのスタイルで変わります。iOS向けでは、HTMLに書いた文字を添えて「＜ 戻る」と表示されます。Android向けでは左向きの矢印「←」だけになり、「戻る」の文字は表示されません。どちらも同じ <code>ons-back-button</code> で、押したときの動きは同じです。",
@@ -1075,8 +1075,8 @@
       "translation": "把点击的项目传给详情"
     },
     {
-      "source": "このSTEPでは、<code>www/index.html</code> と <code>www/js/app.js</code> を書き換えます。CSSは変えません。詳細の名前・種類・理由はHTMLでは空にし、受け取ったデータを後から入れます。",
-      "translation": "本 STEP 改写 <code>www/index.html</code> 和 <code>www/js/app.js</code>。CSS 不变。详情的名称、类别、理由在 HTML 中留空，之后再填入接收到的数据。"
+      "source": "このSTEPでは、<code>www/index.html</code>・<code>www/css/style.css</code>・<code>www/js/app.js</code> の3ファイルを書き換えます。詳細の名前・種類・理由はHTMLでは空にし、受け取ったデータを後から入れます。押した行の内容が詳細に出るようになるので、一覧の下の選択表示は外します。",
+      "translation": "本 STEP 改写 <code>www/index.html</code>、<code>www/css/style.css</code> 和 <code>www/js/app.js</code> 这3个文件。详情的名称、类别、理由在 HTML 中留空，之后再填入接收到的数据。点击的那一行的内容会出现在详情页面中，因此去掉列表下方的选择提示。"
     },
     {
       "source": "<code>www/index.html</code> の <code>template id=\"detail.html\"</code> の中で、<code>txt_detail_genre</code> の行から <code>txt_detail_comment</code> の行までの4行を、次のコードに置き換えます。間の「好きな理由」の行は変わりません。",
@@ -1087,6 +1087,18 @@
       "translation": "www/index.html · 替换 · 从 txt_detail_genre 这一行到 txt_detail_comment 这一行"
     },
     {
+      "source": "次に、一覧の下の選択表示を外します。この表示は、詳細画面がまだなかったSTEP 13で、押した行を画面で確かめるために置きました。詳細が見本のままだったSTEP 16でも、押した行は、戻ったあとの一覧の下で確かめました。このSTEPからは、押した行の名前・種類・理由を詳細画面が表示します。選択表示を残すと、戻ったあとの一覧に、前に押した名前が出たままになります。",
+      "translation": "接下来，去掉列表下方的选择提示。STEP 13 还没有详情页面，所以我们加了这条提示，用来在页面上确认点击了哪一行。STEP 16 的详情仍是示例，所以也要返回列表，在下方确认点击的行。从本 STEP 开始，详情页面会显示点击的那一行的名称、类别和理由。如果保留选择提示，返回列表时，上一次点击的名称仍会显示在列表下方。"
+    },
+    {
+      "source": "同じ <code>www/index.html</code> の <code>template id=\"list.html\"</code> の中で、<code>&lt;ons-list id=\"list_oshi\"&gt;&lt;/ons-list&gt;</code> のすぐ下にある、<code>txt_selected</code> の1行を消します。「まだ選択していません」と書いた <code>p</code> の行です。<code>ons-list</code> の行は残します。",
+      "translation": "在同一个 <code>www/index.html</code> 的 <code>template id=\"list.html\"</code> 中，删除紧接在 <code>&lt;ons-list id=\"list_oshi\"&gt;&lt;/ons-list&gt;</code> 下方包含 <code>txt_selected</code> 的那一行。要删除的是写着「まだ選択していません」（尚未选择）的 <code>p</code> 所在行。保留 <code>ons-list</code> 所在行。"
+    },
+    {
+      "source": "<code>www/css/style.css</code> では、<code>.app-selection {</code> の行から、その閉じかっこ <code>}</code> までの6行と、その下の空行1行を消します。消した <code>p</code> にだけ使っていた、文字色と余白の指定です。",
+      "translation": "在 <code>www/css/style.css</code> 中，删除从 <code>.app-selection {</code> 所在行到结束大括号 <code>}</code> 的6行，以及下面的1个空行。这些文字颜色和边距的设置只用于刚才删除的 <code>p</code>。"
+    },
+    {
       "source": "<code>www/js/app.js</code> では、<code>// ページの要素が使えるようになってから処理する。</code> のコメントの行から、<code>init</code> の処理を閉じる <code>});</code> までを、次のコードに置き換えます。コメントの文も変わり、<code>page_detail</code> のときの処理が加わります。",
       "translation": "在 <code>www/js/app.js</code> 中，把从 <code>// ページの要素が使えるようになってから処理する。</code> 这行注释到结束 <code>init</code> 处理的 <code>});</code>，替换为下面的代码。注释的文字也会改变，并加入 <code>page_detail</code> 时的处理。"
     },
@@ -1095,8 +1107,8 @@
       "translation": "www/js/app.js · 替换 · init 的处理（从前面的注释到 });）"
     },
     {
-      "source": "続けて、ファイルの末尾の <code>function openOshiDetail(oshi) {</code> の行から、その関数を閉じる <code>}</code> までを、次のコードに置き換えます。",
-      "translation": "接着，把文件末尾从 <code>function openOshiDetail(oshi) {</code> 这一行到结束该函数的 <code>}</code>，替换为下面的代码。"
+      "source": "続けて、ファイルの末尾の <code>function openOshiDetail(oshi) {</code> の行から、その関数を閉じる <code>}</code> までを、次のコードに置き換えます。<code>txt_selected</code> に「選択中：」と名前を入れていた1行は、HTMLから消した表示を指すので、置き換えたあとのコードにはありません。",
+      "translation": "接着，把文件末尾从 <code>function openOshiDetail(oshi) {</code> 这一行到结束该函数的 <code>}</code>，替换为下面的代码。之前在 <code>txt_selected</code> 中写入「選択中：」（选择中：）和名称的那一行，指向已从 HTML 中删除的提示，所以替换后的代码中没有这一行。"
     },
     {
       "source": "www/js/app.js · 置き換え · function openOshiDetail から、その閉じかっこまで",
@@ -1115,156 +1127,152 @@
       "translation": "点击第1条，确认名称、类别、理由与数组中的第1条一致。"
     },
     {
-      "source": "戻って2件目、3件目でも確かめます。",
-      "translation": "返回后，在第2条、第3条上也确认。"
+      "source": "戻って2件目、3件目でも確かめます。戻ったあとの一覧の下に、選択表示が出ないことも見ます。",
+      "translation": "返回列表后，再用第2条和第3条确认。也要确认返回后列表下方不再显示选择提示。"
     },
     {
       "source": "理由の <code>\\n</code> が改行になっていることを見ます。CSSの <code>white-space: pre-wrap</code> が、改行を保ちながら折り返します。",
       "translation": "查看理由中的 <code>\\n</code> 是否变成了换行。CSS 的 <code>white-space: pre-wrap</code> 会在保留换行的同时自动折行。"
     },
     {
-      "source": "このSTEPも画面の動きが終わってから次を押します。画面の切り替えの途中に届いた2回目の操作は、Onsen UIの <code>ons-navigator</code> が受け付けないので、続けて押しても詳細は重なりません。次のSTEPでは、この仕組みに任せきりにせず、アプリの側でも開く途中かどうかを記録します。",
-      "translation": "本 STEP 也要等页面的动作结束后再点击下一个。在页面切换途中到达的第2次操作，Onsen UI 的 <code>ons-navigator</code> 不会接受，所以连续点击也不会叠加详情。下一个 STEP 不完全依赖这个机制，而是在应用一侧也记录是否正在打开。"
+      "source": "行を押しても詳細が開かないときは、<code>openOshiDetail</code> に <code>txt_selected</code> の行が残っていないかを見ます。HTMLから消した要素は <code>getElementById</code> で見つからないので、その行で処理が止まり、<code>pushPage</code> まで進みません。",
+      "translation": "如果点击一行后没有打开详情，请检查 <code>openOshiDetail</code> 中是否还留着 <code>txt_selected</code> 所在行。已从 HTML 中删除的元素无法用 <code>getElementById</code> 找到，所以处理会停在那一行，无法执行到 <code>pushPage</code>。"
     },
     {
-      "source": "Androidで次の画面へ値を渡す、iOSで遷移先に表示用の値を渡す目的と同じです。Onsen UIでは <code>ons-navigator</code> の <code>data</code> を渡し、作られたページの <code>page.data</code> から受け取ります。ここで渡すのは実行中のJavaScriptオブジェクトで、ファイルへ保存したり文字列へ変換したりしているわけではありません。",
-      "translation": "目的与 Android 中向下一个页面传值、iOS 中向跳转目标传显示用的值相同。在 Onsen UI 中传入 <code>ons-navigator</code> 的 <code>data</code>，从生成的页面的 <code>page.data</code> 接收。这里传递的是运行中的 JavaScript 对象，并没有保存到文件或转换成字符串。"
+      "source": "Androidで次の画面へ値を渡す、iOSで遷移先に表示用の値を渡す目的と同じです。Onsen UIでは <code>ons-navigator</code> の <code>data</code> を渡し、作られたページの <code>page.data</code> から受け取ります。ここで渡すのは実行中のJavaScriptオブジェクトで、ファイルへ保存したり文字列へ変換したりしているわけではありません。選択表示を外すのは、AndroidやiOSで、動きを確かめるために置いたラベルを、同じ内容を次の画面が表示するようになったら取り除くのと同じ判断です。",
+      "translation": "目的与 Android 中向下一个页面传值、iOS 中向跳转目标传显示用的值相同。在 Onsen UI 中传入 <code>ons-navigator</code> 的 <code>data</code>，从生成的页面的 <code>page.data</code> 接收。这里传递的是运行中的 JavaScript 对象，并没有保存到文件或转换成字符串。去掉选择提示的道理也和在 Android 或 iOS 中一样：当下一个页面已经能显示同样的内容时，就可以移除先前为确认运行情况而加上的标签。"
     },
     {
-      "source": "3件それぞれの名前・種類・理由が詳細へ渡り、改行も表示された。",
-      "translation": "3条各自的名称、类别、理由都传到了详情，换行也显示了出来。"
+      "source": "3件それぞれの名前・種類・理由が詳細へ渡り、改行も表示された。一覧の下の選択表示がなくなった。",
+      "translation": "3条各自的名称、类别、理由都传到了详情，换行也显示了出来。列表下方的选择提示已消失。"
     },
     {
       "source": "STEP 18 · コマ4",
       "translation": "STEP 18 · 第4节课"
     },
     {
-      "source": "連続して押されても詳細を重ねない",
-      "translation": "连续点击也不叠加详情"
-    },
-    {
-      "source": "<code>www/js/app.js</code> を2か所変えます。HTMLとCSSは変えません。完成版では <code>isOpeningDetail</code> という真偽値と、<code>ons-navigator</code> の現在のページを使って、詳細を重ねて開くことを防ぎます。Onsen UIの <code>ons-navigator</code> も、切り替えの途中に届いた2回目の <code>pushPage</code> は受け付けませんが、断られた呼び出しはエラーになります。アプリの側で開く途中かどうかを記録しておけば、2回目の呼び出しそのものをしないで済みます。",
-      "translation": "修改 <code>www/js/app.js</code> 的2处。HTML 和 CSS 不变。完成版使用名为 <code>isOpeningDetail</code> 的布尔值和 <code>ons-navigator</code> 的当前页面，防止叠加打开详情。Onsen UI 的 <code>ons-navigator</code> 虽然也不接受切换途中到达的第2次 <code>pushPage</code>，但被拒绝的调用会报错。在应用一侧记录是否正在打开，就可以不发出第2次调用。"
-    },
-    {
-      "source": "まず、配列 <code>oshiItems</code> を閉じる <code>];</code> の下に、1行空けて追加します。下の <code>// templateの中身は、ページが作られてから取得する。</code> との間も1行空けます。",
-      "translation": "首先，在结束数组 <code>oshiItems</code> 的 <code>];</code> 下方，空1行后添加。与下面的 <code>// templateの中身は、ページが作られてから取得する。</code> 之间也空1行。"
-    },
-    {
-      "source": "www/js/app.js · 追加 · 配列 oshiItems の ]; の下",
-      "translation": "www/js/app.js · 添加 · 数组 oshiItems 的 ]; 下方"
-    },
-    {
-      "source": "次に、ファイルの末尾の <code>function openOshiDetail(oshi) {</code> の行から、その関数を閉じる <code>}</code> までを、次のコードに置き換えます。",
-      "translation": "然后，把文件末尾从 <code>function openOshiDetail(oshi) {</code> 这一行到结束该函数的 <code>}</code>，替换为下面的代码。"
-    },
-    {
-      "source": "場所",
-      "translation": "位置"
-    },
-    {
-      "source": "意味",
-      "translation": "含义"
-    },
-    {
-      "source": "まだ詳細を開く途中ではない。",
-      "translation": "还不是正在打开详情的状态。"
-    },
-    {
-      "source": "開いている途中、または一覧が一番上でなければ処理を抜ける。",
-      "translation": "正在打开，或者列表不在最上层时，就退出处理。"
-    },
-    {
-      "source": "次のクリックが来る前に、開く途中だと記録する。",
-      "translation": "在下一次点击到来之前，记录为正在打开。"
-    },
-    {
-      "source": "ページを開く処理が終わったときに実行される関数。ここで真偽値を <code>false</code> へ戻す。",
-      "translation": "打开页面的处理结束时执行的函数。在这里把布尔值恢复为 <code>false</code>。"
-    },
-    {
-      "source": "<code>||</code> は「どちらか」、<code>!==</code> は「等しくない」、<code>return</code> はこの関数をそこで終える、というWeb基礎の書き方です。開き終わって真偽値が <code>false</code> になっても、詳細が一番上ならもう一度開きません。",
-      "translation": "<code>||</code> 表示“二者之一”，<code>!==</code> 表示“不等于”，<code>return</code> 表示在此结束这个函数，这些都是 Web 基础中的写法。即使打开完毕、布尔值变为 <code>false</code>，只要详情在最上层，就不会再次打开。"
-    },
-    {
-      "source": "保存して再読み込みし、同じ行を続けて2回押します。",
-      "translation": "保存并重新加载，连续点击同一行2次。"
-    },
-    {
-      "source": "詳細の左上の戻るボタンを1回押します。一覧に戻れば、詳細は重なっていません。",
-      "translation": "按一次详情左上角的返回按钮。如果回到了列表，就说明详情没有叠加。"
-    },
-    {
-      "source": "別の行を押し、別の詳細も開けることを確かめます。",
-      "translation": "点击其他行，确认也能打开其他详情。"
-    },
-    {
-      "source": "画面の見た目は、STEP 17のときと同じです。ここでは、処理を足したあとも、今までどおり詳細が1枚だけ開き、戻れることを確かめます。",
-      "translation": "页面的外观和 STEP 17 时相同。这里确认在添加处理之后，详情仍像之前一样只打开一层，并且能够返回。"
-    },
-    {
-      "source": "Web基礎でクリック後の処理を関数として登録したのと同じく、<code>callback</code> へ「終わったら行う関数」を渡します。Androidのアニメーション終了の通知やiOSの完了ハンドラと対応します。最初に真偽値を変え、完了通知で戻すことで、画面の切り替えを待つ間だけ次の開始を止めます。",
-      "translation": "和 Web 基础中把点击后的处理注册为函数一样，给 <code>callback</code> 传入“结束后要执行的函数”。与 Android 的动画结束通知、iOS 的完成处理程序对应。先改变布尔值，再在完成通知时恢复，这样只在等待页面切换的期间阻止下一次开始。"
-    },
-    {
-      "source": "続けて2回押しても、戻る1回で一覧になり、次の項目も開けた。",
-      "translation": "连续点击2次后，返回1次就回到了列表，也能打开下一个项目。"
-    },
-    {
-      "source": "STEP 19 · コマ4",
-      "translation": "STEP 19 · 第4节课"
-    },
-    {
       "source": "完成版を確認し、自分の好きなものノートにする",
       "translation": "确认完成版，做成自己的喜爱笔记"
     },
     {
-      "source": "コードは変えません。STEP 18まで書いたコードが、<code>M01OshiList</code> の完成版です。順番に確認します。自分のアレンジを残す場合は、データや色の違いと、処理の違いを分けて見比べます。",
-      "translation": "代码不变。写到 STEP 18 为止的代码，就是 <code>M01OshiList</code> 的完成版。按顺序确认。要保留自己的修改时，把数据和颜色的差别与处理的差别分开来对照。"
+      "source": "コードは変えません。STEP 17まで書いたコードが、<code>M01OshiList</code> の完成版です。順番に確認します。自分のアレンジを残す場合は、データや色の違いと、処理の違いを分けて見比べます。",
+      "translation": "代码不变。写到 STEP 17 为止的代码，就是 <code>M01OshiList</code> 的完成版。按顺序确认。要保留自己的修改时，把数据和颜色的差别与处理的差别分开来对照。"
     },
     {
-      "source": "再読み込み直後は3件と「まだ選択していません」が見えます。",
-      "translation": "刚重新加载时，能看到3条和「まだ選択していません」（尚未选择）。"
+      "source": "再読み込み直後は、見出しと3件の一覧が見えます。",
+      "translation": "刚重新加载时，能看到标题和3条组成的列表。"
     },
     {
-      "source": "3件を順に開き、それぞれの名前・種類・理由が正しいことを確かめます。戻ると一覧に選択した名前が残ります。",
-      "translation": "依次打开3条，确认各自的名称、类别、理由正确。返回后，列表中会留有选中的名称。"
-    },
-    {
-      "source": "行を続けて押しても、戻る1回で一覧へ戻ることを確かめます。",
-      "translation": "确认即使连续点击行，返回1次也能回到列表。"
+      "source": "3件を順に開き、それぞれの名前・種類・理由が正しいことを確かめます。詳細の左上の戻るボタンを1回押すと、一覧へ戻ります。",
+      "translation": "依次打开3条，确认各自的名称、类别、理由正确。按一次详情左上角的返回按钮，就会回到列表。"
     },
     {
       "source": "先頭のOS強制指定がコメントになっていることを確認します。STEP 09と同じく、Monacaの端末選択で <code>iPhone 15</code>、<code>Pixel 8</code> を選び、それぞれ <code>Reload</code> を押して一覧・詳細・戻るを比べます。",
       "translation": "确认开头的 OS 强制指定已变成注释。和 STEP 09 一样，在 Monaca 的设备选择中选择 <code>iPhone 15</code>、<code>Pixel 8</code>，分别按 <code>Reload</code>，比较列表、详情和返回。"
     },
     {
-      "source": "長い名前と改行のある理由を試し、狭い幅でも読めることを確かめます。再読み込み後の選択は未選択へ戻ります。",
-      "translation": "试试长名称和带换行的理由，确认在较窄的宽度下也能阅读。重新加载后，选择会恢复为未选择。"
+      "source": "長い名前と改行のある理由を試し、狭い幅でも読めることを確かめます。",
+      "translation": "试试长名称和带换行的理由，确认在较窄的宽度下也能阅读。"
     },
     {
       "source": "アレンジ箇所を記録する",
       "translation": "记录修改的地方"
     },
     {
-      "source": "この単元は、変更したファイル・箇所と、画面での変化を記録して終えます。公開URLでの提出は、先生が案内するMonaca系の提出回に行います。自分のプロジェクトは残しておきます。",
-      "translation": "本单元以记录修改过的文件、位置和页面上的变化结束。通过导入链接提交，在老师安排的 Monaca 系列提交课上进行。自己的项目要保留下来。"
-    },
-    {
-      "source": "公開URLで相手へ渡るのは、ソースに書いた配列・HTML・CSSです。今画面で選んでいる項目は渡りません。この単元には保存機能もありません。",
-      "translation": "通过导入链接交给对方的，是写在源代码中的数组、HTML 和 CSS。现在页面上选中的项目不会交过去。本单元也没有保存功能。"
+      "source": "変更したファイル・箇所と、画面での変化を記録します。記録したら、次のSTEPで自分のプロジェクトを公開し、提出します。",
+      "translation": "记录修改了哪些文件、哪些位置，以及页面有什么变化。记录后，在下一个 STEP 公开自己的项目并提交。"
     },
     {
       "source": "Web基礎で作ったHTML・CSS・JavaScriptの役割分担は、完成版でも同じです。画面間の移動と値の受け渡しはAndroid・iOSの経験と対応します。今回の新しい考え方は、OS別の見た目を共通のHTMLへ適用するauto-stylingです。自分で変えた内容と、OSによる違いを分けて確かめましょう。",
       "translation": "在 Web 基础中做过的 HTML、CSS、JavaScript 的分工，在完成版中也是一样的。页面之间的跳转和值的传递，与 Android、iOS 的经验对应。这次的新思路是把各 OS 的外观应用到共通 HTML 上的 auto-styling。请把自己改变的内容和因 OS 而产生的差别分开确认。"
     },
     {
-      "source": "一覧・詳細・戻る・連続クリック・OSによる差を確認し、自分の変更箇所を記録した。",
-      "translation": "已确认列表、详情、返回、连续点击和 OS 造成的差别，并记录了自己修改的地方。"
+      "source": "一覧・詳細・戻る・OSによる差を確認し、自分の変更箇所を記録した。",
+      "translation": "已确认列表、详情、返回和 OS 造成的差别，并记录了自己修改的地方。"
     },
     {
       "source": "<code>oshiItems</code> の名前・種類・理由・件数、HTMLの見出し、CSSの色・余白・文字サイズを変えられます。自分の好きなものと、その理由を自分の言葉で書きます。次に1か所だけ見た目を変え、どのファイルの何を変え、どの画面へ反映されたかを確かめてください。",
       "translation": "可以改变 <code>oshiItems</code> 的名称、类别、理由、条数，HTML 的标题，以及 CSS 的颜色、边距、文字大小。用自己的话写下自己喜欢的东西及其理由。然后只改1处外观，确认改了哪个文件的什么，反映到了哪个页面上。"
+    },
+    {
+      "source": "STEP 19 · コマ4",
+      "translation": "STEP 19 · 第4节课"
+    },
+    {
+      "source": "公開URLを発行して提出する",
+      "translation": "生成导入链接并提交"
+    },
+    {
+      "source": "コードは変えません。STEP 18で確かめた自分の好きなものノートを、公開URLで提出します。Monaca系の課題は、自分のプロジェクトを公開し、発行されたURLを先生に渡して提出します。通常版MonacaのFreeプランでは、プロジェクトをZIPなどのファイルに書き出せないので、ファイルではなくURLで渡します。",
+      "translation": "代码不变。用导入链接提交自己在 STEP 18 中确认过的喜爱笔记。Monaca 系列的作业要公开自己的项目，并把生成的链接交给老师。标准版 Monaca 的 Free 方案无法将项目导出为 ZIP 等文件，因此提交链接而不是文件。"
+    },
+    {
+      "source": "編集したファイルを、すべて保存します。保存していない変更は、相手へ渡りません。",
+      "translation": "保存所有编辑过的文件。未保存的改动不会传给对方。"
+    },
+    {
+      "source": "クラウド IDEの左上に、自分のプロジェクトの名前 <code>M01OshiList</code> が出ていることを確かめます。",
+      "translation": "确认云端 IDE 左上角显示自己的项目名称 <code>M01OshiList</code>。"
+    },
+    {
+      "source": "上部メニューの <code>プロジェクト</code> を開き、<code>公開…</code> を選びます。",
+      "translation": "打开顶部菜单 <code>プロジェクト</code>（项目），选择 <code>公開…</code>（公开…）。"
+    },
+    {
+      "source": "クラウドIDEの上部メニューのプロジェクトを開いた画面。いちばん下の公開…が選ばれていて、左上にはプロジェクト名M01OshiListが出ている",
+      "translation": "云端 IDE 已打开顶部的「プロジェクト」（项目）菜单。最下方的「公開…」（公开…）已选中，左上角显示项目名称 M01OshiList。"
+    },
+    {
+      "source": "上部メニューの <code>プロジェクト</code> を開き、いちばん下の <code>公開…</code> を選びます。",
+      "translation": "打开顶部菜单 <code>プロジェクト</code>（项目），选择最下方的 <code>公開…</code>（公开…）。"
+    },
+    {
+      "source": "<code>プロジェクトの公開</code> の画面が開きます。まだ公開していないときは、<code>公開</code> ボタンを押します。公開すると <code>このプロジェクトは公開されています。</code> と出て、<code>プロジェクトのURL：</code> の欄にURLが表示されます。",
+      "translation": "打开 <code>プロジェクトの公開</code>（项目公开）页面。如果项目还未公开，请按 <code>公開</code>（公开）按钮。公开后会显示 <code>このプロジェクトは公開されています。</code>（此项目已公开），并在 <code>プロジェクトのURL：</code>（项目链接：）栏中显示链接。"
+    },
+    {
+      "source": "プロジェクトの公開の画面。このプロジェクトは公開されていますと表示され、プロジェクトのURLの欄に、https://monaca.mobi/ja/directimport?pid=で始まるURLが出ている。pid=のあとは灰色で隠してある",
+      "translation": "「プロジェクトの公開」（项目公开）页面显示「このプロジェクトは公開されています。」（此项目已公开）。「プロジェクトのURL：」（项目链接：）栏中显示以 https://monaca.mobi/ja/directimport?pid= 开头的链接。pid= 后面的内容用灰色遮住。"
+    },
+    {
+      "source": "公開したあとの画面です。<code>pid=</code> のあとの英数字はプロジェクトごとに違うので、画像では隠しています。",
+      "translation": "这是项目公开后的页面。每个项目的 <code>pid=</code> 后面的字母和数字都不同，所以图片中遮住了这部分。"
+    },
+    {
+      "source": "欄の中のURLを、最後まで選んでコピーします。",
+      "translation": "选中栏内的完整链接，复制到最后一个字符。"
+    },
+    {
+      "source": "先生が案内する提出先へ、コピーしたURLを貼り付けて提出します。提出先や締め切りがまだ案内されていないときは、URLを控えて先生に確認します。",
+      "translation": "把复制的链接粘贴到老师告知的提交处并提交。如果老师还未通知提交处或截止时间，请先记下链接，再向老师确认。"
+    },
+    {
+      "source": "<code>閉じる</code> を押して、画面を閉じます。<code>プライベートにする</code> は押しません。",
+      "translation": "按 <code>閉じる</code>（关闭）关掉页面。不要按 <code>プライベートにする</code>（设为私有）。"
+    },
+    {
+      "source": "提出するのは、<code>https://monaca.mobi/ja/directimport?pid=…</code> という形の、自分のプロジェクトで発行したURLです。クラウド IDEやプレビューのアドレスを代わりに貼りません。このURLは、アプリを動かすURLではなく、プロジェクトを相手のMonacaへ取り込ませるURLです。先生はURLから自分のMonacaへ取り込み、プレビューで動かして確かめます。",
+      "translation": "要提交的是自己为项目生成的、形如 <code>https://monaca.mobi/ja/directimport?pid=…</code> 的链接。不要用云端 IDE 的地址或「プレビュー」（预览）的地址代替。这个链接用于将项目导入对方的 Monaca，而不是直接运行应用。老师会通过链接将项目导入自己的 Monaca，在「プレビュー」（预览）中运行并确认。"
+    },
+    {
+      "source": "相手へ渡るのは、先生が取り込んだときに保存されている、プロジェクトのソースです。配列・HTML・CSS・JavaScriptに書いた内容が、そのまま渡ります。提出したあとも、プロジェクトは削除せず、<code>プライベートにする</code> も押しません。どちらをしても、そのURLから取り込めなくなります。",
+      "translation": "对方收到的是老师导入时保存在项目中的源代码。写在数组、HTML、CSS 和 JavaScript 中的内容会原样传过去。提交后也不要删除项目或按 <code>プライベートにする</code>（设为私有）。这两种操作都会使该链接无法再用于导入。"
+    },
+    {
+      "source": "発行したURLを自分で開くと、取り込みの画面が出ます。そこで <code>インポート</code> を押すと、自分のアカウントにコピーが1つ増え、プロジェクトの3つの枠の1つを使います。提出のために押す必要はありません。",
+      "translation": "自己打开生成的链接时，会出现导入页面。如果在那里按 <code>インポート</code>（导入），自己的账户中就会多出1个副本，占用3个项目名额中的1个。提交时不用点这个按钮。"
+    },
+    {
+      "source": "Android StudioやXcodeの課題でプロジェクトのフォルダを渡すときと同じく、渡すのはビルドしたアプリではなく、ソース一式です。違うのは渡し方です。Monacaのプロジェクトはクラウドにあるので、フォルダの代わりに取り込み用のURLを渡します。受け取った人のMonacaには、プロジェクトのコピーが作られます。",
+      "translation": "和交 Android Studio 或 Xcode 作业时交项目文件夹一样，交的是整套源代码，而不是构建好的应用。区别在于提交方式。Monaca 项目存放在云端，因此用导入链接代替文件夹。接收方的 Monaca 中会创建项目的副本。"
+    },
+    {
+      "source": "自分の <code>M01OshiList</code> で公開URLを発行し、先生が案内する提出先へ提出した（提出先がまだ案内されていないときは、URLを控えた）。",
+      "translation": "已为自己的 <code>M01OshiList</code> 生成导入链接，并提交到老师告知的提交处（如果还没通知提交处，已记下链接）。"
+    },
+    {
+      "source": "提出したソースを見ながら、自分が変えた場所を振り返ります。<code>oshiItems</code> の名前・種類・理由・件数、HTMLの見出し、CSSの色・余白・文字サイズのうち、どこを変え、一覧と詳細のどこに出たかを、STEP 18で記録した内容と見比べましょう。",
+      "translation": "对照已提交的源代码，回顾自己修改过的地方。看看改了 <code>oshiItems</code> 的名称、类别、理由、条数，HTML 的标题，还是 CSS 的颜色、边距、字号，以及这些改动在列表和详情的什么位置显示出来，再与 STEP 18 中记录的内容对照。"
     },
     {
       "source": "見えること",
@@ -1311,8 +1319,8 @@
       "translation": "点击没有反应"
     },
     {
-      "source": "<code>innerHTML</code> で行を作った後に <code>addEventListener</code> を登録しているか。<code>tappable</code> だけでは処理は付かない。",
-      "translation": "是否在用 <code>innerHTML</code> 生成行之后注册了 <code>addEventListener</code>。只有 <code>tappable</code> 不会附带处理。"
+      "source": "<code>innerHTML</code> で行を作った後に <code>addEventListener</code> を登録しているか。<code>tappable</code> だけでは処理は付かない。STEP 17のあとなら、<code>openOshiDetail</code> に <code>txt_selected</code> の行が残っていないか。",
+      "translation": "是否在用 <code>innerHTML</code> 生成行之后注册了 <code>addEventListener</code>。只有 <code>tappable</code> 不会附带处理。如果已经完成 STEP 17，请检查 <code>openOshiDetail</code> 中是否还留着 <code>txt_selected</code> 所在行。"
     },
     {
       "source": "<code>template</code> を足したら画面が空白になる",

@@ -499,8 +499,12 @@
       "translation": "保存为字符串列表"
     },
     {
-      "source": "まず<code>pubspec.yaml</code>の<code>dependencies</code>へ<code>shared_preferences: 2.5.5</code>を加えます。<code>dependencies:</code>の下にある<code>sdk: flutter</code>の行の下に、緑の1行を足します。<code>dependencies</code>は二重に作らず、<code>shared_preferences</code>の行は<code>flutter:</code>と同じ字下げにします。ほかの設定は残します。",
-      "translation": "首先在 <code>pubspec.yaml</code> 的 <code>dependencies</code> 中加入 <code>shared_preferences: 2.5.5</code>。在 <code>dependencies:</code> 下面的 <code>sdk: flutter</code> 这一行的下方，添加绿色的1行。不要重复创建 <code>dependencies</code>，<code>shared_preferences</code> 这一行使用与 <code>flutter:</code> 相同的缩进。其他设置保留。"
+      "source": "まず<code>pubspec.yaml</code>の<code>dependencies</code>へ、<code>shared_preferences: 2.5.5</code>と、その下の2行を加えます。<code>dependencies:</code>の下にある<code>sdk: flutter</code>の行の下に、緑の3行を足します。<code>dependencies</code>は二重に作らず、3行とも<code>flutter:</code>と同じ字下げにします。ほかの設定は残します。",
+      "translation": "首先在 <code>pubspec.yaml</code> 的 <code>dependencies</code> 中加入 <code>shared_preferences: 2.5.5</code> 和它下面的2行。在 <code>dependencies:</code> 下面的 <code>sdk: flutter</code> 这一行的下方，添加绿色的3行。不要重复创建 <code>dependencies</code>，3行都使用与 <code>flutter:</code> 相同的缩进。其他设置保留。"
+    },
+    {
+      "source": "<code>shared_preferences</code>は、Android用の<code>shared_preferences_android</code>と、iOS用の<code>shared_preferences_foundation</code>という別のパッケージを、実装として使います。2行目と3行目は、その実装の版を、この授業で確かめた版に決める行です。書かないと、<code>flutter pub get</code>を実行した日の最新の版が入り、授業で確かめた版と違うものになることがあります。AndroidのGradleで、ライブラリの版を番号で指定するのと同じ考え方です。",
+      "translation": "<code>shared_preferences</code> 使用独立的包作为实现：Android 用的 <code>shared_preferences_android</code> 和 iOS 用的 <code>shared_preferences_foundation</code>。第2行和第3行将这些实现的版本固定为本课程中确认过的版本。如果不写这两行，就会安装运行 <code>flutter pub get</code> 当天的最新版本，可能与课程中确认过的版本不同。这与在 Android 的 Gradle 中用版本号指定库的版本是同样的思路。"
     },
     {
       "source": "実行中のアプリを<code>q</code>で終了し、<code>flutter pub get</code>を実行します。新しいネイティブプラグインを加えたのでホットリロードだけで済ませず、下の<code>lib/main.dart</code>の書き換えを終えてから、<code>flutter run -d 端末ID</code>で起動し直します。",
@@ -1215,8 +1219,16 @@
       "translation": "找不到包"
     },
     {
-      "source": "<code>pubspec.yaml</code>の<code>dependencies</code>へ<code>shared_preferences</code>を入れ、<code>flutter pub get</code>を実行。追加後はアプリを停止して再実行。",
-      "translation": "在 <code>pubspec.yaml</code> 的 <code>dependencies</code> 中加入 <code>shared_preferences</code>，运行 <code>flutter pub get</code>。添加后停止应用并重新运行。"
+      "source": "<code>pubspec.yaml</code>の<code>dependencies</code>へSTEP 06の3行を入れ、<code>flutter pub get</code>を実行。追加後はアプリを停止して再実行。",
+      "translation": "在 <code>pubspec.yaml</code> 的 <code>dependencies</code> 中加入 STEP 06 的3行，运行 <code>flutter pub get</code>。添加后停止应用并重新运行。"
+    },
+    {
+      "source": "<code>flutter pub get</code>がエラーで止まる",
+      "translation": "<code>flutter pub get</code> 因错误而停止"
+    },
+    {
+      "source": "<code>pubspec.yaml</code>の3行の、パッケージの名前・版の数字・字下げを、STEP 06の枠と見比べる。エラーの文に行番号が出ていれば、その行を見る。",
+      "translation": "对照 STEP 06 的框，检查 <code>pubspec.yaml</code> 中3行的包名、版本号和缩进。如果错误信息中显示了行号，就查看那一行。"
     },
     {
       "source": "パッケージを加えた後、「保存できませんでした。」と出る。<code>R</code>で画面全体が赤くなる",

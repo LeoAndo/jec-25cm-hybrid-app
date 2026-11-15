@@ -115,12 +115,12 @@
       "translation": "17 상세 화면으로 값 전달하기"
     },
     {
-      "source": "18 連続クリックへの対応",
-      "translation": "18 연속 클릭 대응"
+      "source": "18 完成とアレンジ",
+      "translation": "18 완성과 변형"
     },
     {
-      "source": "19 完成とアレンジ",
-      "translation": "19 완성과 변형"
+      "source": "19 公開URLで提出",
+      "translation": "19 가져오기 URL 제출"
     },
     {
       "source": "困ったとき",
@@ -183,8 +183,8 @@
       "translation": "배열로부터 목록을 만들고 누른 이름을 표시합니다."
     },
     {
-      "source": "詳細へ値を渡し、戻る操作まで完成させる。",
-      "translation": "상세 화면으로 값을 전달하고 돌아가기 동작까지 완성합니다."
+      "source": "詳細へ値を渡して完成させ、公開URLで提出する。",
+      "translation": "상세 화면에 값을 전달하여 완성하고, 가져오기 URL로 제출합니다."
     },
     {
       "source": "STEP 00 · コマ1",
@@ -1051,8 +1051,8 @@
       "translation": "상세 화면 왼쪽 위에 있는 뒤로 가기 버튼을 1번 눌러 목록으로 돌아옵니다. 브라우저 자체의 뒤로 가기 버튼은 사용하지 않습니다."
     },
     {
-      "source": "別の行でも、詳細を開く・戻るを確かめます。このSTEPでは連打せず、画面の動きが終わってから操作します。",
-      "translation": "다른 행에서도 상세 열기 및 돌아가기를 확인합니다. 이 STEP에서는 연속으로 누르지 말고 화면 애니메이션 동작이 끝난 뒤 조작합니다."
+      "source": "別の行でも、詳細を開く・戻るを確かめます。詳細はどの行でも同じ見本なので、押した行は、戻ったあとの一覧の下の「選択中：」で確かめます。",
+      "translation": "다른 행에서도 상세 화면을 열고 돌아오는 동작을 확인합니다. 어느 행을 눌러도 같은 예제가 상세 화면에 표시되므로, 누른 행은 목록으로 돌아온 뒤 목록 아래의 「選択中：」(선택 중: )에서 확인합니다."
     },
     {
       "source": "<code>ons-back-button</code> は、そのページを管理する <code>ons-navigator</code> の前のページへ戻す部品です。自分でクリック処理を追加しなくても動きます。ページの切り替わり方もOSのスタイルで変わるので、常に同じ方向へスライドするとは限りません。ボタンの見た目もOSのスタイルで変わります。iOS向けでは、HTMLに書いた文字を添えて「＜ 戻る」と表示されます。Android向けでは左向きの矢印「←」だけになり、「戻る」の文字は表示されません。どちらも同じ <code>ons-back-button</code> で、押したときの動きは同じです。",
@@ -1075,8 +1075,8 @@
       "translation": "누른 항목을 상세 화면으로 전달하기"
     },
     {
-      "source": "このSTEPでは、<code>www/index.html</code> と <code>www/js/app.js</code> を書き換えます。CSSは変えません。詳細の名前・種類・理由はHTMLでは空にし、受け取ったデータを後から入れます。",
-      "translation": "이 STEP에서는 <code>www/index.html</code>과 <code>www/js/app.js</code>를 수정합니다. CSS는 변경하지 않습니다. 상세 화면의 이름, 종류, 이유는 HTML에서는 비워 두고 전달받은 데이터를 나중에 채워 넣습니다."
+      "source": "このSTEPでは、<code>www/index.html</code>・<code>www/css/style.css</code>・<code>www/js/app.js</code> の3ファイルを書き換えます。詳細の名前・種類・理由はHTMLでは空にし、受け取ったデータを後から入れます。押した行の内容が詳細に出るようになるので、一覧の下の選択表示は外します。",
+      "translation": "이 STEP에서는 <code>www/index.html</code>, <code>www/css/style.css</code>, <code>www/js/app.js</code> 3개 파일을 수정합니다. 상세 화면의 이름, 종류, 이유는 HTML에서는 비워 두고 전달받은 데이터를 나중에 채워 넣습니다. 누른 행의 내용이 상세 화면에 표시되므로, 목록 아래의 선택 표시를 제거합니다."
     },
     {
       "source": "<code>www/index.html</code> の <code>template id=\"detail.html\"</code> の中で、<code>txt_detail_genre</code> の行から <code>txt_detail_comment</code> の行までの4行を、次のコードに置き換えます。間の「好きな理由」の行は変わりません。",
@@ -1087,6 +1087,18 @@
       "translation": "www/index.html · 교체 · txt_detail_genre 줄부터 txt_detail_comment 줄까지"
     },
     {
+      "source": "次に、一覧の下の選択表示を外します。この表示は、詳細画面がまだなかったSTEP 13で、押した行を画面で確かめるために置きました。詳細が見本のままだったSTEP 16でも、押した行は、戻ったあとの一覧の下で確かめました。このSTEPからは、押した行の名前・種類・理由を詳細画面が表示します。選択表示を残すと、戻ったあとの一覧に、前に押した名前が出たままになります。",
+      "translation": "이어서 목록 아래의 선택 표시를 제거합니다. 상세 화면이 없었던 STEP 13에서 누른 행을 화면에서 확인하기 위해 추가한 표시입니다. 상세 화면에 아직 예제가 표시되었던 STEP 16에서도 목록으로 돌아온 뒤 목록 아래에서 누른 행을 확인했습니다. 이 STEP부터는 상세 화면에 누른 행의 이름, 종류, 이유가 표시됩니다. 선택 표시를 남겨 두면 목록으로 돌아온 뒤에도 앞서 누른 이름이 계속 표시됩니다."
+    },
+    {
+      "source": "同じ <code>www/index.html</code> の <code>template id=\"list.html\"</code> の中で、<code>&lt;ons-list id=\"list_oshi\"&gt;&lt;/ons-list&gt;</code> のすぐ下にある、<code>txt_selected</code> の1行を消します。「まだ選択していません」と書いた <code>p</code> の行です。<code>ons-list</code> の行は残します。",
+      "translation": "같은 <code>www/index.html</code> 파일의 <code>template id=\"list.html\"</code> 안에서 <code>&lt;ons-list id=\"list_oshi\"&gt;&lt;/ons-list&gt;</code> 바로 아래의 <code>txt_selected</code> 줄을 삭제합니다. 「まだ選択していません」(아직 선택하지 않았습니다)라고 적힌 <code>p</code> 줄입니다. <code>ons-list</code> 줄은 남겨 둡니다."
+    },
+    {
+      "source": "<code>www/css/style.css</code> では、<code>.app-selection {</code> の行から、その閉じかっこ <code>}</code> までの6行と、その下の空行1行を消します。消した <code>p</code> にだけ使っていた、文字色と余白の指定です。",
+      "translation": "<code>www/css/style.css</code>에서는 <code>.app-selection {</code> 줄부터 닫는 중괄호 <code>}</code>까지 6줄과 그 아래의 빈 줄 1개를 삭제합니다. 삭제한 <code>p</code>에만 적용했던 글자 색과 여백 설정입니다."
+    },
+    {
       "source": "<code>www/js/app.js</code> では、<code>// ページの要素が使えるようになってから処理する。</code> のコメントの行から、<code>init</code> の処理を閉じる <code>});</code> までを、次のコードに置き換えます。コメントの文も変わり、<code>page_detail</code> のときの処理が加わります。",
       "translation": "<code>www/js/app.js</code>에서는 <code>// ページの要素が使えるようになってから処理する。</code> 주석 줄부터 <code>init</code> 처리를 닫는 <code>});</code>까지를 다음 코드로 교체합니다. 주석 문장도 바뀌고, <code>page_detail</code>일 때의 처리가 추가됩니다."
     },
@@ -1095,8 +1107,8 @@
       "translation": "www/js/app.js · 교체 · init 처리(바로 앞 주석부터 });까지)"
     },
     {
-      "source": "続けて、ファイルの末尾の <code>function openOshiDetail(oshi) {</code> の行から、その関数を閉じる <code>}</code> までを、次のコードに置き換えます。",
-      "translation": "이어서 파일 맨 끝의 <code>function openOshiDetail(oshi) {</code> 줄부터 그 함수를 닫는 <code>}</code>까지를 다음 코드로 교체합니다."
+      "source": "続けて、ファイルの末尾の <code>function openOshiDetail(oshi) {</code> の行から、その関数を閉じる <code>}</code> までを、次のコードに置き換えます。<code>txt_selected</code> に「選択中：」と名前を入れていた1行は、HTMLから消した表示を指すので、置き換えたあとのコードにはありません。",
+      "translation": "이어서 파일 맨 끝의 <code>function openOshiDetail(oshi) {</code> 줄부터 그 함수를 닫는 <code>}</code>까지를 다음 코드로 교체합니다. <code>txt_selected</code>에 「選択中：」(선택 중: )와 이름을 넣던 줄은 HTML에서 삭제한 표시를 가리키므로, 교체 후의 코드에는 없습니다."
     },
     {
       "source": "www/js/app.js · 置き換え · function openOshiDetail から、その閉じかっこまで",
@@ -1115,156 +1127,152 @@
       "translation": "첫 번째 항목을 누르고 이름, 종류, 이유가 배열의 첫 번째 항목과 일치하는지 확인합니다."
     },
     {
-      "source": "戻って2件目、3件目でも確かめます。",
-      "translation": "돌아가서 2번째, 3번째 항목에서도 확인합니다."
+      "source": "戻って2件目、3件目でも確かめます。戻ったあとの一覧の下に、選択表示が出ないことも見ます。",
+      "translation": "목록으로 돌아가 두 번째와 세 번째 항목에서도 확인합니다. 목록으로 돌아온 뒤 목록 아래에 선택 표시가 나타나지 않는지도 확인합니다."
     },
     {
       "source": "理由の <code>\\n</code> が改行になっていることを見ます。CSSの <code>white-space: pre-wrap</code> が、改行を保ちながら折り返します。",
       "translation": "이유의 <code>\\n</code>이 줄바꿈으로 처리되는지 살펴봅니다. CSS의 <code>white-space: pre-wrap</code>이 줄바꿈을 유지하면서 자동 줄바꿈을 해 줍니다."
     },
     {
-      "source": "このSTEPも画面の動きが終わってから次を押します。画面の切り替えの途中に届いた2回目の操作は、Onsen UIの <code>ons-navigator</code> が受け付けないので、続けて押しても詳細は重なりません。次のSTEPでは、この仕組みに任せきりにせず、アプリの側でも開く途中かどうかを記録します。",
-      "translation": "이 STEP에서도 화면 전환 동작이 끝난 뒤에 다음을 누릅니다. 화면 전환 도중에 도착한 2번째 조작은 Onsen UI의 <code>ons-navigator</code>가 접수하지 않으므로 연속으로 눌러도 상세 화면이 겹치지 않습니다. 다음 STEP에서는 이 구조에만 전적으로 의존하지 않고 앱 측에서도 여는 중인지를 기록합니다."
+      "source": "行を押しても詳細が開かないときは、<code>openOshiDetail</code> に <code>txt_selected</code> の行が残っていないかを見ます。HTMLから消した要素は <code>getElementById</code> で見つからないので、その行で処理が止まり、<code>pushPage</code> まで進みません。",
+      "translation": "행을 눌러도 상세 화면이 열리지 않으면 <code>openOshiDetail</code>에 <code>txt_selected</code> 줄이 남아 있는지 확인합니다. HTML에서 삭제한 요소는 <code>getElementById</code>로 찾을 수 없으므로, 그 줄에서 처리가 멈춰 <code>pushPage</code>까지 진행되지 않습니다."
     },
     {
-      "source": "Androidで次の画面へ値を渡す、iOSで遷移先に表示用の値を渡す目的と同じです。Onsen UIでは <code>ons-navigator</code> の <code>data</code> を渡し、作られたページの <code>page.data</code> から受け取ります。ここで渡すのは実行中のJavaScriptオブジェクトで、ファイルへ保存したり文字列へ変換したりしているわけではありません。",
-      "translation": "Android에서 다음 화면으로 값을 전달하거나, iOS에서 전환 대상 화면에 표시용 값을 전달하는 목적과 같습니다. Onsen UI에서는 <code>ons-navigator</code>의 <code>data</code>를 전달하고 생성된 페이지의 <code>page.data</code>에서 받습니다. 여기서 전달하는 것은 실행 중인 JavaScript 객체이며, 파일로 저장하거나 문자열로 변환하는 것은 아닙니다."
+      "source": "Androidで次の画面へ値を渡す、iOSで遷移先に表示用の値を渡す目的と同じです。Onsen UIでは <code>ons-navigator</code> の <code>data</code> を渡し、作られたページの <code>page.data</code> から受け取ります。ここで渡すのは実行中のJavaScriptオブジェクトで、ファイルへ保存したり文字列へ変換したりしているわけではありません。選択表示を外すのは、AndroidやiOSで、動きを確かめるために置いたラベルを、同じ内容を次の画面が表示するようになったら取り除くのと同じ判断です。",
+      "translation": "Android에서 다음 화면으로 값을 전달하거나, iOS에서 전환 대상 화면에 표시용 값을 전달하는 목적과 같습니다. Onsen UI에서는 <code>ons-navigator</code>의 <code>data</code>를 전달하고 생성된 페이지의 <code>page.data</code>에서 받습니다. 여기서 전달하는 것은 실행 중인 JavaScript 객체이며, 파일로 저장하거나 문자열로 변환하는 것은 아닙니다. 선택 표시를 제거한 것은 Android나 iOS에서 동작을 확인하려고 넣었던 라벨을 다음 화면에서 같은 내용을 표시하게 되면 제거하는 것과 같은 판단입니다."
     },
     {
-      "source": "3件それぞれの名前・種類・理由が詳細へ渡り、改行も表示された。",
-      "translation": "3건 각각의 이름, 종류, 이유가 상세 화면으로 전달되었으며 줄바꿈도 표시되었습니다."
+      "source": "3件それぞれの名前・種類・理由が詳細へ渡り、改行も表示された。一覧の下の選択表示がなくなった。",
+      "translation": "3건 각각의 이름, 종류, 이유가 상세 화면으로 전달되었으며 줄바꿈도 표시되었습니다. 목록 아래의 선택 표시가 사라졌습니다."
     },
     {
       "source": "STEP 18 · コマ4",
       "translation": "STEP 18 · 4차시"
     },
     {
-      "source": "連続して押されても詳細を重ねない",
-      "translation": "연속으로 눌려도 상세 화면을 겹치지 않게 하기"
-    },
-    {
-      "source": "<code>www/js/app.js</code> を2か所変えます。HTMLとCSSは変えません。完成版では <code>isOpeningDetail</code> という真偽値と、<code>ons-navigator</code> の現在のページを使って、詳細を重ねて開くことを防ぎます。Onsen UIの <code>ons-navigator</code> も、切り替えの途中に届いた2回目の <code>pushPage</code> は受け付けませんが、断られた呼び出しはエラーになります。アプリの側で開く途中かどうかを記録しておけば、2回目の呼び出しそのものをしないで済みます。",
-      "translation": "<code>www/js/app.js</code>를 2군데 변경합니다. HTML과 CSS는 변경하지 않습니다. 완성판에서는 <code>isOpeningDetail</code>이라는 불리언 변수와 <code>ons-navigator</code>의 현재 페이지를 사용하여 상세 화면이 겹쳐서 열리는 것을 방지합니다. Onsen UI의 <code>ons-navigator</code>도 전환 도중에 도달한 2번째 <code>pushPage</code>를 접수하지 않지만, 거부된 호출은 에러가 발생합니다. 앱 측에서 여는 중인지 여부를 기록해 두면 2번째 호출 자체를 하지 않아도 됩니다."
-    },
-    {
-      "source": "まず、配列 <code>oshiItems</code> を閉じる <code>];</code> の下に、1行空けて追加します。下の <code>// templateの中身は、ページが作られてから取得する。</code> との間も1行空けます。",
-      "translation": "먼저 배열 <code>oshiItems</code>를 닫는 <code>];</code> 아래에 한 줄을 띄우고 추가합니다. 아래에 있는 <code>// templateの中身は、ページが作られてから取得する。</code>와의 사이도 한 줄 띄웁니다."
-    },
-    {
-      "source": "www/js/app.js · 追加 · 配列 oshiItems の ]; の下",
-      "translation": "www/js/app.js · 추가 · 배열 oshiItems의 ]; 아래"
-    },
-    {
-      "source": "次に、ファイルの末尾の <code>function openOshiDetail(oshi) {</code> の行から、その関数を閉じる <code>}</code> までを、次のコードに置き換えます。",
-      "translation": "다음으로 파일 맨 끝의 <code>function openOshiDetail(oshi) {</code> 줄부터 그 함수를 닫는 <code>}</code>까지를 다음 코드로 교체합니다."
-    },
-    {
-      "source": "場所",
-      "translation": "위치"
-    },
-    {
-      "source": "意味",
-      "translation": "의미"
-    },
-    {
-      "source": "まだ詳細を開く途中ではない。",
-      "translation": "아직 상세 화면을 여는 중이 아님."
-    },
-    {
-      "source": "開いている途中、または一覧が一番上でなければ処理を抜ける。",
-      "translation": "여는 중이거나 목록이 최상단이 아니면 처리를 종료합니다."
-    },
-    {
-      "source": "次のクリックが来る前に、開く途中だと記録する。",
-      "translation": "다음 클릭이 발생하기 전에 여는 중이라고 기록합니다."
-    },
-    {
-      "source": "ページを開く処理が終わったときに実行される関数。ここで真偽値を <code>false</code> へ戻す。",
-      "translation": "페이지를 여는 처리가 끝났을 때 실행되는 함수. 여기서 불리언 값을 <code>false</code>로 되돌립니다."
-    },
-    {
-      "source": "<code>||</code> は「どちらか」、<code>!==</code> は「等しくない」、<code>return</code> はこの関数をそこで終える、というWeb基礎の書き方です。開き終わって真偽値が <code>false</code> になっても、詳細が一番上ならもう一度開きません。",
-      "translation": "<code>||</code>는 '둘 중 하나', <code>!==</code>는 '같지 않음', <code>return</code>은 이 함수를 그 자리에서 종료한다는 Web 기초의 작성 방식입니다. 열기가 끝나 불리언 값이 <code>false</code>가 되더라도 상세 화면이 최상단에 있다면 다시 열리지 않습니다."
-    },
-    {
-      "source": "保存して再読み込みし、同じ行を続けて2回押します。",
-      "translation": "저장한 뒤 새로고침하여 같은 행을 연속으로 2번 누릅니다."
-    },
-    {
-      "source": "詳細の左上の戻るボタンを1回押します。一覧に戻れば、詳細は重なっていません。",
-      "translation": "상세 화면 왼쪽 위의 뒤로 가기 버튼을 1번 누릅니다. 목록으로 돌아오면 상세 화면이 겹치지 않은 것입니다."
-    },
-    {
-      "source": "別の行を押し、別の詳細も開けることを確かめます。",
-      "translation": "다른 행을 눌러 다른 상세 화면도 열 수 있는지 확인합니다."
-    },
-    {
-      "source": "画面の見た目は、STEP 17のときと同じです。ここでは、処理を足したあとも、今までどおり詳細が1枚だけ開き、戻れることを確かめます。",
-      "translation": "화면의 외관은 STEP 17 때와 같습니다. 여기서는 처리를 추가한 뒤에도 이전과 마찬가지로 상세 화면이 1장만 열리고 다시 돌아올 수 있는지 확인합니다."
-    },
-    {
-      "source": "Web基礎でクリック後の処理を関数として登録したのと同じく、<code>callback</code> へ「終わったら行う関数」を渡します。Androidのアニメーション終了の通知やiOSの完了ハンドラと対応します。最初に真偽値を変え、完了通知で戻すことで、画面の切り替えを待つ間だけ次の開始を止めます。",
-      "translation": "Web 기초에서 클릭 후의 처리를 함수로 등록했던 것과 마찬가지로 <code>callback</code>에 '완료 후 실행할 함수'를 전달합니다. Android의 애니메이션 종료 알림이나 iOS의 완료 핸들러와 대응됩니다. 먼저 불리언 값을 변경하고 완료 알림에서 되돌림으로써 화면 전환을 기다리는 동안에만 다음 시작을 차단합니다."
-    },
-    {
-      "source": "続けて2回押しても、戻る1回で一覧になり、次の項目も開けた。",
-      "translation": "연속으로 2번 눌러도 뒤로 가기 1번으로 목록으로 돌아가며 다음 항목도 열 수 있었습니다."
-    },
-    {
-      "source": "STEP 19 · コマ4",
-      "translation": "STEP 19 · 4차시"
-    },
-    {
       "source": "完成版を確認し、自分の好きなものノートにする",
       "translation": "완성판을 확인하고 나만의 좋아하는 것 노트 만들기"
     },
     {
-      "source": "コードは変えません。STEP 18まで書いたコードが、<code>M01OshiList</code> の完成版です。順番に確認します。自分のアレンジを残す場合は、データや色の違いと、処理の違いを分けて見比べます。",
-      "translation": "코드는 변경하지 않습니다. STEP 18까지 작성한 코드가 <code>M01OshiList</code>의 완성판입니다. 순서대로 확인합니다. 자신의 변형을 남겨 둘 경우에는 데이터나 색상의 차이와 처리 로직의 차이를 나누어 대조해 봅니다."
+      "source": "コードは変えません。STEP 17まで書いたコードが、<code>M01OshiList</code> の完成版です。順番に確認します。自分のアレンジを残す場合は、データや色の違いと、処理の違いを分けて見比べます。",
+      "translation": "코드는 변경하지 않습니다. STEP 17까지 작성한 코드가 <code>M01OshiList</code>의 완성판입니다. 순서대로 확인합니다. 자신의 변형을 남겨 둘 경우에는 데이터나 색상의 차이와 처리 로직의 차이를 나누어 대조해 봅니다."
     },
     {
-      "source": "再読み込み直後は3件と「まだ選択していません」が見えます。",
-      "translation": "새로고침 직후에는 3건과 「まだ選択していません」(아직 선택하지 않았습니다)가 보입니다."
+      "source": "再読み込み直後は、見出しと3件の一覧が見えます。",
+      "translation": "새로고침 직후에는 제목과 3건의 목록이 보입니다."
     },
     {
-      "source": "3件を順に開き、それぞれの名前・種類・理由が正しいことを確かめます。戻ると一覧に選択した名前が残ります。",
-      "translation": "3건을 순서대로 열어 각각의 이름, 종류, 이유가 올바른지 확인합니다. 돌아오면 목록에 선택한 이름이 남아 있습니다."
-    },
-    {
-      "source": "行を続けて押しても、戻る1回で一覧へ戻ることを確かめます。",
-      "translation": "행을 연속으로 눌러도 뒤로 가기 1번으로 목록으로 돌아오는지 확인합니다."
+      "source": "3件を順に開き、それぞれの名前・種類・理由が正しいことを確かめます。詳細の左上の戻るボタンを1回押すと、一覧へ戻ります。",
+      "translation": "3건을 순서대로 열어 각각의 이름, 종류, 이유가 올바른지 확인합니다. 상세 화면의 왼쪽 위에 있는 뒤로 가기 버튼을 한 번 누르면 목록으로 돌아갑니다."
     },
     {
       "source": "先頭のOS強制指定がコメントになっていることを確認します。STEP 09と同じく、Monacaの端末選択で <code>iPhone 15</code>、<code>Pixel 8</code> を選び、それぞれ <code>Reload</code> を押して一覧・詳細・戻るを比べます。",
       "translation": "맨 앞의 OS 강제 지정이 주석 처리되어 있는지 확인합니다. STEP 09와 마찬가지로 Monaca 기기 선택에서 <code>iPhone 15</code>, <code>Pixel 8</code>을 선택하고 각각 <code>Reload</code>를 눌러 목록, 상세 화면, 뒤로 가기를 비교합니다."
     },
     {
-      "source": "長い名前と改行のある理由を試し、狭い幅でも読めることを確かめます。再読み込み後の選択は未選択へ戻ります。",
-      "translation": "긴 이름과 줄바꿈이 있는 이유를 시험해 보고 좁은 너비에서도 읽을 수 있는지 확인합니다. 새로고침 후의 선택은 미선택 상태로 돌아갑니다."
+      "source": "長い名前と改行のある理由を試し、狭い幅でも読めることを確かめます。",
+      "translation": "긴 이름과 줄바꿈이 있는 이유를 시험해 보고 좁은 너비에서도 읽을 수 있는지 확인합니다."
     },
     {
       "source": "アレンジ箇所を記録する",
       "translation": "변형한 부분 기록하기"
     },
     {
-      "source": "この単元は、変更したファイル・箇所と、画面での変化を記録して終えます。公開URLでの提出は、先生が案内するMonaca系の提出回に行います。自分のプロジェクトは残しておきます。",
-      "translation": "이 단원은 변경한 파일, 위치와 화면에서의 변화를 기록하고 마칩니다. 가져오기 URL을 통한 제출은 선생님이 안내하는 Monaca 관련 제출 차시에 진행합니다. 자신의 프로젝트는 그대로 남겨 둡니다."
-    },
-    {
-      "source": "公開URLで相手へ渡るのは、ソースに書いた配列・HTML・CSSです。今画面で選んでいる項目は渡りません。この単元には保存機能もありません。",
-      "translation": "가져오기 URL로 상대방에게 전달되는 것은 소스 코드에 작성한 배열, HTML, CSS입니다. 지금 화면에서 선택 중인 항목은 전달되지 않습니다. 이 단원에는 저장 기능도 없습니다."
+      "source": "変更したファイル・箇所と、画面での変化を記録します。記録したら、次のSTEPで自分のプロジェクトを公開し、提出します。",
+      "translation": "변경한 파일과 부분, 화면에서 달라진 점을 기록합니다. 기록한 뒤 다음 STEP에서 자신의 프로젝트를 공개하고 제출합니다."
     },
     {
       "source": "Web基礎で作ったHTML・CSS・JavaScriptの役割分担は、完成版でも同じです。画面間の移動と値の受け渡しはAndroid・iOSの経験と対応します。今回の新しい考え方は、OS別の見た目を共通のHTMLへ適用するauto-stylingです。自分で変えた内容と、OSによる違いを分けて確かめましょう。",
       "translation": "Web 기초에서 만들었던 HTML, CSS, JavaScript의 역할 분담은 완성판에서도 동일합니다. 화면 간 이동과 값 전달은 Android, iOS의 경험과 대응됩니다. 이번의 새로운 개념은 OS별 외관을 공통 HTML에 적용하는 auto-styling입니다. 직접 변경한 내용과 OS에 따른 차이를 구분하여 확인해 봅시다."
     },
     {
-      "source": "一覧・詳細・戻る・連続クリック・OSによる差を確認し、自分の変更箇所を記録した。",
-      "translation": "목록, 상세 화면, 뒤로 가기, 연속 클릭, OS별 차이를 확인하고 자신이 변경한 부분을 기록했습니다."
+      "source": "一覧・詳細・戻る・OSによる差を確認し、自分の変更箇所を記録した。",
+      "translation": "목록, 상세 화면, 뒤로 가기, OS별 차이를 확인하고 자신이 변경한 부분을 기록했습니다."
     },
     {
       "source": "<code>oshiItems</code> の名前・種類・理由・件数、HTMLの見出し、CSSの色・余白・文字サイズを変えられます。自分の好きなものと、その理由を自分の言葉で書きます。次に1か所だけ見た目を変え、どのファイルの何を変え、どの画面へ反映されたかを確かめてください。",
       "translation": "<code>oshiItems</code>의 이름, 종류, 이유, 건수, HTML의 제목, CSS의 색상, 여백, 글자 크기를 변경할 수 있습니다. 자신이 좋아하는 것과 그 이유를 자신의 말로 작성합니다. 다음으로 1곳만 외관을 변경해 보고 어느 파일의 무엇을 바꾸어 어느 화면에 반영되었는지 확인해 보십시오."
+    },
+    {
+      "source": "STEP 19 · コマ4",
+      "translation": "STEP 19 · 4차시"
+    },
+    {
+      "source": "公開URLを発行して提出する",
+      "translation": "가져오기 URL을 발행하여 제출하기"
+    },
+    {
+      "source": "コードは変えません。STEP 18で確かめた自分の好きなものノートを、公開URLで提出します。Monaca系の課題は、自分のプロジェクトを公開し、発行されたURLを先生に渡して提出します。通常版MonacaのFreeプランでは、プロジェクトをZIPなどのファイルに書き出せないので、ファイルではなくURLで渡します。",
+      "translation": "코드는 변경하지 않습니다. STEP 18에서 확인한 자신의 좋아하는 것 노트를 가져오기 URL로 제출합니다. Monaca 계열의 과제는 자신의 프로젝트를 공개하고 발행된 URL을 선생님께 전달하여 제출합니다. 일반 Monaca의 Free 플랜에서는 프로젝트를 ZIP 등의 파일로 내보낼 수 없으므로, URL로 전달합니다."
+    },
+    {
+      "source": "編集したファイルを、すべて保存します。保存していない変更は、相手へ渡りません。",
+      "translation": "수정한 파일을 모두 저장합니다. 저장하지 않은 변경 사항은 상대방에게 전달되지 않습니다."
+    },
+    {
+      "source": "クラウド IDEの左上に、自分のプロジェクトの名前 <code>M01OshiList</code> が出ていることを確かめます。",
+      "translation": "클라우드 IDE의 왼쪽 위에 자신의 프로젝트 이름인 <code>M01OshiList</code>가 표시되는지 확인합니다."
+    },
+    {
+      "source": "上部メニューの <code>プロジェクト</code> を開き、<code>公開…</code> を選びます。",
+      "translation": "상단 메뉴의 <code>プロジェクト</code>(프로젝트)를 열고 <code>公開…</code>(공개…)를 선택합니다."
+    },
+    {
+      "source": "クラウドIDEの上部メニューのプロジェクトを開いた画面。いちばん下の公開…が選ばれていて、左上にはプロジェクト名M01OshiListが出ている",
+      "translation": "클라우드 IDE 상단 메뉴에서 「プロジェクト」(프로젝트)를 연 화면. 맨 아래의 「公開…」(공개…)가 선택되어 있으며 왼쪽 위에 프로젝트 이름 M01OshiList가 표시되어 있다"
+    },
+    {
+      "source": "上部メニューの <code>プロジェクト</code> を開き、いちばん下の <code>公開…</code> を選びます。",
+      "translation": "상단 메뉴의 <code>プロジェクト</code>(프로젝트)를 열고 맨 아래의 <code>公開…</code>(공개…)를 선택합니다."
+    },
+    {
+      "source": "<code>プロジェクトの公開</code> の画面が開きます。まだ公開していないときは、<code>公開</code> ボタンを押します。公開すると <code>このプロジェクトは公開されています。</code> と出て、<code>プロジェクトのURL：</code> の欄にURLが表示されます。",
+      "translation": "<code>プロジェクトの公開</code>(프로젝트 공개) 화면이 열립니다. 아직 공개하지 않았다면 <code>公開</code>(공개) 버튼을 누릅니다. 공개하면 <code>このプロジェクトは公開されています。</code>(이 프로젝트는 공개되어 있습니다)라는 문구가 나타나고 <code>プロジェクトのURL：</code>(프로젝트 URL: ) 필드에 URL이 표시됩니다."
+    },
+    {
+      "source": "プロジェクトの公開の画面。このプロジェクトは公開されていますと表示され、プロジェクトのURLの欄に、https://monaca.mobi/ja/directimport?pid=で始まるURLが出ている。pid=のあとは灰色で隠してある",
+      "translation": "「プロジェクトの公開」(프로젝트 공개) 화면. 「このプロジェクトは公開されています」(이 프로젝트는 공개되어 있습니다)라는 문구가 나타나고 「プロジェクトのURL」(프로젝트 URL) 필드에 https://monaca.mobi/ja/directimport?pid=로 시작하는 URL이 표시되어 있다. pid= 뒤는 회색으로 가려져 있다"
+    },
+    {
+      "source": "公開したあとの画面です。<code>pid=</code> のあとの英数字はプロジェクトごとに違うので、画像では隠しています。",
+      "translation": "공개 후의 화면입니다. <code>pid=</code> 뒤의 영문자와 숫자는 프로젝트마다 다르므로 이미지에서는 가려 두었습니다."
+    },
+    {
+      "source": "欄の中のURLを、最後まで選んでコピーします。",
+      "translation": "필드 안의 URL을 끝까지 선택하여 복사합니다."
+    },
+    {
+      "source": "先生が案内する提出先へ、コピーしたURLを貼り付けて提出します。提出先や締め切りがまだ案内されていないときは、URLを控えて先生に確認します。",
+      "translation": "선생님이 안내하는 제출처에 복사한 URL을 붙여 넣어 제출합니다. 제출처나 마감 기한이 아직 안내되지 않았다면 URL을 메모해 두고 선생님께 확인합니다."
+    },
+    {
+      "source": "<code>閉じる</code> を押して、画面を閉じます。<code>プライベートにする</code> は押しません。",
+      "translation": "<code>閉じる</code>(닫기) 버튼을 눌러 화면을 닫습니다. <code>プライベートにする</code>(비공개로 전환) 버튼은 누르지 않습니다."
+    },
+    {
+      "source": "提出するのは、<code>https://monaca.mobi/ja/directimport?pid=…</code> という形の、自分のプロジェクトで発行したURLです。クラウド IDEやプレビューのアドレスを代わりに貼りません。このURLは、アプリを動かすURLではなく、プロジェクトを相手のMonacaへ取り込ませるURLです。先生はURLから自分のMonacaへ取り込み、プレビューで動かして確かめます。",
+      "translation": "제출하는 것은 <code>https://monaca.mobi/ja/directimport?pid=…</code> 형식으로 자신의 프로젝트에서 발행한 URL입니다. 클라우드 IDE나 プレビュー (미리보기)의 주소를 대신 붙여 넣지 않습니다. 이 URL은 상대방이 자신의 Monaca로 프로젝트를 가져올 때 사용합니다. 앱을 실행하는 주소와는 용도가 다릅니다. 선생님은 URL을 통해 자신의 Monaca로 프로젝트를 가져오고 プレビュー (미리보기)에서 실행하여 확인합니다."
+    },
+    {
+      "source": "相手へ渡るのは、先生が取り込んだときに保存されている、プロジェクトのソースです。配列・HTML・CSS・JavaScriptに書いた内容が、そのまま渡ります。提出したあとも、プロジェクトは削除せず、<code>プライベートにする</code> も押しません。どちらをしても、そのURLから取り込めなくなります。",
+      "translation": "상대방에게 전달되는 것은 선생님이 가져오는 시점에 저장되어 있는 프로젝트의 소스입니다. 배열, HTML, CSS, JavaScript에 작성한 내용이 그대로 전달됩니다. 제출한 뒤에도 프로젝트를 삭제하지 않고 <code>プライベートにする</code>(비공개로 전환) 버튼도 누르지 않습니다. 어느 쪽이든 실행하면 해당 URL로 프로젝트를 가져올 수 없게 됩니다."
+    },
+    {
+      "source": "発行したURLを自分で開くと、取り込みの画面が出ます。そこで <code>インポート</code> を押すと、自分のアカウントにコピーが1つ増え、プロジェクトの3つの枠の1つを使います。提出のために押す必要はありません。",
+      "translation": "발행한 URL을 직접 열면 가져오기 화면이 표시됩니다. 여기서 <code>インポート</code>(가져오기) 버튼을 누르면 자신의 계정에 사본이 하나 추가되어 프로젝트의 3개 슬롯 중 하나를 사용합니다. 제출할 때는 이 버튼을 누를 필요가 없습니다."
+    },
+    {
+      "source": "Android StudioやXcodeの課題でプロジェクトのフォルダを渡すときと同じく、渡すのはビルドしたアプリではなく、ソース一式です。違うのは渡し方です。Monacaのプロジェクトはクラウドにあるので、フォルダの代わりに取り込み用のURLを渡します。受け取った人のMonacaには、プロジェクトのコピーが作られます。",
+      "translation": "Android Studio나 Xcode 과제에서 프로젝트 폴더를 전달할 때처럼 소스 전체를 전달합니다. 빌드한 앱은 전달 대상에 포함되지 않습니다. 차이는 전달 방법에 있습니다. Monaca 프로젝트는 클라우드에 있으므로, 폴더 대신 가져오기 URL을 전달합니다. 상대방의 Monaca에 프로젝트의 사본이 만들어집니다."
+    },
+    {
+      "source": "自分の <code>M01OshiList</code> で公開URLを発行し、先生が案内する提出先へ提出した（提出先がまだ案内されていないときは、URLを控えた）。",
+      "translation": "자신의 <code>M01OshiList</code>에서 가져오기 URL을 발행하여 선생님이 안내하는 제출처에 제출했습니다(제출처 안내가 아직 없으면 URL을 메모해 두었습니다)."
+    },
+    {
+      "source": "提出したソースを見ながら、自分が変えた場所を振り返ります。<code>oshiItems</code> の名前・種類・理由・件数、HTMLの見出し、CSSの色・余白・文字サイズのうち、どこを変え、一覧と詳細のどこに出たかを、STEP 18で記録した内容と見比べましょう。",
+      "translation": "제출한 소스를 보면서 변경한 부분을 돌아봅니다. <code>oshiItems</code>의 이름, 종류, 이유, 건수, HTML의 제목, CSS의 색, 여백, 글자 크기 가운데 무엇을 바꾸었고 목록과 상세 화면의 어디에 반영되었는지 STEP 18에서 기록한 내용과 비교해 봅시다."
     },
     {
       "source": "見えること",
@@ -1311,8 +1319,8 @@
       "translation": "눌러도 반응하지 않음"
     },
     {
-      "source": "<code>innerHTML</code> で行を作った後に <code>addEventListener</code> を登録しているか。<code>tappable</code> だけでは処理は付かない。",
-      "translation": "<code>innerHTML</code>로 행을 생성한 뒤에 <code>addEventListener</code>를 등록했는지 확인합니다. <code>tappable</code>만으로는 처리가 연결되지 않습니다."
+      "source": "<code>innerHTML</code> で行を作った後に <code>addEventListener</code> を登録しているか。<code>tappable</code> だけでは処理は付かない。STEP 17のあとなら、<code>openOshiDetail</code> に <code>txt_selected</code> の行が残っていないか。",
+      "translation": "<code>innerHTML</code>로 행을 생성한 뒤에 <code>addEventListener</code>를 등록했는지 확인합니다. <code>tappable</code>만으로는 처리가 연결되지 않습니다. STEP 17을 마친 뒤라면 <code>openOshiDetail</code>에 <code>txt_selected</code> 줄이 남아 있는지 확인합니다."
     },
     {
       "source": "<code>template</code> を足したら画面が空白になる",
