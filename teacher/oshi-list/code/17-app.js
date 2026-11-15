@@ -75,8 +75,6 @@ function renderOshiList() {
 function openOshiDetail(oshi) {
   const navApp = document.getElementById("nav_app");
 
-  document.getElementById("txt_selected").textContent = "選択中：" + oshi.name;
-
   navApp.pushPage("detail.html", {
     data: {
       oshi: oshi

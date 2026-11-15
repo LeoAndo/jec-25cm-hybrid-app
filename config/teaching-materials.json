@@ -274,21 +274,21 @@
           "id": "code-17-app-js-open",
           "source": "teacher/oshi-list/code/17-app.js",
           "match": "contains"
-        },
-        {
-          "html": "docs/oshi-list/index.html",
-          "id": "code-18-app-js-flag",
-          "source": "teacher/oshi-list/code/18-app.js",
-          "match": "contains"
-        },
-        {
-          "html": "docs/oshi-list/index.html",
-          "id": "code-18-app-js-open",
-          "source": "teacher/oshi-list/code/18-app.js",
-          "match": "contains"
         }
       ],
       "mirrors": [
+        {
+          "source": "M01OshiList/www/index.html",
+          "copy": "teacher/oshi-list/code/17-index.html"
+        },
+        {
+          "source": "M01OshiList/www/css/style.css",
+          "copy": "teacher/oshi-list/code/17-style.css"
+        },
+        {
+          "source": "M01OshiList/www/js/app.js",
+          "copy": "teacher/oshi-list/code/17-app.js"
+        },
         {
           "source": "M01OshiList/www/index.html",
           "copy": "teacher/oshi-list/code/18-index.html"
