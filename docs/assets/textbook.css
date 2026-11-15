@@ -1,5 +1,22 @@
+/* 教材ZIPでも同じ書体を使う。取得元・再配布条件は fonts/README.md を参照。 */
+@font-face {
+  font-family: "Noto Sans JP";
+  src: url("fonts/noto-sans-jp/NotoSansJP-wght.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("fonts/roboto-mono/RobotoMono-wght.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: swap;
+}
 :root {
   color-scheme: light;
+  --font-body: "Noto Sans JP", sans-serif;
+  --font-code: "Roboto Mono", "Noto Sans JP", monospace;
   --ink: #202b37;
   --muted: #566474;
   --paper: #fffef9;
@@ -11,8 +28,8 @@
 /* 右から左に書く言語（アラビア語）のページは <html dir="rtl"> になる。左右は決め打ちせず、
    文の始まり側（inline-start）と終わり側（inline-end）で書く。日本語のページでは start が左、end が右になり、
    見た目は left・right で書いたときと同じになる。 */
-html { scroll-behavior: smooth; scroll-padding-top: calc(var(--language-nav-height, 0px) + 1.5rem); }
-body { margin: 0; background: var(--paper); color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif; font-size: 17px; line-height: 1.9; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--language-nav-height, 0px) + var(--lesson-nav-height, 0px) + 1.5rem); }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 17px; line-height: 1.9; }
 /* macOS標準の各文字体系のフォント。日本語の未翻訳箇所は日本語の字形を保つ。 */
 body:lang(zh-Hans), [lang="zh-Hans"] { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", sans-serif; }
 body:lang(zh-Hant-HK), [lang="zh-Hant-HK"] { font-family: -apple-system, BlinkMacSystemFont, "PingFang HK", "PingFang TC", sans-serif; }
@@ -23,7 +40,7 @@ body:lang(ar), [lang="ar"] { font-family: -apple-system, BlinkMacSystemFont, "Ge
 /* モンゴル語のキリル文字の Ө ө Ү ү は、ヒラギノにない。キリル文字がヒラギノに落ちて字形が混ざらないよう、
    Ө・Ү を持つ欧文フォントを日本語フォントより前に置く。訳文に残す日本語の画面名は、そのうしろのヒラギノで出す。 */
 body:lang(mn), [lang="mn"] { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif; }
-body:lang(ja), [lang="ja"] { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif; }
+body:lang(ja), [lang="ja"] { font-family: var(--font-body); }
 .language-nav, .translation-note { max-width: 1260px; margin: auto; padding: .6rem 2rem; font-size: .88rem; }
 .language-nav { background: var(--paper); display: flex; flex-wrap: wrap; align-items: center; gap: .3rem .6rem; border-bottom: 1px solid var(--line); }
 .has-language-nav .language-nav { position: sticky; top: 0; z-index: 3; }
@@ -81,7 +98,7 @@ ul, ol { padding-inline-start: 1.5rem; }
 .check label { display: flex; align-items: flex-start; gap: .6rem; cursor: pointer; }
 input[type="checkbox"] { width: 1.2rem; height: 1.2rem; flex: 0 0 auto; margin-top: .4rem; accent-color: #24714f; }
 .file { display: block; color: var(--muted); overflow-wrap: anywhere; font-size: .8rem; padding: .5rem 0; }
-code, pre, kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+code, pre, kbd { font-family: var(--font-code); }
 /* 右から左のページ（<html dir="rtl">）だけの指定。日本語のページに当てると、code の前後で行の折り返す位置が変わる。
    コードとキーは、右から左のページでも左から右で読む。isolate で、前後のアラビア語との並びからも切り離す
    （切り離さないと、`let count = 0;` の「;」が先頭へ回り込む）。pre は、行の頭も左にそろう。
@@ -217,4 +234,269 @@ details[open] > summary { margin-bottom: 1rem; }
   .compare, .compare-item { break-inside: avoid; }
   .compare-lang { break-after: avoid; }
   details { padding: .6rem; }
+}
+
+/* 学生用の教科書。共通資料・教員用ガイド（.plain）の表示は上の規則を使う。 */
+.textbook {
+  --ink: #243247;
+  --muted: #536279;
+  --paper: #fff;
+  --blue: #2458b8;
+  --line: #dce3eb;
+  --mint: #f0f7f3;
+  --surface-goal: #f3f6fc;
+  --surface-note: #fff3d6;
+  --surface-code: #f5f8fd;
+  --surface-code-heading: #eaf1fc;
+  --border-code: #b8c9e3;
+  --syntax-keyword: #7548a3;
+  --syntax-string: #246347;
+  --syntax-type: #2458b8;
+  --syntax-comment: #596778;
+  --nav-border: #bfcad9;
+  --nav-selected-background: #edf3ff;
+  --nav-selected-text: #133e9f;
+  --nav-menu-background: #fff;
+  --menu-shadow: #24324718;
+  --note-border: #a57b22;
+  --note-title: #78581c;
+  --code-inline-background: #f4f7fb;
+  --file-icon-border: #b6c6db;
+  --reference-heading-background: #f1f3f6;
+  --reference-code-background: #fafbfc;
+  --task-border: #9eaec3;
+  --check-border: #bad4c6;
+  --check-accent: #246347;
+  --action-background: #fff;
+  --diff-context: #536279;
+  --diff-add-background: #e3f3e7;
+  --diff-add-border: #24714f;
+  --diff-add-text: #17472e;
+  --diff-delete-background: #fbe8e7;
+  --diff-delete-border: #b83b34;
+  --diff-delete-text: #842923;
+
+  font-size: 18px;
+  line-height: 1.85;
+  -webkit-font-smoothing: antialiased;
+}
+.textbook .shell { display: block; max-width: none; }
+.textbook .topbar { max-width: 1040px; margin: auto; padding: 15px 28px; font-size: 13px; line-height: 1.5; letter-spacing: normal; }
+.textbook main { max-width: 744px; padding: 32px 28px 64px; margin: auto; }
+.textbook a { text-underline-offset: 4px; }
+.textbook :focus-visible { outline-color: #9a5200; }
+.textbook .hero { padding-bottom: 32px; margin-bottom: 32px; border-bottom: 1px solid var(--line); }
+.textbook .hero h1 { font-size: 32px; line-height: 1.5; letter-spacing: -.045em; margin: 0 0 16px; }
+.textbook .unit { width: auto; height: auto; border-radius: 0; background: none; color: var(--blue); font-size: 16px; margin-bottom: 12px; }
+.textbook .eyebrow { font-size: 14px; letter-spacing: normal; color: var(--blue); margin-bottom: 12px; }
+.textbook .lede { font-size: 18px; line-height: 1.9; margin: 0 0 20px; }
+.textbook .tags { gap: 6px 16px; margin: 0; }
+.textbook .tags span { padding: 0; border-radius: 0; background: none; font-size: 13px; color: var(--muted); }
+.textbook main > section { padding: 0 0 40px; margin: 0 0 40px; scroll-margin-top: 16px; }
+.textbook h2 { font-size: 28px; line-height: 1.5; letter-spacing: -.04em; margin: 0 0 24px; }
+.textbook h3 { font-size: 21px; line-height: 1.6; letter-spacing: -.02em; margin: 32px 0 18px; }
+.textbook p { margin: 0 0 17px; }
+.textbook li { padding-inline-start: 5px; margin-bottom: 12px; }
+.textbook .step-meta { font-size: 13px; line-height: 1.7; color: var(--muted); letter-spacing: normal; font-weight: 400; }
+.textbook .step-heading { display: flex; align-items: flex-start; gap: 18px; margin-bottom: 26px; }
+.textbook .step-heading > div { min-width: 0; }
+.textbook .step-heading h2 { margin: 0; }
+.textbook .step-heading .step-meta { margin: 4px 0 0; }
+.textbook .big-step { flex-shrink: 0; font: 700 41px/1.15 var(--font-code); color: var(--blue); letter-spacing: -.06em; padding-inline-end: 18px; border-inline-end: 2px solid var(--blue); }
+.textbook .action-heading { display: flex; align-items: flex-start; gap: 12px; }
+.textbook .instruction-number { display: inline-grid; place-items: center; flex: 0 0 30px; min-height: 32px; margin-top: 2px; border-bottom: 3px solid var(--blue); color: var(--blue); font-size: 22px; line-height: 1.3; }
+
+/* JavaScriptが使えない場合も、元の目次と全単元へのリンクを読むことができる。 */
+.textbook .sidebar { max-width: 744px; margin: auto; border-inline-end: 0; border-bottom: 1px solid var(--line); padding: 20px 28px; }
+.textbook .sidebar-inner { position: static; max-height: none; overflow: visible; }
+.textbook .sidebar ol { display: block; }
+.textbook .sidebar li { padding: 0; margin: 0; }
+.textbook .sidebar li a { font-size: 15px; padding: 10px 9px; }
+.textbook .sidebar .resources { display: block; }
+.textbook .sidebar .resources a, .textbook .sidebar .resources [aria-current="page"] { font-size: 13px; padding: 7px 9px; margin: 0; overflow-wrap: anywhere; }
+.textbook .progress { font-size: 13px; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; padding: 10px 9px 12px; margin-bottom: 8px; color: var(--muted); }
+.textbook progress { height: 6px; accent-color: var(--check-accent); margin: 8px 0; }
+.textbook.has-lesson-nav .sidebar { position: sticky; top: var(--language-nav-height, 0px); z-index: 4; max-width: none; padding: 0; background: var(--paper); border-block: 1px solid var(--line); }
+.textbook .lesson-bar-inner { max-width: 1040px; margin: auto; display: flex; align-items: center; gap: 14px; min-height: 62px; padding: 11px 28px; }
+.textbook .unit-name { font-size: 14px; font-weight: 600; line-height: 1.5; flex-shrink: 0; }
+.textbook .lesson-current { display: flex; align-items: center; justify-content: flex-end; gap: 10px; flex: 1; min-width: 0; line-height: 1.5; }
+.textbook .current-step { font-size: 13px; font-weight: 700; color: var(--blue); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.textbook .current-title { font-size: 13px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 200px; }
+.textbook .lesson-menu { margin: 0; padding: 0; border: 0; position: relative; flex-shrink: 0; font-size: 14px; line-height: 1.5; }
+.textbook .lesson-menu > summary { border: 1px solid var(--nav-border); border-radius: 6px; padding: 8px 12px; cursor: pointer; list-style: none; display: flex; align-items: center; gap: 10px; font-weight: 600; margin: 0; }
+.textbook .lesson-menu > summary::-webkit-details-marker { display: none; }
+.textbook .menu-chevron { width: 10px; height: 6px; background: currentColor; clip-path: polygon(0 0, 100% 0, 50% 100%); margin-top: 0; flex-shrink: 0; }
+.textbook .lesson-menu[open] .menu-chevron { transform: rotate(180deg); }
+.textbook .lesson-menu-content { position: absolute; inset-inline-end: 0; top: calc(100% + 10px); width: min(350px, calc(100vw - 32px)); max-height: calc(100dvh - var(--language-nav-height, 0px) - var(--lesson-nav-height, 64px) - 26px); overflow-y: auto; overscroll-behavior: contain; background: var(--nav-menu-background); border: 1px solid var(--line); box-shadow: 0 10px 30px var(--menu-shadow); padding: 8px 12px 12px; border-radius: 8px; }
+.textbook .lesson-menu-content .eyebrow { font-size: 12px; margin: 12px 9px 4px; color: var(--muted); }
+.textbook .lesson-menu-content ol { margin: 4px 0 12px; }
+.textbook .lesson-menu-content li a { border-radius: 4px; }
+.textbook .lesson-menu-content a[aria-current="step"] { background: var(--nav-selected-background); color: var(--nav-selected-text); font-weight: 600; }
+.textbook .lesson-help-links a { display: block; padding: 10px 9px; font-size: 14px; text-decoration: none; }
+.textbook .lesson-resources { border: 0; border-top: 1px solid var(--line); border-radius: 0; padding: 10px 0 0; margin: 8px 0 0; }
+.textbook .lesson-resources > summary { font-size: 14px; padding: 8px 9px; color: var(--muted); font-weight: 400; }
+.textbook .nav-check { color: var(--check-accent); margin-inline-start: 8px; }
+
+/* 入力する場所とコード。長い行はコードの枠内だけをスクロールする。 */
+.textbook .file { font-size: 16px; }
+.textbook .file-box { display: flex; align-items: center; gap: 16px; border-block: 1px solid var(--line); padding: 16px 0; margin: 22px 0; }
+.textbook .file-box > div { min-width: 0; }
+.textbook .file-icon { width: 34px; height: 42px; border: 1.5px solid var(--file-icon-border); border-radius: 3px; display: grid; place-items: center; flex-shrink: 0; color: var(--blue); font: 700 15px var(--font-code); }
+.textbook .file-label { font-size: 13px; color: var(--muted); line-height: 1.5; }
+.textbook .file-name { font: 600 18px/1.8 var(--font-code); overflow-wrap: anywhere; }
+.textbook .file-path { border: 0; padding: 0; font-size: 12px; line-height: 1.6; margin: 3px 0 0; color: var(--muted); }
+.textbook .file-path > summary { font-size: 12px; font-weight: 400; text-decoration: underline; text-underline-offset: 3px; }
+.textbook .file-path p { margin: 6px 0 0; overflow-wrap: anywhere; font-family: var(--font-code); }
+.textbook code, .textbook pre, .textbook kbd { font-family: var(--font-code); }
+.textbook code { background: var(--code-inline-background); font-size: .9em; padding: 2px 4px; }
+.textbook pre { background: var(--surface-code); color: var(--ink); border: 1px solid var(--border-code); border-radius: 7px; padding: 18px 20px 20px; margin: 0 0 20px; font-size: 16px; line-height: 1.85; font-variant-ligatures: none; overscroll-behavior-x: contain; }
+.textbook pre code { font-size: inherit; padding: 0; background: none; color: inherit; border-radius: 0; }
+.textbook .code-head { background: var(--surface-code-heading); color: var(--blue); border: 1px solid var(--border-code); border-top: 3px solid var(--blue); border-radius: 7px 7px 0 0; padding: 11px 16px; font-size: 14px; line-height: 1.65; font-weight: 600; margin-top: 22px; flex-wrap: wrap; }
+.textbook .code-head + pre { border-top: 0; border-radius: 0 0 7px 7px; }
+.textbook .code-head[data-code-kind="reference"] { background: var(--reference-heading-background); color: var(--ink); border: 1px solid var(--line); }
+.textbook .code-head[data-code-kind="reference"] + pre { background: var(--reference-code-background); border-color: var(--line); }
+.textbook .code-head button { color: var(--blue); border-color: #829bc3; background: white; font-size: 14px; padding: 5px 10px; }
+.textbook .code-head button:hover { background: #dce9ff; }
+.textbook .syntax-keyword { color: var(--syntax-keyword); }
+.textbook .syntax-string { color: var(--syntax-string); }
+.textbook .syntax-type { color: var(--syntax-type); }
+.textbook .syntax-comment { color: var(--syntax-comment); }
+.textbook .scroll-hint { font-size: 12px; color: var(--muted); line-height: 1.7; margin: -12px 0 22px; }
+.textbook kbd { font-size: 14px; padding: 3px 6px; border-color: #bac6d4; }
+
+/* 操作と確認に視線を集める。補足は小さく、本文と区別する。 */
+.textbook .goal, .textbook .check, .textbook .note, .textbook .task { border-radius: 0; padding: 18px 22px; margin: 26px 0; }
+.textbook .goal { background: var(--surface-goal); border-inline-start: 3px solid var(--blue); }
+.textbook .goal .box-title { color: var(--blue); font-size: 15px; }
+.textbook .box-title { font-weight: 700; margin: 0 0 9px; }
+.textbook .check { border: 1px solid var(--check-border); border-inline-start: 4px solid var(--check-accent); border-radius: 0; border-start-end-radius: 6px; border-end-end-radius: 6px; padding: 21px 22px; }
+.textbook .check .box-title { color: var(--check-accent); font-size: 17px; }
+.textbook .check label { gap: 12px; font-size: 17px; }
+.textbook input[type="checkbox"] { width: 22px; height: 22px; margin: 6px 0 0; accent-color: var(--check-accent); }
+.textbook .check > p:last-child { font-size: 14px; color: var(--muted); margin-top: 12px; padding-inline-start: 34px; }
+.textbook .note { border-inline-start: 3px solid var(--note-border); background: var(--surface-note); font-size: 16px; }
+.textbook .note .box-title { color: var(--note-title); }
+.textbook .task { border: 0; border-top: 2px solid var(--task-border); background: none; padding: 20px 0 0; }
+.textbook main details:not(.file-path) { border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px; margin: 20px 0; font-size: 16px; }
+.textbook main details > summary { cursor: pointer; font-weight: 600; line-height: 1.8; }
+.textbook main details[open] > summary { margin-bottom: 16px; }
+.textbook main details p:last-child { margin-bottom: 0; }
+.textbook .next { border-top: 1px solid var(--line); padding-top: 24px; margin-top: 28px; }
+.textbook .next a, .textbook .button-link { background: var(--action-background); color: var(--blue); border: 1px solid var(--blue); border-radius: 6px; padding: 12px 16px; font-size: 16px; font-weight: 600; }
+.textbook .footer { font-size: 12px; line-height: 1.8; padding: 0; }
+
+/* 2・3列は狭い幅で縦に読む。比較する列が多い表は表内を横にスクロールする。 */
+.textbook table { table-layout: fixed; font-size: 16px; line-height: 1.85; margin: 22px 0; }
+.textbook th { background: none; font-size: 13px; color: var(--muted); font-weight: 600; padding: 9px 8px; }
+.textbook td { padding: 16px 8px; }
+.textbook table[data-columns="2"] th:first-child { width: 39%; }
+.textbook table[data-columns="3"] th:first-child { width: 20%; }
+.textbook table[data-columns="3"] th:nth-child(2) { width: 28%; }
+.textbook th:first-child, .textbook td:first-child { padding-inline-start: 0; }
+.textbook th:last-child, .textbook td:last-child { padding-inline-end: 0; }
+.textbook table code { font-size: 14px; }
+.textbook .table-scroll { overflow-x: auto; overscroll-behavior-x: contain; margin: 22px 0; }
+.textbook .table-scroll table { min-width: 660px; margin: 0; }
+.textbook figure { margin: 22px 0; }
+.textbook img { border-radius: 6px; }
+.textbook figcaption { font-size: 13px; line-height: 1.8; margin-top: 10px; }
+.textbook .phones { gap: 24px; margin: 24px 0; }
+.textbook .phones figure { margin: 0; }
+.textbook .phones img { width: 206px; }
+.textbook .phone img { width: 224px; }
+.textbook .flow { padding: 14px 0; background: none; gap: 6px 12px; font-size: 14px; line-height: 1.8; margin: 20px 0; }
+.textbook .flow strong { padding: 0; border: 0; background: none; font-weight: 600; }
+
+@media (max-width: 620px) {
+  .textbook .topbar { padding: 12px 20px; }
+  .textbook main { padding: 28px 20px 48px; }
+  .textbook .hero h1 { font-size: 28px; }
+  .textbook h2 { font-size: 25px; }
+  .textbook h3 { font-size: 20px; }
+  .textbook .step-heading { gap: 14px; }
+  .textbook .big-step { font-size: 36px; padding-inline-end: 14px; }
+  .textbook .lesson-bar-inner { gap: 10px; padding: 10px 20px; }
+  .textbook .unit-name { font-size: 12px; }
+  .textbook .current-title { display: none; }
+  .textbook .file-box { gap: 12px; }
+  .textbook .file-name { font-size: 16px; }
+  .textbook .code-head { padding-inline: 12px; font-size: 13px; }
+  .textbook pre { padding-inline: 14px; }
+  .textbook .check { padding: 18px 16px; }
+  .textbook .check > p:last-child { padding-inline-start: 0; }
+  .textbook main details:not(.file-path) { padding: 12px; }
+  .textbook table:is([data-columns="2"], [data-columns="3"]) thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .textbook table:is([data-columns="2"], [data-columns="3"]) :is(tbody, tr, td) { display: block; }
+  .textbook table:is([data-columns="2"], [data-columns="3"]) tr { padding: 16px 0; border-bottom: 1px solid var(--line); }
+  .textbook table:is([data-columns="2"], [data-columns="3"]) td { padding: 0; border: 0; }
+  .textbook table:is([data-columns="2"], [data-columns="3"]) td:first-child { padding: 0 0 8px; font-weight: 600; }
+  .textbook table[data-columns="3"] td + td { margin-top: 12px; }
+  .textbook table[data-columns="3"] td::before { content: attr(data-label); display: block; font-size: 12px; color: var(--muted); font-weight: 400; margin-bottom: 3px; }
+  .textbook .phones { gap: 18px; }
+  .textbook .phones img { width: 180px; }
+  .textbook .phone img { width: 190px; }
+  .textbook .flow { gap: 4px 8px; font-size: 13px; }
+}
+@media (max-width: 420px) {
+  .textbook main { padding-inline: 16px; }
+  .textbook .hero h1 { font-size: 26px; }
+  .textbook h2 { font-size: 24px; }
+  .textbook h3 { font-size: 19px; }
+  .textbook .lesson-bar-inner { gap: 8px; padding-inline: 16px; }
+  .textbook .unit-name { max-width: 120px; overflow-wrap: anywhere; }
+  .textbook .lesson-menu > summary { padding: 8px; }
+  .textbook .phones { grid-template-columns: 1fr; gap: 24px; }
+  .textbook .phones figure { max-width: 280px; margin: auto; }
+  .textbook .phones img { width: 184px; }
+  .textbook .next a { font-size: 15px; }
+  .textbook main details:not(.file-path) { padding: 10px; }
+}
+@media print {
+  .textbook { font-size: 11pt; color: black; background: white; }
+  .textbook main { max-width: none; padding: 0; }
+  .textbook .hero { margin-bottom: 20px; padding-bottom: 20px; }
+  .textbook .hero h1 { font-size: 24pt; }
+  .textbook h2 { font-size: 20pt; }
+  .textbook h3 { font-size: 14pt; }
+  .textbook .big-step { font-size: 28pt; }
+  .textbook main > section { margin: 0 0 20px; padding: 20px 0; scroll-margin: 0; }
+  .textbook pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 9pt; color: black; background: #f4f4f4; }
+  .textbook pre code { white-space: inherit; }
+  .textbook .code-head { color: black; background: #eee; }
+  .textbook .step-heading, .textbook h3, .textbook summary { break-after: avoid; }
+  .textbook table { font-size: 10pt; table-layout: auto; }
+  .textbook table:is([data-columns="2"], [data-columns="3"]) thead { position: static; width: auto; height: auto; clip-path: none; display: table-header-group; }
+  .textbook table:is([data-columns="2"], [data-columns="3"]) tbody { display: table-row-group; }
+  .textbook table:is([data-columns="2"], [data-columns="3"]) tr { display: table-row; }
+  .textbook table:is([data-columns="2"], [data-columns="3"]) td { display: table-cell; }
+  .textbook th, .textbook td { padding: 6px; }
+  .textbook table td::before { display: none; }
+  .textbook table code { font-size: 9pt; }
+  .textbook .table-scroll { overflow: visible; }
+  .textbook .table-scroll table { min-width: 0; }
+  .textbook .phones { grid-template-columns: 1fr 1fr; }
+  .textbook .phones img, .textbook .phone img { width: 160px; }
+  .textbook .scroll-hint { display: none; }
+}
+
+/* Hybrid教材固有の比較・差分コード。ins/delと省略行の意味を維持する。 */
+.textbook pre.diff { color: var(--diff-context); }
+.textbook pre.diff ins, .textbook pre.diff del { margin-inline: -20px; padding-inline: 16px 20px; }
+.textbook pre.diff ins, .textbook .diff-add { background: var(--diff-add-background); border-color: var(--diff-add-border); color: var(--diff-add-text); }
+.textbook pre.diff del, .textbook .diff-del { background: var(--diff-delete-background); border-color: var(--diff-delete-border); color: var(--diff-delete-text); }
+.textbook .diff-keep { background: var(--surface-code); border-color: var(--border-code); color: var(--diff-context); }
+.textbook .diff-gap { margin-inline: -20px; padding-inline: 20px; color: var(--muted); border-color: var(--border-code); }
+.textbook .compare-item pre { border-radius: 7px; padding: 18px 20px; font-size: 16px; white-space: pre-wrap; overflow-wrap: anywhere; }
+@media (max-width: 620px) {
+  .textbook pre.diff ins, .textbook pre.diff del { margin-inline: -14px; padding-inline: 10px 14px; }
+  .textbook .diff-gap { margin-inline: -14px; padding-inline: 14px; }
+}
+@media print {
+  .textbook pre.diff { color: #555; }
+  .textbook pre.diff code { width: auto; }
+  .textbook pre.diff ins, .textbook .diff-add { background: #e3f3e7; border-color: black; color: black; }
+  .textbook pre.diff del, .textbook .diff-del { background: #f7e4e4; border-color: #777; color: #444; }
+  .textbook .diff-keep { background: #f4f4f4; border-color: #bbb; color: #555; }
+  .textbook .diff-gap { color: #555; border-color: #999; }
+  .textbook .compare-item pre { font-size: 9pt; }
 }
