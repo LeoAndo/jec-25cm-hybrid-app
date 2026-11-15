@@ -499,6 +499,14 @@
       "translation": "Save to a string list"
     },
     {
+      "source": "まず<code>pubspec.yaml</code>の<code>dependencies</code>へ、<code>shared_preferences: 2.5.5</code>と、その下の2行を加えます。<code>dependencies:</code>の下にある<code>sdk: flutter</code>の行の下に、緑の3行を足します。<code>dependencies</code>は二重に作らず、3行とも<code>flutter:</code>と同じ字下げにします。ほかの設定は残します。",
+      "translation": "First, add <code>shared_preferences: 2.5.5</code> and the two lines below it to <code>dependencies</code> in <code>pubspec.yaml</code>. Add the three green lines below the <code>sdk: flutter</code> line, which is under <code>dependencies:</code>. Do not create <code>dependencies</code> twice, and give all three lines the same indentation as <code>flutter:</code>. Keep the other settings."
+    },
+    {
+      "source": "<code>shared_preferences</code>は、Android用の<code>shared_preferences_android</code>と、iOS用の<code>shared_preferences_foundation</code>という別のパッケージを、実装として使います。2行目と3行目は、その実装の版を、この授業で確かめた版に決める行です。書かないと、<code>flutter pub get</code>を実行した日の最新の版が入り、授業で確かめた版と違うものになることがあります。AndroidのGradleで、ライブラリの版を番号で指定するのと同じ考え方です。",
+      "translation": "<code>shared_preferences</code> uses separate packages as its implementations: <code>shared_preferences_android</code> for Android and <code>shared_preferences_foundation</code> for iOS. The second and third lines fix the versions of these implementations to the versions checked for this class. If you omit them, the latest versions on the day you run <code>flutter pub get</code> will be installed, and they may differ from the versions checked for the class. This is the same idea as specifying library versions by number in Gradle for Android."
+    },
+    {
       "source": "実行中のアプリを<code>q</code>で終了し、<code>flutter pub get</code>を実行します。新しいネイティブプラグインを加えたのでホットリロードだけで済ませず、下の<code>lib/main.dart</code>の書き換えを終えてから、<code>flutter run -d 端末ID</code>で起動し直します。",
       "translation": "Quit the running app with <code>q</code> and run <code>flutter pub get</code>. Because you added a new native plugin, do not rely on hot reload alone: finish the changes to <code>lib/main.dart</code> below, then start again with <code>flutter run -d 端末ID</code> (端末ID = device ID)."
     },
@@ -1209,6 +1217,18 @@
     {
       "source": "パッケージが見つからない",
       "translation": "The package is not found"
+    },
+    {
+      "source": "<code>pubspec.yaml</code>の<code>dependencies</code>へSTEP 06の3行を入れ、<code>flutter pub get</code>を実行。追加後はアプリを停止して再実行。",
+      "translation": "Add the three lines from STEP 06 to <code>dependencies</code> in <code>pubspec.yaml</code> and run <code>flutter pub get</code>. After adding them, stop the app and run it again."
+    },
+    {
+      "source": "<code>flutter pub get</code>がエラーで止まる",
+      "translation": "<code>flutter pub get</code> stops with an error"
+    },
+    {
+      "source": "<code>pubspec.yaml</code>の3行の、パッケージの名前・版の数字・字下げを、STEP 06の枠と見比べる。エラーの文に行番号が出ていれば、その行を見る。",
+      "translation": "Compare the package names, version numbers, and indentation of the three lines in <code>pubspec.yaml</code> with the code box in STEP 06. If the error message shows a line number, look at that line."
     },
     {
       "source": "パッケージを加えた後、「保存できませんでした。」と出る。<code>R</code>で画面全体が赤くなる",

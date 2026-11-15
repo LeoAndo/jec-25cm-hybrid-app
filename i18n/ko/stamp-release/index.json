@@ -499,6 +499,14 @@
       "translation": "문자열 리스트에 저장하기"
     },
     {
+      "source": "まず<code>pubspec.yaml</code>の<code>dependencies</code>へ、<code>shared_preferences: 2.5.5</code>と、その下の2行を加えます。<code>dependencies:</code>の下にある<code>sdk: flutter</code>の行の下に、緑の3行を足します。<code>dependencies</code>は二重に作らず、3行とも<code>flutter:</code>と同じ字下げにします。ほかの設定は残します。",
+      "translation": "먼저 <code>pubspec.yaml</code>의 <code>dependencies</code>에 <code>shared_preferences: 2.5.5</code>와 그 아래의 2줄을 추가합니다. <code>dependencies:</code> 아래에 있는 <code>sdk: flutter</code> 줄 아래에 초록색 3줄을 추가합니다. <code>dependencies</code>는 중복해서 만들지 않고, 3줄 모두 <code>flutter:</code>와 같은 들여쓰기로 맞춥니다. 다른 설정은 유지합니다."
+    },
+    {
+      "source": "<code>shared_preferences</code>は、Android用の<code>shared_preferences_android</code>と、iOS用の<code>shared_preferences_foundation</code>という別のパッケージを、実装として使います。2行目と3行目は、その実装の版を、この授業で確かめた版に決める行です。書かないと、<code>flutter pub get</code>を実行した日の最新の版が入り、授業で確かめた版と違うものになることがあります。AndroidのGradleで、ライブラリの版を番号で指定するのと同じ考え方です。",
+      "translation": "<code>shared_preferences</code>는 Android용 <code>shared_preferences_android</code>와 iOS용 <code>shared_preferences_foundation</code>이라는 별도의 패키지를 구현으로 사용합니다. 2번째 줄과 3번째 줄은 그 구현의 버전을 이 수업에서 확인한 버전으로 고정하는 줄입니다. 작성하지 않으면 <code>flutter pub get</code>을 실행한 날의 최신 버전이 설치되어 수업에서 확인한 버전과 달라질 수 있습니다. Android의 Gradle에서 라이브러리 버전을 번호로 지정하는 것과 같은 생각입니다."
+    },
+    {
       "source": "実行中のアプリを<code>q</code>で終了し、<code>flutter pub get</code>を実行します。新しいネイティブプラグインを加えたのでホットリロードだけで済ませず、下の<code>lib/main.dart</code>の書き換えを終えてから、<code>flutter run -d 端末ID</code>で起動し直します。",
       "translation": "실행 중인 앱을 <code>q</code>로 종료하고, <code>flutter pub get</code>을 실행합니다. 새로운 네이티브 플러그인을 추가했으므로 핫 리로드만으로 끝내지 말고, 아래의 <code>lib/main.dart</code> 수정을 마친 뒤 <code>flutter run -d 端末ID</code>(기기 ID)로 다시 시작합니다."
     },
@@ -1209,6 +1217,18 @@
     {
       "source": "パッケージが見つからない",
       "translation": "패키지를 찾을 수 없음"
+    },
+    {
+      "source": "<code>pubspec.yaml</code>の<code>dependencies</code>へSTEP 06の3行を入れ、<code>flutter pub get</code>を実行。追加後はアプリを停止して再実行。",
+      "translation": "<code>pubspec.yaml</code>의 <code>dependencies</code>에 STEP 06의 3줄을 추가하고 <code>flutter pub get</code>을 실행. 추가 후에는 앱을 중지하고 다시 실행."
+    },
+    {
+      "source": "<code>flutter pub get</code>がエラーで止まる",
+      "translation": "<code>flutter pub get</code>이 오류로 멈춤"
+    },
+    {
+      "source": "<code>pubspec.yaml</code>の3行の、パッケージの名前・版の数字・字下げを、STEP 06の枠と見比べる。エラーの文に行番号が出ていれば、その行を見る。",
+      "translation": "<code>pubspec.yaml</code>의 3줄에 있는 패키지 이름·버전 번호·들여쓰기를 STEP 06의 틀과 대조. 오류 메시지에 줄 번호가 나오면 해당 줄을 확인."
     },
     {
       "source": "パッケージを加えた後、「保存できませんでした。」と出る。<code>R</code>で画面全体が赤くなる",

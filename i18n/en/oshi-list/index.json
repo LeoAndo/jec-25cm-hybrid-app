@@ -115,12 +115,12 @@
       "translation": "17 Pass values to the detail screen"
     },
     {
-      "source": "18 連続クリックへの対応",
-      "translation": "18 Handling repeated clicks"
+      "source": "18 完成とアレンジ",
+      "translation": "18 Finish and customize"
     },
     {
-      "source": "19 完成とアレンジ",
-      "translation": "19 Finish and customize"
+      "source": "19 公開URLで提出",
+      "translation": "19 Submit the import URL"
     },
     {
       "source": "困ったとき",
@@ -183,8 +183,8 @@
       "translation": "Build the list from an array and display the name you tapped."
     },
     {
-      "source": "詳細へ値を渡し、戻る操作まで完成させる。",
-      "translation": "Pass values to the detail screen and finish the app, including going back."
+      "source": "詳細へ値を渡して完成させ、公開URLで提出する。",
+      "translation": "Finish by passing values to the detail screen, then submit the import URL."
     },
     {
       "source": "STEP 00 · コマ1",
@@ -1051,8 +1051,8 @@
       "translation": "Tap the back button at the top left of the detail screen once to return to the list. Do not use the browser's own back button."
     },
     {
-      "source": "別の行でも、詳細を開く・戻るを確かめます。このSTEPでは連打せず、画面の動きが終わってから操作します。",
-      "translation": "Check opening the detail screen and going back with other rows too. In this STEP, do not tap repeatedly; wait until the screen animation finishes before the next action."
+      "source": "別の行でも、詳細を開く・戻るを確かめます。詳細はどの行でも同じ見本なので、押した行は、戻ったあとの一覧の下の「選択中：」で確かめます。",
+      "translation": "Tap another row to check that you can open the detail screen and go back. Every row opens the same sample screen, so after you go back, check which row you tapped by looking at 「選択中：」 (Selected:) below the list."
     },
     {
       "source": "<code>ons-back-button</code> は、そのページを管理する <code>ons-navigator</code> の前のページへ戻す部品です。自分でクリック処理を追加しなくても動きます。ページの切り替わり方もOSのスタイルで変わるので、常に同じ方向へスライドするとは限りません。ボタンの見た目もOSのスタイルで変わります。iOS向けでは、HTMLに書いた文字を添えて「＜ 戻る」と表示されます。Android向けでは左向きの矢印「←」だけになり、「戻る」の文字は表示されません。どちらも同じ <code>ons-back-button</code> で、押したときの動きは同じです。",
@@ -1075,8 +1075,8 @@
       "translation": "Pass the tapped item to the detail screen"
     },
     {
-      "source": "このSTEPでは、<code>www/index.html</code> と <code>www/js/app.js</code> を書き換えます。CSSは変えません。詳細の名前・種類・理由はHTMLでは空にし、受け取ったデータを後から入れます。",
-      "translation": "In this STEP, you edit <code>www/index.html</code> and <code>www/js/app.js</code>. Do not change the CSS. The name, type, and reason on the detail screen are left empty in the HTML, and the received data is filled in later."
+      "source": "このSTEPでは、<code>www/index.html</code>・<code>www/css/style.css</code>・<code>www/js/app.js</code> の3ファイルを書き換えます。詳細の名前・種類・理由はHTMLでは空にし、受け取ったデータを後から入れます。押した行の内容が詳細に出るようになるので、一覧の下の選択表示は外します。",
+      "translation": "In this STEP, edit three files: <code>www/index.html</code>, <code>www/css/style.css</code>, and <code>www/js/app.js</code>. Leave the name, type, and reason on the detail screen empty in the HTML and fill them in later with the received data. The detail screen will show the item you tapped, so remove the selection label below the list."
     },
     {
       "source": "<code>www/index.html</code> の <code>template id=\"detail.html\"</code> の中で、<code>txt_detail_genre</code> の行から <code>txt_detail_comment</code> の行までの4行を、次のコードに置き換えます。間の「好きな理由」の行は変わりません。",
@@ -1087,6 +1087,18 @@
       "translation": "www/index.html · replace · from the txt_detail_genre line to the txt_detail_comment line"
     },
     {
+      "source": "次に、一覧の下の選択表示を外します。この表示は、詳細画面がまだなかったSTEP 13で、押した行を画面で確かめるために置きました。詳細が見本のままだったSTEP 16でも、押した行は、戻ったあとの一覧の下で確かめました。このSTEPからは、押した行の名前・種類・理由を詳細画面が表示します。選択表示を残すと、戻ったあとの一覧に、前に押した名前が出たままになります。",
+      "translation": "Next, remove the selection label below the list. We added it in STEP 13 to show which row you tapped before there was a detail screen. In STEP 16, the detail screen still showed a sample, so you checked which row you tapped below the list after going back. Starting in this STEP, the detail screen shows the name, type, and reason from the row you tapped. If you keep the selection label, the previously selected name will still appear below the list when you go back."
+    },
+    {
+      "source": "同じ <code>www/index.html</code> の <code>template id=\"list.html\"</code> の中で、<code>&lt;ons-list id=\"list_oshi\"&gt;&lt;/ons-list&gt;</code> のすぐ下にある、<code>txt_selected</code> の1行を消します。「まだ選択していません」と書いた <code>p</code> の行です。<code>ons-list</code> の行は残します。",
+      "translation": "In the same <code>www/index.html</code> file, find <code>template id=\"list.html\"</code> and delete the <code>txt_selected</code> line directly below <code>&lt;ons-list id=\"list_oshi\"&gt;&lt;/ons-list&gt;</code>. This is the <code>p</code> line containing 「まだ選択していません」 (Nothing selected yet). Keep the <code>ons-list</code> line."
+    },
+    {
+      "source": "<code>www/css/style.css</code> では、<code>.app-selection {</code> の行から、その閉じかっこ <code>}</code> までの6行と、その下の空行1行を消します。消した <code>p</code> にだけ使っていた、文字色と余白の指定です。",
+      "translation": "In <code>www/css/style.css</code>, delete the six lines from <code>.app-selection {</code> through its closing brace <code>}</code>, plus the blank line just below it. These rules set the text color and spacing for the <code>p</code> you deleted."
+    },
+    {
       "source": "<code>www/js/app.js</code> では、<code>// ページの要素が使えるようになってから処理する。</code> のコメントの行から、<code>init</code> の処理を閉じる <code>});</code> までを、次のコードに置き換えます。コメントの文も変わり、<code>page_detail</code> のときの処理が加わります。",
       "translation": "In <code>www/js/app.js</code>, replace everything from the comment line <code>// ページの要素が使えるようになってから処理する。</code> to the <code>});</code> that closes the <code>init</code> handler with the following code. The comment text also changes, and handling for <code>page_detail</code> is added."
     },
@@ -1095,8 +1107,8 @@
       "translation": "www/js/app.js · replace · the init handler, from the comment just before it to });"
     },
     {
-      "source": "続けて、ファイルの末尾の <code>function openOshiDetail(oshi) {</code> の行から、その関数を閉じる <code>}</code> までを、次のコードに置き換えます。",
-      "translation": "Then, at the end of the file, replace everything from the <code>function openOshiDetail(oshi) {</code> line to the <code>}</code> that closes that function with the following code."
+      "source": "続けて、ファイルの末尾の <code>function openOshiDetail(oshi) {</code> の行から、その関数を閉じる <code>}</code> までを、次のコードに置き換えます。<code>txt_selected</code> に「選択中：」と名前を入れていた1行は、HTMLから消した表示を指すので、置き換えたあとのコードにはありません。",
+      "translation": "Then, at the end of the file, replace everything from the <code>function openOshiDetail(oshi) {</code> line to the <code>}</code> that closes that function with the following code. The old line put 「選択中：」 (Selected:) and the name in <code>txt_selected</code>. The new code omits that line because it referred to the label you removed from the HTML."
     },
     {
       "source": "www/js/app.js · 置き換え · function openOshiDetail から、その閉じかっこまで",
@@ -1115,156 +1127,152 @@
       "translation": "Tap the first item and check that the name, type, and reason match the first item in the array."
     },
     {
-      "source": "戻って2件目、3件目でも確かめます。",
-      "translation": "Go back and check the second and third items too."
+      "source": "戻って2件目、3件目でも確かめます。戻ったあとの一覧の下に、選択表示が出ないことも見ます。",
+      "translation": "Go back and check the second and third items too. Also check that the selection label no longer appears below the list when you go back."
     },
     {
       "source": "理由の <code>\\n</code> が改行になっていることを見ます。CSSの <code>white-space: pre-wrap</code> が、改行を保ちながら折り返します。",
       "translation": "See that the <code>\\n</code> in the reason has become a line break. <code>white-space: pre-wrap</code> in the CSS wraps the text while keeping the line breaks."
     },
     {
-      "source": "このSTEPも画面の動きが終わってから次を押します。画面の切り替えの途中に届いた2回目の操作は、Onsen UIの <code>ons-navigator</code> が受け付けないので、続けて押しても詳細は重なりません。次のSTEPでは、この仕組みに任せきりにせず、アプリの側でも開く途中かどうかを記録します。",
-      "translation": "In this STEP too, wait for the screen animation to finish before the next tap. Onsen UI's <code>ons-navigator</code> does not accept a second action that arrives while the screen is switching, so tapping again does not stack another detail screen. In the next STEP, instead of relying only on this behavior, the app itself also records whether a detail screen is being opened."
+      "source": "行を押しても詳細が開かないときは、<code>openOshiDetail</code> に <code>txt_selected</code> の行が残っていないかを見ます。HTMLから消した要素は <code>getElementById</code> で見つからないので、その行で処理が止まり、<code>pushPage</code> まで進みません。",
+      "translation": "If tapping a row does not open the detail screen, check whether the <code>txt_selected</code> line is still in <code>openOshiDetail</code>. Since <code>getElementById</code> cannot find the element you removed from the HTML, the code stops at that line before it reaches <code>pushPage</code>."
     },
     {
-      "source": "Androidで次の画面へ値を渡す、iOSで遷移先に表示用の値を渡す目的と同じです。Onsen UIでは <code>ons-navigator</code> の <code>data</code> を渡し、作られたページの <code>page.data</code> から受け取ります。ここで渡すのは実行中のJavaScriptオブジェクトで、ファイルへ保存したり文字列へ変換したりしているわけではありません。",
-      "translation": "The purpose is the same as passing values to the next screen in Android, or passing values for display to the destination in iOS. In Onsen UI, you pass the <code>data</code> of <code>ons-navigator</code> and receive it from <code>page.data</code> of the created page. What is passed here is a JavaScript object at runtime; it is not saved to a file or converted to a string."
+      "source": "Androidで次の画面へ値を渡す、iOSで遷移先に表示用の値を渡す目的と同じです。Onsen UIでは <code>ons-navigator</code> の <code>data</code> を渡し、作られたページの <code>page.data</code> から受け取ります。ここで渡すのは実行中のJavaScriptオブジェクトで、ファイルへ保存したり文字列へ変換したりしているわけではありません。選択表示を外すのは、AndroidやiOSで、動きを確かめるために置いたラベルを、同じ内容を次の画面が表示するようになったら取り除くのと同じ判断です。",
+      "translation": "The purpose is the same as passing values to the next screen in Android, or passing values for display to the destination in iOS. In Onsen UI, you pass the <code>data</code> of <code>ons-navigator</code> and receive it from <code>page.data</code> of the created page. You pass a JavaScript object at runtime without saving it to a file or converting it to a string. Removing the selection label is like removing a label you used to check behavior in Android or iOS once the next screen shows the same information."
     },
     {
-      "source": "3件それぞれの名前・種類・理由が詳細へ渡り、改行も表示された。",
-      "translation": "The name, type, and reason of each of the three items are passed to the detail screen, and the line breaks are displayed too."
+      "source": "3件それぞれの名前・種類・理由が詳細へ渡り、改行も表示された。一覧の下の選択表示がなくなった。",
+      "translation": "The name, type, and reason of each of the three items are passed to the detail screen, and the line breaks are displayed too. The selection label is gone from below the list."
     },
     {
       "source": "STEP 18 · コマ4",
       "translation": "STEP 18 · Session 4"
     },
     {
-      "source": "連続して押されても詳細を重ねない",
-      "translation": "Do not stack detail screens on repeated taps"
-    },
-    {
-      "source": "<code>www/js/app.js</code> を2か所変えます。HTMLとCSSは変えません。完成版では <code>isOpeningDetail</code> という真偽値と、<code>ons-navigator</code> の現在のページを使って、詳細を重ねて開くことを防ぎます。Onsen UIの <code>ons-navigator</code> も、切り替えの途中に届いた2回目の <code>pushPage</code> は受け付けませんが、断られた呼び出しはエラーになります。アプリの側で開く途中かどうかを記録しておけば、2回目の呼び出しそのものをしないで済みます。",
-      "translation": "You change two places in <code>www/js/app.js</code>. Do not change the HTML or the CSS. The finished version uses a boolean named <code>isOpeningDetail</code> and the current page of <code>ons-navigator</code> to prevent opening detail screens on top of each other. Onsen UI's <code>ons-navigator</code> also refuses a second <code>pushPage</code> that arrives during a transition, but a refused call becomes an error. If the app records whether it is in the middle of opening, it can avoid making the second call at all."
-    },
-    {
-      "source": "まず、配列 <code>oshiItems</code> を閉じる <code>];</code> の下に、1行空けて追加します。下の <code>// templateの中身は、ページが作られてから取得する。</code> との間も1行空けます。",
-      "translation": "First, leave one blank line below the <code>];</code> that closes the array <code>oshiItems</code>, and add the following code. Also leave one blank line between it and <code>// templateの中身は、ページが作られてから取得する。</code> below."
-    },
-    {
-      "source": "www/js/app.js · 追加 · 配列 oshiItems の ]; の下",
-      "translation": "www/js/app.js · add · below the ]; of the array oshiItems"
-    },
-    {
-      "source": "次に、ファイルの末尾の <code>function openOshiDetail(oshi) {</code> の行から、その関数を閉じる <code>}</code> までを、次のコードに置き換えます。",
-      "translation": "Next, at the end of the file, replace everything from the <code>function openOshiDetail(oshi) {</code> line to the <code>}</code> that closes that function with the following code."
-    },
-    {
-      "source": "場所",
-      "translation": "Place"
-    },
-    {
-      "source": "意味",
-      "translation": "Meaning"
-    },
-    {
-      "source": "まだ詳細を開く途中ではない。",
-      "translation": "Not in the middle of opening a detail screen yet."
-    },
-    {
-      "source": "開いている途中、または一覧が一番上でなければ処理を抜ける。",
-      "translation": "If a detail screen is being opened, or the list is not on top, leave the function."
-    },
-    {
-      "source": "次のクリックが来る前に、開く途中だと記録する。",
-      "translation": "Records that opening is in progress, before the next click arrives."
-    },
-    {
-      "source": "ページを開く処理が終わったときに実行される関数。ここで真偽値を <code>false</code> へ戻す。",
-      "translation": "A function that runs when the page has finished opening. Here the boolean is set back to <code>false</code>."
-    },
-    {
-      "source": "<code>||</code> は「どちらか」、<code>!==</code> は「等しくない」、<code>return</code> はこの関数をそこで終える、というWeb基礎の書き方です。開き終わって真偽値が <code>false</code> になっても、詳細が一番上ならもう一度開きません。",
-      "translation": "<code>||</code> means \"either\", <code>!==</code> means \"not equal\", and <code>return</code> ends the function right there; all of these are from Web Basics. Even after opening has finished and the boolean is <code>false</code> again, it does not open again while the detail screen is on top."
-    },
-    {
-      "source": "保存して再読み込みし、同じ行を続けて2回押します。",
-      "translation": "Save and reload, then tap the same row twice in a row."
-    },
-    {
-      "source": "詳細の左上の戻るボタンを1回押します。一覧に戻れば、詳細は重なっていません。",
-      "translation": "Tap the back button at the top left of the detail screen once. If you return to the list, the detail screens were not stacked."
-    },
-    {
-      "source": "別の行を押し、別の詳細も開けることを確かめます。",
-      "translation": "Tap another row and check that you can open another detail screen too."
-    },
-    {
-      "source": "画面の見た目は、STEP 17のときと同じです。ここでは、処理を足したあとも、今までどおり詳細が1枚だけ開き、戻れることを確かめます。",
-      "translation": "The screen looks the same as in STEP 17. Here you check that, even after adding the code, only one detail screen opens as before and you can go back."
-    },
-    {
-      "source": "Web基礎でクリック後の処理を関数として登録したのと同じく、<code>callback</code> へ「終わったら行う関数」を渡します。Androidのアニメーション終了の通知やiOSの完了ハンドラと対応します。最初に真偽値を変え、完了通知で戻すことで、画面の切り替えを待つ間だけ次の開始を止めます。",
-      "translation": "Just as you registered a function to run after a click in Web Basics, you pass a \"function to run when finished\" to <code>callback</code>. It matches the animation-end notification in Android and the completion handler in iOS. By changing the boolean first and resetting it on the completion notification, you block the next opening only while waiting for the screen transition."
-    },
-    {
-      "source": "続けて2回押しても、戻る1回で一覧になり、次の項目も開けた。",
-      "translation": "Even after tapping twice in a row, one back tap returns to the list, and the next item can be opened."
-    },
-    {
-      "source": "STEP 19 · コマ4",
-      "translation": "STEP 19 · Session 4"
-    },
-    {
       "source": "完成版を確認し、自分の好きなものノートにする",
       "translation": "Check the finished version and make it your own favorites notebook"
     },
     {
-      "source": "コードは変えません。STEP 18まで書いたコードが、<code>M01OshiList</code> の完成版です。順番に確認します。自分のアレンジを残す場合は、データや色の違いと、処理の違いを分けて見比べます。",
-      "translation": "There are no code changes in this STEP. The code you have written up to STEP 18 is the finished version of <code>M01OshiList</code>. Check the items in order. If you keep your own customizations, compare differences in data and colors separately from differences in the code logic."
+      "source": "コードは変えません。STEP 17まで書いたコードが、<code>M01OshiList</code> の完成版です。順番に確認します。自分のアレンジを残す場合は、データや色の違いと、処理の違いを分けて見比べます。",
+      "translation": "There are no code changes in this STEP. The code you have written up to STEP 17 is the finished version of <code>M01OshiList</code>. Check the items in order. If you keep your own customizations, compare differences in data and colors separately from differences in the code logic."
     },
     {
-      "source": "再読み込み直後は3件と「まだ選択していません」が見えます。",
-      "translation": "Right after a reload, you see the three items and 「まだ選択していません」 (Nothing selected yet)."
+      "source": "再読み込み直後は、見出しと3件の一覧が見えます。",
+      "translation": "Right after a reload, you see the heading and a list of three items."
     },
     {
-      "source": "3件を順に開き、それぞれの名前・種類・理由が正しいことを確かめます。戻ると一覧に選択した名前が残ります。",
-      "translation": "Open the three items in order and check that the name, type, and reason of each are correct. When you go back, the selected name is still shown below the list."
-    },
-    {
-      "source": "行を続けて押しても、戻る1回で一覧へ戻ることを確かめます。",
-      "translation": "Check that even if you tap a row repeatedly, one back tap returns you to the list."
+      "source": "3件を順に開き、それぞれの名前・種類・理由が正しいことを確かめます。詳細の左上の戻るボタンを1回押すと、一覧へ戻ります。",
+      "translation": "Open the three items in order and check that the name, type, and reason of each are correct. Tap the back button at the top left of the detail screen once to return to the list."
     },
     {
       "source": "先頭のOS強制指定がコメントになっていることを確認します。STEP 09と同じく、Monacaの端末選択で <code>iPhone 15</code>、<code>Pixel 8</code> を選び、それぞれ <code>Reload</code> を押して一覧・詳細・戻るを比べます。",
       "translation": "Check that the forced OS setting at the top is a comment. As in STEP 09, choose <code>iPhone 15</code> and <code>Pixel 8</code> in the Monaca device selector, click <code>Reload</code> for each, and compare the list, the detail screen, and going back."
     },
     {
-      "source": "長い名前と改行のある理由を試し、狭い幅でも読めることを確かめます。再読み込み後の選択は未選択へ戻ります。",
-      "translation": "Try a long name and a reason with line breaks, and check that they are readable at a narrow width. After a reload, the selection goes back to nothing selected."
+      "source": "長い名前と改行のある理由を試し、狭い幅でも読めることを確かめます。",
+      "translation": "Try a long name and a reason with line breaks, and check that they are readable at a narrow width."
     },
     {
       "source": "アレンジ箇所を記録する",
       "translation": "Record what you customized"
     },
     {
-      "source": "この単元は、変更したファイル・箇所と、画面での変化を記録して終えます。公開URLでの提出は、先生が案内するMonaca系の提出回に行います。自分のプロジェクトは残しておきます。",
-      "translation": "This unit ends with you recording which files and places you changed and how the screen changed. Submission by import URL takes place in the Monaca submission session that your teacher announces. Keep your own project."
-    },
-    {
-      "source": "公開URLで相手へ渡るのは、ソースに書いた配列・HTML・CSSです。今画面で選んでいる項目は渡りません。この単元には保存機能もありません。",
-      "translation": "What the import URL hands over to the other person is the array, HTML, and CSS written in the source. The item currently selected on the screen is not passed on. This unit also has no save feature."
+      "source": "変更したファイル・箇所と、画面での変化を記録します。記録したら、次のSTEPで自分のプロジェクトを公開し、提出します。",
+      "translation": "Record which files and parts of those files you changed and what changed on screen. In the next STEP, publish your project and submit it."
     },
     {
       "source": "Web基礎で作ったHTML・CSS・JavaScriptの役割分担は、完成版でも同じです。画面間の移動と値の受け渡しはAndroid・iOSの経験と対応します。今回の新しい考え方は、OS別の見た目を共通のHTMLへ適用するauto-stylingです。自分で変えた内容と、OSによる違いを分けて確かめましょう。",
       "translation": "The division of roles among HTML, CSS, and JavaScript from Web Basics is the same in the finished version. Moving between screens and passing values match your experience in Android and iOS. The new idea this time is auto-styling, which applies an OS-specific look to shared HTML. Check what you changed yourself separately from the differences caused by the OS."
     },
     {
-      "source": "一覧・詳細・戻る・連続クリック・OSによる差を確認し、自分の変更箇所を記録した。",
-      "translation": "The list, the detail screen, going back, repeated clicks, and the differences by OS have been checked, and what you changed has been recorded."
+      "source": "一覧・詳細・戻る・OSによる差を確認し、自分の変更箇所を記録した。",
+      "translation": "The list, the detail screen, going back, and the differences by OS have been checked, and what you changed has been recorded."
     },
     {
       "source": "<code>oshiItems</code> の名前・種類・理由・件数、HTMLの見出し、CSSの色・余白・文字サイズを変えられます。自分の好きなものと、その理由を自分の言葉で書きます。次に1か所だけ見た目を変え、どのファイルの何を変え、どの画面へ反映されたかを確かめてください。",
       "translation": "You can change the names, types, reasons, and number of items in <code>oshiItems</code>, the headings in the HTML, and the colors, spacing, and font sizes in the CSS. Write your own favorites and reasons in your own words. Then change just one thing in the look, and check what you changed in which file and on which screen it appeared."
+    },
+    {
+      "source": "STEP 19 · コマ4",
+      "translation": "STEP 19 · Session 4"
+    },
+    {
+      "source": "公開URLを発行して提出する",
+      "translation": "Generate and submit the import URL"
+    },
+    {
+      "source": "コードは変えません。STEP 18で確かめた自分の好きなものノートを、公開URLで提出します。Monaca系の課題は、自分のプロジェクトを公開し、発行されたURLを先生に渡して提出します。通常版MonacaのFreeプランでは、プロジェクトをZIPなどのファイルに書き出せないので、ファイルではなくURLで渡します。",
+      "translation": "There are no code changes in this STEP. Submit the favorites notebook you checked in STEP 18 using its import URL. For Monaca assignments, publish your own project and give your teacher the resulting URL. The Free plan for standard Monaca does not let you export projects as ZIP files or other files, so submit the URL instead of a file."
+    },
+    {
+      "source": "編集したファイルを、すべて保存します。保存していない変更は、相手へ渡りません。",
+      "translation": "Save all the files you edited. The recipient will not receive unsaved changes."
+    },
+    {
+      "source": "クラウド IDEの左上に、自分のプロジェクトの名前 <code>M01OshiList</code> が出ていることを確かめます。",
+      "translation": "Check that your project name, <code>M01OshiList</code>, appears at the top left of the cloud IDE."
+    },
+    {
+      "source": "上部メニューの <code>プロジェクト</code> を開き、<code>公開…</code> を選びます。",
+      "translation": "Open <code>プロジェクト</code> (Project) in the top menu and choose <code>公開…</code> (Publish…)."
+    },
+    {
+      "source": "クラウドIDEの上部メニューのプロジェクトを開いた画面。いちばん下の公開…が選ばれていて、左上にはプロジェクト名M01OshiListが出ている",
+      "translation": "The top プロジェクト (Project) menu in the cloud IDE is open. 公開… (Publish…) is selected at the bottom, and the project name M01OshiList appears at the top left."
+    },
+    {
+      "source": "上部メニューの <code>プロジェクト</code> を開き、いちばん下の <code>公開…</code> を選びます。",
+      "translation": "Open <code>プロジェクト</code> (Project) in the top menu and choose <code>公開…</code> (Publish…) at the bottom."
+    },
+    {
+      "source": "<code>プロジェクトの公開</code> の画面が開きます。まだ公開していないときは、<code>公開</code> ボタンを押します。公開すると <code>このプロジェクトは公開されています。</code> と出て、<code>プロジェクトのURL：</code> の欄にURLが表示されます。",
+      "translation": "The <code>プロジェクトの公開</code> (Publish project) dialog opens. If the project is not published yet, click <code>公開</code> (Publish). Once it is published, <code>このプロジェクトは公開されています。</code> (This project is published.) appears, and the URL is shown in the <code>プロジェクトのURL：</code> (Project URL:) field."
+    },
+    {
+      "source": "プロジェクトの公開の画面。このプロジェクトは公開されていますと表示され、プロジェクトのURLの欄に、https://monaca.mobi/ja/directimport?pid=で始まるURLが出ている。pid=のあとは灰色で隠してある",
+      "translation": "The プロジェクトの公開 (Publish project) dialog says the project is published. The プロジェクトのURL (Project URL) field shows a URL starting with https://monaca.mobi/ja/directimport?pid=. A gray block hides the characters after pid=."
+    },
+    {
+      "source": "公開したあとの画面です。<code>pid=</code> のあとの英数字はプロジェクトごとに違うので、画像では隠しています。",
+      "translation": "This is the dialog after publishing. The letters and numbers after <code>pid=</code> differ for each project, so they are hidden in the image."
+    },
+    {
+      "source": "欄の中のURLを、最後まで選んでコピーします。",
+      "translation": "Select and copy the entire URL in the field."
+    },
+    {
+      "source": "先生が案内する提出先へ、コピーしたURLを貼り付けて提出します。提出先や締め切りがまだ案内されていないときは、URLを控えて先生に確認します。",
+      "translation": "Paste the copied URL in the place your teacher specifies and submit it. If the submission location or deadline has not been announced yet, note down the URL and check with your teacher."
+    },
+    {
+      "source": "<code>閉じる</code> を押して、画面を閉じます。<code>プライベートにする</code> は押しません。",
+      "translation": "Click <code>閉じる</code> (Close) to close the dialog. Do not click <code>プライベートにする</code> (Make private)."
+    },
+    {
+      "source": "提出するのは、<code>https://monaca.mobi/ja/directimport?pid=…</code> という形の、自分のプロジェクトで発行したURLです。クラウド IDEやプレビューのアドレスを代わりに貼りません。このURLは、アプリを動かすURLではなく、プロジェクトを相手のMonacaへ取り込ませるURLです。先生はURLから自分のMonacaへ取り込み、プレビューで動かして確かめます。",
+      "translation": "Submit the URL generated for your own project, in the form <code>https://monaca.mobi/ja/directimport?pid=…</code>. Do not paste the address of the クラウド IDE (cloud IDE) or the プレビュー (preview) instead. This URL lets someone import the project into their own Monaca account. It does not run the app. Your teacher will import it from the URL into their Monaca account and run it in the preview to check it."
+    },
+    {
+      "source": "相手へ渡るのは、先生が取り込んだときに保存されている、プロジェクトのソースです。配列・HTML・CSS・JavaScriptに書いた内容が、そのまま渡ります。提出したあとも、プロジェクトは削除せず、<code>プライベートにする</code> も押しません。どちらをしても、そのURLから取り込めなくなります。",
+      "translation": "Your teacher receives the project source as saved at the time they import it. The contents of the array, HTML, CSS, and JavaScript are transferred as written. After submission, do not delete the project or click <code>プライベートにする</code> (Make private). Either action makes the project impossible to import from the URL."
+    },
+    {
+      "source": "発行したURLを自分で開くと、取り込みの画面が出ます。そこで <code>インポート</code> を押すと、自分のアカウントにコピーが1つ増え、プロジェクトの3つの枠の1つを使います。提出のために押す必要はありません。",
+      "translation": "If you open the URL you generated, the import screen appears. Clicking <code>インポート</code> (Import) there creates one copy in your own account and uses one of your three project slots. You do not need to click it to submit your work."
+    },
+    {
+      "source": "Android StudioやXcodeの課題でプロジェクトのフォルダを渡すときと同じく、渡すのはビルドしたアプリではなく、ソース一式です。違うのは渡し方です。Monacaのプロジェクトはクラウドにあるので、フォルダの代わりに取り込み用のURLを渡します。受け取った人のMonacaには、プロジェクトのコピーが作られます。",
+      "translation": "As when you hand over a project folder for an Android Studio or Xcode assignment, you hand over the complete source, not the built app. The difference is how you share it. Monaca projects are stored in the cloud, so you share an import URL instead of a folder. A copy of the project is created in the recipient's Monaca account."
+    },
+    {
+      "source": "自分の <code>M01OshiList</code> で公開URLを発行し、先生が案内する提出先へ提出した（提出先がまだ案内されていないときは、URLを控えた）。",
+      "translation": "The import URL for your own <code>M01OshiList</code> project has been generated and submitted where your teacher specified. If the location has not been announced yet, the URL has been noted down."
+    },
+    {
+      "source": "提出したソースを見ながら、自分が変えた場所を振り返ります。<code>oshiItems</code> の名前・種類・理由・件数、HTMLの見出し、CSSの色・余白・文字サイズのうち、どこを変え、一覧と詳細のどこに出たかを、STEP 18で記録した内容と見比べましょう。",
+      "translation": "Look at the source you submitted and review what you changed. Compare your changes to the names, types, reasons, or number of items in <code>oshiItems</code>, the HTML headings, or the CSS colors, spacing, and font sizes with your notes from STEP 18. Check where each change appeared in the list or on the detail screen."
     },
     {
       "source": "見えること",
@@ -1311,8 +1319,8 @@
       "translation": "Nothing happens when tapped"
     },
     {
-      "source": "<code>innerHTML</code> で行を作った後に <code>addEventListener</code> を登録しているか。<code>tappable</code> だけでは処理は付かない。",
-      "translation": "Is <code>addEventListener</code> registered after the rows are built with <code>innerHTML</code>? <code>tappable</code> alone adds no handling."
+      "source": "<code>innerHTML</code> で行を作った後に <code>addEventListener</code> を登録しているか。<code>tappable</code> だけでは処理は付かない。STEP 17のあとなら、<code>openOshiDetail</code> に <code>txt_selected</code> の行が残っていないか。",
+      "translation": "Is <code>addEventListener</code> registered after the rows are built with <code>innerHTML</code>? <code>tappable</code> alone does not add an event handler. After STEP 17, check whether the <code>txt_selected</code> line is still in <code>openOshiDetail</code>."
     },
     {
       "source": "<code>template</code> を足したら画面が空白になる",

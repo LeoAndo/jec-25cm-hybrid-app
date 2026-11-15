@@ -499,6 +499,14 @@
       "translation": "string list သို့ သိမ်းဆည်းရန်"
     },
     {
+      "source": "まず<code>pubspec.yaml</code>の<code>dependencies</code>へ、<code>shared_preferences: 2.5.5</code>と、その下の2行を加えます。<code>dependencies:</code>の下にある<code>sdk: flutter</code>の行の下に、緑の3行を足します。<code>dependencies</code>は二重に作らず、3行とも<code>flutter:</code>と同じ字下げにします。ほかの設定は残します。",
+      "translation": "ပထမဦးစွာ <code>pubspec.yaml</code> ၏ <code>dependencies</code> ထဲသို့ <code>shared_preferences: 2.5.5</code> နှင့် ၎င်းအောက်ရှိ စာကြောင်း 2 ကြောင်းကို ထည့်သွင်းပါ။ <code>dependencies:</code> ၏ အောက်ရှိ <code>sdk: flutter</code> စာကြောင်း၏ အောက်တွင် အစိမ်းရောင် စာကြောင်း 3 ကြောင်းကို ထပ်ထည့်ပါ။ <code>dependencies</code> ကို နှစ်ခါ မဖန်တီးဘဲ စာကြောင်း 3 ကြောင်းလုံးကို <code>flutter:</code> နှင့် တူညီသော indent ဖြင့် ရေးပါ။ အခြား setting များကို ချန်ထားပါ။"
+    },
+    {
+      "source": "<code>shared_preferences</code>は、Android用の<code>shared_preferences_android</code>と、iOS用の<code>shared_preferences_foundation</code>という別のパッケージを、実装として使います。2行目と3行目は、その実装の版を、この授業で確かめた版に決める行です。書かないと、<code>flutter pub get</code>を実行した日の最新の版が入り、授業で確かめた版と違うものになることがあります。AndroidのGradleで、ライブラリの版を番号で指定するのと同じ考え方です。",
+      "translation": "<code>shared_preferences</code> သည် လုပ်ဆောင်ချက်များကို အကောင်အထည်ဖော်ရန် Android အတွက် <code>shared_preferences_android</code> နှင့် iOS အတွက် <code>shared_preferences_foundation</code> ဟူသော သီးခြား package များကို အသုံးပြုပါသည်။ ဒုတိယနှင့် တတိယစာကြောင်းတို့သည် ထိုအကောင်အထည်ဖော်မှုများ၏ version ကို ဤအတန်းအတွက် စစ်ဆေးထားသော version များအဖြစ် သတ်မှတ်ပေးပါသည်။ ထိုစာကြောင်းများကို မရေးပါက <code>flutter pub get</code> ကို run လုပ်သည့်နေ့တွင် နောက်ဆုံးထွက်ရှိသော version များကို ထည့်သွင်းမည်ဖြစ်ပြီး အတန်းအတွက် စစ်ဆေးထားသော version များနှင့် ကွာခြားနိုင်ပါသည်။ Android ၏ Gradle တွင် library ၏ version ကို နံပါတ်ဖြင့် သတ်မှတ်သည့် အတွေးအခေါ်နှင့် အတူတူပင် ဖြစ်ပါသည်။"
+    },
+    {
       "source": "実行中のアプリを<code>q</code>で終了し、<code>flutter pub get</code>を実行します。新しいネイティブプラグインを加えたのでホットリロードだけで済ませず、下の<code>lib/main.dart</code>の書き換えを終えてから、<code>flutter run -d 端末ID</code>で起動し直します。",
       "translation": "Run နေသော app ကို <code>q</code> ဖြင့် ရပ်တန့်ပြီး <code>flutter pub get</code> ကို run လုပ်ပါ။ Native plugin အသစ်ကို ထည့်သွင်းထားသောကြောင့် hot reload ဖြင့်သာ မပြီးဆုံးစေဘဲ အောက်ပါ <code>lib/main.dart</code> ပြင်ရေးခြင်းကို ပြီးအောင်လုပ်ပြီးမှ <code>flutter run -d 端末ID</code> (端末ID = device ID) ဖြင့် ပြန်လည်စတင်ပါ။"
     },
@@ -1209,6 +1217,18 @@
     {
       "source": "パッケージが見つからない",
       "translation": "Package ကို ရှာမတွေ့ပါ"
+    },
+    {
+      "source": "<code>pubspec.yaml</code>の<code>dependencies</code>へSTEP 06の3行を入れ、<code>flutter pub get</code>を実行。追加後はアプリを停止して再実行。",
+      "translation": "<code>pubspec.yaml</code> ၏ <code>dependencies</code> ထဲသို့ STEP 06 ရှိ စာကြောင်း 3 ကြောင်းကို ထည့်ပြီး <code>flutter pub get</code> ကို run လုပ်ပါ။ ထည့်သွင်းပြီးနောက် app ကို ရပ်တန့်၍ ပြန်လည် run လုပ်ပါ။"
+    },
+    {
+      "source": "<code>flutter pub get</code>がエラーで止まる",
+      "translation": "<code>flutter pub get</code> သည် error ကြောင့် ရပ်သွားသည်"
+    },
+    {
+      "source": "<code>pubspec.yaml</code>の3行の、パッケージの名前・版の数字・字下げを、STEP 06の枠と見比べる。エラーの文に行番号が出ていれば、その行を見る。",
+      "translation": "<code>pubspec.yaml</code> ရှိ စာကြောင်း 3 ကြောင်း၏ package အမည်များ၊ version နံပါတ်များနှင့် indent ကို STEP 06 ရှိ ဘောင်နှင့် နှိုင်းယှဉ်စစ်ဆေးပါ။ Error message တွင် စာကြောင်းနံပါတ် ပါရှိပါက ထိုစာကြောင်းကို ကြည့်ပါ။"
     },
     {
       "source": "パッケージを加えた後、「保存できませんでした。」と出る。<code>R</code>で画面全体が赤くなる",
