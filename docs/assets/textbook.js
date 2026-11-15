@@ -75,7 +75,7 @@
     if (progress) { progress.max = checks.length; progress.value = count; }
     document.querySelectorAll('.sidebar nav a[href^="#"]').forEach(link => {
       const marker = link.querySelector('.nav-check');
-      if (marker) marker.textContent = checks.find(input => link.hash === `#${input.dataset.check}`)?.checked ? '✓' : '';
+      if (marker) marker.textContent = checks.find(input => link.hash === `#${input.closest('section[id]')?.id}`)?.checked ? '✓' : '';
     });
   };
   checks.forEach(input => {
