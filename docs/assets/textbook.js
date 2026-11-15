@@ -73,6 +73,10 @@
     const progress = document.querySelector('progress');
     if (label) label.textContent = message('progress', { count, total: checks.length });
     if (progress) { progress.max = checks.length; progress.value = count; }
+    document.querySelectorAll('.sidebar nav a[href^="#"]').forEach(link => {
+      const marker = link.querySelector('.nav-check');
+      if (marker) marker.textContent = checks.find(input => link.hash === `#${input.closest('section[id]')?.id}`)?.checked ? '✓' : '';
+    });
   };
   checks.forEach(input => {
     input.checked = records[input.dataset.check]?.checked === true;
@@ -87,8 +91,174 @@
   update();
 
 
+  // 本文・翻訳の原文を変えず、翻訳済みの要素を使って教科書の表示を整える。
+  const enhanceTextbook = () => {
+    if (!document.body.classList.contains('textbook')) return null;
+    const sidebar = document.querySelector('.sidebar');
+    const inner = sidebar?.querySelector('.sidebar-inner');
+    const main = document.querySelector('main');
+    if (!sidebar || !inner || !main) return null;
+    const element = (tag, className, text) => {
+      const node = document.createElement(tag);
+      if (className) node.className = className;
+      if (text !== undefined) node.textContent = text;
+      return node;
+    };
+    const decoration = (className, text) => {
+      const node = element('span', className, text);
+      node.setAttribute('aria-hidden', 'true');
+      return node;
+    };
+
+    main.querySelectorAll(':scope > section[id^="step-"]').forEach(section => {
+      const heading = section.querySelector(':scope > h2');
+      const meta = section.querySelector(':scope > .step-meta');
+      const number = section.id.match(/^step-(\d+)$/)?.[1];
+      if (!heading || !meta || number === undefined) return;
+      const header = element('header', 'step-heading');
+      const title = element('div');
+      meta.before(header);
+      title.append(heading, meta);
+      header.append(decoration('big-step', number.padStart(2, '0')), title);
+    });
+    main.querySelectorAll('h3').forEach(heading => {
+      const first = heading.firstChild;
+      const match = first?.nodeType === Node.TEXT_NODE && first.textContent.match(/^\s*([①-⑳])\s*/);
+      if (!match) return;
+      first.textContent = first.textContent.slice(match[0].length);
+      heading.classList.add('action-heading');
+      heading.prepend(element('span', 'instruction-number', String(match[1].codePointAt(0) - 0x245f)));
+    });
+    // 素のコードだけを色分けする。差分のins/del・省略行など既存要素は置換せず、記号・空白・コピー内容を保つ。
+    main.querySelectorAll('pre').forEach(pre => {
+      const code = pre.querySelector('code');
+      if (code && !code.children.length) {
+        const text = code.textContent;
+        const tokens = /<!--[\s\S]*?-->|\/\*[\s\S]*?\*\/|\/\/[^\n]*|"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|\b(?:const|let|function|async|await|var|return|public|private|protected|class|extends|void|package|import|new|if|else|for|while|static|final|true|false|null)\b|\b[A-Z][A-Za-z0-9_]*\b/g;
+        const fragment = document.createDocumentFragment();
+        let offset = 0;
+        for (const token of text.matchAll(tokens)) {
+          fragment.append(document.createTextNode(text.slice(offset, token.index)));
+          const value = token[0];
+          const kind = /^(?:\/\/|\/\*|<!--)/.test(value) ? 'comment'
+            : /^["']/.test(value) ? 'string' : /^[A-Z]/.test(value) ? 'type' : 'keyword';
+          fragment.append(element('span', `syntax-${kind}`, value));
+          offset = token.index + value.length;
+        }
+        fragment.append(document.createTextNode(text.slice(offset)));
+        code.replaceChildren(fragment);
+      }
+    });
+    main.querySelectorAll('table').forEach(table => {
+      const headers = [...table.querySelectorAll(':scope > thead > tr:first-child > th')];
+      const rows = [...table.querySelectorAll(':scope > tbody > tr')];
+      const regular = headers.length && rows.every(row => row.children.length === headers.length
+        && [...row.children].every(cell => cell.colSpan === 1 && cell.rowSpan === 1));
+      if (!regular) return;
+      table.dataset.columns = String(headers.length);
+      rows.forEach(row => [...row.children].forEach((cell, index) => {
+        cell.dataset.label = headers[index].textContent.trim();
+      }));
+      if (headers.length > 3) {
+        const scroll = element('div', 'table-scroll');
+        scroll.tabIndex = 0;
+        scroll.setAttribute('role', 'region');
+        scroll.setAttribute('aria-label', table.closest('section')?.querySelector('h2')?.textContent || headers.map(cell => cell.textContent).join(' / '));
+        table.before(scroll);
+        scroll.append(table);
+      }
+    });
+
+    const unit = inner.querySelector('[aria-current="page"]')?.textContent.trim() || document.title;
+    const nav = inner.querySelector('nav');
+    const eyebrow = inner.querySelector('.eyebrow');
+    if (eyebrow && nav?.getAttribute('aria-label')) eyebrow.textContent = nav.getAttribute('aria-label');
+    const progress = inner.querySelector('.progress');
+    if (progress) inner.prepend(progress);
+    nav?.querySelectorAll('a[href^="#"]').forEach(link => link.append(decoration('nav-check', '')));
+    const bar = element('div', 'lesson-bar-inner');
+    const current = element('div', 'lesson-current');
+    const step = element('span', 'current-step');
+    const title = element('span', 'current-title');
+    current.append(step, title);
+    const menu = element('details', 'lesson-menu');
+    const summary = element('summary');
+    summary.append(element('span', '', nav?.getAttribute('aria-label') || eyebrow?.textContent || unit), decoration('menu-chevron', ''));
+    const panel = element('div', 'lesson-menu-content');
+    panel.append(inner);
+    menu.append(summary, panel);
+    bar.append(element('span', 'unit-name', unit.replace('：', ' ')), current, menu);
+    sidebar.classList.add('lesson-bar');
+    sidebar.append(bar);
+    document.body.classList.add('has-lesson-nav');
+    // 冒頭では翻訳の注記やtopbarが目次より上にある。実際の上端から残る高さを使う。
+    const updateMenuHeight = () => {
+      if (!menu.open) return;
+      const viewport = window.visualViewport;
+      const bottom = viewport ? viewport.offsetTop + viewport.height : window.innerHeight;
+      const available = Math.max(0, bottom - panel.getBoundingClientRect().top - 16);
+      panel.style.setProperty('--lesson-menu-max-height', `${available}px`);
+    };
+    const resize = () => {
+      document.documentElement.style.setProperty('--lesson-nav-height', `${bar.getBoundingClientRect().height}px`);
+      updateMenuHeight();
+    };
+    resize();
+    if ('ResizeObserver' in window) {
+      const observer = new ResizeObserver(resize);
+      observer.observe(bar);
+      document.querySelectorAll('.topbar, .translation-note').forEach(node => observer.observe(node));
+    } else {
+      main.addEventListener('toggle', resize, true);
+    }
+    window.addEventListener('resize', resize);
+    menu.addEventListener('toggle', updateMenuHeight);
+    window.visualViewport?.addEventListener('resize', updateMenuHeight);
+    window.visualViewport?.addEventListener('scroll', updateMenuHeight);
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && menu.open) { menu.open = false; summary.focus(); }
+    });
+    document.addEventListener('click', event => {
+      if (menu.open && !menu.contains(event.target)) menu.open = false;
+    });
+    update();
+    return { menu, step, title, updateMenuHeight };
+  };
+  const lessonNavigation = enhanceTextbook();
   const links = [...document.querySelectorAll('.sidebar a[href^="#"]')];
-  if ('IntersectionObserver' in window) {
+  const sections = [...document.querySelectorAll('main > section[id]')];
+  const activeSection = () => {
+    if (lessonNavigation) {
+      const style = getComputedStyle(document.documentElement);
+      const languageHeight = parseFloat(style.getPropertyValue('--language-nav-height')) || 0;
+      const lessonHeight = parseFloat(style.getPropertyValue('--lesson-nav-height')) || 0;
+      return sections.filter(item => item.getBoundingClientRect().top <= languageHeight + lessonHeight + 90).at(-1) || sections[0];
+    }
+    // 共通資料は固定の教材バーがないので、従来の画面高さによる判定を保つ。
+    return [...document.querySelectorAll('main section[id]')]
+      .filter(item => item.getBoundingClientRect().top <= window.innerHeight / 3).at(-1);
+  };
+  const updateLocation = () => {
+    const section = activeSection();
+    if (!section) return;
+    links.forEach(link => {
+      if (link.hash === `#${section.id}`) link.setAttribute('aria-current', 'step');
+      else link.removeAttribute('aria-current');
+    });
+    const number = section.id.match(/^step-(\d+)$/)?.[1];
+    const heading = section.querySelector('h2')?.textContent || '';
+    lessonNavigation.step.textContent = number === undefined ? (links.find(link => link.hash === `#${section.id}`)?.textContent || heading) : `STEP ${number.padStart(2, '0')}`;
+    lessonNavigation.title.textContent = number === undefined ? '' : heading;
+  };
+  if (lessonNavigation) {
+    let queued = false;
+    window.addEventListener('scroll', () => {
+      if (queued) return;
+      queued = true;
+      requestAnimationFrame(() => { queued = false; lessonNavigation.updateMenuHeight(); updateLocation(); });
+    }, { passive: true });
+    updateLocation();
+  } else if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (!entry.isIntersecting) return;
@@ -99,6 +269,41 @@
       });
     }, { rootMargin: '0px 0px -65% 0px', threshold: 0 });
     document.querySelectorAll('main section[id]').forEach(section => observer.observe(section));
+  }
+
+  // 閉じた完成コードへのリンクも、初期URL・クリック・履歴移動で同じ場所を開く。
+  const revealTarget = (hash, focus = false) => {
+    let target;
+    try { target = document.getElementById(decodeURIComponent(hash.slice(1))); } catch { return; }
+    if (!target) return;
+    for (let parent = target.parentElement; parent; parent = parent.parentElement) {
+      if (parent.tagName === 'DETAILS') parent.open = true;
+    }
+    if (focus) {
+      const destination = target.matches('section') ? target.querySelector('h2') || target : target;
+      if (!destination.hasAttribute('tabindex')) destination.tabIndex = -1;
+      destination.focus({ preventScroll: true });
+    }
+    requestAnimationFrame(() => {
+      target.scrollIntoView({ block: 'start', behavior: 'instant' });
+      if (lessonNavigation) updateLocation();
+    });
+  };
+  if (lessonNavigation) {
+    document.querySelectorAll('a[href^="#"]').forEach(link => link.addEventListener('click', event => {
+      if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      let target;
+      try { target = document.getElementById(decodeURIComponent(link.hash.slice(1))); } catch { return; }
+      if (!target) return;
+      event.preventDefault();
+      lessonNavigation.menu.open = false;
+      try { history.pushState(null, '', link.hash); } catch { window.location.hash = link.hash; }
+      revealTarget(link.hash, true);
+    }));
+    window.addEventListener('hashchange', () => revealTarget(window.location.hash));
+    window.addEventListener('popstate', () => {
+      if (window.location.hash) revealTarget(window.location.hash);
+    });
   }
 
   // from は最初の単元、back は共通資料をたどった順の「ファイル名#節」。
@@ -148,12 +353,17 @@
   // 言語名が折り返しても、固定メニューの下に目次とSTEPを表示する。
   const languageNav = document.querySelector('.language-nav');
   if (languageNav) {
-    const resizeNav = () => document.documentElement.style.setProperty('--language-nav-height', `${languageNav.getBoundingClientRect().height}px`);
+    const resizeNav = () => {
+      document.documentElement.style.setProperty('--language-nav-height', `${languageNav.getBoundingClientRect().height}px`);
+      if (lessonNavigation) { lessonNavigation.updateMenuHeight(); updateLocation(); }
+    };
     resizeNav();
     document.documentElement.classList.add('has-language-nav');
     if ('ResizeObserver' in window) new ResizeObserver(resizeNav).observe(languageNav);
     else window.addEventListener('resize', resizeNav);
   }
+
+  if (lessonNavigation && window.location.hash) revealTarget(window.location.hash);
 
   // 言語を替えても、共通資料の戻り先・いま読んでいるSTEP・確認済みの記録を保つ。
   document.querySelectorAll('a[data-language-link]').forEach(link => {
@@ -163,7 +373,7 @@
       setNavigation(target, backPages);
       loadSaved();
       if (checks.length && Object.keys(records).length) target.searchParams.set('checks', JSON.stringify(records));
-      const section = [...document.querySelectorAll('main section[id]')].filter(item => item.getBoundingClientRect().top <= window.innerHeight / 3).at(-1);
+      const section = activeSection();
       target.hash = section ? section.id : window.location.hash;
       link.href = target.href;
     };
