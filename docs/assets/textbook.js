@@ -191,17 +191,30 @@
     sidebar.classList.add('lesson-bar');
     sidebar.append(bar);
     document.body.classList.add('has-lesson-nav');
+    // 冒頭では翻訳の注記やtopbarが目次より上にある。実際の上端から残る高さを使う。
+    const updateMenuHeight = () => {
+      if (!menu.open) return;
+      const viewport = window.visualViewport;
+      const bottom = viewport ? viewport.offsetTop + viewport.height : window.innerHeight;
+      const available = Math.max(0, bottom - panel.getBoundingClientRect().top - 16);
+      panel.style.setProperty('--lesson-menu-max-height', `${available}px`);
+    };
     const resize = () => {
       document.documentElement.style.setProperty('--lesson-nav-height', `${bar.getBoundingClientRect().height}px`);
+      updateMenuHeight();
     };
     resize();
     if ('ResizeObserver' in window) {
       const observer = new ResizeObserver(resize);
       observer.observe(bar);
+      document.querySelectorAll('.topbar, .translation-note').forEach(node => observer.observe(node));
     } else {
-      window.addEventListener('resize', resize);
       main.addEventListener('toggle', resize, true);
     }
+    window.addEventListener('resize', resize);
+    menu.addEventListener('toggle', updateMenuHeight);
+    window.visualViewport?.addEventListener('resize', updateMenuHeight);
+    window.visualViewport?.addEventListener('scroll', updateMenuHeight);
     document.addEventListener('keydown', event => {
       if (event.key === 'Escape' && menu.open) { menu.open = false; summary.focus(); }
     });
@@ -209,7 +222,7 @@
       if (menu.open && !menu.contains(event.target)) menu.open = false;
     });
     update();
-    return { menu, step, title };
+    return { menu, step, title, updateMenuHeight };
   };
   const lessonNavigation = enhanceTextbook();
   const links = [...document.querySelectorAll('.sidebar a[href^="#"]')];
@@ -242,7 +255,7 @@
     window.addEventListener('scroll', () => {
       if (queued) return;
       queued = true;
-      requestAnimationFrame(() => { queued = false; updateLocation(); });
+      requestAnimationFrame(() => { queued = false; lessonNavigation.updateMenuHeight(); updateLocation(); });
     }, { passive: true });
     updateLocation();
   } else if ('IntersectionObserver' in window) {
@@ -342,7 +355,7 @@
   if (languageNav) {
     const resizeNav = () => {
       document.documentElement.style.setProperty('--language-nav-height', `${languageNav.getBoundingClientRect().height}px`);
-      if (lessonNavigation) updateLocation();
+      if (lessonNavigation) { lessonNavigation.updateMenuHeight(); updateLocation(); }
     };
     resizeNav();
     document.documentElement.classList.add('has-language-nav');
