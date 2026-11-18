@@ -31,8 +31,8 @@
       "translation": "第 5 堂課 · STEP 00〜04"
     },
     {
-      "source": "00 自分の好きなものノートを開く",
-      "translation": "00 開啟自己的喜愛筆記"
+      "source": "00 M02OshiSaveを新規作成する",
+      "translation": "00 建立 M02OshiSave 新專案"
     },
     {
       "source": "01 入力画面を作る",
@@ -135,8 +135,8 @@
       "translation": "新的概念是<strong>JSON</strong>。把畫面上使用的陣列轉換為儲存用的字串，再把讀取到的字串還原為陣列。儲存位置將與 Java 的 <code>SharedPreferences</code>、Swift 的 <code>UserDefaults</code> 進行比較。"
     },
     {
-      "source": "この単元の名前は <code>M02OshiSave</code> です。学生は自分の好きなものノートを同じ1プロジェクトで育てます。まだプロジェクトがない場合の作り方も、一覧・詳細の開始コードも、この本文にあります。",
-      "translation": "本單元的名稱是 <code>M02OshiSave</code>。學生在同一個專案中繼續完善自己的「喜愛筆記」。如果還沒有專案，從零建立的方法以及清單和詳細資訊畫面的起始程式碼，都在本文中。"
+      "source": "この単元では、<code>M01OshiList</code> の作品を残し、新しく <code>M02OshiSave</code> を作ります。STEP 00の開始コードをコピーして、一覧・詳細が動く状態から始めます。プロジェクトの作り方も、3ファイルの開始コードも、この本文にあります。",
+      "translation": "本單元會保留 <code>M01OshiList</code> 的作品，再建立新的 <code>M02OshiSave</code>。請複製 STEP 00 的起始程式碼，從清單與詳細資訊畫面都能正常運作的狀態開始。本頁提供建立專案的步驟，以及 3 個檔案的起始程式碼。"
     },
     {
       "source": "コマ",
@@ -163,28 +163,32 @@
       "translation": "STEP 00 · 第 5 堂課"
     },
     {
-      "source": "自分の好きなものノートを開く",
-      "translation": "開啟自己的喜愛筆記"
+      "source": "M02OshiSaveを新規作成する",
+      "translation": "建立 M02OshiSave 新專案"
     },
     {
-      "source": "Google Chromeで通常版Monacaへログインし、自分の好きなものノートを開きます。続けて使っているプロジェクトは、名前が <code>M01OshiList</code> のままで構いません。今日のためにコピーを増やしたり、削除したりしません。",
-      "translation": "請在 Google Chrome 中登入標準版 Monaca，開啟自己的喜愛筆記。一直使用的專案，名稱保持為 <code>M01OshiList</code> 也沒關係。請不要為了今天的課增加複本或刪除專案。"
+      "source": "Google Chromeで通常版Monacaへログインします。<code>M01OshiList</code> は作品とアレンジを残すため、そのまま保管します。この単元は、新しい <code>M02OshiSave</code> に下の開始コードを入れて進めます。",
+      "translation": "請使用 Google Chrome 登入標準版 Monaca。請將 <code>M01OshiList</code> 原樣保留，以留下作品與自訂內容。本單元會將下方的起始程式碼放入新建的 <code>M02OshiSave</code>，再繼續操作。"
     },
     {
-      "source": "まだ自分の好きなものノートがない人だけ、ダッシュボードで新規作成し、<code>最小限のテンプレート</code> を選び、<code>M02OshiSave</code> と名付けます。登録や空き枠が不明なら、<a1>共通資料のSTEP 2〜3</a1>で確認して戻ります。",
-      "translation": "只有還沒有自己喜愛筆記的人，才在儀表板建立新專案，選擇 <code>最小限のテンプレート</code>（最簡範本），並命名為 <code>M02OshiSave</code>。如果不清楚註冊或剩餘名額的情況，請到<a1>通用資料的 STEP 2～3</a1>確認後再返回。"
+      "source": "ダッシュボードで、プロジェクトの名前と個数を確かめます。現在1個なら、M02を作ると2個になり、Freeプランの上限3個以内です。すでに3個ある場合は、自分の作品を削除せず先生に相談します。登録や空き枠が不明なら、<a1>共通資料のSTEP 2〜3</a1>で確認して戻ります。",
+      "translation": "請在「ダッシュボード」（專案管理面板）確認現有專案的名稱與數量。如果目前只有 1 個，建立 M02 後會有 2 個，未超過 Free 方案最多 3 個專案的限制。若已經有 3 個，請向老師詢問，不要刪除自己的作品。若不確定如何註冊或查詢剩餘名額，請查看<a1>通用資料的 STEP 2～3</a1>，再回到本頁。"
     },
     {
-      "source": "<code>www/index.html</code>・<code>www/css/style.css</code> を開きます。<code>www/js/app.js</code> がなければ、ファイル一覧の作成操作で <code>www</code> の下に <code>js</code> フォルダ、その中に <code>app.js</code> ファイルを作ります。",
-      "translation": "請開啟 <code>www/index.html</code>、<code>www/css/style.css</code>。如果沒有 <code>www/js/app.js</code>，請透過檔案清單的建立操作，在 <code>www</code> 下建立 <code>js</code> 資料夾，再在其中建立 <code>app.js</code> 檔案。"
+      "source": "新規作成で <code>最小限のテンプレート</code> を選び、プロジェクト名を <code>M02OshiSave</code> にします。",
+      "translation": "請在建立新專案時選擇 <code>最小限のテンプレート</code>（最簡範本），將專案命名為 <code>M02OshiSave</code>。"
     },
     {
-      "source": "自分のアレンジがある場合は、変えた文字と色を控えます。3ファイルの中身を、下の開始コードでそれぞれ全体を置き換え、保存してプレビューを再読み込みします。<code>components</code> や <code>res</code> は変更しません。",
-      "translation": "如果有自己做過的自訂，先記下改過的文字和顏色。請用下方的起始程式碼，分別替換 3 個檔案的全部內容，儲存後重新載入預覽。請勿修改 <code>components</code> 和 <code>res</code>。"
+      "source": "Monaca クラウド IDEで、開いているプロジェクト名が <code>M02OshiSave</code> であることを確かめ、<code>www/index.html</code>・<code>www/css/style.css</code> を開きます。<code>www/js/app.js</code> がなければ、<code>www</code> の下に <code>js</code> フォルダ、その中に <code>app.js</code> ファイルを作ります。すでに <code>js</code> フォルダがあれば、その中に作ります。",
+      "translation": "請在 Monaca クラウド IDE 中確認開啟的專案名稱是 <code>M02OshiSave</code>，再開啟 <code>www/index.html</code> 與 <code>www/css/style.css</code>。如果沒有 <code>www/js/app.js</code>，請在 <code>www</code> 下建立 <code>js</code> 資料夾，再在其中建立 <code>app.js</code> 檔案。如果已有 <code>js</code> 資料夾，請直接在該資料夾中建立檔案。"
     },
     {
-      "source": "3件の名前を押して詳細を開き、左上の戻るボタンで一覧へ戻ります。戻るボタンは、iOS向けの見た目では「＜ 戻る」、Android向けの見た目では左向きの矢印「←」だけです。タイトルと詳細の組み合わせを確かめます。",
-      "translation": "請點選 3 筆資料的名稱以開啟詳細資訊，再用左上角的返回按鈕回到清單。返回按鈕在 iOS 風格的外觀中是「＜ 戻る」（返回），在 Android 風格的外觀中只有一個向左的箭頭「←」。請確認標題與詳細資訊的組合是否正確。"
+      "source": "下の3つのコード欄を、それぞれ先頭から最後まで選択してコピーし、見出しと同じ名前のファイルへ貼り付けます。ファイルに中身があれば全体を置き換えます。このSTEPは、全員が同じ開始状態を用意するため、3ファイルの全文をコピーして構いません。<code>components</code> や <code>res</code> は変更しません。",
+      "translation": "請將下方 3 個程式碼欄分別從頭到尾選取並複製，再各自貼到與標題同名的檔案。若檔案已有內容，請替換全部內容。為了讓大家從同一狀態開始，這個 STEP 可以複製 3 個檔案的全部程式碼。請保留 <code>components</code> 與 <code>res</code> 的原有內容。"
+    },
+    {
+      "source": "3ファイルを保存し、プレビューを再読み込みします。3件の名前を押して詳細を開き、左上の戻るボタンで一覧へ戻ります。戻るボタンは、iOS向けの見た目では「＜ 戻る」、Android向けの見た目では左向きの矢印「←」だけです。タイトルと詳細の組み合わせを確かめます。",
+      "translation": "請儲存 3 個檔案，再重新載入「プレビュー」（預覽）。請點選 3 筆資料的名稱以開啟詳細資訊，再用左上角的返回按鈕回到清單。返回按鈕在 iOS 風格的外觀中是「＜ 戻る」（返回），在 Android 風格的外觀中只有一個向左的箭頭「←」。請確認標題與詳細資訊的組合是否正確。"
     },
     {
       "source": "www/index.html · 全体を置き換える",
@@ -259,8 +263,12 @@
       "translation": "檔案結構與 Web 基礎相同是 3 個檔案，但操作的地方是 Monaca クラウド IDE。<code>init</code> 相當於 Android 中建立 View 之後進行設定、iOS 中 <code>viewDidLoad</code> 的時機，以 JavaScript 的 <code>addEventListener</code> 接收。<code>pushPage</code> 的 <code>data</code> 對應原生應用程式中向下一畫面傳遞值的操作。此時尚未轉換為儲存用的字串。"
     },
     {
-      "source": "自分の1プロジェクトで3件の一覧・詳細・戻るを確認し、HTMLとJSの対応を追えた。",
-      "translation": "已在自己的一個專案中確認 3 筆資料的清單、詳細資訊與返回，並掌握了 HTML 與 JS 的對應關係。"
+      "source": "一覧・詳細・戻るを確認できたら、STEP 01へ進みます。第6・7コマも、この <code>M02OshiSave</code> を使い続けます。",
+      "translation": "確認清單、詳細資訊畫面與返回功能都正常後，就可以進入 STEP 01。第 6、7 堂課也會繼續使用這個 <code>M02OshiSave</code> 專案。"
+    },
+    {
+      "source": "新しく作った <code>M02OshiSave</code> に3ファイルを貼り付け、一覧・詳細・戻るとHTML・JSの対応を確認できた。",
+      "translation": "已將 3 個檔案的程式碼貼到新建的 <code>M02OshiSave</code>，並確認清單、詳細資訊與返回功能，以及 HTML 和 JS 的對應關係。"
     },
     {
       "source": "STEP 01 · コマ5",
@@ -1115,8 +1123,8 @@
       "translation": "請在 iPhone 系與 Android 系的預覽中比較輸入、返回、按鈕的外觀。若啟用了用於比較的 <code>ons.platform.select(\"android\")</code>，最後要將其改回註解。"
     },
     {
-      "source": "クラウド IDEの <code>プロジェクト → 公開…</code> を開き、自分の作品であることを確かめ、公開URLを発行します。",
-      "translation": "請開啟雲端 IDE 的 <code>プロジェクト → 公開…</code>（專案 → 公開…），確認是自己的作品，然後發行匯入連結。"
+      "source": "開いているプロジェクトが自分の <code>M02OshiSave</code> であることを確かめ、クラウド IDEの <code>プロジェクト → 公開…</code> から公開URLを発行します。",
+      "translation": "請先確認目前開啟的是自己的 <code>M02OshiSave</code> 專案，再透過雲端 IDE 的 <code>プロジェクト → 公開…</code>（專案 → 公開…）發行匯入連結。"
     },
     {
       "source": "提出するのは <code>https://monaca.mobi/ja/directimport?pid=…</code> という形の、実際に発行されたURLです。クラウド IDEやプレビューのアドレスを代わりに貼りません。相手のMonacaへソースを取り込むためのURLです。",
@@ -1143,8 +1151,8 @@
       "translation": "確認繳交與準備情況"
     },
     {
-      "source": "コードは変えません。先生が授業中に案内する提出先・締め切りを確認し、自分の好きなものノートで発行した公開URLを提出します。まだ案内がない場合は、URLを控えて先生へ確認します。",
-      "translation": "程式碼不變。請確認老師在課堂上公佈的繳交處與截止時間，繳交為自己喜愛筆記所發行的匯入連結。若尚未收到通知，就先記下連結，向老師確認。"
+      "source": "コードは変えません。先生が授業中に案内する提出先・締め切りを確認し、STEP 12で自分の <code>M02OshiSave</code> から発行した公開URLを提出します。まだ案内がない場合は、URLを控えて先生へ確認します。",
+      "translation": "程式碼不變。請確認老師在課堂上公佈的繳交處與截止時間，繳交在 STEP 12 從自己的 <code>M02OshiSave</code> 發行的匯入連結。若尚未收到通知，就先記下連結，向老師確認。"
     },
     {
       "source": "通常版MonacaのFreeプランではZIPを学生の提出物にしません。先生は公開URLから取り込み、初期データと操作を確認します。公開中の自分のプロジェクトは提出後に削除しません。",

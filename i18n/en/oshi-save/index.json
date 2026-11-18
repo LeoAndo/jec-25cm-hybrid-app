@@ -31,8 +31,8 @@
       "translation": "Session 5 · STEP 00–04"
     },
     {
-      "source": "00 自分の好きなものノートを開く",
-      "translation": "00 Open your own favorites notebook"
+      "source": "00 M02OshiSaveを新規作成する",
+      "translation": "00 Create M02OshiSave"
     },
     {
       "source": "01 入力画面を作る",
@@ -135,8 +135,8 @@
       "translation": "The new idea is <strong>JSON</strong>. You turn the array used on screen into a string for saving, and turn a loaded string back into an array. The save location is compared with <code>SharedPreferences</code> in Java and <code>UserDefaults</code> in Swift."
     },
     {
-      "source": "この単元の名前は <code>M02OshiSave</code> です。学生は自分の好きなものノートを同じ1プロジェクトで育てます。まだプロジェクトがない場合の作り方も、一覧・詳細の開始コードも、この本文にあります。",
-      "translation": "The project for this unit is named <code>M02OshiSave</code>. Students grow their own favorites notebook in the same single project. How to create a project if you do not have one yet, and the starting code for the list and detail screens, are both in this text."
+      "source": "この単元では、<code>M01OshiList</code> の作品を残し、新しく <code>M02OshiSave</code> を作ります。STEP 00の開始コードをコピーして、一覧・詳細が動く状態から始めます。プロジェクトの作り方も、3ファイルの開始コードも、この本文にあります。",
+      "translation": "In this unit, you will keep your <code>M01OshiList</code> work and create a new <code>M02OshiSave</code> project. Copy the starting code from STEP 00 so you can begin with a working list and detail screen. This page has instructions for creating the project and the starting code for all 3 files."
     },
     {
       "source": "コマ",
@@ -163,28 +163,32 @@
       "translation": "STEP 00 · Session 5"
     },
     {
-      "source": "自分の好きなものノートを開く",
-      "translation": "Open your own favorites notebook"
+      "source": "M02OshiSaveを新規作成する",
+      "translation": "Create M02OshiSave"
     },
     {
-      "source": "Google Chromeで通常版Monacaへログインし、自分の好きなものノートを開きます。続けて使っているプロジェクトは、名前が <code>M01OshiList</code> のままで構いません。今日のためにコピーを増やしたり、削除したりしません。",
-      "translation": "Log in to standard Monaca in Google Chrome and open your own favorites notebook. If you are continuing with the project you have been using, its name can stay <code>M01OshiList</code>. Do not create extra copies or delete anything for today."
+      "source": "Google Chromeで通常版Monacaへログインします。<code>M01OshiList</code> は作品とアレンジを残すため、そのまま保管します。この単元は、新しい <code>M02OshiSave</code> に下の開始コードを入れて進めます。",
+      "translation": "Log in to standard Monaca in Google Chrome. Keep <code>M01OshiList</code> as it is to preserve your work and customizations. For this unit, put the starting code below into a new <code>M02OshiSave</code> project."
     },
     {
-      "source": "まだ自分の好きなものノートがない人だけ、ダッシュボードで新規作成し、<code>最小限のテンプレート</code> を選び、<code>M02OshiSave</code> と名付けます。登録や空き枠が不明なら、<a1>共通資料のSTEP 2〜3</a1>で確認して戻ります。",
-      "translation": "Only if you do not have your own favorites notebook yet, create a new project from the dashboard, choose <code>最小限のテンプレート</code> (Minimal template), and name it <code>M02OshiSave</code>. If you are not sure about your registration or free slots, check <a1>STEP 2–3 of the shared guide</a1> and come back."
+      "source": "ダッシュボードで、プロジェクトの名前と個数を確かめます。現在1個なら、M02を作ると2個になり、Freeプランの上限3個以内です。すでに3個ある場合は、自分の作品を削除せず先生に相談します。登録や空き枠が不明なら、<a1>共通資料のSTEP 2〜3</a1>で確認して戻ります。",
+      "translation": "Check the names and number of your projects on the ダッシュボード (Dashboard). If you have 1 project now, adding M02 brings the total to 2, within the Free plan limit of 3. If you already have 3 projects, keep your work and ask your teacher. If you are unsure about signing up or how many slots are free, check <a1>STEP 2–3 of the shared guide</a1> and return here."
     },
     {
-      "source": "<code>www/index.html</code>・<code>www/css/style.css</code> を開きます。<code>www/js/app.js</code> がなければ、ファイル一覧の作成操作で <code>www</code> の下に <code>js</code> フォルダ、その中に <code>app.js</code> ファイルを作ります。",
-      "translation": "Open <code>www/index.html</code> and <code>www/css/style.css</code>. If <code>www/js/app.js</code> does not exist, use the create commands in the file list to make a <code>js</code> folder under <code>www</code> and an <code>app.js</code> file inside it."
+      "source": "新規作成で <code>最小限のテンプレート</code> を選び、プロジェクト名を <code>M02OshiSave</code> にします。",
+      "translation": "When creating the new project, choose <code>最小限のテンプレート</code> (Minimal template) and name it <code>M02OshiSave</code>."
     },
     {
-      "source": "自分のアレンジがある場合は、変えた文字と色を控えます。3ファイルの中身を、下の開始コードでそれぞれ全体を置き換え、保存してプレビューを再読み込みします。<code>components</code> や <code>res</code> は変更しません。",
-      "translation": "If you have your own customizations, note down the text and colors you changed. Replace the entire contents of each of the three files with the starting code below, save, and reload the preview. Do not change <code>components</code> or <code>res</code>."
+      "source": "Monaca クラウド IDEで、開いているプロジェクト名が <code>M02OshiSave</code> であることを確かめ、<code>www/index.html</code>・<code>www/css/style.css</code> を開きます。<code>www/js/app.js</code> がなければ、<code>www</code> の下に <code>js</code> フォルダ、その中に <code>app.js</code> ファイルを作ります。すでに <code>js</code> フォルダがあれば、その中に作ります。",
+      "translation": "In the Monaca クラウド IDE (cloud IDE), check that the open project is named <code>M02OshiSave</code>, then open <code>www/index.html</code> and <code>www/css/style.css</code>. If <code>www/js/app.js</code> does not exist, create a <code>js</code> folder under <code>www</code> and an <code>app.js</code> file inside it. If the <code>js</code> folder already exists, create the file there."
     },
     {
-      "source": "3件の名前を押して詳細を開き、左上の戻るボタンで一覧へ戻ります。戻るボタンは、iOS向けの見た目では「＜ 戻る」、Android向けの見た目では左向きの矢印「←」だけです。タイトルと詳細の組み合わせを確かめます。",
-      "translation": "Tap the names of the 3 items to open their details, and go back to the list with the back button at the top left. In the iOS look, the back button reads 「＜ 戻る」 (Back); in the Android look, it is only a left-pointing arrow 「←」. Check that each title goes with the right details."
+      "source": "下の3つのコード欄を、それぞれ先頭から最後まで選択してコピーし、見出しと同じ名前のファイルへ貼り付けます。ファイルに中身があれば全体を置き換えます。このSTEPは、全員が同じ開始状態を用意するため、3ファイルの全文をコピーして構いません。<code>components</code> や <code>res</code> は変更しません。",
+      "translation": "Select and copy each of the 3 code blocks below from start to finish. Paste each one into the file named in its heading. If a file already has content, replace it all. You can copy the full code for all 3 files in this STEP so everyone starts from the same state. Leave <code>components</code> and <code>res</code> as they are."
+    },
+    {
+      "source": "3ファイルを保存し、プレビューを再読み込みします。3件の名前を押して詳細を開き、左上の戻るボタンで一覧へ戻ります。戻るボタンは、iOS向けの見た目では「＜ 戻る」、Android向けの見た目では左向きの矢印「←」だけです。タイトルと詳細の組み合わせを確かめます。",
+      "translation": "Save all 3 files and reload プレビュー (Preview). Tap each of the 3 names to open its detail screen, and go back to the list with the back button at the top left. In the iOS look, the back button reads 「＜ 戻る」 (Back). In the Android look, it is only a left-pointing arrow 「←」. Check that each title goes with the right details."
     },
     {
       "source": "www/index.html · 全体を置き換える",
@@ -259,8 +263,12 @@
       "translation": "The three-file structure is the same as in Web Basics, but the place where you work is the Monaca クラウド IDE. <code>init</code> is the timing that corresponds to setup after view creation on Android or <code>viewDidLoad</code> on iOS, and you receive it with <code>addEventListener</code> in JavaScript. The <code>data</code> of <code>pushPage</code> corresponds to passing a value to the next screen in a native app. Nothing has been converted to a string for saving yet."
     },
     {
-      "source": "自分の1プロジェクトで3件の一覧・詳細・戻るを確認し、HTMLとJSの対応を追えた。",
-      "translation": "The list, details, and back have been checked for the 3 items in your own single project, and you can follow how the HTML and JS correspond."
+      "source": "一覧・詳細・戻るを確認できたら、STEP 01へ進みます。第6・7コマも、この <code>M02OshiSave</code> を使い続けます。",
+      "translation": "Once you have checked that the list, the detail screen, and the back button work, go to STEP 01. Keep using this <code>M02OshiSave</code> project in Sessions 6 and 7."
+    },
+    {
+      "source": "新しく作った <code>M02OshiSave</code> に3ファイルを貼り付け、一覧・詳細・戻るとHTML・JSの対応を確認できた。",
+      "translation": "The code for all 3 files has been pasted into the new <code>M02OshiSave</code> project. The list, detail screen, back button, and how the HTML and JS match up have been checked."
     },
     {
       "source": "STEP 01 · コマ5",
@@ -1115,8 +1123,8 @@
       "translation": "Compare input, back, and the look of the buttons in the iPhone and Android previews. If you enabled <code>ons.platform.select(\"android\")</code> for comparison, comment it out again at the end."
     },
     {
-      "source": "クラウド IDEの <code>プロジェクト → 公開…</code> を開き、自分の作品であることを確かめ、公開URLを発行します。",
-      "translation": "Open <code>プロジェクト → 公開…</code> (Project → Publish…) in the cloud IDE, confirm that it is your own work, and issue the import URL."
+      "source": "開いているプロジェクトが自分の <code>M02OshiSave</code> であることを確かめ、クラウド IDEの <code>プロジェクト → 公開…</code> から公開URLを発行します。",
+      "translation": "Check that the project you have open is your own <code>M02OshiSave</code>. In the cloud IDE, use <code>プロジェクト → 公開…</code> (Project → Publish…) to generate the import URL."
     },
     {
       "source": "提出するのは <code>https://monaca.mobi/ja/directimport?pid=…</code> という形の、実際に発行されたURLです。クラウド IDEやプレビューのアドレスを代わりに貼りません。相手のMonacaへソースを取り込むためのURLです。",
@@ -1143,8 +1151,8 @@
       "translation": "Submit and check preparation status"
     },
     {
-      "source": "コードは変えません。先生が授業中に案内する提出先・締め切りを確認し、自分の好きなものノートで発行した公開URLを提出します。まだ案内がない場合は、URLを控えて先生へ確認します。",
-      "translation": "There are no code changes in this STEP. Check the submission site and deadline that your teacher announces in class, and submit the import URL you issued for your own favorites notebook. If there is no announcement yet, note down the URL and check with your teacher."
+      "source": "コードは変えません。先生が授業中に案内する提出先・締め切りを確認し、STEP 12で自分の <code>M02OshiSave</code> から発行した公開URLを提出します。まだ案内がない場合は、URLを控えて先生へ確認します。",
+      "translation": "There are no code changes in this STEP. Check the submission site and deadline that your teacher announces in class, and submit the import URL you generated in STEP 12 for your own <code>M02OshiSave</code> project. If there is no announcement yet, note down the URL and check with your teacher."
     },
     {
       "source": "通常版MonacaのFreeプランではZIPを学生の提出物にしません。先生は公開URLから取り込み、初期データと操作を確認します。公開中の自分のプロジェクトは提出後に削除しません。",
