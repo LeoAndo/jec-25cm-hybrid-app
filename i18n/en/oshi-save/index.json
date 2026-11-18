@@ -172,7 +172,7 @@
     },
     {
       "source": "ダッシュボードで、プロジェクトの名前と個数を確かめます。現在1個なら、M02を作ると2個になり、Freeプランの上限3個以内です。すでに3個ある場合は、自分の作品を削除せず先生に相談します。登録や空き枠が不明なら、<a1>共通資料のSTEP 2〜3</a1>で確認して戻ります。",
-      "translation": "Check the names and number of your projects on the dashboard. If you have 1 project now, adding M02 brings the total to 2, within the Free plan limit of 3. If you already have 3 projects, keep your work and ask your teacher. If you are unsure about signing up or how many slots are free, check <a1>STEP 2–3 of the shared guide</a1> and return here."
+      "translation": "Check the names and number of your projects on the ダッシュボード (Dashboard). If you have 1 project now, adding M02 brings the total to 2, within the Free plan limit of 3. If you already have 3 projects, keep your work and ask your teacher. If you are unsure about signing up or how many slots are free, check <a1>STEP 2–3 of the shared guide</a1> and return here."
     },
     {
       "source": "新規作成で <code>最小限のテンプレート</code> を選び、プロジェクト名を <code>M02OshiSave</code> にします。",
@@ -188,7 +188,7 @@
     },
     {
       "source": "3ファイルを保存し、プレビューを再読み込みします。3件の名前を押して詳細を開き、左上の戻るボタンで一覧へ戻ります。戻るボタンは、iOS向けの見た目では「＜ 戻る」、Android向けの見た目では左向きの矢印「←」だけです。タイトルと詳細の組み合わせを確かめます。",
-      "translation": "Save all 3 files and reload the preview. Tap the names of the 3 items to open their details, and go back to the list with the back button at the top left. In the iOS look, the back button reads 「＜ 戻る」 (Back). In the Android look, it is only a left-pointing arrow 「←」. Check that each title goes with the right details."
+      "translation": "Save all 3 files and reload プレビュー (Preview). Tap each of the 3 names to open its detail screen, and go back to the list with the back button at the top left. In the iOS look, the back button reads 「＜ 戻る」 (Back). In the Android look, it is only a left-pointing arrow 「←」. Check that each title goes with the right details."
     },
     {
       "source": "www/index.html · 全体を置き換える",
