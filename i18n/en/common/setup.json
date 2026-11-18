@@ -191,8 +191,8 @@
       "translation": "Unlike adding folders on your Mac, Monaca uses the 3 slots of your account. Each project you create uses 1 slot, so check your current projects and free slots before creating a new one."
     },
     {
-      "source": "この授業では、1つのプロジェクトを何回かの授業で育てます。単元ごとに新しいプロジェクトを作って3枠を埋める必要はありません。Freeプランでは作品をZIPへ書き出せないため、<strong>自分の作品を削除して空きを作ろうとしないでください。</strong>",
-      "translation": "In this course, you build up one project over several classes. You do not need to create a new project for each unit and fill all 3 slots. The Free plan cannot export your work as a ZIP, so <strong>do not delete your own work to free up a slot.</strong>"
+      "source": "この授業では、<code>M01OshiList</code> と <code>M02OshiSave</code> を1つずつ作ります。M01の作品を残し、M02の授業では新しいプロジェクトを作って、教科書のSTEP 00の開始コードをコピーして始めます。同じ単元の授業では、作成したプロジェクトを使い続けます。Freeプランでは作品をZIPへ書き出せないため、<strong>自分の作品を削除して空きを作ろうとしないでください。</strong>",
+      "translation": "In this course, you will create one <code>M01OshiList</code> project and one <code>M02OshiSave</code> project. Keep your M01 work. When you reach M02, create a new project and start by copying the starting code from STEP 00 of the textbook. Keep using the same project in each session of that unit. The Free plan does not let you export your work to a ZIP file, so <strong>do not delete your work to free up a slot.</strong>"
     },
     {
       "source": "提出には、通常版Monacaで発行する取り込み用の公開URLを使います。このURLは、見る人のMonacaへプロジェクトを取り込むためのもので、完成アプリをWebで動かすURLではありません。公開と提出の操作は、提出を扱う授業で行います。",
