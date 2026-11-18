@@ -7,7 +7,7 @@
 <div class="shell"><aside class="sidebar"><div class="sidebar-inner">
 <div class="progress"><span data-progress-label>0 / 15 ステップ確認済み</span><progress max="15" value="0" aria-label="単元の進み具合"></progress></div>
 <nav aria-label="コマごとの目次"><p class="eyebrow">コマ5 · STEP 00〜04</p><ol>
-<li><a href="#step-0">00 自分の好きなものノートを開く</a></li>
+<li><a href="#step-0">00 M02OshiSaveを新規作成する</a></li>
 <li><a href="#step-1">01 入力画面を作る</a></li>
 <li><a href="#step-2">02 入力した文字を確認する</a></li>
 <li><a href="#step-3">03 配列へ追加して戻る</a></li>
@@ -32,11 +32,17 @@
 <p class="lede">日常の中で見つけた好きなものと、好きな理由を画面から追加します。再読み込みしても自分の記録が戻る仕組みを作り、ソースにアレンジを残して公開URLを提出します。</p>
 <div class="tags"><span>Monaca クラウド IDE / Google Chrome</span><span>Onsen UI 2.12.9</span><span>HTML / CSS / JavaScript</span></div>
 <div class="goal"><p class="box-title">この単元で分かること</p><p>新しい考え方は<strong>JSON</strong>です。画面で使う配列を保存用の文字列にし、読み込んだ文字列を配列へ戻します。保存先はJavaの<code>SharedPreferences</code>・Swiftの<code>UserDefaults</code>と比較します。</p></div>
-<p>この単元の名前は <code>M02OshiSave</code> です。学生は自分の好きなものノートを同じ1プロジェクトで育てます。まだプロジェクトがない場合の作り方も、一覧・詳細の開始コードも、この本文にあります。</p>
+<p>この単元では、<code>M01OshiList</code> の作品を残し、新しく <code>M02OshiSave</code> を作ります。STEP 00の開始コードをコピーして、一覧・詳細が動く状態から始めます。プロジェクトの作り方も、3ファイルの開始コードも、この本文にあります。</p>
 <table><thead><tr><th>コマ</th><th>到達点</th></tr></thead><tbody><tr><td>5</td><td>入力した好きなものを一覧へ追加し、詳細を読める。</td></tr><tr><td>6</td><td>JSONと<code>localStorage</code>で保存・復元できる。初期化には確認を挟む。</td></tr><tr><td>7</td><td>授業内でFlutter準備を開始し、待ち時間に好きなものノートをアレンジ・確認・提出する。</td></tr></tbody></table></div>
-<section id="step-0"><p class="step-meta">STEP 00 · コマ5</p><h2>自分の好きなものノートを開く</h2>
-<p>Google Chromeで通常版Monacaへログインし、自分の好きなものノートを開きます。続けて使っているプロジェクトは、名前が <code>M01OshiList</code> のままで構いません。今日のためにコピーを増やしたり、削除したりしません。</p>
-<ol><li>まだ自分の好きなものノートがない人だけ、ダッシュボードで新規作成し、<code>最小限のテンプレート</code> を選び、<code>M02OshiSave</code> と名付けます。登録や空き枠が不明なら、<a href="../common/setup.html?from=oshi-save#step-2">共通資料のSTEP 2〜3</a>で確認して戻ります。</li><li><code>www/index.html</code>・<code>www/css/style.css</code> を開きます。<code>www/js/app.js</code> がなければ、ファイル一覧の作成操作で <code>www</code> の下に <code>js</code> フォルダ、その中に <code>app.js</code> ファイルを作ります。</li><li>自分のアレンジがある場合は、変えた文字と色を控えます。3ファイルの中身を、下の開始コードでそれぞれ全体を置き換え、保存してプレビューを再読み込みします。<code>components</code> や <code>res</code> は変更しません。</li><li>3件の名前を押して詳細を開き、左上の戻るボタンで一覧へ戻ります。戻るボタンは、iOS向けの見た目では「＜ 戻る」、Android向けの見た目では左向きの矢印「←」だけです。タイトルと詳細の組み合わせを確かめます。</li></ol>
+<section id="step-0"><p class="step-meta">STEP 00 · コマ5</p><h2>M02OshiSaveを新規作成する</h2>
+<p>Google Chromeで通常版Monacaへログインします。<code>M01OshiList</code> は作品とアレンジを残すため、そのまま保管します。この単元は、新しい <code>M02OshiSave</code> に下の開始コードを入れて進めます。</p>
+<ol>
+<li>ダッシュボードで、プロジェクトの名前と個数を確かめます。現在1個なら、M02を作ると2個になり、Freeプランの上限3個以内です。すでに3個ある場合は、自分の作品を削除せず先生に相談します。登録や空き枠が不明なら、<a href="../common/setup.html?from=oshi-save#step-2">共通資料のSTEP 2〜3</a>で確認して戻ります。</li>
+<li>新規作成で <code>最小限のテンプレート</code> を選び、プロジェクト名を <code>M02OshiSave</code> にします。</li>
+<li>Monaca クラウド IDEで、開いているプロジェクト名が <code>M02OshiSave</code> であることを確かめ、<code>www/index.html</code>・<code>www/css/style.css</code> を開きます。<code>www/js/app.js</code> がなければ、<code>www</code> の下に <code>js</code> フォルダ、その中に <code>app.js</code> ファイルを作ります。すでに <code>js</code> フォルダがあれば、その中に作ります。</li>
+<li>下の3つのコード欄を、それぞれ先頭から最後まで選択してコピーし、見出しと同じ名前のファイルへ貼り付けます。ファイルに中身があれば全体を置き換えます。このSTEPは、全員が同じ開始状態を用意するため、3ファイルの全文をコピーして構いません。<code>components</code> や <code>res</code> は変更しません。</li>
+<li>3ファイルを保存し、プレビューを再読み込みします。3件の名前を押して詳細を開き、左上の戻るボタンで一覧へ戻ります。戻るボタンは、iOS向けの見た目では「＜ 戻る」、Android向けの見た目では左向きの矢印「←」だけです。タイトルと詳細の組み合わせを確かめます。</li>
+</ol>
 <div class="code-head">www/index.html · 全体を置き換える</div>
 <pre id="code-00-index-html" tabindex="0"><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;ja&quot;&gt;
@@ -264,7 +270,8 @@ function openOshiDetail(oshi) {
 <table><thead><tr><th>場所</th><th>処理と理由</th></tr></thead><tbody><tr><td>HTMLの<code>head</code></td><td>標準の<code>loader.js</code>、Onsen UI 2.12.9のCSS・JavaScript、自作CSS・<code>app.js</code>を読み込む。自作JSはOnsen UIより後。</td></tr><tr><td><code>ons-navigator</code> / <code>template</code></td><td><code>ons-navigator</code>が<code>list.html</code>を実体化する。<code>template</code>は配置前のひな形で、詳細へ進んだときに<code>detail.html</code>の要素が作られる。</td></tr><tr><td><code>init</code>のリスナー</td><td>ページの要素が使える時点に、そのページの<code>id</code>を見てイベント登録や文字の設定を行う。</td></tr><tr><td><code>oshiItems</code> / <code>renderOshiList</code></td><td>配列の件数だけ固定の行構造を作る。名前や種類は<code>textContent</code>へ入れ、文字をHTMLとして解釈しない。</td></tr><tr><td><code>openOshiDetail</code></td><td><code>pushPage</code>の<code>data</code>へ選んだデータを渡し、詳細の<code>page.data</code>で受け取る。現在のページと移動中の旗を調べ、連打でページを重ねない。</td></tr><tr><td><code>callback</code> / 戻る</td><td>移動完了の<code>callback</code>で旗を戻す。<code>ons-back-button</code>はページを1つ戻す。</td></tr></tbody></table>
 <p>CSSはクラスで余白・色・カードの枠を対応させています。Onsen UIは同じHTMLへOSに合わせた部品のスタイルを適用します。今回も素のJavaScriptから使い、別のフレームワークは追加しません。</p>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>Web基礎と同じ3ファイル構成ですが、操作する場所はMonaca クラウド IDEです。<code>init</code>はAndroidのビュー生成後の設定やiOSの<code>viewDidLoad</code>に相当するタイミングで、JavaScriptの<code>addEventListener</code>で受け取ります。<code>pushPage</code>の<code>data</code>は、ネイティブアプリで次の画面へ値を渡す操作に対応します。まだ保存用の文字列には変換していません。</p></div>
-<div class="check"><label><input type="checkbox" data-check="oshi-save-00"><span>自分の1プロジェクトで3件の一覧・詳細・戻るを確認し、HTMLとJSの対応を追えた。</span></label></div></section>
+<p>一覧・詳細・戻るを確認できたら、STEP 01へ進みます。第6・7コマも、この <code>M02OshiSave</code> を使い続けます。</p>
+<div class="check"><label><input type="checkbox" data-check="oshi-save-00"><span>新しく作った <code>M02OshiSave</code> に3ファイルを貼り付け、一覧・詳細・戻るとHTML・JSの対応を確認できた。</span></label></div></section>
 <section id="step-1"><p class="step-meta">STEP 01 · コマ5</p><h2>入力画面を作る</h2>
 <p>HTMLに、一覧から入力画面を開くボタンと、入力画面の <code>add.html</code> の<code>template</code>を加えます。まず、一覧の説明文 <code>音楽、食べ物、場所。好きなものと理由の記録。</code> の行の下に、ボタンと案内用の段落を足します。</p>
 <div class="code-head">www/index.html · 追加 · 一覧の説明文 app-description の下</div>
@@ -707,14 +714,14 @@ function isValidItems(items) {
 <div class="check"><label><input type="checkbox" data-check="oshi-save-11"><span>自分の題材に合わせた変更をソースへ保存し、初期状態から確認できた。</span></label></div></section>
 <section id="step-12"><p class="step-meta">STEP 12 · コマ7</p><h2>操作と公開URLを確認する</h2>
 <p>コードは変えません。ソースの初期の内容が表示された状態から完成確認を始めます。必要な入力は内容を控えて、先生と確認してから初期化します。</p>
-<ol><li>一覧の各行から詳細へ進み、名前・種類・理由が一致することを確認します。</li><li>追加画面で空欄を試し、同じ画面に案内が出ることを確認します。</li><li>確認用の1件を追加し、成功の文・件数・詳細・再読み込み後の復元を確認します。</li><li>初期化で <code>やめる</code> を選び、データが残ることを確かめます。必要な内容を控えた後に初期化し、ソースのデータへ戻します。</li><li>iPhone系・Android系のプレビューで入力・戻る・ボタンの見た目を比べます。比較用の <code>ons.platform.select("android")</code> を有効にした場合は、最後にコメントへ戻します。</li><li>クラウド IDEの <code>プロジェクト → 公開…</code> を開き、自分の作品であることを確かめ、公開URLを発行します。</li></ol>
+<ol><li>一覧の各行から詳細へ進み、名前・種類・理由が一致することを確認します。</li><li>追加画面で空欄を試し、同じ画面に案内が出ることを確認します。</li><li>確認用の1件を追加し、成功の文・件数・詳細・再読み込み後の復元を確認します。</li><li>初期化で <code>やめる</code> を選び、データが残ることを確かめます。必要な内容を控えた後に初期化し、ソースのデータへ戻します。</li><li>iPhone系・Android系のプレビューで入力・戻る・ボタンの見た目を比べます。比較用の <code>ons.platform.select("android")</code> を有効にした場合は、最後にコメントへ戻します。</li><li>開いているプロジェクトが自分の <code>M02OshiSave</code> であることを確かめ、クラウド IDEの <code>プロジェクト → 公開…</code> から公開URLを発行します。</li></ol>
 <p>提出するのは <code>https://monaca.mobi/ja/directimport?pid=…</code> という形の、実際に発行されたURLです。クラウド IDEやプレビューのアドレスを代わりに貼りません。相手のMonacaへソースを取り込むためのURLです。</p>
 <p>発行したURLを開き、対象のプロジェクトを確かめます。取り込みを確定するとコピーが増えるため、繰り返して枠を埋めないようにします。教員側で新しく取り込んだ状態の動作も確認します。</p>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>OSの見た目が変わっても入力・保存の処理は同じです。ネイティブアプリのビルド成果物を渡す方法と違い、ここではソースを相手の開発環境へコピーします。ブラウザの保存領域まで渡す操作ではありません。</p></div>
 
 <div class="check"><label><input type="checkbox" data-check="oshi-save-12"><span>初期状態と追加後の操作を確認し、自分の作品の取り込み用公開URLを発行できた。</span></label></div></section>
 <section id="step-13"><p class="step-meta">STEP 13 · コマ7</p><h2>提出と準備状況を確認する</h2>
-<p>コードは変えません。先生が授業中に案内する提出先・締め切りを確認し、自分の好きなものノートで発行した公開URLを提出します。まだ案内がない場合は、URLを控えて先生へ確認します。</p>
+<p>コードは変えません。先生が授業中に案内する提出先・締め切りを確認し、STEP 12で自分の <code>M02OshiSave</code> から発行した公開URLを提出します。まだ案内がない場合は、URLを控えて先生へ確認します。</p>
 <p>通常版MonacaのFreeプランではZIPを学生の提出物にしません。先生は公開URLから取り込み、初期データと操作を確認します。公開中の自分のプロジェクトは提出後に削除しません。</p>
 <p>Flutter準備のタブへ戻り、取得が終わったか、SDKの版、<code>flutter doctor</code>で止まっている項目を確認します。終わっていない項目はその場で先生へ伝え、コマ8へ引き継ぎます。授業外で終わらせることを条件にはしません。</p>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>ソースを共有する提出と、端末に保存したデータを見せることを区別します。Android／iOSの実行環境を確認するときと同様に、準備済みの項目とまだ使えない項目を具体的に記録します。</p></div>
