@@ -699,12 +699,12 @@ function isValidItems(items) {
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>ネイティブアプリでも、コードに書いた既定値より保存済みの設定を優先することがあります。同じ区別を、<code>createInitialItems</code>と<code>getItem</code>のどちらが最終的な<code>oshiItems</code>になるかで追います。アレンジは既習のデータと装飾の変更だけで行います。</p></div>
 <div class="check"><label><input type="checkbox" data-check="oshi-save-09"><span>保存・復元の一連の操作ができ、ソースのアレンジと入力データの保存先を確かめた。</span></label></div></section>
 <section id="step-10"><p class="step-meta">STEP 10 · コマ7</p><h2>授業内でFlutterの準備を始める</h2>
-<p>今日は好きなものノートを仕上げて提出します。このコマでは、教科書のコードは変えません。STEP 08まで書いたコードに、自分のアレンジを加えて仕上げます。最初の10分で、後半に使うFlutter SDKのダウンロードと既存のiOS環境の確認を始めます。授業前に取得しておく必要はありません。</p>
-<ol><li><a href="../common/setup.html?from=oshi-save#step-4">共通資料のSTEP 4〜7</a>を別のタブで開きます。</li><li>Apple Silicon用のFlutter 3.47.5 / Dart 3.13.4を取得します。既にその版を用意できている場合は、版を確認して重複取得を避けます。</li><li>別科目で使っているXcodeのiOS環境を確認します。利用できるランタイムは再利用します。<code>xcodebuild -downloadPlatform iOS</code> は全員必須ではありません。</li><li>不足分だけ先生と確認して取得を始め、この教科書へ戻ります。Flutter専用のiOS資材は共通資料の <code>flutter precache --ios</code> で用意します。</li></ol>
+<p>今日は好きなものノートを仕上げて提出します。このコマでは、教科書のコードは変えません。STEP 08まで書いたコードに、自分のアレンジを加えて仕上げます。最初の10分で、後半に使うFlutter SDKのダウンロードを始めます。授業前に取得しておく必要はありません。</p>
+<ol><li><a href="../common/setup.html?from=oshi-save#step-4">共通資料のSTEP 4〜7</a>を別のタブで開きます。</li><li>Apple Silicon用のFlutter 3.47.5 / Dart 3.13.4を取得します。既にその版を用意できている場合は、版を確認して重複取得を避けます。</li><li>別科目で使っているXcodeとiPhoneシミュレータを利用します。Flutterから利用できるかは、SDKの準備後に環境を診断し、最初のアプリ実行時に確認します。</li><li>SDKの取得を始めたら、この教科書へ戻ります。SDKの準備後に、共通資料の <code>flutter precache --ios</code> でFlutter専用のiOS資材を用意します。</li></ol>
 <p>取得待ちは好きなものノートのアレンジに使います。コマ8の冒頭にも準備確認の時間があります。家庭での作業が済んでいることを前提にはしません。</p>
 <div class="note"><p class="box-title">既知の技術と比べる</p><p>Android StudioやXcodeでも、開発用SDKとアプリのソースは別です。今回はFlutter SDKと既存のiOS環境を組み合わせます。MonacaのソースをFlutterへ変換する操作ではなく、後半に使う道具の準備です。</p></div>
 
-<div class="check"><label><input type="checkbox" data-check="oshi-save-10"><span>指定SDKの取得を開始または版を確認し、既存iOS環境の状態を先生へ伝えられる。</span></label></div></section>
+<div class="check"><label><input type="checkbox" data-check="oshi-save-10"><span>指定SDKの取得を開始または版を確認し、準備の進み具合を先生へ伝えられる。</span></label></div></section>
 <section id="step-11"><p class="step-meta">STEP 11 · コマ7</p><h2>提出に残るアレンジを作る</h2>
 <p>コードは変えません。Monaca クラウド IDEへ戻り、自分の好きなものノートを仕上げます。既に扱った文字・色・初期データから変更箇所を選び、どんなものが好きで、なぜ好きなのかが伝わる内容にします。</p>
 <table><thead><tr><th>場所</th><th>変わること</th><th>確認方法</th></tr></thead><tbody><tr><td><code>createInitialItems</code>の配列</td><td>最初に読める好きなものとその理由。</td><td>必要な保存内容を控えて初期化し、全件の詳細を開く。</td></tr><tr><td>HTMLの見出し・案内文・入力例</td><td>自分の題材が画面から伝わる。</td><td>入力画面を開き、迷わず入力できるか読む。</td></tr><tr><td>CSSの文字色・枠色・余白</td><td>カードと入力欄の印象。</td><td>長い日本語を入れて、文字が切れないか見る。</td></tr></tbody></table>

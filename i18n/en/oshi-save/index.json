@@ -991,8 +991,8 @@
       "translation": "Start preparing Flutter in class"
     },
     {
-      "source": "今日は好きなものノートを仕上げて提出します。このコマでは、教科書のコードは変えません。STEP 08まで書いたコードに、自分のアレンジを加えて仕上げます。最初の10分で、後半に使うFlutter SDKのダウンロードと既存のiOS環境の確認を始めます。授業前に取得しておく必要はありません。",
-      "translation": "Today you finish your favorites notebook and submit it. In this session, the textbook code does not change. You finish the app by adding your own customizations to the code you have written up to STEP 08. In the first 10 minutes, start downloading the Flutter SDK for the second half of the course and checking your existing iOS environment. You do not need to have obtained it before class."
+      "source": "今日は好きなものノートを仕上げて提出します。このコマでは、教科書のコードは変えません。STEP 08まで書いたコードに、自分のアレンジを加えて仕上げます。最初の10分で、後半に使うFlutter SDKのダウンロードを始めます。授業前に取得しておく必要はありません。",
+      "translation": "Today you finish your favorites notebook and submit it. In this session, the textbook code does not change. You finish the app by adding your own customizations to the code you have written up to STEP 08. In the first 10 minutes, start downloading the Flutter SDK for the second half of the course. You do not need to have obtained it before class."
     },
     {
       "source": "<a1>共通資料のSTEP 4〜7</a1>を別のタブで開きます。",
@@ -1003,12 +1003,12 @@
       "translation": "Get Flutter 3.47.5 / Dart 3.13.4 for Apple Silicon. If you already have that version ready, check the version and avoid downloading it again."
     },
     {
-      "source": "別科目で使っているXcodeのiOS環境を確認します。利用できるランタイムは再利用します。<code>xcodebuild -downloadPlatform iOS</code> は全員必須ではありません。",
-      "translation": "Check the iOS environment of the Xcode you use in another course. Reuse any runtime that is available. <code>xcodebuild -downloadPlatform iOS</code> is not required for everyone."
+      "source": "別科目で使っているXcodeとiPhoneシミュレータを利用します。Flutterから利用できるかは、SDKの準備後に環境を診断し、最初のアプリ実行時に確認します。",
+      "translation": "Use the Xcode and iPhone simulator you use in another course. To check whether Flutter can use this environment, diagnose it after preparing the SDK and check again when you first run an app."
     },
     {
-      "source": "不足分だけ先生と確認して取得を始め、この教科書へ戻ります。Flutter専用のiOS資材は共通資料の <code>flutter precache --ios</code> で用意します。",
-      "translation": "Check only what is missing with your teacher, start getting it, and come back to this textbook. The iOS artifacts specific to Flutter are prepared with <code>flutter precache --ios</code> in the shared guide."
+      "source": "SDKの取得を始めたら、この教科書へ戻ります。SDKの準備後に、共通資料の <code>flutter precache --ios</code> でFlutter専用のiOS資材を用意します。",
+      "translation": "After starting the SDK download, return to this textbook. Once the SDK is ready, prepare the iOS artifacts specific to Flutter with <code>flutter precache --ios</code> in the shared guide."
     },
     {
       "source": "取得待ちは好きなものノートのアレンジに使います。コマ8の冒頭にも準備確認の時間があります。家庭での作業が済んでいることを前提にはしません。",
@@ -1019,8 +1019,8 @@
       "translation": "With Android Studio and Xcode, too, the development SDK and the app's source are separate. This time you combine the Flutter SDK with your existing iOS environment. This is not an operation that converts the Monaca source to Flutter; it is preparing the tools for the second half."
     },
     {
-      "source": "指定SDKの取得を開始または版を確認し、既存iOS環境の状態を先生へ伝えられる。",
-      "translation": "The download of the specified SDK has been started or its version has been checked, and you can tell your teacher the state of your existing iOS environment."
+      "source": "指定SDKの取得を開始または版を確認し、準備の進み具合を先生へ伝えられる。",
+      "translation": "The download of the specified SDK has been started or its version has been checked, and you can tell your teacher how your preparation is progressing."
     },
     {
       "source": "STEP 11 · コマ7",
