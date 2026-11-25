@@ -211,56 +211,24 @@
       "translation": "En esta clase estandarizamos el SDK de Flutter en <strong>3.47.5</strong> y el Dart incluido en <strong>3.13.4</strong>. Como las Mac de todos los estudiantes son Apple Silicon, en el <a1>archivo oficial del SDK de Flutter</a1> debes elegir <code>Stable</code> para macOS, <code>3.47.5</code> y seleccionar <code>arm64</code> en <code>Architecture</code>."
     },
     {
-      "source": "SDKの取得を始め、既存のiOS環境を確認する",
-      "translation": "Comenzar la descarga del SDK y verificar el entorno existente de iOS"
+      "source": "SDKの取得を始める",
+      "translation": "Comenzar la descarga del SDK"
     },
     {
-      "source": "SDKのダウンロードを開始したら、完了を待たずに、iOSの授業で使っているシミュレータを確認します。<strong>既存の環境が使えれば、新しいiOSランタイムのダウンロードは不要です。</strong>全員で最新のランタイムを取得する必要はありません。",
-      "translation": "Una vez que comiences la descarga del SDK, no esperes a que termine y revisa el simulador que utilizas en la clase de iOS. <strong>Si puedes usar tu entorno actual, no es necesario descargar un nuevo entorno de ejecución de iOS.</strong> No es obligatorio que todos descarguen el runtime más reciente."
+      "source": "iOSの授業で使っているXcodeとiPhoneシミュレータを、この授業でも使います。<strong>新しいiOSランタイムを全員で追加ダウンロードする必要はありません。</strong>Flutterから利用できるかは、STEP 7と最初のアプリ実行時に確認します。",
+      "translation": "En esta clase usarás Xcode y el simulador de iPhone que utilizas en la clase de iOS. <strong>No es necesario que todos descarguen un nuevo runtime de iOS adicional.</strong> Comprobarás si Flutter puede utilizar este entorno en STEP 7 y cuando ejecutes la aplicación por primera vez."
     },
     {
-      "source": "Terminalで新しいウィンドウを開き、次を実行します。利用可能なシミュレータを一覧表示する、Xcodeの確認用コマンドです。Flutter SDKの展開前でも実行できます。",
-      "translation": "Abre una nueva ventana en Terminal y ejecuta lo siguiente. Es un comando de verificación de Xcode que muestra la lista de simuladores disponibles. Puedes ejecutarlo incluso antes de descomprimir el SDK de Flutter."
-    },
-    {
-      "source": "Terminal · 利用可能なシミュレータを確認",
-      "translation": "Terminal · Verificar los simuladores disponibles"
-    },
-    {
-      "source": "<code>iOS</code> の見出しの下に、授業で使っているiPhoneの名前があるかを確かめます。<code>Shutdown</code> は停止中という意味で、ダウンロード不足を示すものではありません。名前があれば、その環境を使う準備を進めます。一覧が空、またはエラーになる場合は、出力を先生に見せてください。ランタイムが不足しているのか、Xcodeの設定やシミュレータの作成が必要なのかを一緒に確認します。コマンドの説明は <a1>AppleのXcodeコマンドラインツール資料</a1>と、Terminalの <code>xcrun simctl help list</code> で確認できます。",
-      "translation": "Verifica si debajo del encabezado <code>iOS</code> aparece el nombre del iPhone que usas en clase. <code>Shutdown</code> significa que está apagado o detenido, y no indica que falte una descarga. Si el nombre está ahí, continúa con los preparativos para usar ese entorno. Si la lista está vacía o se produce un error, muéstrale la salida al docente. Revisarán juntos si falta algún runtime o si es necesario ajustar la configuración de Xcode o crear un simulador. Puedes consultar la explicación del comando en la <a1>documentación de las herramientas de línea de comandos de Xcode de Apple</a1> y con <code>xcrun simctl help list</code> en Terminal."
-    },
-    {
-      "source": "補足：iOS環境が見つからない・実行できないとき",
-      "translation": "Nota: Si no encuentras el entorno de iOS o no puedes ejecutarlo"
-    },
-    {
-      "source": "まずiOSの授業で使っているXcodeを開き、初回の追加処理が残っていないか先生と確認します。利用規約や管理者権限の入力で判断できない場合も、先生へ相談します。",
-      "translation": "Primero abre el Xcode que utilizas en la clase de iOS y verifica con el docente si queda pendiente algún proceso adicional inicial. Si tienes dudas sobre los términos de servicio o la solicitud de permisos de administrador, consúltale también al docente."
-    },
-    {
-      "source": "<strong>先生と確認して、ランタイムの追加が必要になった場合だけ</strong>、次のコマンドを使います。数GBの通信が発生することがあるため、授業内で開始します。既存の環境が使える人は実行しません。追加方法は <a1>AppleのXcode追加コンポーネントの資料</a1>にあります。",
-      "translation": "Usa el siguiente comando <strong>únicamente si lo confirmaste con el docente y se requiere agregar un runtime</strong>. Dado que puede generar una transferencia de varios GB, inícialo dentro de la clase. Quienes puedan usar su entorno existente no deben ejecutarlo. El método para agregarlo se encuentra en la <a1>documentación de componentes adicionales de Xcode de Apple</a1>."
-    },
-    {
-      "source": "Terminal · 必要な場合だけiOSランタイムを取得",
-      "translation": "Terminal · Descargar el runtime de iOS solo si es necesario"
-    },
-    {
-      "source": "取得中のTerminalは閉じずに残し、完了をSTEP 7で確認します。",
-      "translation": "No cierres la ventana de Terminal mientras se realiza la descarga y confirma su finalización en el STEP 7."
-    },
-    {
-      "source": "SDKなどのダウンロードを待っている間は、先生の案内でMonacaの仕上げを進めます。SDKのダウンロードが終わったら、次の展開へ進みます。",
-      "translation": "Mientras esperas la descarga del SDK y otros componentes, avanza con el acabado final de Monaca siguiendo las instrucciones del docente. Cuando termine la descarga del SDK, pasa a la descompresión a continuación."
+      "source": "SDKのダウンロードを待っている間は、先生の案内でMonacaの仕上げを進めます。SDKのダウンロードが終わったら、次の展開へ進みます。",
+      "translation": "Mientras esperas la descarga del SDK, avanza con el acabado final de Monaca siguiendo las instrucciones del docente. Cuando termine la descarga del SDK, pasa a la descompresión a continuación."
     },
     {
       "source": "SDKを置く場所は、版を区別できる新しいフォルダにします。以下は、これから作る保存先の例です。既存のSDKを移動したり上書きしたりしません。",
       "translation": "Para la ubicación del SDK, utiliza una nueva carpeta donde se pueda distinguir la versión. A continuación se muestra un ejemplo de la ruta de guardado que vas a crear. No muevas ni sobrescribas ningún SDK existente."
     },
     {
-      "source": "Terminalで次のコマンドを実行し、保存先 <code>~/develop/flutter-3.47.5</code> を作ります。追加のダウンロードが動いている場合は、別のTerminalウィンドウを使います。",
-      "translation": "Ejecuta el siguiente comando en Terminal para crear la ubicación de guardado <code>~/develop/flutter-3.47.5</code>. Si se está ejecutando otra descarga adicional, utiliza otra ventana de Terminal."
+      "source": "Terminalで次のコマンドを実行し、保存先 <code>~/develop/flutter-3.47.5</code> を作ります。",
+      "translation": "Ejecuta el siguiente comando en Terminal para crear la ubicación de guardado <code>~/develop/flutter-3.47.5</code>."
     },
     {
       "source": "Terminal · SDKを置くフォルダを作る",
@@ -311,8 +279,8 @@
       "translation": ".zprofile · La línea que debes agregar al archivo"
     },
     {
-      "source": "Visual Studio Codeを終了して開き直し、Terminalは新しいウィンドウを開きます。iOSランタイムの追加ダウンロードが動いている場合は、そのTerminalを開いたまま残します。新しいウィンドウで、次の2行を実行します。",
-      "translation": "Cierra Visual Studio Code y vuelve a abrirlo, y abre una ventana nueva en Terminal. Si se está ejecutando la descarga adicional del runtime de iOS, mantén abierta esa ventana de Terminal. En la nueva ventana, ejecuta las siguientes dos líneas."
+      "source": "Visual Studio Codeを終了して開き直し、Terminalは新しいウィンドウを開きます。新しいウィンドウで、次の2行を実行します。",
+      "translation": "Cierra Visual Studio Code y vuelve a abrirlo, y abre una ventana nueva en Terminal. En la nueva ventana, ejecuta las siguientes dos líneas."
     },
     {
       "source": "Terminal · 使われるSDKと版を確認",
@@ -387,8 +355,8 @@
       "translation": "Pudiste usar las extensiones de Flutter y Dart con la interfaz en inglés, y Visual Studio Code también quedó configurado con Flutter 3.47.5."
     },
     {
-      "source": "Flutterの初回実行には、STEP 4で確認した既存のiOSシミュレータを使います。ランタイムの追加が必要だった人は、ダウンロード用のTerminalを確認し、エラーで止まっておらず、取得が完了していることを確かめます。第7コマで終わらなかった場合は、第8コマの授業内でも確認を続けます。",
-      "translation": "Para la primera ejecución de Flutter, se utilizará el simulador de iOS existente que verificaste en el STEP 4. Si necesitabas agregar un runtime, revisa la ventana de Terminal usada para la descarga y asegúrate de que no se haya detenido por un error y que la descarga haya finalizado. Si no concluyó en la clase 7, continuarás revisándolo durante la clase 8."
+      "source": "Flutterの初回実行には、iOSの授業で使っているiPhoneシミュレータを使います。ここでは、Flutter側の準備と環境の診断を行います。第7コマで終わらなかった場合は、第8コマの授業内でも確認を続けます。",
+      "translation": "Para la primera ejecución de Flutter, utiliza el simulador de iPhone que usas en la clase de iOS. Aquí realizarás la preparación de Flutter y el diagnóstico del entorno. Si no terminas durante la clase 7, continúa la verificación durante la clase 8."
     },
     {
       "source": "Flutter SDKの展開と <code>PATH</code> の設定が済んだTerminalで、Flutter側のiOS用ファイルを取得します。これはiOSの授業で使ったランタイムとは別の、Flutter専用の資材です。必要なものが既に入っていれば、追加取得が省略されます。",
@@ -407,8 +375,8 @@
       "translation": "Terminal · Diagnóstico del entorno de desarrollo"
     },
     {
-      "source": "<code>Flutter</code> と <code>Xcode</code> の項目を確認します。エラーや追加の設定が表示されたら、出力を先生に見せてください。Android側の準備は、Androidを使う授業の案内に合わせます。設定項目は <a1>Flutter公式のiOS環境設定</a1>でも確認できます。",
-      "translation": "Revisa los apartados <code>Flutter</code> y <code>Xcode</code>. Si se muestran errores o configuraciones adicionales requeridas, muéstrale la salida al docente. La preparación para Android se realizará según las indicaciones de la clase en la que se utilice Android. También puedes revisar los elementos de configuración en la <a1>guía oficial de configuración del entorno de iOS para Flutter</a1>."
+      "source": "<code>Flutter</code> と <code>Xcode</code> の項目を確認します。Xcodeでアプリを動かせていても、Flutterから利用するための設定が必要なことがあります。エラーや追加の設定が表示されたら、出力を先生に見せてください。ランタイムの追加が必要かどうかも、先生と原因を確認してから判断します。Android側の準備は、Androidを使う授業の案内に合わせます。設定項目は <a1>Flutter公式のiOS環境設定</a1>でも確認できます。",
+      "translation": "Revisa los apartados <code>Flutter</code> y <code>Xcode</code>. Aunque puedas ejecutar aplicaciones en Xcode, es posible que necesites configurar el entorno para utilizarlo desde Flutter. Si se muestran errores o configuraciones adicionales requeridas, muéstrale la salida al docente. Decide si necesitas un runtime adicional después de revisar la causa junto con el docente. La preparación para Android se realizará según las indicaciones de la clase en la que se utilice Android. También puedes revisar los elementos de configuración en la <a1>guía oficial de configuración del entorno de iOS para Flutter</a1>."
     },
     {
       "source": "Swiftの実行環境を使う",
