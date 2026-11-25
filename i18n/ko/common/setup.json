@@ -211,56 +211,24 @@
       "translation": "이 수업의 Flutter SDK는 <strong>3.47.5</strong>, 동봉된 Dart는 <strong>3.13.4</strong>로 맞춥니다. 학생들의 Mac은 모두 Apple Silicon이므로 <a1>공식 Flutter SDK archive</a1>에서 macOS용 <code>Stable</code>, <code>3.47.5</code>, <code>Architecture</code>는 <code>arm64</code>를 선택합니다."
     },
     {
-      "source": "SDKの取得を始め、既存のiOS環境を確認する",
-      "translation": "SDK 다운로드를 시작하고 기존 iOS 환경 확인하기"
+      "source": "SDKの取得を始める",
+      "translation": "SDK 다운로드 시작하기"
     },
     {
-      "source": "SDKのダウンロードを開始したら、完了を待たずに、iOSの授業で使っているシミュレータを確認します。<strong>既存の環境が使えれば、新しいiOSランタイムのダウンロードは不要です。</strong>全員で最新のランタイムを取得する必要はありません。",
-      "translation": "SDK 다운로드를 시작하면 완료를 기다리지 않고 iOS 수업에서 사용하고 있는 시뮬레이터를 확인합니다. <strong>기존 환경을 사용할 수 있다면 새로운 iOS 런타임 다운로드는 필요하지 않습니다.</strong> 모두가 최신 런타임을 다운로드할 필요는 없습니다."
+      "source": "iOSの授業で使っているXcodeとiPhoneシミュレータを、この授業でも使います。<strong>新しいiOSランタイムを全員で追加ダウンロードする必要はありません。</strong>Flutterから利用できるかは、STEP 7と最初のアプリ実行時に確認します。",
+      "translation": "iOS 수업에서 사용하는 Xcode와 iPhone 시뮬레이터를 이 수업에서도 사용합니다. <strong>모든 학생이 새로운 iOS 런타임을 추가로 다운로드할 필요는 없습니다.</strong> Flutter에서 사용할 수 있는지는 STEP 7과 첫 앱 실행 시에 확인합니다."
     },
     {
-      "source": "Terminalで新しいウィンドウを開き、次を実行します。利用可能なシミュレータを一覧表示する、Xcodeの確認用コマンドです。Flutter SDKの展開前でも実行できます。",
-      "translation": "Terminal에서 새 창을 열고 다음을 실행합니다. 사용 가능한 시뮬레이터를 목록으로 표시하는 Xcode 확인용 명령입니다. Flutter SDK 압축을 풀기 전에도 실행할 수 있습니다."
-    },
-    {
-      "source": "Terminal · 利用可能なシミュレータを確認",
-      "translation": "Terminal · 사용 가능한 시뮬레이터 확인"
-    },
-    {
-      "source": "<code>iOS</code> の見出しの下に、授業で使っているiPhoneの名前があるかを確かめます。<code>Shutdown</code> は停止中という意味で、ダウンロード不足を示すものではありません。名前があれば、その環境を使う準備を進めます。一覧が空、またはエラーになる場合は、出力を先生に見せてください。ランタイムが不足しているのか、Xcodeの設定やシミュレータの作成が必要なのかを一緒に確認します。コマンドの説明は <a1>AppleのXcodeコマンドラインツール資料</a1>と、Terminalの <code>xcrun simctl help list</code> で確認できます。",
-      "translation": "<code>iOS</code> 항목 아래에 수업에서 사용하는 iPhone 이름이 있는지 확인합니다. <code>Shutdown</code>은 정지 상태라는 뜻이며 다운로드가 부족하다는 것을 나타내지 않습니다. 이름이 있다면 해당 환경을 사용할 준비를 진행합니다. 목록이 비어 있거나 오류가 발생하면 출력 내용을 선생님에게 보여 주십시오. 런타임이 부족한 것인지, Xcode 설정이나 시뮬레이터 생성이 필요한 것인지 함께 확인합니다. 명령 설명은 <a1>Apple의 Xcode 명령줄 도구 자료</a1>와 Terminal의 <code>xcrun simctl help list</code>에서 확인할 수 있습니다."
-    },
-    {
-      "source": "補足：iOS環境が見つからない・実行できないとき",
-      "translation": "보충: iOS 환경을 찾을 수 없거나 실행할 수 없을 때"
-    },
-    {
-      "source": "まずiOSの授業で使っているXcodeを開き、初回の追加処理が残っていないか先生と確認します。利用規約や管理者権限の入力で判断できない場合も、先生へ相談します。",
-      "translation": "먼저 iOS 수업에서 사용하는 Xcode를 열고 최초 추가 작업이 남아 있지 않은지 선생님과 확인합니다. 이용약관이나 관리자 권한 입력으로 판단하기 어려울 때도 선생님과 상담합니다."
-    },
-    {
-      "source": "<strong>先生と確認して、ランタイムの追加が必要になった場合だけ</strong>、次のコマンドを使います。数GBの通信が発生することがあるため、授業内で開始します。既存の環境が使える人は実行しません。追加方法は <a1>AppleのXcode追加コンポーネントの資料</a1>にあります。",
-      "translation": "<strong>선생님과 확인하여 런타임 추가가 필요해진 경우에만</strong> 다음 명령을 사용합니다. 몇 GB의 통신이 발생할 수 있으므로 수업 내에서 시작합니다. 기존 환경을 사용할 수 있는 사람은 실행하지 않습니다. 추가 방법은 <a1>Apple의 Xcode 추가 구성 요소 자료</a1>에 있습니다."
-    },
-    {
-      "source": "Terminal · 必要な場合だけiOSランタイムを取得",
-      "translation": "Terminal · 필요한 경우에만 iOS 런타임 다운로드"
-    },
-    {
-      "source": "取得中のTerminalは閉じずに残し、完了をSTEP 7で確認します。",
-      "translation": "다운로드 중인 Terminal은 닫지 않고 그대로 두며, 완료 여부는 STEP 7에서 확인합니다."
-    },
-    {
-      "source": "SDKなどのダウンロードを待っている間は、先生の案内でMonacaの仕上げを進めます。SDKのダウンロードが終わったら、次の展開へ進みます。",
-      "translation": "SDK 등의 다운로드를 기다리는 동안에는 선생님 안내에 따라 Monaca 마무리를 진행합니다. SDK 다운로드가 끝나면 다음 압축 풀기로 넘어갑니다."
+      "source": "SDKのダウンロードを待っている間は、先生の案内でMonacaの仕上げを進めます。SDKのダウンロードが終わったら、次の展開へ進みます。",
+      "translation": "SDK 다운로드를 기다리는 동안에는 선생님 안내에 따라 Monaca 마무리를 진행합니다. SDK 다운로드가 끝나면 다음 압축 풀기로 넘어갑니다."
     },
     {
       "source": "SDKを置く場所は、版を区別できる新しいフォルダにします。以下は、これから作る保存先の例です。既存のSDKを移動したり上書きしたりしません。",
       "translation": "SDK를 둘 위치는 버전을 구분할 수 있는 새 폴더로 지정합니다. 다음은 앞으로 만들 저장 위치의 예시입니다. 기존 SDK를 이동하거나 덮어쓰지 않습니다."
     },
     {
-      "source": "Terminalで次のコマンドを実行し、保存先 <code>~/develop/flutter-3.47.5</code> を作ります。追加のダウンロードが動いている場合は、別のTerminalウィンドウを使います。",
-      "translation": "Terminal에서 다음 명령을 실행하여 저장 위치 <code>~/develop/flutter-3.47.5</code>를 만듭니다. 추가 다운로드가 실행 중인 경우에는 다른 Terminal 창을 사용합니다."
+      "source": "Terminalで次のコマンドを実行し、保存先 <code>~/develop/flutter-3.47.5</code> を作ります。",
+      "translation": "Terminal에서 다음 명령을 실행하여 저장 위치 <code>~/develop/flutter-3.47.5</code>를 만듭니다."
     },
     {
       "source": "Terminal · SDKを置くフォルダを作る",
@@ -311,8 +279,8 @@
       "translation": ".zprofile · 파일에 추가할 1줄"
     },
     {
-      "source": "Visual Studio Codeを終了して開き直し、Terminalは新しいウィンドウを開きます。iOSランタイムの追加ダウンロードが動いている場合は、そのTerminalを開いたまま残します。新しいウィンドウで、次の2行を実行します。",
-      "translation": "Visual Studio Code를 종료했다가 다시 열고, Terminal은 새 창을 엽니다. iOS 런타임 추가 다운로드가 실행 중인 경우에는 해당 Terminal을 열어 둔 채로 둡니다. 새 창에서 다음 2줄을 실행합니다."
+      "source": "Visual Studio Codeを終了して開き直し、Terminalは新しいウィンドウを開きます。新しいウィンドウで、次の2行を実行します。",
+      "translation": "Visual Studio Code를 종료했다가 다시 열고, Terminal은 새 창을 엽니다. 새 창에서 다음 2줄을 실행합니다."
     },
     {
       "source": "Terminal · 使われるSDKと版を確認",
@@ -387,8 +355,8 @@
       "translation": "영어 UI로 Flutter·Dart 확장을 사용할 수 있고, Visual Studio Code 측도 Flutter 3.47.5가 되었습니다."
     },
     {
-      "source": "Flutterの初回実行には、STEP 4で確認した既存のiOSシミュレータを使います。ランタイムの追加が必要だった人は、ダウンロード用のTerminalを確認し、エラーで止まっておらず、取得が完了していることを確かめます。第7コマで終わらなかった場合は、第8コマの授業内でも確認を続けます。",
-      "translation": "Flutter 최초 실행에는 STEP 4에서 확인한 기존 iOS 시뮬레이터를 사용합니다. 런타임 추가가 필요했던 사람은 다운로드용 Terminal을 확인하여 오류로 멈추지 않고 다운로드가 완료되었는지 확인합니다. 7차시에서 끝나지 않은 경우에는 8차시 수업 내에서도 확인을 이어갑니다."
+      "source": "Flutterの初回実行には、iOSの授業で使っているiPhoneシミュレータを使います。ここでは、Flutter側の準備と環境の診断を行います。第7コマで終わらなかった場合は、第8コマの授業内でも確認を続けます。",
+      "translation": "Flutter를 처음 실행할 때는 iOS 수업에서 사용하는 iPhone 시뮬레이터를 사용합니다. 여기에서는 Flutter 측 준비와 환경 진단을 진행합니다. 7차시에 끝나지 않은 경우에는 8차시 수업 시간에도 확인을 계속합니다."
     },
     {
       "source": "Flutter SDKの展開と <code>PATH</code> の設定が済んだTerminalで、Flutter側のiOS用ファイルを取得します。これはiOSの授業で使ったランタイムとは別の、Flutter専用の資材です。必要なものが既に入っていれば、追加取得が省略されます。",
@@ -407,8 +375,8 @@
       "translation": "Terminal · 개발 환경 진단"
     },
     {
-      "source": "<code>Flutter</code> と <code>Xcode</code> の項目を確認します。エラーや追加の設定が表示されたら、出力を先生に見せてください。Android側の準備は、Androidを使う授業の案内に合わせます。設定項目は <a1>Flutter公式のiOS環境設定</a1>でも確認できます。",
-      "translation": "<code>Flutter</code>와 <code>Xcode</code> 항목을 확인합니다. 오류나 추가 설정이 표시되면 출력을 선생님에게 보여 주십시오. Android 측 준비는 Android를 사용하는 수업 안내에 따릅니다. 설정 항목은 <a1>Flutter 공식 iOS 환경 설정</a1>에서도 확인할 수 있습니다."
+      "source": "<code>Flutter</code> と <code>Xcode</code> の項目を確認します。Xcodeでアプリを動かせていても、Flutterから利用するための設定が必要なことがあります。エラーや追加の設定が表示されたら、出力を先生に見せてください。ランタイムの追加が必要かどうかも、先生と原因を確認してから判断します。Android側の準備は、Androidを使う授業の案内に合わせます。設定項目は <a1>Flutter公式のiOS環境設定</a1>でも確認できます。",
+      "translation": "<code>Flutter</code>와 <code>Xcode</code> 항목을 확인합니다. Xcode에서 앱을 실행할 수 있더라도 Flutter에서 이용하려면 설정이 필요할 수 있습니다. 오류나 추가 설정이 표시되면 출력을 선생님께 보여 주십시오. 런타임 추가가 필요한지도 선생님과 원인을 확인한 뒤 판단합니다. Android 측 준비는 Android를 사용하는 수업 안내에 따릅니다. 설정 항목은 <a1>Flutter 공식 iOS 환경 설정</a1>에서도 확인할 수 있습니다."
     },
     {
       "source": "Swiftの実行環境を使う",

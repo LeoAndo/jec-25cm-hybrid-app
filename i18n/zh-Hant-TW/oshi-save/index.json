@@ -991,8 +991,8 @@
       "translation": "在課堂上開始準備 Flutter"
     },
     {
-      "source": "今日は好きなものノートを仕上げて提出します。このコマでは、教科書のコードは変えません。STEP 08まで書いたコードに、自分のアレンジを加えて仕上げます。最初の10分で、後半に使うFlutter SDKのダウンロードと既存のiOS環境の確認を始めます。授業前に取得しておく必要はありません。",
-      "translation": "今天要完成喜愛筆記並繳交。本堂課中教科書的程式碼不變。在寫到 STEP 08 為止的程式碼上，加入自己的自訂來完成作品。在最初的 10 分鐘內，開始下載後半學期要用的 Flutter SDK，並確認現有的 iOS 環境。不需要在上課前預先下載。"
+      "source": "今日は好きなものノートを仕上げて提出します。このコマでは、教科書のコードは変えません。STEP 08まで書いたコードに、自分のアレンジを加えて仕上げます。最初の10分で、後半に使うFlutter SDKのダウンロードを始めます。授業前に取得しておく必要はありません。",
+      "translation": "今天要完成喜愛筆記並繳交。本堂課中教科書的程式碼不變。在寫到 STEP 08 為止的程式碼上，加入自己的自訂來完成作品。在最初的 10 分鐘內，開始下載後半學期要用的 Flutter SDK。不需要在上課前預先下載。"
     },
     {
       "source": "<a1>共通資料のSTEP 4〜7</a1>を別のタブで開きます。",
@@ -1003,12 +1003,12 @@
       "translation": "請取得適用於 Apple Silicon 的 Flutter 3.47.5 / Dart 3.13.4。若已經準備好該版本，請確認版本以避免重複下載。"
     },
     {
-      "source": "別科目で使っているXcodeのiOS環境を確認します。利用できるランタイムは再利用します。<code>xcodebuild -downloadPlatform iOS</code> は全員必須ではありません。",
-      "translation": "請確認在其他科目中使用的 Xcode 的 iOS 環境。可使用的執行階段就直接重複使用。<code>xcodebuild -downloadPlatform iOS</code> 並非所有人都必須執行。"
+      "source": "別科目で使っているXcodeとiPhoneシミュレータを利用します。Flutterから利用できるかは、SDKの準備後に環境を診断し、最初のアプリ実行時に確認します。",
+      "translation": "請使用你在其他科目中使用的 Xcode 和 iPhone 模擬器。要確認 Flutter 是否能使用這個環境，請在 SDK 準備完成後進行環境診斷，並在第一次執行應用程式時確認。"
     },
     {
-      "source": "不足分だけ先生と確認して取得を始め、この教科書へ戻ります。Flutter専用のiOS資材は共通資料の <code>flutter precache --ios</code> で用意します。",
-      "translation": "請僅針對缺少的部分與老師確認後開始取得，然後返回此教科書。Flutter 專用的 iOS 素材使用通用資料中的 <code>flutter precache --ios</code> 準備。"
+      "source": "SDKの取得を始めたら、この教科書へ戻ります。SDKの準備後に、共通資料の <code>flutter precache --ios</code> でFlutter専用のiOS資材を用意します。",
+      "translation": "開始下載 SDK 後，請返回此教科書。SDK 準備完成後，請使用通用資料中的 <code>flutter precache --ios</code> 準備 Flutter 專用的 iOS 素材。"
     },
     {
       "source": "取得待ちは好きなものノートのアレンジに使います。コマ8の冒頭にも準備確認の時間があります。家庭での作業が済んでいることを前提にはしません。",
@@ -1019,8 +1019,8 @@
       "translation": "在 Android Studio 與 Xcode 中，開發用的 SDK 與應用程式原始程式碼亦是分開的。這次是將 Flutter SDK 與現有的 iOS 環境結合。這並非將 Monaca 的原始程式碼轉換為 Flutter 的操作，而是為後半學期要使用的工具做好準備。"
     },
     {
-      "source": "指定SDKの取得を開始または版を確認し、既存iOS環境の状態を先生へ伝えられる。",
-      "translation": "已開始取得指定的 SDK 或確認了版本，並能向老師說明現有 iOS 環境的狀態。"
+      "source": "指定SDKの取得を開始または版を確認し、準備の進み具合を先生へ伝えられる。",
+      "translation": "已開始取得指定的 SDK 或確認了版本，並能向老師說明準備進度。"
     },
     {
       "source": "STEP 11 · コマ7",
